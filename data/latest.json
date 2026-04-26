@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-26T22:15:00Z",
-  "source": "BD Bets backend (Railway) — /api/scores/today, /api/mlb/standings, /api/mlb/probable-pitchers",
+  "generated_at": "2026-04-26T22:30:00Z",
+  "source": "BD Bets backend + MLB Stats API transactions wire + MLB 40-man injury hydration",
   "league": {
     "headline": "Yankees keep stacking wins (18-10, +47 run diff) while the Tigers (15-14, +10) climb into AL Wild Card position. Eleven finals on the board, five more games still live as first pitch hits the West.",
     "verified_notes": [
@@ -13,89 +13,104 @@
       "In progress: COL@NYM Top 4 (3-0), SD@AZ Bot 7 (7-2), MIA@SF Bot 8 (3-6), LAA@KC Top 7 (7-3), CHC@LAD Top 7 (0-5)."
     ],
     "stories": [
-      "Yankees still the AL pacesetter at 18-10 with +47 run differential, but they just dropped 7-4 in Houston — first loss of a streak (L1) after going 8-2 over their last ten.",
-      "Tigers 15-14 with +10 run diff and an 8-3 win in Cincinnati behind Keider Montero — they're holding the AL #2 Wild Card.",
-      "Athletics 15-13, division leaders in the AL West, just took a 2-1 grinder in Texas to extend a W1 streak — last 10 a flat 5-5 but the run prevention is keeping them on top.",
+      "Yankees still the AL pacesetter at 18-10 with +47 run differential, but they just dropped 7-4 in Houston -- first loss of a streak (L1) after going 8-2 over their last ten.",
+      "Tigers 15-14 with +10 run diff and an 8-3 win in Cincinnati behind Keider Montero -- they're holding the AL #2 Wild Card.",
+      "Athletics 15-13, division leaders in the AL West, just took a 2-1 grinder in Texas to extend a W1 streak -- last 10 a flat 5-5 but the run prevention is keeping them on top.",
       "Rays sitting 16-11 with a W4 streak and a 1.000 record vs AL Central this year (8-1), pushing for the top AL Wild Card.",
-      "Rockies 12-16 but quietly 6-4 over their last ten with a W2 streak — Chase Dollander draws Kodai Senga tonight in New York."
+      "Rockies 12-16 but quietly 6-4 over their last ten with a W2 streak -- Chase Dollander draws Kodai Senga tonight in New York."
     ],
     "watch": [
-      "Pitching watch: Kyle Bradish (BAL) vs Connelly Early (BOS) — finalized.",
-      "Pitching watch: Chris Sale (ATL) vs Aaron Nola (PHI) — finalized.",
-      "Pitching watch: Patrick Corbin (TOR) vs Slade Cecconi (CLE) — finalized.",
-      "Pitching watch: Rhett Lowder (CIN) vs Keider Montero (DET) — finalized.",
-      "Pitching watch: Kodai Senga (NYM) vs Chase Dollander (COL) — live.",
-      "Pitching watch: Nolan McLean (NYM) vs Jose Quintana (COL) — game 2.",
-      "Pitching watch: Griffin Jax (MIN) vs Simeon Woods Richardson (TB) — finalized.",
-      "Pitching watch: Bryan Hudson (WSH) vs Foster Griffin (CWS) — finalized.",
-      "Pitching watch: Spencer Arrighetti (HOU) vs Luis Gil (NYY) — finalized.",
-      "Pitching watch: Kyle Harrison (MIL) vs Carmen Mlodzinski (PIT) — finalized.",
-      "Pitching watch: Michael McGreevy (STL) vs Emerson Hancock (SEA) — finalized.",
-      "Pitching watch: Kumar Rocker (TEX) vs J.T. Ginn (ATH) — finalized.",
-      "Pitching watch: Ryne Nelson (AZ) vs Michael King (SD) — live.",
-      "Pitching watch: Landen Roupp (SF) vs Max Meyer (MIA) — live.",
-      "Pitching watch: Seth Lugo (KC) vs Reid Detmers (LAA) — live.",
-      "Pitching watch: Justin Wroblewski (LAD) vs Shota Imanaga (CHC) — live."
+      "Pitching watch: Kyle Bradish (BAL) vs Connelly Early (BOS) -- finalized.",
+      "Pitching watch: Chris Sale (ATL) vs Aaron Nola (PHI) -- finalized.",
+      "Pitching watch: Patrick Corbin (TOR) vs Slade Cecconi (CLE) -- finalized.",
+      "Pitching watch: Rhett Lowder (CIN) vs Keider Montero (DET) -- finalized.",
+      "Pitching watch: Kodai Senga (NYM) vs Chase Dollander (COL) -- live.",
+      "Pitching watch: Nolan McLean (NYM) vs Jose Quintana (COL) -- game 2.",
+      "Pitching watch: Griffin Jax (MIN) vs Simeon Woods Richardson (TB) -- finalized.",
+      "Pitching watch: Bryan Hudson (WSH) vs Foster Griffin (CWS) -- finalized.",
+      "Pitching watch: Spencer Arrighetti (HOU) vs Luis Gil (NYY) -- finalized.",
+      "Pitching watch: Kyle Harrison (MIL) vs Carmen Mlodzinski (PIT) -- finalized.",
+      "Pitching watch: Michael McGreevy (STL) vs Emerson Hancock (SEA) -- finalized.",
+      "Pitching watch: Kumar Rocker (TEX) vs J.T. Ginn (ATH) -- finalized.",
+      "Pitching watch: Ryne Nelson (AZ) vs Michael King (SD) -- live.",
+      "Pitching watch: Landen Roupp (SF) vs Max Meyer (MIA) -- live.",
+      "Pitching watch: Seth Lugo (KC) vs Reid Detmers (LAA) -- live.",
+      "Pitching watch: Justin Wroblewski (LAD) vs Shota Imanaga (CHC) -- live."
     ],
     "transactions": [
-      "Transactions feed not yet wired into BD Bets backend — placeholder until /api/mlb/transactions is composed."
+      "PHI: Activated RHP Zack Wheeler from the 15-day IL. (Source: MLB Stats API transactions wire, 2026-04-25/26)",
+      "NYY: Activated LHP Ryan Weathers from the paternity list.",
+      "NYY: Placed RHP Angel Chivilli on the 15-day IL retro to April 23 -- right shoulder discomfort.",
+      "HOU: Activated LHP Bennett Sousa from the 15-day IL.",
+      "TOR: Placed RF Nathan Lukes on the 10-day IL -- left hamstring strain.",
+      "BAL: Activated LHP Keegan Akin from the 15-day IL.",
+      "BAL: Signed free agent C Sam Huff to a minor league contract.",
+      "CWS: Designated C Reese McGuire for assignment.",
+      "CIN: Placed 3B Eugenio Suarez on the 10-day IL retro to April 23 -- mild left oblique strain."
     ]
   },
   "teams": {
     "athletics": {
       "headline": "A's keep grinding: 15-13, division-leading AL West, just took a 2-1 win in Texas behind J.T. Ginn.",
-      "emotion": "Quietly confident — run differential is still negative (-8) but the bullpen and clutch hits are turning close ones into the W column.",
+      "emotion": "Quietly confident -- run differential is still negative (-8) but the bullpen and clutch hits are turning close ones into the W column.",
       "verified_notes": [
         "Athletics snapshot pulled 2026-04-26 15:15 PT.",
         "Record 15-13 (.536), AL West 1st, streak W1, last 10: 5-5, run differential -8.",
         "Today: ATH 2 @ TEX 1 (Final). J.T. Ginn started for the A's, Kumar Rocker for Texas.",
-        "No transactions reported in BD Bets feed today — verify via MLB.com transactions wire before show."
+        "No A's-specific transactions reported on the MLB wire today."
       ],
       "notes": [
-        "Division leader despite -8 run diff — a story about close-game wins masking underlying performance.",
-        "Last 10 is dead even at 5-5; the W1 streak is fragile, lean into the urgency."
+        "Division leader despite -8 run diff -- a story about close-game wins masking underlying performance.",
+        "Last 10 is dead even at 5-5; the W1 streak is fragile, lean into the urgency.",
+        "INJURY REPORT: OF Denzel Clarke (10-day IL, mid foot bone bruise in right foot). RHP Gunnar Hoglund (60-day IL, sprained right knee). Short IL -- Clarke is the only near-term return candidate."
       ],
       "checklist": [
         "Confirm starting rotation for next series.",
         "Check MLB.com transactions wire for any roster moves before air.",
-        "Pull updated bullpen usage (last 3 days) before opening the A's segment."
+        "Pull updated bullpen usage (last 3 days) before opening the A's segment.",
+        "Monitor Clarke rehab timeline -- foot bruise could be multi-week."
       ]
     },
     "rockies": {
-      "headline": "Rockies sneak under the radar at 12-16 — 6-4 over their last ten, W2 streak, and just took COL 3 NYM 1 in the opener.",
-      "emotion": "Cautiously alive — 7 games back in the NL West with a -14 run diff, but the last ten says they're playing better than the season number reads.",
+      "headline": "Rockies sneak under the radar at 12-16 -- 6-4 over their last ten, W2 streak, and just took COL 3 NYM 1 in the opener.",
+      "emotion": "Cautiously alive -- 7 games back in the NL West with a -14 run diff, but the last ten says they're playing better than the season number reads.",
       "verified_notes": [
         "Rockies snapshot pulled 2026-04-26 15:15 PT.",
         "Record 12-16 (.429), NL West 5th, streak W2, last 10: 6-4, run differential -14, 7.0 GB, NL Wild Card #10.",
-        "Today: COL 3 NYM 1 (Final, game 1). Game 2 in progress: Top 4, COL 3 NYM 0 — Senga vs Dollander.",
-        "No transactions in BD Bets feed today — verify wire before air."
+        "Today: COL 3 NYM 1 (Final, game 1). Game 2 in progress: Top 4, COL 3 NYM 0 -- Senga vs Dollander.",
+        "No Rockies-specific transactions reported on the MLB wire today."
       ],
       "notes": [
-        "6-4 last ten is the real story — they're outperforming their season profile.",
-        "Doubleheader sweep in New York would be a genuine narrative shift; lead with the live game status."
+        "6-4 last ten is the real story -- they're outperforming their season profile.",
+        "Doubleheader sweep in New York would be a genuine narrative shift; lead with the live game status.",
+        "INJURY REPORT: DH Kris Bryant (60-day IL, lumbar degenerative disk disease -- season-ending). LHP Kyle Freeland (15-day IL, left shoulder inflammation). RHP Ryan Feltner (15-day IL, right ulnar nerve inflammation). RHP Jeff Criswell (60-day IL, Tommy John recovery). RHP McCade Brown (60-day IL, right shoulder inflammation). RHP Pierson Ohl (60-day IL). Freeland and Feltner are the near-term rotation impact names."
       ],
       "checklist": [
         "Refresh game 2 score 5 minutes before segment.",
-        "Pull Dollander's last 3 starts vs NL East before opening."
+        "Pull Dollander's last 3 starts vs NL East before opening.",
+        "Mention Freeland and Feltner IL status when discussing rotation depth."
       ]
     },
     "tigers": {
-      "headline": "Tigers 15-14 with +10 run diff — Keider Montero went today in an 8-3 win at Cincinnati, AL Wild Card #2.",
-      "emotion": "Real October team energy — positive run diff, holding a Wild Card spot, and the rotation is starting to set up.",
+      "headline": "Tigers 15-14 with +10 run diff -- Keider Montero went today in an 8-3 win at Cincinnati, AL Wild Card #2.",
+      "emotion": "Real October team energy -- positive run diff, holding a Wild Card spot, and the rotation is starting to set up.",
       "verified_notes": [
         "Tigers snapshot pulled 2026-04-26 15:15 PT.",
         "Record 15-14 (.517), AL Central 2nd, streak W1, last 10: 5-5, run differential +10, AL Wild Card #2.",
         "Today: DET 8 CIN 3 (Final). Keider Montero (DET) vs Rhett Lowder (CIN).",
-        "Holding the AL #2 Wild Card slot — first real cushion of the year."
+        "No Tigers-specific transactions reported on the MLB wire today."
       ],
       "notes": [
         "+10 run differential is the strongest underlying number among the three focus teams.",
-        "AL Central race tightening — White Sox dropped today, Twins lost in Tampa."
+        "AL Central race tightening -- White Sox dropped today, Twins lost in Tampa.",
+        "INJURY REPORT: RHP Justin Verlander (15-day IL, left hip inflammation). CF Parker Meadows (60-day IL, left radius fracture). RHP Jackson Jobe (60-day IL, Tommy John recovery). RHP Reese Olson (60-day IL, right shoulder labral repair). SS Trey Sweeney (10-day IL, right shoulder strain). 3B Zach McKinstry (10-day IL, left hip/abdominal inflammation). RHP Beau Brieske (60-day IL, left adductor strain). RHP Bailey Horn (60-day IL, left elbow arthroscopy). RHP Connor Seabold (15-day IL, left ankle inflammation). RHP Troy Melton (60-day IL). Verlander and Sweeney are the highest-impact near-term names."
       ],
       "checklist": [
         "Confirm Tigers' next probable starter and matchup.",
         "Pull Montero's start log to date before opening.",
-        "Check Wild Card cushion vs #3 seed at game time."
+        "Check Wild Card cushion vs #3 seed at game time.",
+        "Lead the injury block with Verlander status update -- his timeline drives rotation narrative.",
+        "Mention Sweeney and McKinstry as lineup impact -- both on 10-day IL."
       ]
     }
   }
