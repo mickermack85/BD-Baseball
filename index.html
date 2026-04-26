@@ -223,7 +223,7 @@ const liveState = { league:{lastUpdated:null, ok:false, standings:[], pitchers:[
     function compact(text){return text.replace(/\s+/g,' ').trim()}
     function updateConnectivityUI(){ const online=navigator.onLine; $('connectivityLabel').textContent=online?'Online':'Offline'; $('statusDot').classList.toggle('offline', !online); }
     function wireInstallPrompt(){ const btn=$('installAppBtn'); window.addEventListener('beforeinstallprompt', (e)=>{ e.preventDefault(); deferredPrompt=e; btn.hidden=false; }); btn.addEventListener('click', async ()=>{ if(!deferredPrompt) return; deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; btn.hidden=true; }); window.addEventListener('appinstalled', ()=>{ deferredPrompt=null; btn.hidden=true; }); }
-    function updateSnapshotBanner(message){ $('snapshotBanner').innerHTML = message; }
+    function updateSnapshotBanner(message){ var __sb=$('snapshotBanner'); if(__sb){__sb.innerHTML = message;} }
     async function loadSnapshotFile(){
       const res = await fetch(SNAPSHOT_URL);
       if(!res.ok) throw new Error(`Snapshot HTTP ${res.status}`);
@@ -243,8 +243,8 @@ const liveState = { league:{lastUpdated:null, ok:false, standings:[], pitchers:[
         rockies:{updated:data.generated_at, standings:[data.teams.rockies.verified_notes[1]], probables:[data.teams.rockies.verified_notes[2]], transactions:[data.teams.rockies.verified_notes[3]]},
         tigers:{updated:data.generated_at, standings:[data.teams.tigers.verified_notes[1]], probables:[data.teams.tigers.verified_notes[2]], transactions:data.teams.tigers.verified_notes.slice(3)}
       };
-      $('leagueFetchMeta').innerHTML = `<span class="fetch-ok">Latest snapshot file loaded.</span><br><span class="mono">${data.generated_at}</span>`; updateSnapshotBanner(`<strong>Snapshot loaded:</strong> ${data.generated_at} &middot; Source file: latest.json`);
-      $('teamFetchMeta').innerHTML = `<span class="fetch-ok">Team snapshots loaded.</span><br><span class="mono">${data.generated_at}</span>`;
+      if($('leagueFetchMeta')) $('leagueFetchMeta').innerHTML = `<span class="fetch-ok">Latest snapshot file loaded.</span><br><span class="mono">${data.generated_at}</span>`; updateSnapshotBanner(`<strong>Snapshot loaded:</strong> ${data.generated_at} &middot; Source file: latest.json`);
+      if($('teamFetchMeta')) $('teamFetchMeta').innerHTML = `<span class="fetch-ok">Team snapshots loaded.</span><br><span class="mono">${data.generated_at}</span>`;
       $('leagueSnapshot').value = [`Latest snapshot file: ${SNAPSHOT_URL}`,`Generated at: ${data.generated_at}`].concat(data.league.verified_notes).join('\n');
       $('asSnapshot').value = [`Generated at: ${data.generated_at}`].concat(data.teams.athletics.verified_notes).join('\n');
       $('rockiesSnapshot').value = [`Generated at: ${data.generated_at}`].concat(data.teams.rockies.verified_notes).join('\n');
@@ -264,12 +264,12 @@ const liveState = { league:{lastUpdated:null, ok:false, standings:[], pitchers:[
     function fillDefaults(team){ if(snapshotData){ fillFromSnapshot(team); return; } build(); }
     function renderBoard(){const board=$('segmentBoard');board.innerHTML=segmentOrder.map(key=>{const seg=segmentDefs[key];return `<div class="segment-row" draggable="true" data-key="${key}"><div class="drag">⋮⋮</div><div><div class="segname">${seg.label}</div><div class="segdesc">${seg.desc}</div></div><input class="segdur" type="number" min="1" max="20" value="${seg.duration}" data-duration="${key}" /><label class="toggle"><input type="checkbox" ${seg.enabled?'checked':''} data-enable="${key}"> live</label></div>`}).join('');board.querySelectorAll('[data-duration]').forEach(input=>input.addEventListener('input',e=>{segmentDefs[e.target.dataset.duration].duration=Math.max(1,parseInt(e.target.value||'1',10));build()}));board.querySelectorAll('[data-enable]').forEach(input=>input.addEventListener('change',e=>{segmentDefs[e.target.dataset.enable].enabled=e.target.checked;build()}));board.querySelectorAll('.segment-row').forEach(row=>{row.addEventListener('dragstart',()=>{dragKey=row.dataset.key;row.classList.add('dragging')});row.addEventListener('dragend',()=>{dragKey=null;row.classList.remove('dragging')});row.addEventListener('dragover',e=>e.preventDefault());row.addEventListener('drop',e=>{e.preventDefault();const targetKey=row.dataset.key;if(!dragKey||dragKey===targetKey)return;const from=segmentOrder.indexOf(dragKey),to=segmentOrder.indexOf(targetKey);segmentOrder.splice(to,0,segmentOrder.splice(from,1)[0]);renderBoard();build()})})}
 
-    async function refreshLeagueSources(){ $('leagueFetchMeta').innerHTML = `<span class="fetch-ok">Snapshot rebuild running.</span><br><span class="mono">${nowStamp()}</span>`;
+    async function refreshLeagueSources(){ if($('leagueFetchMeta')) $('leagueFetchMeta').innerHTML = `<span class="fetch-ok">Snapshot rebuild running.</span><br><span class="mono">${nowStamp()}</span>`;
       const btn=$('refreshLeagueBtn'); btn.disabled=true; setStatus('Loading structured league snapshot...', true);
       try {
         const data = snapshotData || await loadSnapshotFile(); applySnapshotPayload(data); fillFromSnapshot('league'); setStatus('League notebook rebuilt from the snapshot file.', true); buildLeagueFromLive();
       } catch (err) {
-        $('leagueFetchMeta').innerHTML = `<span class="fetch-bad">Live refresh failed.</span><br><span class="mono">${err.message}</span>`;
+        if($('leagueFetchMeta')) $('leagueFetchMeta').innerHTML = `<span class="fetch-bad">Live refresh failed.</span><br><span class="mono">${err.message}</span>`;
         fillDefaults('league');
         updateSnapshotBanner('<strong>Snapshot warning:</strong> latest.json did not load. Manual verification mode only.'); setStatus('League snapshot load failed.', false);
       } finally { btn.disabled=false; }
@@ -296,12 +296,12 @@ const liveState = { league:{lastUpdated:null, ok:false, standings:[], pitchers:[
       build();
     }
 
-    async function refreshTeamSources(){ $('teamFetchMeta').innerHTML = `<span class="fetch-ok">Team snapshot rebuild running.</span><br><span class="mono">${nowStamp()}</span>`;
+    async function refreshTeamSources(){ if($('teamFetchMeta')) $('teamFetchMeta').innerHTML = `<span class="fetch-ok">Team snapshot rebuild running.</span><br><span class="mono">${nowStamp()}</span>`;
       const btn=$('refreshTeamsBtn'); btn.disabled=true; setStatus('Rebuilding team notebooks from the verified snapshot layer...', true);
       try {
-        const data = snapshotData || await loadSnapshotFile(); applySnapshotPayload(data); fillFromSnapshot('athletics'); fillFromSnapshot('rockies'); fillFromSnapshot('tigers'); $('teamFetchMeta').innerHTML = `<span class="fetch-ok">Team snapshots rebuilt.</span><br><span class="mono">${data.generated_at}</span>`; setStatus('Team notebooks rebuilt from the snapshot file.', true);
+        const data = snapshotData || await loadSnapshotFile(); applySnapshotPayload(data); fillFromSnapshot('athletics'); fillFromSnapshot('rockies'); fillFromSnapshot('tigers'); if($('teamFetchMeta')) $('teamFetchMeta').innerHTML = `<span class="fetch-ok">Team snapshots rebuilt.</span><br><span class="mono">${data.generated_at}</span>`; setStatus('Team notebooks rebuilt from the snapshot file.', true);
       } catch (err) {
-        $('teamFetchMeta').innerHTML = `<span class="fetch-bad">Team refresh failed.</span><br><span class="mono">${err.message}</span>`;
+        if($('teamFetchMeta')) $('teamFetchMeta').innerHTML = `<span class="fetch-bad">Team refresh failed.</span><br><span class="mono">${err.message}</span>`;
         fillDefaults('athletics'); fillDefaults('rockies'); fillDefaults('tigers');
         updateSnapshotBanner('<strong>Snapshot warning:</strong> team snapshot rebuild failed.'); setStatus('Team snapshot load failed.', false);
       } finally { btn.disabled=false; }
