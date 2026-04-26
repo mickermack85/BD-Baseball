@@ -1,112 +1,101 @@
 {
-  "generated_at": "2026-04-26T05:46:49+00:00",
-  "sources": {
-    "league_standings": "https://www.mlb.com/standings",
-    "league_probables": "https://www.mlb.com/probable-pitchers",
-    "league_transactions": "https://www.espn.com/mlb/transactions",
-    "athletics_standings": "https://www.mlb.com/athletics/standings/mlb",
-    "athletics_probables": "https://www.mlb.com/athletics/roster/probable-pitchers",
-    "athletics_transactions": "https://www.mlb.com/athletics/roster/transactions",
-    "rockies_standings": "https://www.mlb.com/rockies/standings",
-    "rockies_probables": "https://www.mlb.com/rockies/roster/probable-pitchers",
-    "rockies_transactions": "https://www.mlb.com/rockies/roster/transactions",
-    "tigers_standings": "https://www.mlb.com/tigers/standings/league",
-    "tigers_probables": "https://www.mlb.com/tigers/roster/probable-pitchers",
-    "tigers_transactions": "https://www.mlb.com/tigers/roster/transactions",
-    "athletics_savant": "https://baseballsavant.mlb.com/team/133",
-    "rockies_savant": "https://baseballsavant.mlb.com/team/115",
-    "tigers_savant": "https://baseballsavant.mlb.com/team/116",
-    "athletics_espn_transactions": "https://www.espn.com/mlb/team/transactions/_/name/ath/athletics",
-    "rockies_espn_transactions": "https://www.espn.com/mlb/team/transactions/_/name/col/colorado-rockies",
-    "tigers_espn_transactions": "https://www.espn.com/mlb/team/transactions/_/name/det/detroit-tigers"
-  },
+  "generated_at": "2026-04-26T22:15:00Z",
+  "source": "BD Bets backend (Railway) — /api/scores/today, /api/mlb/standings, /api/mlb/probable-pitchers",
   "league": {
-    "headline": "The national show starts with the standings board and the daily pitching slate.",
+    "headline": "Yankees keep stacking wins (18-10, +47 run diff) while the Tigers (15-14, +10) climb into AL Wild Card position. Eleven finals on the board, five more games still live as first pitch hits the West.",
     "verified_notes": [
-      "MLB.com standings provides the league board for division and wild-card framing.",
-      "MLB.com probable-pitchers provides the daily matchup slate.",
-      "ESPN MLB transactions provides the broad move tracker.",
-      "UNVERIFIED: Standings snapshot not confirmed from available sources.",
-      "UNVERIFIED: Probable-pitcher slate not confirmed from available sources."
+      "League standings snapshot pulled from BD Bets backend at 2026-04-26 15:15 PT.",
+      "AL East: Yankees 18-10 (.643, +47), Rays 16-11 (.593, 1.5 GB, W4), then Blue Jays/Orioles/Red Sox.",
+      "AL Central: Tigers 15-14 (W1, +10) sit 2nd and hold the AL #2 Wild Card spot.",
+      "AL West: Athletics 15-13 (W1, last10 5-5, run diff -8) lead the division.",
+      "NL West: Rockies 12-16 (W2, last10 6-4, 7.0 GB, -14 run diff) sit 5th, NL Wild Card #10.",
+      "Today's finals (11): BOS 5 BAL 3, ATL 6 PHI 2, TOR 4 CLE 2, DET 8 CIN 3, COL 3 NYM 1, TB 4 MIN 2, WSH 2 CWS 1, HOU 7 NYY 4, MIL 5 PIT 0, SEA 3 STL 2, ATH 2 TEX 1.",
+      "In progress: COL@NYM Top 4 (3-0), SD@AZ Bot 7 (7-2), MIA@SF Bot 8 (3-6), LAA@KC Top 7 (7-3), CHC@LAD Top 7 (0-5)."
     ],
     "stories": [
-      "Lead with the biggest standings truth on the board.",
-      "Use the probable-pitchers page to identify the best matchup.",
-      "Use only verified league transaction notes before air; treat anything marked UNVERIFIED as a placeholder to check."
+      "Yankees still the AL pacesetter at 18-10 with +47 run differential, but they just dropped 7-4 in Houston — first loss of a streak (L1) after going 8-2 over their last ten.",
+      "Tigers 15-14 with +10 run diff and an 8-3 win in Cincinnati behind Keider Montero — they're holding the AL #2 Wild Card.",
+      "Athletics 15-13, division leaders in the AL West, just took a 2-1 grinder in Texas to extend a W1 streak — last 10 a flat 5-5 but the run prevention is keeping them on top.",
+      "Rays sitting 16-11 with a W4 streak and a 1.000 record vs AL Central this year (8-1), pushing for the top AL Wild Card.",
+      "Rockies 12-16 but quietly 6-4 over their last ten with a W2 streak — Chase Dollander draws Kodai Senga tonight in New York."
     ],
     "watch": [
-      "UNVERIFIED: Pitching watch not confirmed from available sources."
+      "Pitching watch: Kyle Bradish (BAL) vs Connelly Early (BOS) — finalized.",
+      "Pitching watch: Chris Sale (ATL) vs Aaron Nola (PHI) — finalized.",
+      "Pitching watch: Patrick Corbin (TOR) vs Slade Cecconi (CLE) — finalized.",
+      "Pitching watch: Rhett Lowder (CIN) vs Keider Montero (DET) — finalized.",
+      "Pitching watch: Kodai Senga (NYM) vs Chase Dollander (COL) — live.",
+      "Pitching watch: Nolan McLean (NYM) vs Jose Quintana (COL) — game 2.",
+      "Pitching watch: Griffin Jax (MIN) vs Simeon Woods Richardson (TB) — finalized.",
+      "Pitching watch: Bryan Hudson (WSH) vs Foster Griffin (CWS) — finalized.",
+      "Pitching watch: Spencer Arrighetti (HOU) vs Luis Gil (NYY) — finalized.",
+      "Pitching watch: Kyle Harrison (MIL) vs Carmen Mlodzinski (PIT) — finalized.",
+      "Pitching watch: Michael McGreevy (STL) vs Emerson Hancock (SEA) — finalized.",
+      "Pitching watch: Kumar Rocker (TEX) vs J.T. Ginn (ATH) — finalized.",
+      "Pitching watch: Ryne Nelson (AZ) vs Michael King (SD) — live.",
+      "Pitching watch: Landen Roupp (SF) vs Max Meyer (MIA) — live.",
+      "Pitching watch: Seth Lugo (KC) vs Reid Detmers (LAA) — live.",
+      "Pitching watch: Justin Wroblewski (LAD) vs Shota Imanaga (CHC) — live."
     ],
     "transactions": [
-      "UNVERIFIED: League transactions not confirmed from available sources."
+      "Transactions feed not yet wired into BD Bets backend — placeholder until /api/mlb/transactions is composed."
     ]
   },
   "teams": {
     "athletics": {
-      "headline": "The A's are in first, but the better question is whether the underlying signs make that start feel sturdy.",
-      "emotion": "Cautiously fired up",
+      "headline": "A's keep grinding: 15-13, division-leading AL West, just took a 2-1 win in Texas behind J.T. Ginn.",
+      "emotion": "Quietly confident — run differential is still negative (-8) but the bullpen and clutch hits are turning close ones into the W column.",
       "verified_notes": [
-        "Snapshot verified from MLB.com team pages, ESPN transactions, and Baseball Savant.",
-        "UNVERIFIED: Athletics record not confirmed from available sources..",
-        "MLB.com probable-pitchers page live for Athletics.",
-        "placed CF Denzel Clarke on the 10-day injured list.",
-        "recalled RF Colby Thomas from Las Vegas Aviators.",
-        "optioned RHP Mason Barnett to Las Vegas Aviators."
+        "Athletics snapshot pulled 2026-04-26 15:15 PT.",
+        "Record 15-13 (.536), AL West 1st, streak W1, last 10: 5-5, run differential -8.",
+        "Today: ATH 2 @ TEX 1 (Final). J.T. Ginn started for the A's, Kumar Rocker for Texas.",
+        "No transactions reported in BD Bets feed today — verify via MLB.com transactions wire before show."
       ],
       "notes": [
-        "The A's story starts with the standings reality and whether the run differential supports it.",
-        "Use the probable-pitcher page as the game-preview peg.",
-        "Use transaction notes only when they are confirmed on the source page."
+        "Division leader despite -8 run diff — a story about close-game wins masking underlying performance.",
+        "Last 10 is dead even at 5-5; the W1 streak is fragile, lean into the urgency."
       ],
       "checklist": [
-        "Standings reality check",
-        "Pitching-preview line",
-        "Verified roster note"
+        "Confirm starting rotation for next series.",
+        "Check MLB.com transactions wire for any roster moves before air.",
+        "Pull updated bullpen usage (last 3 days) before opening the A's segment."
       ]
     },
     "rockies": {
-      "headline": "The Rockies conversation starts with how ugly the early math looks and whether there is any believable next-step hope.",
-      "emotion": "Trying to believe",
+      "headline": "Rockies sneak under the radar at 12-16 — 6-4 over their last ten, W2 streak, and just took COL 3 NYM 1 in the opener.",
+      "emotion": "Cautiously alive — 7 games back in the NL West with a -14 run diff, but the last ten says they're playing better than the season number reads.",
       "verified_notes": [
-        "Snapshot verified from MLB.com team pages, ESPN transactions, and Baseball Savant.",
-        "UNVERIFIED: Rockies record not confirmed from available sources..",
-        "MLB.com probable-pitchers page live for Rockies.",
-        "placed RHP Ryan Feltner on the 15-day injured list.",
-        "recalled LHP Sammy Peralta from Albuquerque Isotopes.",
-        "placed RHP Jimmy Herget on the paternity list."
+        "Rockies snapshot pulled 2026-04-26 15:15 PT.",
+        "Record 12-16 (.429), NL West 5th, streak W2, last 10: 6-4, run differential -14, 7.0 GB, NL Wild Card #10.",
+        "Today: COL 3 NYM 1 (Final, game 1). Game 2 in progress: Top 4, COL 3 NYM 0 — Senga vs Dollander.",
+        "No transactions in BD Bets feed today — verify wire before air."
       ],
       "notes": [
-        "The Rockies tone starts with the standings board and whether the pain looks temporary or structural.",
-        "Use the probable-pitcher page as the preview peg.",
-        "Use verified transactions to sharpen the pitching conversation."
+        "6-4 last ten is the real story — they're outperforming their season profile.",
+        "Doubleheader sweep in New York would be a genuine narrative shift; lead with the live game status."
       ],
       "checklist": [
-        "Run-diff reality check",
-        "Probable-pitcher setup",
-        "Verified injury/recall note"
+        "Refresh game 2 score 5 minutes before segment.",
+        "Pull Dollander's last 3 starts vs NL East before opening."
       ]
     },
     "tigers": {
-      "headline": "The Tigers feel like the most upward-looking homer segment if the winning record and run differential still hold up.",
-      "emotion": "Actually believing",
+      "headline": "Tigers 15-14 with +10 run diff — Keider Montero went today in an 8-3 win at Cincinnati, AL Wild Card #2.",
+      "emotion": "Real October team energy — positive run diff, holding a Wild Card spot, and the rotation is starting to set up.",
       "verified_notes": [
-        "Snapshot verified from MLB.com team pages, ESPN transactions, and Baseball Savant.",
-        "UNVERIFIED: Tigers record not confirmed from available sources..",
-        "MLB.com probable-pitchers page live for Tigers.",
-        "placed LHP Bailey Horn on the 60-day injured list.",
-        "optioned LHP Enmanuel De Jesus to Toledo Mud Hens.",
-        "selected the contract of RHP Burch Smith from Toledo Mud Hens.",
-        "signed free agent OF Caleb Shpur to a minor league contract."
+        "Tigers snapshot pulled 2026-04-26 15:15 PT.",
+        "Record 15-14 (.517), AL Central 2nd, streak W1, last 10: 5-5, run differential +10, AL Wild Card #2.",
+        "Today: DET 8 CIN 3 (Final). Keider Montero (DET) vs Rhett Lowder (CIN).",
+        "Holding the AL #2 Wild Card slot — first real cushion of the year."
       ],
       "notes": [
-        "The Tigers segment should sound more hopeful if the record and run differential still support it.",
-        "Use the AL Central position and run differential to give the segment structure.",
-        "Keep injury and roster notes tied to MLB.com and ESPN logs."
+        "+10 run differential is the strongest underlying number among the three focus teams.",
+        "AL Central race tightening — White Sox dropped today, Twins lost in Tampa."
       ],
       "checklist": [
-        "Positive run-diff line",
-        "AL Central context",
-        "Verified injury/roster note"
+        "Confirm Tigers' next probable starter and matchup.",
+        "Pull Montero's start log to date before opening.",
+        "Check Wild Card cushion vs #3 seed at game time."
       ]
     }
   }
