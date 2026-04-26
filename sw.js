@@ -1,29 +1,25 @@
-const CACHE_NAME = 'bd-show-prep-v2';
-const ASSETS = [
-  './',
-  './baseball-show-prep-generator.html',
-  './manifest.webmanifest',
-  './sw.js',
-  './data/latest.json',
-  './assets/icon-192.png',
-  './assets/icon-512.png',
-  './assets/maskable-512.png'
-];
-self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)));
+// Self-destructing service worker.
+// Replaces the previous SW that was caching an empty root response from early failed deploys.
+// On install, it skips waiting; on activate, it deletes ALL caches and unregisters itself.
+self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
-self.addEventListener('activate', event => {
-  event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))));
-  self.clients.claim();
-});
-self.addEventListener('fetch', event => {
-  if (event.request.method !== 'GET') return;
-  event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request).then(response => {
-    if (response && response.status === 200 && response.type !== 'opaque') {
-      const copy = response.clone();
-      caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil((async () => {
+    try {
+      const keys = await caches.keys();
+      await Promise.all(keys.map((k) => caches.delete(k)));
+      const regs = await self.registration.unregister();
+      const clientList = await self.clients.matchAll({ type: 'window' });
+      clientList.forEach((client) => client.navigate(client.url));
+    } catch (e) {
+      // no-op
     }
-    return response;
-  }).catch(() => cached)));
+  })());
+});
+
+// Network-only fetch handler so nothing is served from cache while this SW is alive.
+self.addEventListener('fetch', (event) => {
+  event.respondWith(fetch(event.request));
 });
