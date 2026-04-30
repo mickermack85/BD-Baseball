@@ -10,3 +10,24 @@
     }
   ]
 }
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" }
+  ],
+  "headers": [
+    { "source": "/api/latest", "headers": [
+      { "key": "Cache-Control", "value": "no-store, max-age=0" },
+      { "key": "Content-Type", "value": "application/json" }
+    ]},
+    { "source": "/sw.js", "headers": [
+      { "key": "Cache-Control", "value": "no-store" },
+      { "key": "Service-Worker-Allowed", "value": "/" }
+    ]},
+    { "source": "/manifest.webmanifest", "headers": [
+      { "key": "Content-Type", "value": "application/manifest+json" }
+    ]}
+  ],
+  "crons": [
+    { "path": "/api/refresh-snapshot", "schedule": "*/30 * * * *" }
+  ]
+}
