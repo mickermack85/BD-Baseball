@@ -1,7 +1,18 @@
 # BD Baseball Show Prep PWA
 
-Static, Vercel-deployable PWA for MLB show prep backed by a Python snapshot
-builder that reads the public **MLB Stats API** (`statsapi.mlb.com`).
+Static, Vercel-deployable PWA that turns a verified MLB Stats API snapshot
+into a daily-show **rundown + host/teleprompter script**, backed by a Python
+snapshot builder that reads the public **MLB Stats API** (`statsapi.mlb.com`).
+
+## What it does
+- Pulls a once-or-twice-a-day verified snapshot (standings, today's slate
+  with probable pitchers, transactions, per-team blocks).
+- Generates a deterministic, timed daily-show rundown from that snapshot —
+  no LLM, no paid APIs, no server. Pure functions in the browser.
+- Produces spoken host copy / teleprompter text with per-segment source
+  confidence labels.
+- Keeps the source-health / data confidence panels available below as a
+  reference layer for the producer.
 
 ## Architecture
 - `scripts/build_snapshot.py` — fetches standings, schedule (with probable
@@ -18,11 +29,18 @@ builder that reads the public **MLB Stats API** (`statsapi.mlb.com`).
   job that builds, strict-validates, and commits an updated snapshot using
   the built-in `GITHUB_TOKEN`.
 - `data/latest.json` — current snapshot consumed by the frontend.
-- `index.html` — static viewer. Renders verified notes, highlights
-  `UNVERIFIED:` entries, shows a per-lane source-health table (status
-  pill + source URL) for the league and each team, displays a
-  stale/source-health banner, and uses safe DOM construction (no
-  `innerHTML` interpolation of snapshot fields).
+- `index.html` — static shell. Hosts the show-generator UI on top and the
+  league/team reference panels below. Uses safe DOM construction
+  (no `innerHTML` interpolation of snapshot fields).
+- `show_generator.js` — pure-function rundown / teleprompter generator.
+  Inputs: snapshot + options (`preset`, `teams`). Outputs: timed segment
+  list, plain-text rundown, plain-text host script. Importable in Node
+  for tests; also exposed as `window.BDShowGenerator`.
+- `app.js` — frontend wiring: loads `data/latest.json`, renders the
+  generator controls and outputs, and renders the source-health /
+  verified-notes reference panels (compact / collapsible). Empty
+  unverified sections are reworded to "No unverified notes." rather
+  than rendering a fake `UNVERIFIED: No ... listed` bullet.
 - `sw.js` — versioned caches (separate shell + data caches). Static
   shell is cache-first. `/data/latest.json` is stale-while-revalidate
   with a 4s network timeout, so flaky Wi-Fi falls back to the cached
@@ -124,6 +142,39 @@ whether it has been removed from the working tree or git history.
   bloated the snapshot on busy transactions days.)
 - If a deploy looks stale, reload once so the updated service worker
   takes control.
+
+## Producer workflow (daily show)
+
+The whole flow happens in the browser. No terminal, no logins.
+
+1. **Open the app.** The header shows the snapshot timestamp and a green
+   **"Sources healthy."** pill (or a red warning if the snapshot is stale
+   or any lane errored — see the runbook below).
+2. **Pick a format.** Use the **Format** dropdown in the **Show Generator**
+   card: 15-min Quick Hit, 25-min Standard, or 35-min Deep Show. The
+   rundown regenerates automatically.
+3. **Pick focus teams.** The **Focus teams** chips default to all
+   configured teams (Athletics / Rockies / Tigers). Untick any you don't
+   want a homer block for. The team segments reorder accordingly.
+4. **Generate / regenerate.** Use the **Generate rundown** button if you
+   change controls and want a fresh run. Each segment shows a "Source
+   confidence" line so you can see at a glance which lanes were verified.
+5. **Copy or print for air.**
+   - **Copy rundown** — producer-facing, with per-segment time blocks
+     and bullet points.
+   - **Copy host script** — spoken copy with section headers and
+     transition cues, ready to paste into a teleprompter system.
+   - **Print host sheet** — opens a clean monospace print view of the
+     host script and triggers the browser print dialog.
+6. **Spot-check below.** The **League reference** card (collapsed
+   sub-sections) and per-team cards still show every verified note plus
+   per-lane source-health status. Use these to verify anything the
+   generator pulled.
+
+The generator is fully deterministic: same snapshot + same options
+produces the same rundown. It will gracefully degrade when lanes are
+empty (e.g. off-day with no probables) — sections that have nothing
+verified say so in plain English instead of inventing content.
 
 ## Show-day runbook
 

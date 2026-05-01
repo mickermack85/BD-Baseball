@@ -8,7 +8,7 @@
   <link rel="manifest" href="./manifest.webmanifest" />
   <style>
     body{font-family:system-ui,sans-serif;background:#0b1220;color:#e5e7eb;margin:0}
-    main{max-width:980px;margin:0 auto;padding:16px;display:grid;gap:14px}
+    main{max-width:1040px;margin:0 auto;padding:16px;display:grid;gap:14px}
     .card{background:#111827;border:1px solid #243244;border-radius:10px;padding:14px}
     h1,h2,h3{margin:.2rem 0}.muted{color:#93a4ba}.unv{color:#fca5a5;font-weight:700}
     ul{margin:.3rem 0 .8rem 1.1rem}
@@ -25,235 +25,89 @@
     .st-source_error{background:#3f1d1d;border-color:#7f1d1d;color:#fecaca}
     .st-unknown{background:#1f2937;border-color:#374151;color:#cbd5e1}
     .st-mark{font-family:monospace;font-weight:700}
+    .gen-card{background:#0f1c2e;border-color:#1d3354}
+    .gen-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:.4rem 0 .6rem}
+    .gen-controls label{font-size:.92rem;color:#cbd5e1}
+    .gen-controls select,.gen-controls button{font:inherit;color:#e5e7eb;background:#1f2937;border:1px solid #374151;border-radius:6px;padding:5px 10px}
+    .gen-controls button{cursor:pointer;background:#1d3a66;border-color:#2563eb}
+    .gen-controls button.secondary{background:#1f2937;border-color:#374151}
+    .gen-controls button:hover{filter:brightness(1.1)}
+    .lane-pick{display:inline-flex;align-items:center;gap:4px;background:#1f2937;border:1px solid #374151;border-radius:999px;padding:2px 10px;font-size:.85rem}
+    .seg{border-top:1px solid #1f2937;padding-top:8px;margin-top:8px}
+    .seg ul{margin-left:1.1rem}
+    .seg h3{font-size:1.02rem}
+    pre.host{background:#0b1220;border:1px solid #1f2937;border-radius:6px;padding:10px;max-height:320px;overflow:auto;white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;font-size:.86rem;color:#cbd5e1}
+    details{margin-top:.4rem}
+    details summary{cursor:pointer;color:#93a4ba}
+    details[open] summary{color:#cbd5e1}
+    @media print{
+      body{background:#fff;color:#000}
+      .gen-card,.card{background:#fff;border-color:#ccc;color:#000}
+      .muted{color:#444}
+      pre.host{background:#fff;color:#000;border-color:#ccc;max-height:none}
+    }
   </style>
 </head>
 <body>
   <main>
     <div class="card">
       <h1>BD Baseball Show Prep</h1>
-      <p class="muted">Static PWA snapshot viewer with explicit verification labels.</p>
+      <p class="muted">Daily show generator built from the verified MLB Stats API snapshot.</p>
       <p>Snapshot: <span id="stamp" class="badge">loading...</span></p>
       <p id="health"></p>
       <p id="offline" class="muted"></p>
     </div>
+
+    <div class="card gen-card">
+      <h2>Show Generator</h2>
+      <div class="gen-controls">
+        <label for="presetSelect">Format:</label>
+        <select id="presetSelect">
+          <option value="quick">15-min Quick Hit</option>
+          <option value="standard" selected>25-min Standard</option>
+          <option value="deep">35-min Deep Show</option>
+        </select>
+        <button id="genBtn" type="button">Generate rundown</button>
+        <button id="copyRundownBtn" class="secondary" type="button">Copy rundown</button>
+        <button id="copyTeleBtn" class="secondary" type="button">Copy host script</button>
+        <button id="printHostBtn" class="secondary" type="button">Print host sheet</button>
+        <span id="genStatus" class="muted" aria-live="polite"></span>
+      </div>
+      <div class="gen-controls">
+        <label>Focus teams:</label>
+        <span id="teamLanes"></span>
+      </div>
+      <h3>Rundown</h3>
+      <div id="rundownOut"></div>
+      <h3>Host script preview</h3>
+      <pre id="hostScriptOut" class="host"></pre>
+    </div>
+
     <div class="card">
-      <h2>League</h2>
+      <h2>League reference</h2>
+      <p class="muted">Raw verified league notes from the snapshot. Use this to spot-check anything the generator pulled.</p>
       <p id="leagueHeadline"></p>
-      <h3>Verified notes</h3><ul id="leagueVerified"></ul>
-      <h3>Unverified notes</h3><ul id="leagueUnverified"></ul>
-      <h3>Transactions</h3><ul id="leagueTx"></ul>
-      <h3>Source health</h3>
-      <div id="sourceStatus"></div>
+      <details open>
+        <summary>Verified notes</summary>
+        <ul id="leagueVerified"></ul>
+      </details>
+      <details>
+        <summary id="leagueUnvHeader">Unverified notes</summary>
+        <ul id="leagueUnverified"></ul>
+        <p id="leagueUnvEmpty" class="muted"></p>
+      </details>
+      <details>
+        <summary>Transactions</summary>
+        <ul id="leagueTx"></ul>
+      </details>
+      <details>
+        <summary>League source health</summary>
+        <div id="sourceStatus"></div>
+      </details>
     </div>
     <div id="teams"></div>
   </main>
-<script>
-"use strict";
-const STALE_AFTER_MIN = 24 * 60; // 24h: warn if older
-
-// Symbolic marks so status is distinguishable without relying on color.
-const STATUS_MARK = { verified: 'OK', unverified: '?', source_error: '!' };
-const STATUS_LABEL = { verified: 'verified', unverified: 'unverified', source_error: 'source error' };
-
-function el(id) { return document.getElementById(id); }
-function setText(id, value) { const n = el(id); if (n) n.textContent = value == null ? "" : String(value); }
-
-function makeEl(tag, className, text) {
-  const n = document.createElement(tag);
-  if (className) n.className = className;
-  if (text != null) n.textContent = String(text);
-  return n;
-}
-
-function liNode(text, opts) {
-  const node = document.createElement('li');
-  const t = String(text == null ? "" : text);
-  node.textContent = t;
-  if ((opts && opts.unv) || /^UNVERIFIED:/i.test(t)) node.className = 'unv';
-  return node;
-}
-
-function fillList(id, items, fallback) {
-  const root = el(id);
-  if (!root) return;
-  while (root.firstChild) root.removeChild(root.firstChild);
-  const list = (Array.isArray(items) && items.length) ? items : [fallback];
-  list.forEach((x) => root.appendChild(liNode(x)));
-}
-
-function statusPill(status) {
-  const key = (typeof status === 'string' && status) ? status : 'unknown';
-  const safe = STATUS_MARK[key] !== undefined ? key : 'unknown';
-  const span = makeEl('span', 'st st-' + safe);
-  const mark = makeEl('span', 'st-mark', STATUS_MARK[safe] != null ? STATUS_MARK[safe] : '·');
-  span.appendChild(mark);
-  span.appendChild(document.createTextNode(' ' + (STATUS_LABEL[safe] || safe)));
-  return span;
-}
-
-// Pretty lane labels. Keys are like "athletics_schedule" or "league_transactions".
-function laneLabel(key) {
-  if (typeof key !== 'string' || !key) return '(unknown lane)';
-  const parts = key.split('_');
-  const head = parts[0].charAt(0).toUpperCase() + parts[0].slice(1);
-  const tail = parts.slice(1).join(' ');
-  return tail ? head + ' ' + tail : head;
-}
-
-// Render a compact source-health table: lane | status | url.
-// `keysFilter`, if provided, restricts which lanes appear.
-function renderSourceHealth(rootId, data, keysFilter) {
-  const root = el(rootId);
-  if (!root) return;
-  while (root.firstChild) root.removeChild(root.firstChild);
-  const sources = (data && data.sources) || {};
-  const status = (data && data.source_status) || {};
-  const keys = Array.isArray(keysFilter) ? keysFilter : Object.keys(status);
-  if (!keys.length) {
-    root.appendChild(makeEl('p', 'muted', 'No source lanes reported.'));
-    return;
-  }
-  const table = makeEl('table', 'src-table');
-  const thead = makeEl('thead');
-  const trh = document.createElement('tr');
-  ['Lane', 'Status', 'Source'].forEach((t) => trh.appendChild(makeEl('th', null, t)));
-  thead.appendChild(trh);
-  table.appendChild(thead);
-  const tbody = makeEl('tbody');
-  keys.forEach((k) => {
-    const tr = document.createElement('tr');
-    tr.appendChild(makeEl('td', null, laneLabel(k)));
-    const tdSt = document.createElement('td');
-    tdSt.appendChild(statusPill(status[k]));
-    tr.appendChild(tdSt);
-    const tdUrl = document.createElement('td');
-    const url = sources[k];
-    if (typeof url === 'string' && url) {
-      const a = makeEl('a', null, url);
-      a.href = url;
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      tdUrl.appendChild(a);
-    } else {
-      tdUrl.appendChild(makeEl('span', 'muted', '—'));
-    }
-    tr.appendChild(tdUrl);
-    tbody.appendChild(tr);
-  });
-  table.appendChild(tbody);
-  root.appendChild(table);
-}
-
-function renderTeam(name, team, data) {
-  const card = makeEl('div', 'card');
-  card.appendChild(makeEl('h2', null, name));
-  card.appendChild(makeEl('p', null, team && team.headline ? team.headline : 'No headline available.'));
-  card.appendChild(makeEl('p', 'muted', 'Emotion: ' + ((team && team.emotion) || 'n/a')));
-
-  card.appendChild(makeEl('h3', null, 'Verified notes'));
-  const v = makeEl('ul');
-  ((team && team.verified_notes) || []).forEach((x) => v.appendChild(liNode(x)));
-  card.appendChild(v);
-
-  card.appendChild(makeEl('h3', null, 'Unverified notes'));
-  const u = makeEl('ul');
-  ((team && team.unverified_notes) || []).forEach((x) => u.appendChild(liNode(x, { unv: true })));
-  card.appendChild(u);
-
-  card.appendChild(makeEl('h3', null, 'Source health'));
-  const sh = makeEl('div');
-  const teamStatus = (team && team.source_status) || {};
-  const teamKeys = Object.keys(teamStatus);
-  const shHostId = 'sh-' + name.replace(/[^a-z0-9]/gi, '-');
-  sh.id = shHostId;
-  card.appendChild(sh);
-  renderSourceHealth(shHostId, data, teamKeys);
-
-  return card;
-}
-
-function computeHealth(data) {
-  const issues = [];
-  if (!data || typeof data !== 'object') return { ok: false, issues: ['snapshot missing'] };
-
-  const ts = data.generated_at;
-  if (typeof ts === 'string' && ts) {
-    const parsed = Date.parse(ts.endsWith('Z') ? ts : ts.replace(/([+-]\d\d):?(\d\d)$/, '$1$2'));
-    if (Number.isFinite(parsed)) {
-      const ageMin = (Date.now() - parsed) / 60000;
-      if (ageMin > STALE_AFTER_MIN) issues.push('snapshot is ' + Math.round(ageMin / 60) + 'h old');
-    } else {
-      issues.push('generated_at not parseable');
-    }
-  } else {
-    issues.push('generated_at missing');
-  }
-
-  const ss = data.source_status || {};
-  const lanes = Object.values(ss);
-  const verifiedLanes = lanes.filter((s) => s === 'verified').length;
-  const errorLanes = lanes.filter((s) => s === 'source_error').length;
-  if (lanes.length > 0 && verifiedLanes / lanes.length < 0.5) {
-    issues.push('mostly unverified (' + verifiedLanes + '/' + lanes.length + ' verified)');
-  }
-  if (errorLanes > 0) issues.push(errorLanes + ' source_error lane(s)');
-
-  // Reject obvious sample/empty fixture in production view.
-  const lu = (data.league && data.league.unverified_notes) || [];
-  if (Array.isArray(lu) && lu.some((x) => typeof x === 'string' && x.indexOf('UNVERIFIED: sample') !== -1)) {
-    issues.push('placeholder fixture detected');
-  }
-
-  return { ok: issues.length === 0, issues: issues };
-}
-
-function renderHealth(data) {
-  const root = el('health');
-  if (!root) return;
-  while (root.firstChild) root.removeChild(root.firstChild);
-  const h = computeHealth(data);
-  if (h.ok) {
-    const ok = makeEl('span', 'ok', 'Sources healthy.');
-    root.appendChild(ok);
-  } else {
-    const warn = makeEl('div', 'warn', 'Source health warning: ' + h.issues.join('; '));
-    root.appendChild(warn);
-  }
-}
-
-async function load() {
-  try {
-    const res = await fetch('./data/latest.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-
-    setText('stamp', data.generated_at || 'missing');
-    renderHealth(data);
-
-    setText('leagueHeadline', (data.league && data.league.headline) || 'Not confirmed from available sources.');
-    fillList('leagueVerified', data.league && data.league.verified_notes, 'Not confirmed from available sources.');
-    fillList('leagueUnverified', data.league && data.league.unverified_notes, 'UNVERIFIED: No league unverified notes listed.');
-    fillList('leagueTx', data.league && data.league.transactions, 'Not confirmed from available sources.');
-
-    const leagueKeys = Object.keys(data.source_status || {}).filter((k) => k.startsWith('league_'));
-    renderSourceHealth('sourceStatus', data, leagueKeys);
-
-    const teams = el('teams');
-    while (teams.firstChild) teams.removeChild(teams.firstChild);
-    Object.entries(data.teams || {}).forEach(([k, v]) => teams.appendChild(renderTeam(k, v, data)));
-  } catch (e) {
-    setText('stamp', 'load failed');
-    setText('leagueHeadline', 'UNVERIFIED: Snapshot could not be loaded.');
-    const root = el('health');
-    while (root.firstChild) root.removeChild(root.firstChild);
-    root.appendChild(makeEl('div', 'warn', 'Snapshot load failed: ' + (e && e.message ? e.message : 'unknown error')));
-  }
-}
-
-window.addEventListener('online', () => setText('offline', ''));
-window.addEventListener('offline', () => setText('offline', 'Offline mode: showing cached shell/snapshot when available.'));
-if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js'); }
-load();
-</script>
+  <script src="./show_generator.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
