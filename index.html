@@ -11,8 +11,20 @@
     main{max-width:980px;margin:0 auto;padding:16px;display:grid;gap:14px}
     .card{background:#111827;border:1px solid #243244;border-radius:10px;padding:14px}
     h1,h2,h3{margin:.2rem 0}.muted{color:#93a4ba}.unv{color:#fca5a5;font-weight:700}
-    ul{margin:.3rem 0 .8rem 1.1rem}.status{font-family:monospace;font-size:.9rem}
+    ul{margin:.3rem 0 .8rem 1.1rem}
     .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#1f2937}
+    .warn{background:#3f1d1d;border:1px solid #7f1d1d;color:#fecaca;padding:10px 12px;border-radius:8px;font-weight:600}
+    .ok{background:#13321d;border:1px solid #14532d;color:#bbf7d0;padding:8px 12px;border-radius:8px}
+    .src-table{width:100%;border-collapse:collapse;font-size:.92rem}
+    .src-table th,.src-table td{padding:4px 8px;text-align:left;border-bottom:1px solid #1f2937;vertical-align:top}
+    .src-table th{color:#93a4ba;font-weight:600}
+    .src-table td a{color:#93c5fd;word-break:break-all}
+    .st{display:inline-flex;align-items:center;gap:6px;padding:1px 8px;border-radius:999px;font-weight:600;font-size:.8rem;border:1px solid transparent}
+    .st-verified{background:#13321d;border-color:#14532d;color:#bbf7d0}
+    .st-unverified{background:#3f3a14;border-color:#854d0e;color:#fde68a}
+    .st-source_error{background:#3f1d1d;border-color:#7f1d1d;color:#fecaca}
+    .st-unknown{background:#1f2937;border-color:#374151;color:#cbd5e1}
+    .st-mark{font-family:monospace;font-weight:700}
   </style>
 </head>
 <body>
@@ -21,6 +33,7 @@
       <h1>BD Baseball Show Prep</h1>
       <p class="muted">Static PWA snapshot viewer with explicit verification labels.</p>
       <p>Snapshot: <span id="stamp" class="badge">loading...</span></p>
+      <p id="health"></p>
       <p id="offline" class="muted"></p>
     </div>
     <div class="card">
@@ -28,42 +41,218 @@
       <p id="leagueHeadline"></p>
       <h3>Verified notes</h3><ul id="leagueVerified"></ul>
       <h3>Unverified notes</h3><ul id="leagueUnverified"></ul>
-      <h3>Transactions</h3><ul id="leagueTx"></ul><h3>Source status</h3><pre id="sourceStatus" class="status"></pre>
+      <h3>Transactions</h3><ul id="leagueTx"></ul>
+      <h3>Source health</h3>
+      <div id="sourceStatus"></div>
     </div>
     <div id="teams"></div>
   </main>
 <script>
-const el = (id)=>document.getElementById(id);
-function li(text, unv=false){const n=document.createElement('li'); n.textContent=text; if(unv||/^UNVERIFIED:/i.test(text)) n.className='unv'; return n;}
-function fillList(id, items, fallback){const root=el(id); root.innerHTML=''; (items?.length?items:[fallback]).forEach(x=>root.appendChild(li(x)));}
-function renderTeam(name, team){
-  const card=document.createElement('div'); card.className='card';
-  card.innerHTML=`<h2>${name}</h2><p>${team.headline||'No headline available.'}</p><p class="muted">Emotion: ${team.emotion||'n/a'}</p><div class="status">Source status: ${JSON.stringify(team.source_status||{})}</div><h3>Verified notes</h3><ul></ul><h3>Unverified notes</h3><ul></ul>`;
-  const lists=card.querySelectorAll('ul');
-  (team.verified_notes||[]).forEach(x=>lists[0].appendChild(li(x)));
-  (team.unverified_notes||[]).forEach(x=>lists[1].appendChild(li(x,true)));
+"use strict";
+const STALE_AFTER_MIN = 24 * 60; // 24h: warn if older
+
+// Symbolic marks so status is distinguishable without relying on color.
+const STATUS_MARK = { verified: 'OK', unverified: '?', source_error: '!' };
+const STATUS_LABEL = { verified: 'verified', unverified: 'unverified', source_error: 'source error' };
+
+function el(id) { return document.getElementById(id); }
+function setText(id, value) { const n = el(id); if (n) n.textContent = value == null ? "" : String(value); }
+
+function makeEl(tag, className, text) {
+  const n = document.createElement(tag);
+  if (className) n.className = className;
+  if (text != null) n.textContent = String(text);
+  return n;
+}
+
+function liNode(text, opts) {
+  const node = document.createElement('li');
+  const t = String(text == null ? "" : text);
+  node.textContent = t;
+  if ((opts && opts.unv) || /^UNVERIFIED:/i.test(t)) node.className = 'unv';
+  return node;
+}
+
+function fillList(id, items, fallback) {
+  const root = el(id);
+  if (!root) return;
+  while (root.firstChild) root.removeChild(root.firstChild);
+  const list = (Array.isArray(items) && items.length) ? items : [fallback];
+  list.forEach((x) => root.appendChild(liNode(x)));
+}
+
+function statusPill(status) {
+  const key = (typeof status === 'string' && status) ? status : 'unknown';
+  const safe = STATUS_MARK[key] !== undefined ? key : 'unknown';
+  const span = makeEl('span', 'st st-' + safe);
+  const mark = makeEl('span', 'st-mark', STATUS_MARK[safe] != null ? STATUS_MARK[safe] : '·');
+  span.appendChild(mark);
+  span.appendChild(document.createTextNode(' ' + (STATUS_LABEL[safe] || safe)));
+  return span;
+}
+
+// Pretty lane labels. Keys are like "athletics_schedule" or "league_transactions".
+function laneLabel(key) {
+  if (typeof key !== 'string' || !key) return '(unknown lane)';
+  const parts = key.split('_');
+  const head = parts[0].charAt(0).toUpperCase() + parts[0].slice(1);
+  const tail = parts.slice(1).join(' ');
+  return tail ? head + ' ' + tail : head;
+}
+
+// Render a compact source-health table: lane | status | url.
+// `keysFilter`, if provided, restricts which lanes appear.
+function renderSourceHealth(rootId, data, keysFilter) {
+  const root = el(rootId);
+  if (!root) return;
+  while (root.firstChild) root.removeChild(root.firstChild);
+  const sources = (data && data.sources) || {};
+  const status = (data && data.source_status) || {};
+  const keys = Array.isArray(keysFilter) ? keysFilter : Object.keys(status);
+  if (!keys.length) {
+    root.appendChild(makeEl('p', 'muted', 'No source lanes reported.'));
+    return;
+  }
+  const table = makeEl('table', 'src-table');
+  const thead = makeEl('thead');
+  const trh = document.createElement('tr');
+  ['Lane', 'Status', 'Source'].forEach((t) => trh.appendChild(makeEl('th', null, t)));
+  thead.appendChild(trh);
+  table.appendChild(thead);
+  const tbody = makeEl('tbody');
+  keys.forEach((k) => {
+    const tr = document.createElement('tr');
+    tr.appendChild(makeEl('td', null, laneLabel(k)));
+    const tdSt = document.createElement('td');
+    tdSt.appendChild(statusPill(status[k]));
+    tr.appendChild(tdSt);
+    const tdUrl = document.createElement('td');
+    const url = sources[k];
+    if (typeof url === 'string' && url) {
+      const a = makeEl('a', null, url);
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      tdUrl.appendChild(a);
+    } else {
+      tdUrl.appendChild(makeEl('span', 'muted', '—'));
+    }
+    tr.appendChild(tdUrl);
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+  root.appendChild(table);
+}
+
+function renderTeam(name, team, data) {
+  const card = makeEl('div', 'card');
+  card.appendChild(makeEl('h2', null, name));
+  card.appendChild(makeEl('p', null, team && team.headline ? team.headline : 'No headline available.'));
+  card.appendChild(makeEl('p', 'muted', 'Emotion: ' + ((team && team.emotion) || 'n/a')));
+
+  card.appendChild(makeEl('h3', null, 'Verified notes'));
+  const v = makeEl('ul');
+  ((team && team.verified_notes) || []).forEach((x) => v.appendChild(liNode(x)));
+  card.appendChild(v);
+
+  card.appendChild(makeEl('h3', null, 'Unverified notes'));
+  const u = makeEl('ul');
+  ((team && team.unverified_notes) || []).forEach((x) => u.appendChild(liNode(x, { unv: true })));
+  card.appendChild(u);
+
+  card.appendChild(makeEl('h3', null, 'Source health'));
+  const sh = makeEl('div');
+  const teamStatus = (team && team.source_status) || {};
+  const teamKeys = Object.keys(teamStatus);
+  const shHostId = 'sh-' + name.replace(/[^a-z0-9]/gi, '-');
+  sh.id = shHostId;
+  card.appendChild(sh);
+  renderSourceHealth(shHostId, data, teamKeys);
+
   return card;
 }
-async function load(){
-  try{
-    const res=await fetch('./data/latest.json',{cache:'no-store'});
-    const data=await res.json();
-    el('stamp').textContent=data.generated_at || 'missing';
-    el('leagueHeadline').textContent=data.league?.headline || 'Not confirmed from available sources.';
-    fillList('leagueVerified', data.league?.verified_notes, 'Not confirmed from available sources.');
-    fillList('leagueUnverified', data.league?.unverified_notes, 'UNVERIFIED: No league unverified notes listed.');
-    fillList('leagueTx', data.league?.transactions, 'Not confirmed from available sources.');
-    el('sourceStatus').textContent = JSON.stringify(data.source_status || {}, null, 2);
-    const teams=el('teams'); teams.innerHTML='';
-    Object.entries(data.teams||{}).forEach(([k,v])=>teams.appendChild(renderTeam(k,v)));
-  }catch(e){
-    el('stamp').textContent='load failed';
-    el('leagueHeadline').textContent='UNVERIFIED: Snapshot could not be loaded.';
+
+function computeHealth(data) {
+  const issues = [];
+  if (!data || typeof data !== 'object') return { ok: false, issues: ['snapshot missing'] };
+
+  const ts = data.generated_at;
+  if (typeof ts === 'string' && ts) {
+    const parsed = Date.parse(ts.endsWith('Z') ? ts : ts.replace(/([+-]\d\d):?(\d\d)$/, '$1$2'));
+    if (Number.isFinite(parsed)) {
+      const ageMin = (Date.now() - parsed) / 60000;
+      if (ageMin > STALE_AFTER_MIN) issues.push('snapshot is ' + Math.round(ageMin / 60) + 'h old');
+    } else {
+      issues.push('generated_at not parseable');
+    }
+  } else {
+    issues.push('generated_at missing');
+  }
+
+  const ss = data.source_status || {};
+  const lanes = Object.values(ss);
+  const verifiedLanes = lanes.filter((s) => s === 'verified').length;
+  const errorLanes = lanes.filter((s) => s === 'source_error').length;
+  if (lanes.length > 0 && verifiedLanes / lanes.length < 0.5) {
+    issues.push('mostly unverified (' + verifiedLanes + '/' + lanes.length + ' verified)');
+  }
+  if (errorLanes > 0) issues.push(errorLanes + ' source_error lane(s)');
+
+  // Reject obvious sample/empty fixture in production view.
+  const lu = (data.league && data.league.unverified_notes) || [];
+  if (Array.isArray(lu) && lu.some((x) => typeof x === 'string' && x.indexOf('UNVERIFIED: sample') !== -1)) {
+    issues.push('placeholder fixture detected');
+  }
+
+  return { ok: issues.length === 0, issues: issues };
+}
+
+function renderHealth(data) {
+  const root = el('health');
+  if (!root) return;
+  while (root.firstChild) root.removeChild(root.firstChild);
+  const h = computeHealth(data);
+  if (h.ok) {
+    const ok = makeEl('span', 'ok', 'Sources healthy.');
+    root.appendChild(ok);
+  } else {
+    const warn = makeEl('div', 'warn', 'Source health warning: ' + h.issues.join('; '));
+    root.appendChild(warn);
   }
 }
-window.addEventListener('online',()=>el('offline').textContent='');
-window.addEventListener('offline',()=>el('offline').textContent='Offline mode: showing cached shell/snapshot when available.');
-if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js');}
+
+async function load() {
+  try {
+    const res = await fetch('./data/latest.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+
+    setText('stamp', data.generated_at || 'missing');
+    renderHealth(data);
+
+    setText('leagueHeadline', (data.league && data.league.headline) || 'Not confirmed from available sources.');
+    fillList('leagueVerified', data.league && data.league.verified_notes, 'Not confirmed from available sources.');
+    fillList('leagueUnverified', data.league && data.league.unverified_notes, 'UNVERIFIED: No league unverified notes listed.');
+    fillList('leagueTx', data.league && data.league.transactions, 'Not confirmed from available sources.');
+
+    const leagueKeys = Object.keys(data.source_status || {}).filter((k) => k.startsWith('league_'));
+    renderSourceHealth('sourceStatus', data, leagueKeys);
+
+    const teams = el('teams');
+    while (teams.firstChild) teams.removeChild(teams.firstChild);
+    Object.entries(data.teams || {}).forEach(([k, v]) => teams.appendChild(renderTeam(k, v, data)));
+  } catch (e) {
+    setText('stamp', 'load failed');
+    setText('leagueHeadline', 'UNVERIFIED: Snapshot could not be loaded.');
+    const root = el('health');
+    while (root.firstChild) root.removeChild(root.firstChild);
+    root.appendChild(makeEl('div', 'warn', 'Snapshot load failed: ' + (e && e.message ? e.message : 'unknown error')));
+  }
+}
+
+window.addEventListener('online', () => setText('offline', ''));
+window.addEventListener('offline', () => setText('offline', 'Offline mode: showing cached shell/snapshot when available.'));
+if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js'); }
 load();
 </script>
 </body>

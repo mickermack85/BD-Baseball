@@ -1,180 +1,341 @@
 #!/usr/bin/env python3
-"""Build source-bound MLB show-prep snapshot JSON."""
+"""Build source-bound MLB show-prep snapshot JSON from the MLB Stats API.
+
+Replaces the previous HTML scraping pipeline with stable JSON endpoints
+on statsapi.mlb.com. Lanes that cannot be filled return explicit
+``UNVERIFIED:`` / ``source_error`` entries rather than fake content.
+"""
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
-from datetime import datetime, timezone
+from dataclasses import dataclass, field
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from typing import Any, Callable
 import json
 import logging
-import re
-from typing import Any, Callable
-
-import requests
-from bs4 import BeautifulSoup
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
+import urllib.error
+import urllib.parse
+import urllib.request
 
 DATA_DIR = Path("data")
-TEAM_KEYS = ["athletics", "rockies", "tigers"]
 UNVERIFIED = "UNVERIFIED:"
+SCHEMA_VERSION = "3.1"
+# Trim raw per-lane note arrays in `debug.source_health` so the snapshot
+# stays small. The frontend only needs the summary (status + debug counters
+# + a handful of sample lines for source-debug spot checks).
+DEBUG_SAMPLE_LIMIT = 5
+# Cap league transactions so a busy day (1500+ entries) doesn't bloat the
+# payload that ships to every show-day client.
+LEAGUE_TX_LIMIT = 50
+USER_AGENT = "BD-Baseball-SnapshotBuilder/2.0 (+https://github.com/mickermack85/BD-Baseball)"
+STATS_BASE = "https://statsapi.mlb.com/api/v1"
 
-URLS = {
-    "league_standings": "https://www.mlb.com/standings",
-    "league_probables": "https://www.mlb.com/probable-pitchers",
-    "league_transactions": "https://www.espn.com/mlb/transactions",
-    "athletics_standings": "https://www.mlb.com/athletics/standings/mlb",
-    "athletics_probables": "https://www.mlb.com/athletics/roster/probable-pitchers",
-    "athletics_transactions": "https://www.mlb.com/athletics/roster/transactions",
-    "athletics_savant": "https://baseballsavant.mlb.com/team/133",
-    "athletics_espn_transactions": "https://www.espn.com/mlb/team/transactions/_/name/ath/athletics",
-    "rockies_standings": "https://www.mlb.com/rockies/standings",
-    "rockies_probables": "https://www.mlb.com/rockies/roster/probable-pitchers",
-    "rockies_transactions": "https://www.mlb.com/rockies/roster/transactions",
-    "rockies_savant": "https://baseballsavant.mlb.com/team/115",
-    "rockies_espn_transactions": "https://www.espn.com/mlb/team/transactions/_/name/col/colorado-rockies",
-    "tigers_standings": "https://www.mlb.com/tigers/standings/league",
-    "tigers_probables": "https://www.mlb.com/tigers/roster/probable-pitchers",
-    "tigers_transactions": "https://www.mlb.com/tigers/roster/transactions",
-    "tigers_savant": "https://baseballsavant.mlb.com/team/116",
-    "tigers_espn_transactions": "https://www.espn.com/mlb/team/transactions/_/name/det/detroit-tigers",
+# Team key -> Stats API teamId.
+TEAMS: dict[str, dict[str, Any]] = {
+    "athletics": {"id": 133, "name": "Athletics"},
+    "rockies": {"id": 115, "name": "Colorado Rockies"},
+    "tigers": {"id": 116, "name": "Detroit Tigers"},
 }
+
+LEAGUE_IDS = "103,104"  # AL, NL
 
 
 @dataclass
 class SourceResult:
     url: str
     status: str  # verified | unverified | source_error
-    verified: list[str]
-    unverified: list[str]
-    debug: list[str]
+    verified: list[str] = field(default_factory=list)
+    unverified: list[str] = field(default_factory=list)
+    debug: list[str] = field(default_factory=list)
 
 
-def build_session() -> requests.Session:
-    s = requests.Session()
-    retry = Retry(total=3, backoff_factor=0.5, status_forcelist=[429, 500, 502, 503, 504])
-    s.mount("https://", HTTPAdapter(max_retries=retry))
-    s.headers.update({"User-Agent": "BD-Baseball-SnapshotBuilder/1.1"})
-    return s
-
-
-def fetch_html(session: requests.Session, url: str) -> tuple[str | None, str | None]:
+def _fetch_json(url: str, timeout: int = 30) -> tuple[Any | None, str | None]:
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
     try:
-        r = session.get(url, timeout=30)
-        r.raise_for_status()
-        return r.text, None
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            raw = resp.read()
+            return json.loads(raw.decode("utf-8")), None
+    except urllib.error.HTTPError as e:
+        return None, f"http_error: {e.code} {e.reason}"
+    except urllib.error.URLError as e:
+        return None, f"url_error: {e.reason}"
+    except (TimeoutError, ConnectionError) as e:
+        return None, f"connection_error: {e}"
+    except json.JSONDecodeError as e:
+        return None, f"json_decode_error: {e}"
     except Exception as exc:  # noqa: BLE001
-        return None, f"source_error: {exc}"
+        return None, f"unexpected_error: {type(exc).__name__}: {exc}"
 
 
-def text_from_html(html: str) -> str:
-    return " ".join(BeautifulSoup(html, "html.parser").get_text(" ", strip=True).split())
+# ---------------------------- parsers (pure) ----------------------------
+
+def parse_standings(payload: Any, url: str, team_id: int | None = None) -> SourceResult:
+    """Parse /standings response.
+
+    If ``team_id`` is provided, only that team's row is surfaced.
+    """
+    if not isinstance(payload, dict):
+        return SourceResult(url, "source_error", debug=["payload_not_dict"])
+
+    records = payload.get("records") or []
+    rows: list[str] = []
+    team_row: str | None = None
+    for division in records:
+        div_name = (division.get("division") or {}).get("name") or "Division"
+        for tr in division.get("teamRecords") or []:
+            team = tr.get("team") or {}
+            name = team.get("name") or "Unknown"
+            wins = tr.get("wins")
+            losses = tr.get("losses")
+            pct = tr.get("winningPercentage") or ""
+            gb = tr.get("gamesBack") or "-"
+            if wins is None or losses is None:
+                continue
+            line = f"{name}: {wins}-{losses} (PCT {pct}, GB {gb}) [{div_name}]"
+            rows.append(line)
+            if team_id is not None and team.get("id") == team_id:
+                team_row = line
+
+    debug = [f"rows={len(rows)}"]
+    if team_id is not None:
+        if team_row:
+            return SourceResult(url, "verified", verified=[f"Standings: {team_row}"], debug=debug)
+        return SourceResult(
+            url,
+            "unverified",
+            unverified=[f"{UNVERIFIED} Standings row for teamId={team_id} not found."],
+            debug=debug,
+        )
+
+    if rows:
+        return SourceResult(url, "verified", verified=[f"Standings: {r}" for r in rows], debug=debug)
+    return SourceResult(url, "unverified", unverified=[f"{UNVERIFIED} No standings rows present."], debug=debug)
 
 
-def parse_standings(html: str, url: str) -> SourceResult:
-    matches = re.findall(r"([A-Z][A-Za-z.'\- ]{2,30})\s+(\d{1,2})-(\d{1,2})", text_from_html(html))
-    records: list[str] = []
-    for name, w, l in matches:
-        row = f"{name.strip()}: {w}-{l}"
-        if row not in records:
-            records.append(row)
-        if len(records) >= 8:
-            break
-    if records:
-        return SourceResult(url, "verified", [f"Standings snapshot: {r}" for r in records], [], [f"records_found={len(records)}"])
-    return SourceResult(url, "unverified", [], [f"{UNVERIFIED} Standings table not confidently parsed."], ["records_found=0"])
+def parse_schedule(payload: Any, url: str, team_id: int | None = None) -> SourceResult:
+    """Parse /schedule with probablePitcher hydrate."""
+    if not isinstance(payload, dict):
+        return SourceResult(url, "source_error", debug=["payload_not_dict"])
 
+    games_block = payload.get("dates") or []
+    games: list[dict[str, Any]] = []
+    for d in games_block:
+        for g in d.get("games") or []:
+            games.append(g)
 
-def parse_probables(html: str, url: str) -> SourceResult:
-    matches = re.findall(r"([A-Z][A-Za-z.'\- ]{2,25})\s+vs\.?\s+([A-Z][A-Za-z.'\- ]{2,25})", text_from_html(html))
-    games: list[str] = []
-    for away, home in matches:
-        row = f"{away.strip()} vs {home.strip()}"
-        if row not in games:
-            games.append(row)
-        if len(games) >= 8:
-            break
-    if games:
-        return SourceResult(url, "verified", [f"Probable matchup: {g}" for g in games], [], [f"matchups_found={len(games)}"])
-    return SourceResult(url, "unverified", [], [f"{UNVERIFIED} Probable pitcher slate not confidently parsed."], ["matchups_found=0"])
+    lines: list[str] = []
+    team_lines: list[str] = []
+    for g in games:
+        teams = g.get("teams") or {}
+        away = (teams.get("away") or {}).get("team") or {}
+        home = (teams.get("home") or {}).get("team") or {}
+        away_name = away.get("name") or "?"
+        home_name = home.get("name") or "?"
+        away_pp = ((teams.get("away") or {}).get("probablePitcher") or {}).get("fullName") or "TBD"
+        home_pp = ((teams.get("home") or {}).get("probablePitcher") or {}).get("fullName") or "TBD"
+        game_time = g.get("gameDate") or ""
+        status = (g.get("status") or {}).get("detailedState") or ""
+        venue = (g.get("venue") or {}).get("name") or ""
+        line = f"{away_name} ({away_pp}) @ {home_name} ({home_pp}) — {status} {game_time} {venue}".strip()
+        lines.append(line)
+        if team_id is not None and (away.get("id") == team_id or home.get("id") == team_id):
+            team_lines.append(line)
 
+    debug = [f"games={len(games)}"]
+    if team_id is not None:
+        if team_lines:
+            return SourceResult(url, "verified", verified=[f"Probable: {x}" for x in team_lines], debug=debug)
+        return SourceResult(
+            url,
+            "unverified",
+            unverified=[f"{UNVERIFIED} No scheduled game found for teamId={team_id} in window."],
+            debug=debug,
+        )
 
-def parse_transactions(html: str, url: str, label: str) -> SourceResult:
-    text = text_from_html(html)
-    pattern = r"((?:placed|recalled|selected|transferred|optioned|assigned|activated|agreed|signed|claimed|acquired|traded).{0,180}?\.)"
-    lines = []
-    for line in re.findall(pattern, text, flags=re.I):
-        item = line.strip()
-        if item not in lines:
-            lines.append(item)
-        if len(lines) >= 6:
-            break
     if lines:
-        return SourceResult(url, "verified", [f"{label}: {x}" for x in lines], [], [f"transactions_found={len(lines)}"])
-    return SourceResult(url, "unverified", [], [f"{UNVERIFIED} {label} transactions not confirmed from available sources."], ["transactions_found=0"])
+        return SourceResult(url, "verified", verified=[f"Probable: {x}" for x in lines], debug=debug)
+    return SourceResult(
+        url,
+        "unverified",
+        unverified=[f"{UNVERIFIED} No games scheduled in window."],
+        debug=debug,
+    )
 
 
-def parse_savant(html: str, url: str, label: str) -> SourceResult:
-    m = re.search(r"(\d{1,2})-(\d{1,2})", text_from_html(html))
-    if m:
-        return SourceResult(url, "verified", [f"{label} Savant record signal: {m.group(1)}-{m.group(2)}"], [], ["record_pattern_matched=1"])
-    return SourceResult(url, "unverified", [], [f"{UNVERIFIED} {label} Savant record signal not found."], ["record_pattern_matched=0"])
+def parse_transactions(payload: Any, url: str, label: str) -> SourceResult:
+    if not isinstance(payload, dict):
+        return SourceResult(url, "source_error", debug=["payload_not_dict"])
+
+    items = payload.get("transactions") or []
+    lines: list[str] = []
+    for t in items:
+        date = t.get("date") or ""
+        desc = t.get("description") or ""
+        if not desc:
+            continue
+        lines.append(f"{date}: {desc}".strip(": "))
+
+    debug = [f"transactions={len(items)}"]
+    if lines:
+        return SourceResult(url, "verified", verified=[f"{label} tx: {x}" for x in lines], debug=debug)
+    return SourceResult(
+        url,
+        "unverified",
+        unverified=[f"{UNVERIFIED} No {label} transactions returned in window."],
+        debug=debug,
+    )
 
 
-def build_snapshot() -> dict[str, Any]:
-    session = build_session()
+# ---------------------------- builder ----------------------------
+
+def _today_utc() -> datetime:
+    return datetime.now(timezone.utc)
+
+
+def _date_window(days_back: int = 7) -> tuple[str, str]:
+    today = _today_utc().date()
+    return (today - timedelta(days=days_back)).isoformat(), today.isoformat()
+
+
+def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetch_json) -> dict[str, Any]:
+    today = _today_utc().date().isoformat()
+    season = _today_utc().year
+    tx_start, tx_end = _date_window(days_back=7)
+
+    sources: dict[str, str] = {
+        "league_standings": f"{STATS_BASE}/standings?leagueId={LEAGUE_IDS}&season={season}",
+        "league_schedule": f"{STATS_BASE}/schedule?sportId=1&date={today}&hydrate=probablePitcher,team",
+        "league_transactions": f"{STATS_BASE}/transactions?startDate={tx_start}&endDate={tx_end}",
+    }
+    for key, info in TEAMS.items():
+        tid = info["id"]
+        sources[f"{key}_schedule"] = (
+            f"{STATS_BASE}/schedule?sportId=1&teamId={tid}"
+            f"&startDate={today}&endDate={(_today_utc().date() + timedelta(days=2)).isoformat()}"
+            f"&hydrate=probablePitcher,team"
+        )
+        sources[f"{key}_transactions"] = (
+            f"{STATS_BASE}/transactions?teamId={tid}&startDate={tx_start}&endDate={tx_end}"
+        )
+
     source_health: dict[str, dict[str, Any]] = {}
 
-    def run(key: str, parser: Callable[..., SourceResult], *args: str) -> SourceResult:
-        html, error = fetch_html(session, URLS[key])
-        if error:
-            result = SourceResult(URLS[key], "source_error", [], [f"{UNVERIFIED} {key} unavailable."], [error])
-        else:
-            result = parser(html, URLS[key], *args)
-        source_health[key] = asdict(result)
-        return result
-
-    lg_stand = run("league_standings", parse_standings)
-    lg_prob = run("league_probables", parse_probables)
-    lg_tx = run("league_transactions", parse_transactions, "League")
-
-    teams: dict[str, Any] = {}
-    for team in TEAM_KEYS:
-        pretty = team.capitalize()
-        t_stand = run(f"{team}_standings", parse_standings)
-        t_prob = run(f"{team}_probables", parse_probables)
-        t_mlb_tx = run(f"{team}_transactions", parse_transactions, pretty)
-        t_espn_tx = run(f"{team}_espn_transactions", parse_transactions, f"{pretty} ESPN")
-        t_savant = run(f"{team}_savant", parse_savant, pretty)
-
-        teams[team] = {
-            "headline": f"{pretty} source snapshot.",
-            "emotion": "Measured",
-            "verified_notes": t_stand.verified[:1] + t_prob.verified[:1] + t_mlb_tx.verified[:2] + t_espn_tx.verified[:2] + t_savant.verified[:1],
-            "unverified_notes": t_stand.unverified + t_prob.unverified + t_mlb_tx.unverified + t_espn_tx.unverified + t_savant.unverified,
-            "notes": ["Editorial framing only; do not promote UNVERIFIED entries as facts."],
-            "checklist": ["Recheck sources before air.", "Promote only verified entries to on-air claims."],
-            "source_status": {k: source_health[k]["status"] for k in [f"{team}_standings", f"{team}_probables", f"{team}_transactions", f"{team}_espn_transactions", f"{team}_savant"]},
-            "debug": {k: source_health[k]["debug"] for k in [f"{team}_standings", f"{team}_probables", f"{team}_transactions", f"{team}_espn_transactions", f"{team}_savant"]},
+    def _store_health(key: str, res: SourceResult) -> None:
+        # Store a trimmed summary so latest.json stays small. We keep:
+        #   - status + url for the UI's source-health table
+        #   - debug counters (e.g. "transactions=1648") for source spotchecks
+        #   - up to DEBUG_SAMPLE_LIMIT sample notes per side for spotchecks
+        #   - full counts so consumers can tell sample vs full set
+        source_health[key] = {
+            "url": res.url,
+            "status": res.status,
+            "debug": list(res.debug),
+            "verified_count": len(res.verified),
+            "unverified_count": len(res.unverified),
+            "verified_sample": list(res.verified[:DEBUG_SAMPLE_LIMIT]),
+            "unverified_sample": list(res.unverified[:DEBUG_SAMPLE_LIMIT]),
         }
 
-    now = datetime.now(timezone.utc)
+    def _run(key: str, parser: Callable[..., SourceResult], *parser_args: Any) -> SourceResult:
+        url = sources[key]
+        payload, err = fetch(url)
+        if err:
+            res = SourceResult(
+                url,
+                "source_error",
+                unverified=[f"{UNVERIFIED} {key} unavailable."],
+                debug=[err],
+            )
+        else:
+            res = parser(payload, url, *parser_args)
+        _store_health(key, res)
+        return res
+
+    lg_stand = _run("league_standings", parse_standings, None)
+    lg_sched = _run("league_schedule", parse_schedule, None)
+    lg_tx = _run("league_transactions", parse_transactions, "League")
+
+    teams_out: dict[str, Any] = {}
+    for key, info in TEAMS.items():
+        tid = info["id"]
+        pretty = info["name"]
+        t_stand_url = sources["league_standings"]  # reuse league standings payload for team row
+        # Run a per-team standings parse against league payload so we don't refetch.
+        league_payload, league_err = fetch(t_stand_url)
+        if league_err:
+            t_stand = SourceResult(
+                t_stand_url,
+                "source_error",
+                unverified=[f"{UNVERIFIED} {key} standings unavailable."],
+                debug=[league_err],
+            )
+        else:
+            t_stand = parse_standings(league_payload, t_stand_url, team_id=tid)
+        _store_health(f"{key}_standings", t_stand)
+
+        t_sched = _run(f"{key}_schedule", parse_schedule, tid)
+        t_tx = _run(f"{key}_transactions", parse_transactions, pretty)
+
+        verified_notes: list[str] = []
+        verified_notes.extend(t_stand.verified[:1])
+        verified_notes.extend(t_sched.verified[:2])
+        verified_notes.extend(t_tx.verified[:4])
+
+        unverified_notes: list[str] = []
+        unverified_notes.extend(t_stand.unverified)
+        unverified_notes.extend(t_sched.unverified)
+        unverified_notes.extend(t_tx.unverified)
+
+        teams_out[key] = {
+            "headline": f"{pretty} source snapshot from MLB Stats API.",
+            "emotion": "Measured",
+            "verified_notes": verified_notes,
+            "unverified_notes": unverified_notes,
+            "notes": ["Editorial framing only; do not promote UNVERIFIED entries as facts."],
+            "checklist": [
+                "Recheck sources before air.",
+                "Promote only verified entries to on-air claims.",
+            ],
+            "source_status": {
+                f"{key}_standings": source_health[f"{key}_standings"]["status"],
+                f"{key}_schedule": source_health[f"{key}_schedule"]["status"],
+                f"{key}_transactions": source_health[f"{key}_transactions"]["status"],
+            },
+            "debug": {
+                f"{key}_standings": source_health[f"{key}_standings"]["debug"],
+                f"{key}_schedule": source_health[f"{key}_schedule"]["debug"],
+                f"{key}_transactions": source_health[f"{key}_transactions"]["debug"],
+            },
+        }
+
+    now = _today_utc()
+    league_tx = (lg_tx.verified if lg_tx.verified else lg_tx.unverified)[:LEAGUE_TX_LIMIT]
     return {
-        "generated_at": now.isoformat(timespec="seconds"),
-        "schema_version": "2.0",
-        "sources": URLS,
+        "generated_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "schema_version": SCHEMA_VERSION,
+        "sources": sources,
         "source_status": {k: v["status"] for k, v in source_health.items()},
         "league": {
-            "headline": "League snapshot from configured source lanes.",
-            "verified_notes": lg_stand.verified[:5] + lg_prob.verified[:4],
-            "unverified_notes": lg_stand.unverified + lg_prob.unverified,
+            "headline": "League snapshot from MLB Stats API.",
+            "verified_notes": lg_stand.verified[:8] + lg_sched.verified[:6],
+            "unverified_notes": lg_stand.unverified + lg_sched.unverified,
             "stories": ["Use only verified league records/matchups/transactions for hard claims."],
-            "watch": lg_prob.verified[:6] if lg_prob.verified else [f"{UNVERIFIED} No probable matchup entries parsed."],
-            "transactions": lg_tx.verified if lg_tx.verified else lg_tx.unverified,
-            "debug": {"standings": lg_stand.debug, "probables": lg_prob.debug, "transactions": lg_tx.debug},
+            "watch": lg_sched.verified[:8]
+            if lg_sched.verified
+            else [f"{UNVERIFIED} No probable matchup entries available."],
+            "transactions": league_tx,
+            "transactions_total": len(lg_tx.verified) if lg_tx.verified else len(lg_tx.unverified),
+            "debug": {
+                "standings": lg_stand.debug,
+                "schedule": lg_sched.debug,
+                "transactions": lg_tx.debug,
+            },
         },
-        "teams": teams,
-        "debug": {"source_health": source_health, "generated_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ")},
+        "teams": teams_out,
+        "debug": {
+            "source_health": source_health,
+            "generated_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        },
     }
 
 
@@ -182,7 +343,7 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     snap = build_snapshot()
-    day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    day = _today_utc().strftime("%Y-%m-%d")
     latest = DATA_DIR / "latest.json"
     dated = DATA_DIR / f"mlb_snapshot_{day}.json"
     latest.write_text(json.dumps(snap, indent=2), encoding="utf-8")

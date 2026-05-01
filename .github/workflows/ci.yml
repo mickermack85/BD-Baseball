@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run unit tests (stdlib only)
+        run: python -m unittest discover -s tests -v
+
+      - name: Lenient schema validation of committed latest.json
+        run: python scripts/validate_snapshot.py --path data/latest.json
+        # Lenient mode: structural checks only. Strict freshness is enforced
+        # in the refresh workflow before commit.
+
+      - name: Strict validation of fixtures/sample_snapshot.json
+        run: |
+          python scripts/validate_snapshot.py \
+            --path fixtures/sample_snapshot.json \
+            --strict \
+            --max-age-minutes 9999999 \
+            --min-verified-lanes 4

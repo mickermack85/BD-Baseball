@@ -1,21 +1,95 @@
 {
-  "generated_at": "2026-05-01T00:00:00+00:00",
-  "schema_version": "2.0",
-  "sources": {},
-  "source_status": {},
+  "_note": "Static example used for offline smoke tests. generated_at is intentionally fixed and will fail strict freshness checks; pass --max-age-minutes a large value when validating, or use this only as a frontend smoke fixture.",
+  "generated_at": "2026-05-01T07:00:00Z",
+  "schema_version": "3.0",
+  "sources": {
+    "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions"
+  },
+  "source_status": {
+    "league_standings": "verified",
+    "league_schedule": "verified",
+    "league_transactions": "verified",
+    "athletics_standings": "verified",
+    "athletics_schedule": "verified",
+    "athletics_transactions": "verified",
+    "rockies_standings": "verified",
+    "rockies_schedule": "verified",
+    "rockies_transactions": "verified",
+    "tigers_standings": "verified",
+    "tigers_schedule": "verified",
+    "tigers_transactions": "verified"
+  },
   "league": {
-    "headline": "League snapshot from configured source lanes.",
-    "verified_notes": [],
-    "unverified_notes": ["UNVERIFIED: sample"],
-    "stories": [],
-    "watch": [],
-    "transactions": [],
-    "debug": {}
+    "headline": "League snapshot from MLB Stats API.",
+    "verified_notes": [
+      "Standings: Athletics: 17-14 (PCT .548, GB -) [AL West]",
+      "Standings: Detroit Tigers: 16-16 (PCT .500, GB -) [AL Central]",
+      "Probable: Cleveland Guardians (Joey Cantillo) @ Athletics (J.T. Ginn) — Scheduled"
+    ],
+    "unverified_notes": [],
+    "stories": ["Use only verified league records/matchups/transactions for hard claims."],
+    "watch": [
+      "Probable: Cleveland Guardians (Joey Cantillo) @ Athletics (J.T. Ginn) — Scheduled"
+    ],
+    "transactions": [
+      "League tx: 2026-04-30: Athletics recalled RHP Mason Miller from Triple-A."
+    ],
+    "debug": {"standings": ["rows=30"], "schedule": ["games=15"], "transactions": ["transactions=12"]}
   },
   "teams": {
-    "athletics": {"headline": "", "emotion": "", "verified_notes": [], "unverified_notes": [], "notes": [], "checklist": [], "source_status": {}, "debug": {}},
-    "rockies": {"headline": "", "emotion": "", "verified_notes": [], "unverified_notes": [], "notes": [], "checklist": [], "source_status": {}, "debug": {}},
-    "tigers": {"headline": "", "emotion": "", "verified_notes": [], "unverified_notes": [], "notes": [], "checklist": [], "source_status": {}, "debug": {}}
+    "athletics": {
+      "headline": "Athletics source snapshot from MLB Stats API.",
+      "emotion": "Measured",
+      "verified_notes": [
+        "Standings: Athletics: 17-14 (PCT .548, GB -) [AL West]",
+        "Probable: Cleveland Guardians (Joey Cantillo) @ Athletics (J.T. Ginn) — Scheduled"
+      ],
+      "unverified_notes": [],
+      "notes": ["Editorial framing only; do not promote UNVERIFIED entries as facts."],
+      "checklist": ["Recheck sources before air.", "Promote only verified entries to on-air claims."],
+      "source_status": {
+        "athletics_standings": "verified",
+        "athletics_schedule": "verified",
+        "athletics_transactions": "verified"
+      },
+      "debug": {"athletics_standings": ["rows=30"], "athletics_schedule": ["games=1"], "athletics_transactions": ["transactions=2"]}
+    },
+    "rockies": {
+      "headline": "Colorado Rockies source snapshot from MLB Stats API.",
+      "emotion": "Measured",
+      "verified_notes": [
+        "Standings: Colorado Rockies: 14-18 (PCT .438, GB 6.5) [NL West]",
+        "Probable: Atlanta Braves (Grant Holmes) @ Colorado Rockies (Jose Quintana) — Scheduled"
+      ],
+      "unverified_notes": [],
+      "notes": ["Editorial framing only; do not promote UNVERIFIED entries as facts."],
+      "checklist": ["Recheck sources before air.", "Promote only verified entries to on-air claims."],
+      "source_status": {
+        "rockies_standings": "verified",
+        "rockies_schedule": "verified",
+        "rockies_transactions": "verified"
+      },
+      "debug": {"rockies_standings": ["rows=30"], "rockies_schedule": ["games=1"], "rockies_transactions": ["transactions=1"]}
+    },
+    "tigers": {
+      "headline": "Detroit Tigers source snapshot from MLB Stats API.",
+      "emotion": "Measured",
+      "verified_notes": [
+        "Standings: Detroit Tigers: 16-16 (PCT .500, GB -) [AL Central]",
+        "Probable: Texas Rangers (MacKenzie Gore) @ Detroit Tigers (Jack Flaherty) — Scheduled"
+      ],
+      "unverified_notes": [],
+      "notes": ["Editorial framing only; do not promote UNVERIFIED entries as facts."],
+      "checklist": ["Recheck sources before air.", "Promote only verified entries to on-air claims."],
+      "source_status": {
+        "tigers_standings": "verified",
+        "tigers_schedule": "verified",
+        "tigers_transactions": "verified"
+      },
+      "debug": {"tigers_standings": ["rows=30"], "tigers_schedule": ["games=1"], "tigers_transactions": ["transactions=1"]}
+    }
   },
-  "debug": {"source_health": {}}
+  "debug": {"source_health": {}, "generated_utc": "2026-05-01T07:00:00Z"}
 }
