@@ -34,8 +34,10 @@ snapshot builder that reads the public **MLB Stats API** (`statsapi.mlb.com`).
   (no `innerHTML` interpolation of snapshot fields).
 - `show_generator.js` — pure-function rundown / teleprompter generator.
   Inputs: snapshot + options (`preset`, `teams`). Outputs: timed segment
-  list, plain-text rundown, plain-text host script. Importable in Node
-  for tests; also exposed as `window.BDShowGenerator`.
+  list, plain-text rundown, plain-text host script, plus a livestream
+  metadata package (title, short / long description, teaser) and
+  Markdown renderers for each output. Importable in Node for tests;
+  also exposed as `window.BDShowGenerator`.
 - `app.js` — frontend wiring: loads `data/latest.json`, renders the
   generator controls and outputs, and renders the source-health /
   verified-notes reference panels (compact / collapsible). Empty
@@ -166,7 +168,39 @@ The whole flow happens in the browser. No terminal, no logins.
      transition cues, ready to paste into a teleprompter system.
    - **Print host sheet** — opens a clean monospace print view of the
      host script and triggers the browser print dialog.
-6. **Spot-check below.** The **League reference** card (collapsed
+6. **Review the livestream package.** The **Livestream package** card
+   below the rundown shows producer copy derived from the same
+   verified snapshot:
+   - **Title** — YouTube/Rumble-style, capped at 100 chars, derived
+     from the strongest verified hook (focus-team matchup → top of
+     standings → number of probables).
+   - **Short description** — 1–2 sentence summary for cross-posting.
+   - **Full description** — episode summary, segment timestamps,
+     standings hook, today's slate, source-confidence note, and CTA
+     placeholders the producer fills in (Substack, X, Discord).
+   - **Teaser** — single-line teaser/social/Substack post copy.
+   Each field has a **Copy** button; **Copy all livestream metadata**
+   bundles the whole package as Markdown. Edit the fields freely
+   before copying — edits are picked up by the copy and download
+   buttons. If the snapshot is unhealthy, a producer-only warning
+   appears at the top of the card; the public title is never
+   contaminated with warning copy.
+7. **Download platform assets.** Under the show generator there are
+   four **Download** buttons that emit Markdown via Blob URL — no
+   network round-trip:
+   - **Download rundown (.md)** — producer rundown.
+   - **Download host script (.md)** — host/teleprompter copy.
+   - **Download livestream metadata (.md)** — title + descriptions +
+     teaser, picking up any edits in the Livestream package card.
+   - **Download complete show package (.md)** — title block,
+     descriptions, rundown, host script, and a source-health summary
+     in one document.
+   Filenames are date- and preset-derived, e.g.
+   `bd-baseball-2026-05-01-standard-show-package.md`. Downloads are
+   blocked when no rundown has been generated yet (a status line
+   tells you to generate first), so you never end up with a blank
+   file.
+8. **Spot-check below.** The **League reference** card (collapsed
    sub-sections) and per-team cards still show every verified note plus
    per-lane source-health status. Use these to verify anything the
    generator pulled.

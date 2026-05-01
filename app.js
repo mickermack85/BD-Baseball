@@ -13,6 +13,7 @@ const STATUS_LABEL = { verified: "verified", unverified: "unverified", source_er
 
 let CURRENT_SNAPSHOT = null;
 let CURRENT_RUNDOWN = null;
+let CURRENT_LIVE_PKG = null;
 
 function el(id) { return document.getElementById(id); }
 function setText(id, value) { const n = el(id); if (n) n.textContent = value == null ? "" : String(value); }
@@ -255,6 +256,25 @@ function renderRundownInto(rootId, rundown) {
   });
 }
 
+function renderLivestreamPackage(pkg) {
+  const titleField = el("liveTitleField");
+  const shortField = el("liveShortField");
+  const longField = el("liveLongField");
+  const teaserField = el("liveTeaserField");
+  if (titleField) titleField.value = pkg.title || "";
+  if (shortField) shortField.value = pkg.shortDescription || "";
+  if (longField) longField.value = pkg.longDescription || "";
+  if (teaserField) teaserField.value = pkg.teaser || "";
+
+  const warn = el("livePkgWarn");
+  if (warn) {
+    while (warn.firstChild) warn.removeChild(warn.firstChild);
+    if (pkg.producerWarning) {
+      warn.appendChild(makeEl("div", "live-warn", pkg.producerWarning));
+    }
+  }
+}
+
 function regenerateRundown() {
   if (!CURRENT_SNAPSHOT) return;
   const opts = { preset: selectedPreset(), teams: selectedTeams() };
@@ -265,6 +285,11 @@ function regenerateRundown() {
   const script = window.BDShowGenerator.renderTeleprompter(rundown, CURRENT_SNAPSHOT);
   const host = el("hostScriptOut");
   if (host) host.textContent = script;
+  // Refresh livestream metadata package alongside the rundown.
+  CURRENT_LIVE_PKG = window.BDShowGenerator.generateLivestreamPackage(
+    CURRENT_SNAPSHOT, rundown, { teams: opts.teams }
+  );
+  renderLivestreamPackage(CURRENT_LIVE_PKG);
 }
 
 function copyToClipboard(text) {
@@ -300,6 +325,137 @@ function copyTeleprompter() {
   if (!CURRENT_RUNDOWN) return;
   const text = window.BDShowGenerator.renderTeleprompter(CURRENT_RUNDOWN, CURRENT_SNAPSHOT);
   copyToClipboard(text).then(() => flashStatus("Host script copied."));
+}
+
+function flashLiveStatus(msg) {
+  const root = el("liveStatus");
+  if (!root) { flashStatus(msg); return; }
+  root.textContent = msg;
+  setTimeout(() => { if (root.textContent === msg) root.textContent = ""; }, 2500);
+}
+
+function ensureRundown() {
+  if (CURRENT_RUNDOWN) return true;
+  if (CURRENT_SNAPSHOT) regenerateRundown();
+  return !!CURRENT_RUNDOWN;
+}
+
+function copyLiveField(fieldId, label) {
+  const node = el(fieldId);
+  if (!node) return;
+  const value = node.value != null ? node.value : "";
+  if (!value) { flashLiveStatus(label + " is empty — generate a rundown first."); return; }
+  copyToClipboard(value).then(() => flashLiveStatus(label + " copied."));
+}
+
+function copyLiveAll() {
+  if (!ensureRundown() || !CURRENT_LIVE_PKG) {
+    flashLiveStatus("No livestream metadata yet — generate a rundown first.");
+    return;
+  }
+  // Re-read the editable fields so producer edits are preserved.
+  const t = el("liveTitleField"); const s = el("liveShortField");
+  const l = el("liveLongField"); const te = el("liveTeaserField");
+  const pkg = {
+    title: t ? t.value : CURRENT_LIVE_PKG.title,
+    shortDescription: s ? s.value : CURRENT_LIVE_PKG.shortDescription,
+    longDescription: l ? l.value : CURRENT_LIVE_PKG.longDescription,
+    teaser: te ? te.value : CURRENT_LIVE_PKG.teaser,
+    prettyDate: CURRENT_LIVE_PKG.prettyDate,
+    producerWarning: CURRENT_LIVE_PKG.producerWarning,
+  };
+  const text = window.BDShowGenerator.renderLivestreamMarkdown(pkg);
+  copyToClipboard(text).then(() => flashLiveStatus("Livestream metadata copied."));
+}
+
+// Trigger a client-side download of `text` as `filename`. Uses Blob + object
+// URL only — no third-party deps, no network.
+function triggerDownload(filename, text, mime) {
+  if (typeof text !== "string" || text.length === 0) {
+    flashStatus("Nothing to download.");
+    return false;
+  }
+  const blob = new Blob([text], { type: (mime || "text/markdown") + ";charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.rel = "noopener";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  // Defer revoke so the browser has time to start the download.
+  setTimeout(() => { try { URL.revokeObjectURL(url); } catch (e) { /* ignore */ } }, 1000);
+  return true;
+}
+
+function currentDateStr() {
+  if (CURRENT_LIVE_PKG && CURRENT_LIVE_PKG.showDate) return CURRENT_LIVE_PKG.showDate;
+  if (CURRENT_SNAPSHOT && typeof CURRENT_SNAPSHOT.generated_at === "string") {
+    return CURRENT_SNAPSHOT.generated_at.slice(0, 10);
+  }
+  return "";
+}
+
+function downloadRundown() {
+  if (!ensureRundown()) { flashStatus("Generate a rundown first."); return; }
+  const md = window.BDShowGenerator.renderRundownMarkdown(CURRENT_RUNDOWN);
+  const fn = window.BDShowGenerator.buildFilename(
+    CURRENT_RUNDOWN.presetKey, currentDateStr(), "rundown", "md"
+  );
+  if (triggerDownload(fn, md)) flashStatus("Rundown downloaded.");
+}
+
+function downloadHostScript() {
+  if (!ensureRundown()) { flashStatus("Generate a rundown first."); return; }
+  const md = window.BDShowGenerator.renderHostScriptMarkdown(CURRENT_RUNDOWN, CURRENT_SNAPSHOT);
+  const fn = window.BDShowGenerator.buildFilename(
+    CURRENT_RUNDOWN.presetKey, currentDateStr(), "host-script", "md"
+  );
+  if (triggerDownload(fn, md)) flashStatus("Host script downloaded.");
+}
+
+function downloadLivestream() {
+  if (!ensureRundown() || !CURRENT_LIVE_PKG) {
+    flashStatus("Generate a rundown first.");
+    return;
+  }
+  // Pick up any producer edits to the editable fields.
+  const t = el("liveTitleField"); const s = el("liveShortField");
+  const l = el("liveLongField"); const te = el("liveTeaserField");
+  const pkg = Object.assign({}, CURRENT_LIVE_PKG, {
+    title: t ? t.value : CURRENT_LIVE_PKG.title,
+    shortDescription: s ? s.value : CURRENT_LIVE_PKG.shortDescription,
+    longDescription: l ? l.value : CURRENT_LIVE_PKG.longDescription,
+    teaser: te ? te.value : CURRENT_LIVE_PKG.teaser,
+  });
+  const md = window.BDShowGenerator.renderLivestreamMarkdown(pkg);
+  const fn = window.BDShowGenerator.buildFilename(
+    CURRENT_RUNDOWN.presetKey, currentDateStr(), "livestream-metadata", "md"
+  );
+  if (triggerDownload(fn, md)) flashStatus("Livestream metadata downloaded.");
+}
+
+function downloadCompletePackage() {
+  if (!ensureRundown() || !CURRENT_LIVE_PKG) {
+    flashStatus("Generate a rundown first.");
+    return;
+  }
+  const t = el("liveTitleField"); const s = el("liveShortField");
+  const l = el("liveLongField"); const te = el("liveTeaserField");
+  const pkg = Object.assign({}, CURRENT_LIVE_PKG, {
+    title: t ? t.value : CURRENT_LIVE_PKG.title,
+    shortDescription: s ? s.value : CURRENT_LIVE_PKG.shortDescription,
+    longDescription: l ? l.value : CURRENT_LIVE_PKG.longDescription,
+    teaser: te ? te.value : CURRENT_LIVE_PKG.teaser,
+  });
+  const md = window.BDShowGenerator.renderCompletePackageMarkdown(
+    CURRENT_SNAPSHOT, CURRENT_RUNDOWN, pkg
+  );
+  const fn = window.BDShowGenerator.buildFilename(
+    CURRENT_RUNDOWN.presetKey, currentDateStr(), "show-package", "md"
+  );
+  if (triggerDownload(fn, md)) flashStatus("Show package downloaded.");
 }
 
 function buildPrintHostSheet(rundown, snapshot) {
@@ -402,6 +558,26 @@ function wireGeneratorControls(data) {
 
   const printB = el("printHostBtn");
   if (printB) printB.addEventListener("click", printHostSheet);
+
+  const dlR = el("dlRundownBtn");
+  if (dlR) dlR.addEventListener("click", downloadRundown);
+  const dlH = el("dlHostBtn");
+  if (dlH) dlH.addEventListener("click", downloadHostScript);
+  const dlL = el("dlLiveBtn");
+  if (dlL) dlL.addEventListener("click", downloadLivestream);
+  const dlP = el("dlPackageBtn");
+  if (dlP) dlP.addEventListener("click", downloadCompletePackage);
+
+  const cTitle = el("copyLiveTitleBtn");
+  if (cTitle) cTitle.addEventListener("click", () => copyLiveField("liveTitleField", "Title"));
+  const cShort = el("copyLiveShortBtn");
+  if (cShort) cShort.addEventListener("click", () => copyLiveField("liveShortField", "Short description"));
+  const cLong = el("copyLiveLongBtn");
+  if (cLong) cLong.addEventListener("click", () => copyLiveField("liveLongField", "Full description"));
+  const cTeaser = el("copyLiveTeaserBtn");
+  if (cTeaser) cTeaser.addEventListener("click", () => copyLiveField("liveTeaserField", "Teaser"));
+  const cAll = el("copyLiveAllBtn");
+  if (cAll) cAll.addEventListener("click", copyLiveAll);
 
   buildTeamLaneCheckboxes(detectAvailableTeams(data));
   regenerateRundown();

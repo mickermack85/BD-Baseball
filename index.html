@@ -37,6 +37,13 @@
     .seg ul{margin-left:1.1rem}
     .seg h3{font-size:1.02rem}
     pre.host{background:#0b1220;border:1px solid #1f2937;border-radius:6px;padding:10px;max-height:320px;overflow:auto;white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;font-size:.86rem;color:#cbd5e1}
+    .live-pkg{display:grid;gap:10px}
+    .live-field{display:grid;gap:4px}
+    .live-field label{font-size:.85rem;color:#cbd5e1;font-weight:600}
+    .live-field textarea,.live-field input[type=text]{font:inherit;color:#e5e7eb;background:#0b1220;border:1px solid #243244;border-radius:6px;padding:8px;width:100%;box-sizing:border-box;font-family:ui-monospace,Menlo,monospace;font-size:.86rem;resize:vertical}
+    .live-field textarea{min-height:90px}
+    .live-field .row{display:flex;gap:8px;align-items:center}
+    .live-warn{background:#3f3a14;border:1px solid #854d0e;color:#fde68a;padding:8px 10px;border-radius:6px;font-size:.9rem}
     details{margin-top:.4rem}
     details summary{cursor:pointer;color:#93a4ba}
     details[open] summary{color:#cbd5e1}
@@ -87,10 +94,57 @@
         <label>Focus teams:</label>
         <span id="teamLanes"></span>
       </div>
+      <div class="gen-controls">
+        <label>Downloads:</label>
+        <button id="dlRundownBtn" class="secondary" type="button">Download rundown (.md)</button>
+        <button id="dlHostBtn" class="secondary" type="button">Download host script (.md)</button>
+        <button id="dlLiveBtn" class="secondary" type="button">Download livestream metadata (.md)</button>
+        <button id="dlPackageBtn" class="secondary" type="button">Download complete show package (.md)</button>
+      </div>
       <h3>Rundown</h3>
       <div id="rundownOut"></div>
       <h3>Host script preview</h3>
       <pre id="hostScriptOut" class="host"></pre>
+    </div>
+
+    <div class="card gen-card">
+      <h2>Livestream package</h2>
+      <p class="muted">Producer copy derived from the same verified snapshot. Edit before publishing — changes here don't affect the rundown.</p>
+      <div id="livePkgWarn"></div>
+      <div class="live-pkg">
+        <div class="live-field">
+          <label for="liveTitleField">Livestream title (YouTube/Rumble-style)</label>
+          <div class="row">
+            <input id="liveTitleField" type="text" />
+            <button id="copyLiveTitleBtn" class="secondary" type="button">Copy</button>
+          </div>
+        </div>
+        <div class="live-field">
+          <label for="liveShortField">Short description (1–2 sentences)</label>
+          <div class="row" style="align-items:flex-start">
+            <textarea id="liveShortField"></textarea>
+            <button id="copyLiveShortBtn" class="secondary" type="button">Copy</button>
+          </div>
+        </div>
+        <div class="live-field">
+          <label for="liveLongField">Full YouTube description</label>
+          <div class="row" style="align-items:flex-start">
+            <textarea id="liveLongField" style="min-height:220px"></textarea>
+            <button id="copyLiveLongBtn" class="secondary" type="button">Copy</button>
+          </div>
+        </div>
+        <div class="live-field">
+          <label for="liveTeaserField">Teaser / social / Substack post</label>
+          <div class="row" style="align-items:flex-start">
+            <textarea id="liveTeaserField"></textarea>
+            <button id="copyLiveTeaserBtn" class="secondary" type="button">Copy</button>
+          </div>
+        </div>
+        <div class="gen-controls">
+          <button id="copyLiveAllBtn" type="button">Copy all livestream metadata</button>
+          <span id="liveStatus" class="muted" aria-live="polite"></span>
+        </div>
+      </div>
     </div>
 
     <div class="card">
