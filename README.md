@@ -19,9 +19,14 @@ builder that reads the public **MLB Stats API** (`statsapi.mlb.com`).
   the built-in `GITHUB_TOKEN`.
 - `data/latest.json` — current snapshot consumed by the frontend.
 - `index.html` — static viewer. Renders verified notes, highlights
-  `UNVERIFIED:` entries, displays a stale/source-health banner, and uses
-  safe DOM construction (no `innerHTML` interpolation of snapshot fields).
-- `sw.js` — versioned shell cache + network-first snapshot update path.
+  `UNVERIFIED:` entries, shows a per-lane source-health table (status
+  pill + source URL) for the league and each team, displays a
+  stale/source-health banner, and uses safe DOM construction (no
+  `innerHTML` interpolation of snapshot fields).
+- `sw.js` — versioned caches (separate shell + data caches). Static
+  shell is cache-first. `/data/latest.json` is stale-while-revalidate
+  with a 4s network timeout, so flaky Wi-Fi falls back to the cached
+  snapshot quickly instead of hanging the page.
 
 ## No third-party runtime keys
 The builder uses only public, unauthenticated `statsapi.mlb.com` endpoints.
@@ -113,6 +118,56 @@ whether it has been removed from the working tree or git history.
 - If a source is unavailable, lanes are labeled `source_error` /
   `UNVERIFIED:` and the UI shows a source-health warning banner.
 - Inspect `data/latest.json` → `debug.source_health` and `source_status`
-  for exact failure modes.
+  for exact failure modes. Each lane includes `status`, `url`, `debug`
+  counters, and a small `verified_sample` / `unverified_sample` for spot
+  checks. (Full per-lane note arrays are intentionally not shipped — they
+  bloated the snapshot on busy transactions days.)
 - If a deploy looks stale, reload once so the updated service worker
   takes control.
+
+## Show-day runbook
+
+Quick checklist for the producer to run before air. All checks happen in
+the browser — no terminal access required.
+
+### What "green" looks like
+- Snapshot stamp shows a fresh ISO timestamp (within the last few hours).
+- The header shows the green **"Sources healthy."** pill.
+- The League "Source health" table shows **verified** for standings,
+  schedule, transactions.
+- Each team card's "Source health" table shows **verified** on its three
+  lanes (`*_standings`, `*_schedule`, `*_transactions`).
+- No lane row is rendered with the red **source error** pill or yellow
+  **unverified** pill.
+
+### What "stale" / "unverified" mean
+- **stale** — the red banner reads `snapshot is Nh old`. The cron refresh
+  didn't run, or the strict validator rejected the latest build. Treat
+  every note on screen as last-known-good only.
+- **unverified** — the source returned a structurally valid response but
+  no rows matched the lane (e.g. no scheduled game today). The note is
+  preserved as `UNVERIFIED:` and must not be promoted to an on-air claim.
+- **source error** — the upstream API returned an HTTP/JSON failure. The
+  lane has no fresh data; rely on the cached snapshot and re-run the
+  refresh.
+
+### How to manually dispatch a refresh
+1. GitHub → repo → **Actions** → **Refresh snapshot** workflow.
+2. Click **Run workflow** (uses the default `main` branch).
+3. Wait ~1–2 minutes; the workflow strict-validates before it commits.
+4. Hard-reload the show-day tab once the run is green so the new SW
+   pulls the fresh snapshot.
+
+### What to do if refresh fails
+- Open the failed Actions run. The strict validator prints the exact
+  failed gate (`too stale`, `no verified_notes for team X`, `only N
+  verified source lanes`, etc.).
+- If it's a source outage on `statsapi.mlb.com`, wait 5–10 minutes and
+  re-dispatch — the cron will also retry on the next slot.
+- If it's a structural/schema regression in the builder, the previous
+  `data/latest.json` is still committed and serving; the workflow only
+  commits when validation passes, so the live UI is never wedged on a
+  broken snapshot. Roll back the offending builder commit if needed.
+- The red header banner will remain visible to the producer for as long
+  as the snapshot is stale, so on-air talent always knows when content
+  is last-known-good vs. fresh.

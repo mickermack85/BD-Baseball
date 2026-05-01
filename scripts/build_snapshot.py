@@ -7,7 +7,7 @@ on statsapi.mlb.com. Lanes that cannot be filled return explicit
 """
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass, field
+from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Callable
@@ -19,7 +19,14 @@ import urllib.request
 
 DATA_DIR = Path("data")
 UNVERIFIED = "UNVERIFIED:"
-SCHEMA_VERSION = "3.0"
+SCHEMA_VERSION = "3.1"
+# Trim raw per-lane note arrays in `debug.source_health` so the snapshot
+# stays small. The frontend only needs the summary (status + debug counters
+# + a handful of sample lines for source-debug spot checks).
+DEBUG_SAMPLE_LIMIT = 5
+# Cap league transactions so a busy day (1500+ entries) doesn't bloat the
+# payload that ships to every show-day client.
+LEAGUE_TX_LIMIT = 50
 USER_AGENT = "BD-Baseball-SnapshotBuilder/2.0 (+https://github.com/mickermack85/BD-Baseball)"
 STATS_BASE = "https://statsapi.mlb.com/api/v1"
 
@@ -213,6 +220,22 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
 
     source_health: dict[str, dict[str, Any]] = {}
 
+    def _store_health(key: str, res: SourceResult) -> None:
+        # Store a trimmed summary so latest.json stays small. We keep:
+        #   - status + url for the UI's source-health table
+        #   - debug counters (e.g. "transactions=1648") for source spotchecks
+        #   - up to DEBUG_SAMPLE_LIMIT sample notes per side for spotchecks
+        #   - full counts so consumers can tell sample vs full set
+        source_health[key] = {
+            "url": res.url,
+            "status": res.status,
+            "debug": list(res.debug),
+            "verified_count": len(res.verified),
+            "unverified_count": len(res.unverified),
+            "verified_sample": list(res.verified[:DEBUG_SAMPLE_LIMIT]),
+            "unverified_sample": list(res.unverified[:DEBUG_SAMPLE_LIMIT]),
+        }
+
     def _run(key: str, parser: Callable[..., SourceResult], *parser_args: Any) -> SourceResult:
         url = sources[key]
         payload, err = fetch(url)
@@ -225,7 +248,7 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
             )
         else:
             res = parser(payload, url, *parser_args)
-        source_health[key] = asdict(res)
+        _store_health(key, res)
         return res
 
     lg_stand = _run("league_standings", parse_standings, None)
@@ -248,7 +271,7 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
             )
         else:
             t_stand = parse_standings(league_payload, t_stand_url, team_id=tid)
-        source_health[f"{key}_standings"] = asdict(t_stand)
+        _store_health(f"{key}_standings", t_stand)
 
         t_sched = _run(f"{key}_schedule", parse_schedule, tid)
         t_tx = _run(f"{key}_transactions", parse_transactions, pretty)
@@ -286,6 +309,7 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
         }
 
     now = _today_utc()
+    league_tx = (lg_tx.verified if lg_tx.verified else lg_tx.unverified)[:LEAGUE_TX_LIMIT]
     return {
         "generated_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
         "schema_version": SCHEMA_VERSION,
@@ -299,7 +323,8 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
             "watch": lg_sched.verified[:8]
             if lg_sched.verified
             else [f"{UNVERIFIED} No probable matchup entries available."],
-            "transactions": lg_tx.verified if lg_tx.verified else lg_tx.unverified,
+            "transactions": league_tx,
+            "transactions_total": len(lg_tx.verified) if lg_tx.verified else len(lg_tx.unverified),
             "debug": {
                 "standings": lg_stand.debug,
                 "schedule": lg_sched.debug,

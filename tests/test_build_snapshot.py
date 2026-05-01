@@ -193,6 +193,68 @@ class BuilderTests(unittest.TestCase):
         ts = snap["generated_at"]
         self.assertTrue(ts.endswith("Z") or "+" in ts, f"unexpected ts: {ts}")
 
+    def test_source_health_is_trimmed_summary(self) -> None:
+        # debug.source_health entries should expose summary metadata only:
+        # status, url, debug counters, counts, and small samples — never the
+        # full verified/unverified arrays that bloated latest.json on busy
+        # transactions days.
+        snap = b.build_snapshot(fetch=self._fake_fetch())
+        sh = snap["debug"]["source_health"]
+        self.assertTrue(sh, "source_health should be populated")
+        for key, entry in sh.items():
+            self.assertIn("status", entry, f"{key} missing status")
+            self.assertIn("url", entry, f"{key} missing url")
+            self.assertIn("debug", entry, f"{key} missing debug")
+            self.assertIn("verified_count", entry)
+            self.assertIn("unverified_count", entry)
+            self.assertIn("verified_sample", entry)
+            self.assertIn("unverified_sample", entry)
+            self.assertNotIn(
+                "verified", entry, f"{key} still leaks full verified array"
+            )
+            self.assertNotIn(
+                "unverified", entry, f"{key} still leaks full unverified array"
+            )
+            self.assertLessEqual(len(entry["verified_sample"]), b.DEBUG_SAMPLE_LIMIT)
+            self.assertLessEqual(len(entry["unverified_sample"]), b.DEBUG_SAMPLE_LIMIT)
+
+    def test_league_transactions_are_capped(self) -> None:
+        # A high-volume transactions day should not bloat the shipped payload.
+        many_tx = {
+            "transactions": [
+                {"date": "2026-04-30", "description": f"tx {i}"}
+                for i in range(b.LEAGUE_TX_LIMIT * 4)
+            ]
+        }
+        std = _standings_payload()
+        sched = _schedule_payload()
+        empty_tx = _transactions_payload()
+
+        def fetch(url: str):
+            if "standings" in url:
+                return std, None
+            if "schedule" in url:
+                return sched, None
+            if "transactions" in url and "teamId" in url:
+                return empty_tx, None
+            if "transactions" in url:
+                return many_tx, None
+            return None, "unmapped_url"
+
+        snap = b.build_snapshot(fetch=fetch)
+        self.assertEqual(len(snap["league"]["transactions"]), b.LEAGUE_TX_LIMIT)
+        self.assertEqual(snap["league"]["transactions_total"], b.LEAGUE_TX_LIMIT * 4)
+
+    def test_source_health_status_matches_top_level(self) -> None:
+        # Frontend reads top-level source_status to drive its source-health
+        # table; debug.source_health must agree with it lane-for-lane.
+        snap = b.build_snapshot(fetch=self._fake_fetch())
+        ss = snap["source_status"]
+        sh = snap["debug"]["source_health"]
+        self.assertEqual(set(ss.keys()), set(sh.keys()))
+        for k, v in ss.items():
+            self.assertEqual(sh[k]["status"], v)
+
 
 if __name__ == "__main__":
     unittest.main()
