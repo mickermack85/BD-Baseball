@@ -95,6 +95,33 @@ class StaticStructureTests(unittest.TestCase):
         # as fake content. The new viewer never renders that string.
         self.assertNotIn("UNVERIFIED: No league", html)
 
+    def test_print_host_sheet_uses_in_page_path(self) -> None:
+        # The old print path popped a window — popup blockers and the
+        # `noopener` token caused blank printouts. The fix renders an
+        # in-page section and triggers window.print() instead.
+        html = INDEX.read_text(encoding="utf-8")
+        self.assertIn('id="printHostSheet"', html, "in-page print host section missing")
+        self.assertIn("printing-host", html, "print mode CSS toggle missing")
+
+        text = APP.read_text(encoding="utf-8")
+        self.assertIn("buildPrintHostSheet", text, "print host sheet builder missing")
+        self.assertIn("window.print()", text, "print handler must call window.print()")
+        self.assertIn("printing-host", text, "print handler must toggle print mode class")
+        # Must not regress to the old popup-window path which produced
+        # blank pages under noopener / popup blockers.
+        self.assertNotIn('window.open("",', text)
+        self.assertNotIn("window.open('',", text)
+        # Print sheet must include rundown + host script sources.
+        self.assertIn("renderTeleprompter", text)
+        self.assertIn("renderRundownText", text)
+
+    def test_print_host_sheet_has_no_rundown_fallback(self) -> None:
+        # Clicking print before generating a rundown must not silently
+        # leave the user on a blank page; the handler either generates
+        # one or surfaces a status message.
+        text = APP.read_text(encoding="utf-8")
+        self.assertIn("No rundown to print", text)
+
 
 @unittest.skipIf(_node() is None, "node not available")
 class GeneratorBehaviourTests(unittest.TestCase):

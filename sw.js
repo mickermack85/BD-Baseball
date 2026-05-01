@@ -4,7 +4,7 @@
 //  - /data/latest.json: stale-while-revalidate with a network timeout so
 //    flaky Wi-Fi falls back to the cached snapshot quickly instead of
 //    hanging the page.
-const CACHE_VERSION = 'bd-baseball-v6';
+const CACHE_VERSION = 'bd-baseball-v7';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const LATEST_PATH = '/data/latest.json';
