@@ -302,24 +302,65 @@ function copyTeleprompter() {
   copyToClipboard(text).then(() => flashStatus("Host script copied."));
 }
 
+function buildPrintHostSheet(rundown, snapshot) {
+  // Produce the printable host sheet DOM in-page. Uses textContent only —
+  // never innerHTML — so snapshot fields can't inject markup.
+  const root = el("printHostSheet");
+  if (!root) return null;
+  while (root.firstChild) root.removeChild(root.firstChild);
+
+  root.appendChild(makeEl("h1", null, "BD Baseball — Host Sheet"));
+
+  const meta = makeEl("div", "meta");
+  const stamp = (snapshot && snapshot.generated_at) || "snapshot timestamp unavailable";
+  meta.appendChild(makeEl("div", null, "Snapshot: " + stamp));
+  meta.appendChild(makeEl("div", null,
+    "Format: " + rundown.presetLabel +
+    "  •  Target " + rundown.targetMinutes + " min" +
+    "  •  Allocated " + rundown.totalMinutes + " min"
+  ));
+  const teams = (rundown.teams || []).map((t) => window.BDShowGenerator.TEAM_DISPLAY[t] || t);
+  meta.appendChild(makeEl("div", null, "Focus teams: " + (teams.length ? teams.join(", ") : "(none)")));
+  root.appendChild(meta);
+
+  root.appendChild(makeEl("h2", null, "Rundown"));
+  const rundownPre = makeEl("pre");
+  rundownPre.textContent = window.BDShowGenerator.renderRundownText(rundown);
+  root.appendChild(rundownPre);
+
+  root.appendChild(makeEl("h2", null, "Host script"));
+  const scriptPre = makeEl("pre");
+  scriptPre.textContent = window.BDShowGenerator.renderTeleprompter(rundown, snapshot);
+  root.appendChild(scriptPre);
+
+  return root;
+}
+
 function printHostSheet() {
-  if (!CURRENT_RUNDOWN) return;
-  const text = window.BDShowGenerator.renderTeleprompter(CURRENT_RUNDOWN, CURRENT_SNAPSHOT);
-  const w = window.open("", "_blank", "noopener");
-  if (!w) { flashStatus("Print blocked — allow popups."); return; }
-  // Build the print doc with DOM APIs only — never innerHTML interpolation.
-  const doc = w.document;
-  doc.title = "BD Baseball Host Sheet";
-  const style = doc.createElement("style");
-  style.textContent =
-    "body{font-family:ui-monospace,Menlo,monospace;white-space:pre-wrap;padding:24px;font-size:12pt;color:#000;background:#fff}" +
-    "@media print{body{padding:0}}";
-  doc.head.appendChild(style);
-  const pre = doc.createElement("pre");
-  pre.textContent = text;
-  doc.body.appendChild(pre);
-  w.focus();
-  setTimeout(() => { try { w.print(); } catch (e) { /* ignore */ } }, 100);
+  if (!CURRENT_RUNDOWN) {
+    if (CURRENT_SNAPSHOT) {
+      regenerateRundown();
+    }
+    if (!CURRENT_RUNDOWN) {
+      flashStatus("No rundown to print — generate one first.");
+      return;
+    }
+  }
+  const root = buildPrintHostSheet(CURRENT_RUNDOWN, CURRENT_SNAPSHOT);
+  if (!root) { flashStatus("Print sheet unavailable."); return; }
+  document.body.classList.add("printing-host");
+  const cleanup = () => {
+    document.body.classList.remove("printing-host");
+    window.removeEventListener("afterprint", cleanup);
+  };
+  window.addEventListener("afterprint", cleanup);
+  // Fallback cleanup in case afterprint doesn't fire (Safari quirks).
+  setTimeout(cleanup, 60000);
+  // Defer print to next frame so the layout switch is committed before
+  // the print dialog snapshots the DOM.
+  setTimeout(() => {
+    try { window.print(); } catch (e) { cleanup(); }
+  }, 50);
 }
 
 function buildTeamLaneCheckboxes(available) {
