@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T02:55:23+00:00",
+  "generated_at": "2026-05-01T04:04:49+00:00",
   "schema_version": "2.0",
   "sources": {
     "league_standings": "https://www.mlb.com/standings",
@@ -27,17 +27,17 @@
     "league_transactions": "verified",
     "athletics_standings": "unverified",
     "athletics_probables": "unverified",
-    "athletics_transactions": "verified",
+    "athletics_transactions": "unverified",
     "athletics_espn_transactions": "verified",
     "athletics_savant": "verified",
     "rockies_standings": "unverified",
     "rockies_probables": "unverified",
-    "rockies_transactions": "verified",
+    "rockies_transactions": "unverified",
     "rockies_espn_transactions": "verified",
     "rockies_savant": "verified",
     "tigers_standings": "unverified",
     "tigers_probables": "unverified",
-    "tigers_transactions": "verified",
+    "tigers_transactions": "unverified",
     "tigers_espn_transactions": "verified",
     "tigers_savant": "verified"
   },
@@ -79,15 +79,14 @@
       "headline": "Athletics source snapshot.",
       "emotion": "Measured",
       "verified_notes": [
-        "Athletics: claimed 2B Andy Ib\u00e1\u00f1ez off waivers from Athletics.",
-        "Athletics: placed 3B Max Muncy on the 10-day injured list retroactive to April 26, 2026.",
         "Athletics ESPN: Placed 3B Max Muncy on the 10-day IL, retroactive to April 26.",
         "Athletics ESPN: Recalled 3B Brett Harris from Las Vegas (PCL).",
         "Athletics Savant record signal: 26-04"
       ],
       "unverified_notes": [
         "UNVERIFIED: Standings table not confidently parsed.",
-        "UNVERIFIED: Probable pitcher slate not confidently parsed."
+        "UNVERIFIED: Probable pitcher slate not confidently parsed.",
+        "UNVERIFIED: Athletics transactions not confirmed from available sources."
       ],
       "notes": [
         "Editorial framing only; do not promote UNVERIFIED entries as facts."
@@ -99,7 +98,7 @@
       "source_status": {
         "athletics_standings": "unverified",
         "athletics_probables": "unverified",
-        "athletics_transactions": "verified",
+        "athletics_transactions": "unverified",
         "athletics_espn_transactions": "verified",
         "athletics_savant": "verified"
       },
@@ -111,7 +110,7 @@
           "matchups_found=0"
         ],
         "athletics_transactions": [
-          "transactions_found=6"
+          "transactions_found=0"
         ],
         "athletics_espn_transactions": [
           "transactions_found=6"
@@ -125,15 +124,14 @@
       "headline": "Rockies source snapshot.",
       "emotion": "Measured",
       "verified_notes": [
-        "Rockies: activated LHP Kyle Freeland from the 15-day injured list.",
-        "Rockies: activated RHP Jimmy Herget from the restricted list.",
         "Rockies ESPN: Optioned RHP Blas Casta\u00f1o to Albuquerque (PCL).",
         "Rockies ESPN: Optioned LHP Sammy Peralta and RHP Seth Halvorsen to Albuquerque.",
         "Rockies Savant record signal: 26-04"
       ],
       "unverified_notes": [
         "UNVERIFIED: Standings table not confidently parsed.",
-        "UNVERIFIED: Probable pitcher slate not confidently parsed."
+        "UNVERIFIED: Probable pitcher slate not confidently parsed.",
+        "UNVERIFIED: Rockies transactions not confirmed from available sources."
       ],
       "notes": [
         "Editorial framing only; do not promote UNVERIFIED entries as facts."
@@ -145,7 +143,7 @@
       "source_status": {
         "rockies_standings": "unverified",
         "rockies_probables": "unverified",
-        "rockies_transactions": "verified",
+        "rockies_transactions": "unverified",
         "rockies_espn_transactions": "verified",
         "rockies_savant": "verified"
       },
@@ -157,7 +155,7 @@
           "matchups_found=0"
         ],
         "rockies_transactions": [
-          "transactions_found=6"
+          "transactions_found=0"
         ],
         "rockies_espn_transactions": [
           "transactions_found=6"
@@ -171,15 +169,14 @@
       "headline": "Tigers source snapshot.",
       "emotion": "Measured",
       "verified_notes": [
-        "Tigers: placed SS Javier B\u00e1ez on the 10-day injured list.",
-        "Tigers: placed RHP Casey Mize on the 15-day injured list.",
         "Tigers ESPN: Placed RHP Casey Mize on the 15-day IL.",
         "Tigers ESPN: Placed INF Javier B\u00e1ez on the 10-day IL.",
         "Tigers Savant record signal: 26-04"
       ],
       "unverified_notes": [
         "UNVERIFIED: Standings table not confidently parsed.",
-        "UNVERIFIED: Probable pitcher slate not confidently parsed."
+        "UNVERIFIED: Probable pitcher slate not confidently parsed.",
+        "UNVERIFIED: Tigers transactions not confirmed from available sources."
       ],
       "notes": [
         "Editorial framing only; do not promote UNVERIFIED entries as facts."
@@ -191,7 +188,7 @@
       "source_status": {
         "tigers_standings": "unverified",
         "tigers_probables": "unverified",
-        "tigers_transactions": "verified",
+        "tigers_transactions": "unverified",
         "tigers_espn_transactions": "verified",
         "tigers_savant": "verified"
       },
@@ -203,7 +200,7 @@
           "matchups_found=0"
         ],
         "tigers_transactions": [
-          "transactions_found=6"
+          "transactions_found=0"
         ],
         "tigers_espn_transactions": [
           "transactions_found=6"
@@ -278,18 +275,13 @@
       },
       "athletics_transactions": {
         "url": "https://www.mlb.com/athletics/roster/transactions",
-        "status": "verified",
-        "verified": [
-          "Athletics: claimed 2B Andy Ib\u00e1\u00f1ez off waivers from Athletics.",
-          "Athletics: placed 3B Max Muncy on the 10-day injured list retroactive to April 26, 2026.",
-          "Athletics: recalled 3B Brett Harris from Las Vegas Aviators.",
-          "Athletics: activated RF Brent Rooker from the 10-day injured list.",
-          "Athletics: placed CF Denzel Clarke on the 10-day injured list.",
-          "Athletics: recalled RF Colby Thomas from Las Vegas Aviators."
+        "status": "unverified",
+        "verified": [],
+        "unverified": [
+          "UNVERIFIED: Athletics transactions not confirmed from available sources."
         ],
-        "unverified": [],
         "debug": [
-          "transactions_found=6"
+          "transactions_found=0"
         ]
       },
       "athletics_espn_transactions": {
@@ -343,18 +335,13 @@
       },
       "rockies_transactions": {
         "url": "https://www.mlb.com/rockies/roster/transactions",
-        "status": "verified",
-        "verified": [
-          "Rockies: activated LHP Kyle Freeland from the 15-day injured list.",
-          "Rockies: activated RHP Jimmy Herget from the restricted list.",
-          "Rockies: claimed LHP Luis Peralta off waivers from Colorado Rockies.",
-          "Rockies: optioned RHP Blas Casta\u00f1o to Albuquerque Isotopes.",
-          "Rockies: optioned LHP Sammy Peralta to Albuquerque Isotopes.",
-          "Rockies: optioned RHP Seth Halvorsen to Albuquerque Isotopes."
+        "status": "unverified",
+        "verified": [],
+        "unverified": [
+          "UNVERIFIED: Rockies transactions not confirmed from available sources."
         ],
-        "unverified": [],
         "debug": [
-          "transactions_found=6"
+          "transactions_found=0"
         ]
       },
       "rockies_espn_transactions": {
@@ -408,18 +395,13 @@
       },
       "tigers_transactions": {
         "url": "https://www.mlb.com/tigers/roster/transactions",
-        "status": "verified",
-        "verified": [
-          "Tigers: placed SS Javier B\u00e1ez on the 10-day injured list.",
-          "Tigers: placed RHP Casey Mize on the 15-day injured list.",
-          "Tigers: recalled LHP Enmanuel De Jesus from Toledo Mud Hens.",
-          "Tigers: recalled 3B Jace Jung from Toledo Mud Hens.",
-          "Tigers: signed free agent SS Andrew Navigato to a minor league contract.",
-          "Tigers: placed RHP Connor Seabold on the 15-day injured list."
+        "status": "unverified",
+        "verified": [],
+        "unverified": [
+          "UNVERIFIED: Tigers transactions not confirmed from available sources."
         ],
-        "unverified": [],
         "debug": [
-          "transactions_found=6"
+          "transactions_found=0"
         ]
       },
       "tigers_espn_transactions": {
@@ -450,6 +432,6 @@
         ]
       }
     },
-    "generated_utc": "2026-05-01T02:55:23Z"
+    "generated_utc": "2026-05-01T04:04:49Z"
   }
 }
