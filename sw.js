@@ -1,12 +1,12 @@
-const CACHE_VERSION = 'bd-baseball-v3';
+const CACHE_VERSION = 'bd-baseball-v2';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const CORE_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.webmanifest',
-  '/data/latest.json',
-  '/assets/icon-192.png',
-  '/assets/icon-512.png'
+  './',
+  './index.html',
+  './manifest.webmanifest',
+  './data/latest.json',
+  './assets/icon-192.png',
+  './assets/icon-512.png'
 ];
 
 self.addEventListener('install', (event) => {
@@ -15,7 +15,9 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((k) => !k.startsWith(CACHE_VERSION)).map((k) => caches.delete(k)))));
+  event.waitUntil(
+    caches.keys().then((keys) => Promise.all(keys.filter((k) => !k.startsWith(CACHE_VERSION)).map((k) => caches.delete(k))))
+  );
   self.clients.claim();
 });
 
@@ -24,14 +26,12 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     fetch(event.request)
       .then((response) => {
-        if (new URL(event.request.url).pathname === '/data/latest.json') {
-          caches.open(SHELL_CACHE).then((cache) => cache.put('/data/latest.json', response.clone()));
+        if (event.request.url.includes('/data/latest.json')) {
+          const copy = response.clone();
+          caches.open(SHELL_CACHE).then((cache) => cache.put('./data/latest.json', copy));
         }
         return response;
       })
-      .catch(async () => {
-        const cached = await caches.match(event.request);
-        return cached || caches.match('/index.html');
-      })
+      .catch(async () => (await caches.match(event.request)) || caches.match('./index.html'))
   );
 });
