@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'bd-baseball-v3';
+const CACHE_VERSION = 'bd-baseball-v4';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const CORE_ASSETS = [
   '/',

@@ -1,0 +1,62 @@
+name: Refresh snapshot
+
+on:
+  schedule:
+    # 13:30 and 22:30 UTC — pre-game and mid-game windows. Tweak as needed.
+    - cron: "30 13 * * *"
+    - cron: "30 22 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-snapshot
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Need write token to commit back; the default GITHUB_TOKEN suffices
+          # because of permissions: contents: write above.
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build snapshot from MLB Stats API
+        run: python scripts/build_snapshot.py
+
+      - name: Strict validate
+        id: validate
+        run: |
+          python scripts/validate_snapshot.py \
+            --path data/latest.json \
+            --strict \
+            --max-age-minutes 60 \
+            --min-verified-lanes 6
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests
+
+      - name: Commit refreshed snapshot
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git config user.name  "bd-baseball-bot"
+          git config user.email "bd-baseball-bot@users.noreply.github.com"
+          git add data/latest.json data/mlb_snapshot_*.json
+          if git diff --cached --quiet; then
+            echo "No snapshot changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(data): refresh snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push origin HEAD:${{ github.ref_name }}

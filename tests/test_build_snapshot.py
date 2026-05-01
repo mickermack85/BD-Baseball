@@ -1,0 +1,198 @@
+"""Tests for scripts/build_snapshot.py — parsers and builder with fake fetch."""
+from __future__ import annotations
+
+import sys
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+import build_snapshot as b  # type: ignore  # noqa: E402
+
+
+def _standings_payload() -> dict:
+    return {
+        "records": [
+            {
+                "division": {"name": "AL West"},
+                "teamRecords": [
+                    {
+                        "team": {"id": 133, "name": "Athletics"},
+                        "wins": 12,
+                        "losses": 18,
+                        "winningPercentage": ".400",
+                        "gamesBack": "5.0",
+                    },
+                    {
+                        "team": {"id": 117, "name": "Houston Astros"},
+                        "wins": 20,
+                        "losses": 10,
+                        "winningPercentage": ".667",
+                        "gamesBack": "-",
+                    },
+                ],
+            },
+            {
+                "division": {"name": "AL Central"},
+                "teamRecords": [
+                    {
+                        "team": {"id": 116, "name": "Detroit Tigers"},
+                        "wins": 18,
+                        "losses": 12,
+                        "winningPercentage": ".600",
+                        "gamesBack": "1.0",
+                    }
+                ],
+            },
+        ]
+    }
+
+
+def _schedule_payload() -> dict:
+    return {
+        "dates": [
+            {
+                "games": [
+                    {
+                        "gameDate": "2026-05-01T23:10:00Z",
+                        "status": {"detailedState": "Scheduled"},
+                        "venue": {"name": "Sutter Health Park"},
+                        "teams": {
+                            "away": {
+                                "team": {"id": 119, "name": "Los Angeles Dodgers"},
+                                "probablePitcher": {"fullName": "Yoshinobu Yamamoto"},
+                            },
+                            "home": {
+                                "team": {"id": 133, "name": "Athletics"},
+                                "probablePitcher": {"fullName": "JP Sears"},
+                            },
+                        },
+                    }
+                ]
+            }
+        ]
+    }
+
+
+def _transactions_payload() -> dict:
+    return {
+        "transactions": [
+            {
+                "date": "2026-04-30",
+                "description": "Athletics recalled RHP Mason Miller from Triple-A.",
+            },
+            {
+                "date": "2026-04-29",
+                "description": "Tigers placed Spencer Torkelson on the 10-day IL.",
+            },
+        ]
+    }
+
+
+class ParserTests(unittest.TestCase):
+    def test_parse_standings_league(self) -> None:
+        res = b.parse_standings(_standings_payload(), "https://x")
+        self.assertEqual(res.status, "verified")
+        self.assertEqual(len(res.verified), 3)
+        self.assertTrue(any("Athletics: 12-18" in n for n in res.verified))
+
+    def test_parse_standings_team_filter(self) -> None:
+        res = b.parse_standings(_standings_payload(), "https://x", team_id=116)
+        self.assertEqual(res.status, "verified")
+        self.assertTrue(any("Detroit Tigers: 18-12" in n for n in res.verified))
+
+    def test_parse_standings_team_filter_missing(self) -> None:
+        res = b.parse_standings(_standings_payload(), "https://x", team_id=999)
+        self.assertEqual(res.status, "unverified")
+
+    def test_parse_standings_bad_payload(self) -> None:
+        res = b.parse_standings(None, "https://x")
+        self.assertEqual(res.status, "source_error")
+
+    def test_parse_schedule_team_filter(self) -> None:
+        res = b.parse_schedule(_schedule_payload(), "https://x", team_id=133)
+        self.assertEqual(res.status, "verified")
+        self.assertTrue(any("Yamamoto" in n and "Sears" in n for n in res.verified))
+
+    def test_parse_schedule_no_games(self) -> None:
+        res = b.parse_schedule({"dates": []}, "https://x")
+        self.assertEqual(res.status, "unverified")
+
+    def test_parse_transactions(self) -> None:
+        res = b.parse_transactions(_transactions_payload(), "https://x", "League")
+        self.assertEqual(res.status, "verified")
+        self.assertTrue(any("Mason Miller" in n for n in res.verified))
+
+    def test_parse_transactions_empty(self) -> None:
+        res = b.parse_transactions({"transactions": []}, "https://x", "League")
+        self.assertEqual(res.status, "unverified")
+
+
+class BuilderTests(unittest.TestCase):
+    def _fake_fetch(self):
+        std = _standings_payload()
+        sched = _schedule_payload()
+        tx = _transactions_payload()
+
+        def fetch(url: str):
+            if "standings" in url:
+                return std, None
+            if "schedule" in url:
+                return sched, None
+            if "transactions" in url:
+                return tx, None
+            return None, "unmapped_url"
+
+        return fetch
+
+    def _fake_fetch_with_error(self):
+        def fetch(url: str):
+            if "transactions" in url:
+                return None, "http_error: 503 Service Unavailable"
+            return self._fake_fetch()(url)
+
+        return fetch
+
+    def test_builder_produces_required_top_keys(self) -> None:
+        snap = b.build_snapshot(fetch=self._fake_fetch())
+        for k in [
+            "generated_at",
+            "schema_version",
+            "sources",
+            "source_status",
+            "league",
+            "teams",
+            "debug",
+        ]:
+            self.assertIn(k, snap)
+
+    def test_builder_each_team_has_verified_notes_when_data_present(self) -> None:
+        snap = b.build_snapshot(fetch=self._fake_fetch())
+        for team in ("athletics", "rockies", "tigers"):
+            self.assertIn(team, snap["teams"])
+            # athletics and tigers have standings rows; rockies doesn't in fixture but should still
+            # have schedule/tx verified entries -> at least one verified note for athletics/tigers.
+        self.assertGreaterEqual(len(snap["teams"]["athletics"]["verified_notes"]), 1)
+        self.assertGreaterEqual(len(snap["teams"]["tigers"]["verified_notes"]), 1)
+
+    def test_builder_handles_source_error(self) -> None:
+        snap = b.build_snapshot(fetch=self._fake_fetch_with_error())
+        # transactions lanes should be marked source_error
+        statuses = snap["source_status"]
+        self.assertIn("league_transactions", statuses)
+        self.assertEqual(statuses["league_transactions"], "source_error")
+        # No fake "verified" content for failed lane
+        self.assertTrue(
+            any("UNVERIFIED" in x for x in snap["league"]["transactions"])
+            or snap["league"]["transactions"] == []
+        )
+
+    def test_builder_generated_at_is_iso_z(self) -> None:
+        snap = b.build_snapshot(fetch=self._fake_fetch())
+        ts = snap["generated_at"]
+        self.assertTrue(ts.endswith("Z") or "+" in ts, f"unexpected ts: {ts}")
+
+
+if __name__ == "__main__":
+    unittest.main()
