@@ -442,6 +442,414 @@ function transitionLine(current, next) {
   return "[transition] " + (map[current.id] || "Moving on.");
 }
 
+// --- Livestream metadata generation ---
+//
+// Produces a producer-facing livestream "package": a YouTube/Rumble-style
+// title, short and long descriptions, and a teaser line. Inputs are the same
+// snapshot + rundown the rest of the generator runs on, so output stays
+// deterministic and never claims more than the verified notes support.
+
+// Pull a YYYY-MM-DD show date from the snapshot. Falls back to today's UTC
+// date if the snapshot doesn't include a parseable timestamp.
+function showDateString(snapshot) {
+  const ts = snapshot && snapshot.generated_at;
+  if (typeof ts === "string" && /^\d{4}-\d{2}-\d{2}/.test(ts)) {
+    return ts.slice(0, 10);
+  }
+  return "";
+}
+
+// Pretty US-style date for human-facing copy (e.g. "Friday, May 1, 2026").
+// Pure: parses an ISO date string ourselves so output is locale-independent
+// and tests are stable across machines.
+const MONTHS = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"];
+const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+function prettyDate(snapshot) {
+  const d = showDateString(snapshot);
+  if (!d) return "";
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d);
+  if (!m) return d;
+  const y = parseInt(m[1], 10);
+  const mo = parseInt(m[2], 10);
+  const da = parseInt(m[3], 10);
+  const dt = new Date(Date.UTC(y, mo - 1, da));
+  if (isNaN(dt.getTime())) return d;
+  return WEEKDAYS[dt.getUTCDay()] + ", " + MONTHS[mo - 1] + " " + da + ", " + y;
+}
+
+// Parse "Probable: <Away> (<P1>) @ <Home> (<P2>) — Scheduled ..." into parts.
+function parseProbable(note) {
+  if (typeof note !== "string") return null;
+  const stripped = note.replace(/^Probable:\s*/i, "");
+  const m = /^(.+?)\s+\(([^)]+)\)\s+@\s+(.+?)\s+\(([^)]+)\)/.exec(stripped);
+  if (!m) return null;
+  return {
+    away: m[1].trim(),
+    awayPitcher: m[2].trim(),
+    home: m[3].trim(),
+    homePitcher: m[4].trim(),
+  };
+}
+
+// Find a probable that mentions any of the focus team display names.
+function findFocusProbable(probables, teams) {
+  const display = (teams || []).map(teamLabel);
+  for (let i = 0; i < probables.length; i++) {
+    const p = probables[i];
+    if (display.some((d) => p.indexOf(d) !== -1)) return p;
+  }
+  return null;
+}
+
+// Truncate a candidate title to keep it under YouTube's 100-char limit and
+// readable in mobile previews. We prefer to break on a separator rather
+// than mid-word.
+function clampTitle(s, max) {
+  if (typeof s !== "string") return "";
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max);
+  const lastSep = Math.max(cut.lastIndexOf(" — "), cut.lastIndexOf(" - "), cut.lastIndexOf(": "));
+  if (lastSep > max * 0.5) return cut.slice(0, lastSep).trim();
+  const lastSpace = cut.lastIndexOf(" ");
+  if (lastSpace > max * 0.5) return cut.slice(0, lastSpace).trim() + "…";
+  return cut.trim() + "…";
+}
+
+// Compute a verified-vs-total source-health summary for the producer note.
+function snapshotHealth(snapshot) {
+  const status = (snapshot && snapshot.source_status) || {};
+  const keys = Object.keys(status);
+  let verified = 0;
+  let errors = 0;
+  let unverified = 0;
+  keys.forEach((k) => {
+    if (status[k] === "verified") verified += 1;
+    else if (status[k] === "source_error") errors += 1;
+    else if (status[k] === "unverified") unverified += 1;
+  });
+  return {
+    total: keys.length,
+    verified: verified,
+    errors: errors,
+    unverified: unverified,
+    healthy: keys.length > 0 && errors === 0 && verified >= Math.ceil(keys.length / 2),
+  };
+}
+
+function buildLivestreamTitle(snapshot, rundown, opts) {
+  const teams = (opts && opts.teams) || [];
+  const league = (snapshot && snapshot.league) || {};
+  const parts = partitionLeagueNotes(league.verified_notes);
+  const ranked = rankStandings(parts.standings);
+  const focusProbable = parseProbable(findFocusProbable(parts.probables, teams));
+  const top = ranked.length ? stripPrefix(ranked[0]).replace(/\s*\[.*?\]\s*$/, "") : "";
+  const dateStr = showDateString(snapshot);
+  const datePart = dateStr ? " | " + dateStr : "";
+
+  let title;
+  if (focusProbable) {
+    title = "BD Baseball: " + focusProbable.away + " @ " + focusProbable.home +
+      " (" + focusProbable.awayPitcher + " vs " + focusProbable.homePitcher + ")" + datePart;
+  } else if (top) {
+    title = "BD Baseball: " + top + datePart;
+  } else if (parts.probables.length) {
+    title = "BD Baseball: Today's MLB Slate — " + parts.probables.length + " Probable Matchups" + datePart;
+  } else {
+    title = "BD Baseball Show" + datePart;
+  }
+  return clampTitle(title, 100);
+}
+
+function buildShortDescription(snapshot, rundown, opts) {
+  const teams = (opts && opts.teams) || [];
+  const display = teams.map(teamLabel);
+  const league = (snapshot && snapshot.league) || {};
+  const parts = partitionLeagueNotes(league.verified_notes);
+  const ranked = rankStandings(parts.standings);
+  const probableCount = parts.probables.length;
+  const txCount = Array.isArray(league.transactions) ? league.transactions.length : 0;
+  const date = prettyDate(snapshot);
+
+  const sentences = [];
+  const lead = (rundown && rundown.presetLabel) ? rundown.presetLabel.replace(/^\d+-min\s*/, "") : "Show";
+  sentences.push(
+    (date ? date + " — " : "") +
+    "Today's BD Baseball " + lead.toLowerCase() +
+    (display.length ? ", with focus on " + display.join(", ") : "") + "."
+  );
+  const bits = [];
+  if (ranked.length) {
+    bits.push("a verified standings check");
+  }
+  if (probableCount) {
+    bits.push(probableCount + " probable matchup" + (probableCount === 1 ? "" : "s"));
+  }
+  if (txCount) {
+    bits.push("the league transaction wire");
+  }
+  if (bits.length) {
+    sentences.push("We work through " + bits.join(", ") +
+      ", all sourced from the verified MLB Stats API snapshot.");
+  } else {
+    sentences.push("Built off the latest verified MLB Stats API snapshot.");
+  }
+  return sentences.join(" ");
+}
+
+// Long YouTube-style description: episode summary, segment list with
+// minute timestamps, top standings + slate highlights, source confidence,
+// and CTA placeholders the producer can replace.
+function buildLongDescription(snapshot, rundown, opts) {
+  const teams = (opts && opts.teams) || [];
+  const display = teams.map(teamLabel);
+  const league = (snapshot && snapshot.league) || {};
+  const parts = partitionLeagueNotes(league.verified_notes);
+  const ranked = rankStandings(parts.standings);
+  const probables = parts.probables.slice();
+  const date = prettyDate(snapshot);
+  const health = snapshotHealth(snapshot);
+
+  const out = [];
+  out.push("BD Baseball Show" + (date ? " — " + date : ""));
+  out.push("");
+  out.push(buildShortDescription(snapshot, rundown, opts));
+  out.push("");
+
+  // Segment list / timestamps.
+  if (rundown && Array.isArray(rundown.segments) && rundown.segments.length) {
+    out.push("Segments:");
+    let cumulative = 0;
+    rundown.segments.forEach((seg) => {
+      const mm = pad2(cumulative);
+      out.push(mm + ":00  " + seg.title);
+      cumulative += seg.durationMinutes;
+    });
+    out.push("");
+  }
+
+  if (ranked.length) {
+    out.push("Top of the standings (verified):");
+    ranked.slice(0, 5).forEach((s) => out.push("• " + stripPrefix(s)));
+    out.push("");
+  }
+
+  if (probables.length) {
+    out.push("On the slate today:");
+    // Push focus matchups to the top.
+    probables.sort((a, b) => {
+      const ai = display.some((d) => a.indexOf(d) !== -1) ? 0 : 1;
+      const bi = display.some((d) => b.indexOf(d) !== -1) ? 0 : 1;
+      return ai - bi;
+    });
+    probables.slice(0, 6).forEach((p) => out.push("• " + stripPrefix(p)));
+    if (probables.length > 6) out.push("• …plus " + (probables.length - 6) + " more.");
+    out.push("");
+  }
+
+  // Source-confidence note. Plain language so YouTube viewers don't see jargon.
+  if (health.total > 0) {
+    if (health.healthy) {
+      out.push("Source confidence: " + health.verified + "/" + health.total +
+        " data lanes verified against the MLB Stats API at show time.");
+    } else if (health.errors > 0) {
+      out.push("Source confidence: " + health.verified + "/" + health.total +
+        " data lanes verified — " + health.errors + " upstream error(s) at show time. Treat affected items as last-known-good.");
+    } else {
+      out.push("Source confidence: " + health.verified + "/" + health.total +
+        " data lanes verified at show time.");
+    }
+    out.push("");
+  }
+
+  // CTA placeholders — producer replaces these in the show description.
+  out.push("Subscribe and turn on notifications so you don't miss the next show.");
+  out.push("");
+  out.push("Links:");
+  out.push("• Substack: <add Substack URL>");
+  out.push("• X / Twitter: <add handle>");
+  out.push("• Discord / community: <add link>");
+  out.push("");
+  out.push("#MLB #Baseball #BDBaseball");
+  return out.join("\n");
+}
+
+function buildTeaser(snapshot, rundown, opts) {
+  const teams = (opts && opts.teams) || [];
+  const league = (snapshot && snapshot.league) || {};
+  const parts = partitionLeagueNotes(league.verified_notes);
+  const ranked = rankStandings(parts.standings);
+  const focusProbable = parseProbable(findFocusProbable(parts.probables, teams));
+  const date = prettyDate(snapshot);
+
+  if (focusProbable) {
+    return "Going live: " + focusProbable.away + " at " + focusProbable.home +
+      " — " + focusProbable.awayPitcher + " vs " + focusProbable.homePitcher +
+      (date ? ". " + date + " on BD Baseball." : ". BD Baseball, today.");
+  }
+  if (ranked.length) {
+    const top = stripPrefix(ranked[0]).replace(/\s*\[.*?\]\s*$/, "");
+    return "Going live on BD Baseball" + (date ? " — " + date : "") +
+      ". " + top + ", plus the slate and the wire.";
+  }
+  if (parts.probables.length) {
+    return "Going live on BD Baseball" + (date ? " — " + date : "") +
+      ". " + parts.probables.length + " probable matchups, transactions, and the watch list.";
+  }
+  return "Going live on BD Baseball" + (date ? " — " + date : "") +
+    ". Verified MLB snapshot, no fluff.";
+}
+
+// Build the complete livestream metadata package.
+function generateLivestreamPackage(snapshot, rundown, options) {
+  const opts = Object.assign({ teams: [] }, options || {});
+  if (rundown && rundown.teams && !options) {
+    opts.teams = rundown.teams.slice();
+  }
+  const health = snapshotHealth(snapshot);
+  const warning = (!health.healthy && health.total > 0)
+    ? "Source health warning: only " + health.verified + " of " + health.total +
+      " lanes verified" + (health.errors ? "; " + health.errors + " source_error" : "") +
+      ". Review before publishing."
+    : "";
+  return {
+    showDate: showDateString(snapshot),
+    prettyDate: prettyDate(snapshot),
+    title: buildLivestreamTitle(snapshot, rundown, opts),
+    shortDescription: buildShortDescription(snapshot, rundown, opts),
+    longDescription: buildLongDescription(snapshot, rundown, opts),
+    teaser: buildTeaser(snapshot, rundown, opts),
+    producerWarning: warning,
+    health: health,
+  };
+}
+
+// Render the livestream metadata as Markdown for download.
+function renderLivestreamMarkdown(pkg) {
+  const out = [];
+  out.push("# BD Baseball — Livestream Metadata");
+  if (pkg.prettyDate) out.push("_" + pkg.prettyDate + "_");
+  out.push("");
+  if (pkg.producerWarning) {
+    out.push("> **Producer note:** " + pkg.producerWarning);
+    out.push("");
+  }
+  out.push("## Livestream title");
+  out.push("");
+  out.push(pkg.title);
+  out.push("");
+  out.push("## Short description");
+  out.push("");
+  out.push(pkg.shortDescription);
+  out.push("");
+  out.push("## Full description");
+  out.push("");
+  out.push(pkg.longDescription);
+  out.push("");
+  out.push("## Teaser / social copy");
+  out.push("");
+  out.push(pkg.teaser);
+  out.push("");
+  return out.join("\n");
+}
+
+// Render the producer rundown as Markdown for download.
+function renderRundownMarkdown(rundown) {
+  const lines = [];
+  lines.push("# BD Baseball — Rundown (" + rundown.presetLabel + ")");
+  lines.push("");
+  lines.push("- Target: " + rundown.targetMinutes + " min");
+  lines.push("- Allocated: " + rundown.totalMinutes + " min");
+  if (rundown.generatedAt) lines.push("- Snapshot: " + rundown.generatedAt);
+  if (rundown.teams && rundown.teams.length) {
+    lines.push("- Focus teams: " + rundown.teams.map(teamLabel).join(", "));
+  }
+  lines.push("");
+  let cumulative = 0;
+  rundown.segments.forEach((seg, idx) => {
+    const start = cumulative;
+    cumulative += seg.durationMinutes;
+    const end = cumulative;
+    lines.push("## " + (idx + 1) + ". " + seg.title +
+      " (" + pad2(start) + ":00–" + pad2(end) + ":00, " + seg.durationMinutes + " min)");
+    lines.push("");
+    seg.lines.forEach((l) => lines.push("- " + l));
+    lines.push("");
+  });
+  return lines.join("\n");
+}
+
+// Render the host script as Markdown for download. We keep the spoken copy
+// inside fenced blocks so transitions / segment headers stay legible.
+function renderHostScriptMarkdown(rundown, snapshot) {
+  return "# BD Baseball — Host Script\n\n```\n" +
+    renderTeleprompter(rundown, snapshot) + "\n```\n";
+}
+
+// Render a complete show package (title block, descriptions, rundown, host
+// script, source health) as a single Markdown document.
+function renderCompletePackageMarkdown(snapshot, rundown, pkg) {
+  const out = [];
+  out.push("# BD Baseball — Complete Show Package");
+  if (pkg.prettyDate) out.push("_" + pkg.prettyDate + "_");
+  out.push("");
+  if (pkg.producerWarning) {
+    out.push("> **Producer note:** " + pkg.producerWarning);
+    out.push("");
+  }
+  out.push("Format: **" + rundown.presetLabel + "** — target " +
+    rundown.targetMinutes + " min, allocated " + rundown.totalMinutes + " min.");
+  if (rundown.teams && rundown.teams.length) {
+    out.push("Focus teams: " + rundown.teams.map(teamLabel).join(", ") + ".");
+  }
+  out.push("");
+  out.push("---");
+  out.push("");
+  out.push(renderLivestreamMarkdown(pkg).trim());
+  out.push("");
+  out.push("---");
+  out.push("");
+  out.push(renderRundownMarkdown(rundown).trim());
+  out.push("");
+  out.push("---");
+  out.push("");
+  out.push(renderHostScriptMarkdown(rundown, snapshot).trim());
+  out.push("");
+  out.push("---");
+  out.push("");
+  out.push("## Source health summary");
+  out.push("");
+  if (pkg.health && pkg.health.total > 0) {
+    out.push("- Lanes verified: " + pkg.health.verified + "/" + pkg.health.total);
+    if (pkg.health.errors) out.push("- Source errors: " + pkg.health.errors);
+    if (pkg.health.unverified) out.push("- Unverified: " + pkg.health.unverified);
+  } else {
+    out.push("- No source-health lanes reported.");
+  }
+  if (snapshot && snapshot.generated_at) {
+    out.push("- Snapshot generated_at: " + snapshot.generated_at);
+  }
+  out.push("");
+  return out.join("\n");
+}
+
+// Build a safe filename slug from a preset id and show date.
+// e.g. ("standard", "2026-05-01", "show-package", "md")
+//   => "bd-baseball-2026-05-01-standard-show-package.md"
+function buildFilename(presetKey, dateStr, kind, ext) {
+  function slug(s) {
+    return String(s == null ? "" : s)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+  const parts = ["bd-baseball"];
+  if (dateStr) parts.push(slug(dateStr));
+  if (presetKey) parts.push(slug(presetKey));
+  if (kind) parts.push(slug(kind));
+  return parts.filter(Boolean).join("-") + "." + (ext || "md");
+}
+
 const api = {
   PRESETS: PRESETS,
   TEAM_DISPLAY: TEAM_DISPLAY,
@@ -449,6 +857,12 @@ const api = {
   renderRundownText: renderRundownText,
   renderTeleprompter: renderTeleprompter,
   summarizeConfidence: summarizeConfidence,
+  generateLivestreamPackage: generateLivestreamPackage,
+  renderLivestreamMarkdown: renderLivestreamMarkdown,
+  renderRundownMarkdown: renderRundownMarkdown,
+  renderHostScriptMarkdown: renderHostScriptMarkdown,
+  renderCompletePackageMarkdown: renderCompletePackageMarkdown,
+  buildFilename: buildFilename,
   // exported for tests:
   _internals: {
     stripPrefix: stripPrefix,
@@ -457,6 +871,11 @@ const api = {
     isHighSignalTransaction: isHighSignalTransaction,
     isLikelyMlbTransaction: isLikelyMlbTransaction,
     teamLabel: teamLabel,
+    parseProbable: parseProbable,
+    clampTitle: clampTitle,
+    showDateString: showDateString,
+    prettyDate: prettyDate,
+    snapshotHealth: snapshotHealth,
   },
 };
 
