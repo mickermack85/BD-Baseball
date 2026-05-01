@@ -1,25 +1,37 @@
-// Self-destructing service worker.
-// Replaces the previous SW that was caching an empty root response from early failed deploys.
-// On install, it skips waiting; on activate, it deletes ALL caches and unregisters itself.
+const CACHE_VERSION = 'bd-baseball-v2';
+const SHELL_CACHE = `${CACHE_VERSION}-shell`;
+const CORE_ASSETS = [
+  './',
+  './index.html',
+  './manifest.webmanifest',
+  './data/latest.json',
+  './assets/icon-192.png',
+  './assets/icon-512.png'
+];
+
 self.addEventListener('install', (event) => {
+  event.waitUntil(caches.open(SHELL_CACHE).then((cache) => cache.addAll(CORE_ASSETS)));
   self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil((async () => {
-    try {
-      const keys = await caches.keys();
-      await Promise.all(keys.map((k) => caches.delete(k)));
-      const regs = await self.registration.unregister();
-      const clientList = await self.clients.matchAll({ type: 'window' });
-      clientList.forEach((client) => client.navigate(client.url));
-    } catch (e) {
-      // no-op
-    }
-  })());
+  event.waitUntil(
+    caches.keys().then((keys) => Promise.all(keys.filter((k) => !k.startsWith(CACHE_VERSION)).map((k) => caches.delete(k))))
+  );
+  self.clients.claim();
 });
 
-// Network-only fetch handler so nothing is served from cache while this SW is alive.
 self.addEventListener('fetch', (event) => {
-  event.respondWith(fetch(event.request));
+  if (event.request.method !== 'GET') return;
+  event.respondWith(
+    fetch(event.request)
+      .then((response) => {
+        if (event.request.url.includes('/data/latest.json')) {
+          const copy = response.clone();
+          caches.open(SHELL_CACHE).then((cache) => cache.put('./data/latest.json', copy));
+        }
+        return response;
+      })
+      .catch(async () => (await caches.match(event.request)) || caches.match('./index.html'))
+  );
 });

@@ -1,405 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baseball Show Prep Generator</title>
-  <meta name="theme-color" content="#0f172a">
-  <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="apple-touch-icon" href="./assets/icon-192.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BD Baseball Show Prep</title>
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="manifest" href="./manifest.webmanifest" />
   <style>
-    :root{--bg:#071018;--surface:rgba(10,18,27,.94);--surface-2:#0c151e;--surface-3:#12202d;--border:rgba(204,221,239,.14);--line:rgba(204,221,239,.1);--text:#edf5ff;--muted:#9eb2c6;--faint:#708396;--blue:#61b6ff;--green:#62dc9f;--green-2:#2ca06a;--gold:#f3cb61;--gold-2:#c39016;--red:#ff968b;--red-2:#d95f56;--as:#2ec76f;--rockies:#a855f7;--tigers:#f97316;--radius-sm:12px;--radius-md:18px;--radius-lg:26px;--shadow:0 26px 70px rgba(0,0,0,.38)}
-    *{box-sizing:border-box} html,body{min-height:100%} body{margin:0;font-family:Inter,sans-serif;color:var(--text);background:radial-gradient(circle at top left, rgba(97,182,255,.15), transparent 28%),radial-gradient(circle at top right, rgba(168,85,247,.13), transparent 24%),linear-gradient(180deg,#071018 0%,#0a0f15 100%)}
-    button,input,select,textarea{font:inherit}.app{max-width:1900px;margin:0 auto;padding:18px;display:grid;gap:18px}.panel{background:var(--surface);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow)}
-    .hero{display:grid;grid-template-columns:1.04fr .96fr;gap:18px}.hero-main{padding:24px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid rgba(97,182,255,.24);background:rgba(97,182,255,.08);color:#c7e5ff;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em}h1{margin:14px 0 10px;font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.8rem,5vw,5.6rem);line-height:.92;letter-spacing:.02em;text-transform:uppercase;max-width:11ch}.lede{max-width:88ch;color:var(--muted);line-height:1.65;font-size:1.02rem}.hero-side{padding:22px;display:grid;gap:14px}.hero-side h2{margin:0;color:var(--blue);font-size:1rem;text-transform:uppercase;letter-spacing:.08em}.hero-side p{margin:0;color:var(--muted);line-height:1.6}
-    .metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:18px}.metric{padding:14px;border-radius:18px;border:1px solid var(--border);background:rgba(255,255,255,.03)}.metric span{display:block;color:var(--faint);text-transform:uppercase;font-size:.78rem;letter-spacing:.05em}.metric strong{display:block;margin-top:6px;font-size:1rem}
-    .layout{display:grid;grid-template-columns:1fr 1.18fr .98fr;gap:18px;align-items:start}.builder,.research,.viewer{padding:18px;display:grid;gap:16px}.block{border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));padding:16px}.blockhead{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px}.blockhead h3{margin:0;font-size:1rem;color:#daecff;text-transform:uppercase;letter-spacing:.07em}.hint{color:var(--faint);font-size:.88rem}.statusline{font-size:.85rem;color:var(--muted)}
-    .row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stack{display:grid;gap:12px}label{display:block;margin-bottom:7px;font-size:.84rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}input,select,textarea{width:100%;padding:12px 13px;border-radius:14px;border:1px solid var(--border);background:#09121a;color:var(--text);transition:border-color .16s ease, box-shadow .16s ease}textarea{min-height:92px;resize:vertical;line-height:1.55}input:focus,select:focus,textarea:focus{outline:none;border-color:rgba(97,182,255,.5);box-shadow:0 0 0 4px rgba(97,182,255,.12)}
-    .toolbar,.viewtabs,.output-actions,.teamtabs,.quickfill,.league-actions{display:flex;flex-wrap:wrap;gap:10px}button{border:0;border-radius:14px;padding:12px 15px;cursor:pointer;font-weight:800;transition:transform .15s ease,filter .15s ease}button:hover{transform:translateY(-1px);filter:brightness(1.03)}button:active{transform:translateY(0)}button:disabled{opacity:.55;cursor:wait;transform:none}.primary{background:linear-gradient(180deg,var(--green),var(--green-2));color:#04130b}.secondary{background:linear-gradient(180deg,#66baff,#2f81f7);color:#fff}.gold{background:linear-gradient(180deg,var(--gold),var(--gold-2));color:#241700}.ghost{background:transparent;border:1px solid var(--border);color:var(--text)}.danger{background:linear-gradient(180deg,var(--red),var(--red-2));color:#2d0906}
-    .segment-board{display:grid;gap:10px}.segment-row{display:grid;grid-template-columns:32px 1fr auto auto;gap:10px;align-items:center;padding:12px;border-radius:16px;background:#09121a;border:1px solid var(--border)}.segment-row.dragging{opacity:.55}.drag{color:var(--faint);cursor:grab;text-align:center;font-size:1.1rem;user-select:none}.segname{font-weight:800}.segdesc{color:var(--faint);font-size:.84rem;margin-top:3px}.segdur{width:88px}.toggle{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:.88rem}
-    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.research-grid,.source-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.team-card,.source-card,.note-card,.snapshot-card{position:relative;overflow:hidden;border-radius:20px;padding:14px;border:1px solid var(--border);background:#09121a}.team-card:before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--team)}.as-card{--team:var(--as)}.rockies-card{--team:var(--rockies)}.tigers-card{--team:var(--tigers)}
-    .source-card h4,.note-card h4,.snapshot-card h4{margin:0 0 8px;color:#d8eaff;text-transform:uppercase;letter-spacing:.06em;font-size:.9rem}.source-card p,.note-card p,.snapshot-card p{margin:0;color:var(--muted);line-height:1.5}.source-link{display:inline-block;margin-top:10px;color:#9fd0ff;text-decoration:none;font-weight:700}.source-link:hover{text-decoration:underline}
-    .teamtab{padding:9px 12px;border-radius:999px;background:#09121a;border:1px solid var(--border);color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer}.teamtab.active,.mini-btn.active{background:rgba(97,182,255,.12);color:#d7ebff;border-color:rgba(97,182,255,.34)}.teamstack{display:none;gap:12px}.teamstack.active{display:grid}.mini-btn{padding:8px 10px;border-radius:999px;background:#09121a;border:1px solid var(--border);color:var(--muted);font-size:.8rem;font-weight:800}
-    .statbar{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stat{padding:12px;border-radius:16px;border:1px solid var(--border);background:#09121a}.stat span{display:block;color:var(--faint);font-size:.76rem;text-transform:uppercase;letter-spacing:.05em}.stat strong{display:block;margin-top:5px;font-size:1rem}.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(97,182,255,.08);border:1px solid rgba(97,182,255,.2);color:#c8e5ff;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
-    .viewer-top{display:flex;justify-content:space-between;gap:10px;align-items:center}.viewer-top h2{margin:0;font-size:1rem;color:var(--blue);text-transform:uppercase;letter-spacing:.08em}.output-panel,.cards-panel,.hostsheet-panel,.teleprompter-panel{border:1px solid var(--border);background:#081018;border-radius:20px;min-height:880px;overflow:auto}#outputText{margin:0;padding:16px;white-space:pre-wrap;font-family:'IBM Plex Mono',monospace;font-size:.91rem;line-height:1.62;color:#dce7f6}.cards-panel,.hostsheet-panel,.teleprompter-panel{display:none;padding:16px}.cards-grid{display:grid;gap:12px}.segment-card{padding:14px;border-radius:18px;border:1px solid var(--border);background:#09121a}.segment-card h4{margin:0 0 8px;text-transform:uppercase;letter-spacing:.06em;color:#d8eaff;font-size:.92rem}.segment-card p{margin:0 0 8px;color:var(--muted);line-height:1.55}.segment-card ul{margin:0;padding-left:18px;line-height:1.5}
-    .hostsheet-panel article{display:grid;gap:14px}.host-title{font-family:'Barlow Condensed',sans-serif;font-size:2rem;text-transform:uppercase;letter-spacing:.03em}.host-sub{color:var(--muted)}.host-box{border:1px solid var(--border);border-radius:18px;background:#09121a;padding:14px}.host-box h4{margin:0 0 8px;text-transform:uppercase;letter-spacing:.06em;color:#d8eaff}.host-box ul{margin:0;padding-left:18px;line-height:1.55}
-    .teleprompter-panel{background:#020508;color:#fff}.tele-controls{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;position:sticky;top:0;background:#020508;padding-bottom:10px}.tele-controls input[type="range"]{width:180px}.tele-screen{white-space:pre-wrap;font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.9rem,3vw,3.4rem);line-height:1.18;letter-spacing:.02em;text-transform:uppercase;min-height:560px}.tele-screen.mirror{transform:scaleX(-1)}
-    .snapshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.snapshot-card ul{margin:0;padding-left:18px;line-height:1.55}.fetch-ok{color:#9af0be}.fetch-bad{color:#ffb2a8}.mono{font-family:'IBM Plex Mono',monospace;font-size:.84rem;color:#cfe4f8}
-    @media print{body{background:#fff;color:#000}.hero,.builder,.research,.viewer-top,.statbar,.viewtabs,.output-actions,.quickfill,.league-actions{display:none !important}.layout{grid-template-columns:1fr}.panel,.hostsheet-panel{box-shadow:none;border:0;background:#fff}.hostsheet-panel{display:block !important;min-height:auto;color:#000}.host-box{background:#fff;border:1px solid #ccc}}
-    @media (max-width:1660px){.layout{grid-template-columns:1fr}.hero{grid-template-columns:1fr}} @media (max-width:960px){.metrics,.row,.row3,.team-grid,.research-grid,.source-grid,.statbar,.snapshot-grid{grid-template-columns:1fr}.segment-row{grid-template-columns:24px 1fr}.segment-row .segdur,.segment-row .toggle{grid-column:2}h1{max-width:none}}
-  
-    .pwa-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
-    .status-pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#0f172a;border:1px solid #334155;color:#e2e8f0;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-    .status-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.15)}
-    .status-dot.offline{background:#f97316;box-shadow:0 0 0 4px rgba(249,115,22,.15)}
-    .install-btn{border:1px solid #38bdf8;background:#082f49;color:#e0f2fe;padding:10px 14px;border-radius:12px;font-weight:800}
-    .snapshot-banner{margin-top:12px;padding:12px 14px;border-radius:14px;background:rgba(15,23,42,.9);border:1px solid #334155;color:#cbd5e1;font-size:13px}
-    .snapshot-banner strong{color:#f8fafc}
-      </style>
+    body{font-family:system-ui,sans-serif;background:#0b1220;color:#e5e7eb;margin:0}
+    main{max-width:980px;margin:0 auto;padding:16px;display:grid;gap:14px}
+    .card{background:#111827;border:1px solid #243244;border-radius:10px;padding:14px}
+    h1,h2,h3{margin:.2rem 0}.muted{color:#93a4ba}.unv{color:#fca5a5;font-weight:700}
+    ul{margin:.3rem 0 .8rem 1.1rem}.status{font-family:monospace;font-size:.9rem}
+    .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#1f2937}
+  </style>
 </head>
 <body>
-  <main class="app">
-    <section class="hero">
-      <div class="panel hero-main">
-        <div class="eyebrow">Burnin' Daylight Sports • V9 Snapshot Console</div>
-        <h1>Whole league, three homer lanes, and verified snapshot mode.</h1>
-        <p class="lede">This version is rebuilt around verified snapshot mode, which means the app ships with source-backed same-day notes already embedded and then lets you refresh or rebuild from that structured snapshot layer. MLB.com’s standings page remains the league board, MLB.com’s probable-pitchers page remains the daily matchup slate, and ESPN’s transactions page remains the broad move tracker. [web:50][web:188][web:279]</p>
-        <div class="metrics">
-          <div class="metric"><span>League board</span><strong>MLB.com standings [web:50]</strong></div>
-          <div class="metric"><span>Pitching slate</span><strong>MLB probable pitchers [web:188]</strong></div>
-          <div class="metric"><span>Moves</span><strong>ESPN transactions [web:279]</strong></div>
-          <div class="metric"><span>A's source lane</span><strong>MLB + ESPN + Savant [web:166][web:187][web:250]</strong></div>
-          <div class="metric"><span>Rockies lane</span><strong>MLB + ESPN + Savant [web:44][web:186][web:194]</strong></div>
-          <div class="metric"><span>Tigers lane</span><strong>MLB + ESPN + Savant [web:257][web:260][web:263]</strong></div>
-        </div>
-      </div>
-      <aside class="panel hero-side">
-        <div>
-          <h2>What changed</h2>
-          <p>The app now uses a verified snapshot layer first, so it can build a workable show even before any browser-side refresh succeeds. That makes it more dependable because your notes, probable-pitcher references, standings framing, and transaction pegs are already structured when the page opens. [web:50][web:188][web:279]</p>
-        </div>
-        <div>
-          <h2>Guardrail</h2>
-          <p>Roster and injury notes still need verification, so the app is designed to surface transactions from MLB.com or ESPN lanes before they become script notes. If a move cannot be confirmed from available fetched or embedded sources, do not use it on-air. [web:250][web:194][web:263][web:261][web:279]</p>
-        </div>
-      </aside>
-    </section>
-
-    <section class="layout">
-      <section class="panel builder">
-        <section class="block">
-          <div class="blockhead"><h3>Verified snapshot control</h3><div class="statusline" id="fetchStatus">Verified snapshot loaded from current sourced notes.</div></div>
-          <div class="league-actions">
-            <button id="refreshLeagueBtn" class="primary">Rebuild from league snapshot</button>
-            <button id="refreshTeamsBtn" class="secondary">Rebuild team notebooks</button>
-            <button id="buildFromLiveBtn" class="gold">Build from verified snapshot</button>
-          </div>
-          <div class="snapshot-grid" style="margin-top:12px;">
-            <article class="snapshot-card"><h4>League fetch state</h4><p id="leagueFetchMeta">Verified snapshot ready.</p></article>
-            <article class="snapshot-card"><h4>Team fetch state</h4><p id="teamFetchMeta">Team snapshots ready.</p></article>
-          </div>
-        </section>
-
-        <section class="block">
-          <div class="blockhead"><h3>Show setup</h3><div class="hint">Whole-league first, homer segments second.</div></div>
-          <div class="row3">
-            <div><label for="showName">Show name</label><input id="showName" value="Burnin' Daylight Baseball Rundown" /></div>
-            <div><label for="date">Air date</label><input id="date" type="date" /></div>
-            <div><label for="runtime">Target runtime</label><select id="runtime"><option>12 minutes</option><option>18 minutes</option><option selected>25 minutes</option><option>35 minutes</option></select></div>
-          </div>
-          <div class="row" style="margin-top:12px;"><div><label for="tone">Tone</label><select id="tone"><option selected>Smart fan</option><option>Homer heat</option><option>Fast and funny</option><option>Radio serious</option><option>Angry fan therapy</option></select></div><div><label for="priority">Priority</label><select id="priority"><option selected>Balanced three-team homer</option><option>A's heavy</option><option>Rockies heavy</option><option>Tigers heavy</option><option>National story first</option></select></div></div>
-        </section>
-
-        <section class="block">
-          <div class="blockhead"><h3>Segment board</h3><div class="hint">Drag the show into the shape you need.</div></div>
-          <div id="segmentBoard" class="segment-board"></div>
-        </section>
-
-        <section class="block">
-          <div class="blockhead"><h3>Episode builder</h3><div class="hint">Build manually or from the live snapshot layer.</div></div>
-          <div class="quickfill">
-            <button id="fillLeagueDefaults" class="secondary">Load league defaults</button>
-            <button id="fillASources" class="secondary">Load A's defaults</button>
-            <button id="fillRSources" class="secondary">Load Rockies defaults</button>
-            <button id="fillTSources" class="secondary">Load Tigers defaults</button>
-            <button id="buildTodayBtn" class="gold">Load structured fallback</button>
-          </div>
-          <div class="stack" style="margin-top:12px;">
-            <div><label for="hook">Cold open</label><textarea id="hook" placeholder="The first line of the show."></textarea></div>
-            <div class="toolbar"><button id="coldOpenBtn" class="gold">Generate cold open helper</button><button id="scriptBtn" class="secondary">Build script from notes</button></div>
-            <div><label for="topStories">Top MLB stories</label><textarea id="topStories" placeholder="One item per line."></textarea></div>
-            <div><label for="bestGames">Best games / best performances</label><textarea id="bestGames" placeholder="Comebacks, gems, meltdowns, weird stuff."></textarea></div>
-            <div><label for="leagueStories">Around-the-league notebook</label><textarea id="leagueStories" placeholder="Division leaders, contenders, collapses, best national angles."></textarea></div>
-            <div><label for="leagueWatch">National watch list</label><textarea id="leagueWatch" placeholder="Series to watch, pitching matchups, standings races."></textarea></div>
-            <div><label for="transactions">Confirmed transactions / injuries</label><textarea id="transactions" placeholder="Only verified moves and updates."></textarea></div>
-          </div>
-        </section>
-
-        <section class="block">
-          <div class="blockhead"><h3>League notebook</h3><div class="hint">Use this as your rest-of-MLB backbone.</div></div>
-          <div class="row">
-            <div><label for="leagueHeadline">National headline</label><input id="leagueHeadline" /></div>
-            <div><label for="leagueAngle">National angle</label><select id="leagueAngle"><option selected>Standings pulse</option><option>Best series tonight</option><option>Contenders and pretenders</option><option>Pitching matchup night</option><option>League chaos</option></select></div>
-          </div>
-          <div class="stack" style="margin-top:12px;"><div><label for="leagueNotes">League notes</label><textarea id="leagueNotes"></textarea></div><div><label for="leagueChecklist">League checklist</label><textarea id="leagueChecklist"></textarea></div></div>
-        </section>
-
-        <section class="block">
-          <div class="blockhead"><h3>Homer team boards</h3><div class="hint">A’s, Rockies, Tigers — each with a separate lane.</div></div>
-          <div class="team-grid">
-            <div class="team-card as-card"><div class="pill">Athletics notebook</div><label for="asHeadline" style="margin-top:12px;">A's headline</label><input id="asHeadline" /><label for="asEmotion" style="margin-top:12px;">A's fan temperature</label><select id="asEmotion"><option selected>Cautiously fired up</option><option>Mad but still in</option><option>Full optimism</option><option>Need to vent</option></select><label for="asNotes" style="margin-top:12px;">A's notes</label><textarea id="asNotes"></textarea><label for="asChecklist" style="margin-top:12px;">A's checklist</label><textarea id="asChecklist"></textarea></div>
-            <div class="team-card rockies-card"><div class="pill">Rockies notebook</div><label for="rockiesHeadline" style="margin-top:12px;">Rockies headline</label><input id="rockiesHeadline" /><label for="rockiesEmotion" style="margin-top:12px;">Rockies fan temperature</label><select id="rockiesEmotion"><option selected>Trying to believe</option><option>Coors chaos mode</option><option>Actually encouraged</option><option>Frustrated but loyal</option></select><label for="rockiesNotes" style="margin-top:12px;">Rockies notes</label><textarea id="rockiesNotes"></textarea><label for="rockiesChecklist" style="margin-top:12px;">Rockies checklist</label><textarea id="rockiesChecklist"></textarea></div>
-            <div class="team-card tigers-card"><div class="pill">Tigers notebook</div><label for="tigersHeadline" style="margin-top:12px;">Tigers headline</label><input id="tigersHeadline" /><label for="tigersEmotion" style="margin-top:12px;">Tigers fan temperature</label><select id="tigersEmotion"><option selected>Actually believing</option><option>Guarded optimism</option><option>Full Motor City heat</option><option>Need the bats louder</option></select><label for="tigersNotes" style="margin-top:12px;">Tigers notes</label><textarea id="tigersNotes"></textarea><label for="tigersChecklist" style="margin-top:12px;">Tigers checklist</label><textarea id="tigersChecklist"></textarea></div>
-          </div>
-        </section>
-
-        <section class="block">
-          <div class="blockhead"><h3>Finish and export</h3><div class="hint">Turn the snapshot into a show.</div></div>
-          <div class="stack"><div><label for="preview">Tonight's watch list</label><textarea id="preview"></textarea></div><div><label for="closer">Closer / final take</label><textarea id="closer"></textarea></div></div>
-          <div class="toolbar" style="margin-top:14px;"><button id="generateBtn" class="primary">Generate show</button><button id="copyBtn" class="secondary">Copy prep sheet</button><button id="copyHostBtn" class="gold">Copy host sheet</button><button id="exportTxtBtn" class="ghost">Export TXT</button><button id="printBtn" class="ghost">Print host sheet</button><button id="clearBtn" class="danger">Clear form</button></div>
-        </section>
-      </section>
-
-      <section class="panel research">
-        <section class="block">
-          <div class="blockhead"><h3>Snapshot dashboard</h3><div class="hint">These cards link out and store the current structured snapshot.</div></div>
-          <div class="teamtabs">
-            <button class="teamtab active" data-teamstack="league">League stack</button>
-            <button class="teamtab" data-teamstack="athletics">Athletics stack</button>
-            <button class="teamtab" data-teamstack="rockies">Rockies stack</button>
-            <button class="teamtab" data-teamstack="tigers">Tigers stack</button>
-          </div>
-
-          <div class="teamstack active" id="leagueStack">
-            <div class="source-grid">
-              <article class="source-card"><h4>MLB standings</h4><p>MLB.com’s standings page is the league map for division and wild-card context. [web:50]</p><a class="source-link" href="https://www.mlb.com/standings" target="_blank" rel="noopener noreferrer">Open MLB standings</a></article>
-              <article class="source-card"><h4>MLB probable pitchers</h4><p>MLB.com’s probable-pitchers page is the daily starting-pitcher slate across the league. [web:188]</p><a class="source-link" href="https://www.mlb.com/probable-pitchers" target="_blank" rel="noopener noreferrer">Open probable pitchers</a></article>
-              <article class="source-card"><h4>ESPN transactions</h4><p>ESPN’s transactions page is the broad league move tracker. [web:279]</p><a class="source-link" href="https://www.espn.com/mlb/transactions" target="_blank" rel="noopener noreferrer">Open ESPN transactions</a></article>
-              <article class="source-card"><h4>Wild card</h4><p>Use MLB.com’s wild-card page when the national show needs playoff framing. [web:259]</p><a class="source-link" href="https://www.mlb.com/standings/wild-card" target="_blank" rel="noopener noreferrer">Open wild-card standings</a></article>
-            </div>
-            <div class="research-grid" style="margin-top:12px;"><article class="note-card"><h4>Verified league notes</h4><textarea id="leagueVerified"></textarea></article><article class="note-card"><h4>League snapshot store</h4><textarea id="leagueSnapshot"></textarea></article></div>
-          </div>
-
-          <div class="teamstack" id="athleticsStack">
-            <div class="source-grid">
-              <article class="source-card"><h4>A's official pages</h4><p>MLB.com provides Athletics standings, probable pitchers, and transactions. [web:166][web:187][web:250]</p><a class="source-link" href="https://www.mlb.com/athletics/standings/mlb" target="_blank" rel="noopener noreferrer">Open A's standings</a><br><a class="source-link" href="https://www.mlb.com/athletics/roster/probable-pitchers" target="_blank" rel="noopener noreferrer">Open A's probables</a><br><a class="source-link" href="https://www.mlb.com/athletics/roster/transactions" target="_blank" rel="noopener noreferrer">Open A's transactions</a></article>
-              <article class="source-card"><h4>A's second source</h4><p>ESPN and Baseball Savant provide transaction and performance context. [web:46][web:182]</p><a class="source-link" href="https://www.espn.com/mlb/team/transactions/_/name/ath/athletics" target="_blank" rel="noopener noreferrer">Open A's ESPN log</a><br><a class="source-link" href="https://baseballsavant.mlb.com/team/133" target="_blank" rel="noopener noreferrer">Open A's Savant</a></article>
-            </div>
-            <div class="research-grid" style="margin-top:12px;"><article class="note-card"><h4>Verified A's notes</h4><textarea id="asVerified"></textarea></article><article class="note-card"><h4>A's snapshot</h4><textarea id="asSnapshot"></textarea></article></div>
-          </div>
-
-          <div class="teamstack" id="rockiesStack">
-            <div class="source-grid">
-              <article class="source-card"><h4>Rockies official pages</h4><p>MLB.com provides Rockies standings, probable pitchers, and transactions. [web:44][web:186][web:194]</p><a class="source-link" href="https://www.mlb.com/rockies/standings" target="_blank" rel="noopener noreferrer">Open Rockies standings</a><br><a class="source-link" href="https://www.mlb.com/rockies/roster/probable-pitchers" target="_blank" rel="noopener noreferrer">Open Rockies probables</a><br><a class="source-link" href="https://www.mlb.com/rockies/roster/transactions" target="_blank" rel="noopener noreferrer">Open Rockies transactions</a></article>
-              <article class="source-card"><h4>Rockies second source</h4><p>ESPN and Baseball Savant provide transaction and performance context. [web:200][web:169]</p><a class="source-link" href="https://www.espn.com/mlb/team/transactions/_/name/col/colorado-rockies" target="_blank" rel="noopener noreferrer">Open Rockies ESPN log</a><br><a class="source-link" href="https://baseballsavant.mlb.com/team/115" target="_blank" rel="noopener noreferrer">Open Rockies Savant</a></article>
-            </div>
-            <div class="research-grid" style="margin-top:12px;"><article class="note-card"><h4>Verified Rockies notes</h4><textarea id="rockiesVerified"></textarea></article><article class="note-card"><h4>Rockies snapshot</h4><textarea id="rockiesSnapshot"></textarea></article></div>
-          </div>
-
-          <div class="teamstack" id="tigersStack">
-            <div class="source-grid">
-              <article class="source-card"><h4>Tigers official pages</h4><p>MLB.com provides Tigers standings, probable pitchers, and transactions. [web:267][web:260][web:263]</p><a class="source-link" href="https://www.mlb.com/tigers/standings/league" target="_blank" rel="noopener noreferrer">Open Tigers standings</a><br><a class="source-link" href="https://www.mlb.com/tigers/roster/probable-pitchers" target="_blank" rel="noopener noreferrer">Open Tigers probables</a><br><a class="source-link" href="https://www.mlb.com/tigers/roster/transactions" target="_blank" rel="noopener noreferrer">Open Tigers transactions</a></article>
-              <article class="source-card"><h4>Tigers second source</h4><p>ESPN and Baseball Savant provide transaction and performance context. [web:261][web:257]</p><a class="source-link" href="https://www.espn.com/mlb/team/transactions/_/name/det/detroit-tigers" target="_blank" rel="noopener noreferrer">Open Tigers ESPN log</a><br><a class="source-link" href="https://baseballsavant.mlb.com/team/116" target="_blank" rel="noopener noreferrer">Open Tigers Savant</a></article>
-            </div>
-            <div class="research-grid" style="margin-top:12px;"><article class="note-card"><h4>Verified Tigers notes</h4><textarea id="tigersVerified"></textarea></article><article class="note-card"><h4>Tigers snapshot</h4><textarea id="tigersSnapshot"></textarea></article></div>
-          </div>
-        </section>
-      </section>
-
-      <aside class="panel viewer">
-        <div class="viewer-top"><h2>Outputs</h2><div class="viewtabs"><button class="mini-btn active" data-view="prep">Prep</button><button class="mini-btn" data-view="cards">Cards</button><button class="mini-btn" data-view="host">Host sheet</button><button class="mini-btn" data-view="tele">Teleprompter</button></div></div>
-        <div class="statbar"><div class="stat"><span>Runtime</span><strong id="statRuntime">25 minutes</strong></div><div class="stat"><span>Active segments</span><strong id="statSegments">8</strong></div><div class="stat"><span>First block</span><strong id="statFirst">National Open</strong></div><div class="stat"><span>Priority</span><strong id="statPriority">Balanced three-team homer</strong></div></div>
-        <div class="output-actions"><button class="ghost" id="mirrorBtn">Mirror teleprompter</button><button class="ghost" id="teleTopBtn">Jump teleprompter to top</button></div>
-        <div class="output-panel" id="prepView"><pre id="outputText"></pre></div>
-        <div class="cards-panel" id="cardsView"><div id="cardsGrid" class="cards-grid"></div></div>
-        <div class="hostsheet-panel" id="hostView"></div>
-        <div class="teleprompter-panel" id="teleView"><div class="tele-controls"><label style="margin:0;text-transform:none;color:var(--muted);font-size:.95rem;">Text size <input id="teleSize" type="range" min="28" max="74" value="46"></label></div><div id="teleScreen" class="tele-screen"></div></div>
-      </aside>
-    </section>
+  <main>
+    <div class="card">
+      <h1>BD Baseball Show Prep</h1>
+      <p class="muted">Static PWA snapshot viewer with explicit verification labels.</p>
+      <p>Snapshot: <span id="stamp" class="badge">loading...</span></p>
+      <p id="offline" class="muted"></p>
+    </div>
+    <div class="card">
+      <h2>League</h2>
+      <p id="leagueHeadline"></p>
+      <h3>Verified notes</h3><ul id="leagueVerified"></ul>
+      <h3>Unverified notes</h3><ul id="leagueUnverified"></ul>
+      <h3>Transactions</h3><ul id="leagueTx"></ul><h3>Source status</h3><pre id="sourceStatus" class="status"></pre>
+    </div>
+    <div id="teams"></div>
   </main>
-
-  <script>
-    const $ = (id) => document.getElementById(id);
-    $('date').value = new Date().toISOString().slice(0,10);
-
-    const SNAPSHOT_URL = './data/latest.json';
-    let snapshotData = null;
-    let deferredPrompt = null;
-const liveState = { league:{lastUpdated:null, ok:false, standings:[], pitchers:[], transactions:[]}, teams:{athletics:null, rockies:null, tigers:null} };
-    const segmentDefs = {national:{label:'National Open',desc:'Big MLB lead and league context',duration:4,enabled:true},league:{label:'Around the League',desc:'Best series, standings pulse, league notebook',duration:4,enabled:true},athletics:{label:"A's Deep Dive",desc:'Homer angle, fan read, silver lining',duration:4,enabled:true},rockies:{label:'Rockies Deep Dive',desc:'Coors truth, purple pride, reality check',duration:4,enabled:true},tigers:{label:'Tigers Deep Dive',desc:'Detroit tone, AL Central pulse, Motor City notes',duration:4,enabled:true},preview:{label:"Tonight's Preview",desc:'Watch list and what matters next',duration:4,enabled:true},notes:{label:'Transactions / Injuries',desc:'Confirmed notes only',duration:3,enabled:true},closer:{label:'Closer',desc:'Final opinion and CTA',duration:2,enabled:true}};
-    let segmentOrder=['national','league','athletics','rockies','tigers','preview','notes','closer'], dragKey=null, teleMirrored=false;
-
-    function splitLines(v){return v.split('\n').map(x=>x.trim()).filter(Boolean)}
-    function activeOrder(){return segmentOrder.filter(k=>segmentDefs[k].enabled)}
-    function mmss(min){return `${String(min).padStart(2,'0')}:00`}
-    function calcTimes(){let running=0;return activeOrder().map(key=>{const start=running,dur=segmentDefs[key].duration;running+=dur;return {key,start,dur}})}
-    function setStatus(text, ok=true){$('fetchStatus').textContent=text;$('fetchStatus').className=ok?'statusline fetch-ok':'statusline fetch-bad'}
-    function nowStamp(){return new Date().toLocaleString()}
-    function parseHtml(html){return new DOMParser().parseFromString(html,'text/html')}
-    async function fetchText(url){const res=await fetch(url,{method:'GET'});if(!res.ok) throw new Error(`HTTP ${res.status}`);return await res.text()}
-    function compact(text){return text.replace(/\s+/g,' ').trim()}
-    function updateConnectivityUI(){ const online=navigator.onLine; $('connectivityLabel').textContent=online?'Online':'Offline'; $('statusDot').classList.toggle('offline', !online); }
-    function wireInstallPrompt(){ const btn=$('installAppBtn'); window.addEventListener('beforeinstallprompt', (e)=>{ e.preventDefault(); deferredPrompt=e; btn.hidden=false; }); btn.addEventListener('click', async ()=>{ if(!deferredPrompt) return; deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; btn.hidden=true; }); window.addEventListener('appinstalled', ()=>{ deferredPrompt=null; btn.hidden=true; }); }
-    function updateSnapshotBanner(message){ var __sb=$('snapshotBanner'); if(__sb){__sb.innerHTML = message;} }
-    async function loadSnapshotFile(){
-      const res = await fetch(SNAPSHOT_URL);
-      if(!res.ok) throw new Error(`Snapshot HTTP ${res.status}`);
-      snapshotData = await res.json();
-      return snapshotData;
-    }
-    function applySnapshotPayload(data){
-      liveState.league = {
-        lastUpdated: data.generated_at,
-        ok: true,
-        standings: data.league.verified_notes.filter(x=>/snapshot|standings/i.test(x)).slice(0,4),
-        pitchers: data.league.watch.map(x=>x.replace(/^Pitching watch:\s*/,'')),
-        transactions: data.league.transactions.slice()
-      };
-      liveState.teams = {
-        athletics:{updated:data.generated_at, standings:[data.teams.athletics.verified_notes[1]], probables:[data.teams.athletics.verified_notes[2]], transactions:[data.teams.athletics.verified_notes[3]]},
-        rockies:{updated:data.generated_at, standings:[data.teams.rockies.verified_notes[1]], probables:[data.teams.rockies.verified_notes[2]], transactions:[data.teams.rockies.verified_notes[3]]},
-        tigers:{updated:data.generated_at, standings:[data.teams.tigers.verified_notes[1]], probables:[data.teams.tigers.verified_notes[2]], transactions:data.teams.tigers.verified_notes.slice(3)}
-      };
-      if($('leagueFetchMeta')) $('leagueFetchMeta').innerHTML = `<span class="fetch-ok">Latest snapshot file loaded.</span><br><span class="mono">${data.generated_at}</span>`; updateSnapshotBanner(`<strong>Snapshot loaded:</strong> ${data.generated_at} &middot; Source file: latest.json`);
-      if($('teamFetchMeta')) $('teamFetchMeta').innerHTML = `<span class="fetch-ok">Team snapshots loaded.</span><br><span class="mono">${data.generated_at}</span>`;
-      $('leagueSnapshot').value = [`Latest snapshot file: ${SNAPSHOT_URL}`,`Generated at: ${data.generated_at}`].concat(data.league.verified_notes).join('\n');
-      $('asSnapshot').value = [`Generated at: ${data.generated_at}`].concat(data.teams.athletics.verified_notes).join('\n');
-      $('rockiesSnapshot').value = [`Generated at: ${data.generated_at}`].concat(data.teams.rockies.verified_notes).join('\n');
-      $('tigersSnapshot').value = [`Generated at: ${data.generated_at}`].concat(data.teams.tigers.verified_notes).join('\n');
-    }
-    function fillFromSnapshot(team){
-      if(!snapshotData) return;
-      if(team==='league'){ $('leagueVerified').value=snapshotData.league.verified_notes.join('\n'); $('leagueNotes').value=snapshotData.league.stories.join('\n'); $('leagueChecklist').value=['Division and wild-card pulse','Best pitching matchups','Verified league transaction notes'].join('\n'); $('leagueHeadline').value=snapshotData.league.headline; $('leagueStories').value=snapshotData.league.stories.join('\n'); $('leagueWatch').value=snapshotData.league.watch.join('\n'); $('transactions').value=snapshotData.league.transactions.join('\n'); }
-      if(team==='athletics'){ $('asVerified').value=snapshotData.teams.athletics.verified_notes.join('\n'); $('asNotes').value=snapshotData.teams.athletics.notes.join('\n'); $('asChecklist').value=snapshotData.teams.athletics.checklist.join('\n'); $('asHeadline').value=snapshotData.teams.athletics.headline; $('asEmotion').value=snapshotData.teams.athletics.emotion; }
-      if(team==='rockies'){ $('rockiesVerified').value=snapshotData.teams.rockies.verified_notes.join('\n'); $('rockiesNotes').value=snapshotData.teams.rockies.notes.join('\n'); $('rockiesChecklist').value=snapshotData.teams.rockies.checklist.join('\n'); $('rockiesHeadline').value=snapshotData.teams.rockies.headline; $('rockiesEmotion').value=snapshotData.teams.rockies.emotion; }
-      if(team==='tigers'){ $('tigersVerified').value=snapshotData.teams.tigers.verified_notes.join('\n'); $('tigersNotes').value=snapshotData.teams.tigers.notes.join('\n'); $('tigersChecklist').value=snapshotData.teams.tigers.checklist.join('\n'); $('tigersHeadline').value=snapshotData.teams.tigers.headline; $('tigersEmotion').value=snapshotData.teams.tigers.emotion; }
-      build();
-    }
-    function extractStandings(html){const doc=parseHtml(html);const text=compact(doc.body ? doc.body.innerText : html);const matches=[];const re=/([A-Z][A-Za-z.'\- ]{2,30})\s+(\d{1,2})-(\d{1,2})/g; let m; while((m=re.exec(text))!==null){matches.push(`${m[1].trim()}: ${m[2]}-${m[3]}`); if(matches.length>=12) break;} return [...new Set(matches)].slice(0,10)}
-    function extractPitchers(html){const doc=parseHtml(html);const text=compact(doc.body ? doc.body.innerText : html);const matches=[];const re=/([A-Z][A-Za-z.'\- ]{2,25})\s+vs\.?\s+([A-Z][A-Za-z.'\- ]{2,25})/g; let m; while((m=re.exec(text))!==null){matches.push(`${m[1].trim()} vs ${m[2].trim()}`); if(matches.length>=8) break;} if(!matches.length){const alt=text.match(/Probable Pitchers(.{0,600})/i); if(alt) matches.push('League probable-pitchers page fetched; parse manually if formatting changed.')} return [...new Set(matches)].slice(0,8)}
-    function extractTransactions(html){const doc=parseHtml(html);const text=compact(doc.body ? doc.body.innerText : html);const chunks=[];const re=/(placed|recalled|selected|transferred|optioned|assigned|activated|agreed|signed|claimed|acquired|traded).{0,120}?\./gi; let m; while((m=re.exec(text))!==null){chunks.push(m[0].trim()); if(chunks.length>=8) break;} if(!chunks.length){const lines=text.split('. ').filter(s=>/(placed|recalled|selected|transferred|optioned|assigned|activated|signed|claimed|traded)/i.test(s)).slice(0,8); return lines.map(s=>s.trim()+'.')} return chunks}
-    function fillDefaults(team){ if(snapshotData){ fillFromSnapshot(team); return; } build(); }
-    function renderBoard(){const board=$('segmentBoard');board.innerHTML=segmentOrder.map(key=>{const seg=segmentDefs[key];return `<div class="segment-row" draggable="true" data-key="${key}"><div class="drag">⋮⋮</div><div><div class="segname">${seg.label}</div><div class="segdesc">${seg.desc}</div></div><input class="segdur" type="number" min="1" max="20" value="${seg.duration}" data-duration="${key}" /><label class="toggle"><input type="checkbox" ${seg.enabled?'checked':''} data-enable="${key}"> live</label></div>`}).join('');board.querySelectorAll('[data-duration]').forEach(input=>input.addEventListener('input',e=>{segmentDefs[e.target.dataset.duration].duration=Math.max(1,parseInt(e.target.value||'1',10));build()}));board.querySelectorAll('[data-enable]').forEach(input=>input.addEventListener('change',e=>{segmentDefs[e.target.dataset.enable].enabled=e.target.checked;build()}));board.querySelectorAll('.segment-row').forEach(row=>{row.addEventListener('dragstart',()=>{dragKey=row.dataset.key;row.classList.add('dragging')});row.addEventListener('dragend',()=>{dragKey=null;row.classList.remove('dragging')});row.addEventListener('dragover',e=>e.preventDefault());row.addEventListener('drop',e=>{e.preventDefault();const targetKey=row.dataset.key;if(!dragKey||dragKey===targetKey)return;const from=segmentOrder.indexOf(dragKey),to=segmentOrder.indexOf(targetKey);segmentOrder.splice(to,0,segmentOrder.splice(from,1)[0]);renderBoard();build()})})}
-
-    async function refreshLeagueSources(){ if($('leagueFetchMeta')) $('leagueFetchMeta').innerHTML = `<span class="fetch-ok">Snapshot rebuild running.</span><br><span class="mono">${nowStamp()}</span>`;
-      const btn=$('refreshLeagueBtn'); btn.disabled=true; setStatus('Loading structured league snapshot...', true);
-      try {
-        const data = snapshotData || await loadSnapshotFile(); applySnapshotPayload(data); fillFromSnapshot('league'); setStatus('League notebook rebuilt from the snapshot file.', true); buildLeagueFromLive();
-      } catch (err) {
-        if($('leagueFetchMeta')) $('leagueFetchMeta').innerHTML = `<span class="fetch-bad">Live refresh failed.</span><br><span class="mono">${err.message}</span>`;
-        fillDefaults('league');
-        updateSnapshotBanner('<strong>Snapshot warning:</strong> latest.json did not load. Manual verification mode only.'); setStatus('League snapshot load failed.', false);
-      } finally { btn.disabled=false; }
-    }
-
-    function buildLeagueFromLive(){
-      const l=liveState.league;
-      if(!l.ok){fillDefaults('league'); return;}
-      $('leagueHeadline').value = l.standings.length ? `The league show starts with the board itself: ${l.standings[0]}.` : 'The league show starts with the standings board and the pitching slate.';
-      $('leagueNotes').value = [
-        l.standings[0] ? `Use this standings hook: ${l.standings[0]}.` : 'Use the MLB standings page as the first league hook.',
-        l.standings[1] ? `Secondary board read: ${l.standings[1]}.` : 'Add one more division or wild-card angle.',
-        l.pitchers[0] ? `Best pitching setup in the live pull: ${l.pitchers[0]}.` : 'Use the MLB probable-pitchers page to identify the best matchup.',
-        l.transactions[0] ? `Verified transaction peg: ${l.transactions[0]}` : 'Use only verified transaction notes from the live page.'
-      ].join('\n');
-      $('leagueChecklist').value = [
-        'Division and wild-card pulse',
-        l.pitchers[1] ? `Mention: ${l.pitchers[1]}` : 'Best probable-pitcher matchup',
-        l.transactions[1] ? `Mention: ${l.transactions[1]}` : 'One verified league move note'
-      ].join('\n');
-      $('leagueStories').value = l.standings.slice(0,5).map(s=>`Standings pulse: ${s}`).join('\n');
-      $('leagueWatch').value = l.pitchers.slice(0,5).map(s=>`Pitching watch: ${s}`).join('\n');
-      $('transactions').value = l.transactions.slice(0,6).join('\n');
-      build();
-    }
-
-    async function refreshTeamSources(){ if($('teamFetchMeta')) $('teamFetchMeta').innerHTML = `<span class="fetch-ok">Team snapshot rebuild running.</span><br><span class="mono">${nowStamp()}</span>`;
-      const btn=$('refreshTeamsBtn'); btn.disabled=true; setStatus('Rebuilding team notebooks from the verified snapshot layer...', true);
-      try {
-        const data = snapshotData || await loadSnapshotFile(); applySnapshotPayload(data); fillFromSnapshot('athletics'); fillFromSnapshot('rockies'); fillFromSnapshot('tigers'); if($('teamFetchMeta')) $('teamFetchMeta').innerHTML = `<span class="fetch-ok">Team snapshots rebuilt.</span><br><span class="mono">${data.generated_at}</span>`; setStatus('Team notebooks rebuilt from the snapshot file.', true);
-      } catch (err) {
-        if($('teamFetchMeta')) $('teamFetchMeta').innerHTML = `<span class="fetch-bad">Team refresh failed.</span><br><span class="mono">${err.message}</span>`;
-        fillDefaults('athletics'); fillDefaults('rockies'); fillDefaults('tigers');
-        updateSnapshotBanner('<strong>Snapshot warning:</strong> team snapshot rebuild failed.'); setStatus('Team snapshot load failed.', false);
-      } finally { btn.disabled=false; }
-    }
-
-    function applyTeamLive(team){
-      const data = liveState.teams[team];
-      if(!data) return fillDefaults(team);
-      const map = {
-        athletics:{verified:'asVerified',snapshot:'asSnapshot',notes:'asNotes',check:'asChecklist',headline:'asHeadline',line:"The A's segment should start from the live standings and ask whether the first-place read looks sturdy."},
-        rockies:{verified:'rockiesVerified',snapshot:'rockiesSnapshot',notes:'rockiesNotes',check:'rockiesChecklist',headline:'rockiesHeadline',line:'The Rockies segment should start from the live board and then test whether the pain feels temporary or structural.'},
-        tigers:{verified:'tigersVerified',snapshot:'tigersSnapshot',notes:'tigersNotes',check:'tigersChecklist',headline:'tigersHeadline',line:'The Tigers segment should sound like a club with real reasons for belief if the live board still supports it.'}
-      }[team];
-      $(map.verified).value = [
-        `Live team refresh succeeded at ${data.updated}.`,
-        ...data.standings.map(s=>`Standings note: ${s}`),
-        ...data.probables.map(s=>`Probable-pitcher note: ${s}`),
-        ...data.transactions.map(s=>`Transaction note: ${s}`)
-      ].join('\n');
-      $(map.snapshot).value = [
-        `Last live refresh: ${data.updated}`,
-        `Standings: ${data.standings.join(' | ') || 'No parse.'}`,
-        `Probables: ${data.probables.join(' | ') || 'No parse.'}`,
-        `Transactions: ${data.transactions.join(' | ') || 'No parse.'}`
-      ].join('\n');
-      $(map.notes).value = [map.line].concat(data.standings[0] ? [`Use this standings line: ${data.standings[0]}.`] : []).concat(data.probables[0] ? [`Use this probable line: ${data.probables[0]}.`] : []).concat(data.transactions[0] ? [`Use this verified move note: ${data.transactions[0]}`] : []).join('\n');
-      $(map.check).value = ['Standings reality check','Probable-pitcher note','Verified transaction or injury note'].join('\n');
-      $(map.headline).value = data.standings[0] ? `${data.standings[0]} is the right starting point for this segment.` : map.line;
-      build();
-    }
-
-    async function buildFromLive(){
-      await refreshLeagueSources();
-      try { await refreshTeamSources(); } catch(e) {}
-      generateColdOpen();
-      $('preview').value = [
-        ...liveState.league.pitchers.slice(0,4).map(s=>`League watch: ${s}`),
-        liveState.teams.athletics?.probables?.[0] ? `A's watch: ${liveState.teams.athletics.probables[0]}` : '',
-        liveState.teams.rockies?.probables?.[0] ? `Rockies watch: ${liveState.teams.rockies.probables[0]}` : '',
-        liveState.teams.tigers?.probables?.[0] ? `Tigers watch: ${liveState.teams.tigers.probables[0]}` : ''
-      ].filter(Boolean).join('\n');
-      $('closer').value = liveState.league.ok ? `The league board tells you what is real tonight, and the A's, Rockies, and Tigers segments tell you how it feels if you actually live with those teams.` : `Use the verified notebook to land the final thought cleanly and honestly.`;
-      build();
-    }
-
-    function loadFallbackEpisode(){
-      fillDefaults('league'); fillDefaults('athletics'); fillDefaults('rockies'); fillDefaults('tigers');
-      $('topStories').value="Use the full MLB board to identify the biggest truth of the day before going local.\nThe A's are first in the AL West despite a negative run differential.\nThe Rockies are digging out from a rough start and a -16 run differential.\nThe Tigers have a winning record and positive run differential, so they deserve a different tone.";
-      $('leagueStories').value="Start with division leaders and the best surprise or collapse on the board.\nUse the wild-card page to identify early pressure points.\nUse the rest-of-league notebook so the show does not sound provincial.";
-      $('leagueWatch').value="Best probable-pitcher matchups from the MLB.com slate.\nNational series with standings implications.\nAny league-wide injury or roster note confirmed on ESPN transactions.";
-      $('bestGames').value="Use the A's first-place angle as the surprise hook.\nUse the Rockies run-differential reality as the hard-truth block.\nUse the Tigers' positive run differential as the hopeful contrast.";
-      $('transactions').value="Athletics: Denzel Clarke to the 10-day IL; Colby Thomas recalled.\nRockies: Ryan Feltner to the 15-day IL; Sammy Peralta recalled.\nTigers: Bailey Horn to the 60-day IL; Burch Smith selected; Parker Meadows transferred to the 60-day IL.";
-      $('preview').value="A's probable-pitcher conversation starts with Springs and Ginn.\nRockies preview peg: Jose Quintana listed for April 28 against Cincinnati.\nTigers preview starts from MLB.com's live probable-pitchers page for the next starts.";
-      $('closer').value="The best thing about a three-homer baseball show is that it forces honesty: one club can be hopeful, one can be fragile, and one can be in survival mode, all on the same night.";
-      generateColdOpen(); build();
-    }
-
-    function pushCard(cards,title,summary,bullets){cards.push({title,summary,bullets:bullets.filter(Boolean)})}
-    function build(){
-      const showName=$('showName').value.trim()||'Baseball Rundown',date=$('date').value,runtime=$('runtime').value,tone=$('tone').value,priority=$('priority').value,hook=$('hook').value.trim(),topStories=splitLines($('topStories').value),bestGames=splitLines($('bestGames').value),leagueStories=splitLines($('leagueStories').value),leagueWatch=splitLines($('leagueWatch').value),transactions=splitLines($('transactions').value),leagueHeadline=$('leagueHeadline').value.trim(),leagueAngle=$('leagueAngle').value,leagueNotes=splitLines($('leagueNotes').value),leagueChecklist=splitLines($('leagueChecklist').value),asHeadline=$('asHeadline').value.trim(),asEmotion=$('asEmotion').value,asNotes=splitLines($('asNotes').value),asChecklist=splitLines($('asChecklist').value),rockiesHeadline=$('rockiesHeadline').value.trim(),rockiesEmotion=$('rockiesEmotion').value,rockiesNotes=splitLines($('rockiesNotes').value),rockiesChecklist=splitLines($('rockiesChecklist').value),tigersHeadline=$('tigersHeadline').value.trim(),tigersEmotion=$('tigersEmotion').value,tigersNotes=splitLines($('tigersNotes').value),tigersChecklist=splitLines($('tigersChecklist').value),preview=splitLines($('preview').value),closer=$('closer').value.trim(),cards=[],hostSections=[],active=activeOrder(),times=calcTimes();
-      $('statRuntime').textContent=runtime; $('statSegments').textContent=String(active.length); $('statFirst').textContent=active.length?segmentDefs[active[0]].label:'—'; $('statPriority').textContent=priority;
-      let prep=`${showName}\n${date} | ${runtime} | ${tone} | ${priority}\n${'='.repeat(72)}\n\n`;
-      prep+=`OPENING HIT\nLead line: ${hook||'Lead with the one baseball thing your audience needs first.'}\nHost posture: Be definitive right away, then steer into the teams this show actually rides with.\n\n`;
-      times.forEach(({key,start,dur})=>{
-        if(key==='national'){const bullets=[hook||'Open on the top story and why it matters.',...topStories.slice(0,6).map(s=>`Storyline: ${s}`),...bestGames.slice(0,4).map(s=>`Highlight: ${s}`),'Transition: Big picture established; now turn this into your full-league-plus-homer show.'];prep+=`${mmss(start)} • ${dur} min | NATIONAL OPEN\n`+bullets.map(b=>`- ${b}`).join('\n')+`\n\n`;pushCard(cards,'National Open','Set the top MLB story and the overall league mood.',bullets);hostSections.push({title:'National Open',bullets})}
-        if(key==='league'){const verified=splitLines($('leagueVerified').value).map(s=>`Verified note: ${s}`);const bullets=[`Headline: ${leagueHeadline||'Main league angle goes here.'}`,`National angle: ${leagueAngle}`,...leagueStories.map(s=>`League storyline: ${s}`),...leagueNotes.map(s=>`Talking point: ${s}`),...leagueWatch.map(s=>`Watch list: ${s}`),...verified,...leagueChecklist.map(s=>`Checklist: ${s}`),'Button: Make the national block feel like a map of the sport, not filler.'];prep+=`${mmss(start)} • ${dur} min | AROUND THE LEAGUE\n`+bullets.map(b=>`- ${b}`).join('\n')+`\n\n`;pushCard(cards,'Around the League','Give the audience the rest of baseball before you go homer-specific.',bullets);hostSections.push({title:'Around the League',bullets})}
-        if(key==='athletics'){const verified=splitLines($('asVerified').value).map(s=>`Verified note: ${s}`);const bullets=[`Headline: ${asHeadline||"Main A's angle goes here."}`,`Fan temperature: ${asEmotion}`,...asNotes.map(s=>`Talking point: ${s}`),...verified,...asChecklist.map(s=>`Checklist: ${s}`),'Button: Even in a loss, give listeners one real reason to stay invested.'];prep+=`${mmss(start)} • ${dur} min | A'S DEEP DIVE\n`+bullets.map(b=>`- ${b}`).join('\n')+`\n\n`;pushCard(cards,"A's Deep Dive",'Sound like a fan who watched every inning and knows what mattered.',bullets);hostSections.push({title:"A's Deep Dive",bullets})}
-        if(key==='rockies'){const verified=splitLines($('rockiesVerified').value).map(s=>`Verified note: ${s}`);const bullets=[`Headline: ${rockiesHeadline||'Main Rockies angle goes here.'}`,`Fan temperature: ${rockiesEmotion}`,...rockiesNotes.map(s=>`Talking point: ${s}`),...verified,...rockiesChecklist.map(s=>`Checklist: ${s}`),'Button: Find one honest Purple Pride point, not fake sunshine.'];prep+=`${mmss(start)} • ${dur} min | ROCKIES DEEP DIVE\n`+bullets.map(b=>`- ${b}`).join('\n')+`\n\n`;pushCard(cards,'Rockies Deep Dive','Balance Coors reality with a fan voice that still cares.',bullets);hostSections.push({title:'Rockies Deep Dive',bullets})}
-        if(key==='tigers'){const verified=splitLines($('tigersVerified').value).map(s=>`Verified note: ${s}`);const bullets=[`Headline: ${tigersHeadline||'Main Tigers angle goes here.'}`,`Fan temperature: ${tigersEmotion}`,...tigersNotes.map(s=>`Talking point: ${s}`),...verified,...tigersChecklist.map(s=>`Checklist: ${s}`),'Button: Let the Tigers segment sound like a club with real reasons for belief.'];prep+=`${mmss(start)} • ${dur} min | TIGERS DEEP DIVE\n`+bullets.map(b=>`- ${b}`).join('\n')+`\n\n`;pushCard(cards,'Tigers Deep Dive','Use the Detroit segment as the hopeful or upward-moving homer lane.',bullets);hostSections.push({title:'Tigers Deep Dive',bullets})}
-        if(key==='preview'){const bullets=preview.length?preview.map(s=>`Watch for: ${s}`):['Watch for: pitching, lineups, division stakes, and weird baseball energy.'];prep+=`${mmss(start)} • ${dur} min | TONIGHT\'S PREVIEW\n`+bullets.map(b=>`- ${b}`).join('\n')+`\n\n`;pushCard(cards,"Tonight's Preview",'Tell listeners what to care about next.',bullets);hostSections.push({title:"Tonight's Preview",bullets})}
-        if(key==='notes'){const bullets=transactions.length?transactions.map(s=>`Confirmed note: ${s}`):['Confirmed note: Add verified injuries, call-ups, IL moves, and roster changes only.'];bullets.push('Guardrail: If not confirmed from available sources, do not say it on air.');prep+=`${mmss(start)} • ${dur} min | TRANSACTIONS / INJURIES\n`+bullets.map(b=>`- ${b}`).join('\n')+`\n\n`;pushCard(cards,'Transactions / Injuries','Keep this block for sourced items only.',bullets);hostSections.push({title:'Transactions / Injuries',bullets})}
-        if(key==='closer'){const bullets=[`Final take: ${closer||'Wrap with one clean opinion and a tease for tomorrow.'}`,'CTA: Follow, subscribe, and send in the questions for the next show.','Sign-off note: End with force, not housekeeping.'];prep+=`${mmss(start)} • ${dur} min | CLOSER\n`+bullets.map(b=>`- ${b}`).join('\n')+`\n\n`;pushCard(cards,'Closer','Land the plane with something memorable.',bullets);hostSections.push({title:'Closer',bullets})}
-      });
-      prep+=`HOST REMINDERS\n- The open must sound like a take, not a schedule.\n- The league block should use live context when available.\n- The A's, Rockies, and Tigers blocks should each feel distinct in tone.\n- Verify signings, trades, roster moves, and injury updates before air.\n`;
-      $('outputText').textContent=prep; window.latestPrep=prep;
-      $('cardsGrid').innerHTML=cards.map(card=>`<article class="segment-card"><h4>${card.title}</h4><p>${card.summary}</p><ul>${card.bullets.map(b=>`<li>${b}</li>`).join('')}</ul></article>`).join('');
-      $('hostView').innerHTML=`<article><div><div class="host-title">${showName}</div><div class="host-sub">${date} • ${runtime} • ${tone} • ${priority}</div></div><section class="host-box"><h4>Cold Open</h4><ul><li>${hook||'Lead with the one baseball thing your audience needs first.'}</li></ul></section>${hostSections.map(section=>`<section class="host-box"><h4>${section.title}</h4><ul>${section.bullets.map(b=>`<li>${b}</li>`).join('')}</ul></section>`).join('')}</article>`;
-      window.latestHost=hostSections.map(s=>`${s.title}\n- ${s.bullets.join('\n- ')}`).join('\n\n');
-      $('teleScreen').textContent=prep; $('teleScreen').style.fontSize=$('teleSize').value+'px';
-    }
-
-    function setView(view){document.querySelectorAll('[data-view]').forEach(btn=>btn.classList.toggle('active',btn.dataset.view===view));$('prepView').style.display=view==='prep'?'block':'none';$('cardsView').style.display=view==='cards'?'block':'none';$('hostView').style.display=view==='host'?'block':'none';$('teleView').style.display=view==='tele'?'block':'none'}
-    function generateColdOpen(){const hookBase=splitLines($('topStories').value)[0]||$('leagueHeadline').value||$('asHeadline').value||$('tigersHeadline').value||$('rockiesHeadline').value||'the baseball day';const priority=$('priority').value;let line=`Tonight, this show starts with ${hookBase.toLowerCase()}`;if(priority==="A's heavy") line+=", but the real heartbeat is what it means for the A's."; else if(priority==='Rockies heavy') line+=", and we are going to sit in the Rockies angle longer than the national shows will."; else if(priority==='Tigers heavy') line+=", and Detroit gets the biggest homer block because there is real heat there right now."; else if(priority==='National story first') line+=", because the national picture has to come first before we get local."; else line+=", and then we bring it home through the A's, Rockies, and Tigers lens.";$('hook').value=line;build()}
-    function buildScript(){const pieces=[splitLines($('topStories').value)[0],$('leagueHeadline').value,$('asHeadline').value,$('rockiesHeadline').value,$('tigersHeadline').value,splitLines($('preview').value)[0]].filter(Boolean);$('hook').value=pieces.length?`Tonight we start with ${pieces[0].toLowerCase()}, then work our way through ${pieces.slice(1).join(', ')}.`:'Tonight we run through the baseball day and bring it home through the league, A\'s, Rockies, and Tigers lens.';build()}
-    function exportTxt(){const blob=new Blob([window.latestPrep||''],{type:'text/plain'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`bd-sports-show-prep-${$('date').value||'show'}.txt`;a.click();URL.revokeObjectURL(a.href)}
-
-    document.querySelectorAll('[data-teamstack]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-teamstack]').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.teamstack').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById(btn.dataset.teamstack+'Stack').classList.add('active')}));
-    document.querySelectorAll('[data-view]').forEach(btn=>btn.addEventListener('click',()=>setView(btn.dataset.view)));
-    $('refreshLeagueBtn').addEventListener('click',refreshLeagueSources); $('refreshTeamsBtn').addEventListener('click',refreshTeamSources); $('buildFromLiveBtn').addEventListener('click',buildFromLive);
-    $('fillLeagueDefaults').addEventListener('click',()=>fillDefaults('league')); $('fillASources').addEventListener('click',()=>fillDefaults('athletics')); $('fillRSources').addEventListener('click',()=>fillDefaults('rockies')); $('fillTSources').addEventListener('click',()=>fillDefaults('tigers')); $('buildTodayBtn').addEventListener('click',loadFallbackEpisode);
-    $('generateBtn').addEventListener('click',build); $('coldOpenBtn').addEventListener('click',generateColdOpen); $('scriptBtn').addEventListener('click',buildScript); $('exportTxtBtn').addEventListener('click',exportTxt);
-    $('teleSize').addEventListener('input',e=>$('teleScreen').style.fontSize=e.target.value+'px'); $('mirrorBtn').addEventListener('click',()=>{teleMirrored=!teleMirrored;$('teleScreen').classList.toggle('mirror',teleMirrored);$('mirrorBtn').textContent=teleMirrored?'Unmirror teleprompter':'Mirror teleprompter'}); $('teleTopBtn').addEventListener('click',()=>$('teleView').scrollTo({top:0,behavior:'smooth'})); $('printBtn').addEventListener('click',()=>{setView('host');window.print()});
-    $('copyBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(window.latestPrep||'');$('copyBtn').textContent='Copied'}catch{$('copyBtn').textContent='Copy failed'}setTimeout(()=>$('copyBtn').textContent='Copy prep sheet',1200)});
-    $('copyHostBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(window.latestHost||'');$('copyHostBtn').textContent='Copied'}catch{$('copyHostBtn').textContent='Copy failed'}setTimeout(()=>$('copyHostBtn').textContent='Copy host sheet',1200)});
-    $('clearBtn').addEventListener('click',()=>{document.querySelectorAll('textarea').forEach(el=>el.value='');document.querySelectorAll('input[type="text"], input:not([type])').forEach(el=>{if(el.id!=='showName')el.value=''});$('date').value=new Date().toISOString().slice(0,10);$('runtime').value='25 minutes';$('tone').value='Smart fan';$('priority').value='Balanced three-team homer';$('leagueAngle').value='Standings pulse';$('asEmotion').value='Cautiously fired up';$('rockiesEmotion').value='Trying to believe';$('tigersEmotion').value='Actually believing';segmentOrder=['national','league','athletics','rockies','tigers','preview','notes','closer'];Object.keys(segmentDefs).forEach(k=>{segmentDefs[k].enabled=true});segmentDefs.national.duration=4;segmentDefs.league.duration=4;segmentDefs.athletics.duration=4;segmentDefs.rockies.duration=4;segmentDefs.tigers.duration=4;segmentDefs.preview.duration=4;segmentDefs.notes.duration=3;segmentDefs.closer.duration=2;renderBoard();setStatus('Form cleared.', true);build()});
-
-    updateConnectivityUI(); window.addEventListener('online', updateConnectivityUI); window.addEventListener('offline', updateConnectivityUI); wireInstallPrompt(); (async()=>{ try { const data = await loadSnapshotFile(); applySnapshotPayload(data); fillFromSnapshot('league'); fillFromSnapshot('athletics'); fillFromSnapshot('rockies'); fillFromSnapshot('tigers'); setStatus('Snapshot file loaded successfully.', true); } catch(e) { updateSnapshotBanner('<strong>Snapshot warning:</strong> latest.json failed to load; manual mode only.'); setStatus('Snapshot file failed to load; manual mode only.', false); } renderBoard(); buildLeagueFromLive(); applyTeamLive('athletics'); applyTeamLive('rockies'); applyTeamLive('tigers'); build(); setView('prep'); })();
-  </script>
-<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}</script>
+<script>
+const el = (id)=>document.getElementById(id);
+function li(text, unv=false){const n=document.createElement('li'); n.textContent=text; if(unv||/^UNVERIFIED:/i.test(text)) n.className='unv'; return n;}
+function fillList(id, items, fallback){const root=el(id); root.innerHTML=''; (items?.length?items:[fallback]).forEach(x=>root.appendChild(li(x)));}
+function renderTeam(name, team){
+  const card=document.createElement('div'); card.className='card';
+  card.innerHTML=`<h2>${name}</h2><p>${team.headline||'No headline available.'}</p><p class="muted">Emotion: ${team.emotion||'n/a'}</p><div class="status">Source status: ${JSON.stringify(team.source_status||{})}</div><h3>Verified notes</h3><ul></ul><h3>Unverified notes</h3><ul></ul>`;
+  const lists=card.querySelectorAll('ul');
+  (team.verified_notes||[]).forEach(x=>lists[0].appendChild(li(x)));
+  (team.unverified_notes||[]).forEach(x=>lists[1].appendChild(li(x,true)));
+  return card;
+}
+async function load(){
+  try{
+    const res=await fetch('./data/latest.json',{cache:'no-store'});
+    const data=await res.json();
+    el('stamp').textContent=data.generated_at || 'missing';
+    el('leagueHeadline').textContent=data.league?.headline || 'Not confirmed from available sources.';
+    fillList('leagueVerified', data.league?.verified_notes, 'Not confirmed from available sources.');
+    fillList('leagueUnverified', data.league?.unverified_notes, 'UNVERIFIED: No league unverified notes listed.');
+    fillList('leagueTx', data.league?.transactions, 'Not confirmed from available sources.');
+    el('sourceStatus').textContent = JSON.stringify(data.source_status || {}, null, 2);
+    const teams=el('teams'); teams.innerHTML='';
+    Object.entries(data.teams||{}).forEach(([k,v])=>teams.appendChild(renderTeam(k,v)));
+  }catch(e){
+    el('stamp').textContent='load failed';
+    el('leagueHeadline').textContent='UNVERIFIED: Snapshot could not be loaded.';
+  }
+}
+window.addEventListener('online',()=>el('offline').textContent='');
+window.addEventListener('offline',()=>el('offline').textContent='Offline mode: showing cached shell/snapshot when available.');
+if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js');}
+load();
+</script>
 </body>
 </html>

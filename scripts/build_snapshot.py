@@ -1,190 +1,195 @@
-from pathlib import Path
-import json, re, requests
-from datetime import datetime
-from bs4 import BeautifulSoup
+#!/usr/bin/env python3
+"""Build source-bound MLB show-prep snapshot JSON."""
+from __future__ import annotations
 
-base = Path('output/baseball-show-prep')
-data_dir = base / 'data'
-data_dir.mkdir(parents=True, exist_ok=True)
+from dataclasses import asdict, dataclass
+from datetime import datetime, timezone
+from pathlib import Path
+import json
+import logging
+import re
+from typing import Any, Callable
+
+import requests
+from bs4 import BeautifulSoup
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+DATA_DIR = Path("data")
+TEAM_KEYS = ["athletics", "rockies", "tigers"]
+UNVERIFIED = "UNVERIFIED:"
 
 URLS = {
-    'league_standings': 'https://www.mlb.com/standings',
-    'league_probables': 'https://www.mlb.com/probable-pitchers',
-    'league_transactions': 'https://www.espn.com/mlb/transactions',
-    'athletics_standings': 'https://www.mlb.com/athletics/standings/mlb',
-    'athletics_probables': 'https://www.mlb.com/athletics/roster/probable-pitchers',
-    'athletics_transactions': 'https://www.mlb.com/athletics/roster/transactions',
-    'rockies_standings': 'https://www.mlb.com/rockies/standings',
-    'rockies_probables': 'https://www.mlb.com/rockies/roster/probable-pitchers',
-    'rockies_transactions': 'https://www.mlb.com/rockies/roster/transactions',
-    'tigers_standings': 'https://www.mlb.com/tigers/standings/league',
-    'tigers_probables': 'https://www.mlb.com/tigers/roster/probable-pitchers',
-    'tigers_transactions': 'https://www.mlb.com/tigers/roster/transactions',
-    'athletics_savant': 'https://baseballsavant.mlb.com/team/133',
-    'rockies_savant': 'https://baseballsavant.mlb.com/team/115',
-    'tigers_savant': 'https://baseballsavant.mlb.com/team/116',
-    'athletics_espn_transactions': 'https://www.espn.com/mlb/team/transactions/_/name/ath/athletics',
-    'rockies_espn_transactions': 'https://www.espn.com/mlb/team/transactions/_/name/col/colorado-rockies',
-    'tigers_espn_transactions': 'https://www.espn.com/mlb/team/transactions/_/name/det/detroit-tigers'
+    "league_standings": "https://www.mlb.com/standings",
+    "league_probables": "https://www.mlb.com/probable-pitchers",
+    "league_transactions": "https://www.espn.com/mlb/transactions",
+    "athletics_standings": "https://www.mlb.com/athletics/standings/mlb",
+    "athletics_probables": "https://www.mlb.com/athletics/roster/probable-pitchers",
+    "athletics_transactions": "https://www.mlb.com/athletics/roster/transactions",
+    "athletics_savant": "https://baseballsavant.mlb.com/team/133",
+    "athletics_espn_transactions": "https://www.espn.com/mlb/team/transactions/_/name/ath/athletics",
+    "rockies_standings": "https://www.mlb.com/rockies/standings",
+    "rockies_probables": "https://www.mlb.com/rockies/roster/probable-pitchers",
+    "rockies_transactions": "https://www.mlb.com/rockies/roster/transactions",
+    "rockies_savant": "https://baseballsavant.mlb.com/team/115",
+    "rockies_espn_transactions": "https://www.espn.com/mlb/team/transactions/_/name/col/colorado-rockies",
+    "tigers_standings": "https://www.mlb.com/tigers/standings/league",
+    "tigers_probables": "https://www.mlb.com/tigers/roster/probable-pitchers",
+    "tigers_transactions": "https://www.mlb.com/tigers/roster/transactions",
+    "tigers_savant": "https://baseballsavant.mlb.com/team/116",
+    "tigers_espn_transactions": "https://www.espn.com/mlb/team/transactions/_/name/det/detroit-tigers",
 }
 
-HEADERS = {'User-Agent': 'Mozilla/5.0'}
+
+@dataclass
+class SourceResult:
+    url: str
+    status: str  # verified | unverified | source_error
+    verified: list[str]
+    unverified: list[str]
+    debug: list[str]
 
 
-def get_text(url):
-    r = requests.get(url, headers=HEADERS, timeout=30)
-    r.raise_for_status()
-    soup = BeautifulSoup(r.text, 'html.parser')
-    return ' '.join(soup.get_text(' ', strip=True).split())
+def build_session() -> requests.Session:
+    s = requests.Session()
+    retry = Retry(total=3, backoff_factor=0.5, status_forcelist=[429, 500, 502, 503, 504])
+    s.mount("https://", HTTPAdapter(max_retries=retry))
+    s.headers.update({"User-Agent": "BD-Baseball-SnapshotBuilder/1.1"})
+    return s
 
 
-def extract_records(text, limit=8):
-    hits = []
-    for m in re.finditer(r'([A-Z][A-Za-z.\'\- ]{2,30})\s+(\d{1,2})-(\d{1,2})', text):
-        item = f"{m.group(1).strip()}: {m.group(2)}-{m.group(3)}"
-        if item not in hits:
-            hits.append(item)
-        if len(hits) >= limit:
+def fetch_html(session: requests.Session, url: str) -> tuple[str | None, str | None]:
+    try:
+        r = session.get(url, timeout=30)
+        r.raise_for_status()
+        return r.text, None
+    except Exception as exc:  # noqa: BLE001
+        return None, f"source_error: {exc}"
+
+
+def text_from_html(html: str) -> str:
+    return " ".join(BeautifulSoup(html, "html.parser").get_text(" ", strip=True).split())
+
+
+def parse_standings(html: str, url: str) -> SourceResult:
+    matches = re.findall(r"([A-Z][A-Za-z.'\- ]{2,30})\s+(\d{1,2})-(\d{1,2})", text_from_html(html))
+    records: list[str] = []
+    for name, w, l in matches:
+        row = f"{name.strip()}: {w}-{l}"
+        if row not in records:
+            records.append(row)
+        if len(records) >= 8:
             break
-    return hits
+    if records:
+        return SourceResult(url, "verified", [f"Standings snapshot: {r}" for r in records], [], [f"records_found={len(records)}"])
+    return SourceResult(url, "unverified", [], [f"{UNVERIFIED} Standings table not confidently parsed."], ["records_found=0"])
 
 
-def extract_vs(text, limit=8):
-    hits = []
-    for m in re.finditer(r'([A-Z][A-Za-z.\'\- ]{2,25})\s+vs\.?\s+([A-Z][A-Za-z.\'\- ]{2,25})', text):
-        item = f"{m.group(1).strip()} vs {m.group(2).strip()}"
-        if item not in hits:
-            hits.append(item)
-        if len(hits) >= limit:
+def parse_probables(html: str, url: str) -> SourceResult:
+    matches = re.findall(r"([A-Z][A-Za-z.'\- ]{2,25})\s+vs\.?\s+([A-Z][A-Za-z.'\- ]{2,25})", text_from_html(html))
+    games: list[str] = []
+    for away, home in matches:
+        row = f"{away.strip()} vs {home.strip()}"
+        if row not in games:
+            games.append(row)
+        if len(games) >= 8:
             break
-    return hits
+    if games:
+        return SourceResult(url, "verified", [f"Probable matchup: {g}" for g in games], [], [f"matchups_found={len(games)}"])
+    return SourceResult(url, "unverified", [], [f"{UNVERIFIED} Probable pitcher slate not confidently parsed."], ["matchups_found=0"])
 
 
-def extract_transactions(text, limit=5):
-    hits = []
-    for m in re.finditer(r'((?:placed|recalled|selected|transferred|optioned|assigned|activated|agreed|signed|claimed|acquired|traded).{0,160}?\.)', text, flags=re.I):
-        item = m.group(1).strip()
-        if item not in hits:
-            hits.append(item)
-        if len(hits) >= limit:
+def parse_transactions(html: str, url: str, label: str) -> SourceResult:
+    text = text_from_html(html)
+    pattern = r"((?:placed|recalled|selected|transferred|optioned|assigned|activated|agreed|signed|claimed|acquired|traded).{0,180}?\.)"
+    lines = []
+    for line in re.findall(pattern, text, flags=re.I):
+        item = line.strip()
+        if item not in lines:
+            lines.append(item)
+        if len(lines) >= 6:
             break
-    return hits
+    if lines:
+        return SourceResult(url, "verified", [f"{label}: {x}" for x in lines], [], [f"transactions_found={len(lines)}"])
+    return SourceResult(url, "unverified", [], [f"{UNVERIFIED} {label} transactions not confirmed from available sources."], ["transactions_found=0"])
 
 
-def first_line_or(lines, fallback):
-    return lines[0] if lines else fallback
+def parse_savant(html: str, url: str, label: str) -> SourceResult:
+    m = re.search(r"(\d{1,2})-(\d{1,2})", text_from_html(html))
+    if m:
+        return SourceResult(url, "verified", [f"{label} Savant record signal: {m.group(1)}-{m.group(2)}"], [], ["record_pattern_matched=1"])
+    return SourceResult(url, "unverified", [], [f"{UNVERIFIED} {label} Savant record signal not found."], ["record_pattern_matched=0"])
 
-def unverified(msg):
-    return f'UNVERIFIED: {msg}'
 
-league_standings_text = get_text(URLS['league_standings'])
-league_probables_text = get_text(URLS['league_probables'])
-league_transactions_text = get_text(URLS['league_transactions'])
+def build_snapshot() -> dict[str, Any]:
+    session = build_session()
+    source_health: dict[str, dict[str, Any]] = {}
 
-ath_standings_text = get_text(URLS['athletics_standings'])
-ath_prob_text = get_text(URLS['athletics_probables'])
-ath_trans_text = get_text(URLS['athletics_transactions'])
-ath_savant_text = get_text(URLS['athletics_savant'])
+    def run(key: str, parser: Callable[..., SourceResult], *args: str) -> SourceResult:
+        html, error = fetch_html(session, URLS[key])
+        if error:
+            result = SourceResult(URLS[key], "source_error", [], [f"{UNVERIFIED} {key} unavailable."], [error])
+        else:
+            result = parser(html, URLS[key], *args)
+        source_health[key] = asdict(result)
+        return result
 
-col_standings_text = get_text(URLS['rockies_standings'])
-col_prob_text = get_text(URLS['rockies_probables'])
-col_trans_text = get_text(URLS['rockies_transactions'])
-col_savant_text = get_text(URLS['rockies_savant'])
+    lg_stand = run("league_standings", parse_standings)
+    lg_prob = run("league_probables", parse_probables)
+    lg_tx = run("league_transactions", parse_transactions, "League")
 
-det_standings_text = get_text(URLS['tigers_standings'])
-det_prob_text = get_text(URLS['tigers_probables'])
-det_trans_text = get_text(URLS['tigers_transactions'])
-det_savant_text = get_text(URLS['tigers_savant'])
+    teams: dict[str, Any] = {}
+    for team in TEAM_KEYS:
+        pretty = team.capitalize()
+        t_stand = run(f"{team}_standings", parse_standings)
+        t_prob = run(f"{team}_probables", parse_probables)
+        t_mlb_tx = run(f"{team}_transactions", parse_transactions, pretty)
+        t_espn_tx = run(f"{team}_espn_transactions", parse_transactions, f"{pretty} ESPN")
+        t_savant = run(f"{team}_savant", parse_savant, pretty)
 
-league_records = extract_records(league_standings_text, 10)
-league_matchups = extract_vs(league_probables_text, 8)
-league_moves = extract_transactions(league_transactions_text, 5)
-
-ath_record = first_line_or(extract_records(ath_savant_text + ' ' + ath_standings_text, 3), unverified('Athletics record not confirmed from available sources.'))
-ath_moves = extract_transactions(ath_trans_text, 3)
-col_record = first_line_or(extract_records(col_savant_text + ' ' + col_standings_text, 3), unverified('Rockies record not confirmed from available sources.'))
-col_moves = extract_transactions(col_trans_text, 3)
-det_record = first_line_or(extract_records(det_savant_text + ' ' + det_standings_text, 3), unverified('Tigers record not confirmed from available sources.'))
-det_moves = extract_transactions(det_trans_text, 4)
-
-ath_prob = 'MLB.com probable-pitchers page live for Athletics.' if ath_prob_text else unverified('Athletics probable pitchers not confirmed from available sources.')
-col_prob = 'MLB.com probable-pitchers page live for Rockies.' if col_prob_text else unverified('Rockies probable pitchers not confirmed from available sources.')
-det_prob = 'MLB.com probable-pitchers page live for Tigers.' if det_prob_text else unverified('Tigers probable pitchers not confirmed from available sources.')
-
-now = datetime.now().astimezone()
-stamp_iso = now.isoformat(timespec='seconds')
-stamp_day = now.strftime('%Y-%m-%d')
-
-snapshot = {
-    'generated_at': stamp_iso,
-    'sources': URLS,
-    'league': {
-        'headline': first_line_or([f'The national show starts with the board itself: {league_records[0]}.' if league_records else 'The national show starts with the standings board and the daily pitching slate.'], 'The national show starts with the standings board and the daily pitching slate.'),
-        'verified_notes': [
-            'MLB.com standings provides the league board for division and wild-card framing.',
-            'MLB.com probable-pitchers provides the daily matchup slate.',
-            'ESPN MLB transactions provides the broad move tracker.'
-        ] + ([f'Current standings snapshot: {x}.' for x in league_records[:4]] if league_records else [unverified('Standings snapshot not confirmed from available sources.')]) + ([f'Current probable-pitcher slate snapshot: {x}.' for x in league_matchups[:5]] if league_matchups else [unverified('Probable-pitcher slate not confirmed from available sources.')]),
-        'stories': [
-            f'Lead with this standings hook: {league_records[0]}.' if league_records else 'Lead with the biggest standings truth on the board.',
-            f'Best matchup hook: {league_matchups[0]}.' if league_matchups else 'Use the probable-pitchers page to identify the best matchup.',
-            'Use only verified league transaction notes before air; treat anything marked UNVERIFIED as a placeholder to check.'
-        ],
-        'watch': [f'Pitching watch: {x}.' for x in league_matchups[:5]] if league_matchups else [unverified('Pitching watch not confirmed from available sources.')],
-        'transactions': league_moves if league_moves else [unverified('League transactions not confirmed from available sources.')]
-    },
-    'teams': {
-        'athletics': {
-            'headline': "The A's are in first, but the better question is whether the underlying signs make that start feel sturdy.",
-            'emotion': 'Cautiously fired up',
-            'verified_notes': [
-                'Snapshot verified from MLB.com team pages, ESPN transactions, and Baseball Savant.',
-                ath_record + '.',
-                ath_prob,
-            ] + (ath_moves if ath_moves else [unverified('Athletics transactions not confirmed from available sources.')]),
-            'notes': [
-                'The A\'s story starts with the standings reality and whether the run differential supports it.',
-                'Use the probable-pitcher page as the game-preview peg.',
-                'Use transaction notes only when they are confirmed on the source page.'
-            ],
-            'checklist': ['Standings reality check','Pitching-preview line','Verified roster note']
-        },
-        'rockies': {
-            'headline': 'The Rockies conversation starts with how ugly the early math looks and whether there is any believable next-step hope.',
-            'emotion': 'Trying to believe',
-            'verified_notes': [
-                'Snapshot verified from MLB.com team pages, ESPN transactions, and Baseball Savant.',
-                col_record + '.',
-                col_prob,
-            ] + (col_moves if col_moves else [unverified('Rockies transactions not confirmed from available sources.')]),
-            'notes': [
-                'The Rockies tone starts with the standings board and whether the pain looks temporary or structural.',
-                'Use the probable-pitcher page as the preview peg.',
-                'Use verified transactions to sharpen the pitching conversation.'
-            ],
-            'checklist': ['Run-diff reality check','Probable-pitcher setup','Verified injury/recall note']
-        },
-        'tigers': {
-            'headline': 'The Tigers feel like the most upward-looking homer segment if the winning record and run differential still hold up.',
-            'emotion': 'Actually believing',
-            'verified_notes': [
-                'Snapshot verified from MLB.com team pages, ESPN transactions, and Baseball Savant.',
-                det_record + '.',
-                det_prob,
-            ] + (det_moves if det_moves else [unverified('Tigers transactions not confirmed from available sources.')]),
-            'notes': [
-                'The Tigers segment should sound more hopeful if the record and run differential still support it.',
-                'Use the AL Central position and run differential to give the segment structure.',
-                'Keep injury and roster notes tied to MLB.com and ESPN logs.'
-            ],
-            'checklist': ['Positive run-diff line','AL Central context','Verified injury/roster note']
+        teams[team] = {
+            "headline": f"{pretty} source snapshot.",
+            "emotion": "Measured",
+            "verified_notes": t_stand.verified[:1] + t_prob.verified[:1] + t_mlb_tx.verified[:2] + t_espn_tx.verified[:2] + t_savant.verified[:1],
+            "unverified_notes": t_stand.unverified + t_prob.unverified + t_mlb_tx.unverified + t_espn_tx.unverified + t_savant.unverified,
+            "notes": ["Editorial framing only; do not promote UNVERIFIED entries as facts."],
+            "checklist": ["Recheck sources before air.", "Promote only verified entries to on-air claims."],
+            "source_status": {k: source_health[k]["status"] for k in [f"{team}_standings", f"{team}_probables", f"{team}_transactions", f"{team}_espn_transactions", f"{team}_savant"]},
+            "debug": {k: source_health[k]["debug"] for k in [f"{team}_standings", f"{team}_probables", f"{team}_transactions", f"{team}_espn_transactions", f"{team}_savant"]},
         }
-    }
-}
 
-latest = data_dir / 'latest.json'
-dated = data_dir / f'mlb_snapshot_{stamp_day}.json'
-latest.write_text(json.dumps(snapshot, indent=2))
-dated.write_text(json.dumps(snapshot, indent=2))
-print(str(latest))
-print(str(dated))
+    now = datetime.now(timezone.utc)
+    return {
+        "generated_at": now.isoformat(timespec="seconds"),
+        "schema_version": "2.0",
+        "sources": URLS,
+        "source_status": {k: v["status"] for k, v in source_health.items()},
+        "league": {
+            "headline": "League snapshot from configured source lanes.",
+            "verified_notes": lg_stand.verified[:5] + lg_prob.verified[:4],
+            "unverified_notes": lg_stand.unverified + lg_prob.unverified,
+            "stories": ["Use only verified league records/matchups/transactions for hard claims."],
+            "watch": lg_prob.verified[:6] if lg_prob.verified else [f"{UNVERIFIED} No probable matchup entries parsed."],
+            "transactions": lg_tx.verified if lg_tx.verified else lg_tx.unverified,
+            "debug": {"standings": lg_stand.debug, "probables": lg_prob.debug, "transactions": lg_tx.debug},
+        },
+        "teams": teams,
+        "debug": {"source_health": source_health, "generated_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ")},
+    }
+
+
+def main() -> None:
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    snap = build_snapshot()
+    day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    latest = DATA_DIR / "latest.json"
+    dated = DATA_DIR / f"mlb_snapshot_{day}.json"
+    latest.write_text(json.dumps(snap, indent=2), encoding="utf-8")
+    dated.write_text(json.dumps(snap, indent=2), encoding="utf-8")
+    logging.info("Wrote %s", latest)
+    logging.info("Wrote %s", dated)
+
+
+if __name__ == "__main__":
+    main()
