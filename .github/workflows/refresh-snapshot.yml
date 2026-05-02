@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: refresh-snapshot
@@ -46,18 +47,37 @@ jobs:
         run: python -m unittest discover -s tests
         continue-on-error: true
 
-      - name: Commit refreshed snapshot
-        if: success()
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Detect snapshot changes
+        id: diff
         run: |
           set -e
-          git config user.name  "bd-baseball-bot"
-          git config user.email "bd-baseball-bot@users.noreply.github.com"
           git add data/latest.json data/mlb_snapshot_*.json
           if git diff --cached --quiet; then
             echo "No snapshot changes to commit."
-            exit 0
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
-          git commit -m "chore(data): refresh snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push origin HEAD:${{ github.ref_name }}
+          # Reset staging; create-pull-request will re-stage on its own branch.
+          git reset
+
+      - name: Open PR with refreshed snapshot
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(data): refresh snapshot"
+          title: "chore(data): refresh snapshot"
+          body: |
+            Automated daily snapshot refresh from the MLB Stats API.
+
+            - Source: scripts/build_snapshot.py
+            - Validated with scripts/validate_snapshot.py (strict, min-verified-lanes=6)
+          branch: chore/refresh-snapshot
+          base: main
+          delete-branch: true
+          add-paths: |
+            data/latest.json
+            data/mlb_snapshot_*.json
+          author: "bd-baseball-bot <bd-baseball-bot@users.noreply.github.com>"
+          committer: "bd-baseball-bot <bd-baseball-bot@users.noreply.github.com>"
