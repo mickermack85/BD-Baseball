@@ -108,8 +108,7 @@ expected.)
 ## CI and scheduled refresh
 - `CI` (`.github/workflows/ci.yml`) runs on PR/push: tests + lenient
   validation of the committed snapshot + strict validation of the fixture.
-- `Refresh snapshot` (`.github/workflows/refresh-snapshot.yml`) runs on a
-  cron (13:30 and 22:30 UTC) and on manual `workflow_dispatch`. It builds,
+- `Refresh snapshot (.github/workflows/refresh-snapshot.yml) runs nightly at 03:15 UTC and on manual workflow_dispatch`. It builds,
   strict-validates, and only commits if validation passes. Uses the built-in
   `GITHUB_TOKEN` — no extra secrets required.
 
