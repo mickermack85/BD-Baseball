@@ -263,11 +263,9 @@ function renderHealth(data) {
   if (!root) return;
   while (root.firstChild) root.removeChild(root.firstChild);
   const h = computeHealth(data);
-  if (h.ok) {
-    root.appendChild(makeEl("span", "ok", "Sources healthy."));
-  } else {
-    root.appendChild(makeEl("div", "warn", "Source health warning: " + h.issues.join("; ")));
-  }
+  const hp = el("healthPill");
+  if (h.ok) { root.appendChild(makeEl("span", "ok", "Sources healthy.")); if(hp){hp.className="st st-verified"; hp.textContent="OK healthy";} }
+  else { root.appendChild(makeEl("div", "warn", "Source health warning: " + h.issues.join("; "))); if(hp){hp.className="st st-source_error"; hp.textContent="! issues";} }
 }
 
 // --- show generator wiring ---
@@ -291,6 +289,8 @@ function selectedPreset() {
   return root ? root.value : "standard";
 }
 
+function relativeTime(ts){const d=new Date(ts); if(Number.isNaN(d.getTime())) return "time unknown"; const m=Math.round((Date.now()-d.getTime())/60000); if(m<60) return `${m}m ago`; const h=Math.round(m/60); if(h<48) return `${h}h ago`; return `${Math.round(h/24)}d ago`; }
+
 function renderRundownInto(rootId, rundown) {
   const root = el(rootId);
   if (!root) return;
@@ -306,11 +306,9 @@ function renderRundownInto(rootId, rundown) {
     const start = cumulative;
     cumulative += seg.durationMinutes;
 
-    const segCard = makeEl("div", "seg");
-    const h = makeEl("h3", null,
-      (idx + 1) + ". " + seg.title +
-      " (" + start + "–" + cumulative + " min)"
-    );
+    const segCard = makeEl("details", "seg");
+    if (idx===0) segCard.open=true;
+    const h = makeEl("summary", null,(idx + 1) + ". " + seg.title + "  [" + seg.durationMinutes + " min]");
     segCard.appendChild(h);
     const conf = makeEl("p", "muted", "Source confidence: " +
       (window.BDShowGenerator
@@ -319,11 +317,7 @@ function renderRundownInto(rootId, rundown) {
     );
     segCard.appendChild(conf);
     const ul = makeEl("ul");
-    seg.lines.forEach((l) => {
-      const li = document.createElement("li");
-      li.textContent = l;
-      ul.appendChild(li);
-    });
+    seg.lines.forEach((l) => { const li = document.createElement("li"); li.textContent = l; ul.appendChild(li); });
     segCard.appendChild(ul);
     root.appendChild(segCard);
   });
@@ -632,14 +626,14 @@ function wireGeneratorControls(data) {
   const printB = el("printHostBtn");
   if (printB) printB.addEventListener("click", printHostSheet);
 
-  const dlR = el("dlRundownBtn");
-  if (dlR) dlR.addEventListener("click", downloadRundown);
-  const dlH = el("dlHostBtn");
-  if (dlH) dlH.addEventListener("click", downloadHostScript);
-  const dlL = el("dlLiveBtn");
-  if (dlL) dlL.addEventListener("click", downloadLivestream);
-  const dlP = el("dlPackageBtn");
-  if (dlP) dlP.addEventListener("click", downloadCompletePackage);
+  const dm = el("downloadsMenu");
+  if (dm) dm.addEventListener("change", () => {
+    if (dm.value === "rundown") downloadRundown();
+    if (dm.value === "host") downloadHostScript();
+    if (dm.value === "live") downloadLivestream();
+    if (dm.value === "package") downloadCompletePackage();
+    dm.value = "";
+  });
 
   const cTitle = el("copyLiveTitleBtn");
   if (cTitle) cTitle.addEventListener("click", () => copyLiveField("liveTitleField", "Title"));
@@ -746,29 +740,31 @@ function renderReferenceAndBets(data) {
   const newsRoot = el('newsList');
   const newsStatus = el('newsStatus');
   if (newsRoot) while (newsRoot.firstChild) newsRoot.removeChild(newsRoot.firstChild);
-  const newsItems = Array.isArray(data && data.news) ? data.news : [];
-  const newsState = (data && data.news_status) || 'unverified';
-  if (newsStatus) {
-    if (newsState === 'source_error') newsStatus.textContent = 'News source unavailable during snapshot build. Showing fallback.';
-    else if (newsItems.length) newsStatus.textContent = 'Latest MLB headlines from the snapshot feed.';
-    else newsStatus.textContent = 'No MLB headlines were returned in this snapshot.';
-  }
-  if (!newsItems.length) {
-    if (newsRoot) newsRoot.appendChild(makeEl('li', 'muted', 'No news items available right now.'));
-  } else {
-    newsItems.forEach((item) => {
-      const li = document.createElement('li');
-      const a = makeEl('a', null, cleanFeedText(item.headline || 'Untitled'));
-      a.href = item.url || '#';
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      li.appendChild(a);
-      const published = item.published_at ? formatGameTime(item.published_at) : 'publish time unavailable';
-      const meta = cleanFeedText([item.source || 'MLB.com', published].join(' • '));
-      li.appendChild(makeEl('div', 'muted', meta));
-      if (newsRoot) newsRoot.appendChild(li);
+  const news = (data && data.news) || {};
+  const lanes = [
+    { key: 'league_news', label: 'MLB League-wide', data: news.league_news || { items: Array.isArray(data.news)?data.news:[], source_health: { status: data.news_status || 'unverified' } } },
+    { key: 'athletics', label: 'Athletics', data: ((news.teams||{}).athletics) || { items: [], source_health: { status: 'unverified' } } },
+    { key: 'tigers', label: 'Detroit Tigers', data: ((news.teams||{}).tigers) || { items: [], source_health: { status: 'unverified' } } },
+    { key: 'rockies', label: 'Colorado Rockies', data: ((news.teams||{}).rockies) || { items: [], source_health: { status: 'unverified' } } },
+  ];
+  if (newsStatus) newsStatus.textContent = 'League + team RSS lanes from snapshot.';
+  const grid = makeEl('div','news-grid');
+  lanes.forEach((lane)=>{
+    const card = makeEl('section','news-card');
+    card.appendChild(makeEl('h3',null,lane.label));
+    card.appendChild(statusPill((lane.data.source_health||{}).status));
+    const items = Array.isArray(lane.data.items) ? lane.data.items : [];
+    if (!items.length) card.appendChild(makeEl('p','muted','No items in this lane.'));
+    items.slice(0,10).forEach((item)=>{
+      const row = makeEl('div','news-item');
+      const a = makeEl('a',null,cleanFeedText(item.headline||'Untitled')); a.href=item.url||'#'; a.target='_blank'; a.rel='noopener noreferrer';
+      row.appendChild(a);
+      row.appendChild(makeEl('div','muted',(item.source||'MLB.com')+' • '+relativeTime(item.published_at)));
+      card.appendChild(row);
     });
-  }
+    grid.appendChild(card);
+  });
+  if (newsRoot) newsRoot.appendChild(grid);
 }
 
 
