@@ -90,6 +90,36 @@ function parseTransactionNote(note) {
   return { date: m[1], detail: m[2] };
 }
 
+function cleanFeedText(text) {
+  if (text == null) return "";
+  return String(text)
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;:!?])/g, "$1")
+    .replace(/([,.;:!?])\1+/g, "$1")
+    .replace(/—\s*—/g, "—")
+    .trim();
+}
+
+function formatGameTime(value) {
+  if (typeof value !== "string" || !value) return "Time TBA";
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return cleanFeedText(value);
+  return new Intl.DateTimeFormat(undefined, {
+    weekday: "short",
+    hour: "numeric",
+    minute: "2-digit",
+    timeZoneName: "short",
+  }).format(d);
+}
+
+function classifyGameStatus(value) {
+  if (typeof value !== "string") return "upcoming";
+  const raw = value.toLowerCase();
+  if (/(final|completed|game over)/.test(raw)) return "final";
+  if (/(in progress|live|mid [1-9]|top [1-9]|bot [1-9])/.test(raw)) return "inprogress";
+  return "upcoming";
+}
+
 function partitionStructuredLeague(data) {
   const notes = ((data && data.league && data.league.verified_notes) || []);
   return {
@@ -661,9 +691,11 @@ function renderReferenceAndBets(data) {
   const structured = partitionStructuredLeague(data);
   renderStandingsTable('leagueStandings', structured.standings);
   fillList('leagueProbables', structured.probables.map((p) => (
-    p.awayTeam + ' (' + p.awayPitcher + ') @ ' + p.homeTeam + ' (' + p.homePitcher + ') — ' + p.time
+    cleanFeedText(
+      p.awayTeam + ' (' + p.awayPitcher + ') @ ' + p.homeTeam + ' (' + p.homePitcher + ') — ' + formatGameTime(p.time)
+    )
   )), 'No probable pitchers available.');
-  fillList('leagueTx', structured.transactions.slice(0, 25).map((t) => t.date + ': ' + t.detail), 'No transactions in window.');
+  fillList('leagueTx', structured.transactions.slice(0, 25).map((t) => cleanFeedText(t.date + ': ' + t.detail)), 'No transactions in window.');
 
   const teamSelect = el('refTeamSelect');
   const teamRef = el('teamReference');
@@ -697,12 +729,14 @@ function renderReferenceAndBets(data) {
         (awayRec ? (awayRec.wins + '-' + awayRec.losses) : 'Record n/a') + ' vs ' + (homeRec ? (homeRec.wins + '-' + homeRec.losses) : 'Record n/a')
       ));
       card.appendChild(makeEl('p', null, 'Probables: ' + g.awayPitcher + ' vs ' + g.homePitcher));
-      card.appendChild(makeEl('p', null, 'Game time: ' + g.time));
+      const status = classifyGameStatus(g.time);
+      const statusLabel = status === "upcoming" ? "Upcoming" : (status === "inprogress" ? "In progress" : "Final");
+      card.appendChild(makeEl('p', null, cleanFeedText('Status: ' + statusLabel + ' • ' + formatGameTime(g.time))));
       const tags = [];
       if (idx < 2) tags.push('Featured');
       if (watch.has('Probable: ' + g.awayTeam + ' (' + g.awayPitcher + ') @ ' + g.homeTeam + ' (' + g.homePitcher + ') — Scheduled ' + g.time + ' ' + g.venue)) tags.push('Watchlist');
       if (awayRec && homeRec && awayRec.gb !== '-' && homeRec.gb !== '-') tags.push('Division');
-      const tagRow = makeEl('p', 'muted', tags.join(' • '));
+      const tagRow = makeEl('p', 'muted', tags.length ? tags.join(' • ') : 'Snapshot card');
       card.appendChild(tagRow);
       cardsRoot.appendChild(card);
     });
@@ -724,12 +758,13 @@ function renderReferenceAndBets(data) {
   } else {
     newsItems.forEach((item) => {
       const li = document.createElement('li');
-      const a = makeEl('a', null, item.headline || 'Untitled');
+      const a = makeEl('a', null, cleanFeedText(item.headline || 'Untitled'));
       a.href = item.url || '#';
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
       li.appendChild(a);
-      const meta = [item.source || 'MLB.com', item.published_at || 'publish time unavailable'].join(' • ');
+      const published = item.published_at ? formatGameTime(item.published_at) : 'publish time unavailable';
+      const meta = cleanFeedText([item.source || 'MLB.com', published].join(' • '));
       li.appendChild(makeEl('div', 'muted', meta));
       if (newsRoot) newsRoot.appendChild(li);
     });
