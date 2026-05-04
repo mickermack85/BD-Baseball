@@ -221,7 +221,12 @@
     <section id="panel-news" class="tab-panel" role="tabpanel" aria-labelledby="tab-news">
       <div class="card">
         <h2>News</h2>
-        <p class="muted" id="newsStatus">News feed integration is pending.</p>
+        <p class="muted" id="newsStatus">Normalized baseball feed from snapshot.</p>
+        <div class="row">
+          <label>Team <select id="newsTeamFilter"></select></label>
+          <label>Source <select id="newsSourceFilter"></select></label>
+          <label>Sort <select id="newsSort"><option value="newest">Newest</option><option value="relevance">Relevance</option></select></label>
+        </div>
         <div id="newsList"></div>
       </div>
     </section>

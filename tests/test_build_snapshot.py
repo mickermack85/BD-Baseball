@@ -306,3 +306,25 @@ class BuilderTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SprintOneNewsTests(unittest.TestCase):
+    def test_team_tagging_detects_aliases(self):
+        tags = b._tag_teams("Sacramento Athletics rally past Yankees", "")
+        self.assertIn("athletics", tags)
+        self.assertIn("yankees", tags)
+
+    def test_normalized_news_schema_present(self):
+        snap = BuilderTests()._fake_fetch()
+        out = b.build_snapshot(fetch=snap)
+        self.assertIn("news_items", out["news"])
+        if out["news"]["news_items"]:
+            req = {"id","headline","url","source","source_type","published_at","summary","teams","players","topics","priority"}
+            self.assertTrue(req.issubset(set(out["news"]["news_items"][0].keys())))
+
+    def test_source_failure_keeps_snapshot_building(self):
+        def fetch(url: str):
+            return BuilderTests()._fake_fetch()(url)
+        out = b.build_snapshot(fetch=fetch)
+        self.assertIn("source_status", out)
+        self.assertTrue(any(k.startswith("curated_news_") for k in out["source_status"]))
