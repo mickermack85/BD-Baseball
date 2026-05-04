@@ -249,6 +249,8 @@ function buildTeamSegment(teamKey, snapshot) {
       lines.push("Then: " + stripPrefix(probables[1]) + ".");
     }
   }
+  const lane = newsLane(snapshot, teamKey);
+  if (lane.length) { lines.push("News to watch: " + (lane[0].headline || "No headline") + "."); }
   if (tx.length) {
     lines.push("Recent moves:");
     tx.slice(0, 4).forEach((m) => lines.push("• " + stripPrefix(m) + "."));
@@ -257,6 +259,14 @@ function buildTeamSegment(teamKey, snapshot) {
     lines.push("No verified notes in this snapshot for " + teamLabel(teamKey) + ".");
   }
   return lines;
+}
+
+
+function newsLane(snapshot, teamKey) {
+  const news = (snapshot && snapshot.news) || {};
+  const league = (news && news.league_news && Array.isArray(news.league_news.items)) ? news.league_news.items : (Array.isArray(news) ? news : []);
+  const team = (news.teams && news.teams[teamKey] && Array.isArray(news.teams[teamKey].items)) ? news.teams[teamKey].items : [];
+  return team.length ? team : league;
 }
 
 function buildCloser(snapshot, opts) {

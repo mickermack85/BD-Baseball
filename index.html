@@ -73,26 +73,46 @@
       body.printing-host main{display:none}
       body.printing-host .print-host{display:block;background:#fff;color:#000;padding:0}
     }
+
+    :root{--bg:#070d18;--panel:#111827;--panel2:#0f1c2e;--border:#243244;--text:#e5e7eb;--muted:#93a4ba;--accent:#2563eb}
+    body{background:var(--bg);color:var(--text)}
+    .app-header{position:sticky;top:0;z-index:20;background:rgba(7,13,24,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .app-header main{padding-bottom:10px}
+    .app-main{max-width:1180px}
+    .header-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .tabs{margin-top:10px}
+    .tab-btn{transition:all .15s ease}
+    .tab-btn:hover{transform:translateY(-1px)}
+    button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,.tab-btn:focus-visible{outline:2px solid #60a5fa;outline-offset:2px}
+    #teamLanes{display:flex;gap:8px;flex-wrap:wrap}
+    .lane-pick{padding:6px 12px;border-radius:999px}
+    .lane-pick input{accent-color:#60a5fa}
+    .seg{background:#0b1220;border:1px solid var(--border);border-radius:10px;padding:12px}
+    .seg h3{display:flex;justify-content:space-between;align-items:center}
+    .src-table thead th{position:sticky;top:0;background:#0f172a}
+    .src-table tbody tr:nth-child(even){background:#0b1220}
+    .news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .news-card{background:#0b1220;border:1px solid var(--border);border-radius:10px;padding:10px}
+    .news-item{padding:8px 0;border-top:1px solid #1f2937}
+    
   </style>
 </head>
 <body>
-  <main>
+  <header class="app-header"><main>
     <div class="card">
       <h1>BD Baseball Show Prep</h1>
-      <p class="muted">Daily show generator built from the verified MLB Stats API snapshot.</p>
+      <p class="muted">Daily show generator built from the verified MLB Stats API snapshot.</p><div class="header-meta"><span>Snapshot <strong id="stamp">loading...</strong></span><span id="healthPill" class="st st-unknown"><span class="st-mark">·</span> checking</span></div>
       <div class="tabs" role="tablist" aria-label="BD Baseball sections">
         <button id="tab-show-prep" class="tab-btn" role="tab" aria-selected="true" aria-controls="panel-show-prep">Show Prep</button>
         <button id="tab-reference" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-reference">League / Team Reference</button>
         <button id="tab-bets" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-bets">BD Bets</button>
         <button id="tab-news" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-news">News</button>
       </div>
-    </div>
-
+    </div></main></header>
+  <main class="app-main">
     <section id="panel-show-prep" class="tab-panel active" role="tabpanel" aria-labelledby="tab-show-prep">
       <div class="card">
-        <p>Snapshot: <span id="stamp" class="badge">loading...</span></p>
-        <p id="health"></p>
-        <p id="offline" class="muted"></p>
+        <p id="health"></p><p id="offline" class="muted"></p>
       </div>
 
       <div class="card gen-card">
@@ -114,13 +134,7 @@
         <label>Focus teams:</label>
         <span id="teamLanes"></span>
       </div>
-      <div class="gen-controls control-group">
-        <label>Downloads:</label>
-        <button id="dlRundownBtn" class="secondary" type="button">Download rundown (.md)</button>
-        <button id="dlHostBtn" class="secondary" type="button">Download host script (.md)</button>
-        <button id="dlLiveBtn" class="secondary" type="button">Download livestream metadata (.md)</button>
-        <button id="dlPackageBtn" class="secondary" type="button">Download complete show package (.md)</button>
-      </div>
+      <div class="gen-controls control-group"><label for="downloadsMenu">Downloads:</label><select id="downloadsMenu"><option value="">Select download…</option><option value="rundown">Rundown (.md)</option><option value="host">Host script (.md)</option><option value="live">Livestream metadata (.md)</option><option value="package">Complete show package (.md)</option></select></div><div style="display:none"><button id="dlRundownBtn" type="button"></button><button id="dlHostBtn" type="button"></button><button id="dlLiveBtn" type="button"></button><button id="dlPackageBtn" type="button"></button></div>
       <h3>Rundown</h3>
       <div id="rundownOut"></div>
       <h3>Host script preview</h3>
@@ -208,7 +222,7 @@
       <div class="card">
         <h2>News</h2>
         <p class="muted" id="newsStatus">News feed integration is pending.</p>
-        <ul id="newsList"></ul>
+        <div id="newsList"></div>
       </div>
     </section>
   </main>

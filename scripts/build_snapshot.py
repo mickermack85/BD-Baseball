@@ -262,6 +262,9 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
 
     sources: dict[str, str] = {
         "league_news": "https://www.mlb.com/feeds/news/rss.xml",
+        "athletics_news": "https://www.mlb.com/athletics/feeds/news/rss.xml",
+        "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
+        "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
         "league_standings": f"{STATS_BASE}/standings?leagueId={LEAGUE_IDS}&season={season}",
         "league_schedule": f"{STATS_BASE}/schedule?sportId=1&date={today}&hydrate=probablePitcher,team",
         "league_transactions": f"{STATS_BASE}/transactions?startDate={tx_start}&endDate={tx_end}",
@@ -367,18 +370,30 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
             },
         }
 
-    news_items: list[dict[str, str]] = []
-    news_payload, news_err = _fetch_text(sources["league_news"])
-    if news_err:
-        news_res = SourceResult(
-            sources["league_news"],
-            "source_error",
-            unverified=[f"{UNVERIFIED} league_news unavailable."],
-            debug=[news_err],
-        )
-    else:
-        news_items, news_res = parse_news_feed(news_payload, sources["league_news"])
-    _store_health("league_news", news_res)
+    def _build_news_lane(lane_key: str, source_key: str) -> dict[str, Any]:
+        news_payload, news_err = _fetch_text(sources[source_key])
+        if news_err:
+            res = SourceResult(sources[source_key], "source_error", unverified=[f"{UNVERIFIED} {lane_key} unavailable."], debug=[news_err])
+            items: list[dict[str, str]] = []
+        else:
+            items, res = parse_news_feed(news_payload, sources[source_key], limit=10)
+        deduped = []
+        seen = set()
+        for it in items:
+            link = it.get("url", "")
+            if not link or link in seen:
+                continue
+            seen.add(link)
+            deduped.append(it)
+        _store_health(source_key, res)
+        return {"items": deduped[:10], "source_health": {"status": res.status}}
+
+    league_news_lane = _build_news_lane("league_news", "league_news")
+    team_news = {
+        "athletics": _build_news_lane("athletics", "athletics_news"),
+        "tigers": _build_news_lane("tigers", "tigers_news"),
+        "rockies": _build_news_lane("rockies", "rockies_news"),
+    }
 
     now = _today_utc()
     league_tx = (lg_tx.verified if lg_tx.verified else lg_tx.unverified)[:LEAGUE_TX_LIMIT]
@@ -387,8 +402,8 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
         "schema_version": SCHEMA_VERSION,
         "sources": sources,
         "source_status": {k: v["status"] for k, v in source_health.items()},
-        "news": news_items,
-        "news_status": news_res.status,
+        "news": {"league_news": league_news_lane, "teams": team_news},
+        "news_status": {"league_news": league_news_lane["source_health"]["status"], "teams": {k: v["source_health"]["status"] for k,v in team_news.items()}},
         "league": {
             "headline": "League snapshot from MLB Stats API.",
             "verified_notes": lg_stand.verified[:8] + lg_sched.verified[:6],

@@ -193,6 +193,8 @@ class BuilderTests(unittest.TestCase):
             "debug",
         ]:
             self.assertIn(k, snap)
+        self.assertIn("league_news", snap["news"])
+        self.assertIn("teams", snap["news"])
 
     def test_builder_each_team_has_verified_notes_when_data_present(self) -> None:
         snap = b.build_snapshot(fetch=self._fake_fetch())
@@ -283,6 +285,23 @@ class BuilderTests(unittest.TestCase):
         self.assertEqual(set(ss.keys()), set(sh.keys()))
         for k, v in ss.items():
             self.assertEqual(sh[k]["status"], v)
+
+    def test_builder_team_news_lanes_present(self) -> None:
+        snap = b.build_snapshot(fetch=self._fake_fetch())
+        teams = snap["news"]["teams"]
+        for lane in ("athletics", "tigers", "rockies"):
+            self.assertIn(lane, teams)
+            self.assertIn("items", teams[lane])
+            self.assertIn("source_health", teams[lane])
+
+    def test_builder_team_news_source_error(self) -> None:
+        def fetch(url: str):
+            if "athletics/feeds/news/rss.xml" in url:
+                return "<rss>", None
+            return self._fake_fetch()(url)
+
+        snap = b.build_snapshot(fetch=fetch)
+        self.assertEqual(snap["news"]["teams"]["athletics"]["source_health"]["status"], "source_error")
 
 
 if __name__ == "__main__":
