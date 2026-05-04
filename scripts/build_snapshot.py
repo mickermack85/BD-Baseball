@@ -470,7 +470,7 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
         }
 
     def _build_news_lane(lane_key: str, source_key: str) -> dict[str, Any]:
-        news_payload, news_err = _fetch_text(sources[source_key])
+        news_payload, news_err = fetch(sources[source_key])
         if news_err:
             res = SourceResult(sources[source_key], "source_error", unverified=[f"{UNVERIFIED} {lane_key} unavailable."], debug=[news_err])
             items: list[dict[str, str]] = []
@@ -501,7 +501,7 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
     ]
     normalized_items = []
     for idx, (url, source_key) in enumerate(curated, start=1):
-        xml_text, err = _fetch_text(url)
+        xml_text, err = fetch(url)
         health_key = f"curated_news_{source_key}"
         if err:
             res = SourceResult(url, "source_error", unverified=[f"{UNVERIFIED} {source_key} unavailable."], debug=[err])

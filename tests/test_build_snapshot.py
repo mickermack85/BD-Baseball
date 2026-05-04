@@ -157,7 +157,7 @@ class BuilderTests(unittest.TestCase):
         tx = _transactions_payload()
 
         def fetch(url: str):
-            if "rss.xml" in url:
+            if "rss.xml" in url or "espn.com/espn/rss/mlb/news" in url:
                 return _news_xml(), None
             if "standings" in url:
                 return std, None
@@ -260,7 +260,7 @@ class BuilderTests(unittest.TestCase):
         empty_tx = _transactions_payload()
 
         def fetch(url: str):
-            if "rss.xml" in url:
+            if "rss.xml" in url or "espn.com/espn/rss/mlb/news" in url:
                 return _news_xml(), None
             if "standings" in url:
                 return std, None
