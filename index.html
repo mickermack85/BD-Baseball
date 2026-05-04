@@ -27,6 +27,7 @@
     .st-mark{font-family:monospace;font-weight:700}
     .gen-card{background:#0f1c2e;border-color:#1d3354}
     .gen-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:.4rem 0 .6rem}
+    .control-group{padding:8px 10px;background:#0b1220;border:1px solid #243244;border-radius:8px}
     .gen-controls label{font-size:.92rem;color:#cbd5e1}
     .gen-controls select,.gen-controls button{font:inherit;color:#e5e7eb;background:#1f2937;border:1px solid #374151;border-radius:6px;padding:5px 10px}
     .gen-controls button{cursor:pointer;background:#1d3a66;border-color:#2563eb}
@@ -43,6 +44,9 @@
     .live-field textarea,.live-field input[type=text]{font:inherit;color:#e5e7eb;background:#0b1220;border:1px solid #243244;border-radius:6px;padding:8px;width:100%;box-sizing:border-box;font-family:ui-monospace,Menlo,monospace;font-size:.86rem;resize:vertical}
     .live-field textarea{min-height:90px}
     .live-field .row{display:flex;gap:8px;align-items:center}
+    .live-field .row button{align-self:flex-start;min-width:64px}
+    #rundownOut{display:grid;gap:10px}
+    #newsList li,#leagueTx li,#leagueProbables li{margin-bottom:.45rem;line-height:1.35}
     .live-warn{background:#3f3a14;border:1px solid #854d0e;color:#fde68a;padding:8px 10px;border-radius:6px;font-size:.9rem}
     details{margin-top:.4rem}
     details summary{cursor:pointer;color:#93a4ba}
@@ -93,7 +97,7 @@
 
       <div class="card gen-card">
       <h2>Show Generator</h2>
-      <div class="gen-controls">
+      <div class="gen-controls control-group">
         <label for="presetSelect">Format:</label>
         <select id="presetSelect">
           <option value="quick">15-min Quick Hit</option>
@@ -106,11 +110,11 @@
         <button id="printHostBtn" class="secondary" type="button">Print host sheet</button>
         <span id="genStatus" class="muted" aria-live="polite"></span>
       </div>
-      <div class="gen-controls">
+      <div class="gen-controls control-group">
         <label>Focus teams:</label>
         <span id="teamLanes"></span>
       </div>
-      <div class="gen-controls">
+      <div class="gen-controls control-group">
         <label>Downloads:</label>
         <button id="dlRundownBtn" class="secondary" type="button">Download rundown (.md)</button>
         <button id="dlHostBtn" class="secondary" type="button">Download host script (.md)</button>
