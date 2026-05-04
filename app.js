@@ -583,15 +583,69 @@ function wireGeneratorControls(data) {
   regenerateRundown();
 }
 
+
+function setupTabs() {
+  const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+  const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+  if (!tabs.length || !panels.length) return;
+
+  function activate(tab) {
+    tabs.forEach((t) => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      const panelId = t.getAttribute('aria-controls');
+      const panel = panelId ? el(panelId) : null;
+      if (panel) panel.classList.toggle('active', on);
+    });
+  }
+
+  tabs.forEach((tab, idx) => {
+    tab.tabIndex = idx === 0 ? 0 : -1;
+    tab.addEventListener('click', () => activate(tab));
+    tab.addEventListener('keydown', (e) => {
+      const i = tabs.indexOf(tab);
+      if (e.key === 'ArrowRight') { e.preventDefault(); const n = tabs[(i + 1) % tabs.length]; n.focus(); activate(n); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); const n = tabs[(i - 1 + tabs.length) % tabs.length]; n.focus(); activate(n); }
+      if (e.key === 'Home') { e.preventDefault(); tabs[0].focus(); activate(tabs[0]); }
+      if (e.key === 'End') { e.preventDefault(); tabs[tabs.length - 1].focus(); activate(tabs[tabs.length - 1]); }
+    });
+  });
+  activate(el('tab-show-prep') || tabs[0]);
+}
+
+function renderPlaceholders(data) {
+  const bets = (data && data.bets && data.bets.featured) || {
+    title: 'Yankees at Red Sox',
+    market: 'Moneyline',
+    pick: 'Placeholder pick: Yankees -120',
+    note: 'Static placeholder — connect odds feed for live pricing.'
+  };
+  setText('betsCard', bets.title + ' • ' + bets.market + ' • ' + bets.pick + ' — ' + bets.note);
+
+  const news = (data && Array.isArray(data.news) && data.news.length) ? data.news : [
+    'Static placeholder: Monitor lineup news before first pitch.',
+    'Static placeholder: Watch bullpen usage trends from last 3 games.',
+    'Static placeholder: Track weather/wind impact for hitter parks.'
+  ];
+  fillList('newsList', news, 'No news items available.');
+}
+
 async function load() {
   try {
     const res = await fetch("./data/latest.json", { cache: "no-store" });
+    const snapshotSource = res.headers.get("X-BD-Snapshot-Source");
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
     CURRENT_SNAPSHOT = data;
 
     setText("stamp", data.generated_at || "missing");
     renderHealth(data);
+    if (snapshotSource === "cache-fallback") {
+      setText("offline", "Using cached snapshot fallback while network is unavailable.");
+    } else if (snapshotSource === "unavailable") {
+      setText("offline", "Snapshot source unavailable; showing best available fallback.");
+    }
 
     setText("leagueHeadline", (data.league && data.league.headline) || "Not confirmed from available sources.");
     fillList("leagueVerified", data.league && data.league.verified_notes, "No verified league notes.");
@@ -621,6 +675,7 @@ async function load() {
     Object.entries(data.teams || {}).forEach(([k, v]) => teams.appendChild(renderTeam(k, v, data)));
 
     wireGeneratorControls(data);
+    renderPlaceholders(data);
   } catch (e) {
     setText("stamp", "load failed");
     setText("leagueHeadline", "UNVERIFIED: Snapshot could not be loaded.");
@@ -633,4 +688,5 @@ async function load() {
 window.addEventListener("online", () => setText("offline", ""));
 window.addEventListener("offline", () => setText("offline", "Offline mode: showing cached shell/snapshot when available."));
 if ("serviceWorker" in navigator) { navigator.serviceWorker.register("./sw.js"); }
+setupTabs();
 load();

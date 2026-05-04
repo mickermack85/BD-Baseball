@@ -47,6 +47,12 @@
     details{margin-top:.4rem}
     details summary{cursor:pointer;color:#93a4ba}
     details[open] summary{color:#cbd5e1}
+
+    .tabs{display:flex;gap:8px;flex-wrap:wrap}
+    .tab-btn{font:inherit;color:#cbd5e1;background:#1f2937;border:1px solid #374151;border-radius:999px;padding:6px 12px;cursor:pointer}
+    .tab-btn[aria-selected="true"]{background:#1d3a66;border-color:#2563eb;color:#fff}
+    .tab-panel{display:none}
+    .tab-panel.active{display:block}
     .print-host{display:none}
     .print-host h1,.print-host h2,.print-host h3{margin:.2rem 0}
     .print-host pre{white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;font-size:11pt;margin:.4rem 0}
@@ -70,12 +76,22 @@
     <div class="card">
       <h1>BD Baseball Show Prep</h1>
       <p class="muted">Daily show generator built from the verified MLB Stats API snapshot.</p>
-      <p>Snapshot: <span id="stamp" class="badge">loading...</span></p>
-      <p id="health"></p>
-      <p id="offline" class="muted"></p>
+      <div class="tabs" role="tablist" aria-label="BD Baseball sections">
+        <button id="tab-show-prep" class="tab-btn" role="tab" aria-selected="true" aria-controls="panel-show-prep">Show Prep</button>
+        <button id="tab-reference" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-reference">League / Team Reference</button>
+        <button id="tab-bets" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-bets">BD Bets</button>
+        <button id="tab-news" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-news">News</button>
+      </div>
     </div>
 
-    <div class="card gen-card">
+    <section id="panel-show-prep" class="tab-panel active" role="tabpanel" aria-labelledby="tab-show-prep">
+      <div class="card">
+        <p>Snapshot: <span id="stamp" class="badge">loading...</span></p>
+        <p id="health"></p>
+        <p id="offline" class="muted"></p>
+      </div>
+
+      <div class="card gen-card">
       <h2>Show Generator</h2>
       <div class="gen-controls">
         <label for="presetSelect">Format:</label>
@@ -146,30 +162,49 @@
         </div>
       </div>
     </div>
+    </section>
 
-    <div class="card">
-      <h2>League reference</h2>
-      <p class="muted">Raw verified league notes from the snapshot. Use this to spot-check anything the generator pulled.</p>
-      <p id="leagueHeadline"></p>
-      <details open>
-        <summary>Verified notes</summary>
-        <ul id="leagueVerified"></ul>
-      </details>
-      <details>
-        <summary id="leagueUnvHeader">Unverified notes</summary>
-        <ul id="leagueUnverified"></ul>
-        <p id="leagueUnvEmpty" class="muted"></p>
-      </details>
-      <details>
-        <summary>Transactions</summary>
-        <ul id="leagueTx"></ul>
-      </details>
-      <details>
-        <summary>League source health</summary>
-        <div id="sourceStatus"></div>
-      </details>
-    </div>
-    <div id="teams"></div>
+    <section id="panel-reference" class="tab-panel" role="tabpanel" aria-labelledby="tab-reference">
+      <div class="card">
+        <h2>League reference</h2>
+        <p class="muted">Raw verified league notes from the snapshot. Use this to spot-check anything the generator pulled.</p>
+        <p id="leagueHeadline"></p>
+        <details open>
+          <summary>Verified notes</summary>
+          <ul id="leagueVerified"></ul>
+        </details>
+        <details>
+          <summary id="leagueUnvHeader">Unverified notes</summary>
+          <ul id="leagueUnverified"></ul>
+          <p id="leagueUnvEmpty" class="muted"></p>
+        </details>
+        <details>
+          <summary>Transactions</summary>
+          <ul id="leagueTx"></ul>
+        </details>
+        <details>
+          <summary>League source health</summary>
+          <div id="sourceStatus"></div>
+        </details>
+      </div>
+      <div id="teams"></div>
+    </section>
+
+    <section id="panel-bets" class="tab-panel" role="tabpanel" aria-labelledby="tab-bets">
+      <div class="card">
+        <h2>BD Bets <span class="badge">Static Placeholder</span></h2>
+        <p class="muted">Placeholder betting card while live odds feed is not connected.</p>
+        <p id="betsCard"></p>
+      </div>
+    </section>
+
+    <section id="panel-news" class="tab-panel" role="tabpanel" aria-labelledby="tab-news">
+      <div class="card">
+        <h2>News <span class="badge">Static Placeholder</span></h2>
+        <p class="muted">Placeholder baseball headlines while live news feed is not connected.</p>
+        <ul id="newsList"></ul>
+      </div>
+    </section>
   </main>
   <section id="printHostSheet" class="print-host" aria-hidden="true"></section>
   <script src="./show_generator.js"></script>
