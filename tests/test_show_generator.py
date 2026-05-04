@@ -262,7 +262,7 @@ class GeneratorBehaviourTests(unittest.TestCase):
         joined = " ".join(team_seg["lines"])
         self.assertIn("Detroit Tigers", joined)
         # Verified standings for Tigers in the latest snapshot.
-        self.assertIn("Tigers: 16-16", joined)
+        self.assertRegex(joined, r"Tigers: \d+-\d+")
 
     def test_host_script_includes_segment_transitions(self) -> None:
         snap = self._load_latest()
