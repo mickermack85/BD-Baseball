@@ -1,16 +1,17 @@
 {
-  "generated_at": "2026-05-04T00:04:04Z",
+  "generated_at": "2026-05-03T23:04:17Z",
   "schema_version": "3.1",
   "sources": {
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-04&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-04-27&endDate=2026-05-04",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-05-04&endDate=2026-05-06&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-04-27&endDate=2026-05-04",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-05-04&endDate=2026-05-06&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-04-27&endDate=2026-05-04",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-05-04&endDate=2026-05-06&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-04-27&endDate=2026-05-04"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-03&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-04-26&endDate=2026-05-03",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-05-03&endDate=2026-05-05&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-04-26&endDate=2026-05-03",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-05-03&endDate=2026-05-05&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-04-26&endDate=2026-05-03",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-05-03&endDate=2026-05-05&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-04-26&endDate=2026-05-03",
+    "league_news": "https://www.mlb.com/feeds/news/rss.xml"
   },
   "source_status": {
     "league_standings": "verified",
@@ -24,7 +25,8 @@
     "rockies_transactions": "verified",
     "tigers_standings": "verified",
     "tigers_schedule": "verified",
-    "tigers_transactions": "verified"
+    "tigers_transactions": "verified",
+    "league_news": "unverified"
   },
   "league": {
     "headline": "League snapshot from MLB Stats API.",
@@ -37,89 +39,89 @@
       "Standings: Guardians: 18-17 (PCT .514, GB -) [Division]",
       "Standings: Tigers: 17-17 (PCT .500, GB 0.5) [Division]",
       "Standings: White Sox: 16-18 (PCT .471, GB 1.5) [Division]",
-      "Probable: New York Mets (TBD) @ Colorado Rockies (Tomoyuki Sugano) \u2014 Scheduled 2026-05-04T21:40:00Z Coors Field",
-      "Probable: Boston Red Sox (Payton Tolle) @ Detroit Tigers (Tarik Skubal) \u2014 Scheduled 2026-05-04T22:40:00Z Comerica Park",
-      "Probable: Toronto Blue Jays (TBD) @ Tampa Bay Rays (Nick Martinez) \u2014 Scheduled 2026-05-04T22:40:00Z Tropicana Field",
-      "Probable: Philadelphia Phillies (Aaron Nola) @ Miami Marlins (Janson Junk) \u2014 Scheduled 2026-05-04T22:40:00Z loanDepot park",
-      "Probable: Baltimore Orioles (Shane Baz) @ New York Yankees (Cam Schlittler) \u2014 Scheduled 2026-05-04T23:05:00Z Yankee Stadium",
-      "Probable: Cincinnati Reds (Chase Petty) @ Chicago Cubs (Edward Cabrera) \u2014 Scheduled 2026-05-04T23:40:00Z Wrigley Field"
+      "Probable: Toronto Blue Jays (Trey Yesavage) @ Minnesota Twins (Joe Ryan) \u2014 Final 2026-05-03T16:45:00Z Target Field",
+      "Probable: Houston Astros (Cody Bolton) @ Boston Red Sox (Ranger Suarez) \u2014 Final 2026-05-03T17:35:00Z Fenway Park",
+      "Probable: Cincinnati Reds (Chase Burns) @ Pittsburgh Pirates (Braxton Ashcraft) \u2014 Final 2026-05-03T17:35:00Z PNC Park",
+      "Probable: Baltimore Orioles (Trey Gibson) @ New York Yankees (Max Fried) \u2014 Final 2026-05-03T17:35:00Z Yankee Stadium",
+      "Probable: Milwaukee Brewers (Logan Henderson) @ Washington Nationals (PJ Poulin) \u2014 Final 2026-05-03T17:35:00Z Nationals Park",
+      "Probable: San Francisco Giants (Tyler Mahle) @ Tampa Bay Rays (Steven Matz) \u2014 Final 2026-05-03T17:40:00Z Tropicana Field"
     ],
     "unverified_notes": [],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: New York Mets (TBD) @ Colorado Rockies (Tomoyuki Sugano) \u2014 Scheduled 2026-05-04T21:40:00Z Coors Field",
-      "Probable: Boston Red Sox (Payton Tolle) @ Detroit Tigers (Tarik Skubal) \u2014 Scheduled 2026-05-04T22:40:00Z Comerica Park",
-      "Probable: Toronto Blue Jays (TBD) @ Tampa Bay Rays (Nick Martinez) \u2014 Scheduled 2026-05-04T22:40:00Z Tropicana Field",
-      "Probable: Philadelphia Phillies (Aaron Nola) @ Miami Marlins (Janson Junk) \u2014 Scheduled 2026-05-04T22:40:00Z loanDepot park",
-      "Probable: Baltimore Orioles (Shane Baz) @ New York Yankees (Cam Schlittler) \u2014 Scheduled 2026-05-04T23:05:00Z Yankee Stadium",
-      "Probable: Cincinnati Reds (Chase Petty) @ Chicago Cubs (Edward Cabrera) \u2014 Scheduled 2026-05-04T23:40:00Z Wrigley Field",
-      "Probable: Cleveland Guardians (Tanner Bibee) @ Kansas City Royals (Michael Wacha) \u2014 Scheduled 2026-05-04T23:40:00Z Kauffman Stadium",
-      "Probable: Milwaukee Brewers (Chad Patrick) @ St. Louis Cardinals (Kyle Leahy) \u2014 Scheduled 2026-05-04T23:45:00Z Busch Stadium"
+      "Probable: Toronto Blue Jays (Trey Yesavage) @ Minnesota Twins (Joe Ryan) \u2014 Final 2026-05-03T16:45:00Z Target Field",
+      "Probable: Houston Astros (Cody Bolton) @ Boston Red Sox (Ranger Suarez) \u2014 Final 2026-05-03T17:35:00Z Fenway Park",
+      "Probable: Cincinnati Reds (Chase Burns) @ Pittsburgh Pirates (Braxton Ashcraft) \u2014 Final 2026-05-03T17:35:00Z PNC Park",
+      "Probable: Baltimore Orioles (Trey Gibson) @ New York Yankees (Max Fried) \u2014 Final 2026-05-03T17:35:00Z Yankee Stadium",
+      "Probable: Milwaukee Brewers (Logan Henderson) @ Washington Nationals (PJ Poulin) \u2014 Final 2026-05-03T17:35:00Z Nationals Park",
+      "Probable: San Francisco Giants (Tyler Mahle) @ Tampa Bay Rays (Steven Matz) \u2014 Final 2026-05-03T17:40:00Z Tropicana Field",
+      "Probable: Philadelphia Phillies (Jes\u00fas Luzardo) @ Miami Marlins (Chris Paddack) \u2014 Final 2026-05-03T17:40:00Z loanDepot park",
+      "Probable: Los Angeles Dodgers (Justin Wrobleski) @ St. Louis Cardinals (Dustin May) \u2014 Final 2026-05-03T18:15:00Z Busch Stadium"
     ],
     "transactions": [
-      "League tx: 2026-04-27: FCL Orioles activated RHP Esteban Luna.",
-      "League tx: 2026-04-27: RHP Owen Geiss assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: New York Mets signed free agent LF Austin Slater.",
-      "League tx: 2026-04-27: Buffalo Bisons placed RHP Nic Enright on the full-season injured list.",
-      "League tx: 2026-04-27: RHP Nate Wochner assigned to Brigham Young Cougars.",
-      "League tx: 2026-04-27: Baltimore Orioles signed free agent LHP Anthony Steele to a minor league contract.",
-      "League tx: 2026-04-27: ACL Brewers released SS Kevin Ereu.",
-      "League tx: 2026-04-27: OF Braeden Schnabel assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: 3B Matthias Haas assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: Somerset Patriots released RHP Bailey Dees.",
-      "League tx: 2026-04-27: LHP Luis Pablo Navarro assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: Jersey Shore BlueClaws placed RHP Ethan Chenault on the full-season injured list.",
-      "League tx: 2026-04-27: FCL Nationals placed LHP Henry Moreno on the 60-day injured list.",
-      "League tx: 2026-04-27: OF Peyton Richards assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: RHP Michael Devenney assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: SS Dennis Fitzpatrick assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: RHP Matt Ludeman assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: OF Julius Ejike-Charles assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: Tigres de Quintana Roo placed RHP Ernesto Borges on the reserve list.",
-      "League tx: 2026-04-27: Chicago White Sox signed free agent RHP Lucas Sims to a minor league contract.",
-      "League tx: 2026-04-27: RHP Seojun Moon assigned to FCL Blue Jays.",
-      "League tx: 2026-04-27: Hudson Valley Renegades activated RHP Bryce Cunningham from the 7-day injured list.",
-      "League tx: 2026-04-27: FCL Nationals placed LHP Henry Moreno on the 60-day injured list.",
-      "League tx: 2026-04-27: 1B Levi Sotomayor assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: 2B Cole Berge assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: 2B Peyton Miller assigned to Gonzaga Bulldogs.",
-      "League tx: 2026-04-27: RHP Nathen Nino assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: RHP Liam Smith assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: SS Kaikea Harrison assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: LHP Jake Toporek assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: 3B Matthew Major assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: 1B Grant MacArthur assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: SS Bryson Ayala assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: SS Mikey Bell assigned to Gonzaga Bulldogs.",
-      "League tx: 2026-04-27: RHP Justin Iglesias assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: Jacksonville Jumbo Shrimp activated LF Heriberto Hern\u00e1ndez.",
-      "League tx: 2026-04-27: RHP Ethan Shaver assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: Hudson Valley Renegades released RHP Baron Stuart.",
-      "League tx: 2026-04-27: Harrisburg Senators transferred OF Branden Boissiere from the 7-day injured list to the 60-day injured list.",
-      "League tx: 2026-04-27: DSL Brewers Blue released 3B Sharlisson De La Rosa.",
-      "League tx: 2026-04-27: C Jacob Wrubleski assigned to Gonzaga Bulldogs.",
-      "League tx: 2026-04-27: C Reese McGuire elected free agency.",
-      "League tx: 2026-04-27: OF Jason Wachs assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: RHP Trey Cehajic assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: LHP Anthony Gose elected free agency.",
-      "League tx: 2026-04-27: Scranton/Wilkes-Barre RailRiders activated RHP Luis Gil.",
-      "League tx: 2026-04-27: RHP Sam Hart assigned to Brigham Young Cougars.",
-      "League tx: 2026-04-27: RHP Rockwell Lybbert assigned to Brigham Young Cougars.",
-      "League tx: 2026-04-27: 2B AJ Groeneveld assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: OF Bryker Hurdsman assigned to Brigham Young Cougars."
+      "League tx: 2026-04-26: Rochester Red Wings activated 1B Andr\u00e9s Chaparro.",
+      "League tx: 2026-04-26: Chicago Cubs designated RHP Vince Velasquez for assignment.",
+      "League tx: 2026-04-26: Baltimore Orioles designated RHP Albert Su\u00e1rez for assignment.",
+      "League tx: 2026-04-26: Cincinnati Reds activated C Jose Trevino from the 10-day injured list.",
+      "League tx: 2026-04-26: Detroit Tigers signed free agent SS Andrew Navigato to a minor league contract.",
+      "League tx: 2026-04-26: Tigres de Quintana Roo activated RHP Pedro Peniche from the reserve list.",
+      "League tx: 2026-04-26: Salt Lake Bees activated C Zach Humphreys from the Development List.",
+      "League tx: 2026-04-26: Algodoneros Union Laguna released RHP Katsunori Hirai.",
+      "League tx: 2026-04-26: Tampa Tarpons activated LHP Henry Lalane from the 7-day injured list.",
+      "League tx: 2026-04-26: Asheville Tourists activated C Keduar Trujillo from the Development List.",
+      "League tx: 2026-04-26: Hudson Valley Renegades sent CF Luis Durango on a rehab assignment to Tampa Tarpons.",
+      "League tx: 2026-04-26: Athletics activated RF Brent Rooker from the 10-day injured list.",
+      "League tx: 2026-04-26: New Hampshire Fisher Cats sent CF Victor Arias on a rehab assignment to Dunedin Blue Jays.",
+      "League tx: 2026-04-26: Algodoneros Union Laguna activated C Joseph Sequera from the reserve list.",
+      "League tx: 2026-04-26: Erie SeaWolves sent RHP Max Alba on a rehab assignment to Lakeland Flying Tigers.",
+      "League tx: 2026-04-26: LHP Seth Clark assigned to Hub City Spartanburgers.",
+      "League tx: 2026-04-26: Tecos de los Dos Laredos signed free agent RHP A.J. Candelario.",
+      "League tx: 2026-04-26: Omaha Storm Chasers transferred 3B Brandon Drury to the Development List.",
+      "League tx: 2026-04-26: Baltimore Orioles signed free agent LHP Zac Lampton to a minor league contract.",
+      "League tx: 2026-04-26: Cleveland Guardians placed RHP Shawn Armstrong on the 15-day injured list retroactive to April 23, 2026. Right groin strain.",
+      "League tx: 2026-04-26: Atlanta Braves sent C Sean Murphy on a rehab assignment to Rome Emperors.",
+      "League tx: 2026-04-26: RHP Mason Vinyard assigned to Beloit Sky Carp.",
+      "League tx: 2026-04-26: Arkansas Travelers transferred RHP Jason Ruffcorn to the Development List.",
+      "League tx: 2026-04-26: Los Angeles Angels designated RHP Shaun Anderson for assignment.",
+      "League tx: 2026-04-26: Los Angeles Angels designated RHP Jordan Romano for assignment.",
+      "League tx: 2026-04-26: Chicago Cubs placed LHP Riley Martin on the 15-day injured list retroactive to April 24, 2026. Left elbow inflammation.",
+      "League tx: 2026-04-26: Cincinnati Reds sent LHP Nick Lodolo on a rehab assignment to Dayton Dragons.",
+      "League tx: 2026-04-26: Tigres de Quintana Roo released RHP Jalen Miller.",
+      "League tx: 2026-04-26: Bradenton Marauders activated C Richard Ramirez from the 7-day injured list.",
+      "League tx: 2026-04-26: Oklahoma City Comets activated RHP Nick Frasso from the 7-day injured list.",
+      "League tx: 2026-04-26: FCL Mets activated RHP Omar Victorino.",
+      "League tx: 2026-04-26: San Antonio Missions activated RHP Ian Koenig from the 7-day injured list.",
+      "League tx: 2026-04-26: RHP Frank Alvarez assigned to Guerreros de Oaxaca.",
+      "League tx: 2026-04-26: Cincinnati Reds sent LHP Nick Lodolo on a rehab assignment to Dayton Dragons.",
+      "League tx: 2026-04-26: SS Andrew Navigato assigned to Toledo Mud Hens.",
+      "League tx: 2026-04-26: Tampa Bay Rays activated RHP Casey Legumina.",
+      "League tx: 2026-04-26: Piratas de Campeche signed free agent LHP Zach Phillips.",
+      "League tx: 2026-04-26: Norfolk Tides activated C Sam Huff.",
+      "League tx: 2026-04-26: Detroit Tigers placed RHP Connor Seabold on the 15-day injured list. Left ankle inflammation.",
+      "League tx: 2026-04-26: Los Angeles Angels placed C Logan O'Hoppe on the 10-day injured list. Left wrist fracture.",
+      "League tx: 2026-04-26: Eugene Emeralds activated LHP Jacob Bresnahan from the 7-day injured list.",
+      "League tx: 2026-04-26: Tulsa Drillers placed LHP Wyatt Crowell on the temporarily inactive list.",
+      "League tx: 2026-04-26: Athletics designated 3B Andy Ib\u00e1\u00f1ez for assignment.",
+      "League tx: 2026-04-26: Miami Marlins signed free agent RHP Mason Vinyard to a minor league contract.",
+      "League tx: 2026-04-26: Rocket City Trash Pandas placed SS Ben Gobbel on the 7-day injured list.",
+      "League tx: 2026-04-26: RHP Kyle Funkhouser assigned to Round Rock Express.",
+      "League tx: 2026-04-26: Arkansas Travelers activated RHP Ty Cummings.",
+      "League tx: 2026-04-26: Philadelphia Phillies sent RHP Jonathan Bowlan on a rehab assignment to Lehigh Valley IronPigs.",
+      "League tx: 2026-04-26: Fayetteville Woodpeckers placed RHP Luis Aguilar on the 7-day injured list.",
+      "League tx: 2026-04-26: Sultanes de Monterrey placed RHP Jesus Luna on the reserve list."
     ],
-    "transactions_total": 1663,
+    "transactions_total": 1762,
     "debug": {
       "standings": [
         "rows=30"
       ],
       "schedule": [
-        "games=12"
+        "games=15"
       ],
       "transactions": [
-        "transactions=1675"
+        "transactions=1774"
       ]
     }
   },
@@ -129,12 +131,12 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Athletics: 18-16 (PCT .529, GB -) [Division]",
+        "Probable: Cleveland Guardians (Parker Messick) @ Athletics (Aaron Civale) \u2014 Final 2026-05-03T20:05:00Z Sutter Health Park",
         "Probable: Athletics (Luis Severino) @ Philadelphia Phillies (TBD) \u2014 Scheduled 2026-05-05T22:40:00Z Citizens Bank Park",
-        "Probable: Athletics (Jeffrey Springs) @ Philadelphia Phillies (TBD) \u2014 Scheduled 2026-05-06T22:40:00Z Citizens Bank Park",
+        "Athletics tx: 2026-04-26: Athletics designated 3B Andy Ib\u00e1\u00f1ez for assignment.",
+        "Athletics tx: 2026-04-26: Athletics activated RF Brent Rooker from the 10-day injured list.",
         "Athletics tx: 2026-04-28: Athletics placed 3B Max Muncy on the 10-day injured list retroactive to April 26, 2026. Left fifth metacarpal fracture.",
-        "Athletics tx: 2026-04-28: Athletics recalled 3B Brett Harris from Las Vegas Aviators.",
-        "Athletics tx: 2026-04-30: New York Mets claimed 2B Andy Ib\u00e1\u00f1ez off waivers from Athletics.",
-        "Athletics tx: 2026-05-02: Athletics optioned LHP Brady Basso to Las Vegas Aviators."
+        "Athletics tx: 2026-04-28: Athletics recalled 3B Brett Harris from Las Vegas Aviators."
       ],
       "unverified_notes": [],
       "notes": [
@@ -157,7 +159,7 @@
           "games=2"
         ],
         "athletics_transactions": [
-          "transactions=7"
+          "transactions=9"
         ]
       }
     },
@@ -166,12 +168,12 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Rockies: 14-21 (PCT .400, GB 7.5) [Division]",
+        "Probable: Atlanta Braves (Spencer Strider) @ Colorado Rockies (Kyle Freeland) \u2014 Final 2026-05-03T19:10:00Z Coors Field",
         "Probable: New York Mets (TBD) @ Colorado Rockies (Tomoyuki Sugano) \u2014 Scheduled 2026-05-04T21:40:00Z Coors Field",
-        "Probable: New York Mets (Freddy Peralta) @ Colorado Rockies (Michael Lorenzen) \u2014 Scheduled 2026-05-06T00:40:00Z Coors Field",
+        "Colorado Rockies tx: 2026-04-26: Colorado Rockies placed RHP Jimmy Herget on the restricted list.",
+        "Colorado Rockies tx: 2026-04-26: Colorado Rockies recalled RHP Blas Casta\u00f1o from Albuquerque Isotopes.",
         "Colorado Rockies tx: 2026-04-27: Colorado Rockies activated RHP Jimmy Herget from the restricted list.",
-        "Colorado Rockies tx: 2026-04-27: St. Louis Cardinals claimed LHP Luis Peralta off waivers from Colorado Rockies.",
-        "Colorado Rockies tx: 2026-04-27: Colorado Rockies optioned RHP Seth Halvorsen to Albuquerque Isotopes.",
-        "Colorado Rockies tx: 2026-04-27: Colorado Rockies optioned LHP Sammy Peralta to Albuquerque Isotopes."
+        "Colorado Rockies tx: 2026-04-27: St. Louis Cardinals claimed LHP Luis Peralta off waivers from Colorado Rockies."
       ],
       "unverified_notes": [],
       "notes": [
@@ -194,7 +196,7 @@
           "games=3"
         ],
         "rockies_transactions": [
-          "transactions=10"
+          "transactions=12"
         ]
       }
     },
@@ -203,12 +205,12 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Tigers: 17-17 (PCT .500, GB 0.5) [Division]",
+        "Probable: Texas Rangers (Jack Leiter) @ Detroit Tigers (Tyler Holton) \u2014 Warmup 2026-05-03T23:20:00Z Comerica Park",
         "Probable: Boston Red Sox (Payton Tolle) @ Detroit Tigers (Tarik Skubal) \u2014 Scheduled 2026-05-04T22:40:00Z Comerica Park",
-        "Probable: Boston Red Sox (Brayan Bello) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-05-05T22:40:00Z Comerica Park",
-        "Detroit Tigers tx: 2026-04-29: Detroit Tigers placed RHP Casey Mize on the 15-day injured list. Right adductor strain.",
-        "Detroit Tigers tx: 2026-04-29: Detroit Tigers placed SS Javier B\u00e1ez on the 10-day injured list. Right ankle sprain.",
-        "Detroit Tigers tx: 2026-04-29: Detroit Tigers recalled 3B Jace Jung from Toledo Mud Hens.",
-        "Detroit Tigers tx: 2026-04-29: Detroit Tigers recalled LHP Enmanuel De Jesus from Toledo Mud Hens."
+        "Detroit Tigers tx: 2026-04-26: Detroit Tigers signed free agent SS Andrew Navigato to a minor league contract.",
+        "Detroit Tigers tx: 2026-04-26: Detroit Tigers placed RHP Connor Seabold on the 15-day injured list. Left ankle inflammation.",
+        "Detroit Tigers tx: 2026-04-26: Detroit Tigers recalled RHP Brenan Hanifee from Toledo Mud Hens.",
+        "Detroit Tigers tx: 2026-04-29: Detroit Tigers placed RHP Casey Mize on the 15-day injured list. Right adductor strain."
       ],
       "unverified_notes": [],
       "notes": [
@@ -231,7 +233,7 @@
           "games=3"
         ],
         "tigers_transactions": [
-          "transactions=15"
+          "transactions=18"
         ]
       }
     }
@@ -256,36 +258,36 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-04&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-03&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
-          "games=12"
+          "games=15"
         ],
-        "verified_count": 12,
+        "verified_count": 15,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: New York Mets (TBD) @ Colorado Rockies (Tomoyuki Sugano) \u2014 Scheduled 2026-05-04T21:40:00Z Coors Field",
-          "Probable: Boston Red Sox (Payton Tolle) @ Detroit Tigers (Tarik Skubal) \u2014 Scheduled 2026-05-04T22:40:00Z Comerica Park",
-          "Probable: Toronto Blue Jays (TBD) @ Tampa Bay Rays (Nick Martinez) \u2014 Scheduled 2026-05-04T22:40:00Z Tropicana Field",
-          "Probable: Philadelphia Phillies (Aaron Nola) @ Miami Marlins (Janson Junk) \u2014 Scheduled 2026-05-04T22:40:00Z loanDepot park",
-          "Probable: Baltimore Orioles (Shane Baz) @ New York Yankees (Cam Schlittler) \u2014 Scheduled 2026-05-04T23:05:00Z Yankee Stadium"
+          "Probable: Toronto Blue Jays (Trey Yesavage) @ Minnesota Twins (Joe Ryan) \u2014 Final 2026-05-03T16:45:00Z Target Field",
+          "Probable: Houston Astros (Cody Bolton) @ Boston Red Sox (Ranger Suarez) \u2014 Final 2026-05-03T17:35:00Z Fenway Park",
+          "Probable: Cincinnati Reds (Chase Burns) @ Pittsburgh Pirates (Braxton Ashcraft) \u2014 Final 2026-05-03T17:35:00Z PNC Park",
+          "Probable: Baltimore Orioles (Trey Gibson) @ New York Yankees (Max Fried) \u2014 Final 2026-05-03T17:35:00Z Yankee Stadium",
+          "Probable: Milwaukee Brewers (Logan Henderson) @ Washington Nationals (PJ Poulin) \u2014 Final 2026-05-03T17:35:00Z Nationals Park"
         ],
         "unverified_sample": []
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-04-27&endDate=2026-05-04",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-04-26&endDate=2026-05-03",
         "status": "verified",
         "debug": [
-          "transactions=1675"
+          "transactions=1774"
         ],
-        "verified_count": 1663,
+        "verified_count": 1762,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-04-27: FCL Orioles activated RHP Esteban Luna.",
-          "League tx: 2026-04-27: RHP Owen Geiss assigned to Tulane Green Wave.",
-          "League tx: 2026-04-27: New York Mets signed free agent LF Austin Slater.",
-          "League tx: 2026-04-27: Buffalo Bisons placed RHP Nic Enright on the full-season injured list.",
-          "League tx: 2026-04-27: RHP Nate Wochner assigned to Brigham Young Cougars."
+          "League tx: 2026-04-26: Rochester Red Wings activated 1B Andr\u00e9s Chaparro.",
+          "League tx: 2026-04-26: Chicago Cubs designated RHP Vince Velasquez for assignment.",
+          "League tx: 2026-04-26: Baltimore Orioles designated RHP Albert Su\u00e1rez for assignment.",
+          "League tx: 2026-04-26: Cincinnati Reds activated C Jose Trevino from the 10-day injured list.",
+          "League tx: 2026-04-26: Detroit Tigers signed free agent SS Andrew Navigato to a minor league contract."
         ],
         "unverified_sample": []
       },
@@ -303,7 +305,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-05-04&endDate=2026-05-06&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-05-03&endDate=2026-05-05&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
           "games=2"
@@ -311,25 +313,25 @@
         "verified_count": 2,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Athletics (Luis Severino) @ Philadelphia Phillies (TBD) \u2014 Scheduled 2026-05-05T22:40:00Z Citizens Bank Park",
-          "Probable: Athletics (Jeffrey Springs) @ Philadelphia Phillies (TBD) \u2014 Scheduled 2026-05-06T22:40:00Z Citizens Bank Park"
+          "Probable: Cleveland Guardians (Parker Messick) @ Athletics (Aaron Civale) \u2014 Final 2026-05-03T20:05:00Z Sutter Health Park",
+          "Probable: Athletics (Luis Severino) @ Philadelphia Phillies (TBD) \u2014 Scheduled 2026-05-05T22:40:00Z Citizens Bank Park"
         ],
         "unverified_sample": []
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-04-27&endDate=2026-05-04",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-04-26&endDate=2026-05-03",
         "status": "verified",
         "debug": [
-          "transactions=7"
+          "transactions=9"
         ],
-        "verified_count": 7,
+        "verified_count": 9,
         "unverified_count": 0,
         "verified_sample": [
+          "Athletics tx: 2026-04-26: Athletics designated 3B Andy Ib\u00e1\u00f1ez for assignment.",
+          "Athletics tx: 2026-04-26: Athletics activated RF Brent Rooker from the 10-day injured list.",
           "Athletics tx: 2026-04-28: Athletics placed 3B Max Muncy on the 10-day injured list retroactive to April 26, 2026. Left fifth metacarpal fracture.",
           "Athletics tx: 2026-04-28: Athletics recalled 3B Brett Harris from Las Vegas Aviators.",
-          "Athletics tx: 2026-04-30: New York Mets claimed 2B Andy Ib\u00e1\u00f1ez off waivers from Athletics.",
-          "Athletics tx: 2026-05-02: Athletics optioned LHP Brady Basso to Las Vegas Aviators.",
-          "Athletics tx: 2026-05-02: Athletics recalled RHP Luis Morales from Las Vegas Aviators."
+          "Athletics tx: 2026-04-30: New York Mets claimed 2B Andy Ib\u00e1\u00f1ez off waivers from Athletics."
         ],
         "unverified_sample": []
       },
@@ -347,7 +349,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-05-04&endDate=2026-05-06&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-05-03&endDate=2026-05-05&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
           "games=3"
@@ -355,26 +357,26 @@
         "verified_count": 3,
         "unverified_count": 0,
         "verified_sample": [
+          "Probable: Atlanta Braves (Spencer Strider) @ Colorado Rockies (Kyle Freeland) \u2014 Final 2026-05-03T19:10:00Z Coors Field",
           "Probable: New York Mets (TBD) @ Colorado Rockies (Tomoyuki Sugano) \u2014 Scheduled 2026-05-04T21:40:00Z Coors Field",
-          "Probable: New York Mets (Freddy Peralta) @ Colorado Rockies (Michael Lorenzen) \u2014 Scheduled 2026-05-06T00:40:00Z Coors Field",
-          "Probable: New York Mets (Christian Scott) @ Colorado Rockies (Jose Quintana) \u2014 Scheduled 2026-05-06T19:10:00Z Coors Field"
+          "Probable: New York Mets (Freddy Peralta) @ Colorado Rockies (Michael Lorenzen) \u2014 Scheduled 2026-05-06T00:40:00Z Coors Field"
         ],
         "unverified_sample": []
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-04-27&endDate=2026-05-04",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-04-26&endDate=2026-05-03",
         "status": "verified",
         "debug": [
-          "transactions=10"
+          "transactions=12"
         ],
-        "verified_count": 10,
+        "verified_count": 12,
         "unverified_count": 0,
         "verified_sample": [
+          "Colorado Rockies tx: 2026-04-26: Colorado Rockies placed RHP Jimmy Herget on the restricted list.",
+          "Colorado Rockies tx: 2026-04-26: Colorado Rockies recalled RHP Blas Casta\u00f1o from Albuquerque Isotopes.",
           "Colorado Rockies tx: 2026-04-27: Colorado Rockies activated RHP Jimmy Herget from the restricted list.",
           "Colorado Rockies tx: 2026-04-27: St. Louis Cardinals claimed LHP Luis Peralta off waivers from Colorado Rockies.",
-          "Colorado Rockies tx: 2026-04-27: Colorado Rockies optioned RHP Seth Halvorsen to Albuquerque Isotopes.",
-          "Colorado Rockies tx: 2026-04-27: Colorado Rockies optioned LHP Sammy Peralta to Albuquerque Isotopes.",
-          "Colorado Rockies tx: 2026-04-27: Colorado Rockies optioned RHP Blas Casta\u00f1o to Albuquerque Isotopes."
+          "Colorado Rockies tx: 2026-04-27: Colorado Rockies optioned RHP Seth Halvorsen to Albuquerque Isotopes."
         ],
         "unverified_sample": []
       },
@@ -392,7 +394,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-05-04&endDate=2026-05-06&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-05-03&endDate=2026-05-05&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
           "games=3"
@@ -400,30 +402,32 @@
         "verified_count": 3,
         "unverified_count": 0,
         "verified_sample": [
+          "Probable: Texas Rangers (Jack Leiter) @ Detroit Tigers (Tyler Holton) \u2014 Warmup 2026-05-03T23:20:00Z Comerica Park",
           "Probable: Boston Red Sox (Payton Tolle) @ Detroit Tigers (Tarik Skubal) \u2014 Scheduled 2026-05-04T22:40:00Z Comerica Park",
-          "Probable: Boston Red Sox (Brayan Bello) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-05-05T22:40:00Z Comerica Park",
-          "Probable: Boston Red Sox (TBD) @ Detroit Tigers (Jack Flaherty) \u2014 Scheduled 2026-05-06T22:40:00Z Comerica Park"
+          "Probable: Boston Red Sox (Brayan Bello) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-05-05T22:40:00Z Comerica Park"
         ],
         "unverified_sample": []
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-04-27&endDate=2026-05-04",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-04-26&endDate=2026-05-03",
         "status": "verified",
         "debug": [
-          "transactions=15"
+          "transactions=18"
         ],
-        "verified_count": 15,
+        "verified_count": 18,
         "unverified_count": 0,
         "verified_sample": [
+          "Detroit Tigers tx: 2026-04-26: Detroit Tigers signed free agent SS Andrew Navigato to a minor league contract.",
+          "Detroit Tigers tx: 2026-04-26: Detroit Tigers placed RHP Connor Seabold on the 15-day injured list. Left ankle inflammation.",
+          "Detroit Tigers tx: 2026-04-26: Detroit Tigers recalled RHP Brenan Hanifee from Toledo Mud Hens.",
           "Detroit Tigers tx: 2026-04-29: Detroit Tigers placed RHP Casey Mize on the 15-day injured list. Right adductor strain.",
-          "Detroit Tigers tx: 2026-04-29: Detroit Tigers placed SS Javier B\u00e1ez on the 10-day injured list. Right ankle sprain.",
-          "Detroit Tigers tx: 2026-04-29: Detroit Tigers recalled 3B Jace Jung from Toledo Mud Hens.",
-          "Detroit Tigers tx: 2026-04-29: Detroit Tigers recalled LHP Enmanuel De Jesus from Toledo Mud Hens.",
-          "Detroit Tigers tx: 2026-04-30: Detroit Tigers sent 2B Zach McKinstry on a rehab assignment to Lakeland Flying Tigers."
+          "Detroit Tigers tx: 2026-04-29: Detroit Tigers placed SS Javier B\u00e1ez on the 10-day injured list. Right ankle sprain."
         ],
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-05-04T00:04:04Z"
-  }
+    "generated_utc": "2026-05-03T23:04:17Z"
+  },
+  "news": [],
+  "news_status": "unverified"
 }

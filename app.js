@@ -709,10 +709,31 @@ function renderReferenceAndBets(data) {
     if (!structured.probables.length) cardsRoot.appendChild(makeEl('p','muted','No matchups available in snapshot.'));
   }
 
-  const hasNews = Array.isArray(data && data.news) && data.news.length > 0;
+  const newsRoot = el('newsList');
   const newsStatus = el('newsStatus');
-  if (newsStatus) newsStatus.textContent = hasNews ? 'News feed available from snapshot data.' : 'News feed integration is pending.';
-  fillList('newsList', hasNews ? data.news : ['No connected news feed found in repository snapshot inputs.'], 'No news items available.');
+  if (newsRoot) while (newsRoot.firstChild) newsRoot.removeChild(newsRoot.firstChild);
+  const newsItems = Array.isArray(data && data.news) ? data.news : [];
+  const newsState = (data && data.news_status) || 'unverified';
+  if (newsStatus) {
+    if (newsState === 'source_error') newsStatus.textContent = 'News source unavailable during snapshot build. Showing fallback.';
+    else if (newsItems.length) newsStatus.textContent = 'Latest MLB headlines from the snapshot feed.';
+    else newsStatus.textContent = 'No MLB headlines were returned in this snapshot.';
+  }
+  if (!newsItems.length) {
+    if (newsRoot) newsRoot.appendChild(makeEl('li', 'muted', 'No news items available right now.'));
+  } else {
+    newsItems.forEach((item) => {
+      const li = document.createElement('li');
+      const a = makeEl('a', null, item.headline || 'Untitled');
+      a.href = item.url || '#';
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      li.appendChild(a);
+      const meta = [item.source || 'MLB.com', item.published_at || 'publish time unavailable'].join(' • ');
+      li.appendChild(makeEl('div', 'muted', meta));
+      if (newsRoot) newsRoot.appendChild(li);
+    });
+  }
 }
 
 

@@ -1,7 +1,8 @@
 {
-  "generated_at": "2026-05-04T00:04:04Z",
+  "generated_at": "2026-05-04T02:59:54Z",
   "schema_version": "3.1",
   "sources": {
+    "league_news": "https://www.mlb.com/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
     "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-04&hydrate=probablePitcher,team",
     "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-04-27&endDate=2026-05-04",
@@ -13,113 +14,48 @@
     "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-04-27&endDate=2026-05-04"
   },
   "source_status": {
-    "league_standings": "verified",
-    "league_schedule": "verified",
-    "league_transactions": "verified",
-    "athletics_standings": "verified",
-    "athletics_schedule": "verified",
-    "athletics_transactions": "verified",
-    "rockies_standings": "verified",
-    "rockies_schedule": "verified",
-    "rockies_transactions": "verified",
-    "tigers_standings": "verified",
-    "tigers_schedule": "verified",
-    "tigers_transactions": "verified"
+    "league_standings": "source_error",
+    "league_schedule": "source_error",
+    "league_transactions": "source_error",
+    "athletics_standings": "source_error",
+    "athletics_schedule": "source_error",
+    "athletics_transactions": "source_error",
+    "rockies_standings": "source_error",
+    "rockies_schedule": "source_error",
+    "rockies_transactions": "source_error",
+    "tigers_standings": "source_error",
+    "tigers_schedule": "source_error",
+    "tigers_transactions": "source_error",
+    "league_news": "source_error"
   },
+  "news": [],
+  "news_status": "source_error",
   "league": {
     "headline": "League snapshot from MLB Stats API.",
-    "verified_notes": [
-      "Standings: Yankees: 23-11 (PCT .676, GB -) [Division]",
-      "Standings: Rays: 21-12 (PCT .636, GB 1.5) [Division]",
-      "Standings: Blue Jays: 16-18 (PCT .471, GB 7.0) [Division]",
-      "Standings: Orioles: 15-19 (PCT .441, GB 8.0) [Division]",
-      "Standings: Red Sox: 13-21 (PCT .382, GB 10.0) [Division]",
-      "Standings: Guardians: 18-17 (PCT .514, GB -) [Division]",
-      "Standings: Tigers: 17-17 (PCT .500, GB 0.5) [Division]",
-      "Standings: White Sox: 16-18 (PCT .471, GB 1.5) [Division]",
-      "Probable: New York Mets (TBD) @ Colorado Rockies (Tomoyuki Sugano) \u2014 Scheduled 2026-05-04T21:40:00Z Coors Field",
-      "Probable: Boston Red Sox (Payton Tolle) @ Detroit Tigers (Tarik Skubal) \u2014 Scheduled 2026-05-04T22:40:00Z Comerica Park",
-      "Probable: Toronto Blue Jays (TBD) @ Tampa Bay Rays (Nick Martinez) \u2014 Scheduled 2026-05-04T22:40:00Z Tropicana Field",
-      "Probable: Philadelphia Phillies (Aaron Nola) @ Miami Marlins (Janson Junk) \u2014 Scheduled 2026-05-04T22:40:00Z loanDepot park",
-      "Probable: Baltimore Orioles (Shane Baz) @ New York Yankees (Cam Schlittler) \u2014 Scheduled 2026-05-04T23:05:00Z Yankee Stadium",
-      "Probable: Cincinnati Reds (Chase Petty) @ Chicago Cubs (Edward Cabrera) \u2014 Scheduled 2026-05-04T23:40:00Z Wrigley Field"
+    "verified_notes": [],
+    "unverified_notes": [
+      "UNVERIFIED: league_standings unavailable.",
+      "UNVERIFIED: league_schedule unavailable."
     ],
-    "unverified_notes": [],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: New York Mets (TBD) @ Colorado Rockies (Tomoyuki Sugano) \u2014 Scheduled 2026-05-04T21:40:00Z Coors Field",
-      "Probable: Boston Red Sox (Payton Tolle) @ Detroit Tigers (Tarik Skubal) \u2014 Scheduled 2026-05-04T22:40:00Z Comerica Park",
-      "Probable: Toronto Blue Jays (TBD) @ Tampa Bay Rays (Nick Martinez) \u2014 Scheduled 2026-05-04T22:40:00Z Tropicana Field",
-      "Probable: Philadelphia Phillies (Aaron Nola) @ Miami Marlins (Janson Junk) \u2014 Scheduled 2026-05-04T22:40:00Z loanDepot park",
-      "Probable: Baltimore Orioles (Shane Baz) @ New York Yankees (Cam Schlittler) \u2014 Scheduled 2026-05-04T23:05:00Z Yankee Stadium",
-      "Probable: Cincinnati Reds (Chase Petty) @ Chicago Cubs (Edward Cabrera) \u2014 Scheduled 2026-05-04T23:40:00Z Wrigley Field",
-      "Probable: Cleveland Guardians (Tanner Bibee) @ Kansas City Royals (Michael Wacha) \u2014 Scheduled 2026-05-04T23:40:00Z Kauffman Stadium",
-      "Probable: Milwaukee Brewers (Chad Patrick) @ St. Louis Cardinals (Kyle Leahy) \u2014 Scheduled 2026-05-04T23:45:00Z Busch Stadium"
+      "UNVERIFIED: No probable matchup entries available."
     ],
     "transactions": [
-      "League tx: 2026-04-27: FCL Orioles activated RHP Esteban Luna.",
-      "League tx: 2026-04-27: RHP Owen Geiss assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: New York Mets signed free agent LF Austin Slater.",
-      "League tx: 2026-04-27: Buffalo Bisons placed RHP Nic Enright on the full-season injured list.",
-      "League tx: 2026-04-27: RHP Nate Wochner assigned to Brigham Young Cougars.",
-      "League tx: 2026-04-27: Baltimore Orioles signed free agent LHP Anthony Steele to a minor league contract.",
-      "League tx: 2026-04-27: ACL Brewers released SS Kevin Ereu.",
-      "League tx: 2026-04-27: OF Braeden Schnabel assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: 3B Matthias Haas assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: Somerset Patriots released RHP Bailey Dees.",
-      "League tx: 2026-04-27: LHP Luis Pablo Navarro assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: Jersey Shore BlueClaws placed RHP Ethan Chenault on the full-season injured list.",
-      "League tx: 2026-04-27: FCL Nationals placed LHP Henry Moreno on the 60-day injured list.",
-      "League tx: 2026-04-27: OF Peyton Richards assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: RHP Michael Devenney assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: SS Dennis Fitzpatrick assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: RHP Matt Ludeman assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: OF Julius Ejike-Charles assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: Tigres de Quintana Roo placed RHP Ernesto Borges on the reserve list.",
-      "League tx: 2026-04-27: Chicago White Sox signed free agent RHP Lucas Sims to a minor league contract.",
-      "League tx: 2026-04-27: RHP Seojun Moon assigned to FCL Blue Jays.",
-      "League tx: 2026-04-27: Hudson Valley Renegades activated RHP Bryce Cunningham from the 7-day injured list.",
-      "League tx: 2026-04-27: FCL Nationals placed LHP Henry Moreno on the 60-day injured list.",
-      "League tx: 2026-04-27: 1B Levi Sotomayor assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: 2B Cole Berge assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: 2B Peyton Miller assigned to Gonzaga Bulldogs.",
-      "League tx: 2026-04-27: RHP Nathen Nino assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: RHP Liam Smith assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: SS Kaikea Harrison assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: LHP Jake Toporek assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: 3B Matthew Major assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: 1B Grant MacArthur assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: SS Bryson Ayala assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: SS Mikey Bell assigned to Gonzaga Bulldogs.",
-      "League tx: 2026-04-27: RHP Justin Iglesias assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: Jacksonville Jumbo Shrimp activated LF Heriberto Hern\u00e1ndez.",
-      "League tx: 2026-04-27: RHP Ethan Shaver assigned to Pacific Tigers.",
-      "League tx: 2026-04-27: Hudson Valley Renegades released RHP Baron Stuart.",
-      "League tx: 2026-04-27: Harrisburg Senators transferred OF Branden Boissiere from the 7-day injured list to the 60-day injured list.",
-      "League tx: 2026-04-27: DSL Brewers Blue released 3B Sharlisson De La Rosa.",
-      "League tx: 2026-04-27: C Jacob Wrubleski assigned to Gonzaga Bulldogs.",
-      "League tx: 2026-04-27: C Reese McGuire elected free agency.",
-      "League tx: 2026-04-27: OF Jason Wachs assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: RHP Trey Cehajic assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: LHP Anthony Gose elected free agency.",
-      "League tx: 2026-04-27: Scranton/Wilkes-Barre RailRiders activated RHP Luis Gil.",
-      "League tx: 2026-04-27: RHP Sam Hart assigned to Brigham Young Cougars.",
-      "League tx: 2026-04-27: RHP Rockwell Lybbert assigned to Brigham Young Cougars.",
-      "League tx: 2026-04-27: 2B AJ Groeneveld assigned to Tulane Green Wave.",
-      "League tx: 2026-04-27: OF Bryker Hurdsman assigned to Brigham Young Cougars."
+      "UNVERIFIED: league_transactions unavailable."
     ],
-    "transactions_total": 1663,
+    "transactions_total": 1,
     "debug": {
       "standings": [
-        "rows=30"
+        "url_error: Tunnel connection failed: 403 Forbidden"
       ],
       "schedule": [
-        "games=12"
+        "url_error: Tunnel connection failed: 403 Forbidden"
       ],
       "transactions": [
-        "transactions=1675"
+        "url_error: Tunnel connection failed: 403 Forbidden"
       ]
     }
   },
@@ -127,16 +63,12 @@
     "athletics": {
       "headline": "Athletics source snapshot from MLB Stats API.",
       "emotion": "Measured",
-      "verified_notes": [
-        "Standings: Athletics: 18-16 (PCT .529, GB -) [Division]",
-        "Probable: Athletics (Luis Severino) @ Philadelphia Phillies (TBD) \u2014 Scheduled 2026-05-05T22:40:00Z Citizens Bank Park",
-        "Probable: Athletics (Jeffrey Springs) @ Philadelphia Phillies (TBD) \u2014 Scheduled 2026-05-06T22:40:00Z Citizens Bank Park",
-        "Athletics tx: 2026-04-28: Athletics placed 3B Max Muncy on the 10-day injured list retroactive to April 26, 2026. Left fifth metacarpal fracture.",
-        "Athletics tx: 2026-04-28: Athletics recalled 3B Brett Harris from Las Vegas Aviators.",
-        "Athletics tx: 2026-04-30: New York Mets claimed 2B Andy Ib\u00e1\u00f1ez off waivers from Athletics.",
-        "Athletics tx: 2026-05-02: Athletics optioned LHP Brady Basso to Las Vegas Aviators."
+      "verified_notes": [],
+      "unverified_notes": [
+        "UNVERIFIED: athletics standings unavailable.",
+        "UNVERIFIED: athletics_schedule unavailable.",
+        "UNVERIFIED: athletics_transactions unavailable."
       ],
-      "unverified_notes": [],
       "notes": [
         "Editorial framing only; do not promote UNVERIFIED entries as facts."
       ],
@@ -145,35 +77,31 @@
         "Promote only verified entries to on-air claims."
       ],
       "source_status": {
-        "athletics_standings": "verified",
-        "athletics_schedule": "verified",
-        "athletics_transactions": "verified"
+        "athletics_standings": "source_error",
+        "athletics_schedule": "source_error",
+        "athletics_transactions": "source_error"
       },
       "debug": {
         "athletics_standings": [
-          "rows=30"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
         "athletics_schedule": [
-          "games=2"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
         "athletics_transactions": [
-          "transactions=7"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ]
       }
     },
     "rockies": {
       "headline": "Colorado Rockies source snapshot from MLB Stats API.",
       "emotion": "Measured",
-      "verified_notes": [
-        "Standings: Rockies: 14-21 (PCT .400, GB 7.5) [Division]",
-        "Probable: New York Mets (TBD) @ Colorado Rockies (Tomoyuki Sugano) \u2014 Scheduled 2026-05-04T21:40:00Z Coors Field",
-        "Probable: New York Mets (Freddy Peralta) @ Colorado Rockies (Michael Lorenzen) \u2014 Scheduled 2026-05-06T00:40:00Z Coors Field",
-        "Colorado Rockies tx: 2026-04-27: Colorado Rockies activated RHP Jimmy Herget from the restricted list.",
-        "Colorado Rockies tx: 2026-04-27: St. Louis Cardinals claimed LHP Luis Peralta off waivers from Colorado Rockies.",
-        "Colorado Rockies tx: 2026-04-27: Colorado Rockies optioned RHP Seth Halvorsen to Albuquerque Isotopes.",
-        "Colorado Rockies tx: 2026-04-27: Colorado Rockies optioned LHP Sammy Peralta to Albuquerque Isotopes."
+      "verified_notes": [],
+      "unverified_notes": [
+        "UNVERIFIED: rockies standings unavailable.",
+        "UNVERIFIED: rockies_schedule unavailable.",
+        "UNVERIFIED: rockies_transactions unavailable."
       ],
-      "unverified_notes": [],
       "notes": [
         "Editorial framing only; do not promote UNVERIFIED entries as facts."
       ],
@@ -182,35 +110,31 @@
         "Promote only verified entries to on-air claims."
       ],
       "source_status": {
-        "rockies_standings": "verified",
-        "rockies_schedule": "verified",
-        "rockies_transactions": "verified"
+        "rockies_standings": "source_error",
+        "rockies_schedule": "source_error",
+        "rockies_transactions": "source_error"
       },
       "debug": {
         "rockies_standings": [
-          "rows=30"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
         "rockies_schedule": [
-          "games=3"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
         "rockies_transactions": [
-          "transactions=10"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ]
       }
     },
     "tigers": {
       "headline": "Detroit Tigers source snapshot from MLB Stats API.",
       "emotion": "Measured",
-      "verified_notes": [
-        "Standings: Tigers: 17-17 (PCT .500, GB 0.5) [Division]",
-        "Probable: Boston Red Sox (Payton Tolle) @ Detroit Tigers (Tarik Skubal) \u2014 Scheduled 2026-05-04T22:40:00Z Comerica Park",
-        "Probable: Boston Red Sox (Brayan Bello) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-05-05T22:40:00Z Comerica Park",
-        "Detroit Tigers tx: 2026-04-29: Detroit Tigers placed RHP Casey Mize on the 15-day injured list. Right adductor strain.",
-        "Detroit Tigers tx: 2026-04-29: Detroit Tigers placed SS Javier B\u00e1ez on the 10-day injured list. Right ankle sprain.",
-        "Detroit Tigers tx: 2026-04-29: Detroit Tigers recalled 3B Jace Jung from Toledo Mud Hens.",
-        "Detroit Tigers tx: 2026-04-29: Detroit Tigers recalled LHP Enmanuel De Jesus from Toledo Mud Hens."
+      "verified_notes": [],
+      "unverified_notes": [
+        "UNVERIFIED: tigers standings unavailable.",
+        "UNVERIFIED: tigers_schedule unavailable.",
+        "UNVERIFIED: tigers_transactions unavailable."
       ],
-      "unverified_notes": [],
       "notes": [
         "Editorial framing only; do not promote UNVERIFIED entries as facts."
       ],
@@ -219,19 +143,19 @@
         "Promote only verified entries to on-air claims."
       ],
       "source_status": {
-        "tigers_standings": "verified",
-        "tigers_schedule": "verified",
-        "tigers_transactions": "verified"
+        "tigers_standings": "source_error",
+        "tigers_schedule": "source_error",
+        "tigers_transactions": "source_error"
       },
       "debug": {
         "tigers_standings": [
-          "rows=30"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
         "tigers_schedule": [
-          "games=3"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
         "tigers_transactions": [
-          "transactions=15"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ]
       }
     }
@@ -240,190 +164,174 @@
     "source_health": {
       "league_standings": {
         "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-        "status": "verified",
+        "status": "source_error",
         "debug": [
-          "rows=30"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "verified_count": 30,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Standings: Yankees: 23-11 (PCT .676, GB -) [Division]",
-          "Standings: Rays: 21-12 (PCT .636, GB 1.5) [Division]",
-          "Standings: Blue Jays: 16-18 (PCT .471, GB 7.0) [Division]",
-          "Standings: Orioles: 15-19 (PCT .441, GB 8.0) [Division]",
-          "Standings: Red Sox: 13-21 (PCT .382, GB 10.0) [Division]"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: league_standings unavailable."
+        ]
       },
       "league_schedule": {
         "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-04&hydrate=probablePitcher,team",
-        "status": "verified",
+        "status": "source_error",
         "debug": [
-          "games=12"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "verified_count": 12,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Probable: New York Mets (TBD) @ Colorado Rockies (Tomoyuki Sugano) \u2014 Scheduled 2026-05-04T21:40:00Z Coors Field",
-          "Probable: Boston Red Sox (Payton Tolle) @ Detroit Tigers (Tarik Skubal) \u2014 Scheduled 2026-05-04T22:40:00Z Comerica Park",
-          "Probable: Toronto Blue Jays (TBD) @ Tampa Bay Rays (Nick Martinez) \u2014 Scheduled 2026-05-04T22:40:00Z Tropicana Field",
-          "Probable: Philadelphia Phillies (Aaron Nola) @ Miami Marlins (Janson Junk) \u2014 Scheduled 2026-05-04T22:40:00Z loanDepot park",
-          "Probable: Baltimore Orioles (Shane Baz) @ New York Yankees (Cam Schlittler) \u2014 Scheduled 2026-05-04T23:05:00Z Yankee Stadium"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: league_schedule unavailable."
+        ]
       },
       "league_transactions": {
         "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-04-27&endDate=2026-05-04",
-        "status": "verified",
+        "status": "source_error",
         "debug": [
-          "transactions=1675"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "verified_count": 1663,
-        "unverified_count": 0,
-        "verified_sample": [
-          "League tx: 2026-04-27: FCL Orioles activated RHP Esteban Luna.",
-          "League tx: 2026-04-27: RHP Owen Geiss assigned to Tulane Green Wave.",
-          "League tx: 2026-04-27: New York Mets signed free agent LF Austin Slater.",
-          "League tx: 2026-04-27: Buffalo Bisons placed RHP Nic Enright on the full-season injured list.",
-          "League tx: 2026-04-27: RHP Nate Wochner assigned to Brigham Young Cougars."
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: league_transactions unavailable."
+        ]
       },
       "athletics_standings": {
         "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-        "status": "verified",
+        "status": "source_error",
         "debug": [
-          "rows=30"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "verified_count": 1,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Standings: Athletics: 18-16 (PCT .529, GB -) [Division]"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: athletics standings unavailable."
+        ]
       },
       "athletics_schedule": {
         "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-05-04&endDate=2026-05-06&hydrate=probablePitcher,team",
-        "status": "verified",
+        "status": "source_error",
         "debug": [
-          "games=2"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "verified_count": 2,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Probable: Athletics (Luis Severino) @ Philadelphia Phillies (TBD) \u2014 Scheduled 2026-05-05T22:40:00Z Citizens Bank Park",
-          "Probable: Athletics (Jeffrey Springs) @ Philadelphia Phillies (TBD) \u2014 Scheduled 2026-05-06T22:40:00Z Citizens Bank Park"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: athletics_schedule unavailable."
+        ]
       },
       "athletics_transactions": {
         "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-04-27&endDate=2026-05-04",
-        "status": "verified",
+        "status": "source_error",
         "debug": [
-          "transactions=7"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "verified_count": 7,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Athletics tx: 2026-04-28: Athletics placed 3B Max Muncy on the 10-day injured list retroactive to April 26, 2026. Left fifth metacarpal fracture.",
-          "Athletics tx: 2026-04-28: Athletics recalled 3B Brett Harris from Las Vegas Aviators.",
-          "Athletics tx: 2026-04-30: New York Mets claimed 2B Andy Ib\u00e1\u00f1ez off waivers from Athletics.",
-          "Athletics tx: 2026-05-02: Athletics optioned LHP Brady Basso to Las Vegas Aviators.",
-          "Athletics tx: 2026-05-02: Athletics recalled RHP Luis Morales from Las Vegas Aviators."
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: athletics_transactions unavailable."
+        ]
       },
       "rockies_standings": {
         "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-        "status": "verified",
+        "status": "source_error",
         "debug": [
-          "rows=30"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "verified_count": 1,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Standings: Rockies: 14-21 (PCT .400, GB 7.5) [Division]"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: rockies standings unavailable."
+        ]
       },
       "rockies_schedule": {
         "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-05-04&endDate=2026-05-06&hydrate=probablePitcher,team",
-        "status": "verified",
+        "status": "source_error",
         "debug": [
-          "games=3"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "verified_count": 3,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Probable: New York Mets (TBD) @ Colorado Rockies (Tomoyuki Sugano) \u2014 Scheduled 2026-05-04T21:40:00Z Coors Field",
-          "Probable: New York Mets (Freddy Peralta) @ Colorado Rockies (Michael Lorenzen) \u2014 Scheduled 2026-05-06T00:40:00Z Coors Field",
-          "Probable: New York Mets (Christian Scott) @ Colorado Rockies (Jose Quintana) \u2014 Scheduled 2026-05-06T19:10:00Z Coors Field"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: rockies_schedule unavailable."
+        ]
       },
       "rockies_transactions": {
         "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-04-27&endDate=2026-05-04",
-        "status": "verified",
+        "status": "source_error",
         "debug": [
-          "transactions=10"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "verified_count": 10,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Colorado Rockies tx: 2026-04-27: Colorado Rockies activated RHP Jimmy Herget from the restricted list.",
-          "Colorado Rockies tx: 2026-04-27: St. Louis Cardinals claimed LHP Luis Peralta off waivers from Colorado Rockies.",
-          "Colorado Rockies tx: 2026-04-27: Colorado Rockies optioned RHP Seth Halvorsen to Albuquerque Isotopes.",
-          "Colorado Rockies tx: 2026-04-27: Colorado Rockies optioned LHP Sammy Peralta to Albuquerque Isotopes.",
-          "Colorado Rockies tx: 2026-04-27: Colorado Rockies optioned RHP Blas Casta\u00f1o to Albuquerque Isotopes."
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: rockies_transactions unavailable."
+        ]
       },
       "tigers_standings": {
         "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-        "status": "verified",
+        "status": "source_error",
         "debug": [
-          "rows=30"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "verified_count": 1,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Standings: Tigers: 17-17 (PCT .500, GB 0.5) [Division]"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: tigers standings unavailable."
+        ]
       },
       "tigers_schedule": {
         "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-05-04&endDate=2026-05-06&hydrate=probablePitcher,team",
-        "status": "verified",
+        "status": "source_error",
         "debug": [
-          "games=3"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "verified_count": 3,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Probable: Boston Red Sox (Payton Tolle) @ Detroit Tigers (Tarik Skubal) \u2014 Scheduled 2026-05-04T22:40:00Z Comerica Park",
-          "Probable: Boston Red Sox (Brayan Bello) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-05-05T22:40:00Z Comerica Park",
-          "Probable: Boston Red Sox (TBD) @ Detroit Tigers (Jack Flaherty) \u2014 Scheduled 2026-05-06T22:40:00Z Comerica Park"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: tigers_schedule unavailable."
+        ]
       },
       "tigers_transactions": {
         "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-04-27&endDate=2026-05-04",
-        "status": "verified",
+        "status": "source_error",
         "debug": [
-          "transactions=15"
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "verified_count": 15,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Detroit Tigers tx: 2026-04-29: Detroit Tigers placed RHP Casey Mize on the 15-day injured list. Right adductor strain.",
-          "Detroit Tigers tx: 2026-04-29: Detroit Tigers placed SS Javier B\u00e1ez on the 10-day injured list. Right ankle sprain.",
-          "Detroit Tigers tx: 2026-04-29: Detroit Tigers recalled 3B Jace Jung from Toledo Mud Hens.",
-          "Detroit Tigers tx: 2026-04-29: Detroit Tigers recalled LHP Enmanuel De Jesus from Toledo Mud Hens.",
-          "Detroit Tigers tx: 2026-04-30: Detroit Tigers sent 2B Zach McKinstry on a rehab assignment to Lakeland Flying Tigers."
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: tigers_transactions unavailable."
+        ]
+      },
+      "league_news": {
+        "url": "https://www.mlb.com/feeds/news/rss.xml",
+        "status": "source_error",
+        "debug": [
+          "url_error: Tunnel connection failed: 403 Forbidden"
         ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: league_news unavailable."
+        ]
       }
     },
-    "generated_utc": "2026-05-04T00:04:04Z"
+    "generated_utc": "2026-05-04T02:59:54Z"
   }
 }

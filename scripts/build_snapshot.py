@@ -16,6 +16,8 @@ import logging
 import urllib.error
 import urllib.parse
 import urllib.request
+import email.utils
+import xml.etree.ElementTree as ET
 
 DATA_DIR = Path("data")
 UNVERIFIED = "UNVERIFIED:"
@@ -67,6 +69,22 @@ def _fetch_json(url: str, timeout: int = 30) -> tuple[Any | None, str | None]:
         return None, f"unexpected_error: {type(exc).__name__}: {exc}"
 
 
+
+
+def _fetch_text(url: str, timeout: int = 30) -> tuple[str | None, str | None]:
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/rss+xml, application/xml, text/xml, text/plain"})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            raw = resp.read()
+            return raw.decode("utf-8", errors="replace"), None
+    except urllib.error.HTTPError as e:
+        return None, f"http_error: {e.code} {e.reason}"
+    except urllib.error.URLError as e:
+        return None, f"url_error: {e.reason}"
+    except (TimeoutError, ConnectionError) as e:
+        return None, f"connection_error: {e}"
+    except Exception as exc:  # noqa: BLE001
+        return None, f"unexpected_error: {type(exc).__name__}: {exc}"
 # ---------------------------- parsers (pure) ----------------------------
 
 def parse_standings(payload: Any, url: str, team_id: int | None = None) -> SourceResult:
@@ -186,6 +204,46 @@ def parse_transactions(payload: Any, url: str, label: str) -> SourceResult:
     )
 
 
+
+
+def _parse_pubdate(value: str) -> str | None:
+    try:
+        dt = email.utils.parsedate_to_datetime(value)
+        if dt is None:
+            return None
+        return dt.astimezone(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+    except Exception:
+        return None
+
+
+def parse_news_feed(xml_text: str | None, url: str, limit: int = 12) -> tuple[list[dict[str, str]], SourceResult]:
+    if not isinstance(xml_text, str) or not xml_text.strip():
+        return [], SourceResult(url, "unverified", unverified=[f"{UNVERIFIED} News feed response was empty."], debug=["empty_response"])
+    try:
+        root = ET.fromstring(xml_text)
+    except ET.ParseError as e:
+        return [], SourceResult(url, "source_error", unverified=[f"{UNVERIFIED} News feed parse failed."], debug=[f"xml_parse_error: {e}"])
+
+    items = []
+    for item in root.findall('.//item'):
+        title = (item.findtext('title') or '').strip()
+        link = (item.findtext('link') or '').strip()
+        source = (item.findtext('source') or 'MLB.com').strip()
+        pub = _parse_pubdate((item.findtext('pubDate') or '').strip())
+        if not title or not link:
+            continue
+        items.append({
+            'headline': title,
+            'url': link,
+            'source': source or 'MLB.com',
+            'published_at': pub or '',
+        })
+        if len(items) >= limit:
+            break
+
+    if items:
+        return items, SourceResult(url, "verified", verified=[f"News items: {len(items)}"], debug=[f"items={len(items)}"])
+    return [], SourceResult(url, "unverified", unverified=[f"{UNVERIFIED} No MLB news items in feed."], debug=["items=0"])
 # ---------------------------- builder ----------------------------
 
 def _today_utc() -> datetime:
@@ -203,6 +261,7 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
     tx_start, tx_end = _date_window(days_back=7)
 
     sources: dict[str, str] = {
+        "league_news": "https://www.mlb.com/feeds/news/rss.xml",
         "league_standings": f"{STATS_BASE}/standings?leagueId={LEAGUE_IDS}&season={season}",
         "league_schedule": f"{STATS_BASE}/schedule?sportId=1&date={today}&hydrate=probablePitcher,team",
         "league_transactions": f"{STATS_BASE}/transactions?startDate={tx_start}&endDate={tx_end}",
@@ -308,6 +367,19 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
             },
         }
 
+    news_items: list[dict[str, str]] = []
+    news_payload, news_err = _fetch_text(sources["league_news"])
+    if news_err:
+        news_res = SourceResult(
+            sources["league_news"],
+            "source_error",
+            unverified=[f"{UNVERIFIED} league_news unavailable."],
+            debug=[news_err],
+        )
+    else:
+        news_items, news_res = parse_news_feed(news_payload, sources["league_news"])
+    _store_health("league_news", news_res)
+
     now = _today_utc()
     league_tx = (lg_tx.verified if lg_tx.verified else lg_tx.unverified)[:LEAGUE_TX_LIMIT]
     return {
@@ -315,6 +387,8 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
         "schema_version": SCHEMA_VERSION,
         "sources": sources,
         "source_status": {k: v["status"] for k, v in source_health.items()},
+        "news": news_items,
+        "news_status": news_res.status,
         "league": {
             "headline": "League snapshot from MLB Stats API.",
             "verified_notes": lg_stand.verified[:8] + lg_sched.verified[:6],
