@@ -4,7 +4,8 @@ on:
   schedule:
     # Nightly at 03:15 UTC.
     - cron: "15 3 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    # Allow manual runs from Actions UI for out-of-band snapshot refreshes.
 
 permissions:
   contents: write
