@@ -165,7 +165,7 @@ class BuilderTests(unittest.TestCase):
                 return sched, None
             if "transactions" in url:
                 return tx, None
-            return None, "unmapped_url"
+            raise AssertionError(f"Unexpected test URL: {url}")
 
         return fetch
 
@@ -270,7 +270,7 @@ class BuilderTests(unittest.TestCase):
                 return empty_tx, None
             if "transactions" in url:
                 return many_tx, None
-            return None, "unmapped_url"
+            raise AssertionError(f"Unexpected test URL: {url}")
 
         snap = b.build_snapshot(fetch=fetch)
         self.assertEqual(len(snap["league"]["transactions"]), b.LEAGUE_TX_LIMIT)
