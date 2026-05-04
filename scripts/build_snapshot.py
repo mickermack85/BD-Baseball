@@ -204,6 +204,58 @@ def parse_transactions(payload: Any, url: str, label: str) -> SourceResult:
     )
 
 
+def _normalize_game_status(status: str, coded: str) -> str:
+    raw = f"{status} {coded}".lower()
+    if "postpon" in raw:
+        return "Postponed"
+    if any(x in raw for x in ["final", "game over", "completed"]):
+        return "Final"
+    if any(x in raw for x in ["in progress", "live", "manager challenge", "review"]):
+        return "Live"
+    return "Upcoming"
+
+
+def normalize_scoreboard_games(payload: Any) -> list[dict[str, Any]]:
+    if not isinstance(payload, dict):
+        return []
+    games: list[dict[str, Any]] = []
+    for date_block in payload.get("dates") or []:
+        for g in date_block.get("games") or []:
+            teams = g.get("teams") or {}
+            away = (teams.get("away") or {})
+            home = (teams.get("home") or {})
+            away_team = (away.get("team") or {})
+            home_team = (home.get("team") or {})
+            linescore = g.get("linescore") or {}
+            status = g.get("status") or {}
+            status_detail = status.get("detailedState") or status.get("abstractGameState") or ""
+            state = _normalize_game_status(status_detail, status.get("codedGameState") or "")
+            broadcasts = []
+            for bc in g.get("broadcasts") or []:
+                name = bc.get("name") or bc.get("callSign") or ""
+                if name:
+                    broadcasts.append(name)
+            games.append({
+                "id": str(g.get("gamePk") or ""),
+                "away_team": away_team.get("name") or "",
+                "home_team": home_team.get("name") or "",
+                "away_score": away.get("score"),
+                "home_score": home.get("score"),
+                "status": state,
+                "status_detail": status_detail,
+                "inning": linescore.get("currentInning"),
+                "inning_state": linescore.get("inningState") or "",
+                "start_time": g.get("gameDate") or "",
+                "venue": (g.get("venue") or {}).get("name") or "",
+                "probable_pitchers": {
+                    "away": ((away.get("probablePitcher") or {}).get("fullName")) or "TBD",
+                    "home": ((home.get("probablePitcher") or {}).get("fullName")) or "TBD",
+                },
+                "broadcasts": broadcasts,
+            })
+    return games
+
+
 
 
 
@@ -360,6 +412,8 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
 
     lg_stand = _run("league_standings", parse_standings, None)
     lg_sched = _run("league_schedule", parse_schedule, None)
+    scoreboard_payload, scoreboard_err = fetch(sources["league_schedule"])
+    scoreboard_games = [] if scoreboard_err else normalize_scoreboard_games(scoreboard_payload)
     lg_tx = _run("league_transactions", parse_transactions, "League")
 
     teams_out: dict[str, Any] = {}
@@ -416,7 +470,7 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
         }
 
     def _build_news_lane(lane_key: str, source_key: str) -> dict[str, Any]:
-        news_payload, news_err = _fetch_text(sources[source_key])
+        news_payload, news_err = fetch(sources[source_key])
         if news_err:
             res = SourceResult(sources[source_key], "source_error", unverified=[f"{UNVERIFIED} {lane_key} unavailable."], debug=[news_err])
             items: list[dict[str, str]] = []
@@ -447,7 +501,7 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
     ]
     normalized_items = []
     for idx, (url, source_key) in enumerate(curated, start=1):
-        xml_text, err = _fetch_text(url)
+        xml_text, err = fetch(url)
         health_key = f"curated_news_{source_key}"
         if err:
             res = SourceResult(url, "source_error", unverified=[f"{UNVERIFIED} {source_key} unavailable."], debug=[err])
@@ -478,6 +532,7 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
         "sources": sources,
         "source_status": {k: v["status"] for k, v in source_health.items()},
         "news": {"league_news": league_news_lane, "teams": team_news, "news_items": normalized_items},
+        "scoreboard": {"games": scoreboard_games},
         "news_status": {"league_news": league_news_lane["source_health"]["status"], "teams": {k: v["source_health"]["status"] for k,v in team_news.items()}},
         "league": {
             "headline": "League snapshot from MLB Stats API.",

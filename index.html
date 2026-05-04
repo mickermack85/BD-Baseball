@@ -106,6 +106,7 @@
         <button id="tab-show-prep" class="tab-btn" role="tab" aria-selected="true" aria-controls="panel-show-prep">Show Prep</button>
         <button id="tab-reference" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-reference">League / Team Reference</button>
         <button id="tab-bets" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-bets">BD Bets</button>
+        <button id="tab-scoreboard" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-scoreboard">Scoreboard</button>
         <button id="tab-news" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-news">News</button>
       </div>
     </div></main></header>
@@ -228,6 +229,14 @@
           <label>Sort <select id="newsSort"><option value="newest">Newest</option><option value="relevance">Relevance</option></select></label>
         </div>
         <div id="newsList"></div>
+      </div>
+    </section>
+
+    <section id="panel-scoreboard" class="tab-panel" role="tabpanel" aria-labelledby="tab-scoreboard">
+      <div class="card">
+        <h2>Scoreboard</h2>
+        <p class="muted">Today's games from snapshot with watchlist pinning and related news tags.</p>
+        <div id="scoreboardBuckets" class="news-grid"></div>
       </div>
     </section>
   </main>
