@@ -21,7 +21,7 @@ import xml.etree.ElementTree as ET
 
 DATA_DIR = Path("data")
 UNVERIFIED = "UNVERIFIED:"
-SCHEMA_VERSION = "3.1"
+SCHEMA_VERSION = "3.2"
 # Trim raw per-lane note arrays in `debug.source_health` so the snapshot
 # stays small. The frontend only needs the summary (status + debug counters
 # + a handful of sample lines for source-debug spot checks).
@@ -206,6 +206,48 @@ def parse_transactions(payload: Any, url: str, label: str) -> SourceResult:
 
 
 
+
+
+TEAM_ALIASES = {
+    "athletics": ["athletics", "a's", "as", "oakland", "sacramento"],
+    "rockies": ["rockies", "colorado", "rox"],
+    "tigers": ["tigers", "detroit"],
+    "dodgers": ["dodgers", "los angeles dodgers", "la dodgers"],
+    "yankees": ["yankees", "new york yankees", "bronx bombers"],
+    "mets": ["mets", "new york mets"],
+    "red sox": ["red sox", "boston"],
+    "cubs": ["cubs", "chicago cubs", "north siders"],
+    "white sox": ["white sox", "chicago white sox"],
+    "giants": ["giants", "san francisco"],
+    "padres": ["padres", "san diego"],
+    "angels": ["angels", "los angeles angels"],
+    "mariners": ["mariners", "seattle"],
+    "rangers": ["rangers", "texas"],
+    "astros": ["astros", "houston"],
+    "braves": ["braves", "atlanta"],
+    "phillies": ["phillies", "philadelphia"],
+    "nationals": ["nationals", "washington"],
+    "orioles": ["orioles", "baltimore"],
+    "blue jays": ["blue jays", "toronto"],
+    "rays": ["rays", "tampa bay"],
+    "twins": ["twins", "minnesota"],
+    "guardians": ["guardians", "cleveland"],
+    "royals": ["royals", "kansas city"],
+    "brewers": ["brewers", "milwaukee"],
+    "cardinals": ["cardinals", "st. louis", "st louis"],
+    "reds": ["reds", "cincinnati"],
+    "pirates": ["pirates", "pittsburgh"],
+    "diamondbacks": ["diamondbacks", "d-backs", "arizona"],
+    "marlins": ["marlins", "miami"],
+}
+
+def _tag_teams(*texts: str) -> list[str]:
+    hay = " ".join((t or "") for t in texts).lower()
+    found = []
+    for team, aliases in TEAM_ALIASES.items():
+        if any(a in hay for a in aliases):
+            found.append(team)
+    return sorted(set(found))
 def _parse_pubdate(value: str) -> str | None:
     try:
         dt = email.utils.parsedate_to_datetime(value)
@@ -232,11 +274,14 @@ def parse_news_feed(xml_text: str | None, url: str, limit: int = 12) -> tuple[li
         pub = _parse_pubdate((item.findtext('pubDate') or '').strip())
         if not title or not link:
             continue
+        summary = (item.findtext('description') or '').strip()
         items.append({
             'headline': title,
             'url': link,
             'source': source or 'MLB.com',
+            'source_type': 'rss',
             'published_at': pub or '',
+            'summary': summary,
         })
         if len(items) >= limit:
             break
@@ -395,6 +440,36 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
         "rockies": _build_news_lane("rockies", "rockies_news"),
     }
 
+    curated = [
+        ("https://www.mlb.com/news/rss.xml", "mlb_com"),
+        ("https://www.espn.com/espn/rss/mlb/news", "espn"),
+        ("https://sports.yahoo.com/mlb/rss.xml", "yahoo_sports"),
+    ]
+    normalized_items = []
+    for idx, (url, source_key) in enumerate(curated, start=1):
+        xml_text, err = _fetch_text(url)
+        health_key = f"curated_news_{source_key}"
+        if err:
+            res = SourceResult(url, "source_error", unverified=[f"{UNVERIFIED} {source_key} unavailable."], debug=[err])
+            items = []
+        else:
+            items, res = parse_news_feed(xml_text, url, limit=8)
+        _store_health(health_key, res)
+        for j, item in enumerate(items, start=1):
+            normalized_items.append({
+                "id": f"{source_key}-{idx}-{j}",
+                "headline": item.get("headline", ""),
+                "url": item.get("url", ""),
+                "source": item.get("source", source_key),
+                "source_type": item.get("source_type", "rss"),
+                "published_at": item.get("published_at", ""),
+                "summary": item.get("summary", ""),
+                "teams": _tag_teams(item.get("headline", ""), item.get("summary", "")),
+                "players": [],
+                "topics": ["mlb"],
+                "priority": 1 if source_key == "mlb_com" else 2,
+            })
+    normalized_items.sort(key=lambda x: x.get("published_at", ""), reverse=True)
     now = _today_utc()
     league_tx = (lg_tx.verified if lg_tx.verified else lg_tx.unverified)[:LEAGUE_TX_LIMIT]
     return {
@@ -402,7 +477,7 @@ def build_snapshot(fetch: Callable[[str], tuple[Any | None, str | None]] = _fetc
         "schema_version": SCHEMA_VERSION,
         "sources": sources,
         "source_status": {k: v["status"] for k, v in source_health.items()},
-        "news": {"league_news": league_news_lane, "teams": team_news},
+        "news": {"league_news": league_news_lane, "teams": team_news, "news_items": normalized_items},
         "news_status": {"league_news": league_news_lane["source_health"]["status"], "teams": {k: v["source_health"]["status"] for k,v in team_news.items()}},
         "league": {
             "headline": "League snapshot from MLB Stats API.",

@@ -739,32 +739,42 @@ function renderReferenceAndBets(data) {
 
   const newsRoot = el('newsList');
   const newsStatus = el('newsStatus');
+  const teamFilter = el('newsTeamFilter');
+  const sourceFilter = el('newsSourceFilter');
+  const sortFilter = el('newsSort');
   if (newsRoot) while (newsRoot.firstChild) newsRoot.removeChild(newsRoot.firstChild);
   const news = (data && data.news) || {};
-  const lanes = [
-    { key: 'league_news', label: 'MLB League-wide', data: news.league_news || { items: Array.isArray(data.news)?data.news:[], source_health: { status: data.news_status || 'unverified' } } },
-    { key: 'athletics', label: 'Athletics', data: ((news.teams||{}).athletics) || { items: [], source_health: { status: 'unverified' } } },
-    { key: 'tigers', label: 'Detroit Tigers', data: ((news.teams||{}).tigers) || { items: [], source_health: { status: 'unverified' } } },
-    { key: 'rockies', label: 'Colorado Rockies', data: ((news.teams||{}).rockies) || { items: [], source_health: { status: 'unverified' } } },
-  ];
-  if (newsStatus) newsStatus.textContent = 'League + team RSS lanes from snapshot.';
-  const grid = makeEl('div','news-grid');
-  lanes.forEach((lane)=>{
-    const card = makeEl('section','news-card');
-    card.appendChild(makeEl('h3',null,lane.label));
-    card.appendChild(statusPill((lane.data.source_health||{}).status));
-    const items = Array.isArray(lane.data.items) ? lane.data.items : [];
-    if (!items.length) card.appendChild(makeEl('p','muted','No items in this lane.'));
-    items.slice(0,10).forEach((item)=>{
+  const items = Array.isArray(news.news_items) ? news.news_items : [];
+  const teams = ['all', ...new Set(items.flatMap((x) => x.teams || []))];
+  const sources = ['all', ...new Set(items.map((x) => x.source || 'unknown'))];
+  function refill(sel, vals) {
+    if (!sel) return;
+    while (sel.firstChild) sel.removeChild(sel.firstChild);
+    vals.forEach((v) => { const o = document.createElement('option'); o.value=v; o.textContent=v; sel.appendChild(o); });
+  }
+  refill(teamFilter, teams); refill(sourceFilter, sources);
+  if (newsStatus) newsStatus.textContent = 'All-news feed with team/source filters.';
+  const renderNews = () => {
+    if (!newsRoot) return;
+    while (newsRoot.firstChild) newsRoot.removeChild(newsRoot.firstChild);
+    const teamV = teamFilter ? teamFilter.value : 'all';
+    const srcV = sourceFilter ? sourceFilter.value : 'all';
+    const sortV = sortFilter ? sortFilter.value : 'newest';
+    let filtered = items.filter((it) => (teamV === 'all' || (it.teams || []).includes(teamV)) && (srcV === 'all' || (it.source||'unknown') === srcV));
+    filtered.sort((a,b)=> sortV==='relevance' ? (a.priority||99)-(b.priority||99) : String(b.published_at||'').localeCompare(String(a.published_at||'')));
+    if (!filtered.length) newsRoot.appendChild(makeEl('p','muted','No news items for selected filters.'));
+    filtered.slice(0,50).forEach((item)=>{
       const row = makeEl('div','news-item');
       const a = makeEl('a',null,cleanFeedText(item.headline||'Untitled')); a.href=item.url||'#'; a.target='_blank'; a.rel='noopener noreferrer';
       row.appendChild(a);
-      row.appendChild(makeEl('div','muted',(item.source||'MLB.com')+' • '+relativeTime(item.published_at)));
-      card.appendChild(row);
+      row.appendChild(makeEl('div','muted',(item.source||'unknown')+' • '+relativeTime(item.published_at)+' • teams: '+((item.teams||[]).join(', ')||'none')));
+      newsRoot.appendChild(row);
     });
-    grid.appendChild(card);
-  });
-  if (newsRoot) newsRoot.appendChild(grid);
+  };
+  if (teamFilter) teamFilter.onchange = renderNews;
+  if (sourceFilter) sourceFilter.onchange = renderNews;
+  if (sortFilter) sortFilter.onchange = renderNews;
+  renderNews();
 }
 
 
