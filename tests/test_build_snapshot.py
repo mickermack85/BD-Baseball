@@ -295,12 +295,12 @@ class BuilderTests(unittest.TestCase):
             self.assertIn("source_health", teams[lane])
 
     def test_builder_team_news_source_error(self) -> None:
-        def fetch(url: str):
+        def fetch_text(url: str):
             if "athletics/feeds/news/rss.xml" in url:
                 return "<rss>", None
             return self._fake_fetch()(url)
 
-        snap = b.build_snapshot(fetch=fetch)
+        snap = b.build_snapshot(fetch=self._fake_fetch(), fetch_text=fetch_text)
         self.assertEqual(snap["news"]["teams"]["athletics"]["source_health"]["status"], "source_error")
 
 
