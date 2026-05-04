@@ -90,6 +90,15 @@ def _transactions_payload() -> dict:
     }
 
 
+
+
+def _news_xml() -> str:
+    return """<?xml version="1.0" encoding="UTF-8"?>
+    <rss><channel>
+      <item><title>MLB headline one</title><link>https://www.mlb.com/news/one</link><pubDate>Mon, 04 May 2026 12:00:00 GMT</pubDate><source>MLB.com</source></item>
+      <item><title>MLB headline two</title><link>https://www.mlb.com/news/two</link><pubDate>Mon, 04 May 2026 13:00:00 GMT</pubDate></item>
+    </channel></rss>
+    """
 class ParserTests(unittest.TestCase):
     def test_parse_standings_league(self) -> None:
         res = b.parse_standings(_standings_payload(), "https://x")
@@ -129,6 +138,18 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(res.status, "unverified")
 
 
+
+    def test_parse_news_feed(self) -> None:
+        items, res = b.parse_news_feed(_news_xml(), "https://x")
+        self.assertEqual(res.status, "verified")
+        self.assertEqual(len(items), 2)
+        self.assertEqual(items[0]["source"], "MLB.com")
+
+    def test_parse_news_feed_bad_xml(self) -> None:
+        items, res = b.parse_news_feed("<rss>", "https://x")
+        self.assertEqual(items, [])
+        self.assertEqual(res.status, "source_error")
+
 class BuilderTests(unittest.TestCase):
     def _fake_fetch(self):
         std = _standings_payload()
@@ -136,6 +157,8 @@ class BuilderTests(unittest.TestCase):
         tx = _transactions_payload()
 
         def fetch(url: str):
+            if "rss.xml" in url:
+                return _news_xml(), None
             if "standings" in url:
                 return std, None
             if "schedule" in url:
@@ -148,6 +171,8 @@ class BuilderTests(unittest.TestCase):
 
     def _fake_fetch_with_error(self):
         def fetch(url: str):
+            if "rss.xml" in url:
+                return _news_xml(), None
             if "transactions" in url:
                 return None, "http_error: 503 Service Unavailable"
             return self._fake_fetch()(url)
@@ -161,6 +186,8 @@ class BuilderTests(unittest.TestCase):
             "schema_version",
             "sources",
             "source_status",
+            "news",
+            "news_status",
             "league",
             "teams",
             "debug",
@@ -231,6 +258,8 @@ class BuilderTests(unittest.TestCase):
         empty_tx = _transactions_payload()
 
         def fetch(url: str):
+            if "rss.xml" in url:
+                return _news_xml(), None
             if "standings" in url:
                 return std, None
             if "schedule" in url:
