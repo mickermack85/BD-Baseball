@@ -3,8 +3,8 @@
 The service worker is small enough that a JS runtime isn't worth pulling in;
 these stdlib tests assert the invariants we care about: cache version is
 bumped on each strategy change, the snapshot has its own data cache with a
-network timeout, and the snapshot path is handled via stale-while-revalidate
-rather than naive network-only.
+network timeout, and the snapshot path is handled via network-first with timeout
+and cache fallback for offline resilience.
 """
 from __future__ import annotations
 
@@ -37,8 +37,8 @@ class ServiceWorkerStaticTests(unittest.TestCase):
         self.assertGreaterEqual(ms, 1000, "timeout too aggressive (<1s)")
         self.assertLessEqual(ms, 10000, "timeout too lenient (>10s)")
 
-    def test_latest_json_uses_stale_while_revalidate(self) -> None:
-        # Stale-while-revalidate fingerprint: serve cached, then revalidate.
+    def test_latest_json_uses_network_first_timeout_fallback(self) -> None:
+        # Network-first fingerprint: try timed network first, then cache fallback.
         self.assertIn("LATEST_PATH", SW)
         self.assertIn("handleLatestJson", SW)
         # The handler should consult the cache before deciding to wait on
@@ -47,7 +47,10 @@ class ServiceWorkerStaticTests(unittest.TestCase):
         net_pos = SW.find("fetchWithTimeout(event.request, NETWORK_TIMEOUT_MS)")
         self.assertGreater(cache_pos, 0, "cache.match for snapshot missing")
         self.assertGreater(net_pos, 0, "timed network fetch missing")
-        self.assertLess(cache_pos, net_pos, "cache lookup should precede network in SWR")
+        self.assertLess(net_pos, cache_pos, "network fetch should precede cache fallback in network-first")
+        self.assertIn("X-BD-Snapshot-Source", SW)
+        self.assertIn("cache-fallback", SW)
+        self.assertIn("unavailable", SW)
 
     def test_static_assets_cache_first(self) -> None:
         # Show-day shell load must not block on the network.

@@ -1,10 +1,8 @@
 // BD Baseball Show Prep service worker.
 // Strategy:
 //  - Static shell assets: cache-first (fast show-day loads).
-//  - /data/latest.json: stale-while-revalidate with a network timeout so
-//    flaky Wi-Fi falls back to the cached snapshot quickly instead of
-//    hanging the page.
-const CACHE_VERSION = 'bd-baseball-v7';
+//  - /data/latest.json: network-first with timeout, then cache fallback.
+const CACHE_VERSION = 'bd-baseball-v9';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const LATEST_PATH = '/data/latest.json';
@@ -42,36 +40,31 @@ function fetchWithTimeout(request, timeoutMs) {
   return new Promise((resolve, reject) => {
     const timer = setTimeout(() => reject(new Error('network timeout')), timeoutMs);
     fetch(request).then((res) => { clearTimeout(timer); resolve(res); },
-                       (err) => { clearTimeout(timer); reject(err); });
+      (err) => { clearTimeout(timer); reject(err); });
   });
 }
 
-// Stale-while-revalidate for the snapshot: serve cached copy immediately if
-// present, kick off a network refresh in the background. If no cache yet,
-// race the network against the timeout and surface whatever we can.
+function withSnapshotSourceHeader(response, source) {
+  const headers = new Headers(response.headers);
+  headers.set('X-BD-Snapshot-Source', source);
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+}
+
 function handleLatestJson(event) {
   event.respondWith((async () => {
     const cache = await caches.open(DATA_CACHE);
-    const cached = await cache.match(LATEST_PATH);
-    const networkPromise = fetchWithTimeout(event.request, NETWORK_TIMEOUT_MS)
-      .then((response) => {
-        if (response && response.ok) {
-          cache.put(LATEST_PATH, response.clone()).catch(() => {});
-        }
-        return response;
-      })
-      .catch(() => null);
-
-    if (cached) {
-      event.waitUntil(networkPromise);
-      return cached;
+    try {
+      const fresh = await fetchWithTimeout(event.request, NETWORK_TIMEOUT_MS);
+      if (fresh && fresh.ok) cache.put(LATEST_PATH, fresh.clone()).catch(() => {});
+      return withSnapshotSourceHeader(fresh, 'network');
+    } catch (_) {
+      const cached = await cache.match(event.request) || await cache.match(LATEST_PATH);
+      if (cached) return withSnapshotSourceHeader(cached, 'cache-fallback');
+      return new Response(JSON.stringify({ error: 'snapshot unavailable' }), {
+        status: 503,
+        headers: { 'Content-Type': 'application/json', 'X-BD-Snapshot-Source': 'unavailable' }
+      });
     }
-    const fresh = await networkPromise;
-    if (fresh) return fresh;
-    return new Response(JSON.stringify({ error: 'snapshot unavailable' }), {
-      status: 503,
-      headers: { 'Content-Type': 'application/json' }
-    });
   })());
 }
 
@@ -85,7 +78,6 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Cache-first for shell assets, network fallthrough for everything else.
   event.respondWith(
     caches.match(event.request).then((cached) => {
       if (cached) return cached;

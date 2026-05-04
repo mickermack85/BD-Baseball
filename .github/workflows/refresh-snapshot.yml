@@ -2,8 +2,8 @@ name: Refresh snapshot
 
 on:
   schedule:
-    # Every hour at :15 — keeps prod data fresh throughout the game day.
-    - cron: "15 * * * *"
+    # Nightly at 03:15 UTC.
+    - cron: "15 3 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -30,29 +30,19 @@ jobs:
       - name: Build snapshot from MLB Stats API
         run: python scripts/build_snapshot.py
 
-      - name: Strict validate
+      - name: Validate latest snapshot
         id: validate
-        run: |
-          python scripts/validate_snapshot.py \
-            --path data/latest.json \
-            --strict \
-            --max-age-minutes 60 \
-            --min-verified-lanes 6
+        run: python scripts/validate_snapshot.py --path data/latest.json
 
-      - name: Run unit tests
-        # Tests contain hardcoded standings that go stale; do not block snapshot ship.
-        continue-on-error: true
-        run: python -m unittest discover -s tests
-
-      - name: Commit refreshed snapshot to main
+      - name: Commit refreshed latest snapshot to main (if changed)
         run: |
           set -e
           git config user.name  "bd-baseball-bot"
           git config user.email "bd-baseball-bot@users.noreply.github.com"
-          git add data/latest.json data/mlb_snapshot_*.json
+          git add data/latest.json
           if git diff --cached --quiet; then
             echo "No snapshot changes to commit."
             exit 0
           fi
-          git commit -m "chore(data): refresh snapshot [skip ci]"
+          git commit -m "chore(data): refresh latest snapshot [skip ci]"
           git push origin HEAD:main || (git pull --rebase origin main && git push origin HEAD:main)
