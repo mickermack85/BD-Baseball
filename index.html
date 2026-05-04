@@ -167,41 +167,43 @@
     <section id="panel-reference" class="tab-panel" role="tabpanel" aria-labelledby="tab-reference">
       <div class="card">
         <h2>League reference</h2>
-        <p class="muted">Raw verified league notes from the snapshot. Use this to spot-check anything the generator pulled.</p>
+        <p class="muted">Structured snapshot view for standings, probables, and recent moves.</p>
         <p id="leagueHeadline"></p>
-        <details open>
-          <summary>Verified notes</summary>
-          <ul id="leagueVerified"></ul>
-        </details>
+        <div class="gen-controls">
+          <label for="refTeamSelect">Team lane:</label>
+          <select id="refTeamSelect" aria-label="Select team lane for team reference"></select>
+        </div>
+        <h3>Standings</h3>
+        <div id="leagueStandings"></div>
+        <h3>Probable pitchers</h3>
+        <ul id="leagueProbables"></ul>
+        <h3>Recent transactions</h3>
+        <ul id="leagueTx"></ul>
         <details>
           <summary id="leagueUnvHeader">Unverified notes</summary>
           <ul id="leagueUnverified"></ul>
           <p id="leagueUnvEmpty" class="muted"></p>
         </details>
         <details>
-          <summary>Transactions</summary>
-          <ul id="leagueTx"></ul>
-        </details>
-        <details>
           <summary>League source health</summary>
           <div id="sourceStatus"></div>
         </details>
       </div>
-      <div id="teams"></div>
+      <div id="teamReference"></div>
     </section>
 
     <section id="panel-bets" class="tab-panel" role="tabpanel" aria-labelledby="tab-bets">
       <div class="card">
-        <h2>BD Bets <span class="badge">Static Placeholder</span></h2>
-        <p class="muted">Placeholder betting card while live odds feed is not connected.</p>
-        <p id="betsCard"></p>
+        <h2>BD Bets</h2>
+        <p class="muted">Snapshot matchup cards (no live odds integration).</p>
+        <div id="betsCard"></div>
       </div>
     </section>
 
     <section id="panel-news" class="tab-panel" role="tabpanel" aria-labelledby="tab-news">
       <div class="card">
-        <h2>News <span class="badge">Static Placeholder</span></h2>
-        <p class="muted">Placeholder baseball headlines while live news feed is not connected.</p>
+        <h2>News <span class="badge">Integration Pending</span></h2>
+        <p class="muted" id="newsStatus">News feed integration is pending.</p>
         <ul id="newsList"></ul>
       </div>
     </section>

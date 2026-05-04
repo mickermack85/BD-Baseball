@@ -68,6 +68,49 @@ function laneLabel(key) {
   return tail ? head + " " + tail : head;
 }
 
+
+function parseStandingsNote(note) {
+  if (typeof note !== "string") return null;
+  const m = /^Standings:\s+(.+?):\s+(\d+)-(\d+)\s+\(PCT\s+(\.\d+),\s+GB\s+([^\)]+)\)/i.exec(note);
+  if (!m) return null;
+  return { team: m[1], wins: Number(m[2]), losses: Number(m[3]), pct: m[4], gb: m[5] };
+}
+
+function parseProbableNote(note) {
+  if (typeof note !== "string") return null;
+  const m = /^Probable:\s+(.+?)\s+\((.*?)\)\s+@\s+(.+?)\s+\((.*?)\)\s+—\s+Scheduled\s+([^ ]+)\s+(.+)$/i.exec(note);
+  if (!m) return null;
+  return { awayTeam: m[1], awayPitcher: m[2], homeTeam: m[3], homePitcher: m[4], time: m[5], venue: m[6] };
+}
+
+function parseTransactionNote(note) {
+  if (typeof note !== "string") return null;
+  const m = /^(?:League tx|[A-Za-z .']+ tx):\s+(\d{4}-\d{2}-\d{2}):\s+(.+)$/i.exec(note);
+  if (!m) return null;
+  return { date: m[1], detail: m[2] };
+}
+
+function partitionStructuredLeague(data) {
+  const notes = ((data && data.league && data.league.verified_notes) || []);
+  return {
+    standings: notes.map(parseStandingsNote).filter(Boolean),
+    probables: notes.map(parseProbableNote).filter(Boolean),
+    transactions: ((data && data.league && data.league.transactions) || []).map(parseTransactionNote).filter(Boolean),
+  };
+}
+
+function renderStandingsTable(rootId, standings) {
+  const root = el(rootId); if (!root) return;
+  while (root.firstChild) root.removeChild(root.firstChild);
+  if (!standings.length) { root.appendChild(makeEl('p','muted','No standings rows available.')); return; }
+  const table=makeEl('table','src-table');
+  const thead=makeEl('thead'); const trh=document.createElement('tr');
+  ['Team','W','L','PCT','GB'].forEach((h)=>trh.appendChild(makeEl('th',null,h))); thead.appendChild(trh); table.appendChild(thead);
+  const tbody=makeEl('tbody');
+  standings.forEach((r)=>{const tr=document.createElement('tr'); [r.team,r.wins,r.losses,r.pct,r.gb].forEach((v)=>tr.appendChild(makeEl('td',null,v))); tbody.appendChild(tr);});
+  table.appendChild(tbody); root.appendChild(table);
+}
+
 function renderSourceHealth(rootId, data, keysFilter) {
   const root = el(rootId);
   if (!root) return;
@@ -614,22 +657,64 @@ function setupTabs() {
   activate(el('tab-show-prep') || tabs[0]);
 }
 
-function renderPlaceholders(data) {
-  const bets = (data && data.bets && data.bets.featured) || {
-    title: 'Yankees at Red Sox',
-    market: 'Moneyline',
-    pick: 'Placeholder pick: Yankees -120',
-    note: 'Static placeholder — connect odds feed for live pricing.'
-  };
-  setText('betsCard', bets.title + ' • ' + bets.market + ' • ' + bets.pick + ' — ' + bets.note);
+function renderReferenceAndBets(data) {
+  const structured = partitionStructuredLeague(data);
+  renderStandingsTable('leagueStandings', structured.standings);
+  fillList('leagueProbables', structured.probables.map((p) => (
+    p.awayTeam + ' (' + p.awayPitcher + ') @ ' + p.homeTeam + ' (' + p.homePitcher + ') — ' + p.time
+  )), 'No probable pitchers available.');
+  fillList('leagueTx', structured.transactions.slice(0, 25).map((t) => t.date + ': ' + t.detail), 'No transactions in window.');
 
-  const news = (data && Array.isArray(data.news) && data.news.length) ? data.news : [
-    'Static placeholder: Monitor lineup news before first pitch.',
-    'Static placeholder: Watch bullpen usage trends from last 3 games.',
-    'Static placeholder: Track weather/wind impact for hitter parks.'
-  ];
-  fillList('newsList', news, 'No news items available.');
+  const teamSelect = el('refTeamSelect');
+  const teamRef = el('teamReference');
+  if (teamSelect && teamRef) {
+    while (teamSelect.firstChild) teamSelect.removeChild(teamSelect.firstChild);
+    const entries = Object.entries((data && data.teams) || {});
+    entries.forEach(([key]) => {
+      const opt = document.createElement('option');
+      opt.value = key; opt.textContent = window.BDShowGenerator.TEAM_DISPLAY[key] || key;
+      teamSelect.appendChild(opt);
+    });
+    const renderTeamRef = () => {
+      while (teamRef.firstChild) teamRef.removeChild(teamRef.firstChild);
+      const k = teamSelect.value;
+      if (k && data.teams && data.teams[k]) teamRef.appendChild(renderTeam(k, data.teams[k], data));
+    };
+    teamSelect.onchange = renderTeamRef;
+    renderTeamRef();
+  }
+
+  const cardsRoot = el('betsCard');
+  if (cardsRoot) {
+    while (cardsRoot.firstChild) cardsRoot.removeChild(cardsRoot.firstChild);
+    const standingsMap = new Map(structured.standings.map((s) => [s.team, s]));
+    const watch = new Set(((data && data.league && data.league.watch) || []).map(String));
+    structured.probables.forEach((g, idx) => {
+      const card = makeEl('div', 'card');
+      card.appendChild(makeEl('h3', null, g.awayTeam + ' @ ' + g.homeTeam));
+      const awayRec = standingsMap.get(g.awayTeam); const homeRec = standingsMap.get(g.homeTeam);
+      card.appendChild(makeEl('p', 'muted',
+        (awayRec ? (awayRec.wins + '-' + awayRec.losses) : 'Record n/a') + ' vs ' + (homeRec ? (homeRec.wins + '-' + homeRec.losses) : 'Record n/a')
+      ));
+      card.appendChild(makeEl('p', null, 'Probables: ' + g.awayPitcher + ' vs ' + g.homePitcher));
+      card.appendChild(makeEl('p', null, 'Game time: ' + g.time));
+      const tags = [];
+      if (idx < 2) tags.push('Featured');
+      if (watch.has('Probable: ' + g.awayTeam + ' (' + g.awayPitcher + ') @ ' + g.homeTeam + ' (' + g.homePitcher + ') — Scheduled ' + g.time + ' ' + g.venue)) tags.push('Watchlist');
+      if (awayRec && homeRec && awayRec.gb !== '-' && homeRec.gb !== '-') tags.push('Division');
+      const tagRow = makeEl('p', 'muted', tags.join(' • '));
+      card.appendChild(tagRow);
+      cardsRoot.appendChild(card);
+    });
+    if (!structured.probables.length) cardsRoot.appendChild(makeEl('p','muted','No matchups available in snapshot.'));
+  }
+
+  const hasNews = Array.isArray(data && data.news) && data.news.length > 0;
+  const newsStatus = el('newsStatus');
+  if (newsStatus) newsStatus.textContent = hasNews ? 'News feed available from snapshot data.' : 'News feed integration is pending.';
+  fillList('newsList', hasNews ? data.news : ['No connected news feed found in repository snapshot inputs.'], 'No news items available.');
 }
+
 
 async function load() {
   try {
@@ -670,12 +755,9 @@ async function load() {
     const leagueKeys = Object.keys(data.source_status || {}).filter((k) => k.startsWith("league_"));
     renderSourceHealth("sourceStatus", data, leagueKeys);
 
-    const teams = el("teams");
-    while (teams.firstChild) teams.removeChild(teams.firstChild);
-    Object.entries(data.teams || {}).forEach(([k, v]) => teams.appendChild(renderTeam(k, v, data)));
+    renderReferenceAndBets(data);
 
     wireGeneratorControls(data);
-    renderPlaceholders(data);
   } catch (e) {
     setText("stamp", "load failed");
     setText("leagueHeadline", "UNVERIFIED: Snapshot could not be loaded.");
@@ -690,3 +772,8 @@ window.addEventListener("offline", () => setText("offline", "Offline mode: showi
 if ("serviceWorker" in navigator) { navigator.serviceWorker.register("./sw.js"); }
 setupTabs();
 load();
+
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { parseStandingsNote, parseProbableNote, parseTransactionNote, partitionStructuredLeague };
+}
