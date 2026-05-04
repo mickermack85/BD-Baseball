@@ -328,3 +328,13 @@ class SprintOneNewsTests(unittest.TestCase):
         out = b.build_snapshot(fetch=fetch)
         self.assertIn("source_status", out)
         self.assertTrue(any(k.startswith("curated_news_") for k in out["source_status"]))
+
+
+class SprintTwoScoreboardTests(unittest.TestCase):
+    def test_scoreboard_schema_present(self):
+        out = b.build_snapshot(fetch=BuilderTests()._fake_fetch())
+        self.assertIn("scoreboard", out)
+        self.assertIn("games", out["scoreboard"])
+        self.assertTrue(len(out["scoreboard"]["games"]) >= 1)
+        req = {"id", "away_team", "home_team", "away_score", "home_score", "status", "status_detail", "inning", "inning_state", "start_time", "venue", "probable_pitchers", "broadcasts"}
+        self.assertTrue(req.issubset(set(out["scoreboard"]["games"][0].keys())))

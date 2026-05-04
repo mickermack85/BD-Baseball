@@ -24,7 +24,7 @@ const sandbox = {
 };
 vm.createContext(sandbox);
 vm.runInContext(code, sandbox);
-const { parseStandingsNote, parseProbableNote, parseTransactionNote, partitionStructuredLeague } = sandbox.module.exports;
+const { parseStandingsNote, parseProbableNote, parseTransactionNote, partitionStructuredLeague, bucketGamesByStatus } = sandbox.module.exports;
 
 assert.deepStrictEqual(parseStandingsNote('Standings: Yankees: 23-11 (PCT .676, GB -) [Division]').team, 'Yankees');
 assert.deepStrictEqual(parseProbableNote('Probable: Boston Red Sox (Payton Tolle) @ Detroit Tigers (Tarik Skubal) — Scheduled 2026-05-04T22:40:00Z Comerica Park').homeTeam, 'Detroit Tigers');
@@ -32,4 +32,9 @@ assert.deepStrictEqual(parseTransactionNote('League tx: 2026-04-27: New York Met
 const p = partitionStructuredLeague({ league: { verified_notes: ['Standings: Tigers: 17-17 (PCT .500, GB 0.5) [Division]'], transactions: ['League tx: 2026-04-27: Foo.'] } });
 assert.strictEqual(p.standings.length, 1);
 assert.strictEqual(p.transactions.length, 1);
+const buckets = bucketGamesByStatus([{ status: 'Live' }, { status: 'Final' }, { status: 'Upcoming' }, { status: 'Postponed' }, { status: 'weird' }]);
+assert.strictEqual(buckets.Live.length, 1);
+assert.strictEqual(buckets.Final.length, 1);
+assert.strictEqual(buckets.Upcoming.length, 2);
+assert.strictEqual(buckets.Postponed.length, 1);
 console.log('app helper tests passed');

@@ -120,6 +120,21 @@ function classifyGameStatus(value) {
   return "upcoming";
 }
 
+function bucketGamesByStatus(games) {
+  const buckets = { Upcoming: [], Live: [], Final: [], Postponed: [] };
+  (Array.isArray(games) ? games : []).forEach((g) => {
+    const key = buckets[g.status] ? g.status : "Upcoming";
+    buckets[key].push(g);
+  });
+  return buckets;
+}
+
+function watchlistKey() { return "bd_scoreboard_watchlist"; }
+function getWatchlist() {
+  try { return new Set(JSON.parse(localStorage.getItem(watchlistKey()) || "[]")); } catch (_) { return new Set(); }
+}
+function setWatchlist(setVals) { localStorage.setItem(watchlistKey(), JSON.stringify(Array.from(setVals))); }
+
 function partitionStructuredLeague(data) {
   const notes = ((data && data.league && data.league.verified_notes) || []);
   return {
@@ -775,6 +790,41 @@ function renderReferenceAndBets(data) {
   if (sourceFilter) sourceFilter.onchange = renderNews;
   if (sortFilter) sortFilter.onchange = renderNews;
   renderNews();
+
+  const sbRoot = el('scoreboardBuckets');
+  if (sbRoot) {
+    while (sbRoot.firstChild) sbRoot.removeChild(sbRoot.firstChild);
+    const games = (data && data.scoreboard && Array.isArray(data.scoreboard.games)) ? data.scoreboard.games : [];
+    const watch = getWatchlist();
+    const buckets = bucketGamesByStatus(games);
+    Object.entries(buckets).forEach(([bucket, entries]) => {
+      const seg = makeEl('div', 'seg');
+      seg.appendChild(makeEl('h3', null, bucket + ' (' + entries.length + ')'));
+      if (!entries.length) { seg.appendChild(makeEl('p','muted','No games in this bucket.')); sbRoot.appendChild(seg); return; }
+      entries.forEach((g) => {
+        const card = makeEl('div','news-card');
+        const title = g.away_team + ' @ ' + g.home_team;
+        card.appendChild(makeEl('h4', null, title));
+        card.appendChild(makeEl('p', null, (g.away_score ?? '-') + ' - ' + (g.home_score ?? '-') + ' • ' + (g.inning_state ? (g.inning_state + ' ' + (g.inning || '')) : g.status_detail)));
+        card.appendChild(makeEl('p','muted','Probables: ' + ((g.probable_pitchers||{}).away||'TBD') + ' vs ' + ((g.probable_pitchers||{}).home||'TBD')));
+        const pinBtn = makeEl('button', 'secondary', watch.has(g.home_team) || watch.has(g.away_team) ? 'Unpin focus' : 'Pin focus');
+        pinBtn.type = 'button';
+        pinBtn.addEventListener('click', () => {
+          [g.home_team, g.away_team].forEach((t) => watch.has(t) ? watch.delete(t) : watch.add(t));
+          setWatchlist(watch);
+          renderReferenceAndBets(data);
+        });
+        card.appendChild(pinBtn);
+        const related = items.filter((it) => (it.teams || []).some((t) => t === g.home_team.toLowerCase() || t === g.away_team.toLowerCase())).slice(0, 2);
+        if (related.length) {
+          const rel = makeEl('p', 'muted', 'Related: ' + related.map((r) => r.headline).join(' • '));
+          card.appendChild(rel);
+        }
+        seg.appendChild(card);
+      });
+      sbRoot.appendChild(seg);
+    });
+  }
 }
 
 
@@ -837,5 +887,5 @@ load();
 
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { parseStandingsNote, parseProbableNote, parseTransactionNote, partitionStructuredLeague };
+  module.exports = { parseStandingsNote, parseProbableNote, parseTransactionNote, partitionStructuredLeague, bucketGamesByStatus };
 }
