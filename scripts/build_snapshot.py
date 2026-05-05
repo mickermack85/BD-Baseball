@@ -498,7 +498,7 @@ def build_snapshot(
     }
 
     curated = [
-        ("https://www.mlb.com/news/rss.xml", "mlb_com"),
+        ("https://www.mlb.com/feeds/news/rss.xml", "mlb_com"),
         ("https://www.espn.com/espn/rss/mlb/news", "espn"),
         ("https://sports.yahoo.com/mlb/rss.xml", "yahoo_sports"),
     ]
