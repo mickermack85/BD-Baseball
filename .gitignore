@@ -1,11 +1,41 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+.mcp.json
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env*.local
+.env
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# legacy python cache
 .venv/
 __pycache__/
 *.pyc
-node_modules/
-.DS_Store
-.mcp.json
-.env
-.env.*
-*.local
 .pytest_cache/
 .coverage
