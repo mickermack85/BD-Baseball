@@ -11,6 +11,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Callable
+import argparse
 import json
 import logging
 import urllib.error
@@ -18,6 +19,8 @@ import urllib.parse
 import urllib.request
 import email.utils
 import xml.etree.ElementTree as ET
+
+import bd_bets
 
 DATA_DIR = Path("data")
 UNVERIFIED = "UNVERIFIED:"
@@ -355,6 +358,9 @@ def _date_window(days_back: int = 7) -> tuple[str, str]:
 def build_snapshot(
     fetch: Callable[[str], tuple[Any | None, str | None]] = _fetch_json,
     fetch_text: Callable[[str], tuple[str | None, str | None]] = _fetch_text,
+    *,
+    bd_bets_path: str | None = None,
+    bd_bets_url: str | None = None,
 ) -> dict[str, Any]:
     today = _today_utc().date().isoformat()
     season = _today_utc().year
@@ -529,7 +535,24 @@ def build_snapshot(
     normalized_items.sort(key=lambda x: x.get("published_at", ""), reverse=True)
     now = _today_utc()
     league_tx = (lg_tx.verified if lg_tx.verified else lg_tx.unverified)[:LEAGUE_TX_LIMIT]
-    return {
+
+    bd_bets_section = bd_bets.resolve_feed(
+        path=bd_bets_path,
+        url=bd_bets_url,
+        fetch=fetch,
+    )
+    if bd_bets_section is not None:
+        source_health["bd_bets"] = {
+            "url": bd_bets_section.get("feed_url") or bd_bets_section.get("feed_path") or "",
+            "status": bd_bets_section.get("source_status") or "unverified",
+            "debug": [f"picks={len(bd_bets_section.get('picks') or [])}"],
+            "verified_count": len(bd_bets_section.get("picks") or []),
+            "unverified_count": 0,
+            "verified_sample": [],
+            "unverified_sample": [],
+        }
+
+    snap: dict[str, Any] = {
         "generated_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
         "schema_version": SCHEMA_VERSION,
         "sources": sources,
@@ -559,12 +582,30 @@ def build_snapshot(
             "generated_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         },
     }
+    if bd_bets_section is not None:
+        snap["bd_bets"] = bd_bets_section
+    return snap
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument(
+        "--bd-bets-path",
+        default=None,
+        help="Path to a local BD Bets MLB picks JSON file (overrides BD_BETS_PATH env).",
+    )
+    p.add_argument(
+        "--bd-bets-url",
+        default=None,
+        help="Public URL to a BD Bets MLB picks JSON feed (overrides BD_BETS_URL env).",
+    )
+    args = p.parse_args(argv)
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    snap = build_snapshot()
+    snap = build_snapshot(
+        bd_bets_path=args.bd_bets_path,
+        bd_bets_url=args.bd_bets_url,
+    )
     day = _today_utc().strftime("%Y-%m-%d")
     latest = DATA_DIR / "latest.json"
     dated = DATA_DIR / f"mlb_snapshot_{day}.json"
