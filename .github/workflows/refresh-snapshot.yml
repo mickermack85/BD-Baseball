@@ -29,6 +29,11 @@ jobs:
           python-version: "3.12"
 
       - name: Build snapshot from MLB Stats API
+        env:
+          # Optional: when this repo secret is set, the builder folds the BD Bets
+          # MLB picks/insights feed into the snapshot under `bd_bets`. If the
+          # secret is unset/empty the builder simply omits the section.
+          BD_BETS_URL: ${{ secrets.BD_BETS_URL }}
         run: python scripts/build_snapshot.py
 
       - name: Validate latest snapshot
