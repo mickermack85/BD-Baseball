@@ -828,6 +828,60 @@ function renderReferenceAndBets(data) {
 }
 
 
+// Render the compact "BD Bets Today" card on the Show Prep panel.
+// Editorial framing only — never wagering instructions.
+function renderBdBetsToday(data) {
+  const root = el("bdBetsToday");
+  if (!root) return;
+  while (root.firstChild) root.removeChild(root.firstChild);
+  const sec = data && data.bd_bets;
+  const status = sec && sec.source_status;
+  if (!sec) {
+    root.appendChild(makeEl("p", "muted", "No BD Bets picks connected for this slate."));
+    return;
+  }
+  if (status === "source_error") {
+    root.appendChild(makeEl(
+      "p",
+      "muted",
+      "BD Bets feed unavailable: " + (sec.source_error || "unknown error") + "."
+    ));
+    return;
+  }
+  const picks = Array.isArray(sec.picks) ? sec.picks : [];
+  if (picks.length === 0) {
+    root.appendChild(makeEl("p", "muted", "No BD Bets picks for this slate."));
+    return;
+  }
+  const meta = makeEl("p", "muted",
+    "Slate " + (sec.slate_date || "?") + " • " + picks.length +
+    " pick" + (picks.length === 1 ? "" : "s") +
+    (sec.generated_at ? " • generated " + sec.generated_at : "")
+  );
+  root.appendChild(meta);
+  picks.forEach((p) => {
+    const card = makeEl("div", "seg");
+    card.appendChild(makeEl("h3", null, p.away_team + " @ " + p.home_team));
+    const meta2 = makeEl("p", "muted",
+      p.market + " • " + (p.confidence ? p.confidence + " confidence" : "confidence n/a") +
+      (p.line ? " • line " + p.line : "") +
+      (p.edge ? " • edge " + p.edge : "")
+    );
+    card.appendChild(meta2);
+    card.appendChild(makeEl("p", null, "Pick: " + p.pick + (p.odds ? " (" + p.odds + ")" : "")));
+    if (p.model_note) card.appendChild(makeEl("p", "muted", "Model note: " + p.model_note));
+    if (p.status && p.status !== "open") card.appendChild(makeEl("p", "muted", "Status: " + p.status));
+    root.appendChild(card);
+  });
+  const insights = Array.isArray(sec.insights) ? sec.insights.filter((s) => s) : [];
+  if (insights.length) {
+    const ul = makeEl("ul");
+    insights.forEach((s) => ul.appendChild(makeEl("li", null, s)));
+    root.appendChild(makeEl("h3", null, "Watch the number"));
+    root.appendChild(ul);
+  }
+}
+
 async function load() {
   try {
     const res = await fetch("./data/latest.json", { cache: "no-store" });
@@ -868,6 +922,7 @@ async function load() {
     renderSourceHealth("sourceStatus", data, leagueKeys);
 
     renderReferenceAndBets(data);
+    renderBdBetsToday(data);
 
     wireGeneratorControls(data);
   } catch (e) {

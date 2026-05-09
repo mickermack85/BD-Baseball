@@ -45,6 +45,73 @@ DEFAULT_TEAMS = ["athletics", "rockies", "tigers"]
 ALLOWED_SOURCE_STATUS = {"verified", "unverified", "source_error"}
 SAMPLE_FIXTURE_MARKER = "UNVERIFIED: sample"
 
+BD_BETS_REQUIRED_TOP_KEYS = ["generated_at", "slate_date", "sport", "picks"]
+BD_BETS_PICK_REQUIRED = ["away_team", "home_team", "market", "pick"]
+BD_BETS_ALLOWED_STATUSES = {"open", "win", "loss", "push", "void"}
+BD_BETS_ALLOWED_CONFIDENCE = {"low", "medium", "high"}
+
+
+def _validate_bd_bets(section: object) -> list[str]:
+    """Return validation problems for a bd_bets section. Empty section is OK.
+
+    BD Bets is editorial/show-prep data, not a sportsbook integration. The
+    validator enforces the shape contract documented in scripts/bd_bets.py
+    so the show generator can rely on it without defensive guards.
+    """
+    problems: list[str] = []
+    if not isinstance(section, dict):
+        return ["bd_bets must be an object"]
+
+    status = section.get("source_status")
+    if status not in ALLOWED_SOURCE_STATUS:
+        problems.append(f"bd_bets.source_status invalid: {status!r}")
+
+    if status == "source_error":
+        # When the feed couldn't be loaded the rest of the shape is allowed
+        # to be empty / placeholder. The error itself is the signal.
+        return problems
+
+    for k in BD_BETS_REQUIRED_TOP_KEYS:
+        if k not in section:
+            problems.append(f"bd_bets missing key: {k}")
+
+    sport = section.get("sport")
+    if isinstance(sport, str) and sport.strip().upper() != "MLB":
+        problems.append(f"bd_bets.sport must be 'MLB', got {sport!r}")
+
+    picks = section.get("picks")
+    if not isinstance(picks, list):
+        problems.append("bd_bets.picks must be a list")
+        return problems
+
+    for i, pick in enumerate(picks):
+        if not isinstance(pick, dict):
+            problems.append(f"bd_bets.picks[{i}] must be an object")
+            continue
+        for k in BD_BETS_PICK_REQUIRED:
+            v = pick.get(k)
+            if not (isinstance(v, str) and v.strip()):
+                problems.append(f"bd_bets.picks[{i}] missing/blank required field: {k}")
+        st = pick.get("status") or "open"
+        if isinstance(st, str) and st.lower() not in BD_BETS_ALLOWED_STATUSES:
+            problems.append(f"bd_bets.picks[{i}].status invalid: {st!r}")
+        is_active = (isinstance(st, str) and st.lower() == "open")
+        if is_active:
+            note = pick.get("model_note")
+            if not (isinstance(note, str) and note.strip()):
+                problems.append(f"bd_bets.picks[{i}] active pick has blank model_note")
+        conf = pick.get("confidence")
+        if isinstance(conf, str) and conf.strip():
+            if conf.strip().lower() not in BD_BETS_ALLOWED_CONFIDENCE:
+                # numeric-as-string is allowed; only flag wholly non-numeric strings
+                try:
+                    float(conf)
+                except (TypeError, ValueError):
+                    problems.append(
+                        f"bd_bets.picks[{i}].confidence must be low|medium|high or numeric, got {conf!r}"
+                    )
+    return problems
+
 
 class ValidationError(Exception):
     pass
@@ -94,6 +161,10 @@ def validate(
         for k in REQUIRED_TEAM_KEYS:
             if k not in teams_block[team]:
                 problems.append(f"team {team} missing key: {k}")
+
+    # bd_bets is optional, but validate shape when present.
+    if "bd_bets" in data:
+        problems.extend(_validate_bd_bets(data.get("bd_bets")))
 
     # source_status values must be from allowed set
     src_status = data.get("source_status") or {}

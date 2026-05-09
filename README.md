@@ -73,6 +73,45 @@ Writes:
 - `data/latest.json`
 - `data/mlb_snapshot_YYYY-MM-DD.json`
 
+#### Optional: include BD Bets show-prep intel
+The builder can fold a daily **BD Bets** MLB picks/insights feed into the
+snapshot under a `bd_bets` key. This is editorial / show-prep data sourced
+from Matt's BD Bets project — it's used as on-air angle ("model lean",
+"watch the number"), **not** as a sportsbook integration or wagering
+instructions.
+
+Provide the feed via local file or public URL:
+
+```bash
+# from a local JSON file
+python scripts/build_snapshot.py --bd-bets-path /path/to/bd_bets.json
+
+# from a public, no-auth URL (e.g. a static export from BD Bets)
+python scripts/build_snapshot.py --bd-bets-url https://example.com/bd_bets.json
+
+# or via env vars (usable from a GitHub Actions workflow)
+BD_BETS_PATH=/path/to/bd_bets.json python scripts/build_snapshot.py
+BD_BETS_URL=https://example.com/bd_bets.json python scripts/build_snapshot.py
+```
+
+A reference fixture lives at `fixtures/sample_bd_bets.json`. The contract
+is documented in `scripts/bd_bets.py` (top-level: `generated_at`,
+`slate_date`, `sport: "MLB"`, `picks[]`, `insights[]`; pick fields:
+`away_team`, `home_team`, `market`, `pick`, plus optional `line`, `odds`,
+`confidence`, `edge`, `model_note`, `status`, `result`, `source`).
+
+If the feed is missing or fails to load the snapshot still builds; the
+`bd_bets` section is either omitted (no path/url provided) or carries
+`source_status: "source_error"` plus a `source_error` message. The show
+generator and UI both render a "No BD Bets picks connected for this
+slate" empty state in those cases.
+
+When picks are present the show generator inserts a **BD Bets Angle**
+segment before the closer, and adds a "BD Bets angles (model leans)"
+block to the livestream long description and the complete downloadable
+package. The Show Prep tab also surfaces a compact **BD Bets Today**
+card with picks, market, confidence, line, edge, and model notes.
+
 ### Validate
 Lenient (schema-only):
 ```bash

@@ -1,0 +1,41 @@
+{
+  "_note": "Sample BD Bets MLB picks/insights feed used by tests and as a contract example. This is editorial/show-prep data sourced from Matt's BD Bets model — it is NOT a sportsbook integration and is NOT live odds. The show generator uses it for on-air angles and watch-the-number framing.",
+  "generated_at": "2026-05-01T13:30:00Z",
+  "slate_date": "2026-05-01",
+  "sport": "MLB",
+  "source": "bd_bets",
+  "picks": [
+    {
+      "game_id": "2026-05-01-LAD-OAK",
+      "away_team": "Los Angeles Dodgers",
+      "home_team": "Athletics",
+      "market": "moneyline",
+      "pick": "Athletics +180",
+      "line": "+180",
+      "odds": "+180",
+      "confidence": "medium",
+      "edge": "+4.2%",
+      "model_note": "Dodgers travel after a late west-coast finish; Athletics catch them on a pitcher's day at Sutter Health Park.",
+      "status": "open",
+      "source": "bd_bets"
+    },
+    {
+      "game_id": "2026-05-01-TEX-DET",
+      "away_team": "Texas Rangers",
+      "home_team": "Detroit Tigers",
+      "market": "total",
+      "pick": "Under 8.5",
+      "line": "8.5",
+      "odds": "-110",
+      "confidence": "high",
+      "edge": "+6.1%",
+      "model_note": "Two contact-management starters and a wind blowing in from center make the under the model's top edge of the day.",
+      "status": "open",
+      "source": "bd_bets"
+    }
+  ],
+  "insights": [
+    "Watch the Athletics number — model has it 6 cents off market open.",
+    "Tigers/Rangers under 8.5 is the play of the day in the BD Bets model."
+  ]
+}

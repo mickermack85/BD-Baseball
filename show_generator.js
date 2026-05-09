@@ -25,6 +25,9 @@ const TEAM_DISPLAY = {
 
 // Segment time allocation per preset, in minutes.
 // Sums equal totalMinutes; team segment is per team and replicated.
+// `bdBets` is conditionally inserted before the closer when picks exist; if
+// the feed is absent the segment is skipped and the rundown still hits its
+// preset target.
 const SEGMENT_BUDGETS = {
   quick: {
     opener: 1,
@@ -32,6 +35,7 @@ const SEGMENT_BUDGETS = {
     slate: 3,
     transactions: 2,
     teamEach: 2,
+    bdBets: 1,
     closer: 1,
   },
   standard: {
@@ -40,6 +44,7 @@ const SEGMENT_BUDGETS = {
     slate: 5,
     transactions: 3,
     teamEach: 3,
+    bdBets: 2,
     closer: 2,
   },
   deep: {
@@ -48,6 +53,7 @@ const SEGMENT_BUDGETS = {
     slate: 8,
     transactions: 4,
     teamEach: 4,
+    bdBets: 3,
     closer: 3,
   },
 };
@@ -290,6 +296,52 @@ function buildCloser(snapshot, opts) {
   return lines;
 }
 
+// BD Bets is editorial intel — model picks/notes from Matt's own BD Bets
+// project, NOT a sportsbook integration. The show generator uses it as a
+// "model lean" / "watch the number" segment, never as wagering instructions.
+function getBdBetsPicks(snapshot) {
+  const sec = snapshot && snapshot.bd_bets;
+  if (!sec || typeof sec !== "object") return [];
+  const picks = Array.isArray(sec.picks) ? sec.picks : [];
+  return picks.filter((p) => p && typeof p === "object" && p.away_team && p.home_team && p.pick);
+}
+
+function getBdBetsInsights(snapshot) {
+  const sec = snapshot && snapshot.bd_bets;
+  if (!sec || typeof sec !== "object") return [];
+  return Array.isArray(sec.insights) ? sec.insights.filter((s) => typeof s === "string" && s.trim()) : [];
+}
+
+function formatBdBetsLine(p) {
+  const conf = p.confidence ? " (" + p.confidence + ")" : "";
+  const edge = p.edge ? " — edge " + p.edge : "";
+  const matchup = p.away_team + " @ " + p.home_team;
+  return matchup + " — " + p.market + ": " + p.pick + conf + edge;
+}
+
+function buildBdBetsSegment(snapshot) {
+  const picks = getBdBetsPicks(snapshot);
+  const insights = getBdBetsInsights(snapshot);
+  const lines = [];
+  if (!picks.length && !insights.length) {
+    lines.push("No BD Bets picks connected for this slate.");
+    return lines;
+  }
+  lines.push("BD Bets angle — model leans, not wagering instructions.");
+  picks.slice(0, 6).forEach((p) => {
+    lines.push(formatBdBetsLine(p) + ".");
+    if (p.model_note) lines.push("Model note: " + p.model_note);
+  });
+  if (picks.length > 6) {
+    lines.push("Plus " + (picks.length - 6) + " more pick" + (picks.length - 6 === 1 ? "" : "s") + " in the BD Bets feed.");
+  }
+  if (insights.length) {
+    lines.push("Watch the number:");
+    insights.slice(0, 3).forEach((s) => lines.push("• " + s));
+  }
+  return lines;
+}
+
 // Map allocator: returns segments with title, durationMinutes, lines (for
 // teleprompter), bullets (for rundown), and the lane keys consulted.
 function generateRundown(snapshot, options) {
@@ -343,6 +395,18 @@ function generateRundown(snapshot, options) {
       laneKeys: [t + "_standings", t + "_schedule", t + "_transactions"],
     });
   });
+
+  // BD Bets segment: only included when picks exist. We don't reserve time
+  // for it in presets that have no feed, to keep durations honest.
+  if (getBdBetsPicks(snapshot).length > 0) {
+    segments.push({
+      id: "bd_bets",
+      title: "BD Bets Angle",
+      durationMinutes: budget.bdBets,
+      lines: buildBdBetsSegment(snapshot),
+      laneKeys: ["bd_bets"],
+    });
+  }
 
   segments.push({
     id: "closer",
@@ -444,10 +508,14 @@ function transitionLine(current, next) {
     league: "From the standings to the slate —",
     slate: "Off the field now —",
     transactions: "Closer to home —",
+    bd_bets: "Wrapping the show —",
     closer: "",
   };
   if (next.id && next.id.indexOf("team_") === 0) {
     return "[transition] Closer to home now —";
+  }
+  if (next.id === "bd_bets") {
+    return "[transition] One angle from the BD Bets model —";
   }
   return "[transition] " + (map[current.id] || "Moving on.");
 }
@@ -672,6 +740,16 @@ function buildLongDescription(snapshot, rundown, opts) {
     out.push("");
   }
 
+  // BD Bets editorial section (model leans / watch the number). Editorial
+  // framing only — never wagering instructions.
+  const bdPicks = getBdBetsPicks(snapshot);
+  if (bdPicks.length) {
+    out.push("BD Bets angles (model leans):");
+    bdPicks.slice(0, 4).forEach((p) => out.push("• " + formatBdBetsLine(p)));
+    if (bdPicks.length > 4) out.push("• …plus " + (bdPicks.length - 4) + " more in the BD Bets feed.");
+    out.push("");
+  }
+
   // CTA placeholders — producer replaces these in the show description.
   out.push("Subscribe and turn on notifications so you don't miss the next show.");
   out.push("");
@@ -886,6 +964,10 @@ const api = {
     showDateString: showDateString,
     prettyDate: prettyDate,
     snapshotHealth: snapshotHealth,
+    getBdBetsPicks: getBdBetsPicks,
+    getBdBetsInsights: getBdBetsInsights,
+    formatBdBetsLine: formatBdBetsLine,
+    buildBdBetsSegment: buildBdBetsSegment,
   },
 };
 
