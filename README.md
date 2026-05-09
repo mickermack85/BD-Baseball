@@ -94,6 +94,12 @@ BD_BETS_PATH=/path/to/bd_bets.json python scripts/build_snapshot.py
 BD_BETS_URL=https://example.com/bd_bets.json python scripts/build_snapshot.py
 ```
 
+In GitHub Actions, the scheduled snapshot refresh
+(`.github/workflows/refresh-snapshot.yml`) forwards a repository secret
+named `BD_BETS_URL` into the build step as the `BD_BETS_URL` env var. If
+the secret is not configured the variable is empty and the builder simply
+omits the `bd_bets` section — no failure.
+
 A reference fixture lives at `fixtures/sample_bd_bets.json`. The contract
 is documented in `scripts/bd_bets.py` (top-level: `generated_at`,
 `slate_date`, `sport: "MLB"`, `picks[]`, `insights[]`; pick fields:
