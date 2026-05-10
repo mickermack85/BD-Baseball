@@ -1,8 +1,10 @@
 """Tests for scripts/build_snapshot.py — parsers and builder with fake fetch."""
 from __future__ import annotations
 
+import os
 import sys
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -328,6 +330,75 @@ class SprintOneNewsTests(unittest.TestCase):
         out = b.build_snapshot(fetch=fetch)
         self.assertIn("source_status", out)
         self.assertTrue(any(k.startswith("curated_news_") for k in out["source_status"]))
+
+
+class SlateDateTests(unittest.TestCase):
+    """Slate date should reflect the show's timezone, not raw UTC."""
+
+    def setUp(self) -> None:
+        # Snapshot env so individual tests can mutate without leaking.
+        self._saved_env = {
+            k: os.environ.get(k) for k in (b.TIMEZONE_ENV, b.SLATE_DATE_ENV)
+        }
+        for k in (b.TIMEZONE_ENV, b.SLATE_DATE_ENV):
+            os.environ.pop(k, None)
+
+    def tearDown(self) -> None:
+        for k, v in self._saved_env.items():
+            if v is None:
+                os.environ.pop(k, None)
+            else:
+                os.environ[k] = v
+
+    def _fetch(self):
+        return BuilderTests()._fake_fetch()
+
+    def test_slate_date_uses_pacific_timezone_default(self) -> None:
+        # 2026-05-10T03:23Z is 2026-05-09 20:23 in America/Los_Angeles, so
+        # the slate date should still be May 9 even though UTC has rolled.
+        now = datetime(2026, 5, 10, 3, 23, 0, tzinfo=timezone.utc)
+        snap = b.build_snapshot(fetch=self._fetch(), now=now)
+        self.assertEqual(snap["slate_date"], "2026-05-09")
+        self.assertEqual(snap["slate_timezone"], "America/Los_Angeles")
+        # Schedule URL should also use the slate date, not the UTC date.
+        self.assertIn("date=2026-05-09", snap["sources"]["league_schedule"])
+
+    def test_env_timezone_override(self) -> None:
+        os.environ[b.TIMEZONE_ENV] = "America/New_York"
+        # 04:30 UTC is 12:30am ET on the same day, so slate is 2026-05-10.
+        now = datetime(2026, 5, 10, 4, 30, 0, tzinfo=timezone.utc)
+        snap = b.build_snapshot(fetch=self._fetch(), now=now)
+        self.assertEqual(snap["slate_date"], "2026-05-10")
+        self.assertEqual(snap["slate_timezone"], "America/New_York")
+
+    def test_explicit_slate_date_override_wins(self) -> None:
+        now = datetime(2026, 5, 10, 3, 23, 0, tzinfo=timezone.utc)
+        snap = b.build_snapshot(
+            fetch=self._fetch(),
+            now=now,
+            slate_date="2026-04-30",
+        )
+        self.assertEqual(snap["slate_date"], "2026-04-30")
+        self.assertIn("date=2026-04-30", snap["sources"]["league_schedule"])
+
+    def test_invalid_slate_date_override_raises(self) -> None:
+        with self.assertRaises(ValueError):
+            b.build_snapshot(
+                fetch=self._fetch(),
+                slate_date="not-a-date",
+            )
+
+    def test_unknown_timezone_falls_back_to_default(self) -> None:
+        # An unknown tz name should not crash the build; it falls through.
+        now = datetime(2026, 5, 10, 3, 23, 0, tzinfo=timezone.utc)
+        snap = b.build_snapshot(
+            fetch=self._fetch(),
+            now=now,
+            timezone_name="Mars/Olympus_Mons",
+        )
+        # Falls back to America/Los_Angeles default → still 2026-05-09.
+        self.assertEqual(snap["slate_date"], "2026-05-09")
+        self.assertEqual(snap["slate_timezone"], "America/Los_Angeles")
 
 
 class SprintTwoScoreboardTests(unittest.TestCase):

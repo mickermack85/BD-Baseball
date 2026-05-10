@@ -166,6 +166,21 @@ def validate(
     if "bd_bets" in data:
         problems.extend(_validate_bd_bets(data.get("bd_bets")))
 
+    # slate_date / slate_timezone are optional but, when present, must be
+    # parseable so the UI can rely on them.
+    slate_date = data.get("slate_date")
+    if slate_date is not None:
+        if not isinstance(slate_date, str) or not slate_date:
+            problems.append("slate_date must be a non-empty string when present")
+        else:
+            try:
+                datetime.strptime(slate_date, "%Y-%m-%d")
+            except ValueError:
+                problems.append(f"slate_date must be YYYY-MM-DD, got {slate_date!r}")
+    slate_tz = data.get("slate_timezone")
+    if slate_tz is not None and not (isinstance(slate_tz, str) and slate_tz.strip()):
+        problems.append("slate_timezone must be a non-empty string when present")
+
     # source_status values must be from allowed set
     src_status = data.get("source_status") or {}
     if not isinstance(src_status, dict):

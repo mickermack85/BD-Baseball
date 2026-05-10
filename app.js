@@ -473,8 +473,14 @@ function triggerDownload(filename, text, mime) {
 
 function currentDateStr() {
   if (CURRENT_LIVE_PKG && CURRENT_LIVE_PKG.showDate) return CURRENT_LIVE_PKG.showDate;
-  if (CURRENT_SNAPSHOT && typeof CURRENT_SNAPSHOT.generated_at === "string") {
-    return CURRENT_SNAPSHOT.generated_at.slice(0, 10);
+  if (CURRENT_SNAPSHOT) {
+    if (typeof CURRENT_SNAPSHOT.slate_date === "string" &&
+        /^\d{4}-\d{2}-\d{2}$/.test(CURRENT_SNAPSHOT.slate_date)) {
+      return CURRENT_SNAPSHOT.slate_date;
+    }
+    if (typeof CURRENT_SNAPSHOT.generated_at === "string") {
+      return CURRENT_SNAPSHOT.generated_at.slice(0, 10);
+    }
   }
   return "";
 }
