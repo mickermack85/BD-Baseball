@@ -828,6 +828,134 @@ function renderReferenceAndBets(data) {
 }
 
 
+// Render "Today's MLB Desk" — the lead product on the Show Prep panel.
+// Standard baseball intel (scoreboard, storylines, focus teams) first;
+// BD Bets is a compact supporting layer below.
+function renderTodayDesk(data) {
+  const G = window.BDShowGenerator;
+  if (!G) return;
+  const teams = detectAvailableTeams(data);
+
+  // 1. Top storylines from the deterministic show stack.
+  const sRoot = el("deskStorylines");
+  if (sRoot) {
+    while (sRoot.firstChild) sRoot.removeChild(sRoot.firstChild);
+    const stack = G.buildShowStack(data, { teams: teams, limit: 6 });
+    if (!stack.length || stack[0].kind === "empty") {
+      sRoot.appendChild(makeEl("p", "muted",
+        (stack[0] && stack[0].headline) || "No verified storylines in this snapshot."));
+    } else {
+      const ul = makeEl("ul");
+      stack.forEach((s) => {
+        const li = document.createElement("li");
+        li.appendChild(makeEl("strong", null, s.headline));
+        if (s.detail) {
+          li.appendChild(document.createTextNode(" — "));
+          li.appendChild(makeEl("span", "muted", s.detail));
+        }
+        ul.appendChild(li);
+      });
+      sRoot.appendChild(ul);
+    }
+  }
+
+  // 2. Scoreboard cards (today's slate from MLB Stats API schedule hydrate).
+  const sbRoot = el("deskScoreboard");
+  if (sbRoot) {
+    while (sbRoot.firstChild) sbRoot.removeChild(sbRoot.firstChild);
+    const games = (data && data.scoreboard && Array.isArray(data.scoreboard.games))
+      ? data.scoreboard.games : [];
+    if (!games.length) {
+      sbRoot.appendChild(makeEl("p", "muted", "No games on the verified scoreboard for today."));
+    } else {
+      games.forEach((g) => {
+        const card = makeEl("div", "news-card");
+        card.appendChild(makeEl("h4", null, (g.away_team || "?") + " @ " + (g.home_team || "?")));
+        const status = g.status || "Upcoming";
+        const score = (g.away_score != null || g.home_score != null)
+          ? ((g.away_score != null ? g.away_score : "-") + " - " + (g.home_score != null ? g.home_score : "-"))
+          : "";
+        const inning = (g.inning_state && g.inning) ? (g.inning_state + " " + g.inning) : "";
+        const stamp = formatGameTime(g.start_time);
+        const detail = [status, score, inning, stamp].filter(Boolean).join(" • ");
+        card.appendChild(makeEl("p", null, detail || (g.status_detail || "Scheduled.")));
+        const pp = g.probable_pitchers || {};
+        if (pp.away || pp.home) {
+          card.appendChild(makeEl("p", "muted",
+            "Probables: " + (pp.away || "TBD") + " vs " + (pp.home || "TBD")));
+        }
+        if (g.venue) card.appendChild(makeEl("p", "muted", g.venue));
+        sbRoot.appendChild(card);
+      });
+    }
+  }
+
+  // 3. Focus-team quick cards.
+  const fRoot = el("deskFocusTeams");
+  if (fRoot) {
+    while (fRoot.firstChild) fRoot.removeChild(fRoot.firstChild);
+    const teamsBlock = (data && data.teams) || {};
+    if (!teams.length) {
+      fRoot.appendChild(makeEl("p", "muted", "No focus teams configured."));
+    } else {
+      teams.forEach((tk) => {
+        const block = teamsBlock[tk] || {};
+        const card = makeEl("div", "news-card");
+        card.appendChild(makeEl("h4", null, G.TEAM_DISPLAY[tk] || tk));
+        const verified = Array.isArray(block.verified_notes) ? block.verified_notes : [];
+        const standings = verified.find((n) => /^Standings:/i.test(n));
+        const probable = verified.find((n) => /^Probable:/i.test(n));
+        if (standings) card.appendChild(makeEl("p", null, standings.replace(/^Standings:\s*/i, "")));
+        if (probable) card.appendChild(makeEl("p", "muted", probable.replace(/^Probable:\s*/i, "Next: ")));
+        if (!standings && !probable) {
+          card.appendChild(makeEl("p", "muted", "No verified notes for this team in the snapshot."));
+        }
+        fRoot.appendChild(card);
+      });
+    }
+  }
+
+  // 4. Compact BD Bets angles (top 3-5 only).
+  const bRoot = el("deskBdBets");
+  if (bRoot) {
+    while (bRoot.firstChild) bRoot.removeChild(bRoot.firstChild);
+    const sec = data && data.bd_bets;
+    if (!sec || !Array.isArray(sec.picks) || !sec.picks.length) {
+      bRoot.appendChild(makeEl("p", "muted", "No BD Bets picks connected for this slate."));
+    } else if (sec.source_status === "source_error") {
+      bRoot.appendChild(makeEl("p", "muted",
+        "BD Bets feed unavailable: " + (sec.source_error || "unknown error") + "."));
+    } else {
+      const top = G.selectTopBdBetsAngles(sec.picks, 5);
+      const meta = makeEl("p", "muted",
+        "Top " + top.length + " of " + sec.picks.length + " pick" +
+        (sec.picks.length === 1 ? "" : "s") +
+        (sec.slate_date ? " • slate " + sec.slate_date : "") + ".");
+      bRoot.appendChild(meta);
+      const ul = makeEl("ul");
+      top.forEach((p) => {
+        const li = document.createElement("li");
+        li.appendChild(makeEl("strong", null, p.away_team + " @ " + p.home_team));
+        li.appendChild(document.createTextNode(
+          " — " + p.market + ": " + p.pick +
+          (p.confidence ? " (" + p.confidence + ")" : "") +
+          (p.edge ? ", edge " + p.edge : "")
+        ));
+        if (p.model_note) {
+          const note = makeEl("div", "muted", "Model lean: " + p.model_note);
+          li.appendChild(note);
+        }
+        ul.appendChild(li);
+      });
+      bRoot.appendChild(ul);
+      if (sec.picks.length > top.length) {
+        bRoot.appendChild(makeEl("p", "muted",
+          "All " + sec.picks.length + " picks available in the BD Bets tab."));
+      }
+    }
+  }
+}
+
 // Render the compact "BD Bets Today" card on the Show Prep panel.
 // Editorial framing only — never wagering instructions.
 function renderBdBetsToday(data) {
@@ -922,6 +1050,7 @@ async function load() {
     renderSourceHealth("sourceStatus", data, leagueKeys);
 
     renderReferenceAndBets(data);
+    renderTodayDesk(data);
     renderBdBetsToday(data);
 
     wireGeneratorControls(data);

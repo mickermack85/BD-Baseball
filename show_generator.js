@@ -99,31 +99,23 @@ function partitionLeagueNotes(verified) {
 // Pick the strongest opener hook. Priority: top of standings story > marquee
 // matchup > a configured team in the slate today > generic.
 function buildOpener(snapshot, opts) {
-  const teams = (opts && opts.teams) || [];
-  const league = (snapshot && snapshot.league) || {};
-  const parts = partitionLeagueNotes(league.verified_notes);
-  const top = rankStandings(parts.standings)[0];
-  // Find a probable involving any of the configured focus teams.
-  const focusProbable = parts.probables.find((p) => {
-    const display = teams.map(teamLabel);
-    return display.some((d) => p.indexOf(d) !== -1);
-  });
-  const transactionsCount = Array.isArray(league.transactions) ? league.transactions.length : 0;
-
+  // The opener is the lead of the show — drive it from the storyline stack
+  // so today's strongest baseball angle leads, not whatever happened to be
+  // first in the standings array.
+  const stack = buildShowStack(snapshot, { teams: (opts && opts.teams) || [], limit: 4 });
   const lines = [];
-  if (top) {
-    lines.push("Top of the league this morning: " + stripPrefix(top) + ".");
+  const lead = stack[0];
+  if (!lead || lead.kind === "empty") {
+    lines.push("We're working from the verified MLB snapshot this morning, but the slate is quiet — quick check-in coming up.");
+    return lines;
   }
-  if (focusProbable) {
-    lines.push("On our radar today — " + stripPrefix(focusProbable) + ".");
-  } else if (parts.probables.length) {
-    lines.push("Plenty on the slate — " + parts.probables.length + " probable matchups confirmed.");
-  }
-  if (transactionsCount > 0) {
-    lines.push("And the transaction wire is busy — " + transactionsCount + " moves logged in the verified window.");
-  }
-  if (lines.length === 0) {
-    lines.push("We're working from the verified MLB snapshot this morning. Quick rundown coming up.");
+  lines.push(lead.headline + ".");
+  if (lead.detail) lines.push(lead.detail);
+  // Add up to two more storyline tease lines so the opener has texture.
+  for (let i = 1; i < stack.length && lines.length < 4; i++) {
+    const s = stack[i];
+    if (s.kind === "empty" || s.kind === "bd_bets") continue;
+    lines.push("Also today — " + s.headline + ".");
   }
   return lines;
 }
@@ -327,19 +319,260 @@ function buildBdBetsSegment(snapshot) {
     lines.push("No BD Bets picks connected for this slate.");
     return lines;
   }
+  const top = selectTopBdBetsAngles(picks, 5);
   lines.push("BD Bets angle — model leans, not wagering instructions.");
-  picks.slice(0, 6).forEach((p) => {
+  top.forEach((p) => {
     lines.push(formatBdBetsLine(p) + ".");
     if (p.model_note) lines.push("Model note: " + p.model_note);
   });
-  if (picks.length > 6) {
-    lines.push("Plus " + (picks.length - 6) + " more pick" + (picks.length - 6 === 1 ? "" : "s") + " in the BD Bets feed.");
+  if (picks.length > top.length) {
+    const extra = picks.length - top.length;
+    lines.push("Plus " + extra + " more pick" + (extra === 1 ? "" : "s") + " in the BD Bets feed.");
   }
   if (insights.length) {
     lines.push("Watch the number:");
     insights.slice(0, 3).forEach((s) => lines.push("• " + s));
   }
   return lines;
+}
+
+// Score and rank BD Bets picks for show-prep use. Highest-edge / highest-
+// confidence open picks bubble to the top. Settled picks (win/loss/push) are
+// kept but ranked below open picks so today's leans lead. Returns a fresh
+// array of at most `limit` picks (default 5) — the caller decides how many
+// to surface.
+function _bdBetsConfidenceScore(c) {
+  if (typeof c !== "string") return 0;
+  const s = c.trim().toLowerCase();
+  if (s === "high") return 3;
+  if (s === "medium") return 2;
+  if (s === "low") return 1;
+  const n = parseFloat(s);
+  if (!isNaN(n)) {
+    if (n >= 0.66) return 3;
+    if (n >= 0.33) return 2;
+    if (n > 0) return 1;
+  }
+  return 0;
+}
+function _bdBetsEdgeScore(e) {
+  if (e == null || e === "") return 0;
+  if (typeof e === "number") return e;
+  const m = /-?\d+(?:\.\d+)?/.exec(String(e));
+  return m ? parseFloat(m[0]) : 0;
+}
+function selectTopBdBetsAngles(picks, limit) {
+  const list = Array.isArray(picks) ? picks.slice() : [];
+  const cap = (typeof limit === "number" && limit > 0) ? limit : 5;
+  const scored = list.map((p, idx) => {
+    const status = (p && p.status ? String(p.status).toLowerCase() : "open");
+    const isOpen = status === "open" || status === "";
+    const score =
+      _bdBetsConfidenceScore(p && p.confidence) * 10 +
+      _bdBetsEdgeScore(p && p.edge);
+    return { p: p, idx: idx, isOpen: isOpen, score: score };
+  });
+  scored.sort((a, b) => {
+    if (a.isOpen !== b.isOpen) return a.isOpen ? -1 : 1;
+    if (b.score !== a.score) return b.score - a.score;
+    return a.idx - b.idx;
+  });
+  return scored.slice(0, cap).map((x) => x.p);
+}
+
+// --- Deterministic baseball storylines / show stack ---
+//
+// Build a ranked list of editorial angles for today's show. Order priority:
+//   1. focus-team games on the slate today
+//   2. marquee matchups (top-of-standings teams playing each other)
+//   3. notable probable pitchers (focus team or top-standings team)
+//   4. standings / division context
+//   5. high-signal transactions / injuries
+//   6. one compact BD Bets angle (only if a top angle exists)
+// Pure function of (snapshot, options). Empty inputs -> empty stack with a
+// single "no_data" entry, never invented content.
+
+function _scoreboardGames(snapshot) {
+  const sb = (snapshot && snapshot.scoreboard) || {};
+  return Array.isArray(sb.games) ? sb.games : [];
+}
+
+function _teamMatchesAlias(name, key) {
+  if (typeof name !== "string" || !name) return false;
+  const n = name.toLowerCase();
+  if (n.indexOf(key) !== -1) return true;
+  const display = (TEAM_DISPLAY[key] || "").toLowerCase();
+  return display && n.indexOf(display) !== -1;
+}
+
+function _gameInvolvesFocus(game, teamKeys) {
+  if (!game) return false;
+  return (teamKeys || []).some((k) => _teamMatchesAlias(game.away_team, k) || _teamMatchesAlias(game.home_team, k));
+}
+
+function _formatGameMatchup(game) {
+  const away = (game && game.away_team) || "?";
+  const home = (game && game.home_team) || "?";
+  return away + " @ " + home;
+}
+
+function _formatProbables(game) {
+  const pp = (game && game.probable_pitchers) || {};
+  const a = pp.away || "TBD";
+  const h = pp.home || "TBD";
+  if (a === "TBD" && h === "TBD") return "";
+  return a + " vs " + h;
+}
+
+function _topStandingsTeams(snapshot, n) {
+  const league = (snapshot && snapshot.league) || {};
+  const parts = partitionLeagueNotes(league.verified_notes);
+  const ranked = rankStandings(parts.standings).slice(0, n || 5);
+  return ranked.map((row) => {
+    const m = /^Standings:\s+(.+?):\s+(\d+)-(\d+)/i.exec(row);
+    return { line: row, team: m ? m[1] : "", wins: m ? parseInt(m[2], 10) : 0, losses: m ? parseInt(m[3], 10) : 0 };
+  });
+}
+
+function _isNotableTransaction(line) {
+  if (typeof line !== "string") return false;
+  if (!isHighSignalTransaction(line)) return false;
+  return isLikelyMlbTransaction(line);
+}
+
+function buildShowStack(snapshot, options) {
+  const opts = Object.assign({ teams: [], limit: 8 }, options || {});
+  const focusTeams = (opts.teams || []).filter((t) => typeof t === "string");
+  const stack = [];
+  const seenIds = {};
+  function push(entry) {
+    if (!entry || !entry.id || seenIds[entry.id]) return;
+    seenIds[entry.id] = true;
+    stack.push(entry);
+  }
+
+  const games = _scoreboardGames(snapshot);
+  const league = (snapshot && snapshot.league) || {};
+  const parts = partitionLeagueNotes(league.verified_notes);
+  const probables = parts.probables.slice();
+  const topStandings = _topStandingsTeams(snapshot, 5);
+  const topTeamNames = topStandings.map((x) => x.team).filter(Boolean);
+
+  // 1. Focus-team games today.
+  focusTeams.forEach((tk) => {
+    const game = games.find((g) => _gameInvolvesFocus(g, [tk]));
+    if (game) {
+      const probLine = _formatProbables(game);
+      const headline = teamLabel(tk) + " in action — " + _formatGameMatchup(game);
+      push({
+        id: "focus_game_" + tk,
+        kind: "focus_game",
+        priority: 1,
+        team: tk,
+        headline: headline,
+        detail: probLine ? "Probables: " + probLine + "." : (game.status_detail || "Scheduled."),
+        game: game,
+      });
+    }
+  });
+
+  // 2. Marquee matchups: both clubs in top-5 standings.
+  games.forEach((g) => {
+    const aTop = topTeamNames.some((t) => _teamMatchesAlias(g.away_team, t.toLowerCase()) || (t && g.away_team && g.away_team.toLowerCase().indexOf(t.toLowerCase()) !== -1));
+    const hTop = topTeamNames.some((t) => _teamMatchesAlias(g.home_team, t.toLowerCase()) || (t && g.home_team && g.home_team.toLowerCase().indexOf(t.toLowerCase()) !== -1));
+    if (aTop && hTop) {
+      const probLine = _formatProbables(g);
+      push({
+        id: "marquee_" + (g.id || (g.away_team + "@" + g.home_team)),
+        kind: "marquee",
+        priority: 2,
+        headline: "Marquee matchup: " + _formatGameMatchup(g),
+        detail: probLine ? "Probables: " + probLine + "." : "Both clubs in the upper tier of the standings.",
+        game: g,
+      });
+    }
+  });
+
+  // 3. Notable probables (focus or top-standings) — only those not already
+  // surfaced via a scoreboard game above.
+  probables.slice(0, 12).forEach((p, idx) => {
+    const stripped = stripPrefix(p);
+    const display = focusTeams.map(teamLabel).concat(topTeamNames);
+    const hits = display.some((d) => d && stripped.indexOf(d) !== -1);
+    if (!hits) return;
+    push({
+      id: "probable_" + idx,
+      kind: "probable",
+      priority: 3,
+      headline: "Notable probable — " + stripped,
+      detail: "",
+    });
+  });
+
+  // 4. Standings / division context — top of each division-ranked entry.
+  if (topStandings.length) {
+    push({
+      id: "standings_top",
+      kind: "standings",
+      priority: 4,
+      headline: "Top of the standings: " + stripPrefix(topStandings[0].line).replace(/\s*\[.*?\]\s*$/, ""),
+      detail: topStandings.slice(1, 3).map((x) => stripPrefix(x.line).replace(/\s*\[.*?\]\s*$/, "")).join("; "),
+    });
+  }
+
+  // 5. High-signal transactions / injuries.
+  const tx = Array.isArray(league.transactions) ? league.transactions : [];
+  const notable = tx.filter(_isNotableTransaction).slice(0, 3);
+  notable.forEach((t, idx) => {
+    push({
+      id: "tx_" + idx,
+      kind: "transaction",
+      priority: 5,
+      headline: "Transaction wire — " + stripPrefix(t),
+      detail: "",
+    });
+  });
+
+  // 6. One compact BD Bets angle, only if a top angle exists.
+  const topBets = selectTopBdBetsAngles(getBdBetsPicks(snapshot), 1);
+  if (topBets.length) {
+    const p = topBets[0];
+    push({
+      id: "bd_bets_top",
+      kind: "bd_bets",
+      priority: 6,
+      headline: "BD Bets angle — " + p.away_team + " @ " + p.home_team,
+      detail: p.market + ": " + p.pick + (p.confidence ? " (" + p.confidence + ")" : "") +
+              (p.model_note ? " — " + p.model_note : ""),
+    });
+  }
+
+  // Honest empty state — never invent content.
+  if (stack.length === 0) {
+    return [{
+      id: "no_data",
+      kind: "empty",
+      priority: 99,
+      headline: "No verified storylines in this snapshot.",
+      detail: "Slate may be empty or sources are unhealthy — re-check before air.",
+    }];
+  }
+
+  // Stable sort by priority ascending, then by id for determinism.
+  stack.sort((a, b) => {
+    if (a.priority !== b.priority) return a.priority - b.priority;
+    return a.id < b.id ? -1 : (a.id > b.id ? 1 : 0);
+  });
+  const limit = opts.limit || 8;
+  // Reserve one slot for the BD Bets compact angle when present so the
+  // baseball storylines never crowd it out of the visible stack — but it
+  // still ranks last so baseball leads.
+  const bd = stack.find((s) => s.kind === "bd_bets");
+  if (bd && stack.length > limit) {
+    const others = stack.filter((s) => s.kind !== "bd_bets").slice(0, limit - 1);
+    return others.concat([bd]);
+  }
+  return stack.slice(0, limit);
 }
 
 // Map allocator: returns segments with title, durationMinutes, lines (for
@@ -694,6 +927,18 @@ function buildLongDescription(snapshot, rundown, opts) {
   out.push(buildShortDescription(snapshot, rundown, opts));
   out.push("");
 
+  // Today's storylines (baseball-first show stack). BD Bets is one optional
+  // entry inside this list, never the lead unless it's the only available
+  // angle the model surfaced.
+  const stack = buildShowStack(snapshot, { teams: teams, limit: 6 });
+  if (stack.length && stack[0].kind !== "empty") {
+    out.push("Today's storylines:");
+    stack.forEach((s) => {
+      out.push("• " + s.headline + (s.detail ? " — " + s.detail : ""));
+    });
+    out.push("");
+  }
+
   // Segment list / timestamps.
   if (rundown && Array.isArray(rundown.segments) && rundown.segments.length) {
     out.push("Segments:");
@@ -951,6 +1196,8 @@ const api = {
   renderHostScriptMarkdown: renderHostScriptMarkdown,
   renderCompletePackageMarkdown: renderCompletePackageMarkdown,
   buildFilename: buildFilename,
+  buildShowStack: buildShowStack,
+  selectTopBdBetsAngles: selectTopBdBetsAngles,
   // exported for tests:
   _internals: {
     stripPrefix: stripPrefix,
@@ -968,6 +1215,8 @@ const api = {
     getBdBetsInsights: getBdBetsInsights,
     formatBdBetsLine: formatBdBetsLine,
     buildBdBetsSegment: buildBdBetsSegment,
+    buildShowStack: buildShowStack,
+    selectTopBdBetsAngles: selectTopBdBetsAngles,
   },
 };
 

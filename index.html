@@ -116,7 +116,22 @@
         <p id="health"></p><p id="offline" class="muted"></p>
       </div>
 
-      <div class="card" id="bdBetsTodayCard">
+      <div class="card" id="todayDeskCard">
+        <h2>Today's MLB Desk</h2>
+        <p class="muted">Standard baseball intel first: scoreboard, today's storylines, focus teams. BD Bets adds compact angles below.</p>
+        <h3>Top storylines</h3>
+        <div id="deskStorylines"></div>
+        <h3>Scoreboard</h3>
+        <div id="deskScoreboard" class="news-grid"></div>
+        <h3>Focus teams</h3>
+        <div id="deskFocusTeams" class="news-grid"></div>
+        <details>
+          <summary>Compact BD Bets angles</summary>
+          <div id="deskBdBets"></div>
+        </details>
+      </div>
+
+      <div class="card" id="bdBetsTodayCard" style="display:none">
         <h2>BD Bets Today</h2>
         <p class="muted">Editorial intel from the BD Bets model — show-prep angles, not wagering instructions.</p>
         <div id="bdBetsToday"></div>
