@@ -8,12 +8,15 @@ on statsapi.mlb.com. Lanes that cannot be filled return explicit
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Callable
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 import argparse
 import json
 import logging
+import os
+import re
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -24,7 +27,15 @@ import bd_bets
 
 DATA_DIR = Path("data")
 UNVERIFIED = "UNVERIFIED:"
-SCHEMA_VERSION = "3.2"
+SCHEMA_VERSION = "3.3"
+# Slate date defaults to America/Los_Angeles so a refresh that fires after
+# midnight UTC but before midnight on the West Coast still produces "today"
+# from a baseball-show perspective. Override with BD_BASEBALL_TIMEZONE or the
+# --timezone CLI flag.
+DEFAULT_TIMEZONE = "America/Los_Angeles"
+TIMEZONE_ENV = "BD_BASEBALL_TIMEZONE"
+SLATE_DATE_ENV = "BD_BASEBALL_SLATE_DATE"
+_ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 # Trim raw per-lane note arrays in `debug.source_health` so the snapshot
 # stays small. The frontend only needs the summary (status + debug counters
 # + a handful of sample lines for source-debug spot checks).
@@ -350,9 +361,40 @@ def _today_utc() -> datetime:
     return datetime.now(timezone.utc)
 
 
-def _date_window(days_back: int = 7) -> tuple[str, str]:
-    today = _today_utc().date()
-    return (today - timedelta(days=days_back)).isoformat(), today.isoformat()
+def _resolve_timezone(name: str | None = None) -> tuple[ZoneInfo, str]:
+    """Pick a tz for slate-date math. Falls back to DEFAULT_TIMEZONE then UTC."""
+    candidates: list[str] = []
+    if name:
+        candidates.append(name)
+    env_name = os.environ.get(TIMEZONE_ENV)
+    if env_name:
+        candidates.append(env_name)
+    candidates.append(DEFAULT_TIMEZONE)
+    for cand in candidates:
+        try:
+            return ZoneInfo(cand), cand
+        except ZoneInfoNotFoundError:
+            logging.warning("Unknown timezone %r; trying next candidate.", cand)
+    return ZoneInfo("UTC"), "UTC"
+
+
+def _resolve_slate_date(
+    explicit: str | None,
+    now_utc: datetime,
+    tz: ZoneInfo,
+) -> date:
+    """Pick the slate's calendar date (YYYY-MM-DD) for the configured tz."""
+    raw = explicit if explicit is not None else os.environ.get(SLATE_DATE_ENV)
+    if raw:
+        raw = raw.strip()
+        if not _ISO_DATE_RE.match(raw):
+            raise ValueError(f"slate_date override must be YYYY-MM-DD, got {raw!r}")
+        return date.fromisoformat(raw)
+    return now_utc.astimezone(tz).date()
+
+
+def _date_window(end: date, days_back: int = 7) -> tuple[str, str]:
+    return (end - timedelta(days=days_back)).isoformat(), end.isoformat()
 
 
 def build_snapshot(
@@ -361,10 +403,16 @@ def build_snapshot(
     *,
     bd_bets_path: str | None = None,
     bd_bets_url: str | None = None,
+    slate_date: str | None = None,
+    timezone_name: str | None = None,
+    now: datetime | None = None,
 ) -> dict[str, Any]:
-    today = _today_utc().date().isoformat()
-    season = _today_utc().year
-    tx_start, tx_end = _date_window(days_back=7)
+    now_utc = now or _today_utc()
+    tz, tz_name = _resolve_timezone(timezone_name)
+    slate = _resolve_slate_date(slate_date, now_utc, tz)
+    today = slate.isoformat()
+    season = slate.year
+    tx_start, tx_end = _date_window(slate, days_back=7)
 
     sources: dict[str, str] = {
         "league_news": "https://www.mlb.com/feeds/news/rss.xml",
@@ -379,7 +427,7 @@ def build_snapshot(
         tid = info["id"]
         sources[f"{key}_schedule"] = (
             f"{STATS_BASE}/schedule?sportId=1&teamId={tid}"
-            f"&startDate={today}&endDate={(_today_utc().date() + timedelta(days=2)).isoformat()}"
+            f"&startDate={today}&endDate={(slate + timedelta(days=2)).isoformat()}"
             f"&hydrate=probablePitcher,team"
         )
         sources[f"{key}_transactions"] = (
@@ -533,7 +581,7 @@ def build_snapshot(
                 "priority": 1 if source_key == "mlb_com" else 2,
             })
     normalized_items.sort(key=lambda x: x.get("published_at", ""), reverse=True)
-    now = _today_utc()
+    now = now_utc
     league_tx = (lg_tx.verified if lg_tx.verified else lg_tx.unverified)[:LEAGUE_TX_LIMIT]
 
     bd_bets_section = bd_bets.resolve_feed(
@@ -554,6 +602,8 @@ def build_snapshot(
 
     snap: dict[str, Any] = {
         "generated_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "slate_date": today,
+        "slate_timezone": tz_name,
         "schema_version": SCHEMA_VERSION,
         "sources": sources,
         "source_status": {k: v["status"] for k, v in source_health.items()},
@@ -600,13 +650,31 @@ def main(argv: list[str] | None = None) -> None:
         default=None,
         help="Public URL to a BD Bets MLB picks JSON feed (overrides BD_BETS_URL env).",
     )
+    p.add_argument(
+        "--slate-date",
+        default=None,
+        help=(
+            "Override the YYYY-MM-DD slate date used for schedule URLs and the "
+            f"output filename (env: {SLATE_DATE_ENV})."
+        ),
+    )
+    p.add_argument(
+        "--timezone",
+        default=None,
+        help=(
+            "IANA timezone for slate-date math (default: "
+            f"{DEFAULT_TIMEZONE}; env: {TIMEZONE_ENV})."
+        ),
+    )
     args = p.parse_args(argv)
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     snap = build_snapshot(
         bd_bets_path=args.bd_bets_path,
         bd_bets_url=args.bd_bets_url,
+        slate_date=args.slate_date,
+        timezone_name=args.timezone,
     )
-    day = _today_utc().strftime("%Y-%m-%d")
+    day = snap["slate_date"]
     latest = DATA_DIR / "latest.json"
     dated = DATA_DIR / f"mlb_snapshot_{day}.json"
     latest.write_text(json.dumps(snap, indent=2), encoding="utf-8")

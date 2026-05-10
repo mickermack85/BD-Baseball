@@ -760,9 +760,15 @@ function transitionLine(current, next) {
 // snapshot + rundown the rest of the generator runs on, so output stays
 // deterministic and never claims more than the verified notes support.
 
-// Pull a YYYY-MM-DD show date from the snapshot. Falls back to today's UTC
-// date if the snapshot doesn't include a parseable timestamp.
+// Pull a YYYY-MM-DD show date from the snapshot. Prefers the explicit
+// `slate_date` (computed in the show's timezone) over slicing
+// `generated_at`, which is in UTC and can drift to the next day late at
+// night Pacific time.
 function showDateString(snapshot) {
+  const sd = snapshot && snapshot.slate_date;
+  if (typeof sd === "string" && /^\d{4}-\d{2}-\d{2}$/.test(sd)) {
+    return sd;
+  }
   const ts = snapshot && snapshot.generated_at;
   if (typeof ts === "string" && /^\d{4}-\d{2}-\d{2}/.test(ts)) {
     return ts.slice(0, 10);
