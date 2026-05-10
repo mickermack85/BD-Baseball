@@ -396,6 +396,10 @@ class ShowGeneratorTests(unittest.TestCase):
 
     def test_bd_bets_segment_absent_when_no_picks(self) -> None:
         snap = json.loads((ROOT / "data" / "latest.json").read_text(encoding="utf-8"))
+        # Strip any committed bd_bets section so we test the truly-empty case.
+        snap.pop("bd_bets", None)
+        if "source_status" in snap:
+            snap["source_status"].pop("bd_bets", None)
         out = self._generate(snap, {"preset": "standard", "teams": ["athletics"]})
         ids = [s["id"] for s in out["rundown"]["segments"]]
         self.assertNotIn("bd_bets", ids)

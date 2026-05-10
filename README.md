@@ -36,8 +36,15 @@ snapshot builder that reads the public **MLB Stats API** (`statsapi.mlb.com`).
   Inputs: snapshot + options (`preset`, `teams`). Outputs: timed segment
   list, plain-text rundown, plain-text host script, plus a livestream
   metadata package (title, short / long description, teaser) and
-  Markdown renderers for each output. Importable in Node for tests;
-  also exposed as `window.BDShowGenerator`.
+  Markdown renderers for each output. Also exposes a deterministic
+  `buildShowStack(snapshot, opts)` that ranks today's editorial angles
+  (focus-team games, marquee matchups, notable probables, standings
+  context, high-signal transactions, plus one compact BD Bets angle when
+  available) and a `selectTopBdBetsAngles(picks, limit)` helper that
+  trims the BD Bets feed to the top 3–5 by confidence/edge so the show
+  generator and the Today's MLB Desk panel never render the full 80+
+  pick list. Importable in Node for tests; also exposed as
+  `window.BDShowGenerator`.
 - `app.js` — frontend wiring: loads `data/latest.json`, renders the
   generator controls and outputs, and renders the source-health /
   verified-notes reference panels (compact / collapsible). Empty
@@ -193,12 +200,28 @@ whether it has been removed from the working tree or git history.
 
 The whole flow happens in the browser. No terminal, no logins.
 
-1. **Open the app.** The header shows the snapshot timestamp and a green
-   **"Sources healthy."** pill (or a red warning if the snapshot is stale
-   or any lane errored — see the runbook below).
-2. **Pick a format.** Use the **Format** dropdown in the **Show Generator**
-   card: 15-min Quick Hit, 25-min Standard, or 35-min Deep Show. The
-   rundown regenerates automatically.
+1. **Open the app and review Today's MLB Desk.** The lead card on the Show
+   Prep tab is **Today's MLB Desk** — standard baseball intel built
+   directly from the verified snapshot:
+   - **Top storylines** — a deterministic ranked list (focus-team games,
+     marquee matchups, notable probables, standings/division context,
+     high-signal transactions, plus one compact BD Bets angle when picks
+     pass top-angle filtering).
+   - **Scoreboard** — today's games from the MLB Stats API schedule
+     hydrate (matchup, status, probables, venue; live score/inning when
+     available).
+   - **Focus teams** — quick standings + next probable per configured team.
+   - **Compact BD Bets angles** (collapsed) — top 3–5 picks ranked by
+     confidence/edge with model leans, never the full 80+ pick list.
+   The header shows the snapshot timestamp and a green **"Sources
+   healthy."** pill (or a red warning if the snapshot is stale or any lane
+   errored — see the runbook below).
+2. **Pick a format.** Scroll to the **Show Generator** card and pick a
+   **Format**: 15-min Quick Hit, 25-min Standard, or 35-min Deep Show.
+   The rundown regenerates automatically and now opens with the strongest
+   baseball storyline from Today's MLB Desk (focus-team game / marquee /
+   standings hook), with BD Bets as one optional segment before the
+   closer rather than the lead.
 3. **Pick focus teams.** The **Focus teams** chips default to all
    configured teams (Athletics / Rockies / Tigers). Untick any you don't
    want a homer block for. The team segments reorder accordingly.
