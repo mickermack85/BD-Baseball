@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T07:53:50Z",
+  "generated_at": "2026-07-04T14:42:34Z",
   "slate_date": "2026-07-04",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
@@ -36,13 +36,29 @@
     "tigers_news": "verified",
     "rockies_news": "verified",
     "curated_news_mlb_com": "verified",
-    "curated_news_espn": "verified",
+    "curated_news_espn": "unverified",
     "curated_news_yahoo_sports": "verified",
     "bd_bets": "unverified"
   },
   "news": {
     "league_news": {
       "items": [
+        {
+          "headline": "For America's 250th, we're taking a road trip to highlight one baseball story from every state",
+          "url": "https://www.mlb.com/news/baseball-stories-from-all-50-states-in-america",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-07-04T04:30:46Z",
+          "summary": ""
+        },
+        {
+          "headline": "All-Star starters, pitchers and reserves to be revealed tonight (7:30 ET on FOX)",
+          "url": "https://www.mlb.com/news/all-star-game-roster-rules-faq-c239654292",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-07-02T16:00:00Z",
+          "summary": ""
+        },
         {
           "headline": "'We never give up': Teo's grand slam keys LA's 2nd straight comeback win",
           "url": "https://www.mlb.com/news/teoscar-hernandez-hits-go-ahead-grand-slam-in-dodgers-win",
@@ -57,14 +73,6 @@
           "source": "MLB.com",
           "source_type": "rss",
           "published_at": "2026-07-04T06:20:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "For America's 250th, we're taking a road trip to highlight one baseball story from every state",
-          "url": "https://www.mlb.com/news/baseball-stories-from-all-50-states-in-america",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-07-04T04:30:46Z",
           "summary": ""
         },
         {
@@ -113,14 +121,6 @@
           "source": "MLB.com",
           "source_type": "rss",
           "published_at": "2026-07-04T01:35:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Cease shows sensational side in 7-inning gem in Seattle",
-          "url": "https://www.mlb.com/news/dylan-cease-tosses-7-innings-in-blue-jays-shutout-win-vs-mariners",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-07-04T05:46:00Z",
           "summary": ""
         }
       ],
@@ -204,7 +204,7 @@
             "summary": "Who do the Athletics have in the pipeline? Get scouting reports, video, stats, projected ETAs and more for the A's Top 30 Prospects."
           },
           {
-            "headline": "With voting over, here\u2019s how the All-Star teams are selected",
+            "headline": "All-Star starters, pitchers and reserves to be revealed tonight (7:30 ET on FOX)",
             "url": "https://www.mlb.com/athletics/news/all-star-game-roster-rules-faq-c239654292",
             "source": "MLB.com",
             "source_type": "rss",
@@ -267,7 +267,7 @@
             "summary": ""
           },
           {
-            "headline": "With voting over, here\u2019s how the All-Star teams are selected",
+            "headline": "All-Star starters, pitchers and reserves to be revealed tonight (7:30 ET on FOX)",
             "url": "https://www.mlb.com/tigers/news/all-star-game-roster-rules-faq-c239654292",
             "source": "MLB.com",
             "source_type": "rss",
@@ -393,17 +393,16 @@
     },
     "news_items": [
       {
-        "id": "espn-2-1",
-        "headline": "Dodgers to hold Ohtani (bicep) out Sat. after exit...",
-        "url": "https://www.espn.com/mlb/story/_/id/49265557/dodgers-shohei-ohtani-exits-early-vs-padres-bicep-issue-held-lineup-saturday",
-        "source": "MLB.com",
+        "id": "yahoo_sports-3-1",
+        "headline": "Yankees Birthday of the Day: John Sterling",
+        "url": "https://sports.yahoo.com/articles/yankees-birthday-day-john-sterling-143000489.html",
+        "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-07-04T07:22:38Z",
-        "summary": "Dodgers star Shohei Ohtani threw a season-high 110 pitches Friday against the Padres before exiting in the seventh inning when his right biceps tightened up on a swing. He will be held out of the lineup Saturday to afford him some extra recovery time.",
+        "published_at": "2026-07-04T14:30:00Z",
+        "summary": "The legendary voice (and man) left a lasting mark on the Yankees and baseball.",
         "teams": [
           "athletics",
-          "dodgers",
-          "padres"
+          "yankees"
         ],
         "players": [],
         "topics": [
@@ -412,16 +411,16 @@
         "priority": 2
       },
       {
-        "id": "espn-2-2",
-        "headline": "Chapman sets all-time record for K's by reliever",
-        "url": "https://www.espn.com/mlb/story/_/id/49265593/boston-chapman-sets-all-record-strikeouts-reliever",
-        "source": "MLB.com",
+        "id": "yahoo_sports-3-2",
+        "headline": "Astros Prospect Report: July 3rd",
+        "url": "https://sports.yahoo.com/articles/astros-prospect-report-july-3rd-143000292.html",
+        "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-07-04T07:22:38Z",
-        "summary": "Red Sox lefty Aroldis Chapman passed Hoyt Wilhelm as the major leagues' all-time leader in strikeouts by a reliever Friday night, reaching 1,364 for his career.",
+        "published_at": "2026-07-04T14:30:00Z",
+        "summary": "See how the prospects performed last night.",
         "teams": [
-          "athletics",
-          "red sox"
+          "astros",
+          "athletics"
         ],
         "players": [],
         "topics": [
@@ -430,13 +429,50 @@
         "priority": 2
       },
       {
-        "id": "espn-2-3",
-        "headline": "Mariners put J-Rod on 7-day IL with concussion",
-        "url": "https://www.espn.com/mlb/story/_/id/49263190/mariners-rodriguez-goes-7-day-il-hit-back-helmet",
-        "source": "MLB.com",
+        "id": "yahoo_sports-3-3",
+        "headline": "Pittsburgh Pirates vs. Washington Nationals: Braxton Ashcraft vs. Zack Littell",
+        "url": "https://sports.yahoo.com/articles/pittsburgh-pirates-vs-washington-nationals-140500659.html",
+        "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-07-04T07:22:38Z",
-        "summary": "Mariners outfielder Julio Rodriguez, who left Thursday night's game after taking a throw to the back of the helmet, was placed on the seven-day IL with a concussion.",
+        "published_at": "2026-07-04T14:05:00Z",
+        "summary": "The Pirates are on the road looking to grab a win today.",
+        "teams": [
+          "athletics",
+          "nationals",
+          "pirates"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-4",
+        "headline": "2026 Cubs Heroes and Goats: Carson Kelly is the Superhero vs. the Cardinals",
+        "url": "https://sports.yahoo.com/articles/2026-cubs-heroes-goats-carson-140000842.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-07-04T14:00:00Z",
+        "summary": "The shoe on the other foot: Cubs lose 17-1.",
+        "teams": [
+          "cardinals",
+          "cubs"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-5",
+        "headline": "Mariners News: Carlos Rod\u00f3n, Ryan Helsley, and Kris Bubic",
+        "url": "https://sports.yahoo.com/articles/mariners-news-carlos-rod-n-140000147.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-07-04T14:00:00Z",
+        "summary": "On this Independence Day, we\u2019re checking in on the latest injury news and more from around baseball.",
         "teams": [
           "athletics",
           "mariners"
@@ -448,33 +484,14 @@
         "priority": 2
       },
       {
-        "id": "espn-2-4",
-        "headline": "Yanks place Rod\u00f3n on IL with elbow inflammation",
-        "url": "https://www.espn.com/mlb/story/_/id/49260478/yankees-place-carlos-rodon-15-day-il-elbow-inflammation",
-        "source": "MLB.com",
+        "id": "yahoo_sports-3-6",
+        "headline": "Phillies on the Pharm: 7/4/2026",
+        "url": "https://sports.yahoo.com/articles/phillies-pharm-7-4-2026-140000773.html",
+        "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-07-04T07:22:38Z",
-        "summary": "The Yankees placed lefty Carlos Rod\u00f3n on the 15-day IL on Friday because of elbow inflammation.",
+        "published_at": "2026-07-04T14:00:00Z",
+        "summary": "Ramon Marquez: prospect",
         "teams": [
-          "yankees"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "espn-2-5",
-        "headline": "Trout eyes Angels return next week ahead of ASG",
-        "url": "https://www.espn.com/mlb/story/_/id/49263481/angels-mike-trout-hoping-return-next-week-ahead-philadelphia-all-star-game",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-04T07:22:38Z",
-        "summary": "Mike Trout believes he can return from a hamstring injury for the Angels next week, giving him enough time to be ready for the All-Star Game in Philadelphia this month.",
-        "teams": [
-          "angels",
-          "athletics",
           "phillies"
         ],
         "players": [],
@@ -484,13 +501,30 @@
         "priority": 2
       },
       {
-        "id": "espn-2-6",
-        "headline": "Padres pitcher V\u00e1squez (ankle) goes on 15-day IL",
-        "url": "https://www.espn.com/mlb/story/_/id/49263536/randy-vasquez-il-ankle-comebacker-fainting-spell",
-        "source": "MLB.com",
+        "id": "yahoo_sports-3-7",
+        "headline": "Mets Morning News: \u201cWhen you meet a girl, you don\u2019t start kissing her right away.\u201d",
+        "url": "https://sports.yahoo.com/articles/mets-morning-news-meet-girl-140000730.html",
+        "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-07-04T07:22:38Z",
-        "summary": "Padres starting pitcher Randy V\u00e1squez went on the 15-day injured list Friday with a bruised right ankle.",
+        "published_at": "2026-07-04T14:00:00Z",
+        "summary": "Your Saturday morning dose of New York Mets and MLB news, notes, and links.",
+        "teams": [
+          "mets"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-8",
+        "headline": "The decline of Jackson Merrill is an indictment of Padres mismanagement",
+        "url": "https://sports.yahoo.com/articles/decline-jackson-merrill-indictment-padres-140000600.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-07-04T14:00:00Z",
+        "summary": "The young centerfielder&#39;s struggles have been incredibly depressing to watch.",
         "teams": [
           "padres"
         ],
@@ -501,61 +535,7 @@
         "priority": 2
       },
       {
-        "id": "espn-2-7",
-        "headline": "O's closer Helsley returns to IL with elbow issue",
-        "url": "https://www.espn.com/mlb/story/_/id/49262219/orioles-put-closer-helsley-15-day-il-elbow-discomfort",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-04T07:22:38Z",
-        "summary": "Orioles closer Ryan Helsley went on the 15-day injured list Friday, two days after he felt discomfort in his right elbow while warming up in Wednesday's win over the White Sox.",
-        "teams": [
-          "orioles",
-          "white sox"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "espn-2-8",
-        "headline": "Braves sign OF McCutchen to minor league deal",
-        "url": "https://www.espn.com/mlb/story/_/id/49260057/braves-sign-veteran-andrew-mccutchen-minor-league-deal",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-04T07:22:38Z",
-        "summary": "The Braves signed past NL MVP outfielder Andrew McCutchen to a minor league contract on Friday in their ongoing search for a veteran who can provide offensive help.",
-        "teams": [
-          "athletics",
-          "braves"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-1",
-        "headline": "Dodgers 2026 game results",
-        "url": "https://sports.yahoo.com/articles/dodgers-2026-game-results-052516142.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-04T06:46:26Z",
-        "summary": "Keeping track of every game this season, all in one place",
-        "teams": [
-          "athletics",
-          "dodgers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-1",
+        "id": "mlb_com-1-3",
         "headline": "'We never give up': Teo's grand slam keys LA's 2nd straight comeback win",
         "url": "https://www.mlb.com/news/teoscar-hernandez-hits-go-ahead-grand-slam-in-dodgers-win",
         "source": "MLB.com",
@@ -572,7 +552,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-2",
+        "id": "mlb_com-1-4",
         "headline": "Aroldis Chapman sets all-time mark for strikeouts by a reliever",
         "url": "https://www.mlb.com/news/aroldis-chapman-all-time-reliever-strikeout-record",
         "source": "MLB.com",
@@ -587,7 +567,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-7",
+        "id": "mlb_com-1-8",
         "headline": "Martinez shines, Caminero stays scorching as Rays win 9th straight",
         "url": "https://www.mlb.com/news/junior-caminero-s-25th-homer-powers-rays-to-ninth-straight-win",
         "source": "MLB.com",
@@ -605,7 +585,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-4",
+        "id": "mlb_com-1-5",
         "headline": "Ohtani K's 9 but tweaks biceps, will sit Saturday",
         "url": "https://www.mlb.com/news/shohei-ohtani-strikes-out-nine-in-quality-start-vs-padres",
         "source": "MLB.com",
@@ -620,96 +600,7 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-2",
-        "headline": "Bullpen delivers as Brewers win another late-night West Coast affair",
-        "url": "https://sports.yahoo.com/articles/bullpen-delivers-brewers-win-another-055746394.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-04T05:57:46Z",
-        "summary": "Brewers pickup seventh extra-inning win on the season in late night west coast fashion",
-        "teams": [
-          "athletics",
-          "brewers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-3",
-        "headline": "D-backs late miscue spells the difference in tight game with Brewers",
-        "url": "https://sports.yahoo.com/articles/d-backs-miscue-spells-difference-053031584.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-04T05:30:31Z",
-        "summary": "The D-backs nearly out-Brewered the Brewers, but one late misplay cost them in this one.",
-        "teams": [
-          "brewers",
-          "diamondbacks"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-4",
-        "headline": "Cease won\u2019t desist, Jays beat M\u2019s 2-0",
-        "url": "https://sports.yahoo.com/articles/cease-won-t-desist-jays-052230272.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-04T05:22:30Z",
-        "summary": "Tonight\u2019s game began with a raucous ceremonial first pitch from head coach Mauricio Pochettino and the U.S. Men\u2019s National Team. Canada would own the rest of the night. The first inning was the canary in the coal mine, as J.P. Crawford biffed yet another throw from the hot corner in the top half, and in [\u2026]",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-5",
-        "headline": "Shohei Ohtani to miss Saturday&#39;s game after exiting Padres-Dodgers with biceps injury",
-        "url": "https://sports.yahoo.com/mlb/article/shohei-ohtani-to-miss-saturdays-game-after-exiting-padres-dodgers-with-biceps-injury-051544282.html",
-        "source": "Yahoo Sports",
-        "source_type": "rss",
-        "published_at": "2026-07-04T05:15:44Z",
-        "summary": "Dodgers manager Dave Roberts said the team was being safe by keeping Ohtani out of the lineup.",
-        "teams": [
-          "athletics",
-          "dodgers",
-          "padres"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-6",
-        "headline": "Cubs Minor League Wrap: BJ Murray, Iowa edge Toledo, 5-4",
-        "url": "https://sports.yahoo.com/articles/cubs-minor-league-wrap-bj-050927291.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-04T05:09:27Z",
-        "summary": "Iowa and Myrtle Beach won. Knoxville lost. South Bend got rain.",
-        "teams": [
-          "cubs"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-5",
+        "id": "mlb_com-1-6",
         "headline": "He's a natural! USMNT coach Pochettino throws out 1st pitch at Mariners game",
         "url": "https://www.mlb.com/news/usmnt-coach-mauricio-pochettino-throws-first-pitch-at-mariners-game",
         "source": "MLB.com",
@@ -726,43 +617,7 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-7",
-        "headline": "Athletics Pitching Struggles in 12-5 Loss to the Marlins",
-        "url": "https://sports.yahoo.com/articles/athletics-pitching-struggles-12-5-050438525.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-04T05:04:38Z",
-        "summary": "A\u2019s Free Fall Continues",
-        "teams": [
-          "athletics",
-          "marlins"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-8",
-        "headline": "Jays Shutout Mariners",
-        "url": "https://sports.yahoo.com/articles/jays-shutout-mariners-050036061.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-04T05:00:36Z",
-        "summary": "Blue Jays 2 Mariners 0 The bad news? We only scored 2 runs, which is pretty normal. The good news? They didn\u2019t score 2 runs. We got both our runs in the third inning. Sean Keys started it with a single. Andr\u00e9s Gim\u00e9nez doubled him home. John had Nathan Lukes bunt Gim\u00e9nez to third. IN [\u2026]",
-        "teams": [
-          "blue jays",
-          "mariners"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-6",
+        "id": "mlb_com-1-7",
         "headline": "Leadoff HR and grand slam in same game? It's only been done 7 times EVER",
         "url": "https://www.mlb.com/news/jake-mccarthy-hits-leadoff-homer-grand-slam-in-same-game",
         "source": "MLB.com",
@@ -777,7 +632,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-3",
+        "id": "mlb_com-1-1",
         "headline": "For America's 250th, we're taking a road trip to highlight one baseball story from every state",
         "url": "https://www.mlb.com/news/baseball-stories-from-all-50-states-in-america",
         "source": "MLB.com",
@@ -794,16 +649,14 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-8",
-        "headline": "Cole defies weather, Boone's hook to help Yankees snap skid",
-        "url": "https://www.mlb.com/news/gerrit-cole-starts-series-opener-vs-twins",
+        "id": "mlb_com-1-2",
+        "headline": "All-Star starters, pitchers and reserves to be revealed tonight (7:30 ET on FOX)",
+        "url": "https://www.mlb.com/news/all-star-game-roster-rules-faq-c239654292",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-07-04T04:18:00Z",
+        "published_at": "2026-07-02T16:00:00Z",
         "summary": "",
-        "teams": [
-          "yankees"
-        ],
+        "teams": [],
         "players": [],
         "topics": [
           "mlb"
@@ -818,17 +671,17 @@
         "id": "822716",
         "away_team": "Pittsburgh Pirates",
         "home_team": "Washington Nationals",
-        "away_score": null,
-        "home_score": null,
+        "away_score": 0,
+        "home_score": 0,
         "status": "Upcoming",
-        "status_detail": "Scheduled",
+        "status_detail": "Warmup",
         "inning": null,
         "inning_state": "",
         "start_time": "2026-07-04T15:05:00Z",
         "venue": "Nationals Park",
         "probable_pitchers": {
           "away": "Braxton Ashcraft",
-          "home": "Zack Littell"
+          "home": "Carson Palmquist"
         },
         "broadcasts": []
       },
@@ -836,10 +689,10 @@
         "id": "823526",
         "away_team": "Minnesota Twins",
         "home_team": "New York Yankees",
-        "away_score": null,
-        "home_score": null,
+        "away_score": 0,
+        "home_score": 0,
         "status": "Upcoming",
-        "status_detail": "Scheduled",
+        "status_detail": "Pre-Game",
         "inning": null,
         "inning_state": "",
         "start_time": "2026-07-04T17:35:00Z",
@@ -1105,8 +958,8 @@
       "Standings: Guardians: 47-42 (PCT .528, GB -) [Division]",
       "Standings: White Sox: 45-42 (PCT .517, GB 1.0) [Division]",
       "Standings: Twins: 42-47 (PCT .472, GB 5.0) [Division]",
-      "Probable: Pittsburgh Pirates (Braxton Ashcraft) @ Washington Nationals (Zack Littell) \u2014 Scheduled 2026-07-04T15:05:00Z Nationals Park",
-      "Probable: Minnesota Twins (Zebby Matthews) @ New York Yankees (Brendan Beck) \u2014 Scheduled 2026-07-04T17:35:00Z Yankee Stadium",
+      "Probable: Pittsburgh Pirates (Braxton Ashcraft) @ Washington Nationals (Carson Palmquist) \u2014 Warmup 2026-07-04T15:05:00Z Nationals Park",
+      "Probable: Minnesota Twins (Zebby Matthews) @ New York Yankees (Brendan Beck) \u2014 Pre-Game 2026-07-04T17:35:00Z Yankee Stadium",
       "Probable: Detroit Tigers (Jack Flaherty) @ Texas Rangers (Kumar Rocker) \u2014 Scheduled 2026-07-04T20:05:00Z Globe Life Field",
       "Probable: Toronto Blue Jays (Shane Bieber) @ Seattle Mariners (Logan Gilbert) \u2014 Scheduled 2026-07-04T20:10:00Z T-Mobile Park",
       "Probable: Baltimore Orioles (Brandon Young) @ Cincinnati Reds (Hunter Greene) \u2014 Scheduled 2026-07-04T23:10:00Z Great American Ball Park",
@@ -1117,8 +970,8 @@
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: Pittsburgh Pirates (Braxton Ashcraft) @ Washington Nationals (Zack Littell) \u2014 Scheduled 2026-07-04T15:05:00Z Nationals Park",
-      "Probable: Minnesota Twins (Zebby Matthews) @ New York Yankees (Brendan Beck) \u2014 Scheduled 2026-07-04T17:35:00Z Yankee Stadium",
+      "Probable: Pittsburgh Pirates (Braxton Ashcraft) @ Washington Nationals (Carson Palmquist) \u2014 Warmup 2026-07-04T15:05:00Z Nationals Park",
+      "Probable: Minnesota Twins (Zebby Matthews) @ New York Yankees (Brendan Beck) \u2014 Pre-Game 2026-07-04T17:35:00Z Yankee Stadium",
       "Probable: Detroit Tigers (Jack Flaherty) @ Texas Rangers (Kumar Rocker) \u2014 Scheduled 2026-07-04T20:05:00Z Globe Life Field",
       "Probable: Toronto Blue Jays (Shane Bieber) @ Seattle Mariners (Logan Gilbert) \u2014 Scheduled 2026-07-04T20:10:00Z T-Mobile Park",
       "Probable: Baltimore Orioles (Brandon Young) @ Cincinnati Reds (Hunter Greene) \u2014 Scheduled 2026-07-04T23:10:00Z Great American Ball Park",
@@ -1127,58 +980,58 @@
       "Probable: St. Louis Cardinals (Kyle Leahy) @ Chicago Cubs (Shota Imanaga) \u2014 Scheduled 2026-07-05T00:08:00Z Wrigley Field"
     ],
     "transactions": [
-      "League tx: 2026-06-27: Houston Astros sent SS Braden Shewmake on a rehab assignment to FCL Astros.",
-      "League tx: 2026-06-27: 3B Ramiro Pena assigned to Mexico National Team.",
-      "League tx: 2026-06-27: 1B Victor Mendoza assigned to Mexico National Team.",
-      "League tx: 2026-06-27: RHP Daniel Martinez assigned to Mexico National Team.",
-      "League tx: 2026-06-27: LHP Jose Perez assigned to DSL Padres Gold.",
-      "League tx: 2026-06-27: Reading Fightin Phils placed LHP Adam Seminaris on the 7-day injured list.",
-      "League tx: 2026-06-27: Athletics designated 3B Brett Harris for assignment.",
-      "League tx: 2026-06-27: Charlotte Knights activated RHP Chase Plymell from the Development List.",
-      "League tx: 2026-06-27: OF Maikel Serrano assigned to Mexico National Team.",
-      "League tx: 2026-06-27: RHP Joan Sinvil assigned to DSL Rojos.",
-      "League tx: 2026-06-27: Arkansas Travelers sent RHP Michael Hobbs on a rehab assignment to ACL Mariners.",
-      "League tx: 2026-06-27: New York Mets sent 1B Jorge Polanco on a rehab assignment to Syracuse Mets.",
-      "League tx: 2026-06-27: C Carlos P\u00e9rez assigned to LMB All-Stars.",
-      "League tx: 2026-06-27: IF Victor Marquez assigned to Mexico National Team.",
-      "League tx: 2026-06-27: RHP Brett de Geus assigned to LMB All-Stars.",
-      "League tx: 2026-06-27: FCL Mets released RHP John Valle.",
-      "League tx: 2026-06-27: SS Braden Shewmake assigned to FCL Astros.",
-      "League tx: 2026-06-27: Vancouver Canadians released OF Matt Scannell.",
-      "League tx: 2026-06-27: Jersey Shore BlueClaws sent RHP Ryan Degges on a rehab assignment to Clearwater Threshers.",
-      "League tx: 2026-06-27: Chicago Cubs placed LHP Hoby Milner on the 15-day injured list retroactive to June 26, 2026. Appendicitis.",
-      "League tx: 2026-06-27: Houston Astros sent SS Nick Allen on a rehab assignment to Sugar Land Space Cowboys.",
-      "League tx: 2026-06-27: Los Angeles Angels signed free agent LHP Sammy Peralta to a minor league contract.",
-      "League tx: 2026-06-27: Philadelphia Phillies signed free agent LF Tommy Pham to a minor league contract.",
-      "League tx: 2026-06-27: Tampa Bay Rays sent RF Jake Fraley on a rehab assignment to FCL Rays.",
-      "League tx: 2026-06-27: SS Hern\u00e1n P\u00e9rez assigned to LMB All-Stars.",
+      "League tx: 2026-06-27: Toledo Mud Hens transferred RHP Matt Seelinger to the Development List.",
+      "League tx: 2026-06-27: Arkansas Travelers activated LHP Reid VanScoter from the 7-day injured list.",
+      "League tx: 2026-06-27: LMB All-Stars activated RHP Noah Skirrow.",
+      "League tx: 2026-06-27: 3B Rodolfo Amador assigned to Mexico National Team.",
+      "League tx: 2026-06-27: 2B Roberto Valenzuela assigned to Mexico National Team.",
+      "League tx: 2026-06-27: Fort Myers Mighty Mussels sent RHP Reed Moring on a rehab assignment to FCL Twins.",
+      "League tx: 2026-06-27: C Josue Brice\u00f1o assigned to FCL Tigers.",
+      "League tx: 2026-06-27: SS Juan Santana assigned to LMB All-Stars.",
+      "League tx: 2026-06-27: 3B Owen Petrich assigned to West Virginia Black Bears.",
+      "League tx: 2026-06-27: St. Paul Saints placed RHP Ricky Castro on the 7-day injured list.",
+      "League tx: 2026-06-27: Indianapolis Indians placed RHP Michael Walsh on the 7-day injured list.",
+      "League tx: 2026-06-27: RHP David Reyes assigned to Mexico National Team.",
+      "League tx: 2026-06-27: LHP Cesar Morales assigned to DSL Mets Orange.",
+      "League tx: 2026-06-27: Fort Myers Mighty Mussels sent RHP Jake Hunter on a rehab assignment to FCL Twins.",
+      "League tx: 2026-06-27: Tampa Tarpons placed CF Willy Montero on the 7-day injured list.",
+      "League tx: 2026-06-27: Memphis Redbirds sent RHP Sem Robberse on a rehab assignment to Palm Beach Cardinals.",
+      "League tx: 2026-06-27: Binghamton Rumble Ponies released RHP Tyler Burch.",
+      "League tx: 2026-06-27: FCL Braves activated OF Elias Reyno.",
+      "League tx: 2026-06-27: ACL Dodgers transferred SS Harold Gonzalez from the 7-day injured list to the 60-day injured list.",
       "League tx: 2026-06-27: 1B Seth Beer assigned to LMB All-Stars.",
-      "League tx: 2026-06-27: Pittsburgh Pirates sent RHP Wilber Dotel on a rehab assignment to Altoona Curve.",
-      "League tx: 2026-06-27: C Dean Nevarez assigned to Mexico National Team.",
-      "League tx: 2026-06-27: 1B Yunior Severino assigned to LMB All-Stars.",
-      "League tx: 2026-06-27: C Angel Reyes assigned to LMB All-Stars.",
-      "League tx: 2026-06-27: Wilson Warbirds transferred OF Nick Monile to the Development List.",
+      "League tx: 2026-06-27: RHP Colten Brewer assigned to LMB All-Stars.",
+      "League tx: 2026-06-27: RHP Tomohiro Anraku assigned to LMB All-Stars.",
       "League tx: 2026-06-27: IF Albert Lara assigned to Mexico National Team.",
+      "League tx: 2026-06-27: 3B Yangervis Solarte assigned to LMB All-Stars.",
+      "League tx: 2026-06-27: RHP Dan Kubiuk assigned to LMB All-Stars.",
       "League tx: 2026-06-27: RHP Jesus Cruz assigned to Mexico National Team.",
       "League tx: 2026-06-27: LHP Ariel Gracia assigned to Mexico National Team.",
-      "League tx: 2026-06-27: RHP Alexis Vera assigned to Mexico National Team.",
-      "League tx: 2026-06-27: SS Jermaine Palacios assigned to LMB All-Stars.",
+      "League tx: 2026-06-27: SS Gustavo Nunez assigned to LMB All-Stars.",
+      "League tx: 2026-06-27: Richmond Flying Squirrels sent RHP Logan Martin on a rehab assignment to ACL Giants.",
+      "League tx: 2026-06-27: Northwest Arkansas Naturals placed RHP Andrew Morones on the 7-day injured list.",
       "League tx: 2026-06-27: DSL Padres Gold activated OF Jhostin Fuentes from the restricted list.",
       "League tx: 2026-06-27: LHP Ethan Lund assigned to USA Collegiate National Team Stripes.",
-      "League tx: 2026-06-27: LHP Jaden Barfield assigned to Wareham Gatemen.",
-      "League tx: 2026-06-27: Syracuse Mets activated LHP Matt Turner from the 7-day injured list.",
-      "League tx: 2026-06-27: Fresno Grizzlies sent SS Derek Bernard on a rehab assignment to ACL Rockies.",
-      "League tx: 2026-06-27: Midland RockHounds placed 3B Euribiel Angeles on the 7-day injured list.",
-      "League tx: 2026-06-27: Midland RockHounds activated 3B Brennan Milone from the Development List.",
+      "League tx: 2026-06-27: Corpus Christi Hooks sent C Walker Janek on a rehab assignment to FCL Astros.",
+      "League tx: 2026-06-27: Washington Nationals sent RHP Max Kranick on a rehab assignment to Harrisburg Senators.",
+      "League tx: 2026-06-27: RHP Jairo Bautista assigned to DSL Astros Blue.",
+      "League tx: 2026-06-27: Las Vegas Aviators placed RHP Michael Kelly on the 7-day injured list retroactive to June 26, 2026.",
       "League tx: 2026-06-27: Baltimore Orioles activated LHP Cade Povich from the 15-day injured list.",
       "League tx: 2026-06-27: Hudson Valley Renegades sent RHP Brian Hendry on a rehab assignment to Tampa Tarpons.",
       "League tx: 2026-06-27: Buffalo Bisons activated RHP Grant Rogers from the Development List.",
-      "League tx: 2026-06-27: Williamsport Crosscutters activated SS KJ White Jr. from the temporarily inactive list.",
-      "League tx: 2026-06-27: Mexico National Team placed SS Alan Trejo on the reserve list.",
-      "League tx: 2026-06-27: Augusta GreenJackets placed RHP Jaylen Paden on the 7-day injured list.",
-      "League tx: 2026-06-27: Nashville Sounds transferred SS Freddy Zamora to the Development List."
+      "League tx: 2026-06-27: RHP Breidy Adames assigned to DSL NYY Yankees.",
+      "League tx: 2026-06-27: Birmingham Barons activated SS Jordan Sprinkle from the 7-day injured list.",
+      "League tx: 2026-06-27: Pensacola Blue Wahoos activated 1B Dylan Jasso from the Development List.",
+      "League tx: 2026-06-27: RHP Angel Gamarra assigned to DSL Padres Brown.",
+      "League tx: 2026-06-27: RHP Carlos Carrasco assigned to Gwinnett Stripers.",
+      "League tx: 2026-06-27: OF Tyree Reed assigned to State College Spikes.",
+      "League tx: 2026-06-27: Houston Astros sent SS Nick Allen on a rehab assignment to Sugar Land Space Cowboys.",
+      "League tx: 2026-06-27: Nashville Sounds transferred RHP Kaleb Bowman to the Development List.",
+      "League tx: 2026-06-27: Charlotte Knights activated RHP Chase Plymell from the Development List.",
+      "League tx: 2026-06-27: OF Maikel Serrano assigned to Mexico National Team.",
+      "League tx: 2026-06-27: Fayetteville Woodpeckers sent 2B Brandon Forrester on a rehab assignment to FCL Astros."
     ],
-    "transactions_total": 1546,
+    "transactions_total": 1558,
     "debug": {
       "standings": [
         "rows=30"
@@ -1187,7 +1040,7 @@
         "games=15"
       ],
       "transactions": [
-        "transactions=1548"
+        "transactions=1561"
       ]
     }
   },
@@ -1332,8 +1185,8 @@
         "verified_count": 15,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Pittsburgh Pirates (Braxton Ashcraft) @ Washington Nationals (Zack Littell) \u2014 Scheduled 2026-07-04T15:05:00Z Nationals Park",
-          "Probable: Minnesota Twins (Zebby Matthews) @ New York Yankees (Brendan Beck) \u2014 Scheduled 2026-07-04T17:35:00Z Yankee Stadium",
+          "Probable: Pittsburgh Pirates (Braxton Ashcraft) @ Washington Nationals (Carson Palmquist) \u2014 Warmup 2026-07-04T15:05:00Z Nationals Park",
+          "Probable: Minnesota Twins (Zebby Matthews) @ New York Yankees (Brendan Beck) \u2014 Pre-Game 2026-07-04T17:35:00Z Yankee Stadium",
           "Probable: Detroit Tigers (Jack Flaherty) @ Texas Rangers (Kumar Rocker) \u2014 Scheduled 2026-07-04T20:05:00Z Globe Life Field",
           "Probable: Toronto Blue Jays (Shane Bieber) @ Seattle Mariners (Logan Gilbert) \u2014 Scheduled 2026-07-04T20:10:00Z T-Mobile Park",
           "Probable: Baltimore Orioles (Brandon Young) @ Cincinnati Reds (Hunter Greene) \u2014 Scheduled 2026-07-04T23:10:00Z Great American Ball Park"
@@ -1344,16 +1197,16 @@
         "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-06-27&endDate=2026-07-04",
         "status": "verified",
         "debug": [
-          "transactions=1548"
+          "transactions=1561"
         ],
-        "verified_count": 1546,
+        "verified_count": 1558,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-06-27: Houston Astros sent SS Braden Shewmake on a rehab assignment to FCL Astros.",
-          "League tx: 2026-06-27: 3B Ramiro Pena assigned to Mexico National Team.",
-          "League tx: 2026-06-27: 1B Victor Mendoza assigned to Mexico National Team.",
-          "League tx: 2026-06-27: RHP Daniel Martinez assigned to Mexico National Team.",
-          "League tx: 2026-06-27: LHP Jose Perez assigned to DSL Padres Gold."
+          "League tx: 2026-06-27: Toledo Mud Hens transferred RHP Matt Seelinger to the Development List.",
+          "League tx: 2026-06-27: Arkansas Travelers activated LHP Reid VanScoter from the 7-day injured list.",
+          "League tx: 2026-06-27: LMB All-Stars activated RHP Noah Skirrow.",
+          "League tx: 2026-06-27: 3B Rodolfo Amador assigned to Mexico National Team.",
+          "League tx: 2026-06-27: 2B Roberto Valenzuela assigned to Mexico National Team."
         ],
         "unverified_sample": []
       },
@@ -1397,7 +1250,7 @@
           "Athletics tx: 2026-06-27: Athletics optioned RHP Hayden Juenger to Las Vegas Aviators.",
           "Athletics tx: 2026-06-27: Toronto Blue Jays traded RHP Hayden Juenger to Athletics for C Owen Carapellotti.",
           "Athletics tx: 2026-06-27: Toronto Blue Jays traded RHP Hayden Juenger to Athletics for C Owen Carapellotti.",
-          "Athletics tx: 2026-06-29: Athletics placed SS Jacob Wilson on the 10-day injured list retroactive to June 26, 2026. Right thumb inflammation."
+          "Athletics tx: 2026-06-29: Athletics designated RHP Michael Kelly for assignment."
         ],
         "unverified_sample": []
       },
@@ -1557,16 +1410,16 @@
       },
       "curated_news_espn": {
         "url": "https://www.espn.com/espn/rss/mlb/news",
-        "status": "verified",
+        "status": "unverified",
         "debug": [
-          "items=8"
+          "empty_response"
         ],
-        "verified_count": 1,
-        "unverified_count": 0,
-        "verified_sample": [
-          "News items: 8"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: News feed response was empty."
+        ]
       },
       "curated_news_yahoo_sports": {
         "url": "https://sports.yahoo.com/mlb/rss.xml",
@@ -1593,10 +1446,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-07-04T07:53:50Z"
+    "generated_utc": "2026-07-04T14:42:34Z"
   },
   "bd_bets": {
-    "generated_at": "2026-07-04T07:53:52.854Z",
+    "generated_at": "2026-07-04T14:42:37.567Z",
     "slate_date": "2026-07-04",
     "sport": "MLB",
     "source": "bd-bets",
