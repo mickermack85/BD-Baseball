@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-08T04:22:05Z",
-  "slate_date": "2026-07-07",
+  "generated_at": "2026-07-08T07:36:36Z",
+  "slate_date": "2026-07-08",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,14 +9,14 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-07&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-06-30&endDate=2026-07-07",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-07-07&endDate=2026-07-09&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-06-30&endDate=2026-07-07",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-07-07&endDate=2026-07-09&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-06-30&endDate=2026-07-07",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-07-07&endDate=2026-07-09&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-06-30&endDate=2026-07-07"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-08&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-07-01&endDate=2026-07-08",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-07-08&endDate=2026-07-10&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-07-01&endDate=2026-07-08",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-07-08&endDate=2026-07-10&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-07-01&endDate=2026-07-08",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-07-08&endDate=2026-07-10&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-07-01&endDate=2026-07-08"
   },
   "source_status": {
     "league_standings": "verified",
@@ -48,7 +48,7 @@
           "url": "https://www.mlb.com/news/tyler-tolbert-ties-record-hits-consecutive-plate-appearances",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-07-08T02:51:00Z",
+          "published_at": "2026-07-08T04:47:00Z",
           "summary": ""
         },
         {
@@ -56,7 +56,15 @@
           "url": "https://www.mlb.com/news/shohei-ohtani-hits-300th-career-home-run",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-07-08T02:25:44Z",
+          "published_at": "2026-07-08T05:42:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Who goes No. 1 in the Draft? Here are the odds and the case for each candidate",
+          "url": "https://www.mlb.com/news/best-odds-for-the-no-1-pick-in-the-2026-draft",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-07-08T01:07:10Z",
           "summary": ""
         },
         {
@@ -64,7 +72,31 @@
           "url": "https://www.mlb.com/news/ryan-o-hearn-sets-career-high-for-rbis-in-a-game",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-07-08T03:23:00Z",
+          "published_at": "2026-07-08T04:44:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Remarkable facts and figures about Ohtani's 300th home run",
+          "url": "https://www.mlb.com/news/shohei-ohtani-facts-300th-home-run",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-07-08T07:22:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Chourio turns around to bat left-handed, hits one 360 feet!",
+          "url": "https://www.mlb.com/news/jackson-chourio-bats-left-handed",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-07-08T03:53:47Z",
+          "summary": ""
+        },
+        {
+          "headline": "NL showdowns feature Phils vs. Reds, D-backs vs. Padres on ESPN",
+          "url": "https://www.mlb.com/news/phillies-vs-reds-d-backs-vs-padres-preview-for-july-8-2026",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-07-08T05:09:06Z",
           "summary": ""
         },
         {
@@ -84,43 +116,11 @@
           "summary": ""
         },
         {
-          "headline": "MLB's hottest team turns up temperature with walk-off against Seattle",
-          "url": "https://www.mlb.com/news/jakob-marsee-hits-walk-off-to-give-marlins-win-over-mariners",
+          "headline": "Trio of pitchers added as replacements to NL All-Star Game roster",
+          "url": "https://www.mlb.com/news/2026-all-star-game-roster-replacements",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-07-08T02:34:01Z",
-          "summary": ""
-        },
-        {
-          "headline": "Sinicki returns to AUSL action for 1st time since breast cancer diagnosis",
-          "url": "https://www.mlb.com/news/paige-sinicki-returns-for-portland-cascade-following-breast-cancer-diagnosis",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-07-08T03:31:56Z",
-          "summary": ""
-        },
-        {
-          "headline": "Cronenworth gets smoked in the face before game, then smokes HR in first AB!",
-          "url": "https://www.mlb.com/news/jake-cronenworth-homers-after-being-hit-in-the-face-before-game",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-07-08T02:53:45Z",
-          "summary": ""
-        },
-        {
-          "headline": "Chourio turns around to bat left-handed, hits one 360 feet!",
-          "url": "https://www.mlb.com/news/jackson-chourio-bats-left-handed",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-07-08T03:53:47Z",
-          "summary": ""
-        },
-        {
-          "headline": "Wheeler takes All-Star snub out on Reds with career high-tying 14 K's",
-          "url": "https://www.mlb.com/news/zack-wheeler-14-strikeouts-phillies-reds",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-07-08T03:55:00Z",
+          "published_at": "2026-07-07T22:42:00Z",
           "summary": ""
         }
       ],
@@ -227,11 +227,11 @@
             "summary": ""
           },
           {
-            "headline": "Jobe touches triple-digits in rehab start in Lakeland",
-            "url": "https://www.mlb.com/tigers/news/jackson-jobe-makes-rehab-start-with-lakeland",
+            "headline": "McGonigle holding steady atop latest AL Rookie of the Year poll",
+            "url": "https://www.mlb.com/tigers/news/rookie-of-the-year-poll-july-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-08T01:09:24Z",
+            "published_at": "2026-07-08T04:11:32Z",
             "summary": ""
           },
           {
@@ -240,6 +240,14 @@
             "source": "MLB.com",
             "source_type": "rss",
             "published_at": "2026-03-26T14:14:00Z",
+            "summary": ""
+          },
+          {
+            "headline": "Jobe touches triple-digits in rehab start in Lakeland",
+            "url": "https://www.mlb.com/tigers/news/jackson-jobe-makes-rehab-start-with-lakeland",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-07-08T01:09:24Z",
             "summary": ""
           },
           {
@@ -259,20 +267,12 @@
             "summary": ""
           },
           {
-            "headline": "With under a month to Trade Deadline, Skubal staying steady for Tigers",
-            "url": "https://www.mlb.com/tigers/news/tarik-skubal-pitching-for-tigers-with-trade-deadline-looming",
+            "headline": "Watch No. 3 prospect Brice\u00f1o rehab at Single-A for FREE tonight",
+            "url": "https://www.mlb.com/tigers/news/watch-minor-league-baseball-games-for-free-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-06T12:38:16Z",
+            "published_at": "2026-07-08T05:40:00Z",
             "summary": ""
-          },
-          {
-            "headline": "Red-hot Greene rakes again as Tigers top Rangers",
-            "url": "https://www.mlb.com/tigers/news/riley-greene-4-rbis-against-rangers",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-07-05T23:59:00Z",
-            "summary": "Detroit All-Star finishes with 4 RBIs, double shy of cycle against Rangers"
           },
           {
             "headline": "Latest Tigers injuries and transactions",
@@ -306,19 +306,19 @@
       "rockies": {
         "items": [
           {
-            "headline": "Goodman (hand) scratched from Tuesday's lineup; X-rays negative",
-            "url": "https://www.mlb.com/rockies/news/hunter-goodman-scratched-from-rockies-lineup-with-hand-injury",
+            "headline": "Rockies' bullpen locks down Dodgers with help from savvy backup catcher",
+            "url": "https://www.mlb.com/rockies/news/juan-mejia-jordan-romano-shut-down-dodgers-in-rockies-comeback-win",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-08T02:20:00Z",
+            "published_at": "2026-07-08T07:11:00Z",
             "summary": ""
           },
           {
-            "headline": "Rockies learning one thing about energetic Carrigg: 'He wants it'",
-            "url": "https://www.mlb.com/rockies/news/cole-carrigg-three-hits-two-doubles-for-rockies-vs-dodgers",
+            "headline": "Rockies' '22 first-rounder Hughes gets first big league start Wednesday",
+            "url": "https://www.mlb.com/rockies/news/rockies-prospect-gabriel-hughes-first-mlb-start",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-07T07:55:24Z",
+            "published_at": "2026-07-08T05:47:40Z",
             "summary": ""
           },
           {
@@ -330,35 +330,35 @@
             "summary": ""
           },
           {
+            "headline": "Goodman (hand) scratched from Tuesday's lineup; X-rays negative",
+            "url": "https://www.mlb.com/rockies/news/hunter-goodman-scratched-from-rockies-lineup-with-hand-injury",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-07-08T02:20:00Z",
+            "summary": ""
+          },
+          {
+            "headline": "Rumfield gets first-place votes in latest ROY poll",
+            "url": "https://www.mlb.com/rockies/news/rookie-of-the-year-poll-july-2026",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-07-08T04:11:32Z",
+            "summary": ""
+          },
+          {
+            "headline": "Rockies learning one thing about energetic Carrigg: 'He wants it'",
+            "url": "https://www.mlb.com/rockies/news/cole-carrigg-three-hits-two-doubles-for-rockies-vs-dodgers",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-07-07T07:55:24Z",
+            "summary": ""
+          },
+          {
             "headline": "How all 30 teams can upgrade at Trade Deadline",
             "url": "https://www.mlb.com/rockies/news/mlb-trade-deadline-2026-each-team-biggest-need",
             "source": "MLB.com",
             "source_type": "rss",
             "published_at": "2026-07-05T22:37:00Z",
-            "summary": ""
-          },
-          {
-            "headline": "Rockies looking to find 1st-round success with No. 10 overall pick",
-            "url": "https://www.mlb.com/rockies/news/rockies-2026-draft-preview",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-07-07T23:26:32Z",
-            "summary": ""
-          },
-          {
-            "headline": "Redrafting the 2016 Draft class, 10 years later",
-            "url": "https://www.mlb.com/rockies/news/redrafting-the-2016-draft",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-07-07T18:12:17Z",
-            "summary": ""
-          },
-          {
-            "headline": "Karros' 8th-inning go-ahead homer lifts Rockies to comeback win",
-            "url": "https://www.mlb.com/rockies/news/kyle-karros-go-ahead-three-run-home-run-in-comeback-win",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-07-06T02:24:00Z",
             "summary": ""
           },
           {
@@ -378,11 +378,11 @@
             "summary": "Who do the Rockies have in the pipeline? Get scouting reports, video, stats, projected ETAs and more for Colorado's Top 30 Prospects."
           },
           {
-            "headline": "Two Rockies prospects make Team of the Week",
-            "url": "https://www.mlb.com/rockies/news/prospect-team-of-the-week-july-6-2026",
+            "headline": "Rockies looking to find 1st-round success with No. 10 overall pick",
+            "url": "https://www.mlb.com/rockies/news/rockies-2026-draft-preview",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-06T21:27:05Z",
+            "published_at": "2026-07-07T23:26:32Z",
             "summary": ""
           }
         ],
@@ -393,53 +393,30 @@
     },
     "news_items": [
       {
-        "id": "espn-2-2",
-        "headline": "O'Hearn drives in 10, breaking Pirates' record",
-        "url": "https://www.espn.com/mlb/story/_/id/49301778/ryan-ohearn-sets-pirates-record-10-rbis-braves",
+        "id": "mlb_com-1-5",
+        "headline": "Remarkable facts and figures about Ohtani's 300th home run",
+        "url": "https://www.mlb.com/news/shohei-ohtani-facts-300th-home-run",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-07-08T05:11:45Z",
-        "summary": "Pittsburgh Pirates first baseman Ryan O'Hearn, in his first season with the franchise, made history Tuesday night, setting a club record by driving in 10 runs on three home runs in a convincing 12-4 victory over the Atlanta Braves at PNC Park.",
-        "teams": [
-          "athletics",
-          "braves",
-          "pirates"
-        ],
+        "published_at": "2026-07-08T07:22:00Z",
+        "summary": "",
+        "teams": [],
         "players": [],
         "topics": [
           "mlb"
         ],
-        "priority": 2
+        "priority": 1
       },
       {
-        "id": "espn-2-6",
-        "headline": "3B coach Cora leaves Tigers during third season",
-        "url": "https://www.espn.com/mlb/story/_/id/49301135/joey-cora-leaves-tigers-philosophical-differences",
-        "source": "MLB.com",
+        "id": "yahoo_sports-3-1",
+        "headline": "Bluebird Banter 2026 MLB Draft Preview Part 1",
+        "url": "https://sports.yahoo.com/articles/bluebird-banter-2026-mlb-draft-072200108.html",
+        "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-07-08T05:11:45Z",
-        "summary": "Detroit Tigers third base coach Joey Cora, the older brother of former Boston Red Sox manager Alex Cora, has left the club in the middle of his third season on the job because of what manager A.J. Hinch described on Tuesday as \"philosophical differences.\"",
+        "published_at": "2026-07-08T07:22:00Z",
+        "summary": "The 2026 MLB draft kicks off this Saturday, at 1:00pm ET. Because of MLB\u2019s ironclad commitment to preventing this from becoming an event, it will occur while several teams are playing actual MLB games, although the Jays specifically will be in San Diego and don\u2019t go until 8:40pm. The first 10 picks, which will inexplicably [\u2026]",
         "teams": [
-          "athletics",
-          "red sox",
-          "tigers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "espn-2-7",
-        "headline": "Contreras, Ashcraft among ASG replacements list",
-        "url": "https://www.espn.com/mlb/story/_/id/49301161/contreras-ashcraft-luzardo-all-star-game-replacements",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-08T05:11:45Z",
-        "summary": "Willson Contreras headlines list of players selected as All-Star Game replacements.",
-        "teams": [
-          "athletics"
+          "padres"
         ],
         "players": [],
         "topics": [
@@ -453,7 +430,7 @@
         "url": "https://www.espn.com/mlb/story/_/id/49302915/yankees-strike-17-s-vs-rays-2nd-straight-game",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-07-08T05:11:44Z",
+        "published_at": "2026-07-08T06:12:15Z",
         "summary": "In a 6-4 loss to the Rays on Tuesday night, the Yankees whiffed 17 times to become the first team in American League history to hit that mark in consecutive nine-inning games.",
         "teams": [
           "rays",
@@ -466,12 +443,50 @@
         "priority": 2
       },
       {
+        "id": "espn-2-2",
+        "headline": "O'Hearn drives in 10, breaking Pirates' record",
+        "url": "https://www.espn.com/mlb/story/_/id/49301778/ryan-ohearn-sets-pirates-record-10-rbis-braves",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-08T06:12:15Z",
+        "summary": "Pittsburgh Pirates first baseman Ryan O'Hearn, in his first season with the franchise, made history Tuesday night, setting a club record by driving in 10 runs on three home runs in a convincing 12-4 victory over the Atlanta Braves at PNC Park.",
+        "teams": [
+          "athletics",
+          "braves",
+          "pirates"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
         "id": "espn-2-3",
+        "headline": "'Pisses me off': Wheeler wins after All-Star snub",
+        "url": "https://www.espn.com/mlb/story/_/id/49303496/irked-all-star-snub-wheeler-fans-14-phillies-top-reds",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-08T06:12:15Z",
+        "summary": "On a day when Major League Baseball unveiled a list of All-Star replacements that did not include Zack Wheeler, the annoyed 36-year-old righty tied a career high with 14 strikeouts, as the Philadelphia Phillies defeated the Cincinnati Reds 4-1 on Tuesday.",
+        "teams": [
+          "athletics",
+          "phillies",
+          "reds"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "espn-2-4",
         "headline": "Royals' Tolbert (12 ABs, 12 hits) ties MLB record",
         "url": "https://www.espn.com/mlb/story/_/id/49302660/tyler-tolbert-ties-mlb-mark-hits-12-straight-plate-appearances",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-07-08T05:11:44Z",
+        "published_at": "2026-07-08T06:12:15Z",
         "summary": "Tyler Tolbert of the Royals tied a major league record with hits in 12 consecutive plate appearances, reaching the mark with an infield single in a 16-12 win over the Mets on Tuesday night.",
         "teams": [
           "mets",
@@ -484,14 +499,17 @@
         "priority": 2
       },
       {
-        "id": "espn-2-4",
+        "id": "espn-2-5",
         "headline": "Ohtani shrugs off arm issue, to make Friday start",
         "url": "https://www.espn.com/nba/story/_/id/49302247/ohtani-shrugs-bicep-injury-make-planned-start-friday",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-07-08T05:11:44Z",
-        "summary": "Shohei Ohtani, having fully recovered from the biceps injury that forced him to exit a recent game early, is lined up to pitch Friday.",
-        "teams": [],
+        "published_at": "2026-07-08T06:12:15Z",
+        "summary": "Shohei Ohtani reached the 300-homer milestone Tuesday night against the Rockies and is in line to make his last pitching start before the All-Star break on Friday.",
+        "teams": [
+          "athletics",
+          "rockies"
+        ],
         "players": [],
         "topics": [
           "mlb"
@@ -499,17 +517,36 @@
         "priority": 2
       },
       {
-        "id": "espn-2-5",
+        "id": "espn-2-6",
         "headline": "Goodman scratched before Rockies take on Dodgers",
         "url": "https://www.espn.com/mlb/story/_/id/49303055/hunter-goodman-scratched-colorado-rockies-lineup",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-07-08T05:11:44Z",
-        "summary": "Colorado Rockies All-Star Hunter Goodman, originally slotted to be the team's designated hitter, was scratched from the lineup against the Los Angeles Dodgers on Tuesday night, a day after he suffered a left hand contusion in an 8-7, 11-inning loss.",
+        "published_at": "2026-07-08T06:12:15Z",
+        "summary": "Colorado Rockies All-Star Hunter Goodman, originally slotted to be the designated hitter, was scratched on Tuesday night, and missed his club's 4-3 victory over the Los Angeles Dodgers, a day after he suffered a left hand contusion in an 11-inning loss.",
         "teams": [
           "athletics",
           "dodgers",
           "rockies"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "espn-2-7",
+        "headline": "3B coach Cora leaves Tigers during third season",
+        "url": "https://www.espn.com/mlb/story/_/id/49301135/joey-cora-leaves-tigers-philosophical-differences",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-08T06:12:15Z",
+        "summary": "Detroit Tigers third base coach Joey Cora, the older brother of former Boston Red Sox manager Alex Cora, has left the club in the middle of his third season on the job because of what manager A.J. Hinch described on Tuesday as \"philosophical differences.\"",
+        "teams": [
+          "athletics",
+          "red sox",
+          "tigers"
         ],
         "players": [],
         "topics": [
@@ -523,7 +560,7 @@
         "url": "https://www.espn.com/mlb/story/_/id/49239710/mlb-2026-all-star-home-run-derby-bracket-analysis-participants",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-07-08T05:11:44Z",
+        "published_at": "2026-07-08T06:12:15Z",
         "summary": "The sluggers who will be swinging for the fences in Philly are being named. Here's how they match up.",
         "teams": [],
         "players": [],
@@ -533,35 +570,31 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-1",
-        "headline": "Mets feel squeeze of short pitching staff in loss to Royals: &#39;It was a tough day for us&#39;",
-        "url": "https://sports.yahoo.com/articles/mets-feel-squeeze-short-pitching-040118515.html",
-        "source": "SNY",
+        "id": "mlb_com-1-2",
+        "headline": "Shohei hits another milestone with 300th HR, but there are loftier goals in mind",
+        "url": "https://www.mlb.com/news/shohei-ohtani-hits-300th-career-home-run",
+        "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-07-08T04:01:18Z",
-        "summary": "After two games in Atlanta that required the use of a lot of pitchers, the Mets bullpen was short in Tuesday&#39;s game against the Royals and it showed.",
-        "teams": [
-          "athletics",
-          "braves",
-          "mets",
-          "royals"
-        ],
+        "published_at": "2026-07-08T05:42:00Z",
+        "summary": "",
+        "teams": [],
         "players": [],
         "topics": [
           "mlb"
         ],
-        "priority": 2
+        "priority": 1
       },
       {
         "id": "yahoo_sports-3-2",
-        "headline": "White Sox Minor League Update: July 6-7, 2026",
-        "url": "https://sports.yahoo.com/articles/white-sox-minor-league-july-040020850.html",
+        "headline": "The Rockies have a signature eighth inning and stun the Dodgers 4-3",
+        "url": "https://sports.yahoo.com/articles/rockies-signature-eighth-inning-stun-051003411.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-07-08T04:00:20Z",
-        "summary": "Munetaka Murakami returns to Charlotte amid uneven farm slate",
+        "published_at": "2026-07-08T05:10:03Z",
+        "summary": "The Rockies even their series at Chavez Ravine.",
         "teams": [
-          "white sox"
+          "dodgers",
+          "rockies"
         ],
         "players": [],
         "topics": [
@@ -570,16 +603,35 @@
         "priority": 2
       },
       {
+        "id": "mlb_com-1-7",
+        "headline": "NL showdowns feature Phils vs. Reds, D-backs vs. Padres on ESPN",
+        "url": "https://www.mlb.com/news/phillies-vs-reds-d-backs-vs-padres-preview-for-july-8-2026",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-08T05:09:06Z",
+        "summary": "",
+        "teams": [
+          "diamondbacks",
+          "padres",
+          "reds"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
         "id": "yahoo_sports-3-3",
-        "headline": "Payton Tolle propels the Red Sox out of last place with an excellent outing in Chicago",
-        "url": "https://sports.yahoo.com/articles/payton-tolle-propels-red-sox-035943284.html",
+        "headline": "Padres\u2019 season goes south with injuries, poor performance",
+        "url": "https://sports.yahoo.com/articles/padres-season-goes-south-injuries-050500758.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-07-08T03:59:43Z",
-        "summary": "With tonight\u2019s win, the Red Sox also move to .500 with Chad Tracy at the helm.",
+        "published_at": "2026-07-08T05:05:00Z",
+        "summary": "Padres notes - July 6",
         "teams": [
           "athletics",
-          "red sox"
+          "padres"
         ],
         "players": [],
         "topics": [
@@ -589,15 +641,16 @@
       },
       {
         "id": "yahoo_sports-3-4",
-        "headline": "Seymour, bottom of the lineup lead the way: Rays 6, Yankees 4",
-        "url": "https://sports.yahoo.com/articles/seymour-bottom-lineup-lead-way-035409534.html",
-        "source": "SB Nation",
+        "headline": "Shohei Ohtani hits milestone homer, Justin Wrobleski makes All-Star case in Dodgers&#39; loss",
+        "url": "https://sports.yahoo.com/articles/shohei-ohtani-hits-milestone-homer-050215475.html",
+        "source": "LA Times",
         "source_type": "rss",
-        "published_at": "2026-07-08T03:54:09Z",
-        "summary": "Coming off three consecutive losses, the Tampa Bay Rays were needing to bounce back against the Yankees on Tuesday night and they did just that behind a stellar performance by Ian Seymour and production from the bottom of the lineup. Having dropped game one of the four game set on Monday night, the Rays sent [\u2026]",
+        "published_at": "2026-07-08T05:02:15Z",
+        "summary": "Shohei Ohtani hits his 300th homer, Justin Wrobleski pitches seven strong innings, but defensive lapses lead to Dodgers&#39; loss to Rockies.",
         "teams": [
-          "rays",
-          "yankees"
+          "athletics",
+          "dodgers",
+          "rockies"
         ],
         "players": [],
         "topics": [
@@ -607,15 +660,15 @@
       },
       {
         "id": "yahoo_sports-3-5",
-        "headline": "Fair or foul? White Sox drop series opener to Red Sox, 8-1",
-        "url": "https://sports.yahoo.com/articles/fair-foul-white-sox-drop-034315717.html",
+        "headline": "Dodgers\u2019 chances at another walk-off thwarted by Rockies",
+        "url": "https://sports.yahoo.com/articles/dodgers-chances-another-walk-off-050008123.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-07-08T03:43:15Z",
-        "summary": "Boston shut down the Chicago offense while Noah Schultz struggled through five innings and the South Side bullpen faltered",
+        "published_at": "2026-07-08T05:00:08Z",
+        "summary": "Justin Wrobleski strikes out nine over seven innings, bullpen lets lead slip in 4-3 loss to Rockies.",
         "teams": [
-          "red sox",
-          "white sox"
+          "dodgers",
+          "rockies"
         ],
         "players": [],
         "topics": [
@@ -625,15 +678,68 @@
       },
       {
         "id": "yahoo_sports-3-6",
-        "headline": "Cubs Minor League Wrap: Josiah Hartshorn gets back on track in South Bend win",
-        "url": "https://sports.yahoo.com/articles/cubs-minor-league-wrap-josiah-034125785.html",
+        "headline": "Braves News: Owen Murphy optioned, blowout in Pittsburgh, and more",
+        "url": "https://sports.yahoo.com/articles/braves-news-owen-murphy-optioned-045238303.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-07-08T03:41:25Z",
-        "summary": "The Pelicans win on a walk-off grand slam. South Bend wins in extras. Two Smokies win honors.",
+        "published_at": "2026-07-08T04:52:38Z",
+        "summary": "Atlanta Braves news and notes from Tuesday.",
+        "teams": [
+          "braves",
+          "pirates"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-7",
+        "headline": "Mets&#39; A.J. Ewing records first career four-hit game as rookie becomes more comfortable at plate",
+        "url": "https://sports.yahoo.com/articles/mets-j-ewing-records-first-045108683.html",
+        "source": "SNY",
+        "source_type": "rss",
+        "published_at": "2026-07-08T04:51:08Z",
+        "summary": "Mets rookie outfielder A.J. Ewing credited his best offensive day as a major leaguer to becoming more comfortable at the plate and explained why his skillset works well for batting leadoff.",
         "teams": [
           "athletics",
-          "cubs"
+          "mets"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-1",
+        "headline": "Royals speedster ties MLB record with hit in 12 straight plate appearances",
+        "url": "https://www.mlb.com/news/tyler-tolbert-ties-record-hits-consecutive-plate-appearances",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-08T04:47:00Z",
+        "summary": "",
+        "teams": [
+          "royals"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-8",
+        "headline": "Jays Actually Score And Win",
+        "url": "https://sports.yahoo.com/articles/jays-actually-score-win-044557843.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-07-08T04:45:57Z",
+        "summary": "Jays 9 Giants 3 Before the game, I asked the Jays to score and not just one run. And they did\u2026.I should have asked earlier. The Jays scored: We did go five inning there without getting a baserunner. But let\u2019s focus on the nine runs instead. We had 13 hits. Clement (leading off) had three [\u2026]",
+        "teams": [
+          "athletics",
+          "giants"
         ],
         "players": [],
         "topics": [
@@ -643,6 +749,36 @@
       },
       {
         "id": "mlb_com-1-4",
+        "headline": "3 homers, 10 RBIs ... by the 6th inning!? What a night for O'Hearn",
+        "url": "https://www.mlb.com/news/ryan-o-hearn-sets-career-high-for-rbis-in-a-game",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-08T04:44:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-6",
+        "headline": "Chourio turns around to bat left-handed, hits one 360 feet!",
+        "url": "https://www.mlb.com/news/jackson-chourio-bats-left-handed",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-08T03:53:47Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-8",
         "headline": "Skubal strikes again as Tigers, fans savor every start",
         "url": "https://www.mlb.com/news/tarik-skubal-nine-strikeouts-trade-deadline-rumors",
         "source": "MLB.com",
@@ -660,144 +796,16 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-5",
-        "headline": "Benge taps ball to the mound ... and turns it into Little League HR?!",
-        "url": "https://www.mlb.com/news/carson-benge-little-league-homer-mets-royals",
+        "id": "mlb_com-1-3",
+        "headline": "Who goes No. 1 in the Draft? Here are the odds and the case for each candidate",
+        "url": "https://www.mlb.com/news/best-odds-for-the-no-1-pick-in-the-2026-draft",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-07-08T03:32:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-7",
-        "headline": "Sinicki returns to AUSL action for 1st time since breast cancer diagnosis",
-        "url": "https://www.mlb.com/news/paige-sinicki-returns-for-portland-cascade-following-breast-cancer-diagnosis",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-08T03:31:56Z",
+        "published_at": "2026-07-08T01:07:10Z",
         "summary": "",
         "teams": [
           "athletics"
         ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-7",
-        "headline": "Bottom of Order, Bullpen Carry Astros to 6-3 Victory Over Nationals",
-        "url": "https://sports.yahoo.com/articles/bottom-order-bullpen-carry-astros-032329104.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-08T03:23:29Z",
-        "summary": "The Houston Astros (46-48) didn\u2019t get the start they hoped for from Tatsuya Imai, but they got a terrific performance from 6 relievers as they took the second game of this series 6-3 over the Washington Nationals (47-46) at Nationals Park. Imai only lasted 3.2 IP, impacted by a cut on the ring fighter of [\u2026]",
-        "teams": [
-          "astros",
-          "athletics",
-          "nationals"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-3",
-        "headline": "3 homers, 10 RBIs ... by the 6th inning!? What a night for O'Hearn",
-        "url": "https://www.mlb.com/news/ryan-o-hearn-sets-career-high-for-rbis-in-a-game",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-08T03:23:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-8",
-        "headline": "Tyler Tolbert matches MLB record for consecutive hits in bonkers win",
-        "url": "https://sports.yahoo.com/articles/tyler-tolbert-matches-mlb-record-030941680.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-08T03:09:41Z",
-        "summary": "12 consecutive hits!",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-8",
-        "headline": "Cronenworth gets smoked in the face before game, then smokes HR in first AB!",
-        "url": "https://www.mlb.com/news/jake-cronenworth-homers-after-being-hit-in-the-face-before-game",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-08T02:53:45Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-1",
-        "headline": "Royals speedster ties MLB record with hit in 12 straight plate appearances",
-        "url": "https://www.mlb.com/news/tyler-tolbert-ties-record-hits-consecutive-plate-appearances",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-08T02:51:00Z",
-        "summary": "",
-        "teams": [
-          "royals"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-6",
-        "headline": "MLB's hottest team turns up temperature with walk-off against Seattle",
-        "url": "https://www.mlb.com/news/jakob-marsee-hits-walk-off-to-give-marlins-win-over-mariners",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-08T02:34:01Z",
-        "summary": "",
-        "teams": [
-          "mariners"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-2",
-        "headline": "Shohei hits another milestone with 300th HR, but there are loftier goals in mind",
-        "url": "https://www.mlb.com/news/shohei-ohtani-hits-300th-career-home-run",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-08T02:25:44Z",
-        "summary": "",
-        "teams": [],
         "players": [],
         "topics": [
           "mlb"
@@ -809,290 +817,272 @@
   "scoreboard": {
     "games": [
       {
-        "id": "823062",
-        "away_team": "Milwaukee Brewers",
-        "home_team": "St. Louis Cardinals",
-        "away_score": 4,
-        "home_score": 3,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-07T18:15:00Z",
-        "venue": "Busch Stadium",
-        "probable_pitchers": {
-          "away": "Jacob Misiorowski",
-          "home": "Matt Svanson"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "823035",
-        "away_team": "Milwaukee Brewers",
-        "home_team": "St. Louis Cardinals",
-        "away_score": 10,
-        "home_score": 2,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-07T23:45:00Z",
-        "venue": "Busch Stadium",
-        "probable_pitchers": {
-          "away": "Robert Gasser",
-          "home": "Hunter Dobbins"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "824820",
-        "away_team": "Chicago Cubs",
-        "home_team": "Baltimore Orioles",
-        "away_score": 5,
-        "home_score": 2,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-07T22:35:00Z",
-        "venue": "Oriole Park at Camden Yards",
-        "probable_pitchers": {
-          "away": "Matthew Boyd",
-          "home": "Shane Baz"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "824254",
-        "away_team": "Athletics",
-        "home_team": "Detroit Tigers",
-        "away_score": 2,
-        "home_score": 6,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-07T22:40:00Z",
-        "venue": "Comerica Park",
-        "probable_pitchers": {
-          "away": "J.T. Ginn",
-          "home": "Tarik Skubal"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "823361",
-        "away_team": "Atlanta Braves",
-        "home_team": "Pittsburgh Pirates",
-        "away_score": 4,
-        "home_score": 12,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-07T22:40:00Z",
-        "venue": "PNC Park",
-        "probable_pitchers": {
-          "away": "Hurston Waldrep",
-          "home": "Paul Skenes"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "823847",
-        "away_team": "Seattle Mariners",
-        "home_team": "Miami Marlins",
-        "away_score": 5,
-        "home_score": 6,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-07T22:40:00Z",
-        "venue": "loanDepot park",
-        "probable_pitchers": {
-          "away": "Bryan Woo",
-          "home": "Max Meyer"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "822956",
-        "away_team": "New York Yankees",
-        "home_team": "Tampa Bay Rays",
-        "away_score": 4,
-        "home_score": 6,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-07T22:40:00Z",
-        "venue": "Tropicana Field",
-        "probable_pitchers": {
-          "away": "Will Warren",
-          "home": "Ian Seymour"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "822713",
-        "away_team": "Houston Astros",
-        "home_team": "Washington Nationals",
-        "away_score": 6,
-        "home_score": 3,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-07T22:45:00Z",
-        "venue": "Nationals Park",
-        "probable_pitchers": {
-          "away": "Tatsuya Imai",
-          "home": "Andrew Alvarez"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "823607",
-        "away_team": "Kansas City Royals",
-        "home_team": "New York Mets",
-        "away_score": 16,
-        "home_score": 12,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-07T23:10:00Z",
-        "venue": "Citi Field",
-        "probable_pitchers": {
-          "away": "Seth Lugo",
-          "home": "Cionel P\u00e9rez"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "824495",
-        "away_team": "Philadelphia Phillies",
-        "home_team": "Cincinnati Reds",
-        "away_score": 4,
-        "home_score": 1,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-07T23:10:00Z",
-        "venue": "Great American Ball Park",
-        "probable_pitchers": {
-          "away": "Zack Wheeler",
-          "home": "Andrew Abbott"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "823687",
-        "away_team": "Cleveland Guardians",
-        "home_team": "Minnesota Twins",
-        "away_score": 1,
-        "home_score": 3,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-07T23:40:00Z",
-        "venue": "Target Field",
-        "probable_pitchers": {
-          "away": "Joey Cantillo",
-          "home": "Taj Bradley"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "824579",
-        "away_team": "Boston Red Sox",
-        "home_team": "Chicago White Sox",
-        "away_score": 8,
-        "home_score": 1,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-07T23:40:00Z",
-        "venue": "Rate Field",
-        "probable_pitchers": {
-          "away": "Payton Tolle",
-          "home": "Noah Schultz"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "822881",
-        "away_team": "Los Angeles Angels",
-        "home_team": "Texas Rangers",
-        "away_score": 3,
-        "home_score": 8,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-08T00:05:00Z",
-        "venue": "Globe Life Field",
-        "probable_pitchers": {
-          "away": "Jos\u00e9 Soriano",
-          "home": "Jacob deGrom"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "823280",
-        "away_team": "Arizona Diamondbacks",
-        "home_team": "San Diego Padres",
-        "away_score": 1,
-        "home_score": 4,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-08T01:40:00Z",
-        "venue": "Petco Park",
-        "probable_pitchers": {
-          "away": "Zac Gallen",
-          "home": "Germ\u00e1n M\u00e1rquez"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "823203",
+        "id": "823202",
         "away_team": "Toronto Blue Jays",
         "home_team": "San Francisco Giants",
-        "away_score": 9,
-        "home_score": 3,
-        "status": "Final",
-        "status_detail": "Final",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
         "inning": null,
         "inning_state": "",
-        "start_time": "2026-07-08T01:45:00Z",
+        "start_time": "2026-07-08T19:45:00Z",
         "venue": "Oracle Park",
         "probable_pitchers": {
-          "away": "Spencer Miles",
-          "home": "Trevor McDonald"
+          "away": "Dylan Cease",
+          "home": "Logan Webb"
         },
         "broadcasts": []
       },
       {
-        "id": "823929",
-        "away_team": "Colorado Rockies",
-        "home_team": "Los Angeles Dodgers",
-        "away_score": 4,
-        "home_score": 3,
-        "status": "Live",
-        "status_detail": "In Progress",
+        "id": "824815",
+        "away_team": "Chicago Cubs",
+        "home_team": "Baltimore Orioles",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
         "inning": null,
         "inning_state": "",
-        "start_time": "2026-07-08T02:10:00Z",
+        "start_time": "2026-07-08T22:35:00Z",
+        "venue": "Oriole Park at Camden Yards",
+        "probable_pitchers": {
+          "away": "Colin Rea",
+          "home": "Dean Kremer"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "824253",
+        "away_team": "Athletics",
+        "home_team": "Detroit Tigers",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-08T22:40:00Z",
+        "venue": "Comerica Park",
+        "probable_pitchers": {
+          "away": "Jeffrey Springs",
+          "home": "Troy Melton"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "823360",
+        "away_team": "Atlanta Braves",
+        "home_team": "Pittsburgh Pirates",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-08T22:40:00Z",
+        "venue": "PNC Park",
+        "probable_pitchers": {
+          "away": "Grant Holmes",
+          "home": "Jared Jones"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "823848",
+        "away_team": "Seattle Mariners",
+        "home_team": "Miami Marlins",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-08T22:40:00Z",
+        "venue": "loanDepot park",
+        "probable_pitchers": {
+          "away": "George Kirby",
+          "home": "Tyler Phillips"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "822957",
+        "away_team": "New York Yankees",
+        "home_team": "Tampa Bay Rays",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-08T22:40:00Z",
+        "venue": "Tropicana Field",
+        "probable_pitchers": {
+          "away": "Gerrit Cole",
+          "home": "Shane McClanahan"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "822710",
+        "away_team": "Houston Astros",
+        "home_team": "Washington Nationals",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-08T22:45:00Z",
+        "venue": "Nationals Park",
+        "probable_pitchers": {
+          "away": "Spencer Arrighetti",
+          "home": "Foster Griffin"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "823605",
+        "away_team": "Kansas City Royals",
+        "home_team": "New York Mets",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-08T23:10:00Z",
+        "venue": "Citi Field",
+        "probable_pitchers": {
+          "away": "Steven Cruz",
+          "home": "Christian Scott"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "824496",
+        "away_team": "Philadelphia Phillies",
+        "home_team": "Cincinnati Reds",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-08T23:10:00Z",
+        "venue": "Great American Ball Park",
+        "probable_pitchers": {
+          "away": "TBD",
+          "home": "Chase Burns"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "823684",
+        "away_team": "Cleveland Guardians",
+        "home_team": "Minnesota Twins",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-08T23:40:00Z",
+        "venue": "Target Field",
+        "probable_pitchers": {
+          "away": "Slade Cecconi",
+          "home": "Connor Prielipp"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "824578",
+        "away_team": "Boston Red Sox",
+        "home_team": "Chicago White Sox",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-08T23:40:00Z",
+        "venue": "Rate Field",
+        "probable_pitchers": {
+          "away": "Jake Bennett",
+          "home": "Davis Martin"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "823032",
+        "away_team": "Milwaukee Brewers",
+        "home_team": "St. Louis Cardinals",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-08T23:45:00Z",
+        "venue": "Busch Stadium",
+        "probable_pitchers": {
+          "away": "Kyle Harrison",
+          "home": "Michael McGreevy"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "822880",
+        "away_team": "Los Angeles Angels",
+        "home_team": "Texas Rangers",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-09T00:05:00Z",
+        "venue": "Globe Life Field",
+        "probable_pitchers": {
+          "away": "Walbert Ure\u00f1a",
+          "home": "MacKenzie Gore"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "823928",
+        "away_team": "Colorado Rockies",
+        "home_team": "Los Angeles Dodgers",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-09T02:10:00Z",
         "venue": "UNIQLO Field at Dodger Stadium",
         "probable_pitchers": {
-          "away": "Michael Lorenzen",
-          "home": "Justin Wrobleski"
+          "away": "Gabriel Hughes",
+          "home": "Roki Sasaki"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "823279",
+        "away_team": "Arizona Diamondbacks",
+        "home_team": "San Diego Padres",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-07-09T02:10:00Z",
+        "venue": "Petco Park",
+        "probable_pitchers": {
+          "away": "Jose Cabrera",
+          "home": "Michael King"
         },
         "broadcasts": []
       }
@@ -1117,89 +1107,89 @@
       "Standings: White Sox: 47-43 (PCT .522, GB -) [Division]",
       "Standings: Guardians: 47-45 (PCT .511, GB 1.0) [Division]",
       "Standings: Twins: 45-47 (PCT .489, GB 3.0) [Division]",
-      "Probable: Milwaukee Brewers (Jacob Misiorowski) @ St. Louis Cardinals (Matt Svanson) \u2014 Final 2026-07-07T18:15:00Z Busch Stadium",
-      "Probable: Milwaukee Brewers (Robert Gasser) @ St. Louis Cardinals (Hunter Dobbins) \u2014 Final 2026-07-07T23:45:00Z Busch Stadium",
-      "Probable: Chicago Cubs (Matthew Boyd) @ Baltimore Orioles (Shane Baz) \u2014 Final 2026-07-07T22:35:00Z Oriole Park at Camden Yards",
-      "Probable: Athletics (J.T. Ginn) @ Detroit Tigers (Tarik Skubal) \u2014 Final 2026-07-07T22:40:00Z Comerica Park",
-      "Probable: Atlanta Braves (Hurston Waldrep) @ Pittsburgh Pirates (Paul Skenes) \u2014 Final 2026-07-07T22:40:00Z PNC Park",
-      "Probable: Seattle Mariners (Bryan Woo) @ Miami Marlins (Max Meyer) \u2014 Final 2026-07-07T22:40:00Z loanDepot park"
+      "Probable: Toronto Blue Jays (Dylan Cease) @ San Francisco Giants (Logan Webb) \u2014 Scheduled 2026-07-08T19:45:00Z Oracle Park",
+      "Probable: Chicago Cubs (Colin Rea) @ Baltimore Orioles (Dean Kremer) \u2014 Scheduled 2026-07-08T22:35:00Z Oriole Park at Camden Yards",
+      "Probable: Athletics (Jeffrey Springs) @ Detroit Tigers (Troy Melton) \u2014 Scheduled 2026-07-08T22:40:00Z Comerica Park",
+      "Probable: Atlanta Braves (Grant Holmes) @ Pittsburgh Pirates (Jared Jones) \u2014 Scheduled 2026-07-08T22:40:00Z PNC Park",
+      "Probable: Seattle Mariners (George Kirby) @ Miami Marlins (Tyler Phillips) \u2014 Scheduled 2026-07-08T22:40:00Z loanDepot park",
+      "Probable: New York Yankees (Gerrit Cole) @ Tampa Bay Rays (Shane McClanahan) \u2014 Scheduled 2026-07-08T22:40:00Z Tropicana Field"
     ],
     "unverified_notes": [],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: Milwaukee Brewers (Jacob Misiorowski) @ St. Louis Cardinals (Matt Svanson) \u2014 Final 2026-07-07T18:15:00Z Busch Stadium",
-      "Probable: Milwaukee Brewers (Robert Gasser) @ St. Louis Cardinals (Hunter Dobbins) \u2014 Final 2026-07-07T23:45:00Z Busch Stadium",
-      "Probable: Chicago Cubs (Matthew Boyd) @ Baltimore Orioles (Shane Baz) \u2014 Final 2026-07-07T22:35:00Z Oriole Park at Camden Yards",
-      "Probable: Athletics (J.T. Ginn) @ Detroit Tigers (Tarik Skubal) \u2014 Final 2026-07-07T22:40:00Z Comerica Park",
-      "Probable: Atlanta Braves (Hurston Waldrep) @ Pittsburgh Pirates (Paul Skenes) \u2014 Final 2026-07-07T22:40:00Z PNC Park",
-      "Probable: Seattle Mariners (Bryan Woo) @ Miami Marlins (Max Meyer) \u2014 Final 2026-07-07T22:40:00Z loanDepot park",
-      "Probable: New York Yankees (Will Warren) @ Tampa Bay Rays (Ian Seymour) \u2014 Final 2026-07-07T22:40:00Z Tropicana Field",
-      "Probable: Houston Astros (Tatsuya Imai) @ Washington Nationals (Andrew Alvarez) \u2014 Final 2026-07-07T22:45:00Z Nationals Park"
+      "Probable: Toronto Blue Jays (Dylan Cease) @ San Francisco Giants (Logan Webb) \u2014 Scheduled 2026-07-08T19:45:00Z Oracle Park",
+      "Probable: Chicago Cubs (Colin Rea) @ Baltimore Orioles (Dean Kremer) \u2014 Scheduled 2026-07-08T22:35:00Z Oriole Park at Camden Yards",
+      "Probable: Athletics (Jeffrey Springs) @ Detroit Tigers (Troy Melton) \u2014 Scheduled 2026-07-08T22:40:00Z Comerica Park",
+      "Probable: Atlanta Braves (Grant Holmes) @ Pittsburgh Pirates (Jared Jones) \u2014 Scheduled 2026-07-08T22:40:00Z PNC Park",
+      "Probable: Seattle Mariners (George Kirby) @ Miami Marlins (Tyler Phillips) \u2014 Scheduled 2026-07-08T22:40:00Z loanDepot park",
+      "Probable: New York Yankees (Gerrit Cole) @ Tampa Bay Rays (Shane McClanahan) \u2014 Scheduled 2026-07-08T22:40:00Z Tropicana Field",
+      "Probable: Houston Astros (Spencer Arrighetti) @ Washington Nationals (Foster Griffin) \u2014 Scheduled 2026-07-08T22:45:00Z Nationals Park",
+      "Probable: Kansas City Royals (Steven Cruz) @ New York Mets (Christian Scott) \u2014 Scheduled 2026-07-08T23:10:00Z Citi Field"
     ],
     "transactions": [
-      "League tx: 2026-06-30: Washington Nationals signed free agent RHP Edinson Hernandez to a minor league contract.",
-      "League tx: 2026-06-30: Peoria Chiefs activated OF Ian Petrutz from the 7-day injured list.",
-      "League tx: 2026-06-30: RHP Raymond Concepcion assigned to Royal-North.",
-      "League tx: 2026-06-30: OF Kyle Becker assigned to College Workout.",
-      "League tx: 2026-06-30: Inland Empire 66ers placed RHP Sean Hermann on the 7-day injured list.",
-      "League tx: 2026-06-30: FCL Orioles activated RHP Luis Espinoza from the 7-day injured list.",
-      "League tx: 2026-06-30: Delmarva Shorebirds activated C Adriander Mej\u00eda.",
-      "League tx: 2026-06-30: RHP Kolden Hunter assigned to Danville Otterbots.",
-      "League tx: 2026-06-30: C Daniel Powell Jr. assigned to Danville Otterbots.",
-      "League tx: 2026-06-30: LHP Paul Wheeler assigned to College Workout.",
-      "League tx: 2026-06-30: RHP Arnold Wu assigned to College Workout.",
-      "League tx: 2026-06-30: RHP Dillon Orr assigned to College Workout.",
-      "League tx: 2026-06-30: Palm Beach Cardinals activated SS Jonathan Mej\u00eda from the 7-day injured list.",
-      "League tx: 2026-06-30: Tigres de Quintana Roo released RHP Colton Eastman.",
-      "League tx: 2026-06-30: LHP Joe O'Regan assigned to College Workout.",
-      "League tx: 2026-06-30: RHP Peyton Warner assigned to High School Workout.",
-      "League tx: 2026-06-30: 2B Adam Magpoc assigned to Orleans Firebirds.",
-      "League tx: 2026-06-30: Springfield Cardinals activated RHP Tyler Bradt from the 7-day injured list.",
-      "League tx: 2026-06-30: Chicago White Sox signed free agent RHP Erick Rosso to a minor league contract.",
-      "League tx: 2026-06-30: St. Louis Cardinals activated RHP Ryan Fernandez from the 15-day injured list.",
-      "League tx: 2026-06-30: Buffalo Bisons transferred 2B Carlos Mendoza to the Development List.",
-      "League tx: 2026-06-30: Bravos de Leon activated LHP Francisco P\u00e9rez from the reserve list.",
-      "League tx: 2026-06-30: OF Brandon Contreras assigned to College Workout.",
-      "League tx: 2026-06-30: Algodoneros Union Laguna released LHP Fernando Abad.",
-      "League tx: 2026-06-30: SS Jacob Freer assigned to College Workout.",
-      "League tx: 2026-06-30: DSL Nationals activated RHP Edinson Hernandez.",
-      "League tx: 2026-06-30: Tampa Bay Rays sent LF Gavin Lux on a rehab assignment to Durham Bulls.",
-      "League tx: 2026-06-30: SS Brayden Flores assigned to College Workout.",
-      "League tx: 2026-06-30: SS Holden Pantier assigned to Brewster Whitecaps.",
-      "League tx: 2026-06-30: Salem RidgeYaks placed RHP Barrett Morgan on the 7-day injured list retroactive to June 28, 2026.",
-      "League tx: 2026-06-30: Texas Rangers designated RHP Chris Paddack for assignment.",
-      "League tx: 2026-06-30: SS Tino Vasell assigned to College Workout.",
-      "League tx: 2026-06-30: Leones de Yucatan released LHP Jose Alvarez.",
-      "League tx: 2026-06-30: RHP Jianfeng Cai assigned to High School Workout.",
-      "League tx: 2026-06-30: Fresno Grizzlies placed LHP Zack Morris on the full-season injured list.",
-      "League tx: 2026-06-30: Tampa Bay Rays sent RF Jake Fraley on a rehab assignment to Durham Bulls.",
-      "League tx: 2026-06-30: New York Mets sent CF Luis Robert Jr. on a rehab assignment to Syracuse Mets.",
-      "League tx: 2026-06-30: 3B Luis Rengifo assigned to ACL Padres.",
-      "League tx: 2026-06-30: Houston Astros sent 1B LaMonte Wade Jr. on a rehab assignment to Sugar Land Space Cowboys.",
-      "League tx: 2026-06-30: Las Vegas Aviators activated RHP Hayden Juenger.",
-      "League tx: 2026-06-30: Tecos de los Dos Laredos signed free agent OF Miles Simington.",
-      "League tx: 2026-06-30: OF Davis Germann assigned to College Workout.",
-      "League tx: 2026-06-30: ACL Dodgers activated SS Elias Medina from the 7-day injured list.",
-      "League tx: 2026-06-30: Erie SeaWolves released C Aaron Antonini.",
-      "League tx: 2026-06-30: Montgomery Biscuits activated OF Austin Overn from the 7-day injured list.",
-      "League tx: 2026-06-30: Salem RidgeYaks transferred C Frederik Jimenez to the Development List.",
-      "League tx: 2026-06-30: Fayetteville Woodpeckers activated RHP Ryan Forcucci from the Development List.",
-      "League tx: 2026-06-30: RF Danny Ortiz assigned to Tigres de Quintana Roo.",
-      "League tx: 2026-06-30: RHP Solomon Wegmeyer assigned to High School Workout.",
-      "League tx: 2026-06-30: Greensboro Grasshoppers sent 1B Jared Jones on a rehab assignment to Bradenton Marauders."
+      "League tx: 2026-07-01: SS Wilfredo Tovar assigned to Leones de Yucatan.",
+      "League tx: 2026-07-01: ACL Brewers activated RHP Wenderlyn King from the 60-day injured list.",
+      "League tx: 2026-07-01: Lansing Lugnuts placed LHP Jack Mahoney on the 7-day injured list.",
+      "League tx: 2026-07-01: 1B Caleb Hoover assigned to South Stars.",
+      "League tx: 2026-07-01: Buffalo Bisons placed RHP Matt Bowman on the temporarily inactive list.",
+      "League tx: 2026-07-01: C Hunter Carlson assigned to North Stripes.",
+      "League tx: 2026-07-01: Kansas City Royals signed free agent RHP Scott Barlow to a minor league contract.",
+      "League tx: 2026-07-01: RHP Bryce English assigned to High School Workout.",
+      "League tx: 2026-07-01: ACL D-backs activated RHP Vitico Valdez from the 60-day injured list.",
+      "League tx: 2026-07-01: Pittsburgh Pirates signed free agent SS Ryan McCarty to a minor league contract.",
+      "League tx: 2026-07-01: SS Ryan McCarty assigned to Altoona Curve.",
+      "League tx: 2026-07-01: Oklahoma City Comets activated LHP Garrett McDaniels from the 7-day injured list.",
+      "League tx: 2026-07-01: SS Nathaniel Williams assigned to South Stars.",
+      "League tx: 2026-07-01: Conspiradores de Queretaro activated IF Yurisbel Gracial from the reserve list.",
+      "League tx: 2026-07-01: Caliente de Durango placed LHP Baltazar Arredondo on the reserve list.",
+      "League tx: 2026-07-01: South Stars activated RHP Noah Waldeck.",
+      "League tx: 2026-07-01: OF Kyle Becker assigned to North Stripes.",
+      "League tx: 2026-07-01: RHP Sean Hard assigned to College Workout.",
+      "League tx: 2026-07-01: New Hampshire Fisher Cats sent RHP Austin Marozas on a rehab assignment to Dunedin Blue Jays.",
+      "League tx: 2026-07-01: LHP Moose Cuellar assigned to North Stripes.",
+      "League tx: 2026-07-01: SS Brayden Flores assigned to South Stars.",
+      "League tx: 2026-07-01: Piratas de Campeche signed free agent RHP Brandon Quintero.",
+      "League tx: 2026-07-01: Chatham Anglers activated LHP Kade Bing.",
+      "League tx: 2026-07-01: SS Connor Cuff assigned to Wareham Gatemen.",
+      "League tx: 2026-07-01: RHP Bryce Turner assigned to Wareham Gatemen.",
+      "League tx: 2026-07-01: RHP Sam Schnitzer assigned to North Stripes.",
+      "League tx: 2026-07-01: RHP Reese Bassinger assigned to College Workout.",
+      "League tx: 2026-07-01: RHP Darlyn Santana assigned to Red-Centro.",
+      "League tx: 2026-07-01: Sultanes de Monterrey released 1B Wilson Garcia.",
+      "League tx: 2026-07-01: RHP Michael Rodriques assigned to North Stripes.",
+      "League tx: 2026-07-01: Cedar Rapids Kernels placed RHP Eston Stull on the 7-day injured list.",
+      "League tx: 2026-07-01: C Carter Rutenbar assigned to South Stars.",
+      "League tx: 2026-07-01: El Aguila de Veracruz activated RHP Alejandro Trujillo from the reserve list.",
+      "League tx: 2026-07-01: RHP Ben Peoples assigned to Round Rock Express.",
+      "League tx: 2026-07-01: CF Alejandro Gonzalez retired.",
+      "League tx: 2026-07-01: RHP Quincy Winkler assigned to North Stripes.",
+      "League tx: 2026-07-01: RHP Jake Valenzuela assigned to South Stars.",
+      "League tx: 2026-07-01: RHP Jean Sanchez assigned to Green-East.",
+      "League tx: 2026-07-01: Toros de Tijuana activated RHP Randy Wynne from the reserve list.",
+      "League tx: 2026-07-01: Guerreros de Oaxaca activated RHP Angel Hernandez from the reserve list.",
+      "League tx: 2026-07-01: C Cristian Almanza assigned to Dorados de Chihuahua.",
+      "League tx: 2026-07-01: Caliente de Durango activated 3B Jose Alvarez from the reserve list.",
+      "League tx: 2026-07-01: Sultanes de Monterrey signed free agent 3B Maikel Franco.",
+      "League tx: 2026-07-01: C Aidan Paradine assigned to College Workout.",
+      "League tx: 2026-07-01: El Aguila de Veracruz placed OF Luis Partida on the reserve list.",
+      "League tx: 2026-07-01: Diablos Rojos del Mexico placed LHP Luis Angel Rodriguez on the reserve list.",
+      "League tx: 2026-07-01: IF Engels Montero assigned to Red-Centro.",
+      "League tx: 2026-07-01: Norfolk Tides activated RHP Yosver Zulueta.",
+      "League tx: 2026-07-01: Worcester Red Sox activated C Mickey Gasper.",
+      "League tx: 2026-07-01: RHP Aiden Cope assigned to Elizabethton River Riders."
     ],
-    "transactions_total": 1835,
+    "transactions_total": 1456,
     "debug": {
       "standings": [
         "rows=30"
       ],
       "schedule": [
-        "games=16"
+        "games=15"
       ],
       "transactions": [
-        "transactions=1850"
+        "transactions=1472"
       ]
     }
   },
@@ -1209,12 +1199,12 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Athletics: 41-50 (PCT .451, GB 5.5) [Division]",
-        "Probable: Athletics (J.T. Ginn) @ Detroit Tigers (Tarik Skubal) \u2014 Final 2026-07-07T22:40:00Z Comerica Park",
         "Probable: Athletics (Jeffrey Springs) @ Detroit Tigers (Troy Melton) \u2014 Scheduled 2026-07-08T22:40:00Z Comerica Park",
-        "Athletics tx: 2026-06-30: Athletics signed free agent 2B Jack Winkler to a minor league contract.",
+        "Probable: Athletics (Jack Perkins) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-07-09T22:40:00Z Comerica Park",
         "Athletics tx: 2026-07-01: Athletics traded 3B Brett Harris to Boston Red Sox for RHP Ben Hansen.",
         "Athletics tx: 2026-07-01: Athletics traded 3B Brett Harris to Boston Red Sox for RHP Ben Hansen.",
-        "Athletics tx: 2026-07-02: Athletics designated LHP Matt Krook for assignment."
+        "Athletics tx: 2026-07-02: Athletics designated LHP Matt Krook for assignment.",
+        "Athletics tx: 2026-07-02: Athletics activated LHP Jos\u00e9 Suarez from the paternity list."
       ],
       "unverified_notes": [],
       "notes": [
@@ -1237,7 +1227,7 @@
           "games=3"
         ],
         "athletics_transactions": [
-          "transactions=19"
+          "transactions=18"
         ]
       }
     },
@@ -1245,13 +1235,13 @@
       "headline": "Colorado Rockies source snapshot from MLB Stats API.",
       "emotion": "Measured",
       "verified_notes": [
-        "Standings: Rockies: 37-55 (PCT .402, GB 23.0) [Division]",
-        "Probable: Colorado Rockies (Michael Lorenzen) @ Los Angeles Dodgers (Justin Wrobleski) \u2014 In Progress 2026-07-08T02:10:00Z UNIQLO Field at Dodger Stadium",
-        "Probable: Colorado Rockies (Ryan Feltner) @ Los Angeles Dodgers (Roki Sasaki) \u2014 Scheduled 2026-07-09T02:10:00Z UNIQLO Field at Dodger Stadium",
-        "Colorado Rockies tx: 2026-06-30: Colorado Rockies activated RHP Tanner Gordon from the 15-day injured list.",
-        "Colorado Rockies tx: 2026-06-30: Colorado Rockies optioned LHP Sean Sullivan to Albuquerque Isotopes.",
+        "Standings: Rockies: 38-55 (PCT .409, GB 22.0) [Division]",
+        "Probable: Colorado Rockies (Gabriel Hughes) @ Los Angeles Dodgers (Roki Sasaki) \u2014 Scheduled 2026-07-09T02:10:00Z UNIQLO Field at Dodger Stadium",
+        "Probable: Colorado Rockies (Ryan Feltner) @ San Francisco Giants (TBD) \u2014 Scheduled 2026-07-10T01:45:00Z Oracle Park",
         "Colorado Rockies tx: 2026-07-01: Colorado Rockies designated RHP John Brebbia for assignment.",
-        "Colorado Rockies tx: 2026-07-01: Colorado Rockies recalled RHP Gabriel Hughes from Albuquerque Isotopes."
+        "Colorado Rockies tx: 2026-07-01: Colorado Rockies recalled RHP Gabriel Hughes from Albuquerque Isotopes.",
+        "Colorado Rockies tx: 2026-07-03: Colorado Rockies sent RHP John Brebbia outright to Albuquerque Isotopes.",
+        "Colorado Rockies tx: 2026-07-04: Colorado Rockies placed RHP Tomoyuki Sugano on the 15-day injured list retroactive to July 1, 2026. Back spasms."
       ],
       "unverified_notes": [],
       "notes": [
@@ -1274,7 +1264,7 @@
           "games=3"
         ],
         "rockies_transactions": [
-          "transactions=11"
+          "transactions=9"
         ]
       }
     },
@@ -1283,8 +1273,8 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Tigers: 41-50 (PCT .451, GB 6.5) [Division]",
-        "Probable: Athletics (J.T. Ginn) @ Detroit Tigers (Tarik Skubal) \u2014 Final 2026-07-07T22:40:00Z Comerica Park",
         "Probable: Athletics (Jeffrey Springs) @ Detroit Tigers (Troy Melton) \u2014 Scheduled 2026-07-08T22:40:00Z Comerica Park",
+        "Probable: Athletics (Jack Perkins) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-07-09T22:40:00Z Comerica Park",
         "Detroit Tigers tx: 2026-07-01: Detroit Tigers placed RHP Will Vest on the 15-day injured list retroactive to June 28, 2026. Right posterior elbow inflammation.",
         "Detroit Tigers tx: 2026-07-01: Detroit Tigers recalled RHP Beau Brieske from Toledo Mud Hens.",
         "Detroit Tigers tx: 2026-07-01: Detroit Tigers acquired 2B Viandel Pena from the Southern Maryland Blue Crabs of the Atlantic League.",
@@ -1336,36 +1326,36 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-07&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-08&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
-          "games=16"
+          "games=15"
         ],
-        "verified_count": 16,
+        "verified_count": 15,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Milwaukee Brewers (Jacob Misiorowski) @ St. Louis Cardinals (Matt Svanson) \u2014 Final 2026-07-07T18:15:00Z Busch Stadium",
-          "Probable: Milwaukee Brewers (Robert Gasser) @ St. Louis Cardinals (Hunter Dobbins) \u2014 Final 2026-07-07T23:45:00Z Busch Stadium",
-          "Probable: Chicago Cubs (Matthew Boyd) @ Baltimore Orioles (Shane Baz) \u2014 Final 2026-07-07T22:35:00Z Oriole Park at Camden Yards",
-          "Probable: Athletics (J.T. Ginn) @ Detroit Tigers (Tarik Skubal) \u2014 Final 2026-07-07T22:40:00Z Comerica Park",
-          "Probable: Atlanta Braves (Hurston Waldrep) @ Pittsburgh Pirates (Paul Skenes) \u2014 Final 2026-07-07T22:40:00Z PNC Park"
+          "Probable: Toronto Blue Jays (Dylan Cease) @ San Francisco Giants (Logan Webb) \u2014 Scheduled 2026-07-08T19:45:00Z Oracle Park",
+          "Probable: Chicago Cubs (Colin Rea) @ Baltimore Orioles (Dean Kremer) \u2014 Scheduled 2026-07-08T22:35:00Z Oriole Park at Camden Yards",
+          "Probable: Athletics (Jeffrey Springs) @ Detroit Tigers (Troy Melton) \u2014 Scheduled 2026-07-08T22:40:00Z Comerica Park",
+          "Probable: Atlanta Braves (Grant Holmes) @ Pittsburgh Pirates (Jared Jones) \u2014 Scheduled 2026-07-08T22:40:00Z PNC Park",
+          "Probable: Seattle Mariners (George Kirby) @ Miami Marlins (Tyler Phillips) \u2014 Scheduled 2026-07-08T22:40:00Z loanDepot park"
         ],
         "unverified_sample": []
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-06-30&endDate=2026-07-07",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-07-01&endDate=2026-07-08",
         "status": "verified",
         "debug": [
-          "transactions=1850"
+          "transactions=1472"
         ],
-        "verified_count": 1835,
+        "verified_count": 1456,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-06-30: Washington Nationals signed free agent RHP Edinson Hernandez to a minor league contract.",
-          "League tx: 2026-06-30: Peoria Chiefs activated OF Ian Petrutz from the 7-day injured list.",
-          "League tx: 2026-06-30: RHP Raymond Concepcion assigned to Royal-North.",
-          "League tx: 2026-06-30: OF Kyle Becker assigned to College Workout.",
-          "League tx: 2026-06-30: Inland Empire 66ers placed RHP Sean Hermann on the 7-day injured list."
+          "League tx: 2026-07-01: SS Wilfredo Tovar assigned to Leones de Yucatan.",
+          "League tx: 2026-07-01: ACL Brewers activated RHP Wenderlyn King from the 60-day injured list.",
+          "League tx: 2026-07-01: Lansing Lugnuts placed LHP Jack Mahoney on the 7-day injured list.",
+          "League tx: 2026-07-01: 1B Caleb Hoover assigned to South Stars.",
+          "League tx: 2026-07-01: Buffalo Bisons placed RHP Matt Bowman on the temporarily inactive list."
         ],
         "unverified_sample": []
       },
@@ -1383,7 +1373,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-07-07&endDate=2026-07-09&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-07-08&endDate=2026-07-10&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
           "games=3"
@@ -1391,26 +1381,26 @@
         "verified_count": 3,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Athletics (J.T. Ginn) @ Detroit Tigers (Tarik Skubal) \u2014 Final 2026-07-07T22:40:00Z Comerica Park",
           "Probable: Athletics (Jeffrey Springs) @ Detroit Tigers (Troy Melton) \u2014 Scheduled 2026-07-08T22:40:00Z Comerica Park",
-          "Probable: Athletics (Jack Perkins) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-07-09T22:40:00Z Comerica Park"
+          "Probable: Athletics (Jack Perkins) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-07-09T22:40:00Z Comerica Park",
+          "Probable: Athletics (TBD) @ Chicago White Sox (TBD) \u2014 Scheduled 2026-07-10T23:40:00Z Rate Field"
         ],
         "unverified_sample": []
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-06-30&endDate=2026-07-07",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-07-01&endDate=2026-07-08",
         "status": "verified",
         "debug": [
-          "transactions=19"
+          "transactions=18"
         ],
-        "verified_count": 19,
+        "verified_count": 18,
         "unverified_count": 0,
         "verified_sample": [
-          "Athletics tx: 2026-06-30: Athletics signed free agent 2B Jack Winkler to a minor league contract.",
           "Athletics tx: 2026-07-01: Athletics traded 3B Brett Harris to Boston Red Sox for RHP Ben Hansen.",
           "Athletics tx: 2026-07-01: Athletics traded 3B Brett Harris to Boston Red Sox for RHP Ben Hansen.",
           "Athletics tx: 2026-07-02: Athletics designated LHP Matt Krook for assignment.",
-          "Athletics tx: 2026-07-02: Athletics activated LHP Jos\u00e9 Suarez from the paternity list."
+          "Athletics tx: 2026-07-02: Athletics activated LHP Jos\u00e9 Suarez from the paternity list.",
+          "Athletics tx: 2026-07-03: Athletics designated RHP Geoff Hartlieb for assignment."
         ],
         "unverified_sample": []
       },
@@ -1423,12 +1413,12 @@
         "verified_count": 1,
         "unverified_count": 0,
         "verified_sample": [
-          "Standings: Rockies: 37-55 (PCT .402, GB 23.0) [Division]"
+          "Standings: Rockies: 38-55 (PCT .409, GB 22.0) [Division]"
         ],
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-07-07&endDate=2026-07-09&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-07-08&endDate=2026-07-10&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
           "games=3"
@@ -1436,26 +1426,26 @@
         "verified_count": 3,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Colorado Rockies (Michael Lorenzen) @ Los Angeles Dodgers (Justin Wrobleski) \u2014 In Progress 2026-07-08T02:10:00Z UNIQLO Field at Dodger Stadium",
-          "Probable: Colorado Rockies (Ryan Feltner) @ Los Angeles Dodgers (Roki Sasaki) \u2014 Scheduled 2026-07-09T02:10:00Z UNIQLO Field at Dodger Stadium",
-          "Probable: Colorado Rockies (TBD) @ San Francisco Giants (TBD) \u2014 Scheduled 2026-07-10T01:45:00Z Oracle Park"
+          "Probable: Colorado Rockies (Gabriel Hughes) @ Los Angeles Dodgers (Roki Sasaki) \u2014 Scheduled 2026-07-09T02:10:00Z UNIQLO Field at Dodger Stadium",
+          "Probable: Colorado Rockies (Ryan Feltner) @ San Francisco Giants (TBD) \u2014 Scheduled 2026-07-10T01:45:00Z Oracle Park",
+          "Probable: Colorado Rockies (TBD) @ San Francisco Giants (TBD) \u2014 Scheduled 2026-07-11T02:15:00Z Oracle Park"
         ],
         "unverified_sample": []
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-06-30&endDate=2026-07-07",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-07-01&endDate=2026-07-08",
         "status": "verified",
         "debug": [
-          "transactions=11"
+          "transactions=9"
         ],
-        "verified_count": 11,
+        "verified_count": 9,
         "unverified_count": 0,
         "verified_sample": [
-          "Colorado Rockies tx: 2026-06-30: Colorado Rockies activated RHP Tanner Gordon from the 15-day injured list.",
-          "Colorado Rockies tx: 2026-06-30: Colorado Rockies optioned LHP Sean Sullivan to Albuquerque Isotopes.",
           "Colorado Rockies tx: 2026-07-01: Colorado Rockies designated RHP John Brebbia for assignment.",
           "Colorado Rockies tx: 2026-07-01: Colorado Rockies recalled RHP Gabriel Hughes from Albuquerque Isotopes.",
-          "Colorado Rockies tx: 2026-07-03: Colorado Rockies sent RHP John Brebbia outright to Albuquerque Isotopes."
+          "Colorado Rockies tx: 2026-07-03: Colorado Rockies sent RHP John Brebbia outright to Albuquerque Isotopes.",
+          "Colorado Rockies tx: 2026-07-04: Colorado Rockies placed RHP Tomoyuki Sugano on the 15-day injured list retroactive to July 1, 2026. Back spasms.",
+          "Colorado Rockies tx: 2026-07-04: Colorado Rockies placed RHP Seth Halvorsen on the 15-day injured list retroactive to July 1, 2026. Right shoulder inflammation."
         ],
         "unverified_sample": []
       },
@@ -1473,7 +1463,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-07-07&endDate=2026-07-09&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-07-08&endDate=2026-07-10&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
           "games=3"
@@ -1481,14 +1471,14 @@
         "verified_count": 3,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Athletics (J.T. Ginn) @ Detroit Tigers (Tarik Skubal) \u2014 Final 2026-07-07T22:40:00Z Comerica Park",
           "Probable: Athletics (Jeffrey Springs) @ Detroit Tigers (Troy Melton) \u2014 Scheduled 2026-07-08T22:40:00Z Comerica Park",
-          "Probable: Athletics (Jack Perkins) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-07-09T22:40:00Z Comerica Park"
+          "Probable: Athletics (Jack Perkins) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-07-09T22:40:00Z Comerica Park",
+          "Probable: Philadelphia Phillies (TBD) @ Detroit Tigers (TBD) \u2014 Scheduled 2026-07-10T22:40:00Z Comerica Park"
         ],
         "unverified_sample": []
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-06-30&endDate=2026-07-07",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-07-01&endDate=2026-07-08",
         "status": "verified",
         "debug": [
           "transactions=8"
@@ -1500,7 +1490,7 @@
           "Detroit Tigers tx: 2026-07-01: Detroit Tigers recalled RHP Beau Brieske from Toledo Mud Hens.",
           "Detroit Tigers tx: 2026-07-01: Detroit Tigers acquired 2B Viandel Pena from the Southern Maryland Blue Crabs of the Atlantic League.",
           "Detroit Tigers tx: 2026-07-05: Detroit Tigers traded RHP Matt Seelinger to New York Mets for cash.",
-          "Detroit Tigers tx: 2026-07-05: Detroit Tigers traded RHP Matt Seelinger to New York Mets for cash."
+          "Detroit Tigers tx: 2026-07-05: Detroit Tigers traded RHP Woo-Suk Go to Minnesota Twins for cash."
         ],
         "unverified_sample": []
       },
@@ -1607,10 +1597,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-07-08T04:22:05Z"
+    "generated_utc": "2026-07-08T07:36:36Z"
   },
   "bd_bets": {
-    "generated_at": "2026-07-08T04:22:10.003Z",
+    "generated_at": "2026-07-08T07:36:38.644Z",
     "slate_date": "2026-07-08",
     "sport": "MLB",
     "source": "bd-bets",
