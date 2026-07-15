@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T04:11:10Z",
-  "slate_date": "2026-07-14",
+  "generated_at": "2026-07-15T07:20:01Z",
+  "slate_date": "2026-07-15",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,27 +9,27 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-14&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-07-07&endDate=2026-07-14",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-07-14&endDate=2026-07-16&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-07-07&endDate=2026-07-14",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-07-14&endDate=2026-07-16&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-07-07&endDate=2026-07-14",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-07-14&endDate=2026-07-16&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-07-07&endDate=2026-07-14"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-15&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-07-08&endDate=2026-07-15",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-07-15&endDate=2026-07-17&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-07-08&endDate=2026-07-15",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-07-15&endDate=2026-07-17&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-07-08&endDate=2026-07-15",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-07-15&endDate=2026-07-17&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-07-08&endDate=2026-07-15"
   },
   "source_status": {
     "league_standings": "verified",
-    "league_schedule": "verified",
+    "league_schedule": "unverified",
     "league_transactions": "verified",
     "athletics_standings": "verified",
-    "athletics_schedule": "unverified",
+    "athletics_schedule": "verified",
     "athletics_transactions": "verified",
     "rockies_standings": "verified",
-    "rockies_schedule": "unverified",
+    "rockies_schedule": "verified",
     "rockies_transactions": "verified",
     "tigers_standings": "verified",
-    "tigers_schedule": "unverified",
+    "tigers_schedule": "verified",
     "tigers_transactions": "verified",
     "league_news": "verified",
     "athletics_news": "verified",
@@ -48,23 +48,31 @@
           "url": "https://www.mlb.com/news/al-beats-nl-in-2026-mlb-all-star-game",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-07-15T03:32:00Z",
+          "published_at": "2026-07-15T04:35:00Z",
           "summary": ""
         },
         {
-          "headline": "The very best moments from AL's wire-to-wire All-Star Game victory",
-          "url": "https://www.mlb.com/news/2026-mlb-all-star-game-top-moments",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-07-15T03:15:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Bellinger becomes 4th Yankee to win All-Star Game MVP",
+          "headline": "Belli, still one of 'those little kids with big dreams,' earns All-Star MVP",
           "url": "https://www.mlb.com/news/cody-bellinger-ben-rice-run-scoring-hits-in-all-star-game",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-07-15T03:29:00Z",
+          "published_at": "2026-07-15T04:53:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Key stats and facts from the 2026 All-Star Game",
+          "url": "https://www.mlb.com/news/2026-mlb-all-star-game-facts-and-figures",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-07-15T03:53:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Ranking the eight best moments from AL's wire-to-wire All-Star Game victory",
+          "url": "https://www.mlb.com/news/2026-mlb-all-star-game-top-moments",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-07-15T04:17:00Z",
           "summary": ""
         },
         {
@@ -72,15 +80,23 @@
           "url": "https://www.mlb.com/news/junior-caminero-exits-all-star-game-after-hit-by-pitch",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-07-15T03:07:00Z",
+          "published_at": "2026-07-15T04:18:00Z",
           "summary": ""
         },
         {
-          "headline": "Thinking out loud: Mic'd up Cease, Langeliers work through 3-K 1st in ASG",
-          "url": "https://www.mlb.com/news/dylan-cease-shea-langeliers-mic-d-up-during-2026-all-star-game",
+          "headline": "Record 7 Cuban 'brothers' take the field for All-Star Game",
+          "url": "https://www.mlb.com/news/record-seven-players-from-cuba-play-in-all-star-game",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-07-15T02:03:44Z",
+          "published_at": "2026-07-15T07:04:15Z",
+          "summary": ""
+        },
+        {
+          "headline": "Here's a team-by-team breakdown from 2026 All-Star Game",
+          "url": "https://www.mlb.com/news/2026-mlb-all-star-game-team-by-team-breakdown",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-07-15T05:38:43Z",
           "summary": ""
         },
         {
@@ -92,35 +108,19 @@
           "summary": ""
         },
         {
-          "headline": "Baseball pays tribute with poignant Stand Up 2 Cancer moment",
-          "url": "https://www.mlb.com/news/stand-up-2-cancer-at-2026-all-star-game",
+          "headline": "Peters, after family health scare, adds to whirlwind '26 in 1st career All-Star Game",
+          "url": "https://www.mlb.com/news/tristan-peters-plays-in-first-career-all-star-game",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-07-15T03:27:00Z",
+          "published_at": "2026-07-15T04:54:08Z",
           "summary": ""
         },
         {
-          "headline": "MLB All-Stars walk red carpet dressed to the nines, with meaning behind every stitch",
-          "url": "https://www.mlb.com/news/mlb-all-stars-show-off-outfits-on-the-red-carpet",
+          "headline": "Verlander's speech inspires younger AL teammates before his final All-Star Game",
+          "url": "https://www.mlb.com/news/justin-verlander-addresses-al-team-before-his-final-all-star-game",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-07-14T21:55:55Z",
-          "summary": ""
-        },
-        {
-          "headline": "Contreras unlikely to approve trade out of Boston: 'I found my family here'",
-          "url": "https://www.mlb.com/news/willson-contreras-unlikely-to-approve-trade-from-red-sox",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-07-14T23:13:10Z",
-          "summary": ""
-        },
-        {
-          "headline": "Miz couldn't bring his dog on the Red Carpet, so he did the next best thing",
-          "url": "https://www.mlb.com/news/jacob-misiorowski-image-dog-all-star-game-red-carpet-suit",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-07-14T19:39:30Z",
+          "published_at": "2026-07-15T06:11:00Z",
           "summary": ""
         }
       ],
@@ -132,19 +132,19 @@
       "athletics": {
         "items": [
           {
-            "headline": "In City of Brotherly Love, AL rides 3-run 1st to win All-Star Game",
-            "url": "https://www.mlb.com/athletics/news/al-beats-nl-in-2026-mlb-all-star-game",
+            "headline": "Thinking out loud: Mic'd up Cease, Langeliers work through 3-K 1st in ASG",
+            "url": "https://www.mlb.com/athletics/news/dylan-cease-shea-langeliers-mic-d-up-during-2026-all-star-game",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-15T03:32:00Z",
+            "published_at": "2026-07-15T02:03:44Z",
             "summary": ""
           },
           {
-            "headline": "The very best moments from AL's wire-to-wire All-Star Game victory",
-            "url": "https://www.mlb.com/athletics/news/2026-mlb-all-star-game-top-moments",
+            "headline": "Langeliers singles, walks in All-Star Game; Kurtz enjoys festivities",
+            "url": "https://www.mlb.com/athletics/news/2026-mlb-all-star-game-team-by-team-breakdown",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-15T03:15:00Z",
+            "published_at": "2026-07-15T05:38:43Z",
             "summary": ""
           },
           {
@@ -156,11 +156,19 @@
             "summary": ""
           },
           {
-            "headline": "Thinking out loud: Mic'd up Cease, Langeliers work through 3-K 1st in ASG",
-            "url": "https://www.mlb.com/athletics/news/dylan-cease-shea-langeliers-mic-d-up-during-2026-all-star-game",
+            "headline": "In City of Brotherly Love, AL rides 3-run 1st to win All-Star Game",
+            "url": "https://www.mlb.com/athletics/news/al-beats-nl-in-2026-mlb-all-star-game",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-15T02:03:44Z",
+            "published_at": "2026-07-15T04:35:00Z",
+            "summary": ""
+          },
+          {
+            "headline": "Ranking the eight best moments from AL's wire-to-wire All-Star Game victory",
+            "url": "https://www.mlb.com/athletics/news/2026-mlb-all-star-game-top-moments",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-07-15T04:17:00Z",
             "summary": ""
           },
           {
@@ -180,14 +188,6 @@
             "summary": ""
           },
           {
-            "headline": "With 3 All-Stars and 1 HRD slugger, '24 Draft class already one for the ages",
-            "url": "https://www.mlb.com/athletics/news/2024-draft-class-represented-at-2026-all-star-festivities",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-07-14T01:37:03Z",
-            "summary": ""
-          },
-          {
             "headline": "Latest Athletics injuries and transactions",
             "url": "https://www.mlb.com/athletics/news/athletics-injuries-and-roster-moves",
             "source": "MLB.com",
@@ -204,11 +204,11 @@
             "summary": "Who do the Athletics have in the pipeline? Get scouting reports, video, stats, projected ETAs and more for the A's Top 30 Prospects."
           },
           {
-            "headline": "A\u2019s dismiss pitching coach Scott Emerson",
-            "url": "https://www.mlb.com/athletics/news/scott-emerson-dismissed-by-a-s",
+            "headline": "With 3 All-Stars and 1 HRD slugger, '24 Draft class already one for the ages",
+            "url": "https://www.mlb.com/athletics/news/2024-draft-class-represented-at-2026-all-star-festivities",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-13T16:01:00Z",
+            "published_at": "2026-07-14T01:37:03Z",
             "summary": ""
           }
         ],
@@ -219,19 +219,19 @@
       "tigers": {
         "items": [
           {
-            "headline": "Tigers share in AL's dominant All-Star Game victory",
-            "url": "https://www.mlb.com/tigers/news/al-beats-nl-in-2026-mlb-all-star-game",
+            "headline": "Verlander's speech inspires younger AL teammates before his final All-Star Game",
+            "url": "https://www.mlb.com/tigers/news/justin-verlander-addresses-al-team-before-his-final-all-star-game",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-15T03:32:00Z",
+            "published_at": "2026-07-15T06:11:00Z",
             "summary": ""
           },
           {
-            "headline": "The very best moments from AL's wire-to-wire All-Star Game victory",
-            "url": "https://www.mlb.com/tigers/news/2026-mlb-all-star-game-top-moments",
+            "headline": "First ASG brings out the kid again in Philly native McGonigle, who meets childhood hero",
+            "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-meets-chase-utley-at-2026-all-star-game",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-15T03:15:00Z",
+            "published_at": "2026-07-15T06:10:00Z",
             "summary": ""
           },
           {
@@ -240,6 +240,22 @@
             "source": "MLB.com",
             "source_type": "rss",
             "published_at": "2026-07-13T12:46:00Z",
+            "summary": ""
+          },
+          {
+            "headline": "Here's a team-by-team breakdown from 2026 All-Star Game",
+            "url": "https://www.mlb.com/tigers/news/2026-mlb-all-star-game-team-by-team-breakdown",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-07-15T05:38:43Z",
+            "summary": ""
+          },
+          {
+            "headline": "In City of Brotherly Love, AL rides 3-run 1st to win All-Star Game",
+            "url": "https://www.mlb.com/tigers/news/al-beats-nl-in-2026-mlb-all-star-game",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-07-15T04:35:00Z",
             "summary": ""
           },
           {
@@ -259,22 +275,6 @@
             "summary": ""
           },
           {
-            "headline": "Here's a look at the Tigers in the All-Star Game",
-            "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-dillon-dingler-riley-greene-tigers-all-stars",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-07-08T17:21:00Z",
-            "summary": ""
-          },
-          {
-            "headline": "The moment McGonigle's All-Star nod sank in? 'Mike Trout texted me'",
-            "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-s-all-star-selection-sinks-in-after-text-from-mike-trout",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-07-13T17:00:06Z",
-            "summary": ""
-          },
-          {
             "headline": "Latest Tigers injuries and transactions",
             "url": "https://www.mlb.com/tigers/news/tigers-injuries-and-roster-moves",
             "source": "MLB.com",
@@ -291,11 +291,11 @@
             "summary": "Who do the Tigers have in the pipeline? Get scouting reports, video, stats, projected ETAs and more for Detroit's Top 30 Prospects."
           },
           {
-            "headline": "Here are the Tigers' 2026 Draft picks",
-            "url": "https://www.mlb.com/tigers/news/tigers-2026-draft-picks",
+            "headline": "Here's a look at the Tigers in the All-Star Game",
+            "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-dillon-dingler-riley-greene-tigers-all-stars",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-13T02:04:00Z",
+            "published_at": "2026-07-08T17:21:00Z",
             "summary": ""
           }
         ],
@@ -306,19 +306,19 @@
       "rockies": {
         "items": [
           {
-            "headline": "The very best moments from AL's wire-to-wire All-Star Game victory",
-            "url": "https://www.mlb.com/rockies/news/2026-mlb-all-star-game-top-moments",
+            "headline": "Goodman catches Dodger's 3-K frame in All-Star Game",
+            "url": "https://www.mlb.com/rockies/news/2026-mlb-all-star-game-team-by-team-breakdown",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-15T03:15:00Z",
+            "published_at": "2026-07-15T05:38:43Z",
             "summary": ""
           },
           {
-            "headline": "Goodman stacking up clutch moments in second straight All-Star season",
-            "url": "https://www.mlb.com/rockies/news/hunter-goodman-makes-all-star-game-for-second-straight-year",
+            "headline": "In City of Brotherly Love, AL rides 3-run 1st to win All-Star Game",
+            "url": "https://www.mlb.com/rockies/news/al-beats-nl-in-2026-mlb-all-star-game",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-13T15:29:00Z",
+            "published_at": "2026-07-15T04:35:00Z",
             "summary": ""
           },
           {
@@ -330,11 +330,11 @@
             "summary": ""
           },
           {
-            "headline": "Here's a look at the Rockies' All-Star Game representative",
-            "url": "https://www.mlb.com/rockies/news/hunter-goodman-rockies-2026-all-star-game-selection",
+            "headline": "Goodman stacking up clutch moments in second straight All-Star season",
+            "url": "https://www.mlb.com/rockies/news/hunter-goodman-makes-all-star-game-for-second-straight-year",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-07-05T07:16:00Z",
+            "published_at": "2026-07-13T15:29:00Z",
             "summary": ""
           },
           {
@@ -394,6 +394,235 @@
     "news_items": [
       {
         "id": "mlb_com-1-6",
+        "headline": "Record 7 Cuban 'brothers' take the field for All-Star Game",
+        "url": "https://www.mlb.com/news/record-seven-players-from-cuba-play-in-all-star-game",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-15T07:04:15Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-1",
+        "headline": "MLB All-Star Game 2026: For fans and players alike, &#39;Sandlot&#39; tribute makes for an unforgettable All-Star moment",
+        "url": "https://sports.yahoo.com/mlb/article/mlb-all-star-game-2026-for-fans-and-players-alike-sandlot-tribute-makes-for-an-unforgettable-all-star-moment-055730269.html",
+        "source": "Yahoo Sports",
+        "source_type": "rss",
+        "published_at": "2026-07-15T05:57:30Z",
+        "summary": "&quot;Man, this is heaven right now,&quot; Phillies slugger Kyle Schwarber said of the scene.",
+        "teams": [
+          "phillies"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-2",
+        "headline": "N&N: Messick & Smith shut out NL All-Stars",
+        "url": "https://sports.yahoo.com/articles/n-n-messick-smith-shut-054000555.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-07-15T05:40:00Z",
+        "summary": "When you pitch a shutout, you\u2019re gonna win. Someone has to be on the opposite end of that, and playing the role of Tanner Bibee tonight was a group of 9 NL pitchers who gave up 4 runs. 4 runs too many. 10 men pitched for the AL, but we\u2019re focusing only on Parker Messick [\u2026]",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-7",
+        "headline": "Here's a team-by-team breakdown from 2026 All-Star Game",
+        "url": "https://www.mlb.com/news/2026-mlb-all-star-game-team-by-team-breakdown",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-15T05:38:43Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-3",
+        "headline": "MLB All-Star Game 2026: Philly fans do more booing than cheering as festivities conclude with AL shutting out the NL",
+        "url": "https://sports.yahoo.com/mlb/article/mlb-all-star-game-2026-philly-fans-do-more-booing-than-cheering-as-festivities-conclude-with-al-shutting-out-the-nl-053651447.html",
+        "source": "Yahoo Sports",
+        "source_type": "rss",
+        "published_at": "2026-07-15T05:36:51Z",
+        "summary": "Nothing quite went Philadelphia&#39;s way this week, and a fan base known for its fierce loyalty and intense disdain for rivals made its feelings known.",
+        "teams": [
+          "athletics",
+          "phillies"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-4",
+        "headline": "Shaikin: &#39;You never know when it&#39;s your last.&#39; Mike Trout savors every moment of this All-Star Game",
+        "url": "https://sports.yahoo.com/articles/never-know-last-mike-trout-051322572.html",
+        "source": "LA Times",
+        "source_type": "rss",
+        "published_at": "2026-07-15T05:13:22Z",
+        "summary": "This year&#39;s All-Star Game didn&#39;t have a lot of drama, but it did have a lot of tributes to Angels star Mike Trout, who appreciated every moment.",
+        "teams": [
+          "angels",
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-2",
+        "headline": "Belli, still one of 'those little kids with big dreams,' earns All-Star MVP",
+        "url": "https://www.mlb.com/news/cody-bellinger-ben-rice-run-scoring-hits-in-all-star-game",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-15T04:53:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-5",
+        "headline": "Miguel Vargas blasts home run in AL All-Star Game win",
+        "url": "https://sports.yahoo.com/articles/miguel-vargas-blasts-home-run-045119277.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-07-15T04:51:19Z",
+        "summary": "Dylan Cease and the American League outpitched the National League in a 4-0 victory for the AL&#39;s 49th All-Star Game win",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-6",
+        "headline": "Cubs BCB After Dark: Where will the Cubs finish this year?",
+        "url": "https://sports.yahoo.com/articles/cubs-bcb-dark-where-cubs-045119189.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-07-15T04:51:19Z",
+        "summary": "The late-night/early-morning spot for Cubs fans asks if the Cubs will make the playoffs.",
+        "teams": [
+          "athletics",
+          "cubs"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-1",
+        "headline": "In City of Brotherly Love, AL rides 3-run 1st to win All-Star Game",
+        "url": "https://www.mlb.com/news/al-beats-nl-in-2026-mlb-all-star-game",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-15T04:35:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-5",
+        "headline": "Caminero fine after All-Star HBP, tells pitcher who plunked him not to worry",
+        "url": "https://www.mlb.com/news/junior-caminero-exits-all-star-game-after-hit-by-pitch",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-15T04:18:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-4",
+        "headline": "Ranking the eight best moments from AL's wire-to-wire All-Star Game victory",
+        "url": "https://www.mlb.com/news/2026-mlb-all-star-game-top-moments",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-07-15T04:17:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-7",
+        "headline": "White Sox Minor League Update: June 13-14, 2026",
+        "url": "https://sports.yahoo.com/articles/white-sox-minor-league-june-040906617.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-07-15T04:09:06Z",
+        "summary": "DSL All-Star trio headlines the latest farm roundup",
+        "teams": [
+          "white sox"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-8",
+        "headline": "AL shuts out NL 4-0 in 2026 MLB All-Star Game",
+        "url": "https://sports.yahoo.com/articles/al-shuts-nl-4-0-035954717.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-07-15T03:59:54Z",
+        "summary": "William Contreras caught for three innings and went 0-for-1 in the loss",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-8",
         "headline": "All-Stars share touching moment with young fans during 'America the Beautiful'",
         "url": "https://www.mlb.com/news/all-star-game-tribute-to-baseball-during-america-the-beautiful",
         "source": "MLB.com",
@@ -408,240 +637,12 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-1",
-        "headline": "AL Punches Out NL in 2026 MLB All-Star Game",
-        "url": "https://sports.yahoo.com/articles/al-punches-nl-2026-mlb-035054697.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-15T03:50:54Z",
-        "summary": "AL pitchers strikeout 15 in 4-0 win",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-2",
-        "headline": "Cease, bullpen combine on 3-hitter in AL\u2019s 4-0 win, first All-Star shutout since 2013",
-        "url": "https://sports.yahoo.com/articles/cease-bullpen-combine-3-hitter-034403490.html",
-        "source": "NBC Sports",
-        "source_type": "rss",
-        "published_at": "2026-07-15T03:44:03Z",
-        "summary": "Cease and 10 AL relievers show some pitching dominance that led the American League to a 4-0 win over the National League.",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-3",
-        "headline": "American League&#39;s three-run first inning more than enough in 4-0 win at 2026 MLB All-Star Game",
-        "url": "https://sports.yahoo.com/articles/american-leagues-three-run-first-034350052.html",
-        "source": "SNY",
-        "source_type": "rss",
-        "published_at": "2026-07-15T03:43:50Z",
-        "summary": "The American League scored three first-inning runs and went on to a largely uneventful 4-0 win over the National League on Tuesday night in Philadelphia.",
-        "teams": [
-          "phillies"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-4",
-        "headline": "Willson Contreras&#39; passion overflowed in All-Star Game: &#39;A lot of memories&#39;",
-        "url": "https://sports.yahoo.com/articles/willson-contreras-passion-overflowed-star-033842771.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-07-15T03:38:42Z",
-        "summary": "Booed by Philly fans, embraced by teammates and reunited with his brother, Willson Contreras made lasting memories at All-Star week.",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-5",
-        "headline": "The American League takes the Midsummer Classic 4-0 in the \u2018City of Brotherly Love\u2019",
-        "url": "https://sports.yahoo.com/articles/american-league-takes-midsummer-classic-033517365.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-15T03:35:17Z",
-        "summary": "American League dominance continues",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-1",
-        "headline": "In City of Brotherly Love, AL rides 3-run 1st to win All-Star Game",
-        "url": "https://www.mlb.com/news/al-beats-nl-in-2026-mlb-all-star-game",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-15T03:32:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-6",
-        "headline": "MLB All-Star Game: Braves Players Recap",
-        "url": "https://sports.yahoo.com/articles/mlb-star-game-braves-players-033113370.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-15T03:31:13Z",
-        "summary": "The Braves had five all-stars in the game, and four of them played.",
-        "teams": [
-          "braves"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-7",
-        "headline": "Rutschman catches former teammates, AL pitchers dominate in 4-0 win",
-        "url": "https://sports.yahoo.com/articles/rutschman-catches-former-teammates-al-033055426.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-15T03:30:55Z",
-        "summary": "Adley Rutschman caught former teammates Bryan Baker and Drew Rasmussen, and the AL pitchers dominated in a 4-0 victory.",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-8",
-        "headline": "Yankees\u2019 Cody Bellinger wins All-Star Game MVP, sparks first-inning rally in AL win",
-        "url": "https://sports.yahoo.com/articles/yankees-cody-bellinger-wins-star-032917599.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-07-15T03:29:17Z",
-        "summary": "Bellinger and Ben Rice&#39;s run-scoring singles keyed another AL victory.",
-        "teams": [
-          "yankees"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
         "id": "mlb_com-1-3",
-        "headline": "Bellinger becomes 4th Yankee to win All-Star Game MVP",
-        "url": "https://www.mlb.com/news/cody-bellinger-ben-rice-run-scoring-hits-in-all-star-game",
+        "headline": "Key stats and facts from the 2026 All-Star Game",
+        "url": "https://www.mlb.com/news/2026-mlb-all-star-game-facts-and-figures",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-07-15T03:29:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-7",
-        "headline": "Baseball pays tribute with poignant Stand Up 2 Cancer moment",
-        "url": "https://www.mlb.com/news/stand-up-2-cancer-at-2026-all-star-game",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-15T03:27:00Z",
-        "summary": "",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-2",
-        "headline": "The very best moments from AL's wire-to-wire All-Star Game victory",
-        "url": "https://www.mlb.com/news/2026-mlb-all-star-game-top-moments",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-15T03:15:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-4",
-        "headline": "Caminero fine after All-Star HBP, tells pitcher who plunked him not to worry",
-        "url": "https://www.mlb.com/news/junior-caminero-exits-all-star-game-after-hit-by-pitch",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-15T03:07:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-5",
-        "headline": "Thinking out loud: Mic'd up Cease, Langeliers work through 3-K 1st in ASG",
-        "url": "https://www.mlb.com/news/dylan-cease-shea-langeliers-mic-d-up-during-2026-all-star-game",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-15T02:03:44Z",
-        "summary": "",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-8",
-        "headline": "MLB All-Stars walk red carpet dressed to the nines, with meaning behind every stitch",
-        "url": "https://www.mlb.com/news/mlb-all-stars-show-off-outfits-on-the-red-carpet",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-07-14T21:55:55Z",
+        "published_at": "2026-07-15T03:53:00Z",
         "summary": "",
         "teams": [],
         "players": [],
@@ -653,26 +654,7 @@
     ]
   },
   "scoreboard": {
-    "games": [
-      {
-        "id": "823443",
-        "away_team": "American League All-Stars",
-        "home_team": "National League All-Stars",
-        "away_score": 4,
-        "home_score": 0,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-07-15T00:00:00Z",
-        "venue": "Citizens Bank Park",
-        "probable_pitchers": {
-          "away": "Dylan Cease",
-          "home": "Cristopher S\u00e1nchez"
-        },
-        "broadcasts": []
-      }
-    ]
+    "games": []
   },
   "news_status": {
     "league_news": "verified",
@@ -692,78 +674,79 @@
       "Standings: Blue Jays: 45-51 (PCT .469, GB 12.0) [Division]",
       "Standings: White Sox: 50-45 (PCT .526, GB -) [Division]",
       "Standings: Guardians: 51-46 (PCT .526, GB -) [Division]",
-      "Standings: Twins: 48-49 (PCT .495, GB 3.0) [Division]",
-      "Probable: American League All-Stars (Dylan Cease) @ National League All-Stars (Cristopher S\u00e1nchez) \u2014 Final 2026-07-15T00:00:00Z Citizens Bank Park"
+      "Standings: Twins: 48-49 (PCT .495, GB 3.0) [Division]"
     ],
-    "unverified_notes": [],
+    "unverified_notes": [
+      "UNVERIFIED: No games scheduled in window."
+    ],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: American League All-Stars (Dylan Cease) @ National League All-Stars (Cristopher S\u00e1nchez) \u2014 Final 2026-07-15T00:00:00Z Citizens Bank Park"
+      "UNVERIFIED: No probable matchup entries available."
     ],
     "transactions": [
-      "League tx: 2026-07-07: Houston Astros sent RHP Ronel Blanco on a rehab assignment to Sugar Land Space Cowboys.",
-      "League tx: 2026-07-07: Worcester Red Sox placed RHP Zack Kelly on the 7-day injured list.",
-      "League tx: 2026-07-07: RHP Davin Pollard assigned to Williamsport Crosscutters.",
-      "League tx: 2026-07-07: Pittsburgh Pirates signed free agent RF Joshua Palacios to a minor league contract.",
-      "League tx: 2026-07-07: OF Bryan Diaz assigned to Light Blue-South.",
-      "League tx: 2026-07-07: Williamsport Crosscutters placed SS KJ White Jr. on the temporarily inactive list.",
-      "League tx: 2026-07-07: LHP Landen Doll assigned to Cotuit Kettleers.",
-      "League tx: 2026-07-07: Portland Sea Dogs activated OF Will Turner from the 7-day injured list.",
-      "League tx: 2026-07-07: SS Cooper Vance assigned to Mahoning Valley Scrappers.",
-      "League tx: 2026-07-07: Conspiradores de Queretaro signed free agent LHP Fernando Abad.",
-      "League tx: 2026-07-07: Saraperos de Saltillo signed free agent LHP Edwin Escobar.",
-      "League tx: 2026-07-07: San Jose Giants sent OF Jose Ortiz on a rehab assignment to ACL Giants.",
-      "League tx: 2026-07-07: Jersey Shore BlueClaws sent LHP Juan Amarante on a rehab assignment to Clearwater Threshers.",
-      "League tx: 2026-07-07: Charlotte Knights placed RHP Chase Plymell on the 7-day injured list.",
-      "League tx: 2026-07-07: Chicago White Sox sent 1B Munetaka Murakami on a rehab assignment to Charlotte Knights.",
-      "League tx: 2026-07-07: RHP Clayton Burke assigned to Mahoning Valley Scrappers.",
-      "League tx: 2026-07-07: OF Jordan Taylor assigned to Mahoning Valley Scrappers.",
-      "League tx: 2026-07-07: Cincinnati Reds sent 3B Ke'Bryan Hayes on a rehab assignment to Louisville Bats.",
-      "League tx: 2026-07-07: Jacksonville Jumbo Shrimp activated RHP Ryan Gusto.",
-      "League tx: 2026-07-07: C Cameron Barstad assigned to Indianapolis Indians.",
-      "League tx: 2026-07-07: Rieleros de Aguascalientes released C Gabriel Lino.",
-      "League tx: 2026-07-07: ACL Dodgers activated C Eduardo Rojas.",
-      "League tx: 2026-07-07: Wareham Gatemen activated RHP Nolan Foster.",
-      "League tx: 2026-07-07: Syracuse Mets sent RF Mike Tauchman on a rehab assignment to FCL Mets.",
-      "League tx: 2026-07-07: St. Louis Cardinals designated LHP Bruce Zimmermann for assignment.",
-      "League tx: 2026-07-07: Williamsport Crosscutters activated RHP Will Bartkoski.",
-      "League tx: 2026-07-07: Cotuit Kettleers activated RHP Tyler Finkbeiner.",
-      "League tx: 2026-07-07: Dayton Dragons placed RHP Cole Schoenwetter on the full-season injured list.",
-      "League tx: 2026-07-07: Minnesota Twins sent RHP Cole Sands on a rehab assignment to St. Paul Saints.",
-      "League tx: 2026-07-07: Atlanta Braves placed RHP Tyler Kinley on the paternity list.",
-      "League tx: 2026-07-07: LHP Blake Barker assigned to Mahoning Valley Scrappers.",
-      "League tx: 2026-07-07: Hartford Yard Goats activated 3B Skyler Messinger from the 7-day injured list.",
-      "League tx: 2026-07-07: New York Mets designated RHP Guillo Zu\u00f1iga for assignment.",
-      "League tx: 2026-07-07: Olmecas de Tabasco signed free agent RF Oscar Gonzalez.",
-      "League tx: 2026-07-07: Reno Aces placed OF A.J. Vukovich on the 7-day injured list.",
-      "League tx: 2026-07-07: ACL Padres activated RHP Landry Jurecka.",
-      "League tx: 2026-07-07: 1B Naulivou Lauaki Jr. assigned to Chatham Anglers.",
-      "League tx: 2026-07-07: Chesapeake Baysox activated RHP Tyson Neighbors from the 7-day injured list.",
-      "League tx: 2026-07-07: RHP Matthew WIlliams assigned to Williamsport Crosscutters.",
-      "League tx: 2026-07-07: Algodoneros Union Laguna activated RHP Joel Rangel from the reserve list.",
-      "League tx: 2026-07-07: Tampa Tarpons placed OF Logan Maxwell on the 7-day injured list.",
-      "League tx: 2026-07-07: Dorados de Chihuahua placed RHP Yamil Castillo on the reserve list.",
-      "League tx: 2026-07-07: El Paso Chihuahuas activated RHP Logan Gillaspie from the 7-day injured list.",
-      "League tx: 2026-07-07: Fort Wayne TinCaps activated RHP Kannon Kemp from the 60-day injured list.",
-      "League tx: 2026-07-07: Gwinnett Stripers released RHP Daysbel Hern\u00e1ndez.",
-      "League tx: 2026-07-07: Milwaukee Brewers placed 3B David Hamilton on the 10-day injured list. Strained left hamstring.",
-      "League tx: 2026-07-07: Chesapeake Baysox placed C Ethan Anderson on the 7-day injured list.",
-      "League tx: 2026-07-07: Amarillo Sod Poodles sent LHP Will Mabrey on a rehab assignment to Hillsboro Hops.",
-      "League tx: 2026-07-07: Tigres de Quintana Roo activated RHP Henry Sosa from the reserve list.",
-      "League tx: 2026-07-07: Memphis Redbirds sent RHP Sem Robberse on a rehab assignment to Palm Beach Cardinals."
+      "League tx: 2026-07-08: RHP Thomas Martin assigned to Harwich Mariners.",
+      "League tx: 2026-07-08: OF Jamie Palmese assigned to Chatham Anglers.",
+      "League tx: 2026-07-08: 2B Andrew Terpins assigned to Falmouth Commodores.",
+      "League tx: 2026-07-08: RHP Ethan Phillips assigned to Aberdeen IronBirds.",
+      "League tx: 2026-07-08: Pittsburgh Pirates placed C Endy Rodr\u00edguez on the 10-day injured list retroactive to July 6, 2026. Left glute strain.",
+      "League tx: 2026-07-08: ACL Brewers activated C Isais Chavez from the restricted list.",
+      "League tx: 2026-07-08: RHP Camron Seagraves assigned to Bourne Braves.",
+      "League tx: 2026-07-08: Fredericksburg Nationals transferred C Christian Fagnant to the Development List.",
+      "League tx: 2026-07-08: LHP Brian Young assigned to Trenton Thunder.",
+      "League tx: 2026-07-08: Dorados de Chihuahua placed RHP Adri\u00e1n Martinez on the reserve list.",
+      "League tx: 2026-07-08: San Diego Padres placed LF Samad Taylor on the 10-day injured list. Right oblique strain.",
+      "League tx: 2026-07-08: Myrtle Beach Pelicans placed 2B Darlyn De Leon on the 7-day injured list.",
+      "League tx: 2026-07-08: RHP Kyle Salvati assigned to Trenton Thunder.",
+      "League tx: 2026-07-08: Philadelphia Phillies activated RHP Brad Keller from the 15-day injured list.",
+      "League tx: 2026-07-08: Pericos de Puebla placed 2B Brayan Quintero on the reserve list.",
+      "League tx: 2026-07-08: Washington Nationals signed free agent 3B Devin Ortiz to a minor league contract.",
+      "League tx: 2026-07-08: Omaha Storm Chasers placed 3B Kevin Newman on the 7-day injured list.",
+      "League tx: 2026-07-08: RHP Miguel Calzado assigned to Navy-Centro.",
+      "League tx: 2026-07-08: Minnesota Twins placed RHP Marco Raya on the 15-day injured list retroactive to July 5, 2026. Right shoulder impingement.",
+      "League tx: 2026-07-08: Los Angeles Angels signed free agent OF Pablo Reyes to a minor league contract.",
+      "League tx: 2026-07-08: RHP Mario Vasquez assigned to DSL Mariners.",
+      "League tx: 2026-07-08: RHP Jake Geis assigned to Aberdeen IronBirds.",
+      "League tx: 2026-07-08: SS Jevin Relaford assigned to Aberdeen IronBirds.",
+      "League tx: 2026-07-08: Charros de Jalisco released LF Yadiel Hernandez.",
+      "League tx: 2026-07-08: Miami Marlins signed free agent RHP Guillermo Regalado to a minor league contract.",
+      "League tx: 2026-07-08: Chatham Anglers activated 2B Cameron Pruitt.",
+      "League tx: 2026-07-08: RHP Skylar Jones assigned to State College Spikes.",
+      "League tx: 2026-07-08: Delmarva Shorebirds activated 2B Junior Aybar.",
+      "League tx: 2026-07-08: LHP Jonah Walker assigned to West Virginia Black Bears.",
+      "League tx: 2026-07-08: 1B Brylan West assigned to Aberdeen IronBirds.",
+      "League tx: 2026-07-08: RHP Guillermo Regalado assigned to DSL Marlins.",
+      "League tx: 2026-07-08: Birmingham Barons sent C Calvin Harris on a rehab assignment to ACL White Sox.",
+      "League tx: 2026-07-08: Chesapeake Baysox transferred RHP Daniel Lloyd from the 7-day injured list to the 60-day injured list.",
+      "League tx: 2026-07-08: Johnson City Doughboys activated 1B Patrick Walsh.",
+      "League tx: 2026-07-08: RHP Juan Reyes assigned to State College Spikes.",
+      "League tx: 2026-07-08: RHP Matt Bowman assigned to St. Paul Saints.",
+      "League tx: 2026-07-08: OF Sam Gates assigned to Trenton Thunder.",
+      "League tx: 2026-07-08: RHP Jonah Johnson assigned to Aberdeen IronBirds.",
+      "League tx: 2026-07-08: Caliente de Durango placed C Gael Guzman on the reserve list.",
+      "League tx: 2026-07-08: Rieleros de Aguascalientes placed IF Emiliano Vega on the reserve list.",
+      "League tx: 2026-07-08: Greeneville Flyboys activated RHP Cody Blair.",
+      "League tx: 2026-07-08: San Diego Padres signed free agent LF Dustin Harris to a minor league contract.",
+      "League tx: 2026-07-08: State College Spikes activated LHP Jackson Mayo.",
+      "League tx: 2026-07-08: LHP Josh Fleming assigned to Iowa Cubs.",
+      "League tx: 2026-07-08: FCL Braves activated OF Starlyn De La Cruz.",
+      "League tx: 2026-07-08: OF Albert Jennings assigned to West Virginia Black Bears.",
+      "League tx: 2026-07-08: Bourne Braves activated 3B Paul Vazquez.",
+      "League tx: 2026-07-08: 3B Grae Kessinger assigned to Indianapolis Indians.",
+      "League tx: 2026-07-08: RHP Justin Gay assigned to Trenton Thunder.",
+      "League tx: 2026-07-08: RHP Wesley Estiven assigned to Navy-East."
     ],
-    "transactions_total": 1663,
+    "transactions_total": 1299,
     "debug": {
       "standings": [
         "rows=30"
       ],
       "schedule": [
-        "games=1"
+        "games=0"
       ],
       "transactions": [
-        "transactions=1686"
+        "transactions=1311"
       ]
     }
   },
@@ -773,14 +756,13 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Athletics: 41-55 (PCT .427, GB 8.0) [Division]",
-        "Athletics tx: 2026-07-07: Athletics activated SS Jacob Wilson from the 10-day injured list.",
-        "Athletics tx: 2026-07-07: Athletics optioned RHP Kade Morris to Las Vegas Aviators.",
-        "Athletics tx: 2026-07-07: Athletics recalled LHP Jacob Lopez from Las Vegas Aviators.",
-        "Athletics tx: 2026-07-07: Athletics optioned C Brian Serven to Las Vegas Aviators."
+        "Probable: Washington Nationals (TBD) @ Athletics (TBD) \u2014 Scheduled 2026-07-18T01:40:00Z Sutter Health Park",
+        "Athletics tx: 2026-07-08: Athletics activated LF Tyler Soderstrom from the 10-day injured list.",
+        "Athletics tx: 2026-07-08: Athletics optioned 3B Max Muncy to Las Vegas Aviators.",
+        "Athletics tx: 2026-07-10: Athletics placed 3B Zack Gelof on the 10-day injured list. Right knee laceration.",
+        "Athletics tx: 2026-07-10: Athletics recalled 1B Joey Meneses from Las Vegas Aviators."
       ],
-      "unverified_notes": [
-        "UNVERIFIED: No scheduled game found for teamId=133 in window."
-      ],
+      "unverified_notes": [],
       "notes": [
         "Editorial framing only; do not promote UNVERIFIED entries as facts."
       ],
@@ -790,7 +772,7 @@
       ],
       "source_status": {
         "athletics_standings": "verified",
-        "athletics_schedule": "unverified",
+        "athletics_schedule": "verified",
         "athletics_transactions": "verified"
       },
       "debug": {
@@ -798,10 +780,10 @@
           "rows=30"
         ],
         "athletics_schedule": [
-          "games=0"
+          "games=1"
         ],
         "athletics_transactions": [
-          "transactions=11"
+          "transactions=7"
         ]
       }
     },
@@ -810,13 +792,12 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Rockies: 39-59 (PCT .398, GB 22.5) [Division]",
+        "Probable: Cincinnati Reds (Brady Singer) @ Colorado Rockies (TBD) \u2014 Scheduled 2026-07-18T00:40:00Z Coors Field",
         "Colorado Rockies tx: 2026-07-09: Colorado Rockies signed free agent RHP John Brebbia to a minor league contract.",
         "Colorado Rockies tx: 2026-07-11: Colorado Rockies optioned RHP TJ Shook to Albuquerque Isotopes.",
         "Colorado Rockies tx: 2026-07-11: Colorado Rockies recalled RHP Jeff Criswell from Albuquerque Isotopes."
       ],
-      "unverified_notes": [
-        "UNVERIFIED: No scheduled game found for teamId=115 in window."
-      ],
+      "unverified_notes": [],
       "notes": [
         "Editorial framing only; do not promote UNVERIFIED entries as facts."
       ],
@@ -826,7 +807,7 @@
       ],
       "source_status": {
         "rockies_standings": "verified",
-        "rockies_schedule": "unverified",
+        "rockies_schedule": "verified",
         "rockies_transactions": "verified"
       },
       "debug": {
@@ -834,7 +815,7 @@
           "rows=30"
         ],
         "rockies_schedule": [
-          "games=0"
+          "games=1"
         ],
         "rockies_transactions": [
           "transactions=3"
@@ -846,14 +827,13 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Tigers: 44-52 (PCT .458, GB 6.5) [Division]",
-        "Detroit Tigers tx: 2026-07-07: Detroit Tigers sent RHP Jackson Jobe on a rehab assignment to Lakeland Flying Tigers.",
-        "Detroit Tigers tx: 2026-07-07: Detroit Tigers sent RHP Jackson Jobe on a rehab assignment to Lakeland Flying Tigers.",
+        "Probable: Detroit Tigers (Troy Melton) @ Los Angeles Angels (TBD) \u2014 Scheduled 2026-07-18T01:38:00Z Angel Stadium",
         "Detroit Tigers tx: 2026-07-09: Detroit Tigers designated DH Jahmai Jones for assignment.",
-        "Detroit Tigers tx: 2026-07-09: Detroit Tigers recalled C Eduardo Valencia from Toledo Mud Hens."
+        "Detroit Tigers tx: 2026-07-09: Detroit Tigers recalled C Eduardo Valencia from Toledo Mud Hens.",
+        "Detroit Tigers tx: 2026-07-11: Detroit Tigers claimed RHP Andre Granillo off waivers from Washington Nationals.",
+        "Detroit Tigers tx: 2026-07-11: Detroit Tigers optioned RHP Andre Granillo to Toledo Mud Hens."
       ],
-      "unverified_notes": [
-        "UNVERIFIED: No scheduled game found for teamId=116 in window."
-      ],
+      "unverified_notes": [],
       "notes": [
         "Editorial framing only; do not promote UNVERIFIED entries as facts."
       ],
@@ -863,7 +843,7 @@
       ],
       "source_status": {
         "tigers_standings": "verified",
-        "tigers_schedule": "unverified",
+        "tigers_schedule": "verified",
         "tigers_transactions": "verified"
       },
       "debug": {
@@ -871,10 +851,10 @@
           "rows=30"
         ],
         "tigers_schedule": [
-          "games=0"
+          "games=1"
         ],
         "tigers_transactions": [
-          "transactions=11"
+          "transactions=9"
         ]
       }
     }
@@ -899,32 +879,32 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-14&hydrate=probablePitcher,team",
-        "status": "verified",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-15&hydrate=probablePitcher,team",
+        "status": "unverified",
         "debug": [
-          "games=1"
+          "games=0"
         ],
-        "verified_count": 1,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Probable: American League All-Stars (Dylan Cease) @ National League All-Stars (Cristopher S\u00e1nchez) \u2014 Final 2026-07-15T00:00:00Z Citizens Bank Park"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: No games scheduled in window."
+        ]
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-07-07&endDate=2026-07-14",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-07-08&endDate=2026-07-15",
         "status": "verified",
         "debug": [
-          "transactions=1686"
+          "transactions=1311"
         ],
-        "verified_count": 1663,
+        "verified_count": 1299,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-07-07: Houston Astros sent RHP Ronel Blanco on a rehab assignment to Sugar Land Space Cowboys.",
-          "League tx: 2026-07-07: Worcester Red Sox placed RHP Zack Kelly on the 7-day injured list.",
-          "League tx: 2026-07-07: RHP Davin Pollard assigned to Williamsport Crosscutters.",
-          "League tx: 2026-07-07: Pittsburgh Pirates signed free agent RF Joshua Palacios to a minor league contract.",
-          "League tx: 2026-07-07: OF Bryan Diaz assigned to Light Blue-South."
+          "League tx: 2026-07-08: RHP Thomas Martin assigned to Harwich Mariners.",
+          "League tx: 2026-07-08: OF Jamie Palmese assigned to Chatham Anglers.",
+          "League tx: 2026-07-08: 2B Andrew Terpins assigned to Falmouth Commodores.",
+          "League tx: 2026-07-08: RHP Ethan Phillips assigned to Aberdeen IronBirds.",
+          "League tx: 2026-07-08: Pittsburgh Pirates placed C Endy Rodr\u00edguez on the 10-day injured list retroactive to July 6, 2026. Left glute strain."
         ],
         "unverified_sample": []
       },
@@ -942,32 +922,32 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-07-14&endDate=2026-07-16&hydrate=probablePitcher,team",
-        "status": "unverified",
-        "debug": [
-          "games=0"
-        ],
-        "verified_count": 0,
-        "unverified_count": 1,
-        "verified_sample": [],
-        "unverified_sample": [
-          "UNVERIFIED: No scheduled game found for teamId=133 in window."
-        ]
-      },
-      "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-07-07&endDate=2026-07-14",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-07-15&endDate=2026-07-17&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
-          "transactions=11"
+          "games=1"
         ],
-        "verified_count": 11,
+        "verified_count": 1,
         "unverified_count": 0,
         "verified_sample": [
-          "Athletics tx: 2026-07-07: Athletics activated SS Jacob Wilson from the 10-day injured list.",
-          "Athletics tx: 2026-07-07: Athletics optioned RHP Kade Morris to Las Vegas Aviators.",
-          "Athletics tx: 2026-07-07: Athletics recalled LHP Jacob Lopez from Las Vegas Aviators.",
-          "Athletics tx: 2026-07-07: Athletics optioned C Brian Serven to Las Vegas Aviators.",
-          "Athletics tx: 2026-07-08: Athletics activated LF Tyler Soderstrom from the 10-day injured list."
+          "Probable: Washington Nationals (TBD) @ Athletics (TBD) \u2014 Scheduled 2026-07-18T01:40:00Z Sutter Health Park"
+        ],
+        "unverified_sample": []
+      },
+      "athletics_transactions": {
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-07-08&endDate=2026-07-15",
+        "status": "verified",
+        "debug": [
+          "transactions=7"
+        ],
+        "verified_count": 7,
+        "unverified_count": 0,
+        "verified_sample": [
+          "Athletics tx: 2026-07-08: Athletics activated LF Tyler Soderstrom from the 10-day injured list.",
+          "Athletics tx: 2026-07-08: Athletics optioned 3B Max Muncy to Las Vegas Aviators.",
+          "Athletics tx: 2026-07-10: Athletics placed 3B Zack Gelof on the 10-day injured list. Right knee laceration.",
+          "Athletics tx: 2026-07-10: Athletics recalled 1B Joey Meneses from Las Vegas Aviators.",
+          "Athletics tx: 2026-07-11: Athletics placed 1B Nick Kurtz on the 10-day injured list retroactive to July 10, 2026. Right thumb capsule sprain."
         ],
         "unverified_sample": []
       },
@@ -985,20 +965,20 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-07-14&endDate=2026-07-16&hydrate=probablePitcher,team",
-        "status": "unverified",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-07-15&endDate=2026-07-17&hydrate=probablePitcher,team",
+        "status": "verified",
         "debug": [
-          "games=0"
+          "games=1"
         ],
-        "verified_count": 0,
-        "unverified_count": 1,
-        "verified_sample": [],
-        "unverified_sample": [
-          "UNVERIFIED: No scheduled game found for teamId=115 in window."
-        ]
+        "verified_count": 1,
+        "unverified_count": 0,
+        "verified_sample": [
+          "Probable: Cincinnati Reds (Brady Singer) @ Colorado Rockies (TBD) \u2014 Scheduled 2026-07-18T00:40:00Z Coors Field"
+        ],
+        "unverified_sample": []
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-07-07&endDate=2026-07-14",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-07-08&endDate=2026-07-15",
         "status": "verified",
         "debug": [
           "transactions=3"
@@ -1026,32 +1006,32 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-07-14&endDate=2026-07-16&hydrate=probablePitcher,team",
-        "status": "unverified",
-        "debug": [
-          "games=0"
-        ],
-        "verified_count": 0,
-        "unverified_count": 1,
-        "verified_sample": [],
-        "unverified_sample": [
-          "UNVERIFIED: No scheduled game found for teamId=116 in window."
-        ]
-      },
-      "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-07-07&endDate=2026-07-14",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-07-15&endDate=2026-07-17&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
-          "transactions=11"
+          "games=1"
         ],
-        "verified_count": 11,
+        "verified_count": 1,
         "unverified_count": 0,
         "verified_sample": [
-          "Detroit Tigers tx: 2026-07-07: Detroit Tigers sent RHP Jackson Jobe on a rehab assignment to Lakeland Flying Tigers.",
-          "Detroit Tigers tx: 2026-07-07: Detroit Tigers sent RHP Jackson Jobe on a rehab assignment to Lakeland Flying Tigers.",
+          "Probable: Detroit Tigers (Troy Melton) @ Los Angeles Angels (TBD) \u2014 Scheduled 2026-07-18T01:38:00Z Angel Stadium"
+        ],
+        "unverified_sample": []
+      },
+      "tigers_transactions": {
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-07-08&endDate=2026-07-15",
+        "status": "verified",
+        "debug": [
+          "transactions=9"
+        ],
+        "verified_count": 9,
+        "unverified_count": 0,
+        "verified_sample": [
           "Detroit Tigers tx: 2026-07-09: Detroit Tigers designated DH Jahmai Jones for assignment.",
           "Detroit Tigers tx: 2026-07-09: Detroit Tigers recalled C Eduardo Valencia from Toledo Mud Hens.",
-          "Detroit Tigers tx: 2026-07-11: Detroit Tigers claimed RHP Andre Granillo off waivers from Washington Nationals."
+          "Detroit Tigers tx: 2026-07-11: Detroit Tigers claimed RHP Andre Granillo off waivers from Washington Nationals.",
+          "Detroit Tigers tx: 2026-07-11: Detroit Tigers optioned RHP Andre Granillo to Toledo Mud Hens.",
+          "Detroit Tigers tx: 2026-07-12: Detroit Tigers placed LHP Framber Valdez on the bereavement list."
         ],
         "unverified_sample": []
       },
@@ -1158,10 +1138,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-07-15T04:11:10Z"
+    "generated_utc": "2026-07-15T07:20:01Z"
   },
   "bd_bets": {
-    "generated_at": "2026-07-15T04:11:12.931Z",
+    "generated_at": "2026-07-15T07:20:04.011Z",
     "slate_date": "2026-07-15",
     "sport": "MLB",
     "source": "bd-bets",
