@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-22T01:33:20Z",
-  "slate_date": "2026-09-21",
+  "generated_at": "2026-09-22T08:26:38Z",
+  "slate_date": "2026-09-22",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,14 +9,14 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-21&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-09-14&endDate=2026-09-21",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-09-21&endDate=2026-09-23&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-09-14&endDate=2026-09-21",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-09-21&endDate=2026-09-23&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-09-14&endDate=2026-09-21",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-09-21&endDate=2026-09-23&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-09-14&endDate=2026-09-21"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-22&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-09-15&endDate=2026-09-22",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-09-22&endDate=2026-09-24&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-09-15&endDate=2026-09-22",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-09-22&endDate=2026-09-24&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-09-15&endDate=2026-09-22",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-09-22&endDate=2026-09-24&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-09-15&endDate=2026-09-22"
   },
   "source_status": {
     "league_standings": "verified",
@@ -44,35 +44,27 @@
     "league_news": {
       "items": [
         {
+          "headline": "Our final MVP poll has clear frontrunners, but can this week change anything?",
+          "url": "https://www.mlb.com/news/yordan-alvarez-pete-crow-armstrong-lead-final-2026-mvp-poll",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-09-22T03:00:55Z",
+          "summary": ""
+        },
+        {
+          "headline": "These 9 series starting tonight will help determine postseason picture",
+          "url": "https://www.mlb.com/news/mlb-series-to-watch-week-of-sept-21-2026",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-09-22T04:00:00Z",
+          "summary": ""
+        },
+        {
           "headline": "Bregman has facial fractures, but postseason return possible (report)",
           "url": "https://www.mlb.com/news/alex-bregman-cubs-facial-fractures-postseason-return",
           "source": "MLB.com",
           "source_type": "rss",
           "published_at": "2026-09-21T20:54:40Z",
-          "summary": ""
-        },
-        {
-          "headline": "Who sits atop final Power Rankings of the regular season?",
-          "url": "https://www.mlb.com/news/mlb-power-rankings-for-week-of-september-20-2026",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-09-21T02:11:33Z",
-          "summary": ""
-        },
-        {
-          "headline": "Rays' new road uniforms have fresh take on a familiar look",
-          "url": "https://www.mlb.com/news/rays-bring-back-tampa-bay-to-new-road-gray-jerseys",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-09-21T15:09:17Z",
-          "summary": ""
-        },
-        {
-          "headline": "Cease uncertain for remainder of '26 after MRI reveals shoulder inflammation",
-          "url": "https://www.mlb.com/news/dylan-cease-right-shoulder-inflammation-mri",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-09-21T21:55:11Z",
           "summary": ""
         },
         {
@@ -84,27 +76,35 @@
           "summary": ""
         },
         {
-          "headline": "Fifth Third's first star? Naturally, it's No. 53",
-          "url": "https://www.mlb.com/news/ben-malgeri-homer-catches-tigers-fifth-third-park",
+          "headline": "With AL East title on line, Yanks determined to keep Rays from celebrating in Bronx",
+          "url": "https://www.mlb.com/news/rays-yankees-meet-with-al-east-title-there-for-taking",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-09-22T01:07:48Z",
+          "published_at": "2026-09-21T13:12:00Z",
           "summary": ""
         },
         {
-          "headline": "Teen who plays ball at Ohtani's old high school nails her 1st pitch at Dodger Stadium",
-          "url": "https://www.mlb.com/news/player-from-shohei-ohtani-s-former-high-school-throws-first-pitch-at-dodger-stadium",
+          "headline": "Alonso's 40th HR creates 21st night of September to remember for O's",
+          "url": "https://www.mlb.com/news/pete-alonso-hits-40th-home-run-of-the-year-to-secure-o-s-comeback-win",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-09-21T20:32:07Z",
+          "published_at": "2026-09-22T03:23:00Z",
           "summary": ""
         },
         {
-          "headline": "Vladdy kept out of lineup vs. Baltimore with lower back tightness",
-          "url": "https://www.mlb.com/news/vladimir-guerrero-jr-out-of-lineup-against-orioles-lower-back-tightness",
+          "headline": "Wait \u2018til next year: 6 candidates to achieve their postseason hopes ... in 2027",
+          "url": "https://www.mlb.com/news/mlb-teams-who-could-make-the-playoffs-in-2027",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-09-21T22:13:12Z",
+          "published_at": "2026-09-22T02:56:58Z",
+          "summary": ""
+        },
+        {
+          "headline": "Rays' new road uniforms have fresh take on a familiar look",
+          "url": "https://www.mlb.com/news/rays-bring-back-tampa-bay-to-new-road-gray-jerseys",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-09-21T15:09:17Z",
           "summary": ""
         },
         {
@@ -116,11 +116,11 @@
           "summary": ""
         },
         {
-          "headline": "Vargas, Cronenworth come up big to win Player of the Week honors",
-          "url": "https://www.mlb.com/news/miguel-vargas-jake-cronenworth-named-players-of-the-week",
+          "headline": "Top 9 things at stake in the final week",
+          "url": "https://www.mlb.com/news/top-things-at-stake-final-week-2026-mlb-season",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-09-21T20:30:06Z",
+          "published_at": "2026-09-21T00:55:00Z",
           "summary": ""
         }
       ],
@@ -164,11 +164,11 @@
             "summary": ""
           },
           {
-            "headline": "Barnett will get chance to show adjustments down the stretch for A's",
-            "url": "https://www.mlb.com/athletics/news/mason-barnett-shows-improvement-in-start-against-guardians",
+            "headline": "Watch Triple-A squad compete for a championship for FREE tonight",
+            "url": "https://www.mlb.com/athletics/news/watch-minor-league-baseball-games-for-free-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-09-19T04:30:07Z",
+            "published_at": "2026-09-22T05:18:00Z",
             "summary": ""
           },
           {
@@ -180,11 +180,11 @@
             "summary": ""
           },
           {
-            "headline": "Cross-country charitable work earns Gelof the A's Clemente Award nomination",
-            "url": "https://www.mlb.com/athletics/news/zack-gelof-reflects-on-roberto-clemente-award-nomination",
+            "headline": "Barnett will get chance to show adjustments down the stretch for A's",
+            "url": "https://www.mlb.com/athletics/news/mason-barnett-shows-improvement-in-start-against-guardians",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-09-18T15:17:26Z",
+            "published_at": "2026-09-19T04:30:07Z",
             "summary": ""
           },
           {
@@ -204,11 +204,11 @@
             "summary": "Who do the Athletics have in the pipeline? Get scouting reports, video, stats, projected ETAs and more for the A's Top 30 Prospects."
           },
           {
-            "headline": "Watch Triple-A squad compete for a championship for FREE on Tuesday",
-            "url": "https://www.mlb.com/athletics/news/watch-minor-league-baseball-games-for-free-2026",
+            "headline": "Cross-country charitable work earns Gelof the A's Clemente Award nomination",
+            "url": "https://www.mlb.com/athletics/news/zack-gelof-reflects-on-roberto-clemente-award-nomination",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-09-21T23:53:00Z",
+            "published_at": "2026-09-18T15:17:26Z",
             "summary": ""
           }
         ],
@@ -223,7 +223,7 @@
             "url": "https://www.mlb.com/tigers/news/ben-malgeri-homer-catches-tigers-fifth-third-park",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-09-22T01:07:48Z",
+            "published_at": "2026-09-22T03:43:00Z",
             "summary": ""
           },
           {
@@ -394,62 +394,12 @@
     "news_items": [
       {
         "id": "yahoo_sports-3-1",
-        "headline": "How to watch San Francisco Giants vs. Minnesota Twins",
-        "url": "https://sports.yahoo.com/articles/watch-san-francisco-giants-vs-011500852.html",
-        "source": "SB Nation",
+        "headline": "7 things to watch in MLB&#39;s final week include red-hot NL wild-card race, a Triple Crown chase and a historically bad division",
+        "url": "https://sports.yahoo.com/mlb/article/7-things-to-watch-in-mlbs-final-week-include-red-hot-nl-wild-card-race-a-triple-crown-chase-and-a-historically-bad-division-062435825.html",
+        "source": "Yahoo Sports",
         "source_type": "rss",
-        "published_at": "2026-09-22T01:15:00Z",
-        "summary": "Blade Tidwell vs. Zebby Matthews",
-        "teams": [
-          "giants",
-          "twins"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-6",
-        "headline": "Fifth Third's first star? Naturally, it's No. 53",
-        "url": "https://www.mlb.com/news/ben-malgeri-homer-catches-tigers-fifth-third-park",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-09-22T01:07:48Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-2",
-        "headline": "Tigers launch three homers in series-opening win",
-        "url": "https://sports.yahoo.com/articles/tigers-launch-three-homers-series-010345314.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-09-22T01:03:45Z",
-        "summary": "Just give me time to come up with a bunch of River puns.",
-        "teams": [
-          "tigers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-3",
-        "headline": "Winston-Salem Dash 2026 Season Review",
-        "url": "https://sports.yahoo.com/articles/winston-salem-dash-2026-season-004849944.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-09-22T00:48:49Z",
-        "summary": "The squad had a season for the memories, winning the South Atlantic League Championship with two massive series upsets",
+        "published_at": "2026-09-22T06:24:35Z",
+        "summary": "The NL wild-card race promises good drama. Meanwhile, Pete Crow-Armstrong and Yordan Alvarez are flirting with statistical history.",
         "teams": [
           "athletics"
         ],
@@ -460,13 +410,13 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-4",
-        "headline": "Game 157: Twins at Giants",
-        "url": "https://sports.yahoo.com/articles/game-157-twins-giants-004500452.html",
+        "id": "yahoo_sports-3-2",
+        "headline": "Giants 5, Twins 2: Sleepy baseball",
+        "url": "https://sports.yahoo.com/articles/giants-5-twins-2-sleepy-050622265.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-09-22T00:45:00Z",
-        "summary": "Aaron Sabato makes his major league debut as the Twins take on the Giants\u2019 AAA lineup.",
+        "published_at": "2026-09-22T05:06:22Z",
+        "summary": "Rock-a-bye baby Twins in Oracle Park",
         "teams": [
           "athletics",
           "giants",
@@ -479,17 +429,30 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-5",
-        "headline": "Series Preview # 51 : Diamondbacks @ Rockies",
-        "url": "https://sports.yahoo.com/articles/series-preview-51-diamondbacks-rockies-000000020.html",
+        "id": "yahoo_sports-3-3",
+        "headline": "Pave Ruth",
+        "url": "https://sports.yahoo.com/articles/pave-ruth-042930881.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-09-22T00:00:00Z",
-        "summary": "The Wild Card Race. My final prediction in the preseason was that the Diamondbacks would win 85.1 games. With 82 wins, the Diamondbacks could exceed my prediction, which would give me joy. I\u2019d rather be wrong with the Diamondbacks heading to the playoffs. The Obvious. The Diamondbacks odds of being the third NL Wild Card [\u2026]",
+        "published_at": "2026-09-22T04:29:30Z",
+        "summary": "&quot;Yesterday&#39;s home runs don&#39;t win today&#39;s games&quot;",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-4",
+        "headline": "MLB playoff picture: Wild card standings, AL and NL postseason bracket",
+        "url": "https://sports.yahoo.com/articles/mlb-playoff-picture-wild-card-042414087.html",
+        "source": "USA TODAY Sports",
+        "source_type": "rss",
+        "published_at": "2026-09-22T04:24:14Z",
+        "summary": "Keep up on the dying days of the MLB pennant race.",
         "teams": [
-          "athletics",
-          "diamondbacks",
-          "rockies"
+          "athletics"
         ],
         "players": [],
         "topics": [
@@ -498,15 +461,49 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-6",
-        "headline": "Mets LHP prospect Jonathan Santucci named Eastern League All-Star",
-        "url": "https://sports.yahoo.com/articles/mets-lhp-prospect-jonathan-santucci-234336281.html",
-        "source": "SNY",
+        "id": "yahoo_sports-3-5",
+        "headline": "MLB Injury Report: Dodgers to get Shohei Ohtani, Andy Pages, and Roki Sasaki back for postseason run",
+        "url": "https://sports.yahoo.com/articles/mlb-injury-report-dodgers-shohei-041323082.html",
+        "source": "NBC Sports",
         "source_type": "rss",
-        "published_at": "2026-09-21T23:43:36Z",
-        "summary": "Mets prospect Jonathan Santucci capped his fantastic season by being named an Eastern League All-Star on Monday.",
+        "published_at": "2026-09-22T04:13:23Z",
+        "summary": "Jorge Montanez breaks down all of the relevant injury news around the league over the last week.",
         "teams": [
           "athletics",
+          "dodgers"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-2",
+        "headline": "These 9 series starting tonight will help determine postseason picture",
+        "url": "https://www.mlb.com/news/mlb-series-to-watch-week-of-sept-21-2026",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-09-22T04:00:00Z",
+        "summary": "",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-6",
+        "headline": "Monday Stat Party: Put him in the books",
+        "url": "https://sports.yahoo.com/articles/monday-stat-party-put-him-035636592.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-09-22T03:56:36Z",
+        "summary": "The Polar Bear returns, but Benge melts one of his Mets records.",
+        "teams": [
           "mets"
         ],
         "players": [],
@@ -517,13 +514,45 @@
       },
       {
         "id": "yahoo_sports-3-7",
-        "headline": "Giants call up Bo Davidson, activate Marcelo Mayer",
-        "url": "https://sports.yahoo.com/articles/giants-call-bo-davidson-activate-234253829.html",
-        "source": "SB Nation",
+        "headline": "MLB slugger clubs two HRs for son&#39;s first birthday \u2013 icing the cake on special year",
+        "url": "https://sports.yahoo.com/articles/mlb-slugger-clubs-two-hrs-034809246.html",
+        "source": "USA TODAY Sports",
         "source_type": "rss",
-        "published_at": "2026-09-21T23:42:53Z",
-        "summary": "Bryce Eldridge and Jung Hoo Lee are done for the year.",
+        "published_at": "2026-09-22T03:48:09Z",
+        "summary": "Pete Alonso&#39;s birthday present to his 1-year-old? Two home runs.",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-6",
+        "headline": "Alonso's 40th HR creates 21st night of September to remember for O's",
+        "url": "https://www.mlb.com/news/pete-alonso-hits-40th-home-run-of-the-year-to-secure-o-s-comeback-win",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-09-22T03:23:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-8",
+        "headline": "Dodgers ace at SoFi watching Aaron Donald, Rams pummel Giants draws hysterical shot from Blake Snell",
+        "url": "https://sports.yahoo.com/articles/dodgers-ace-sofi-watching-aaron-031849400.html",
+        "source": "NY Post Sports",
+        "source_type": "rss",
+        "published_at": "2026-09-22T03:18:49Z",
+        "summary": "The Dodgers\u2019 Cy Young winners are at odds. Tarik Skubal was in attendance for Aaron Donald\u2019s return on Monday Night Football between the Rams and Giants. Social media quickly erupted...",
         "teams": [
+          "athletics",
+          "dodgers",
           "giants"
         ],
         "players": [],
@@ -533,58 +562,41 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-8",
-        "headline": "Who will be the A&#39;s next general manager? Three candidates for the job",
-        "url": "https://sports.yahoo.com/articles/next-general-manager-three-candidates-232021380.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-09-21T23:20:21Z",
-        "summary": "The A&#39;s are a week away from completing a fifth consecutive losing season and need a general manager. Three candidates have been identified:",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-8",
-        "headline": "Vladdy kept out of lineup vs. Baltimore with lower back tightness",
-        "url": "https://www.mlb.com/news/vladimir-guerrero-jr-out-of-lineup-against-orioles-lower-back-tightness",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-09-21T22:13:12Z",
-        "summary": "",
-        "teams": [
-          "orioles"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-4",
-        "headline": "Cease uncertain for remainder of '26 after MRI reveals shoulder inflammation",
-        "url": "https://www.mlb.com/news/dylan-cease-right-shoulder-inflammation-mri",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-09-21T21:55:11Z",
-        "summary": "",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
         "id": "mlb_com-1-1",
+        "headline": "Our final MVP poll has clear frontrunners, but can this week change anything?",
+        "url": "https://www.mlb.com/news/yordan-alvarez-pete-crow-armstrong-lead-final-2026-mvp-poll",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-09-22T03:00:55Z",
+        "summary": "",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-7",
+        "headline": "Wait \u2018til next year: 6 candidates to achieve their postseason hopes ... in 2027",
+        "url": "https://www.mlb.com/news/mlb-teams-who-could-make-the-playoffs-in-2027",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-09-22T02:56:58Z",
+        "summary": "",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-3",
         "headline": "Bregman has facial fractures, but postseason return possible (report)",
         "url": "https://www.mlb.com/news/alex-bregman-cubs-facial-fractures-postseason-return",
         "source": "MLB.com",
@@ -601,22 +613,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-7",
-        "headline": "Teen who plays ball at Ohtani's old high school nails her 1st pitch at Dodger Stadium",
-        "url": "https://www.mlb.com/news/player-from-shohei-ohtani-s-former-high-school-throws-first-pitch-at-dodger-stadium",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-09-21T20:32:07Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-5",
+        "id": "mlb_com-1-4",
         "headline": "A 3-way tie for NL Wild Card is in play. Here's how it would shake out",
         "url": "https://www.mlb.com/news/who-would-win-a-3-way-tie-in-the-nl-wild-card",
         "source": "MLB.com",
@@ -631,7 +628,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-3",
+        "id": "mlb_com-1-8",
         "headline": "Rays' new road uniforms have fresh take on a familiar look",
         "url": "https://www.mlb.com/news/rays-bring-back-tampa-bay-to-new-road-gray-jerseys",
         "source": "MLB.com",
@@ -648,15 +645,16 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-2",
-        "headline": "Who sits atop final Power Rankings of the regular season?",
-        "url": "https://www.mlb.com/news/mlb-power-rankings-for-week-of-september-20-2026",
+        "id": "mlb_com-1-5",
+        "headline": "With AL East title on line, Yanks determined to keep Rays from celebrating in Bronx",
+        "url": "https://www.mlb.com/news/rays-yankees-meet-with-al-east-title-there-for-taking",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-09-21T02:11:33Z",
+        "published_at": "2026-09-21T13:12:00Z",
         "summary": "",
         "teams": [
-          "athletics"
+          "athletics",
+          "rays"
         ],
         "players": [],
         "topics": [
@@ -669,56 +667,290 @@
   "scoreboard": {
     "games": [
       {
-        "id": "824787",
+        "id": "823543",
+        "away_team": "Tampa Bay Rays",
+        "home_team": "New York Yankees",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-22T17:05:00Z",
+        "venue": "Yankee Stadium",
+        "probable_pitchers": {
+          "away": "Nick Martinez",
+          "home": "Carlos Rod\u00f3n"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "823494",
+        "away_team": "Tampa Bay Rays",
+        "home_team": "New York Yankees",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-22T23:05:00Z",
+        "venue": "Yankee Stadium",
+        "probable_pitchers": {
+          "away": "Drew Rasmussen",
+          "home": "Max Fried"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "824785",
         "away_team": "Toronto Blue Jays",
         "home_team": "Baltimore Orioles",
-        "away_score": 3,
-        "home_score": 2,
-        "status": "Live",
-        "status_detail": "In Progress",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
         "inning": null,
         "inning_state": "",
-        "start_time": "2026-09-21T22:35:00Z",
+        "start_time": "2026-09-22T22:35:00Z",
         "venue": "Oriole Park at Camden Yards",
         "probable_pitchers": {
-          "away": "Trey Yesavage",
-          "home": "Shane Baz"
+          "away": "Max Scherzer",
+          "home": "Chris Bassitt"
         },
         "broadcasts": []
       },
       {
-        "id": "824221",
+        "id": "824222",
         "away_team": "Washington Nationals",
         "home_team": "Detroit Tigers",
-        "away_score": 2,
-        "home_score": 9,
-        "status": "Final",
-        "status_detail": "Final",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
         "inning": null,
         "inning_state": "",
-        "start_time": "2026-09-21T22:40:00Z",
+        "start_time": "2026-09-22T22:40:00Z",
         "venue": "Comerica Park",
         "probable_pitchers": {
-          "away": "DJ Herz",
-          "home": "River Ryan"
+          "away": "Jackson Kent",
+          "home": "Drew Anderson"
         },
         "broadcasts": []
       },
       {
-        "id": "823169",
-        "away_team": "Minnesota Twins",
-        "home_team": "San Francisco Giants",
-        "away_score": 0,
-        "home_score": 0,
+        "id": "823328",
+        "away_team": "St. Louis Cardinals",
+        "home_team": "Pittsburgh Pirates",
+        "away_score": null,
+        "home_score": null,
         "status": "Upcoming",
-        "status_detail": "Warmup",
+        "status_detail": "Scheduled",
         "inning": null,
         "inning_state": "",
-        "start_time": "2026-09-22T01:45:00Z",
+        "start_time": "2026-09-22T22:40:00Z",
+        "venue": "PNC Park",
+        "probable_pitchers": {
+          "away": "Andre Pallante",
+          "home": "Jared Jones"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "823412",
+        "away_team": "Milwaukee Brewers",
+        "home_team": "Philadelphia Phillies",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-22T22:40:00Z",
+        "venue": "Citizens Bank Park",
+        "probable_pitchers": {
+          "away": "Dustin May",
+          "home": "Zack Wheeler"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "824709",
+        "away_team": "Cleveland Guardians",
+        "home_team": "Boston Red Sox",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-22T22:45:00Z",
+        "venue": "Fenway Park",
+        "probable_pitchers": {
+          "away": "Parker Messick",
+          "home": "Payton Tolle"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "824867",
+        "away_team": "Cincinnati Reds",
+        "home_team": "Atlanta Braves",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-22T23:15:00Z",
+        "venue": "Truist Park",
+        "probable_pitchers": {
+          "away": "Brandon Williamson",
+          "home": "JR Ritchie"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "824061",
+        "away_team": "Chicago White Sox",
+        "home_team": "Kansas City Royals",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-22T23:40:00Z",
+        "venue": "Kauffman Stadium",
+        "probable_pitchers": {
+          "away": "Anthony Kay",
+          "home": "Daniel Lynch IV"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "824624",
+        "away_team": "Miami Marlins",
+        "home_team": "Chicago Cubs",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-22T23:40:00Z",
+        "venue": "Wrigley Field",
+        "probable_pitchers": {
+          "away": "Janson Junk",
+          "home": "TBD"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "822840",
+        "away_team": "New York Mets",
+        "home_team": "Texas Rangers",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-23T00:05:00Z",
+        "venue": "Globe Life Field",
+        "probable_pitchers": {
+          "away": "Sean Manaea",
+          "home": "MacKenzie Gore"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "824302",
+        "away_team": "Arizona Diamondbacks",
+        "home_team": "Colorado Rockies",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-23T00:40:00Z",
+        "venue": "Coors Field",
+        "probable_pitchers": {
+          "away": "Michael Soroka",
+          "home": "Kyle Freeland"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "824953",
+        "away_team": "Los Angeles Angels",
+        "home_team": "Athletics",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-23T01:40:00Z",
+        "venue": "Sutter Health Park",
+        "probable_pitchers": {
+          "away": "Yusei Kikuchi",
+          "home": "Brady Basso"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "823089",
+        "away_team": "Houston Astros",
+        "home_team": "Seattle Mariners",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-23T01:40:00Z",
+        "venue": "T-Mobile Park",
+        "probable_pitchers": {
+          "away": "Cristian Javier",
+          "home": "Logan Gilbert"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "823166",
+        "away_team": "Minnesota Twins",
+        "home_team": "San Francisco Giants",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-23T01:45:00Z",
         "venue": "Oracle Park",
         "probable_pitchers": {
-          "away": "Zebby Matthews",
-          "home": "Blade Tidwell"
+          "away": "Taj Bradley",
+          "home": "Anthony Molina"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "823897",
+        "away_team": "San Diego Padres",
+        "home_team": "Los Angeles Dodgers",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-09-23T02:10:00Z",
+        "venue": "UNIQLO Field at Dodger Stadium",
+        "probable_pitchers": {
+          "away": "Michael King",
+          "home": "TBD"
         },
         "broadcasts": []
       }
@@ -738,57 +970,33 @@
       "Standings: Rays: 95-60 (PCT .613, GB -) [Division]",
       "Standings: Yankees: 89-66 (PCT .574, GB 6.0) [Division]",
       "Standings: Red Sox: 84-72 (PCT .538, GB 11.5) [Division]",
-      "Standings: Blue Jays: 77-79 (PCT .494, GB 18.5) [Division]",
-      "Standings: Orioles: 75-81 (PCT .481, GB 20.5) [Division]",
+      "Standings: Blue Jays: 77-80 (PCT .490, GB 19.0) [Division]",
+      "Standings: Orioles: 76-81 (PCT .484, GB 20.0) [Division]",
       "Standings: Guardians: 81-75 (PCT .519, GB -) [Division]",
       "Standings: White Sox: 80-76 (PCT .513, GB 1.0) [Division]",
       "Standings: Tigers: 74-83 (PCT .471, GB 7.5) [Division]",
-      "Probable: Toronto Blue Jays (Trey Yesavage) @ Baltimore Orioles (Shane Baz) \u2014 In Progress 2026-09-21T22:35:00Z Oriole Park at Camden Yards",
-      "Probable: Washington Nationals (DJ Herz) @ Detroit Tigers (River Ryan) \u2014 Final 2026-09-21T22:40:00Z Comerica Park",
-      "Probable: Minnesota Twins (Zebby Matthews) @ San Francisco Giants (Blade Tidwell) \u2014 Warmup 2026-09-22T01:45:00Z Oracle Park"
+      "Probable: Tampa Bay Rays (Nick Martinez) @ New York Yankees (Carlos Rod\u00f3n) \u2014 Scheduled 2026-09-22T17:05:00Z Yankee Stadium",
+      "Probable: Tampa Bay Rays (Drew Rasmussen) @ New York Yankees (Max Fried) \u2014 Scheduled 2026-09-22T23:05:00Z Yankee Stadium",
+      "Probable: Toronto Blue Jays (Max Scherzer) @ Baltimore Orioles (Chris Bassitt) \u2014 Scheduled 2026-09-22T22:35:00Z Oriole Park at Camden Yards",
+      "Probable: Washington Nationals (Jackson Kent) @ Detroit Tigers (Drew Anderson) \u2014 Scheduled 2026-09-22T22:40:00Z Comerica Park",
+      "Probable: St. Louis Cardinals (Andre Pallante) @ Pittsburgh Pirates (Jared Jones) \u2014 Scheduled 2026-09-22T22:40:00Z PNC Park",
+      "Probable: Milwaukee Brewers (Dustin May) @ Philadelphia Phillies (Zack Wheeler) \u2014 Scheduled 2026-09-22T22:40:00Z Citizens Bank Park"
     ],
     "unverified_notes": [],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: Toronto Blue Jays (Trey Yesavage) @ Baltimore Orioles (Shane Baz) \u2014 In Progress 2026-09-21T22:35:00Z Oriole Park at Camden Yards",
-      "Probable: Washington Nationals (DJ Herz) @ Detroit Tigers (River Ryan) \u2014 Final 2026-09-21T22:40:00Z Comerica Park",
-      "Probable: Minnesota Twins (Zebby Matthews) @ San Francisco Giants (Blade Tidwell) \u2014 Warmup 2026-09-22T01:45:00Z Oracle Park"
+      "Probable: Tampa Bay Rays (Nick Martinez) @ New York Yankees (Carlos Rod\u00f3n) \u2014 Scheduled 2026-09-22T17:05:00Z Yankee Stadium",
+      "Probable: Tampa Bay Rays (Drew Rasmussen) @ New York Yankees (Max Fried) \u2014 Scheduled 2026-09-22T23:05:00Z Yankee Stadium",
+      "Probable: Toronto Blue Jays (Max Scherzer) @ Baltimore Orioles (Chris Bassitt) \u2014 Scheduled 2026-09-22T22:35:00Z Oriole Park at Camden Yards",
+      "Probable: Washington Nationals (Jackson Kent) @ Detroit Tigers (Drew Anderson) \u2014 Scheduled 2026-09-22T22:40:00Z Comerica Park",
+      "Probable: St. Louis Cardinals (Andre Pallante) @ Pittsburgh Pirates (Jared Jones) \u2014 Scheduled 2026-09-22T22:40:00Z PNC Park",
+      "Probable: Milwaukee Brewers (Dustin May) @ Philadelphia Phillies (Zack Wheeler) \u2014 Scheduled 2026-09-22T22:40:00Z Citizens Bank Park",
+      "Probable: Cleveland Guardians (Parker Messick) @ Boston Red Sox (Payton Tolle) \u2014 Scheduled 2026-09-22T22:45:00Z Fenway Park",
+      "Probable: Cincinnati Reds (Brandon Williamson) @ Atlanta Braves (JR Ritchie) \u2014 Scheduled 2026-09-22T23:15:00Z Truist Park"
     ],
     "transactions": [
-      "League tx: 2026-09-14: Altoona Curve activated C Samuel Escudero from the Development List.",
-      "League tx: 2026-09-14: Toronto Blue Jays placed RF Rudy Martin Jr. on the 10-day injured list retroactive to September 13, 2026. Left hamstring strain.",
-      "League tx: 2026-09-14: Los Angeles Dodgers placed RHP Edgardo Henriquez on the 15-day injured list. Lower back discomfort.",
-      "League tx: 2026-09-14: Altoona Curve activated RHP Andrew Moore from the 7-day injured list.",
-      "League tx: 2026-09-14: Atlanta Braves designated LHP Bailey Falter for assignment.",
-      "League tx: 2026-09-14: Northwest Arkansas Naturals released LF Connor Scott.",
-      "League tx: 2026-09-14: Detroit Tigers activated RHP Keider Montero from the paternity list.",
-      "League tx: 2026-09-14: Altoona Curve activated RHP Joshua Loeschorn from the 7-day injured list.",
-      "League tx: 2026-09-14: Scranton/Wilkes-Barre RailRiders transferred C Edinson Duran to the Development List.",
-      "League tx: 2026-09-14: RF Jordan Walker changed number to 21.",
-      "League tx: 2026-09-14: San Diego Padres activated 1B Ty France from the paternity list.",
-      "League tx: 2026-09-14: Springfield Cardinals transferred RHP Nate Dohm to the Development List.",
-      "League tx: 2026-09-14: Kansas City Royals recalled RHP Lucas Erceg from Omaha Storm Chasers.",
-      "League tx: 2026-09-14: Detroit Tigers optioned RHP Yilber D\u00edaz to Toledo Mud Hens.",
-      "League tx: 2026-09-14: Texas Rangers recalled LF Alejandro Osuna from Round Rock Express.",
-      "League tx: 2026-09-14: Toronto Blue Jays recalled LF Davis Schneider from Buffalo Bisons.",
-      "League tx: 2026-09-14: Toronto Blue Jays optioned LHP Ricky Tiedemann to Buffalo Bisons.",
-      "League tx: 2026-09-14: LHP Dylan Carmouche assigned to Winston-Salem Dash from Charlotte Knights.",
-      "League tx: 2026-09-14: Baltimore Orioles optioned RHP Yaramil Hiraldo to Norfolk Tides.",
-      "League tx: 2026-09-14: San Diego Padres optioned 2B Mason McCoy to El Paso Chihuahuas.",
-      "League tx: 2026-09-14: RHP Nathan Dettmer assigned to Las Vegas Aviators from Midland RockHounds.",
-      "League tx: 2026-09-14: Los Angeles Dodgers recalled RHP Paul Gervase from Oklahoma City Comets.",
-      "League tx: 2026-09-14: Kansas City Royals optioned RHP Easton McGee to Omaha Storm Chasers.",
-      "League tx: 2026-09-14: Baltimore Orioles recalled RHP Codi Heuer from Norfolk Tides.",
-      "League tx: 2026-09-14: RHP Jared Johnson assigned to Las Vegas Aviators from Midland RockHounds.",
-      "League tx: 2026-09-14: C Anthony Marnell IV assigned to Las Vegas Aviators from ACL Athletics.",
-      "League tx: 2026-09-14: Los Angeles Dodgers optioned RHP Emmet Sheehan to Oklahoma City Comets.",
-      "League tx: 2026-09-14: Los Angeles Dodgers recalled RHP Bobby Miller from Oklahoma City Comets.",
-      "League tx: 2026-09-14: Toronto Blue Jays recalled LHP Brendan Cellucci from Buffalo Bisons.",
-      "League tx: 2026-09-14: Texas Rangers optioned CF Cam Cauley to Round Rock Express.",
-      "League tx: 2026-09-14: Arizona Diamondbacks claimed RF Jes\u00fas S\u00e1nchez off waivers from Toronto Blue Jays.",
-      "League tx: 2026-09-14: Atlanta Braves recalled RHP Owen Murphy from Gwinnett Stripers.",
       "League tx: 2026-09-15: DH George Springer changed number to 21.",
       "League tx: 2026-09-15: Glendale Desert Dogs activated RHP Alex Williams.",
       "League tx: 2026-09-15: Glendale Desert Dogs activated RHP Michael Walsh.",
@@ -806,18 +1014,50 @@
       "League tx: 2026-09-15: Glendale Desert Dogs activated LHP Luke Fox.",
       "League tx: 2026-09-15: Glendale Desert Dogs activated RHP Samuel Carpio.",
       "League tx: 2026-09-15: Glendale Desert Dogs activated RHP Pierce George.",
-      "League tx: 2026-09-15: Glendale Desert Dogs activated RHP Jonathan Clark."
+      "League tx: 2026-09-15: Glendale Desert Dogs activated RHP Jonathan Clark.",
+      "League tx: 2026-09-15: Salt River Rafters activated SS Andy Perez.",
+      "League tx: 2026-09-15: Glendale Desert Dogs activated RHP Nick Altermatt.",
+      "League tx: 2026-09-15: Glendale Desert Dogs activated RHP Brooks Auger.",
+      "League tx: 2026-09-15: Salt River Rafters activated OF Jacob McCombs.",
+      "League tx: 2026-09-15: Salt River Rafters activated OF Teo Banks.",
+      "League tx: 2026-09-15: Salt River Rafters activated OF Yasser Mercedes.",
+      "League tx: 2026-09-15: Salt River Rafters activated 3B Yassel Soler.",
+      "League tx: 2026-09-15: Salt River Rafters activated OF Nathan Hall.",
+      "League tx: 2026-09-15: Salt River Rafters activated 1B Kyle West.",
+      "League tx: 2026-09-15: Salt River Rafters activated CF Jorgelys Mota from the 7-day injured list.",
+      "League tx: 2026-09-15: Salt River Rafters activated OF Jared Thomas.",
+      "League tx: 2026-09-15: Glendale Desert Dogs activated LHP Tanner Bauman.",
+      "League tx: 2026-09-15: Gwinnett Stripers activated RHP Ian Hamilton from the temporarily inactive list.",
+      "League tx: 2026-09-15: Syracuse Mets transferred 3B Nick Lorusso to the Development List.",
+      "League tx: 2026-09-15: LHP Brent Suter changed number to 21.",
+      "League tx: 2026-09-15: LF Bryan Torres changed number to 21.",
+      "League tx: 2026-09-15: Philadelphia Phillies placed LHP Jes\u00fas Luzardo on the 15-day injured list retroactive to September 12, 2026. Left shoulder inflammation.",
+      "League tx: 2026-09-15: RHP Rico Garcia changed number to 21.",
+      "League tx: 2026-09-15: LF Heliot Ramos changed number to 21.",
+      "League tx: 2026-09-15: 1B Andrew Vaughn changed number to 21.",
+      "League tx: 2026-09-15: RHP Abner Uribe changed number to 21.",
+      "League tx: 2026-09-15: SS Mookie Betts changed number to 21.",
+      "League tx: 2026-09-15: 1B Abimelec Ortiz changed number to 21.",
+      "League tx: 2026-09-15: SS Jeremy Pe\u00f1a changed number to 21.",
+      "League tx: 2026-09-15: 3B Enrique Hern\u00e1ndez changed number to 21.",
+      "League tx: 2026-09-15: RHP Freddy Peralta changed number to 21.",
+      "League tx: 2026-09-15: CF Cedric Mullins changed number to 21.",
+      "League tx: 2026-09-15: LF Juan Soto changed number to 21.",
+      "League tx: 2026-09-15: 2B Marcus Semien changed number to 21.",
+      "League tx: 2026-09-15: 3B Jos\u00e9 Ram\u00edrez changed number to 21.",
+      "League tx: 2026-09-15: LHP Chris Sale changed number to 21.",
+      "League tx: 2026-09-15: Chicago White Sox designated RHP Jos\u00e9 Urquidy for assignment."
     ],
-    "transactions_total": 1028,
+    "transactions_total": 996,
     "debug": {
       "standings": [
         "rows=30"
       ],
       "schedule": [
-        "games=3"
+        "games=16"
       ],
       "transactions": [
-        "transactions=1033"
+        "transactions=1001"
       ]
     }
   },
@@ -852,7 +1092,7 @@
           "rows=30"
         ],
         "athletics_schedule": [
-          "games=2"
+          "games=3"
         ],
         "athletics_transactions": [
           "transactions=11"
@@ -889,7 +1129,7 @@
           "rows=30"
         ],
         "rockies_schedule": [
-          "games=2"
+          "games=3"
         ],
         "rockies_transactions": [
           "transactions=8"
@@ -901,12 +1141,12 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Tigers: 74-83 (PCT .471, GB 7.5) [Division]",
-        "Probable: Washington Nationals (DJ Herz) @ Detroit Tigers (River Ryan) \u2014 Final 2026-09-21T22:40:00Z Comerica Park",
         "Probable: Washington Nationals (Jackson Kent) @ Detroit Tigers (Drew Anderson) \u2014 Scheduled 2026-09-22T22:40:00Z Comerica Park",
-        "Detroit Tigers tx: 2026-09-14: Detroit Tigers activated RHP Keider Montero from the paternity list.",
-        "Detroit Tigers tx: 2026-09-14: Detroit Tigers optioned RHP Yilber D\u00edaz to Toledo Mud Hens.",
+        "Probable: Washington Nationals (TBD) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-09-23T17:10:00Z Comerica Park",
         "Detroit Tigers tx: 2026-09-15: LF Riley Greene changed number to 21.",
-        "Detroit Tigers tx: 2026-09-16: LF Riley Greene changed number to 31."
+        "Detroit Tigers tx: 2026-09-16: LF Riley Greene changed number to 31.",
+        "Detroit Tigers tx: 2026-09-17: Detroit Tigers recalled RHP Ty Madden from Toledo Mud Hens.",
+        "Detroit Tigers tx: 2026-09-21: Detroit Tigers placed RHP Troy Melton on the 15-day injured list."
       ],
       "unverified_notes": [],
       "notes": [
@@ -926,10 +1166,10 @@
           "rows=30"
         ],
         "tigers_schedule": [
-          "games=3"
+          "games=2"
         ],
         "tigers_transactions": [
-          "transactions=9"
+          "transactions=7"
         ]
       }
     }
@@ -948,40 +1188,42 @@
           "Standings: Rays: 95-60 (PCT .613, GB -) [Division]",
           "Standings: Yankees: 89-66 (PCT .574, GB 6.0) [Division]",
           "Standings: Red Sox: 84-72 (PCT .538, GB 11.5) [Division]",
-          "Standings: Blue Jays: 77-79 (PCT .494, GB 18.5) [Division]",
-          "Standings: Orioles: 75-81 (PCT .481, GB 20.5) [Division]"
+          "Standings: Blue Jays: 77-80 (PCT .490, GB 19.0) [Division]",
+          "Standings: Orioles: 76-81 (PCT .484, GB 20.0) [Division]"
         ],
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-21&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-22&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
-          "games=3"
+          "games=16"
         ],
-        "verified_count": 3,
+        "verified_count": 16,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Toronto Blue Jays (Trey Yesavage) @ Baltimore Orioles (Shane Baz) \u2014 In Progress 2026-09-21T22:35:00Z Oriole Park at Camden Yards",
-          "Probable: Washington Nationals (DJ Herz) @ Detroit Tigers (River Ryan) \u2014 Final 2026-09-21T22:40:00Z Comerica Park",
-          "Probable: Minnesota Twins (Zebby Matthews) @ San Francisco Giants (Blade Tidwell) \u2014 Warmup 2026-09-22T01:45:00Z Oracle Park"
+          "Probable: Tampa Bay Rays (Nick Martinez) @ New York Yankees (Carlos Rod\u00f3n) \u2014 Scheduled 2026-09-22T17:05:00Z Yankee Stadium",
+          "Probable: Tampa Bay Rays (Drew Rasmussen) @ New York Yankees (Max Fried) \u2014 Scheduled 2026-09-22T23:05:00Z Yankee Stadium",
+          "Probable: Toronto Blue Jays (Max Scherzer) @ Baltimore Orioles (Chris Bassitt) \u2014 Scheduled 2026-09-22T22:35:00Z Oriole Park at Camden Yards",
+          "Probable: Washington Nationals (Jackson Kent) @ Detroit Tigers (Drew Anderson) \u2014 Scheduled 2026-09-22T22:40:00Z Comerica Park",
+          "Probable: St. Louis Cardinals (Andre Pallante) @ Pittsburgh Pirates (Jared Jones) \u2014 Scheduled 2026-09-22T22:40:00Z PNC Park"
         ],
         "unverified_sample": []
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-09-14&endDate=2026-09-21",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-09-15&endDate=2026-09-22",
         "status": "verified",
         "debug": [
-          "transactions=1033"
+          "transactions=1001"
         ],
-        "verified_count": 1028,
+        "verified_count": 996,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-09-14: Altoona Curve activated C Samuel Escudero from the Development List.",
-          "League tx: 2026-09-14: Toronto Blue Jays placed RF Rudy Martin Jr. on the 10-day injured list retroactive to September 13, 2026. Left hamstring strain.",
-          "League tx: 2026-09-14: Los Angeles Dodgers placed RHP Edgardo Henriquez on the 15-day injured list. Lower back discomfort.",
-          "League tx: 2026-09-14: Altoona Curve activated RHP Andrew Moore from the 7-day injured list.",
-          "League tx: 2026-09-14: Atlanta Braves designated LHP Bailey Falter for assignment."
+          "League tx: 2026-09-15: DH George Springer changed number to 21.",
+          "League tx: 2026-09-15: Glendale Desert Dogs activated RHP Alex Williams.",
+          "League tx: 2026-09-15: Glendale Desert Dogs activated RHP Michael Walsh.",
+          "League tx: 2026-09-15: Glendale Desert Dogs activated LHP Cristhian Tortosa.",
+          "League tx: 2026-09-15: Glendale Desert Dogs activated RHP Tristan Stevens."
         ],
         "unverified_sample": []
       },
@@ -999,21 +1241,22 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-09-21&endDate=2026-09-23&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-09-22&endDate=2026-09-24&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
-          "games=2"
+          "games=3"
         ],
-        "verified_count": 2,
+        "verified_count": 3,
         "unverified_count": 0,
         "verified_sample": [
           "Probable: Los Angeles Angels (Yusei Kikuchi) @ Athletics (Brady Basso) \u2014 Scheduled 2026-09-23T01:40:00Z Sutter Health Park",
-          "Probable: Los Angeles Angels (Walbert Ure\u00f1a) @ Athletics (Jeffrey Springs) \u2014 Scheduled 2026-09-24T01:40:00Z Sutter Health Park"
+          "Probable: Los Angeles Angels (Walbert Ure\u00f1a) @ Athletics (Jeffrey Springs) \u2014 Scheduled 2026-09-24T01:40:00Z Sutter Health Park",
+          "Probable: Houston Astros (TBD) @ Athletics (TBD) \u2014 Scheduled 2026-09-25T01:40:00Z Sutter Health Park"
         ],
         "unverified_sample": []
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-09-14&endDate=2026-09-21",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-09-15&endDate=2026-09-22",
         "status": "verified",
         "debug": [
           "transactions=11"
@@ -1043,21 +1286,22 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-09-21&endDate=2026-09-23&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-09-22&endDate=2026-09-24&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
-          "games=2"
+          "games=3"
         ],
-        "verified_count": 2,
+        "verified_count": 3,
         "unverified_count": 0,
         "verified_sample": [
           "Probable: Arizona Diamondbacks (Michael Soroka) @ Colorado Rockies (Kyle Freeland) \u2014 Scheduled 2026-09-23T00:40:00Z Coors Field",
-          "Probable: Arizona Diamondbacks (Merrill Kelly) @ Colorado Rockies (Mason Adams) \u2014 Scheduled 2026-09-24T00:40:00Z Coors Field"
+          "Probable: Arizona Diamondbacks (Merrill Kelly) @ Colorado Rockies (Mason Adams) \u2014 Scheduled 2026-09-24T00:40:00Z Coors Field",
+          "Probable: Arizona Diamondbacks (Eduardo Rodriguez) @ Colorado Rockies (TBD) \u2014 Scheduled 2026-09-24T19:10:00Z Coors Field"
         ],
         "unverified_sample": []
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-09-14&endDate=2026-09-21",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-09-15&endDate=2026-09-22",
         "status": "verified",
         "debug": [
           "transactions=8"
@@ -1087,34 +1331,33 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-09-21&endDate=2026-09-23&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-09-22&endDate=2026-09-24&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
-          "games=3"
+          "games=2"
         ],
-        "verified_count": 3,
+        "verified_count": 2,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Washington Nationals (DJ Herz) @ Detroit Tigers (River Ryan) \u2014 Final 2026-09-21T22:40:00Z Comerica Park",
           "Probable: Washington Nationals (Jackson Kent) @ Detroit Tigers (Drew Anderson) \u2014 Scheduled 2026-09-22T22:40:00Z Comerica Park",
           "Probable: Washington Nationals (TBD) @ Detroit Tigers (Framber Valdez) \u2014 Scheduled 2026-09-23T17:10:00Z Comerica Park"
         ],
         "unverified_sample": []
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-09-14&endDate=2026-09-21",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-09-15&endDate=2026-09-22",
         "status": "verified",
         "debug": [
-          "transactions=9"
+          "transactions=7"
         ],
-        "verified_count": 9,
+        "verified_count": 7,
         "unverified_count": 0,
         "verified_sample": [
-          "Detroit Tigers tx: 2026-09-14: Detroit Tigers activated RHP Keider Montero from the paternity list.",
-          "Detroit Tigers tx: 2026-09-14: Detroit Tigers optioned RHP Yilber D\u00edaz to Toledo Mud Hens.",
           "Detroit Tigers tx: 2026-09-15: LF Riley Greene changed number to 21.",
           "Detroit Tigers tx: 2026-09-16: LF Riley Greene changed number to 31.",
-          "Detroit Tigers tx: 2026-09-17: Detroit Tigers recalled RHP Ty Madden from Toledo Mud Hens."
+          "Detroit Tigers tx: 2026-09-17: Detroit Tigers recalled RHP Ty Madden from Toledo Mud Hens.",
+          "Detroit Tigers tx: 2026-09-21: Detroit Tigers placed RHP Troy Melton on the 15-day injured list.",
+          "Detroit Tigers tx: 2026-09-21: Detroit Tigers placed 3B Colt Keith on the 10-day injured list retroactive to September 20, 2026."
         ],
         "unverified_sample": []
       },
@@ -1221,10 +1464,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-09-22T01:33:20Z"
+    "generated_utc": "2026-09-22T08:26:38Z"
   },
   "bd_bets": {
-    "generated_at": "2026-09-22T01:33:23.684Z",
+    "generated_at": "2026-09-22T08:26:40.999Z",
     "slate_date": "2026-09-22",
     "sport": "MLB",
     "source": "bd-bets",
