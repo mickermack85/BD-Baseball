@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-01T02:00:01Z",
-  "slate_date": "2026-09-30",
+  "generated_at": "2026-10-01T10:00:29Z",
+  "slate_date": "2026-10-01",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,14 +9,14 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-30&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-09-23&endDate=2026-09-30",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-09-30&endDate=2026-10-02&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-09-23&endDate=2026-09-30",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-09-30&endDate=2026-10-02&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-09-23&endDate=2026-09-30",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-09-30&endDate=2026-10-02&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-09-23&endDate=2026-09-30"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-01&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-09-24&endDate=2026-10-01",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-01&endDate=2026-10-03&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-09-24&endDate=2026-10-01",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-01&endDate=2026-10-03&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-09-24&endDate=2026-10-01",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-01&endDate=2026-10-03&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-09-24&endDate=2026-10-01"
   },
   "source_status": {
     "league_standings": "verified",
@@ -44,27 +44,35 @@
     "league_news": {
       "items": [
         {
-          "headline": "White Sox sweep Astros once more to claim 1st playoff series win since 2005 WS",
+          "headline": "Padres get revenge with commanding sweep of Cubs in Wild Card Series",
+          "url": "https://www.mlb.com/news/padres-win-nl-wild-card-series-2026",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-01T07:16:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Yanks sweep rival Sox behind another offensive onslaught to punch ticket to ALDS",
+          "url": "https://www.mlb.com/news/yankees-win-al-wild-card-series-2026",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-01T04:59:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Houston? No problem! White Sox end 21-year wait with sweep",
           "url": "https://www.mlb.com/news/white-sox-win-al-wild-card-series-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-01T00:21:26Z",
+          "published_at": "2026-10-01T03:12:00Z",
           "summary": ""
         },
         {
-          "headline": "LIVE: Yankees strike first with eye on ALDS berth (NBC/Peacock)",
-          "url": "https://www.mlb.com/stories/game/849848",
+          "headline": "Gray frustrated by hook, wanted Tracy to 'live or die with me'",
+          "url": "https://www.mlb.com/news/sonny-gray-reacts-to-being-pulled-in-al-wild-card-series-game-2-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-01T01:31:45Z",
-          "summary": ""
-        },
-        {
-          "headline": "How to watch the 2026 Wild Card Series on NBC and Peacock",
-          "url": "https://www.mlb.com/news/mlb-2026-wild-card-series-airing-on-nbc-and-peacock",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-09-30T17:58:00Z",
+          "published_at": "2026-10-01T06:18:47Z",
           "summary": ""
         },
         {
@@ -76,11 +84,19 @@
           "summary": ""
         },
         {
-          "headline": "Cubs-Padres NL Wild Card Series Game 2: LIVE on Peacock/NBCSN",
-          "url": "https://www.mlb.com/news/cubs-vs-padres-nl-wild-card-series-game-2-starting-lineups-and-pitching-matchup",
+          "headline": "After dad's first pitch, Bellinger lights up Bronx with huge night",
+          "url": "https://www.mlb.com/news/cody-bellinger-lifts-yankees-in-wild-card-series-with-home-run",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-01T01:44:00Z",
+          "published_at": "2026-10-01T05:36:38Z",
+          "summary": ""
+        },
+        {
+          "headline": "Top Phils-Braves storylines for win-or-go-home Game 3",
+          "url": "https://www.mlb.com/news/top-storylines-for-phillies-braves-nl-wild-card-series-game-3",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-01T05:30:37Z",
           "summary": ""
         },
         {
@@ -92,14 +108,6 @@
           "summary": ""
         },
         {
-          "headline": "With 28th postseason HR, Altuve now 1 shy of all-time record",
-          "url": "https://www.mlb.com/news/jose-altuve-nearing-postseason-home-run-record",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-01T00:18:00Z",
-          "summary": ""
-        },
-        {
           "headline": "4 big takeaways after Phillies even thrilling NL Wild Card Series",
           "url": "https://www.mlb.com/news/key-takeaways-from-phillies-extra-innings-win-over-braves-in-game-2-of-nl-wild-card-series",
           "source": "MLB.com",
@@ -108,19 +116,11 @@
           "summary": ""
         },
         {
-          "headline": "1st playoff win? In postseason debut? From the 'pen? Painter's day proves pivotal for Phils",
-          "url": "https://www.mlb.com/news/andrew-painter-first-career-postseason-win-phillies-nl-wild-card-game-2",
+          "headline": "In first postseason start, Garc\u00eda fires up hometown crowd with go-ahead blast",
+          "url": "https://www.mlb.com/news/luis-garcia-jr-hits-first-postseason-home-run-with-yankees",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-09-30T23:56:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Anthony 'sick to my stomach' after aggravating hand injury",
-          "url": "https://www.mlb.com/news/roman-anthony-out-for-rest-of-wild-card-series",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-09-30T23:15:00Z",
+          "published_at": "2026-10-01T05:32:00Z",
           "summary": ""
         }
       ],
@@ -393,12 +393,67 @@
     },
     "news_items": [
       {
-        "id": "mlb_com-1-5",
-        "headline": "Cubs-Padres NL Wild Card Series Game 2: LIVE on Peacock/NBCSN",
-        "url": "https://www.mlb.com/news/cubs-vs-padres-nl-wild-card-series-game-2-starting-lineups-and-pitching-matchup",
+        "id": "yahoo_sports-3-1",
+        "headline": "Yankees news: Clarke Schmidt shut down for the season",
+        "url": "https://sports.yahoo.com/articles/yankees-news-clarke-schmidt-shut-090000093.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-01T09:00:00Z",
+        "summary": "Yankees shut down Schmidt; Judge hits live pitching again; The AFL starts up; Rice has blossomed into an elite analytical hitter.",
+        "teams": [
+          "athletics",
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-2",
+        "headline": "Gavin Sheets\u2019 pinch-hit homer propels dominant Padres past Cubs 4-1 for 2-game Wild Card sweep",
+        "url": "https://sports.yahoo.com/articles/gavin-sheets-pinch-hit-homer-081908404.html",
+        "source": "NBC Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-01T08:19:08Z",
+        "summary": "Pete Crow-Armstrong and Alex Bregman struggled mightily atop the Cubs\u2019 lineup, going a combined 0 for 15 with a walk and eight strikeouts over the two games.",
+        "teams": [
+          "athletics",
+          "cubs",
+          "padres"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-3",
+        "headline": "How to watch Phillies vs. Braves Game 3 of 2026 MLB Wild Card Series: TV channel/ streaming info, schedule",
+        "url": "https://sports.yahoo.com/articles/watch-phillies-vs-braves-game-080005623.html",
+        "source": "NBC Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-01T08:00:05Z",
+        "summary": "After thrilling finishes to Games 1 and 2, the Philadelphia Phillies and Atlanta Braves meet for a winner-take-all Game 3 on Thursday at 8pm ET on NBC and Peacock.",
+        "teams": [
+          "braves",
+          "phillies"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-1",
+        "headline": "Padres get revenge with commanding sweep of Cubs in Wild Card Series",
+        "url": "https://www.mlb.com/news/padres-win-nl-wild-card-series-2026",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-01T01:44:00Z",
+        "published_at": "2026-10-01T07:16:00Z",
         "summary": "",
         "teams": [
           "cubs",
@@ -411,15 +466,171 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-2",
-        "headline": "LIVE: Yankees strike first with eye on ALDS berth (NBC/Peacock)",
-        "url": "https://www.mlb.com/stories/game/849848",
+        "id": "mlb_com-1-4",
+        "headline": "Gray frustrated by hook, wanted Tracy to 'live or die with me'",
+        "url": "https://www.mlb.com/news/sonny-gray-reacts-to-being-pulled-in-al-wild-card-series-game-2-2026",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-01T01:31:45Z",
+        "published_at": "2026-10-01T06:18:47Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-4",
+        "headline": "Was Red Sox summer of love a mirage? Yankees beatdown exposes Boston | Opinion",
+        "url": "https://sports.yahoo.com/articles/red-sox-summer-love-mirage-060923926.html",
+        "source": "USA TODAY Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-01T06:09:23Z",
+        "summary": "Red Sox pulled off miraculous turnaround to reach MLB playoffs. Should we have really believed?",
+        "teams": [
+          "athletics",
+          "red sox",
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-5",
+        "headline": "Red Sox veterans Sonny Gray and Willson Contreras speak out about team&#39;s decision-making after elimination by Yankees",
+        "url": "https://sports.yahoo.com/mlb/article/red-sox-veterans-sonny-gray-and-willson-contreras-speak-out-about-teams-decision-making-after-elimination-by-yankees-055746414.html",
+        "source": "Yahoo Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-01T05:57:46Z",
+        "summary": "The Red Sox players don&#39;t seem too happy with the club&#39;s leadership right now.",
+        "teams": [
+          "athletics",
+          "red sox",
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-6",
+        "headline": "How to watch Yankees vs. Rays in ALDS: Start times, channels, and more",
+        "url": "https://sports.yahoo.com/articles/watch-yankees-vs-rays-alds-055246763.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-01T05:52:46Z",
+        "summary": "The Yankees lost the AL East to the Rays, but they have a chance for the last laugh,",
+        "teams": [
+          "athletics",
+          "rays",
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-7",
+        "headline": "MLB should be terrified of Yankees as Aaron Judge gets ready &#39;fast as I can&#39;",
+        "url": "https://sports.yahoo.com/articles/mlb-terrified-yankees-aaron-judge-054137274.html",
+        "source": "USA TODAY Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-01T05:41:37Z",
+        "summary": "Yankees made quick work of their rivals. What does that mean for the rest of the field?",
+        "teams": [
+          "athletics",
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-6",
+        "headline": "After dad's first pitch, Bellinger lights up Bronx with huge night",
+        "url": "https://www.mlb.com/news/cody-bellinger-lifts-yankees-in-wild-card-series-with-home-run",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-01T05:36:38Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-7",
+        "headline": "Top Phils-Braves storylines for win-or-go-home Game 3",
+        "url": "https://www.mlb.com/news/top-storylines-for-phillies-braves-nl-wild-card-series-game-3",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-01T05:30:37Z",
         "summary": "",
         "teams": [
+          "braves"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-8",
+        "headline": "Once an imperfect fit, Luis Garcia Jr. becoming crucial to Yankees&#39; World Series aspirations",
+        "url": "https://sports.yahoo.com/articles/once-imperfect-fit-luis-garcia-052226390.html",
+        "source": "SNY",
+        "source_type": "rss",
+        "published_at": "2026-10-01T05:22:26Z",
+        "summary": "Luis Garcia Jr. was not a perfect fit for the Yankees when they traded for him, but the first baseman has become a crucial part of the team&#39;s aspirations of winning the World Series.",
+        "teams": [
+          "athletics",
           "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-2",
+        "headline": "Yanks sweep rival Sox behind another offensive onslaught to punch ticket to ALDS",
+        "url": "https://www.mlb.com/news/yankees-win-al-wild-card-series-2026",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-01T04:59:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-3",
+        "headline": "Houston? No problem! White Sox end 21-year wait with sweep",
+        "url": "https://www.mlb.com/news/white-sox-win-al-wild-card-series-2026",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-01T03:12:00Z",
+        "summary": "",
+        "teams": [
+          "astros",
+          "white sox"
         ],
         "players": [],
         "topics": [
@@ -429,23 +640,6 @@
       },
       {
         "id": "mlb_com-1-8",
-        "headline": "4 big takeaways after Phillies even thrilling NL Wild Card Series",
-        "url": "https://www.mlb.com/news/key-takeaways-from-phillies-extra-innings-win-over-braves-in-game-2-of-nl-wild-card-series",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-01T01:10:04Z",
-        "summary": "",
-        "teams": [
-          "phillies"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-6",
         "headline": "With 2 steals each (in 1 inning!) Acu\u00f1a bros. make postseason history",
         "url": "https://www.mlb.com/news/acuna-brothers-postseason-stolen-bases",
         "source": "MLB.com",
@@ -462,209 +656,12 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-1",
-        "headline": "Chicago Cubs at San Diego Padres - NL Wild Card Series Game 2",
-        "url": "https://sports.yahoo.com/articles/chicago-cubs-san-diego-padres-010000687.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-01T01:00:00Z",
-        "summary": "Your game thread for September 30, 2026.",
-        "teams": [
-          "cubs",
-          "padres"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-2",
-        "headline": "Cubs vs. Padres live updates, news, starting pitchers: Kevin Gausman, Nick Pivetta take the mound for Game 2",
-        "url": "https://sports.yahoo.com/mlb/live/cubs-padres-box-score-live-updates-starting-pitchers-news-highlights-stats-where-to-watch-wild-card-game-2-010000197.html",
-        "source": "Yahoo Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-01T01:00:00Z",
-        "summary": "The Padres took a 1-0 series lead over the Cubs with a dominant 8-0 win on Tuesday.",
-        "teams": [
-          "cubs",
-          "padres"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-3",
-        "headline": "Joe Musgrove returns to the Padres",
-        "url": "https://sports.yahoo.com/articles/joe-musgrove-returns-padres-004500516.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-01T00:45:00Z",
-        "summary": "Padres pitcher comes full circle",
-        "teams": [
-          "padres"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-4",
-        "headline": "Meidroth seals a series sweep",
-        "url": "https://sports.yahoo.com/articles/meidroth-seals-series-sweep-003650373.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-01T00:36:50Z",
-        "summary": "The White Sox won both games in Houston and will face Cleveland in the ALDS",
-        "teams": [
-          "astros",
-          "guardians",
-          "white sox"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-5",
-        "headline": "White Sox pounce early, finish sweep of Astros for first playoff series win since 2005",
-        "url": "https://sports.yahoo.com/articles/white-sox-pounce-early-finish-002954586.html",
-        "source": "NBC Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-01T00:29:54Z",
-        "summary": "The White Sox, who lost 100 games in each of the last three seasons, are the only team in major league history to follow consecutive 100-loss seasons with a playoff berth.",
-        "teams": [
-          "astros",
-          "athletics",
-          "white sox"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-1",
-        "headline": "White Sox sweep Astros once more to claim 1st playoff series win since 2005 WS",
-        "url": "https://www.mlb.com/news/white-sox-win-al-wild-card-series-2026",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-01T00:21:26Z",
-        "summary": "",
-        "teams": [
-          "astros",
-          "athletics",
-          "white sox"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-7",
-        "headline": "With 28th postseason HR, Altuve now 1 shy of all-time record",
-        "url": "https://www.mlb.com/news/jose-altuve-nearing-postseason-home-run-record",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-01T00:18:00Z",
-        "summary": "",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-4",
+        "id": "mlb_com-1-5",
         "headline": "'Never a doubt': Resilient Phils force Game 3 on three dramatic swings",
         "url": "https://www.mlb.com/news/phillies-win-nl-wild-card-game-2-2026",
         "source": "MLB.com",
         "source_type": "rss",
         "published_at": "2026-10-01T00:09:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-6",
-        "headline": "Padres\u2019 Ethan Salas in lineup for Game 2, set to become MLB\u2019s youngest postseason catcher",
-        "url": "https://sports.yahoo.com/articles/padres-ethan-salas-lineup-game-235738634.html",
-        "source": "NBC Sports",
-        "source_type": "rss",
-        "published_at": "2026-09-30T23:57:38Z",
-        "summary": "Salas had a series of clutch hits during his late surge, and on Sept. 16 he became the youngest catcher to have a multi-homer game.",
-        "teams": [
-          "athletics",
-          "padres"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-7",
-        "headline": "Weather for Dodgers, weekend playoffs in LA will be sweltering",
-        "url": "https://sports.yahoo.com/articles/weather-dodgers-weekend-playoffs-la-235330863.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-09-30T23:53:30Z",
-        "summary": "The Dodgers will play Game 1 of the NLDS at either 6:00 or 1:00 p.m. local time. With record-breaking temps forecasted, there&#39;s a clear preference.",
-        "teams": [
-          "athletics",
-          "dodgers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-8",
-        "headline": "Bryce Harper flushes defensive misplay to flip wild-card series, help lead Phillies to Game 2 win over Braves: &#39;I wasn&#39;t not trying to hit a homer&#39;",
-        "url": "https://sports.yahoo.com/mlb/article/bryce-harper-flushes-defensive-misplay-to-flip-wild-card-series-help-lead-phillies-to-game-2-win-over-braves-i-wasnt-not-trying-to-hit-a-homer-233429212.html",
-        "source": "Yahoo Sports",
-        "source_type": "rss",
-        "published_at": "2026-09-30T23:34:29Z",
-        "summary": "Harper&#39;s mistake certainly didn&#39;t help Philly, but the home run that followed might just be the most important play of this series.",
-        "teams": [
-          "athletics",
-          "braves",
-          "phillies"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-3",
-        "headline": "How to watch the 2026 Wild Card Series on NBC and Peacock",
-        "url": "https://www.mlb.com/news/mlb-2026-wild-card-series-airing-on-nbc-and-peacock",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-09-30T17:58:00Z",
         "summary": "",
         "teams": [],
         "players": [],
@@ -678,74 +675,20 @@
   "scoreboard": {
     "games": [
       {
-        "id": "849841",
+        "id": "849844",
         "away_team": "Philadelphia Phillies",
         "home_team": "Atlanta Braves",
-        "away_score": 4,
-        "home_score": 3,
-        "status": "Final",
-        "status_detail": "Final",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
         "inning": null,
         "inning_state": "",
-        "start_time": "2026-09-30T18:00:00Z",
+        "start_time": "2026-10-02T00:00:00Z",
         "venue": "Truist Park",
         "probable_pitchers": {
-          "away": "Cristopher S\u00e1nchez",
-          "home": "Tyler Mahle"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "849846",
-        "away_team": "Chicago White Sox",
-        "home_team": "Houston Astros",
-        "away_score": 7,
-        "home_score": 3,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-09-30T21:00:00Z",
-        "venue": "Daikin Park",
-        "probable_pitchers": {
-          "away": "Sean Burke",
-          "home": "Hunter Brown"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "849848",
-        "away_team": "Boston Red Sox",
-        "home_team": "New York Yankees",
-        "away_score": 1,
-        "home_score": 2,
-        "status": "Live",
-        "status_detail": "In Progress",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-10-01T00:00:00Z",
-        "venue": "Yankee Stadium",
-        "probable_pitchers": {
-          "away": "Sonny Gray",
-          "home": "Max Fried"
-        },
-        "broadcasts": []
-      },
-      {
-        "id": "849842",
-        "away_team": "Chicago Cubs",
-        "home_team": "San Diego Padres",
-        "away_score": 0,
-        "home_score": 0,
-        "status": "Upcoming",
-        "status_detail": "Warmup",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-10-01T02:00:00Z",
-        "venue": "Petco Park",
-        "probable_pitchers": {
-          "away": "Kevin Gausman",
-          "home": "Nick Pivetta"
+          "away": "TBD",
+          "home": "TBD"
         },
         "broadcasts": []
       }
@@ -770,83 +713,77 @@
       "Standings: Guardians: 85-77 (PCT .525, GB -) [Division]",
       "Standings: White Sox: 84-78 (PCT .519, GB 1.0) [Division]",
       "Standings: Twins: 77-85 (PCT .475, GB 8.0) [Division]",
-      "Probable: Philadelphia Phillies (Cristopher S\u00e1nchez) @ Atlanta Braves (Tyler Mahle) \u2014 Final 2026-09-30T18:00:00Z Truist Park",
-      "Probable: Chicago White Sox (Sean Burke) @ Houston Astros (Hunter Brown) \u2014 Final 2026-09-30T21:00:00Z Daikin Park",
-      "Probable: Boston Red Sox (Sonny Gray) @ New York Yankees (Max Fried) \u2014 In Progress 2026-10-01T00:00:00Z Yankee Stadium",
-      "Probable: Chicago Cubs (Kevin Gausman) @ San Diego Padres (Nick Pivetta) \u2014 Warmup 2026-10-01T02:00:00Z Petco Park"
+      "Probable: Philadelphia Phillies (TBD) @ Atlanta Braves (TBD) \u2014 Scheduled 2026-10-02T00:00:00Z Truist Park"
     ],
     "unverified_notes": [],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: Philadelphia Phillies (Cristopher S\u00e1nchez) @ Atlanta Braves (Tyler Mahle) \u2014 Final 2026-09-30T18:00:00Z Truist Park",
-      "Probable: Chicago White Sox (Sean Burke) @ Houston Astros (Hunter Brown) \u2014 Final 2026-09-30T21:00:00Z Daikin Park",
-      "Probable: Boston Red Sox (Sonny Gray) @ New York Yankees (Max Fried) \u2014 In Progress 2026-10-01T00:00:00Z Yankee Stadium",
-      "Probable: Chicago Cubs (Kevin Gausman) @ San Diego Padres (Nick Pivetta) \u2014 Warmup 2026-10-01T02:00:00Z Petco Park"
+      "Probable: Philadelphia Phillies (TBD) @ Atlanta Braves (TBD) \u2014 Scheduled 2026-10-02T00:00:00Z Truist Park"
     ],
     "transactions": [
-      "League tx: 2026-09-23: DSL Mets Blue released RHP Christopher Rochin.",
-      "League tx: 2026-09-23: RHP Mason Ghadery assigned to High School Workout.",
-      "League tx: 2026-09-23: OF Ty Madden assigned to High School Workout.",
-      "League tx: 2026-09-23: 3B Colton Floyd assigned to High School Workout.",
-      "League tx: 2026-09-23: Boston Red Sox activated CF Ceddanne Rafaela from the 10-day injured list.",
-      "League tx: 2026-09-23: LHP Chris Calacci assigned to High School Workout.",
-      "League tx: 2026-09-23: SS Austin Maiden assigned to High School Workout.",
-      "League tx: 2026-09-23: LHP Carter Lee assigned to High School Workout.",
-      "League tx: 2026-09-23: C Blake Lundy assigned to High School Workout.",
-      "League tx: 2026-09-23: Cleveland Guardians activated RHP Shawn Armstrong from the 60-day injured list.",
-      "League tx: 2026-09-23: Round Rock Express activated RHP Marc Church from the Development List.",
-      "League tx: 2026-09-23: Oklahoma City Comets activated RHP Kyle Hurt.",
-      "League tx: 2026-09-23: Oklahoma City Comets transferred LHP Jackson Ferris to the Development List.",
-      "League tx: 2026-09-23: Rochester Red Wings activated C Kyle Hayes from the Development List.",
-      "League tx: 2026-09-23: New York Mets designated RHP Xzavion Curry for assignment.",
-      "League tx: 2026-09-23: Rome Emperors activated LHP Briggs McKenzie.",
-      "League tx: 2026-09-23: RHP Kameron Diederichs assigned to High School Workout.",
-      "League tx: 2026-09-23: SS Braylon Edwards assigned to High School Workout.",
-      "League tx: 2026-09-23: RHP Trip Fowler assigned to High School Workout.",
-      "League tx: 2026-09-23: Iowa Cubs activated LF Greg Jones from the 7-day injured list.",
-      "League tx: 2026-09-23: Toledo Mud Hens activated C Bennett Lee from the Development List.",
-      "League tx: 2026-09-23: C Madden Pike assigned to High School Workout.",
-      "League tx: 2026-09-23: Houston Astros placed CF Jake Meyers on the 60-day injured list.",
-      "League tx: 2026-09-23: Iowa Cubs released 2B Hayden Cantrelle.",
-      "League tx: 2026-09-23: RHP Liam Ward assigned to High School Workout.",
-      "League tx: 2026-09-23: Houston Astros placed RHP Cristian Javier on the 15-day injured list.",
-      "League tx: 2026-09-23: OF Mason Malone assigned to High School Workout.",
-      "League tx: 2026-09-23: Oklahoma City Comets transferred OF Chris Newell to the Development List.",
-      "League tx: 2026-09-23: RHP Brodie Wilson assigned to High School Workout.",
-      "League tx: 2026-09-23: Oklahoma City Comets activated RHP Emmet Sheehan.",
-      "League tx: 2026-09-23: RHP Grant Kunstbeck assigned to High School Workout.",
-      "League tx: 2026-09-23: Rochester Red Wings activated LHP Jackson Kent.",
-      "League tx: 2026-09-23: Baltimore Orioles placed C Samuel Basallo on the 7-day injured list retroactive to September 22, 2026. Concussion.",
-      "League tx: 2026-09-23: RHP Maximilian Buzby assigned to High School Workout.",
-      "League tx: 2026-09-23: Los Angeles Dodgers activated TWP Shohei Ohtani from the 15-day injured list.",
-      "League tx: 2026-09-23: RHP Tyler DeHaan assigned to High School Workout.",
-      "League tx: 2026-09-23: LHP Mason Woods assigned to High School Workout.",
-      "League tx: 2026-09-23: C Brayden Morrison assigned to High School Workout.",
-      "League tx: 2026-09-23: 1B Landis Pickett assigned to High School Workout.",
-      "League tx: 2026-09-23: SS Kash VanHouten assigned to High School Workout.",
-      "League tx: 2026-09-23: RHP Trevor Yancey assigned to High School Workout.",
-      "League tx: 2026-09-23: San Diego Padres designated RHP Alek Jacob for assignment.",
-      "League tx: 2026-09-23: Minnesota Twins placed RHP Jeff Hoffman on the 15-day injured list. Right forearm inflammation.",
-      "League tx: 2026-09-23: San Diego Padres activated RHP Jason Adam from the 60-day injured list.",
-      "League tx: 2026-09-23: C Hank Drew assigned to High School Workout.",
-      "League tx: 2026-09-23: RHP David Rojas assigned to High School Workout.",
-      "League tx: 2026-09-23: RHP Owen McKeeby assigned to High School Workout.",
-      "League tx: 2026-09-23: RHP Brody Root assigned to High School Workout.",
-      "League tx: 2026-09-23: SS Brady Jones assigned to High School Workout.",
-      "League tx: 2026-09-23: SS Kyle Rogosienski assigned to High School Workout."
+      "League tx: 2026-09-24: Erie SeaWolves activated RHP Luke Taggart from the 7-day injured list.",
+      "League tx: 2026-09-24: New York Yankees placed RHP Clarke Schmidt on the 15-day injured list retroactive to September 21, 2026. Right bicep neuritis.",
+      "League tx: 2026-09-24: New York Yankees reassigned RHP Brendan Beck to the minor leagues.",
+      "League tx: 2026-09-24: Erie SeaWolves activated RHP Trevin Michael from the 7-day injured list.",
+      "League tx: 2026-09-24: Amarillo Sod Poodles activated RHP Antonio Menendez from the 7-day injured list.",
+      "League tx: 2026-09-24: DSL Cubs Blue released LHP Frankelly Desis.",
+      "League tx: 2026-09-24: Erie SeaWolves activated LHP Jake Miller from the 7-day injured list.",
+      "League tx: 2026-09-24: Visalia Rawhide activated RHP Daniel Nunez from the Development List.",
+      "League tx: 2026-09-24: Gwinnett Stripers activated RHP Brett Sears from the Development List.",
+      "League tx: 2026-09-24: Hill City Howlers released RHP Wes Burton.",
+      "League tx: 2026-09-24: Akron RubberDucks released SS Kyle Dernedde.",
+      "League tx: 2026-09-24: OF Ashton Cox assigned to High School Workout.",
+      "League tx: 2026-09-24: Kansas City Royals placed RHP Steven Cruz on the paternity list.",
+      "League tx: 2026-09-24: New York Yankees activated RHP Brendan Beck.",
+      "League tx: 2026-09-24: OF Preston Matricardi assigned to High School Workout.",
+      "League tx: 2026-09-24: New York Yankees activated RHP Brendan Beck.",
+      "League tx: 2026-09-24: Biloxi Shuckers activated RHP Nick Merkel from the 7-day injured list.",
+      "League tx: 2026-09-24: SS Nolan Hartley assigned to High School Workout.",
+      "League tx: 2026-09-24: Biloxi Shuckers activated SS Luis Pe\u00f1a from the 7-day injured list.",
+      "League tx: 2026-09-24: SS Lucas Farrar assigned to High School Workout.",
+      "League tx: 2026-09-24: Hillsboro Hops activated OF Slade Caldwell from the 7-day injured list.",
+      "League tx: 2026-09-24: Visalia Rawhide activated RHP David Sanchez from the Development List.",
+      "League tx: 2026-09-24: Atlanta Braves placed LHP Mart\u00edn P\u00e9rez on the 15-day injured list retroactive to September 21, 2026. Low back inflammation.",
+      "League tx: 2026-09-24: Tampa Bay Rays activated RHP Jake Woodford.",
+      "League tx: 2026-09-24: Louisville Bats activated LHP Kent Emanuel from the Development List.",
+      "League tx: 2026-09-24: RHP Austin Stalbird assigned to High School Workout.",
+      "League tx: 2026-09-24: FCL Orioles activated LHP Luis De Le\u00f3n.",
+      "League tx: 2026-09-24: Akron RubberDucks released RHP Carter Spivey.",
+      "League tx: 2026-09-24: C Kaden Kenny assigned to High School Workout.",
+      "League tx: 2026-09-24: Houston Astros placed CF Daulton Varsho on the 10-day injured list retroactive to September 23, 2026. Left wrist inflammation.",
+      "League tx: 2026-09-24: RHP Jack Franklin assigned to High School Workout.",
+      "League tx: 2026-09-24: RHP Rocco Baer assigned to High School Workout.",
+      "League tx: 2026-09-24: Houston Astros designated RHP Jason Alexander for assignment.",
+      "League tx: 2026-09-24: Reno Aces activated 1B LuJames Groover from the 7-day injured list.",
+      "League tx: 2026-09-24: Visalia Rawhide activated OF Pedro Catuy from the 7-day injured list.",
+      "League tx: 2026-09-24: Visalia Rawhide activated OF Bo Walker from the 7-day injured list.",
+      "League tx: 2026-09-24: DSL Cubs Red released RHP Bryan Landaez.",
+      "League tx: 2026-09-24: Biloxi Shuckers activated DH Marco Dinges from the 7-day injured list.",
+      "League tx: 2026-09-24: Biloxi Shuckers activated C David Garc\u00eda from the Development List.",
+      "League tx: 2026-09-24: Seattle Mariners placed SS Brock Rodden on the 10-day injured list retroactive to September 23, 2026. Left patella tendon inflammation.",
+      "League tx: 2026-09-24: RHP Aiden Cary assigned to High School Workout.",
+      "League tx: 2026-09-24: 3B Ethan Savinon assigned to High School Workout.",
+      "League tx: 2026-09-24: DSL Cubs Red released SS Juan Monso.",
+      "League tx: 2026-09-24: Myrtle Beach Pelicans released RHP Rowell Arroyo.",
+      "League tx: 2026-09-24: San Francisco Giants transferred RHP Blade Tidwell from the 15-day injured list to the 60-day injured list. Right UCL sprain.",
+      "League tx: 2026-09-24: Visalia Rawhide activated RHP Erick Reynoso from the 7-day injured list.",
+      "League tx: 2026-09-24: Visalia Rawhide activated C Juan Centeno from the Development List.",
+      "League tx: 2026-09-24: DSL Cubs Red released 2B Ronnyel Espinoza.",
+      "League tx: 2026-09-24: Chicago White Sox placed RHP Luis Castillo on the 15-day injured list. Right shoulder impingement.",
+      "League tx: 2026-09-24: Albuquerque Isotopes activated RHP Valente Bellozo from the Development List."
     ],
-    "transactions_total": 817,
+    "transactions_total": 732,
     "debug": {
       "standings": [
         "rows=30"
       ],
       "schedule": [
-        "games=4"
+        "games=1"
       ],
       "transactions": [
-        "transactions=821"
+        "transactions=734"
       ]
     }
   },
@@ -856,10 +793,10 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Athletics: 64-98 (PCT .395, GB 17.0) [Division]",
-        "Athletics tx: 2026-09-28: Athletics activated LHP Gage Jump from the 15-day injured list.",
         "Athletics tx: 2026-09-28: Athletics activated 3B Max Muncy from the 10-day injured list.",
-        "Athletics tx: 2026-09-28: Athletics recalled RHP Braden Nett from Midland RockHounds.",
-        "Athletics tx: 2026-09-28: Athletics recalled RHP Hunter Bigge from Las Vegas Aviators."
+        "Athletics tx: 2026-09-28: Athletics activated LHP Gage Jump from the 15-day injured list.",
+        "Athletics tx: 2026-09-28: Athletics recalled RHP Hunter Bigge from Las Vegas Aviators.",
+        "Athletics tx: 2026-09-28: Athletics recalled RHP Hayden Juenger from Las Vegas Aviators."
       ],
       "unverified_notes": [
         "UNVERIFIED: No scheduled game found for teamId=133 in window."
@@ -894,9 +831,9 @@
       "verified_notes": [
         "Standings: Rockies: 58-104 (PCT .358, GB 42.0) [Division]",
         "Colorado Rockies tx: 2026-09-28: Colorado Rockies activated 2B Willi Castro from the 10-day injured list.",
-        "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled SS Ryan Ritter from Albuquerque Isotopes.",
         "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled LHP Hayden Harris from Albuquerque Isotopes.",
-        "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Gabriel Hughes from Albuquerque Isotopes."
+        "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Blas Casta\u00f1o from Albuquerque Isotopes.",
+        "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Blake Adams from Albuquerque Isotopes."
       ],
       "unverified_notes": [
         "UNVERIFIED: No scheduled game found for teamId=115 in window."
@@ -983,35 +920,32 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-30&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-01&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
-          "games=4"
+          "games=1"
         ],
-        "verified_count": 4,
+        "verified_count": 1,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Philadelphia Phillies (Cristopher S\u00e1nchez) @ Atlanta Braves (Tyler Mahle) \u2014 Final 2026-09-30T18:00:00Z Truist Park",
-          "Probable: Chicago White Sox (Sean Burke) @ Houston Astros (Hunter Brown) \u2014 Final 2026-09-30T21:00:00Z Daikin Park",
-          "Probable: Boston Red Sox (Sonny Gray) @ New York Yankees (Max Fried) \u2014 In Progress 2026-10-01T00:00:00Z Yankee Stadium",
-          "Probable: Chicago Cubs (Kevin Gausman) @ San Diego Padres (Nick Pivetta) \u2014 Warmup 2026-10-01T02:00:00Z Petco Park"
+          "Probable: Philadelphia Phillies (TBD) @ Atlanta Braves (TBD) \u2014 Scheduled 2026-10-02T00:00:00Z Truist Park"
         ],
         "unverified_sample": []
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-09-23&endDate=2026-09-30",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-09-24&endDate=2026-10-01",
         "status": "verified",
         "debug": [
-          "transactions=821"
+          "transactions=734"
         ],
-        "verified_count": 817,
+        "verified_count": 732,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-09-23: DSL Mets Blue released RHP Christopher Rochin.",
-          "League tx: 2026-09-23: RHP Mason Ghadery assigned to High School Workout.",
-          "League tx: 2026-09-23: OF Ty Madden assigned to High School Workout.",
-          "League tx: 2026-09-23: 3B Colton Floyd assigned to High School Workout.",
-          "League tx: 2026-09-23: Boston Red Sox activated CF Ceddanne Rafaela from the 10-day injured list."
+          "League tx: 2026-09-24: Erie SeaWolves activated RHP Luke Taggart from the 7-day injured list.",
+          "League tx: 2026-09-24: New York Yankees placed RHP Clarke Schmidt on the 15-day injured list retroactive to September 21, 2026. Right bicep neuritis.",
+          "League tx: 2026-09-24: New York Yankees reassigned RHP Brendan Beck to the minor leagues.",
+          "League tx: 2026-09-24: Erie SeaWolves activated RHP Trevin Michael from the 7-day injured list.",
+          "League tx: 2026-09-24: Amarillo Sod Poodles activated RHP Antonio Menendez from the 7-day injured list."
         ],
         "unverified_sample": []
       },
@@ -1029,7 +963,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-09-30&endDate=2026-10-02&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-01&endDate=2026-10-03&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1042,7 +976,7 @@
         ]
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-09-23&endDate=2026-09-30",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-09-24&endDate=2026-10-01",
         "status": "verified",
         "debug": [
           "transactions=12"
@@ -1050,11 +984,11 @@
         "verified_count": 12,
         "unverified_count": 0,
         "verified_sample": [
-          "Athletics tx: 2026-09-28: Athletics activated LHP Gage Jump from the 15-day injured list.",
           "Athletics tx: 2026-09-28: Athletics activated 3B Max Muncy from the 10-day injured list.",
-          "Athletics tx: 2026-09-28: Athletics recalled RHP Braden Nett from Midland RockHounds.",
+          "Athletics tx: 2026-09-28: Athletics activated LHP Gage Jump from the 15-day injured list.",
           "Athletics tx: 2026-09-28: Athletics recalled RHP Hunter Bigge from Las Vegas Aviators.",
-          "Athletics tx: 2026-09-28: Athletics recalled SS Darell Hernaiz from Las Vegas Aviators."
+          "Athletics tx: 2026-09-28: Athletics recalled RHP Hayden Juenger from Las Vegas Aviators.",
+          "Athletics tx: 2026-09-28: Athletics recalled RHP Joey Estes from Las Vegas Aviators."
         ],
         "unverified_sample": []
       },
@@ -1072,7 +1006,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-09-30&endDate=2026-10-02&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-01&endDate=2026-10-03&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1085,7 +1019,7 @@
         ]
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-09-23&endDate=2026-09-30",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-09-24&endDate=2026-10-01",
         "status": "verified",
         "debug": [
           "transactions=12"
@@ -1094,10 +1028,10 @@
         "unverified_count": 0,
         "verified_sample": [
           "Colorado Rockies tx: 2026-09-28: Colorado Rockies activated 2B Willi Castro from the 10-day injured list.",
-          "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled SS Ryan Ritter from Albuquerque Isotopes.",
           "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled LHP Hayden Harris from Albuquerque Isotopes.",
-          "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Gabriel Hughes from Albuquerque Isotopes.",
-          "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Blake Adams from Albuquerque Isotopes."
+          "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Blas Casta\u00f1o from Albuquerque Isotopes.",
+          "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Blake Adams from Albuquerque Isotopes.",
+          "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled SS Ryan Ritter from Albuquerque Isotopes."
         ],
         "unverified_sample": []
       },
@@ -1115,7 +1049,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-09-30&endDate=2026-10-02&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-01&endDate=2026-10-03&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1128,7 +1062,7 @@
         ]
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-09-23&endDate=2026-09-30",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-09-24&endDate=2026-10-01",
         "status": "verified",
         "debug": [
           "transactions=17"
@@ -1247,10 +1181,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-10-01T02:00:01Z"
+    "generated_utc": "2026-10-01T10:00:29Z"
   },
   "bd_bets": {
-    "generated_at": "2026-10-01T02:00:05.787Z",
+    "generated_at": "2026-10-01T10:00:31.171Z",
     "slate_date": "2026-10-01",
     "sport": "MLB",
     "source": "bd-bets",
