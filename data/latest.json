@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-05T01:47:56Z",
-  "slate_date": "2026-10-04",
+  "generated_at": "2026-10-05T10:17:30Z",
+  "slate_date": "2026-10-05",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,14 +9,14 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-04&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-09-27&endDate=2026-10-04",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-04&endDate=2026-10-06&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-09-27&endDate=2026-10-04",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-04&endDate=2026-10-06&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-09-27&endDate=2026-10-04",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-04&endDate=2026-10-06&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-09-27&endDate=2026-10-04"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-05&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-09-28&endDate=2026-10-05",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-05&endDate=2026-10-07&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-09-28&endDate=2026-10-05",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-05&endDate=2026-10-07&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-09-28&endDate=2026-10-05",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-05&endDate=2026-10-07&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-09-28&endDate=2026-10-05"
   },
   "source_status": {
     "league_standings": "verified",
@@ -44,35 +44,51 @@
     "league_news": {
       "items": [
         {
-          "headline": "LIVE: Freeman gets Dodgers on the board with HR (FS1/FOX One)",
-          "url": "https://www.mlb.com/stories/game/849823",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-05T01:32:59Z",
-          "summary": ""
-        },
-        {
-          "headline": "Chourio bests Miller with walk-off 1B, gives Brewers 2-0 NLDS lead",
+          "headline": "Chourio, Milwaukee's Mr. October, bests Miller with walk-off to give Crew 2-0 NLDS lead",
           "url": "https://www.mlb.com/news/brewers-win-nlds-game-2-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-04T23:52:00Z",
+          "published_at": "2026-10-05T02:05:00Z",
           "summary": ""
         },
         {
-          "headline": "Kerr twirls scoreless outing as Game 2 opener; Sale set for Game 3 start",
-          "url": "https://www.mlb.com/news/chris-sale-pitching-plan-nlds-vs-dodgers",
+          "headline": "Braves follow manager's pitch-perfect plan to even series with Dodgers",
+          "url": "https://www.mlb.com/news/braves-win-nlds-game-2-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-05T01:11:00Z",
+          "published_at": "2026-10-05T06:10:00Z",
           "summary": ""
         },
         {
-          "headline": "Padres down 0-2 in NLDS after Miller called upon for 6 outs",
+          "headline": "Burning questions for each ALDS team ahead of Game 2",
+          "url": "https://www.mlb.com/news/2026-alds-game-2-storylines-what-to-watch-for",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-05T04:00:03Z",
+          "summary": ""
+        },
+        {
+          "headline": "That Padres-Brewers Game 2 was a whirlwind. Let's break it all down",
+          "url": "https://www.mlb.com/news/padres-brewers-nlds-game-2-fun-facts-and-stats",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-05T02:50:34Z",
+          "summary": ""
+        },
+        {
+          "headline": "Harris flirts with cycle in October breakout for hometown Braves",
+          "url": "https://www.mlb.com/news/michael-harris-ii-has-three-hits-in-braves-nlds-game-2-win",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-05T05:41:28Z",
+          "summary": ""
+        },
+        {
+          "headline": "Game 2 heartbreaker has Padres on the ropes in NLDS",
           "url": "https://www.mlb.com/news/padres-lose-nlds-game-2-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-04T23:39:27Z",
+          "published_at": "2026-10-05T03:02:00Z",
           "summary": ""
         },
         {
@@ -84,43 +100,27 @@
           "summary": "Yankees ace threw career-high 32 curveballs in AL Wild Card Series"
         },
         {
+          "headline": "Kerr twirls scoreless outing as opener; Sale set for Game 3 start",
+          "url": "https://www.mlb.com/news/chris-sale-pitching-plan-nlds-vs-dodgers",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-05T03:37:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Snell's rust shows, Dodgers' bats can't pick up 'pen as NLDS evens up",
+          "url": "https://www.mlb.com/news/blake-snell-rusty-in-dodgers-nlds-game-2-loss",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-05T05:16:00Z",
+          "summary": ""
+        },
+        {
           "headline": "Where does Chourio's walk-off rank among top Division Series moments?",
           "url": "https://www.mlb.com/news/top-division-series-moments-in-mlb-history",
           "source": "MLB.com",
           "source_type": "rss",
           "published_at": "2026-10-05T00:19:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Tampa Bay's secret weapon? No outfield is harder to get a hit against",
-          "url": "https://www.mlb.com/news/rays-secret-weapon-is-the-outfield-2026",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-04T22:38:00Z",
-          "summary": "+37 OAA is best by any outfield in Statcast tracking era"
-        },
-        {
-          "headline": "How these ALDS teams spawned the American League",
-          "url": "https://www.mlb.com/news/how-chicago-cleveland-helped-form-the-american-league",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-04T17:29:46Z",
-          "summary": ""
-        },
-        {
-          "headline": "They don't ask how: Milwaukee overcomes uncharacteristic mistakes to steal Game 2",
-          "url": "https://www.mlb.com/news/brewers-win-nlds-game-2-despite-uncharacteristic-mistakes",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-05T01:40:11Z",
-          "summary": ""
-        },
-        {
-          "headline": "White Sox-Guardians ALDS Game 2 FAQ (Mon., 5 ET, TBS/HBO Max)",
-          "url": "https://www.mlb.com/news/white-sox-vs-guardians-alds-game-2-starting-lineups-and-pitching-matchup",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-04T22:09:00Z",
           "summary": ""
         }
       ],
@@ -131,14 +131,6 @@
     "teams": {
       "athletics": {
         "items": [
-          {
-            "headline": "LIVE: Watch A's prospects in Arizona Fall League action",
-            "url": "https://www.mlb.com/athletics/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-10-05T00:59:00Z",
-            "summary": ""
-          },
           {
             "headline": "The final Top 100 Prospects list of the year has a new look",
             "url": "https://www.mlb.com/athletics/news/updated-top-100-prospects-list-october-2026",
@@ -164,11 +156,19 @@
             "summary": "Fiery Australian was 2-time AL Reliever of the Year, 7-time Roberto Clemente nominee, '23 AL Comeback Player of the Year"
           },
           {
-            "headline": "Here is each club's Arizona Fall League sleeper prospect",
-            "url": "https://www.mlb.com/athletics/news/each-team-s-arizona-fall-league-sleeper-prospect-2026",
+            "headline": "Watch A's prospects in Arizona Fall League action",
+            "url": "https://www.mlb.com/athletics/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-09-30T23:00:00Z",
+            "published_at": "2026-10-05T04:43:00Z",
+            "summary": ""
+          },
+          {
+            "headline": "Emergence of young A's talent provides hope for 2027 as 'tough season' ends",
+            "url": "https://www.mlb.com/athletics/news/a-s-2026-season-ends-with-loss-to-astros",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-09-28T01:14:11Z",
             "summary": ""
           },
           {
@@ -180,11 +180,11 @@
             "summary": ""
           },
           {
-            "headline": "Emergence of young A's talent provides hope for 2027 as 'tough season' ends",
-            "url": "https://www.mlb.com/athletics/news/a-s-2026-season-ends-with-loss-to-astros",
+            "headline": "Here is each club's Arizona Fall League sleeper prospect",
+            "url": "https://www.mlb.com/athletics/news/each-team-s-arizona-fall-league-sleeper-prospect-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-09-28T01:14:11Z",
+            "published_at": "2026-09-30T23:00:00Z",
             "summary": ""
           },
           {
@@ -219,19 +219,19 @@
       "tigers": {
         "items": [
           {
+            "headline": "Man on the move: Tigers' shortstop prospect Peck now refining craft in Fall League",
+            "url": "https://www.mlb.com/tigers/news/tigers-john-peck-refining-craft-in-arizona-fall-league",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-10-05T01:00:00Z",
+            "summary": ""
+          },
+          {
             "headline": "The final Top 100 Prospects list of the year has a new look",
             "url": "https://www.mlb.com/tigers/news/updated-top-100-prospects-list-october-2026",
             "source": "MLB.com",
             "source_type": "rss",
             "published_at": "2026-10-02T13:51:44Z",
-            "summary": ""
-          },
-          {
-            "headline": "Tigers part ways with first-base coach Sanders, asst. pitching coach Nieves (sources)",
-            "url": "https://www.mlb.com/tigers/news/tigers-coaching-staff-changes-2026-offseason",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-09-29T20:43:31Z",
             "summary": ""
           },
           {
@@ -243,19 +243,19 @@
             "summary": ""
           },
           {
+            "headline": "Tigers part ways with first-base coach Sanders, asst. pitching coach Nieves (sources)",
+            "url": "https://www.mlb.com/tigers/news/tigers-coaching-staff-changes-2026-offseason",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-09-29T20:43:31Z",
+            "summary": ""
+          },
+          {
             "headline": "Make your picks for 2026 All-MLB Team",
             "url": "https://www.mlb.com/tigers/news/all-mlb-team-nominees-2026",
             "source": "MLB.com",
             "source_type": "rss",
             "published_at": "2026-09-28T17:34:27Z",
-            "summary": ""
-          },
-          {
-            "headline": "Watch Tigers prospects in Arizona Fall League action",
-            "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-10-05T00:59:00Z",
             "summary": ""
           },
           {
@@ -267,11 +267,11 @@
             "summary": ""
           },
           {
-            "headline": "Four takeaways from Tigers' end-of-season press conference",
-            "url": "https://www.mlb.com/tigers/news/scott-harris-aj-hinch-hold-tigers-end-of-season-press-conference",
+            "headline": "Watch Tigers prospects in Arizona Fall League action",
+            "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-09-28T19:09:53Z",
+            "published_at": "2026-10-05T04:43:00Z",
             "summary": ""
           },
           {
@@ -291,11 +291,11 @@
             "summary": "Who do the Tigers have in the pipeline? Get scouting reports, video, stats, projected ETAs and more for Detroit's Top 30 Prospects."
           },
           {
-            "headline": "One career ends, another takes flight as McGonigle caps historic rookie year",
-            "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-rookie-season-curtain-call",
+            "headline": "Four takeaways from Tigers' end-of-season press conference",
+            "url": "https://www.mlb.com/tigers/news/scott-harris-aj-hinch-hold-tigers-end-of-season-press-conference",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-09-28T01:01:25Z",
+            "published_at": "2026-09-28T19:09:53Z",
             "summary": ""
           }
         ],
@@ -305,14 +305,6 @@
       },
       "rockies": {
         "items": [
-          {
-            "headline": "LIVE: Watch Rockies prospects in Arizona Fall League action",
-            "url": "https://www.mlb.com/rockies/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-10-05T00:59:00Z",
-            "summary": ""
-          },
           {
             "headline": "The final Top 100 Prospects list of the year has a new look",
             "url": "https://www.mlb.com/rockies/news/updated-top-100-prospects-list-october-2026",
@@ -327,6 +319,14 @@
             "source": "MLB.com",
             "source_type": "rss",
             "published_at": "2026-09-29T15:04:03Z",
+            "summary": ""
+          },
+          {
+            "headline": "Watch Rockies prospects in Arizona Fall League action",
+            "url": "https://www.mlb.com/rockies/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-10-05T04:43:00Z",
             "summary": ""
           },
           {
@@ -393,14 +393,159 @@
     },
     "news_items": [
       {
-        "id": "mlb_com-1-1",
-        "headline": "LIVE: Freeman gets Dodgers on the board with HR (FS1/FOX One)",
-        "url": "https://www.mlb.com/stories/game/849823",
+        "id": "yahoo_sports-3-1",
+        "headline": "Shaikin: Dodgers should stop overthinking and use Edwin D\u00edaz as their closer",
+        "url": "https://sports.yahoo.com/articles/shaikin-dodgers-stop-overthinking-edwin-100000832.html",
+        "source": "LA Times",
+        "source_type": "rss",
+        "published_at": "2026-10-05T10:00:00Z",
+        "summary": "It is fair for the Dodgers to use pitchers like Tanner Scott or Roki Sasaki in the closer role. But, really, the Dodgers ought to trust Edwin D\u00edaz by now without overthinking this.",
+        "teams": [
+          "athletics",
+          "dodgers"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-2",
+        "headline": "Today on Pinstripe Alley \u2013 10/5/26",
+        "url": "https://sports.yahoo.com/articles/today-pinstripe-alley-10-5-100000883.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-05T10:00:00Z",
+        "summary": "Attempt two for the Yankees\u2019 offense to show up in the Trop.",
+        "teams": [
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-3",
+        "headline": "Pirates Wyatt Sanford kicks off Arizona Fall League with big homer",
+        "url": "https://sports.yahoo.com/articles/pirates-wyatt-sanford-kicks-off-095748380.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-05T09:57:48Z",
+        "summary": "A young Buc is off to a fast start in the AFL.",
+        "teams": [
+          "athletics",
+          "diamondbacks",
+          "pirates"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-4",
+        "headline": "Where to watch White Sox vs Guardians today, prediction for ALDS Game 2",
+        "url": "https://sports.yahoo.com/articles/where-watch-white-sox-vs-093055400.html",
+        "source": "USA TODAY Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-05T09:30:55Z",
+        "summary": "White Sox keep rolling in MLB playoffs holding ALDS lead over Guardians.",
+        "teams": [
+          "guardians",
+          "white sox"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-5",
+        "headline": "Yankees news: Feeling like home",
+        "url": "https://sports.yahoo.com/articles/yankees-news-feeling-home-090000650.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-05T09:00:00Z",
+        "summary": "Yankees train at George Steinbrenner Field, Game 2 is a &quot;must win,&quot; ALDS &quot;far from over,&quot; Wells explains blunder",
+        "teams": [
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-6",
+        "headline": "Blue Jays Prospects Who Added Strength in 2026",
+        "url": "https://sports.yahoo.com/articles/blue-jays-prospects-added-strength-073500241.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-05T07:35:00Z",
+        "summary": "On Friday, Baseball America published a spotlight of 25 prospects who\u2019ve added significantly to their exit velocities in 2026. At the bottom of the post is a list of all 162 prospects in baseball who added at least 2mph to their 90th percentile exit velocity between last season and this one. The 90th percentile is [\u2026]",
+        "teams": [
+          "athletics",
+          "blue jays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-7",
+        "headline": "Atlanta Braves, led by surprise hero Didier Fuentes, cobble together bullpen game victory in NLDS Game 2: &#39;It&#39;s stuff you would never do in the regular season&#39;",
+        "url": "https://sports.yahoo.com/mlb/article/atlanta-braves-led-by-surprise-hero-didier-fuentes-cobble-together-bullpen-game-victory-in-nlds-game-2-its-stuff-you-would-never-do-in-the-regular-season-063650617.html",
+        "source": "Yahoo Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-05T06:36:50Z",
+        "summary": "Six Braves pitchers held the Dodgers to two runs as Atlanta evened the series 1-1.",
+        "teams": [
+          "athletics",
+          "braves",
+          "dodgers"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-8",
+        "headline": "Atlanta&#39;s Cy Young gambit pays off with sucker punch to Dodgers in NLDS",
+        "url": "https://sports.yahoo.com/articles/atlantas-cy-young-gambit-pays-061231190.html",
+        "source": "USA TODAY Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-05T06:12:31Z",
+        "summary": "Atlanta jumps on Blake Snell in Game 2 while holding back Chris Sale, setting up nicely.for an upset.",
+        "teams": [
+          "braves",
+          "dodgers"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-2",
+        "headline": "Braves follow manager's pitch-perfect plan to even series with Dodgers",
+        "url": "https://www.mlb.com/news/braves-win-nlds-game-2-2026",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-05T01:32:59Z",
+        "published_at": "2026-10-05T06:10:00Z",
         "summary": "",
         "teams": [
+          "braves",
           "dodgers"
         ],
         "players": [],
@@ -410,12 +555,44 @@
         "priority": 1
       },
       {
+        "id": "mlb_com-1-5",
+        "headline": "Harris flirts with cycle in October breakout for hometown Braves",
+        "url": "https://www.mlb.com/news/michael-harris-ii-has-three-hits-in-braves-nlds-game-2-win",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-05T05:41:28Z",
+        "summary": "",
+        "teams": [
+          "braves"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
         "id": "mlb_com-1-3",
-        "headline": "Kerr twirls scoreless outing as Game 2 opener; Sale set for Game 3 start",
+        "headline": "Burning questions for each ALDS team ahead of Game 2",
+        "url": "https://www.mlb.com/news/2026-alds-game-2-storylines-what-to-watch-for",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-05T04:00:03Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-8",
+        "headline": "Kerr twirls scoreless outing as opener; Sale set for Game 3 start",
         "url": "https://www.mlb.com/news/chris-sale-pitching-plan-nlds-vs-dodgers",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-05T01:11:00Z",
+        "published_at": "2026-10-05T03:37:00Z",
         "summary": "",
         "teams": [
           "athletics"
@@ -427,133 +604,15 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-1",
-        "headline": "Jackson Chourio delivers the heroics in walk-off Brewers win in Game 2",
-        "url": "https://sports.yahoo.com/articles/jackson-chourio-delivers-heroics-walk-005355166.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-05T00:53:55Z",
-        "summary": "The Brewers take a commanding 2-0 lead of the NLDS thanks to more late-game heroics from Jackson Chourio.",
-        "teams": [
-          "brewers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
         "id": "mlb_com-1-6",
-        "headline": "Where does Chourio's walk-off rank among top Division Series moments?",
-        "url": "https://www.mlb.com/news/top-division-series-moments-in-mlb-history",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-05T00:19:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-2",
-        "headline": "Three players the White Sox should avoid arbitration with at all costs",
-        "url": "https://sports.yahoo.com/articles/three-players-white-sox-avoid-001800321.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-05T00:18:00Z",
-        "summary": "The looming arb decisions in 2027 couldn\u2019t be more straightforward for Chris Getz",
-        "teams": [
-          "white sox"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-3",
-        "headline": "WATCH: Jackson Chourio plates game-winner as Brewers walk off Padres",
-        "url": "https://sports.yahoo.com/articles/watch-jackson-chourio-plates-game-000046236.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-05T00:00:46Z",
-        "summary": "Jackson Chourio singled in the winning run with two outs in the bottom of the ninth to help the Brewers rally past the Padres in Game 2 of the NLDS.",
-        "teams": [
-          "athletics",
-          "brewers",
-          "padres"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-4",
-        "headline": "Three-quarters of SnakePit members want to keep Torey Lovullo",
-        "url": "https://sports.yahoo.com/articles/three-quarters-snakepit-members-want-000000604.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-05T00:00:00Z",
-        "summary": "I have to say that the discussion on our article about whether or not to keep manager Torey Lovullo and GM Mike Hazen, might be one of the SnakePit\u2019s finest hours. It\u2019s obviously a contentious subject, but the comments were full of considered, well-expressed comments in all four corners of the discussion. Well done, folks. [\u2026]",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-2",
-        "headline": "Chourio bests Miller with walk-off 1B, gives Brewers 2-0 NLDS lead",
-        "url": "https://www.mlb.com/news/brewers-win-nlds-game-2-2026",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-04T23:52:00Z",
-        "summary": "",
-        "teams": [
-          "brewers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-5",
-        "headline": "NL Division Series Game Discussion: Braves vs Dodgers Sunday Night",
-        "url": "https://sports.yahoo.com/articles/nl-division-series-game-discussion-235000761.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-04T23:50:00Z",
-        "summary": "It\u2019s game 2 between the Atlanta Braves and Los Angeles Dodgers Sunday night in LA. Blake Snell gets the start for the billionaires Dodgers while the Braves have announced LHP Ray Kerr as their starter. First pitch scheduled for 7pm central time and the game broadcast will be available via Fox/FS1.",
-        "teams": [
-          "athletics",
-          "braves",
-          "dodgers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-4",
-        "headline": "Padres down 0-2 in NLDS after Miller called upon for 6 outs",
+        "headline": "Game 2 heartbreaker has Padres on the ropes in NLDS",
         "url": "https://www.mlb.com/news/padres-lose-nlds-game-2-2026",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-04T23:39:27Z",
+        "published_at": "2026-10-05T03:02:00Z",
         "summary": "",
         "teams": [
+          "athletics",
           "padres"
         ],
         "players": [],
@@ -563,13 +622,13 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-6",
-        "headline": "Jackson Chourio, Brewers walk it off against Mason Miller",
-        "url": "https://sports.yahoo.com/articles/jackson-chourio-brewers-walk-off-233805796.html",
-        "source": "SB Nation",
+        "id": "mlb_com-1-4",
+        "headline": "That Padres-Brewers Game 2 was a whirlwind. Let's break it all down",
+        "url": "https://www.mlb.com/news/padres-brewers-nlds-game-2-fun-facts-and-stats",
+        "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-04T23:38:05Z",
-        "summary": "The Brewers are one win away from the NLCS after this walk-off win over the Padres",
+        "published_at": "2026-10-05T02:50:34Z",
+        "summary": "",
         "teams": [
           "athletics",
           "brewers",
@@ -579,37 +638,18 @@
         "topics": [
           "mlb"
         ],
-        "priority": 2
+        "priority": 1
       },
       {
-        "id": "yahoo_sports-3-7",
-        "headline": "Braves vs. Dodgers live updates, starting pitchers, where to watch: Blake Snell, Ray Kerr to start Game 2 of NLDS",
-        "url": "https://sports.yahoo.com/mlb/live/dodgers-braves-score-live-updates-game-2-starting-pitchers-nlds-news-highlights-stats-where-to-watch-230000740.html",
-        "source": "Yahoo Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-04T23:00:00Z",
-        "summary": "The Dodgers took Game 1 with a 5-3 win over the Braves on Saturday.",
-        "teams": [
-          "braves",
-          "dodgers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-7",
-        "headline": "Tampa Bay's secret weapon? No outfield is harder to get a hit against",
-        "url": "https://www.mlb.com/news/rays-secret-weapon-is-the-outfield-2026",
+        "id": "mlb_com-1-1",
+        "headline": "Chourio, Milwaukee's Mr. October, bests Miller with walk-off to give Crew 2-0 NLDS lead",
+        "url": "https://www.mlb.com/news/brewers-win-nlds-game-2-2026",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-04T22:38:00Z",
-        "summary": "+37 OAA is best by any outfield in Statcast tracking era",
+        "published_at": "2026-10-05T02:05:00Z",
+        "summary": "",
         "teams": [
-          "athletics",
-          "rays"
+          "brewers"
         ],
         "players": [],
         "topics": [
@@ -618,24 +658,7 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-8",
-        "headline": "Walt Weiss confirms Game 3 start for Chris Sale, plus more pregame news and notes",
-        "url": "https://sports.yahoo.com/articles/walt-weiss-confirms-game-3-223623839.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-04T22:36:23Z",
-        "summary": "Ronald Acu\u00f1a Jr. and Ha-Seong Kim also shared some thoughts ahead of a crucial NLDS Game 2 in LA for the Braves",
-        "teams": [
-          "braves"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-5",
+        "id": "mlb_com-1-7",
         "headline": "The new pitch making Cam Schlittler even nastier",
         "url": "https://www.mlb.com/news/yankees-cam-schlittler-dominating-with-new-curveball",
         "source": "MLB.com",
@@ -651,59 +674,44 @@
           "mlb"
         ],
         "priority": 1
-      },
-      {
-        "id": "mlb_com-1-8",
-        "headline": "How these ALDS teams spawned the American League",
-        "url": "https://www.mlb.com/news/how-chicago-cleveland-helped-form-the-american-league",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-04T17:29:46Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
       }
     ]
   },
   "scoreboard": {
     "games": [
       {
-        "id": "849825",
-        "away_team": "San Diego Padres",
-        "home_team": "Milwaukee Brewers",
-        "away_score": 3,
-        "home_score": 4,
-        "status": "Final",
-        "status_detail": "Final",
+        "id": "849834",
+        "away_team": "Chicago White Sox",
+        "home_team": "Cleveland Guardians",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
         "inning": null,
         "inning_state": "",
-        "start_time": "2026-10-04T20:00:00Z",
-        "venue": "American Family Field",
+        "start_time": "2026-10-05T21:00:00Z",
+        "venue": "Progressive Field",
         "probable_pitchers": {
-          "away": "Michael King",
-          "home": "Logan Henderson"
+          "away": "Anthony Kay",
+          "home": "Gavin Williams"
         },
         "broadcasts": []
       },
       {
-        "id": "849823",
-        "away_team": "Atlanta Braves",
-        "home_team": "Los Angeles Dodgers",
-        "away_score": 2,
-        "home_score": 1,
-        "status": "Live",
-        "status_detail": "In Progress",
+        "id": "849839",
+        "away_team": "New York Yankees",
+        "home_team": "Tampa Bay Rays",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
         "inning": null,
         "inning_state": "",
-        "start_time": "2026-10-05T00:00:00Z",
-        "venue": "UNIQLO Field at Dodger Stadium",
+        "start_time": "2026-10-06T00:00:00Z",
+        "venue": "Tropicana Field",
         "probable_pitchers": {
-          "away": "Ray Kerr",
-          "home": "Blake Snell"
+          "away": "Cam Schlittler",
+          "home": "Freddy Peralta"
         },
         "broadcasts": []
       }
@@ -728,70 +736,70 @@
       "Standings: Guardians: 85-77 (PCT .525, GB -) [Division]",
       "Standings: White Sox: 84-78 (PCT .519, GB 1.0) [Division]",
       "Standings: Twins: 77-85 (PCT .475, GB 8.0) [Division]",
-      "Probable: San Diego Padres (Michael King) @ Milwaukee Brewers (Logan Henderson) \u2014 Final 2026-10-04T20:00:00Z American Family Field",
-      "Probable: Atlanta Braves (Ray Kerr) @ Los Angeles Dodgers (Blake Snell) \u2014 In Progress 2026-10-05T00:00:00Z UNIQLO Field at Dodger Stadium"
+      "Probable: Chicago White Sox (Anthony Kay) @ Cleveland Guardians (Gavin Williams) \u2014 Scheduled 2026-10-05T21:00:00Z Progressive Field",
+      "Probable: New York Yankees (Cam Schlittler) @ Tampa Bay Rays (Freddy Peralta) \u2014 Scheduled 2026-10-06T00:00:00Z Tropicana Field"
     ],
     "unverified_notes": [],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: San Diego Padres (Michael King) @ Milwaukee Brewers (Logan Henderson) \u2014 Final 2026-10-04T20:00:00Z American Family Field",
-      "Probable: Atlanta Braves (Ray Kerr) @ Los Angeles Dodgers (Blake Snell) \u2014 In Progress 2026-10-05T00:00:00Z UNIQLO Field at Dodger Stadium"
+      "Probable: Chicago White Sox (Anthony Kay) @ Cleveland Guardians (Gavin Williams) \u2014 Scheduled 2026-10-05T21:00:00Z Progressive Field",
+      "Probable: New York Yankees (Cam Schlittler) @ Tampa Bay Rays (Freddy Peralta) \u2014 Scheduled 2026-10-06T00:00:00Z Tropicana Field"
     ],
     "transactions": [
-      "League tx: 2026-09-27: Boston Red Sox transferred CF Eli White from the 10-day injured list to the 60-day injured list. Right foot ligament injury.",
-      "League tx: 2026-09-27: Kansas City Royals placed RHP Steven Cruz on the restricted list.",
-      "League tx: 2026-09-27: Pensacola Blue Wahoos activated C Nestor Rios from the Development List.",
-      "League tx: 2026-09-27: Springfield Cardinals activated RHP Nate Dohm from the Development List.",
-      "League tx: 2026-09-27: Lehigh Valley IronPigs activated C Mark Kolozsvary from the 7-day injured list.",
-      "League tx: 2026-09-27: Kansas City Royals placed RHP Tony Gonsolin on the 15-day injured list. Allergic reaction.",
-      "League tx: 2026-09-27: Lehigh Valley IronPigs activated C Payton Henry from the 7-day injured list.",
-      "League tx: 2026-09-27: Springfield Cardinals activated OF Travis Honeyman from the 7-day injured list.",
-      "League tx: 2026-09-27: Detroit Tigers activated RHP Jack Flaherty from the 15-day injured list.",
-      "League tx: 2026-09-27: Peoria Chiefs activated RHP Frank Elissalt.",
-      "League tx: 2026-09-27: RHP Bobby Miller roster status changed by Los Angeles Dodgers.",
-      "League tx: 2026-09-27: Reading Fightin Phils activated C Kehden Hettiger.",
-      "League tx: 2026-09-27: Springfield Cardinals activated 3B Deniel Ortiz from the 7-day injured list.",
-      "League tx: 2026-09-27: Los Angeles Dodgers placed RHP Blake Treinen on the 15-day injured list. Right shoulder inflammation.",
-      "League tx: 2026-09-27: Boston Red Sox placed RHP Tyron Guerrero on the 15-day injured list retroactive to September 24, 2026. Right shoulder strain.",
-      "League tx: 2026-09-27: Kansas City Royals activated RHP James McArthur from the 60-day injured list.",
-      "League tx: 2026-09-27: Reading Fightin Phils activated C Mark Kolozsvary.",
-      "League tx: 2026-09-27: Philadelphia Phillies designated RHP Jos\u00e9 Urquidy for assignment.",
-      "League tx: 2026-09-27: Indianapolis Indians activated RHP Beau Burrows from the Development List.",
-      "League tx: 2026-09-27: Reading Fightin Phils activated LHP Adam Seminaris from the Development List.",
-      "League tx: 2026-09-27: RHP Jesse Scholtens roster status changed by Tampa Bay Rays.",
-      "League tx: 2026-09-27: Lehigh Valley IronPigs activated CF Kameron Misner from the 7-day injured list.",
-      "League tx: 2026-09-27: Philadelphia Phillies activated LHP Jes\u00fas Luzardo from the 15-day injured list.",
-      "League tx: 2026-09-27: Boston Red Sox placed DH Mickey Gasper on the 10-day injured list retroactive to September 26, 2026. Right biceps strain.",
-      "League tx: 2026-09-27: New York Mets placed RHP Jonathan Pintaro on the 15-day injured list. Undisclosed illness.",
-      "League tx: 2026-09-27: Syracuse Mets activated RHP Matt Seelinger from the Development List.",
-      "League tx: 2026-09-27: Oklahoma City Comets activated 2B Alex Freeland.",
-      "League tx: 2026-09-27: Reading Fightin Phils activated RHP Gage Wood from the Development List.",
-      "League tx: 2026-09-27: Lehigh Valley IronPigs activated 2B Robert Moore from the 7-day injured list.",
-      "League tx: 2026-09-27: Boston Red Sox activated RHP Tanner Houck from the 60-day injured list.",
-      "League tx: 2026-09-27: Pittsburgh Pirates signed free agent RHP Jeffrey Bustos to a minor league contract.",
-      "League tx: 2026-09-27: Reading Fightin Phils activated RHP Aaron Combs from the 7-day injured list.",
-      "League tx: 2026-09-27: Springfield Cardinals activated C Chase Heath from the Development List.",
-      "League tx: 2026-09-27: Texas Rangers recalled CF Cam Cauley from Round Rock Express.",
-      "League tx: 2026-09-27: Los Angeles Dodgers recalled RHP Bobby Miller from Oklahoma City Comets.",
-      "League tx: 2026-09-27: Houston Astros optioned RHP Ronel Blanco to Sugar Land Space Cowboys.",
-      "League tx: 2026-09-27: Boston Red Sox recalled RHP Wyatt Olds from Worcester Red Sox.",
-      "League tx: 2026-09-27: Houston Astros recalled 2B Raynel Delgado from Sugar Land Space Cowboys.",
-      "League tx: 2026-09-27: Boston Red Sox optioned RHP Jedixson Paez to Worcester Red Sox.",
-      "League tx: 2026-09-27: Cleveland Guardians optioned RHP Craig Yoho to Columbus Clippers.",
-      "League tx: 2026-09-27: Texas Rangers optioned DH Logan O'Hoppe to ACL Rangers.",
-      "League tx: 2026-09-27: New York Mets recalled LHP Jefry Yan from FCL Mets.",
-      "League tx: 2026-09-27: Houston Astros sent RHP Jason Alexander outright to Sugar Land Space Cowboys.",
-      "League tx: 2026-09-27: Chicago Cubs recalled LHP Braxton Garrett from Iowa Cubs.",
-      "League tx: 2026-09-27: Cleveland Guardians recalled RHP Austin Peterson from Columbus Clippers.",
-      "League tx: 2026-09-27: Pittsburgh Pirates recalled RHP Noah Murdock from Indianapolis Indians.",
-      "League tx: 2026-09-27: Boston Red Sox recalled LF Nate Eaton from Worcester Red Sox.",
-      "League tx: 2026-09-27: Chicago Cubs optioned RHP Gavin Hollowell to ACL Cubs.",
-      "League tx: 2026-09-27: Tampa Bay Rays recalled RHP Jesse Scholtens from Durham Bulls.",
-      "League tx: 2026-09-27: Tampa Bay Rays sent RHP Jake Woodford outright to Durham Bulls."
+      "League tx: 2026-09-28: Houston Astros activated CF Brice Matthews from the 10-day injured list.",
+      "League tx: 2026-09-28: Baltimore Orioles activated CF Luis Robert Jr. from the 10-day injured list.",
+      "League tx: 2026-09-28: Seattle Mariners activated RHP Andr\u00e9s Mu\u00f1oz from the 15-day injured list.",
+      "League tx: 2026-09-28: Miami Marlins activated RHP Anthony Bender from the 15-day injured list.",
+      "League tx: 2026-09-28: Quad Cities River Bandits activated RHP Josh Hansell.",
+      "League tx: 2026-09-28: Northwest Arkansas Naturals activated LHP Justin Lamkin.",
+      "League tx: 2026-09-28: Houston Astros activated LHP Steven Okert from the 15-day injured list.",
+      "League tx: 2026-09-28: LHP Ryan Weathers roster status changed by New York Yankees.",
+      "League tx: 2026-09-28: Baltimore Orioles activated 3B Blaze Alexander from the 10-day injured list.",
+      "League tx: 2026-09-28: Seattle Mariners activated SS Brock Rodden from the 10-day injured list.",
+      "League tx: 2026-09-28: Miami Marlins activated RHP Tyler Zuber from the 15-day injured list.",
+      "League tx: 2026-09-28: Texas Rangers activated 3B Josh Jung from the 10-day injured list.",
+      "League tx: 2026-09-28: Arkansas Travelers activated RHP Michael Hobbs from the 7-day injured list.",
+      "League tx: 2026-09-28: Los Angeles Angels activated RHP Ben Joyce from the 15-day injured list.",
+      "League tx: 2026-09-28: Los Angeles Angels activated RHP George Klassen from the 15-day injured list.",
+      "League tx: 2026-09-28: RHP Peyton Niksch assigned to Scottsdale Scorpions.",
+      "League tx: 2026-09-28: Athletics activated 3B Max Muncy from the 10-day injured list.",
+      "League tx: 2026-09-28: New York Mets activated RHP Robert Stock from the 15-day injured list.",
+      "League tx: 2026-09-28: Boston Red Sox activated RHP Tyron Guerrero from the 15-day injured list.",
+      "League tx: 2026-09-28: Omaha Storm Chasers activated RHP Ben Kudrna from the 60-day injured list.",
+      "League tx: 2026-09-28: San Francisco Giants activated RHP Logan Webb from the 15-day injured list.",
+      "League tx: 2026-09-28: Arkansas Travelers activated RHP Jimmy Kingsbury from the 7-day injured list.",
+      "League tx: 2026-09-28: Chicago Cubs activated RHP Trent Thornton from the 15-day injured list.",
+      "League tx: 2026-09-28: San Francisco Giants activated RHP JT Brubaker from the 10-day injured list.",
+      "League tx: 2026-09-28: Cleveland Guardians activated 1B Rhys Hoskins from the 10-day injured list.",
+      "League tx: 2026-09-28: New York Mets activated 1B Jared Young from the 7-day injured list.",
+      "League tx: 2026-09-28: Seattle Mariners activated 3B Brendan Donovan from the 7-day injured list.",
+      "League tx: 2026-09-28: Tampa Bay Rays activated RHP Tyler Wells from the 15-day injured list.",
+      "League tx: 2026-09-28: LF Lane Thomas roster status changed by Atlanta Braves.",
+      "League tx: 2026-09-28: Los Angeles Angels activated 1B Nolan Schanuel from the 10-day injured list.",
+      "League tx: 2026-09-28: DSL Rojos released LHP Malvin Garcia.",
+      "League tx: 2026-09-28: Houston Astros activated RHP Cristian Javier from the 15-day injured list.",
+      "League tx: 2026-09-28: Texas Rangers activated RHP Michel Ota\u00f1ez from the 15-day injured list.",
+      "League tx: 2026-09-28: 3B Nick Madrigal roster status changed by Tampa Bay Rays.",
+      "League tx: 2026-09-28: RHP Brandon Sproat roster status changed by Milwaukee Brewers.",
+      "League tx: 2026-09-28: New York Mets activated RHP Christian Scott from the 15-day injured list.",
+      "League tx: 2026-09-28: Cincinnati Reds activated RHP Julian Garcia from the 15-day injured list.",
+      "League tx: 2026-09-28: Toronto Blue Jays activated RHP Shane Bieber from the 15-day injured list.",
+      "League tx: 2026-09-28: Washington Nationals activated RHP Orlando Ribalta from the 15-day injured list.",
+      "League tx: 2026-09-28: Tampa Bay Rays activated LHP Shane McClanahan from the 15-day injured list.",
+      "League tx: 2026-09-28: Texas Rangers activated C Kyle Higashioka from the 10-day injured list.",
+      "League tx: 2026-09-28: Milwaukee Brewers activated RHP Grant Anderson from the 15-day injured list.",
+      "League tx: 2026-09-28: Columbia Fireflies activated RHP Hiro Wyatt.",
+      "League tx: 2026-09-28: SS Aidan Miller assigned to Surprise Saguaros.",
+      "League tx: 2026-09-28: Cincinnati Reds activated RHP Tony Santillan from the 15-day injured list.",
+      "League tx: 2026-09-28: LHP Jared Koenig roster status changed by Milwaukee Brewers.",
+      "League tx: 2026-09-28: San Francisco Giants activated SS Willy Adames from the 10-day injured list.",
+      "League tx: 2026-09-28: Detroit Tigers activated 3B Colt Keith from the 10-day injured list.",
+      "League tx: 2026-09-28: Toronto Blue Jays activated RF Rudy Martin Jr. from the 10-day injured list.",
+      "League tx: 2026-09-28: DH Sebastian Walcott assigned to Surprise Saguaros."
     ],
-    "transactions_total": 716,
+    "transactions_total": 663,
     "debug": {
       "standings": [
         "rows=30"
@@ -800,7 +808,7 @@
         "games=2"
       ],
       "transactions": [
-        "transactions=718"
+        "transactions=665"
       ]
     }
   },
@@ -810,10 +818,10 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Athletics: 64-98 (PCT .395, GB 17.0) [Division]",
-        "Athletics tx: 2026-09-28: Athletics activated LHP Gage Jump from the 15-day injured list.",
         "Athletics tx: 2026-09-28: Athletics activated 3B Max Muncy from the 10-day injured list.",
-        "Athletics tx: 2026-09-28: Athletics recalled RHP Braden Nett from Midland RockHounds.",
-        "Athletics tx: 2026-09-28: Athletics recalled RHP Hunter Bigge from Las Vegas Aviators."
+        "Athletics tx: 2026-09-28: Athletics activated LHP Gage Jump from the 15-day injured list.",
+        "Athletics tx: 2026-09-28: Athletics recalled RHP Hunter Bigge from Las Vegas Aviators.",
+        "Athletics tx: 2026-09-28: Athletics recalled RHP Hayden Juenger from Las Vegas Aviators."
       ],
       "unverified_notes": [
         "UNVERIFIED: No scheduled game found for teamId=133 in window."
@@ -848,9 +856,9 @@
       "verified_notes": [
         "Standings: Rockies: 58-104 (PCT .358, GB 42.0) [Division]",
         "Colorado Rockies tx: 2026-09-28: Colorado Rockies activated 2B Willi Castro from the 10-day injured list.",
-        "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled SS Ryan Ritter from Albuquerque Isotopes.",
         "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled LHP Hayden Harris from Albuquerque Isotopes.",
-        "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Gabriel Hughes from Albuquerque Isotopes."
+        "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Blas Casta\u00f1o from Albuquerque Isotopes.",
+        "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Blake Adams from Albuquerque Isotopes."
       ],
       "unverified_notes": [
         "UNVERIFIED: No scheduled game found for teamId=115 in window."
@@ -884,10 +892,10 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Tigers: 76-86 (PCT .469, GB 9.0) [Division]",
-        "Detroit Tigers tx: 2026-09-27: Detroit Tigers activated RHP Jack Flaherty from the 15-day injured list.",
-        "Detroit Tigers tx: 2026-09-27: Detroit Tigers optioned LHP Brant Hurter to FCL Tigers.",
+        "Detroit Tigers tx: 2026-09-28: Detroit Tigers activated RHP Troy Melton from the 15-day injured list.",
+        "Detroit Tigers tx: 2026-09-28: Detroit Tigers activated RHP Kyle Finnegan from the 15-day injured list.",
         "Detroit Tigers tx: 2026-09-28: Detroit Tigers activated 3B Colt Keith from the 10-day injured list.",
-        "Detroit Tigers tx: 2026-09-28: Detroit Tigers activated RHP Troy Melton from the 15-day injured list."
+        "Detroit Tigers tx: 2026-09-28: Detroit Tigers recalled LHP Jake Miller from Erie SeaWolves."
       ],
       "unverified_notes": [
         "UNVERIFIED: No scheduled game found for teamId=116 in window."
@@ -912,7 +920,7 @@
           "games=0"
         ],
         "tigers_transactions": [
-          "transactions=14"
+          "transactions=12"
         ]
       }
     }
@@ -937,7 +945,7 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-04&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-05&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
           "games=2"
@@ -945,25 +953,25 @@
         "verified_count": 2,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: San Diego Padres (Michael King) @ Milwaukee Brewers (Logan Henderson) \u2014 Final 2026-10-04T20:00:00Z American Family Field",
-          "Probable: Atlanta Braves (Ray Kerr) @ Los Angeles Dodgers (Blake Snell) \u2014 In Progress 2026-10-05T00:00:00Z UNIQLO Field at Dodger Stadium"
+          "Probable: Chicago White Sox (Anthony Kay) @ Cleveland Guardians (Gavin Williams) \u2014 Scheduled 2026-10-05T21:00:00Z Progressive Field",
+          "Probable: New York Yankees (Cam Schlittler) @ Tampa Bay Rays (Freddy Peralta) \u2014 Scheduled 2026-10-06T00:00:00Z Tropicana Field"
         ],
         "unverified_sample": []
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-09-27&endDate=2026-10-04",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-09-28&endDate=2026-10-05",
         "status": "verified",
         "debug": [
-          "transactions=718"
+          "transactions=665"
         ],
-        "verified_count": 716,
+        "verified_count": 663,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-09-27: Boston Red Sox transferred CF Eli White from the 10-day injured list to the 60-day injured list. Right foot ligament injury.",
-          "League tx: 2026-09-27: Kansas City Royals placed RHP Steven Cruz on the restricted list.",
-          "League tx: 2026-09-27: Pensacola Blue Wahoos activated C Nestor Rios from the Development List.",
-          "League tx: 2026-09-27: Springfield Cardinals activated RHP Nate Dohm from the Development List.",
-          "League tx: 2026-09-27: Lehigh Valley IronPigs activated C Mark Kolozsvary from the 7-day injured list."
+          "League tx: 2026-09-28: Houston Astros activated CF Brice Matthews from the 10-day injured list.",
+          "League tx: 2026-09-28: Baltimore Orioles activated CF Luis Robert Jr. from the 10-day injured list.",
+          "League tx: 2026-09-28: Seattle Mariners activated RHP Andr\u00e9s Mu\u00f1oz from the 15-day injured list.",
+          "League tx: 2026-09-28: Miami Marlins activated RHP Anthony Bender from the 15-day injured list.",
+          "League tx: 2026-09-28: Quad Cities River Bandits activated RHP Josh Hansell."
         ],
         "unverified_sample": []
       },
@@ -981,7 +989,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-04&endDate=2026-10-06&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-05&endDate=2026-10-07&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -994,7 +1002,7 @@
         ]
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-09-27&endDate=2026-10-04",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-09-28&endDate=2026-10-05",
         "status": "verified",
         "debug": [
           "transactions=12"
@@ -1002,11 +1010,11 @@
         "verified_count": 12,
         "unverified_count": 0,
         "verified_sample": [
-          "Athletics tx: 2026-09-28: Athletics activated LHP Gage Jump from the 15-day injured list.",
           "Athletics tx: 2026-09-28: Athletics activated 3B Max Muncy from the 10-day injured list.",
-          "Athletics tx: 2026-09-28: Athletics recalled RHP Braden Nett from Midland RockHounds.",
+          "Athletics tx: 2026-09-28: Athletics activated LHP Gage Jump from the 15-day injured list.",
           "Athletics tx: 2026-09-28: Athletics recalled RHP Hunter Bigge from Las Vegas Aviators.",
-          "Athletics tx: 2026-09-28: Athletics recalled SS Darell Hernaiz from Las Vegas Aviators."
+          "Athletics tx: 2026-09-28: Athletics recalled RHP Hayden Juenger from Las Vegas Aviators.",
+          "Athletics tx: 2026-09-28: Athletics recalled RHP Joey Estes from Las Vegas Aviators."
         ],
         "unverified_sample": []
       },
@@ -1024,7 +1032,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-04&endDate=2026-10-06&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-05&endDate=2026-10-07&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1037,7 +1045,7 @@
         ]
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-09-27&endDate=2026-10-04",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-09-28&endDate=2026-10-05",
         "status": "verified",
         "debug": [
           "transactions=12"
@@ -1046,10 +1054,10 @@
         "unverified_count": 0,
         "verified_sample": [
           "Colorado Rockies tx: 2026-09-28: Colorado Rockies activated 2B Willi Castro from the 10-day injured list.",
-          "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled SS Ryan Ritter from Albuquerque Isotopes.",
           "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled LHP Hayden Harris from Albuquerque Isotopes.",
-          "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Gabriel Hughes from Albuquerque Isotopes.",
-          "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Blake Adams from Albuquerque Isotopes."
+          "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Blas Casta\u00f1o from Albuquerque Isotopes.",
+          "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled RHP Blake Adams from Albuquerque Isotopes.",
+          "Colorado Rockies tx: 2026-09-28: Colorado Rockies recalled SS Ryan Ritter from Albuquerque Isotopes."
         ],
         "unverified_sample": []
       },
@@ -1067,7 +1075,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-04&endDate=2026-10-06&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-05&endDate=2026-10-07&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1080,19 +1088,19 @@
         ]
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-09-27&endDate=2026-10-04",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-09-28&endDate=2026-10-05",
         "status": "verified",
         "debug": [
-          "transactions=14"
+          "transactions=12"
         ],
-        "verified_count": 14,
+        "verified_count": 12,
         "unverified_count": 0,
         "verified_sample": [
-          "Detroit Tigers tx: 2026-09-27: Detroit Tigers activated RHP Jack Flaherty from the 15-day injured list.",
-          "Detroit Tigers tx: 2026-09-27: Detroit Tigers optioned LHP Brant Hurter to FCL Tigers.",
-          "Detroit Tigers tx: 2026-09-28: Detroit Tigers activated 3B Colt Keith from the 10-day injured list.",
           "Detroit Tigers tx: 2026-09-28: Detroit Tigers activated RHP Troy Melton from the 15-day injured list.",
-          "Detroit Tigers tx: 2026-09-28: Detroit Tigers activated RHP Kyle Finnegan from the 15-day injured list."
+          "Detroit Tigers tx: 2026-09-28: Detroit Tigers activated RHP Kyle Finnegan from the 15-day injured list.",
+          "Detroit Tigers tx: 2026-09-28: Detroit Tigers activated 3B Colt Keith from the 10-day injured list.",
+          "Detroit Tigers tx: 2026-09-28: Detroit Tigers recalled LHP Jake Miller from Erie SeaWolves.",
+          "Detroit Tigers tx: 2026-09-28: Detroit Tigers recalled RHP Yilber D\u00edaz from Toledo Mud Hens."
         ],
         "unverified_sample": []
       },
@@ -1199,10 +1207,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-10-05T01:47:56Z"
+    "generated_utc": "2026-10-05T10:17:30Z"
   },
   "bd_bets": {
-    "generated_at": "2026-10-05T01:47:59.931Z",
+    "generated_at": "2026-10-05T10:17:32.217Z",
     "slate_date": "2026-10-05",
     "sport": "MLB",
     "source": "bd-bets",
