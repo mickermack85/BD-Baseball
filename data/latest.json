@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-09T01:09:06Z",
-  "slate_date": "2026-10-08",
+  "generated_at": "2026-10-09T10:22:08Z",
+  "slate_date": "2026-10-09",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,18 +9,18 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-08&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-01&endDate=2026-10-08",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-08&endDate=2026-10-10&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-01&endDate=2026-10-08",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-08&endDate=2026-10-10&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-01&endDate=2026-10-08",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-08&endDate=2026-10-10&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-01&endDate=2026-10-08"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-09&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-02&endDate=2026-10-09",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-09&endDate=2026-10-11&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-02&endDate=2026-10-09",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-09&endDate=2026-10-11&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-02&endDate=2026-10-09",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-09&endDate=2026-10-11&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-02&endDate=2026-10-09"
   },
   "source_status": {
     "league_standings": "verified",
-    "league_schedule": "verified",
+    "league_schedule": "unverified",
     "league_transactions": "verified",
     "athletics_standings": "verified",
     "athletics_schedule": "unverified",
@@ -44,27 +44,27 @@
     "league_news": {
       "items": [
         {
-          "headline": "LIVE: Guardians-White Sox ALDS Game 4, TBS/HBO Max",
-          "url": "https://www.mlb.com/news/guardians-vs-white-sox-alds-game-4-starting-lineups-and-pitching-matchup",
+          "headline": "Not done yet! Guardians storm back to force Game 5 in Cleveland",
+          "url": "https://www.mlb.com/news/guardians-win-alds-game-4-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-08T23:47:00Z",
+          "published_at": "2026-10-09T07:08:00Z",
           "summary": ""
         },
         {
-          "headline": "Game times, broadcasts announced for League Championship Series",
-          "url": "https://www.mlb.com/news/2026-mlb-playoff-and-world-series-schedule",
+          "headline": "J-Ram rewriting his October narrative, one big hit at a time",
+          "url": "https://www.mlb.com/news/jose-ramirez-two-run-home-run-alds-game-4-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-09T00:00:00Z",
+          "published_at": "2026-10-09T07:08:00Z",
           "summary": ""
         },
         {
-          "headline": "3 keys to Guardians-White Sox ALDS Game 4",
-          "url": "https://www.mlb.com/news/2026-alds-game-4-storylines",
+          "headline": "Bailey comes up big twice -- after starting game on bench",
+          "url": "https://www.mlb.com/news/patrick-bailey-homers-drives-in-2-off-bench-in-2026-alds-game-4",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-08T14:25:00Z",
+          "published_at": "2026-10-09T07:14:00Z",
           "summary": ""
         },
         {
@@ -76,11 +76,43 @@
           "summary": ""
         },
         {
-          "headline": "Judge wants front office to go 'all in' -- with Boone remaining in charge",
-          "url": "https://www.mlb.com/news/aaron-judge-discusses-yankees-season-aaron-boone",
+          "headline": "Game times, broadcasts announced for League Championship Series",
+          "url": "https://www.mlb.com/news/2026-mlb-playoff-and-world-series-schedule",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-08T07:11:35Z",
+          "published_at": "2026-10-09T03:48:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "White Sox come up short at home as ALDS shifts to decisive Game 5",
+          "url": "https://www.mlb.com/news/white-sox-lose-alds-game-4-2026",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-09T05:31:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "What does Messick's abbreviated start mean for Guards' G5 pitching plan?",
+          "url": "https://www.mlb.com/news/parker-messick-struggles-with-command-in-2026-alds-game-4",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-09T07:14:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "White Sox pitchers ready for wherever they're needed in ALDS finale",
+          "url": "https://www.mlb.com/news/white-sox-pitching-plans-2026-alds-game-5",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-09T06:28:04Z",
+          "summary": ""
+        },
+        {
+          "headline": "White Sox-Guardians ALDS Game 5 FAQ (Sat., 8 ET, TBS/HBO Max)",
+          "url": "https://www.mlb.com/news/white-sox-vs-guardians-alds-game-5-starting-lineups-and-pitching-matchup",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-09T07:09:29Z",
           "summary": ""
         },
         {
@@ -89,38 +121,6 @@
           "source": "MLB.com",
           "source_type": "rss",
           "published_at": "2026-10-08T17:29:04Z",
-          "summary": ""
-        },
-        {
-          "headline": "You can breathe now! Brewers, Padres wrap up historically close series",
-          "url": "https://www.mlb.com/news/brewers-padres-complete-historically-close-nlds-matchup",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-08T06:43:53Z",
-          "summary": ""
-        },
-        {
-          "headline": "D\u00e9ja v\u00fa strikes thrice as Machado robbed of game-tying HR",
-          "url": "https://www.mlb.com/news/manny-machado-robbed-of-game-tying-home-run-in-nlds-game-4",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-08T07:24:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Who's beating this? How Dodgers might stack rotation in NLCS vs. Brewers",
-          "url": "https://www.mlb.com/news/how-dodgers-nlcs-rotation-might-line-up-vs-brewers",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-08T21:55:26Z",
-          "summary": ""
-        },
-        {
-          "headline": "Volpe's potential game-tying homer waved off due to fan interference",
-          "url": "https://www.mlb.com/news/fan-interference-anthony-volpe-potential-homer-alds-game-3",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-08T06:03:00Z",
           "summary": ""
         }
       ],
@@ -156,11 +156,11 @@
             "summary": ""
           },
           {
-            "headline": "Watch top prospects in Arizona Fall League action",
+            "headline": "Watch top prospects in Arizona Fall League action tonight",
             "url": "https://www.mlb.com/athletics/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-09T00:35:00Z",
+            "published_at": "2026-10-09T03:41:00Z",
             "summary": ""
           },
           {
@@ -243,11 +243,11 @@
             "summary": ""
           },
           {
-            "headline": "Watch top prospects in Arizona Fall League action",
+            "headline": "Watch top prospects in Arizona Fall League action tonight",
             "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-09T00:35:00Z",
+            "published_at": "2026-10-09T03:41:00Z",
             "summary": ""
           },
           {
@@ -338,11 +338,11 @@
             "summary": ""
           },
           {
-            "headline": "Watch top prospects in Arizona Fall League action",
+            "headline": "Watch top prospects in Arizona Fall League action tonight",
             "url": "https://www.mlb.com/rockies/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-09T00:35:00Z",
+            "published_at": "2026-10-09T03:41:00Z",
             "summary": ""
           },
           {
@@ -394,51 +394,32 @@
     "news_items": [
       {
         "id": "yahoo_sports-3-1",
-        "headline": "ALDS Game 4 thread: Chicago White Sox vs. Cleveland Guardians",
-        "url": "https://sports.yahoo.com/articles/alds-game-4-thread-chicago-000031339.html",
+        "headline": "Braves News: 2026 season reactions, offseason improvements, and more",
+        "url": "https://sports.yahoo.com/articles/braves-news-2026-season-reactions-100000745.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-10-09T00:00:31Z",
-        "summary": "Will there be a Game 5 in Cleveland?",
+        "published_at": "2026-10-09T10:00:00Z",
+        "summary": "Atlanta Braves news and notes from Thursday.",
         "teams": [
-          "guardians",
-          "white sox"
+          "athletics",
+          "braves"
         ],
         "players": [],
         "topics": [
           "mlb"
         ],
         "priority": 2
-      },
-      {
-        "id": "mlb_com-1-2",
-        "headline": "Game times, broadcasts announced for League Championship Series",
-        "url": "https://www.mlb.com/news/2026-mlb-playoff-and-world-series-schedule",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-09T00:00:00Z",
-        "summary": "",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
       },
       {
         "id": "yahoo_sports-3-2",
-        "headline": "SnakePit Post-season GDT, #9",
-        "url": "https://sports.yahoo.com/articles/snakepit-post-season-gdt-9-000000685.html",
+        "headline": "Yankees news: The ALDS loss autopsy",
+        "url": "https://sports.yahoo.com/articles/yankees-news-alds-loss-autopsy-090000411.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-10-09T00:00:00Z",
-        "summary": "And then there was one\u2026 Three of the Division Series finished yesterday. The Brewers and Dodgers both finished off their opponents in four games, and will face off again \u2013 as they did last year \u2013 starting on Sunday. Milwaukee are 0-3 in NLCS\u2019s: as well as losing to LA in 2026, they did so [\u2026]",
+        "published_at": "2026-10-09T09:00:00Z",
+        "summary": "Is it curtains for Boone?; on Volpe\u2019s future; the first decisions to make; optimal pitcher deployment",
         "teams": [
-          "athletics",
-          "brewers",
-          "dodgers"
+          "yankees"
         ],
         "players": [],
         "topics": [
@@ -447,53 +428,76 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-3",
-        "headline": "ALDS Game 4 open chat",
-        "url": "https://sports.yahoo.com/articles/alds-game-4-open-chat-000000082.html",
-        "source": "SB Nation",
+        "id": "mlb_com-1-3",
+        "headline": "Bailey comes up big twice -- after starting game on bench",
+        "url": "https://www.mlb.com/news/patrick-bailey-homers-drives-in-2-off-bench-in-2026-alds-game-4",
+        "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-09T00:00:00Z",
-        "summary": "The White Sox will try to clinch a postseason series at home for the first time since 1906. That\u2019s not a typo.",
-        "teams": [
-          "athletics",
-          "white sox"
-        ],
+        "published_at": "2026-10-09T07:14:00Z",
+        "summary": "",
+        "teams": [],
         "players": [],
         "topics": [
           "mlb"
         ],
-        "priority": 2
+        "priority": 1
       },
       {
-        "id": "yahoo_sports-3-4",
-        "headline": "Thursday Guardians @ White Sox ALDS Game",
-        "url": "https://sports.yahoo.com/articles/thursday-guardians-white-sox-alds-235000523.html",
-        "source": "SB Nation",
+        "id": "mlb_com-1-7",
+        "headline": "What does Messick's abbreviated start mean for Guards' G5 pitching plan?",
+        "url": "https://www.mlb.com/news/parker-messick-struggles-with-command-in-2026-alds-game-4",
+        "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-08T23:50:00Z",
-        "summary": "Game four of the Guardians/White Sox series. White Sox are up two games to one. They win, they take on the Rays. Lineups: Today\u2019s Lineups GUARDIANS WHITE SOX Steven Kwan \u2013 CF Chase Meidroth \u2013 2B Jose Ramirez \u2013 3B Randal Grichuk \u2013 LF Chase DeLauter \u2013 RF Miguel Vargas \u2013 3B Jo Adell \u2013 [\u2026]",
-        "teams": [
-          "athletics",
-          "guardians",
-          "rays",
-          "white sox"
-        ],
+        "published_at": "2026-10-09T07:14:00Z",
+        "summary": "",
+        "teams": [],
         "players": [],
         "topics": [
           "mlb"
         ],
-        "priority": 2
+        "priority": 1
       },
       {
         "id": "mlb_com-1-1",
-        "headline": "LIVE: Guardians-White Sox ALDS Game 4, TBS/HBO Max",
-        "url": "https://www.mlb.com/news/guardians-vs-white-sox-alds-game-4-starting-lineups-and-pitching-matchup",
+        "headline": "Not done yet! Guardians storm back to force Game 5 in Cleveland",
+        "url": "https://www.mlb.com/news/guardians-win-alds-game-4-2026",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-08T23:47:00Z",
+        "published_at": "2026-10-09T07:08:00Z",
         "summary": "",
         "teams": [
-          "guardians",
+          "guardians"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-2",
+        "headline": "J-Ram rewriting his October narrative, one big hit at a time",
+        "url": "https://www.mlb.com/news/jose-ramirez-two-run-home-run-alds-game-4-2026",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-09T07:08:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-8",
+        "headline": "White Sox pitchers ready for wherever they're needed in ALDS finale",
+        "url": "https://www.mlb.com/news/white-sox-pitching-plans-2026-alds-game-5",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-09T06:28:04Z",
+        "summary": "",
+        "teams": [
           "white sox"
         ],
         "players": [],
@@ -503,15 +507,72 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-5",
-        "headline": "ALDS Thursday open thread",
-        "url": "https://sports.yahoo.com/articles/alds-thursday-open-thread-233000161.html",
-        "source": "SB Nation",
+        "id": "yahoo_sports-3-3",
+        "headline": "Jos\u00e9 Ram\u00edrez, just in time to save the Guardians&#39; season, has rediscovered his MVP form in ALDS vs. White Sox",
+        "url": "https://sports.yahoo.com/mlb/article/jose-ramirez-just-in-time-to-save-the-guardians-season-has-rediscovered-his-mvp-form-in-alds-vs-white-sox-061056642.html",
+        "source": "Yahoo Sports",
         "source_type": "rss",
-        "published_at": "2026-10-08T23:30:00Z",
-        "summary": "Tampa Bay awaits the winner of this series.",
+        "published_at": "2026-10-09T06:10:56Z",
+        "summary": "In Cleveland&#39;s two victories in Chicago, Ramirez went 4-for-9 with a double, a triple, a home run, a walk, a stolen base, four runs scored and five RBI.",
         "teams": [
-          "rays"
+          "athletics",
+          "guardians",
+          "white sox"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-6",
+        "headline": "White Sox come up short at home as ALDS shifts to decisive Game 5",
+        "url": "https://www.mlb.com/news/white-sox-lose-alds-game-4-2026",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-09T05:31:00Z",
+        "summary": "",
+        "teams": [
+          "athletics",
+          "white sox"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-4",
+        "headline": "Plan blows up on White Sox as MLB playoff joyride meets harsh reality",
+        "url": "https://sports.yahoo.com/articles/plan-blows-white-sox-mlb-051608598.html",
+        "source": "USA TODAY Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-09T05:16:08Z",
+        "summary": "White Sox blew chances to clinch at home and now face ugly bit of MLB history vs Cleveland.",
+        "teams": [
+          "athletics",
+          "guardians",
+          "white sox"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-5",
+        "headline": "Guardians crush White Sox to force winner-take-all ALDS Game 5",
+        "url": "https://sports.yahoo.com/articles/guardians-crush-white-sox-force-042529208.html",
+        "source": "NY Post Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-09T04:25:29Z",
+        "summary": "Game 5 is back in Cleveland on Saturday night.",
+        "teams": [
+          "guardians",
+          "white sox"
         ],
         "players": [],
         "topics": [
@@ -521,12 +582,12 @@
       },
       {
         "id": "yahoo_sports-3-6",
-        "headline": "ALDS GAME FOUR: GUARDIANS AT WHITE SOX, Smith vs. Messick, discussion",
-        "url": "https://sports.yahoo.com/articles/alds-game-four-guardians-white-233000087.html",
+        "headline": "Guardians even ALDS with White Sox, 2-2, thanks to six-run sixth",
+        "url": "https://sports.yahoo.com/articles/guardians-pull-away-six-run-040236874.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-10-08T23:30:00Z",
-        "summary": "Let&#39;s get another one",
+        "published_at": "2026-10-09T04:02:36Z",
+        "summary": "The South Siders will need another victory in Cleveland to take the series",
         "teams": [
           "guardians",
           "white sox"
@@ -539,14 +600,15 @@
       },
       {
         "id": "yahoo_sports-3-7",
-        "headline": "MLB Division Series 2026 discussion thread: Day 6",
-        "url": "https://sports.yahoo.com/articles/mlb-division-series-2026-discussion-233000466.html",
-        "source": "SB Nation",
+        "headline": "Guardians or White Sox will pay for agonizing affair to force Game 5 | Opinion",
+        "url": "https://sports.yahoo.com/articles/guardians-white-sox-pay-agonizing-035025707.html",
+        "source": "USA TODAY Sports",
         "source_type": "rss",
-        "published_at": "2026-10-08T23:30:00Z",
-        "summary": "Guardians try to force a Game 5 matchup",
+        "published_at": "2026-10-09T03:50:25Z",
+        "summary": "Chicago White Sox and Cleveland Guardians used total of 15 pitchers to get to Game 5",
         "teams": [
-          "guardians"
+          "guardians",
+          "white sox"
         ],
         "players": [],
         "topics": [
@@ -556,12 +618,12 @@
       },
       {
         "id": "yahoo_sports-3-8",
-        "headline": "Postseason / ALDS Game 4 chat and discussion, October 8",
-        "url": "https://sports.yahoo.com/articles/postseason-alds-game-4-chat-231646730.html",
-        "source": "SB Nation",
+        "headline": "When is ALDS Game 5? White Sox vs. Guardians needs winner-take-all game",
+        "url": "https://sports.yahoo.com/articles/alds-game-5-white-sox-034942123.html",
+        "source": "USA TODAY Sports",
         "source_type": "rss",
-        "published_at": "2026-10-08T23:16:46Z",
-        "summary": "Good evening, y\u2019all. At this time yesterday, I had posted something along the lines of \u201ccan we borrow some runs @/guardians\u201d, because our game was deadlocked and Cleveland was well on their way to the 9-3 final score against the Chicago White Sox to stave off their elimination. Must be fun to score a lot. [\u2026]",
+        "published_at": "2026-10-09T03:49:42Z",
+        "summary": "Here&#39;s when Game 5 of the American League Division Series will be as the Cleveland Guardians remain alive against the Chicago White Sox.",
         "teams": [
           "athletics",
           "guardians",
@@ -572,6 +634,23 @@
           "mlb"
         ],
         "priority": 2
+      },
+      {
+        "id": "mlb_com-1-5",
+        "headline": "Game times, broadcasts announced for League Championship Series",
+        "url": "https://www.mlb.com/news/2026-mlb-playoff-and-world-series-schedule",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-09T03:48:00Z",
+        "summary": "",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
       },
       {
         "id": "mlb_com-1-4",
@@ -587,113 +666,11 @@
           "mlb"
         ],
         "priority": 1
-      },
-      {
-        "id": "mlb_com-1-6",
-        "headline": "2 elite arms lined up for duel in NLCS Game 1",
-        "url": "https://www.mlb.com/news/nlcs-game-1-lines-up-for-jacob-misiorowski-tarik-skubal-showdown",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-08T17:29:04Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-3",
-        "headline": "3 keys to Guardians-White Sox ALDS Game 4",
-        "url": "https://www.mlb.com/news/2026-alds-game-4-storylines",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-08T14:25:00Z",
-        "summary": "",
-        "teams": [
-          "guardians",
-          "white sox"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-8",
-        "headline": "D\u00e9ja v\u00fa strikes thrice as Machado robbed of game-tying HR",
-        "url": "https://www.mlb.com/news/manny-machado-robbed-of-game-tying-home-run-in-nlds-game-4",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-08T07:24:00Z",
-        "summary": "",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-5",
-        "headline": "Judge wants front office to go 'all in' -- with Boone remaining in charge",
-        "url": "https://www.mlb.com/news/aaron-judge-discusses-yankees-season-aaron-boone",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-08T07:11:35Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-7",
-        "headline": "You can breathe now! Brewers, Padres wrap up historically close series",
-        "url": "https://www.mlb.com/news/brewers-padres-complete-historically-close-nlds-matchup",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-08T06:43:53Z",
-        "summary": "",
-        "teams": [
-          "brewers",
-          "padres"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
       }
     ]
   },
   "scoreboard": {
-    "games": [
-      {
-        "id": "849832",
-        "away_team": "Cleveland Guardians",
-        "home_team": "Chicago White Sox",
-        "away_score": 0,
-        "home_score": 0,
-        "status": "Live",
-        "status_detail": "In Progress",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-10-09T00:00:00Z",
-        "venue": "Rate Field",
-        "probable_pitchers": {
-          "away": "Parker Messick",
-          "home": "Hagen Smith"
-        },
-        "broadcasts": []
-      }
-    ]
+    "games": []
   },
   "news_status": {
     "league_news": "verified",
@@ -713,78 +690,79 @@
       "Standings: Blue Jays: 79-83 (PCT .488, GB 19.0) [Division]",
       "Standings: Guardians: 85-77 (PCT .525, GB -) [Division]",
       "Standings: White Sox: 84-78 (PCT .519, GB 1.0) [Division]",
-      "Standings: Twins: 77-85 (PCT .475, GB 8.0) [Division]",
-      "Probable: Cleveland Guardians (Parker Messick) @ Chicago White Sox (Hagen Smith) \u2014 In Progress 2026-10-09T00:00:00Z Rate Field"
+      "Standings: Twins: 77-85 (PCT .475, GB 8.0) [Division]"
     ],
-    "unverified_notes": [],
+    "unverified_notes": [
+      "UNVERIFIED: No games scheduled in window."
+    ],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: Cleveland Guardians (Parker Messick) @ Chicago White Sox (Hagen Smith) \u2014 In Progress 2026-10-09T00:00:00Z Rate Field"
+      "UNVERIFIED: No probable matchup entries available."
     ],
     "transactions": [
-      "League tx: 2026-10-01: Columbus Clippers activated RHP Rorik Maltrud from the Development List.",
-      "League tx: 2026-10-01: Great Lakes Loons activated RHP Reynaldo Yean from the Development List.",
-      "League tx: 2026-10-01: Houston Astros activated CF Jorge Barrosa.",
-      "League tx: 2026-10-01: LHP Evan Dyett assigned to High School Workout.",
-      "League tx: 2026-10-01: Boston Red Sox activated LHP Jovani Mor\u00e1n.",
-      "League tx: 2026-10-01: Boston Red Sox activated DH Romy Gonzalez.",
-      "League tx: 2026-10-01: RHP Zach Huret assigned to High School Workout.",
-      "League tx: 2026-10-01: C Easton Stegbauer assigned to High School Workout.",
-      "League tx: 2026-10-01: Houston Astros activated RHP Enyel De Los Santos.",
-      "League tx: 2026-10-01: Chicago Cubs activated LHP Caleb Thielbar.",
-      "League tx: 2026-10-01: Boston Red Sox activated LHP Raymond Burgos.",
-      "League tx: 2026-10-01: Boston Red Sox activated LHP Patrick Sandoval.",
-      "League tx: 2026-10-01: Houston Astros activated CF Brice Matthews.",
-      "League tx: 2026-10-01: RHP Matt Werner assigned to High School Workout.",
-      "League tx: 2026-10-01: 3B Jonah Bride elected free agency.",
-      "League tx: 2026-10-01: Houston Astros activated LF Zach Cole.",
-      "League tx: 2026-10-01: Houston Astros activated RHP Cristian Javier.",
-      "League tx: 2026-10-01: Houston Astros activated LF LaMonte Wade Jr..",
-      "League tx: 2026-10-01: SS Leandro Sanchez assigned to High School Workout.",
-      "League tx: 2026-10-01: Chicago Cubs activated RHP Jayden Murray.",
-      "League tx: 2026-10-01: Cleveland Guardians signed free agent LHP Elian Vasquez to a minor league contract.",
-      "League tx: 2026-10-01: Chicago Cubs activated CF Justin Dean.",
-      "League tx: 2026-10-01: UT Bradeon MacKay assigned to High School Workout.",
-      "League tx: 2026-10-01: Houston Astros activated CF Daulton Varsho.",
-      "League tx: 2026-10-01: Milwaukee Brewers signed free agent RHP Orlando Noguera to a minor league contract.",
-      "League tx: 2026-10-01: Boston Red Sox activated RHP Tanner Houck.",
-      "League tx: 2026-10-01: C Kevin Bazzell assigned to Salt River Rafters.",
-      "League tx: 2026-10-01: LF Drew Waters elected free agency.",
-      "League tx: 2026-10-01: Boston Red Sox activated LF Roman Anthony.",
-      "League tx: 2026-10-01: Boston Red Sox activated RHP Tyron Guerrero.",
-      "League tx: 2026-10-01: Houston Astros activated LF Zach Dezenzo.",
-      "League tx: 2026-10-01: RHP Nolan Sparks assigned to Peoria Javelinas.",
-      "League tx: 2026-10-01: Chanwoo Park assigned to High School Workout.",
-      "League tx: 2026-10-01: OF Boston Hanna assigned to High School Workout.",
-      "League tx: 2026-10-01: Chicago Cubs activated 2B James Triantos.",
-      "League tx: 2026-10-01: RHP Michael Rice assigned to High School Workout.",
-      "League tx: 2026-10-01: Chicago Cubs activated RHP Ethan Roberts.",
-      "League tx: 2026-10-01: Chicago Cubs activated RHP Edward Cabrera.",
-      "League tx: 2026-10-01: Chicago Cubs activated DH Kevin Alc\u00e1ntara.",
-      "League tx: 2026-10-01: Chicago Cubs activated RHP Tyler Ferguson.",
-      "League tx: 2026-10-01: SS Orlando Vargas assigned to High School Workout.",
-      "League tx: 2026-10-01: OF Hayden Huntsinger assigned to High School Workout.",
-      "League tx: 2026-10-01: LHP Brody Radwick assigned to High School Workout.",
-      "League tx: 2026-10-01: 2B Nathaniel Sabino assigned to High School Workout.",
-      "League tx: 2026-10-01: RHP Cooper Janke assigned to High School Workout.",
-      "League tx: 2026-10-01: LHP Anthony Iatarola assigned to High School Workout.",
-      "League tx: 2026-10-01: SS Gabriel Gonzalez assigned to High School Workout.",
-      "League tx: 2026-10-01: RHP Ricky Hernandez assigned to High School Workout.",
-      "League tx: 2026-10-01: SS Marcus Davila assigned to High School Workout.",
-      "League tx: 2026-10-01: C Ranses Venero assigned to High School Workout."
+      "League tx: 2026-10-02: Chicago Cubs signed free agent OF Sebastian Zorrilla to a minor league contract.",
+      "League tx: 2026-10-02: Philadelphia Phillies activated RF Gabriel Rincones Jr..",
+      "League tx: 2026-10-02: Philadelphia Phillies activated LHP Brooks Raley.",
+      "League tx: 2026-10-02: ACL Brewers released RHP Caleb Nieman.",
+      "League tx: 2026-10-02: FCL Nationals placed C Francisco Rivero on the restricted list.",
+      "League tx: 2026-10-02: Atlanta Braves signed free agent OF Will Henderson to a minor league contract.",
+      "League tx: 2026-10-02: Philadelphia Phillies activated LHP Kyle Backhus.",
+      "League tx: 2026-10-02: RHP Tanner Rainey elected free agency.",
+      "League tx: 2026-10-02: Philadelphia Phillies activated RHP Grant Holman.",
+      "League tx: 2026-10-02: Chicago Cubs signed free agent 2B Rodelvis Santiesteban to a minor league contract.",
+      "League tx: 2026-10-02: Philadelphia Phillies activated RHP Alan Rangel.",
+      "League tx: 2026-10-02: RHP Jason Alexander elected free agency.",
+      "League tx: 2026-10-02: Chicago Cubs signed free agent RHP Maykoll Jaspe to a minor league contract.",
+      "League tx: 2026-10-02: Philadelphia Phillies activated RHP Mois\u00e9s Chace.",
+      "League tx: 2026-10-02: Philadelphia Phillies activated 2B Luis Arraez.",
+      "League tx: 2026-10-02: Philadelphia Phillies activated RHP Orion Kerkering.",
+      "League tx: 2026-10-02: DSL Astros Orange released RHP Anderson Aguilar.",
+      "League tx: 2026-10-02: Chicago Cubs signed free agent RHP Luis Zapata to a minor league contract.",
+      "League tx: 2026-10-02: Philadelphia Phillies activated CF Kameron Misner.",
+      "League tx: 2026-10-02: Chicago Cubs signed free agent RHP Elvin Cepeda to a minor league contract.",
+      "League tx: 2026-10-02: Chicago Cubs signed free agent LHP Manuel Cordero to a minor league contract.",
+      "League tx: 2026-10-02: Philadelphia Phillies activated RF Colby Thomas.",
+      "League tx: 2026-10-02: Philadelphia Phillies activated LHP Nestor Cortes.",
+      "League tx: 2026-10-02: RHP Corbin Martin elected free agency.",
+      "League tx: 2026-10-02: RHP Roel Ram\u00edrez assigned to El Paso Chihuahuas.",
+      "League tx: 2026-10-02: Philadelphia Phillies activated RHP Andrew Hoffmann.",
+      "League tx: 2026-10-02: RHP Yeriel Santos assigned to Scottsdale Scorpions.",
+      "League tx: 2026-10-02: Philadelphia Phillies activated RHP Max Lazar.",
+      "League tx: 2026-10-02: Milwaukee Brewers activated 1B Andrew Vaughn from the 10-day injured list.",
+      "League tx: 2026-10-02: RHP Orlando Noguera assigned to DSL Brewers Blue.",
+      "League tx: 2026-10-02: Philadelphia Phillies recalled LHP Kyle Backhus from Lehigh Valley IronPigs.",
+      "League tx: 2026-10-02: Philadelphia Phillies recalled RHP Orion Kerkering from Lehigh Valley IronPigs.",
+      "League tx: 2026-10-02: Seattle Mariners claimed 1B Michael Toglia off waivers from Cincinnati Reds.",
+      "League tx: 2026-10-03: OF Will Henderson assigned to FCL Braves.",
+      "League tx: 2026-10-03: RHP Slade Cecconi roster status changed by Cleveland Guardians.",
+      "League tx: 2026-10-03: 2B Alex Freeland roster status changed by Los Angeles Dodgers.",
+      "League tx: 2026-10-03: San Diego Padres placed RHP Walker Buehler on the paternity list.",
+      "League tx: 2026-10-03: Atlanta Braves activated LF Lane Thomas.",
+      "League tx: 2026-10-03: San Diego Padres activated RHP Randy V\u00e1squez.",
+      "League tx: 2026-10-03: SS Parker Boyd assigned to High School Workout.",
+      "League tx: 2026-10-03: 3B Amed Rosario roster status changed by New York Yankees.",
+      "League tx: 2026-10-03: Atlanta Braves activated RHP JR Ritchie.",
+      "League tx: 2026-10-03: SS Luke Williams roster status changed by Atlanta Braves.",
+      "League tx: 2026-10-03: SS John Peck assigned to Scottsdale Scorpions.",
+      "League tx: 2026-10-03: New York Yankees activated LHP Ryan Weathers.",
+      "League tx: 2026-10-03: RHP Huascar Brazob\u00e1n roster status changed by Chicago White Sox.",
+      "League tx: 2026-10-03: C Bo Naylor roster status changed by Milwaukee Brewers.",
+      "League tx: 2026-10-03: LHP Justin Wrobleski roster status changed by Los Angeles Dodgers.",
+      "League tx: 2026-10-03: LF Alex Call roster status changed by Los Angeles Dodgers.",
+      "League tx: 2026-10-03: Los Angeles Dodgers activated DH Josue De Paula."
     ],
-    "transactions_total": 519,
+    "transactions_total": 428,
     "debug": {
       "standings": [
         "rows=30"
       ],
       "schedule": [
-        "games=1"
+        "games=0"
       ],
       "transactions": [
-        "transactions=519"
+        "transactions=428"
       ]
     }
   },
@@ -912,32 +890,32 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-08&hydrate=probablePitcher,team",
-        "status": "verified",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-09&hydrate=probablePitcher,team",
+        "status": "unverified",
         "debug": [
-          "games=1"
+          "games=0"
         ],
-        "verified_count": 1,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Probable: Cleveland Guardians (Parker Messick) @ Chicago White Sox (Hagen Smith) \u2014 In Progress 2026-10-09T00:00:00Z Rate Field"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: No games scheduled in window."
+        ]
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-01&endDate=2026-10-08",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-02&endDate=2026-10-09",
         "status": "verified",
         "debug": [
-          "transactions=519"
+          "transactions=428"
         ],
-        "verified_count": 519,
+        "verified_count": 428,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-10-01: Columbus Clippers activated RHP Rorik Maltrud from the Development List.",
-          "League tx: 2026-10-01: Great Lakes Loons activated RHP Reynaldo Yean from the Development List.",
-          "League tx: 2026-10-01: Houston Astros activated CF Jorge Barrosa.",
-          "League tx: 2026-10-01: LHP Evan Dyett assigned to High School Workout.",
-          "League tx: 2026-10-01: Boston Red Sox activated LHP Jovani Mor\u00e1n."
+          "League tx: 2026-10-02: Chicago Cubs signed free agent OF Sebastian Zorrilla to a minor league contract.",
+          "League tx: 2026-10-02: Philadelphia Phillies activated RF Gabriel Rincones Jr..",
+          "League tx: 2026-10-02: Philadelphia Phillies activated LHP Brooks Raley.",
+          "League tx: 2026-10-02: ACL Brewers released RHP Caleb Nieman.",
+          "League tx: 2026-10-02: FCL Nationals placed C Francisco Rivero on the restricted list."
         ],
         "unverified_sample": []
       },
@@ -955,7 +933,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-08&endDate=2026-10-10&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-09&endDate=2026-10-11&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -968,7 +946,7 @@
         ]
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-01&endDate=2026-10-08",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-02&endDate=2026-10-09",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -994,7 +972,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-08&endDate=2026-10-10&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-09&endDate=2026-10-11&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1007,7 +985,7 @@
         ]
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-01&endDate=2026-10-08",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-02&endDate=2026-10-09",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1033,7 +1011,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-08&endDate=2026-10-10&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-09&endDate=2026-10-11&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1046,7 +1024,7 @@
         ]
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-01&endDate=2026-10-08",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-02&endDate=2026-10-09",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1161,10 +1139,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-10-09T01:09:06Z"
+    "generated_utc": "2026-10-09T10:22:08Z"
   },
   "bd_bets": {
-    "generated_at": "2026-10-09T01:09:10.078Z",
+    "generated_at": "2026-10-09T10:22:10.032Z",
     "slate_date": "2026-10-09",
     "sport": "MLB",
     "source": "bd-bets",
