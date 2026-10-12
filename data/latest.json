@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-12T02:14:44Z",
-  "slate_date": "2026-10-11",
+  "generated_at": "2026-10-12T10:36:39Z",
+  "slate_date": "2026-10-12",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,14 +9,14 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-11&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-04&endDate=2026-10-11",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-11&endDate=2026-10-13&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-04&endDate=2026-10-11",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-11&endDate=2026-10-13&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-04&endDate=2026-10-11",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-11&endDate=2026-10-13&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-04&endDate=2026-10-11"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-12&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-05&endDate=2026-10-12",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-12&endDate=2026-10-14&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-05&endDate=2026-10-12",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-12&endDate=2026-10-14&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-05&endDate=2026-10-12",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-12&endDate=2026-10-14&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-05&endDate=2026-10-12"
   },
   "source_status": {
     "league_standings": "verified",
@@ -44,19 +44,67 @@
     "league_news": {
       "items": [
         {
-          "headline": "LIVE: Brewers score with long ball AND small ball (FOX/FOX One)",
-          "url": "https://www.mlb.com/stories/game/849809",
+          "headline": "Brewers take Game 1 in NLCS rematch against defending champs",
+          "url": "https://www.mlb.com/news/brewers-win-nlcs-game-1-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-12T01:35:39Z",
+          "published_at": "2026-10-12T06:04:00Z",
           "summary": ""
         },
         {
-          "headline": "Why isn't Yelich in Brewers' starting lineup for NLCS Game 1?",
-          "url": "https://www.mlb.com/news/christian-yelich-out-of-starting-lineup-for-game-1-of-nlcs",
+          "headline": "Without best stuff, Miz grinds into the 5th, then Crew's lockdown 'pen takes over",
+          "url": "https://www.mlb.com/news/jacob-misiorowski-dodgers-brewers-nlcs-game-1",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-11T23:20:00Z",
+          "published_at": "2026-10-12T06:37:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Storylines to follow as NLCS rolls on and ALCS gets underway",
+          "url": "https://www.mlb.com/news/2026-alcs-game-1-nlcs-game-2-storylines-to-follow",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-12T03:58:42Z",
+          "summary": ""
+        },
+        {
+          "headline": "With minimal support, Skubal loses steam 2nd time through in NLCS loss to Brewers",
+          "url": "https://www.mlb.com/news/tarik-skubal-start-vs-brewers-in-nlcs-game-1-2026",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-12T05:38:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Late-night work pays off for 'baseball rat' Turang in Game 1 star turn",
+          "url": "https://www.mlb.com/news/brice-turang-homers-off-tarik-skubal-in-nlcs-game-1",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-12T05:51:35Z",
+          "summary": ""
+        },
+        {
+          "headline": "Dodgers feel good with postseason ace Yamamoto set for Game 2",
+          "url": "https://www.mlb.com/news/yoshinobu-yamamoto-to-start-nlcs-game-2-2026-vs-brewers",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-12T05:19:53Z",
+          "summary": ""
+        },
+        {
+          "headline": "Our expert picks for the Guardians-Rays ALCS",
+          "url": "https://www.mlb.com/news/2026-mlb-alcs-picks-guardians-rays",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-12T03:40:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Guardians-Rays ALCS position-by-position breakdown",
+          "url": "https://www.mlb.com/news/guardians-rays-alcs-position-by-position-breakdown",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-11T23:52:47Z",
           "summary": ""
         },
         {
@@ -73,54 +121,6 @@
           "source": "MLB.com",
           "source_type": "rss",
           "published_at": "2026-10-11T23:04:21Z",
-          "summary": ""
-        },
-        {
-          "headline": "After near no-no, Rasmussen has a simple plan for ALCS encore",
-          "url": "https://www.mlb.com/news/drew-rasmussen-alds-lessons-alcs-game-1-2026",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-11T21:57:30Z",
-          "summary": ""
-        },
-        {
-          "headline": "Guardians tab well-traveled Griffin to open ALCS in St. Pete",
-          "url": "https://www.mlb.com/news/foster-griffin-guardians-alcs-game-1-start",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-11T22:42:29Z",
-          "summary": ""
-        },
-        {
-          "headline": "Starting Pitcher Power Rankings: LCS edition",
-          "url": "https://www.mlb.com/news/starting-pitcher-power-rankings-for-2026-league-championship-series",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-11T04:51:22Z",
-          "summary": ""
-        },
-        {
-          "headline": "Dodgers add lefty Wrobleski to NLCS roster, leave off speedster Kim",
-          "url": "https://www.mlb.com/news/dodgers-2026-nlcs-roster",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-11T23:04:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "ALCS rotation matchup: Taxed Guardians vs. well-rested Rays",
-          "url": "https://www.mlb.com/news/how-the-guardians-and-rays-rotations-lineup-for-alcs",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-12T01:30:17Z",
-          "summary": ""
-        },
-        {
-          "headline": "Guardians-Rays ALCS Game 1 FAQ (Mon., 8 ET, TBS/HBO Max)",
-          "url": "https://www.mlb.com/news/guardians-vs-rays-alcs-game-1-starting-lineups-and-pitching-matchup",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-12T00:27:00Z",
           "summary": ""
         }
       ],
@@ -168,7 +168,7 @@
             "url": "https://www.mlb.com/athletics/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-12T01:38:00Z",
+            "published_at": "2026-10-12T02:54:00Z",
             "summary": ""
           },
           {
@@ -247,7 +247,7 @@
             "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-12T01:38:00Z",
+            "published_at": "2026-10-12T02:54:00Z",
             "summary": ""
           },
           {
@@ -354,11 +354,11 @@
             "summary": ""
           },
           {
-            "headline": "LIVE: Watch top prospects in Arizona Fall League action",
+            "headline": "Watch top prospects in Arizona Fall League action",
             "url": "https://www.mlb.com/rockies/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-12T01:38:00Z",
+            "published_at": "2026-10-12T02:54:00Z",
             "summary": ""
           },
           {
@@ -394,12 +394,50 @@
     "news_items": [
       {
         "id": "yahoo_sports-3-1",
-        "headline": "Brice Turang belts home run as Brewers tie Dodgers in NLCS Game 1",
-        "url": "https://sports.yahoo.com/articles/brice-turang-belts-home-run-015625231.html",
+        "headline": "Dodgers have big money, but Brewers, Rays and Guardians have minds to match",
+        "url": "https://sports.yahoo.com/articles/dodgers-big-money-brewers-rays-100726205.html",
         "source": "USA TODAY Sports",
         "source_type": "rss",
-        "published_at": "2026-10-12T01:56:25Z",
-        "summary": "Brice Turang hit a solo home run for the Milwaukee Brewers against Los Angeles Dodgers ace Tarik Skubal in Game 1 of the NLCS.",
+        "published_at": "2026-10-12T10:07:26Z",
+        "summary": "Spending money is only part of the battle. MLB teams need the personnel to win.",
+        "teams": [
+          "brewers",
+          "dodgers",
+          "guardians",
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-2",
+        "headline": "Shaikin: Is there a law that says the Dodgers can&#39;t play small ball?",
+        "url": "https://sports.yahoo.com/articles/shaikin-law-says-dodgers-cant-100000064.html",
+        "source": "LA Times",
+        "source_type": "rss",
+        "published_at": "2026-10-12T10:00:00Z",
+        "summary": "This is postseason baseball, where the best pitchers take center stage and runs are at a premium. Would a stolen base or a sacrifice bunt every so often kill the Dodgers?",
+        "teams": [
+          "athletics",
+          "dodgers"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-3",
+        "headline": "Swanson: Dodgers can forget about a three-peat if they can&#39;t fix their RISP problem",
+        "url": "https://sports.yahoo.com/articles/swanson-dodgers-forget-three-peat-100000702.html",
+        "source": "LA Times",
+        "source_type": "rss",
+        "published_at": "2026-10-12T10:00:00Z",
+        "summary": "The Dodgers have been struggling to get hits with runners in scoring position all season, and it could doom their chances of beating the Brewers in the NLCS.",
         "teams": [
           "athletics",
           "brewers",
@@ -412,14 +450,49 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-2",
-        "headline": "How did Jacob Misiorowski pitch tonight? NLCS Game 1 stats vs Dodgers",
-        "url": "https://sports.yahoo.com/articles/did-jacob-misiorowski-pitch-tonight-015113715.html",
-        "source": "USA TODAY Sports",
+        "id": "yahoo_sports-3-4",
+        "headline": "Yankees news: Turning to the offseason",
+        "url": "https://sports.yahoo.com/articles/yankees-news-turning-offseason-090000524.html",
+        "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-10-12T01:51:13Z",
-        "summary": "The Dodgers got a jump on Jacob Misiorowski in Game 1, forcing the Cy Young favorite to work deep into counts and cutting his night short after throwing X pitches in X innings.",
+        "published_at": "2026-10-12T09:00:00Z",
+        "summary": "ALDS Game 3 and offseason plans; Ideas for free agent signings; Disgruntled fans sound off",
         "teams": [
+          "athletics",
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-2",
+        "headline": "Without best stuff, Miz grinds into the 5th, then Crew's lockdown 'pen takes over",
+        "url": "https://www.mlb.com/news/jacob-misiorowski-dodgers-brewers-nlcs-game-1",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-12T06:37:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-5",
+        "headline": "Dodgers&#39; offense looks as rickety and vulnerable as ever as Shohei Ohtani and Co. lose NLCS Game 1 to the Brewers",
+        "url": "https://sports.yahoo.com/mlb/article/dodgers-offense-looks-as-rickety-and-vulnerable-as-ever-as-shohei-ohtani-and-co-lose-nlcs-game-1-to-the-brewers-062136075.html",
+        "source": "Yahoo Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-12T06:21:36Z",
+        "summary": "The Dodgers have just 2 hits with runners in scoring position in this postseason.",
+        "teams": [
+          "athletics",
+          "brewers",
           "dodgers"
         ],
         "players": [],
@@ -429,30 +502,12 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-3",
-        "headline": "Guardians vs. Rays ALCS preview: Can Jos\u00e9 Ram\u00edrez and Co. keep rolling against No. 1 seed Tampa Bay?",
-        "url": "https://sports.yahoo.com/mlb/article/guardians-vs-rays-alcs-preview-can-jose-ramirez-and-co-keep-rolling-against-no-1-seed-tampa-bay-014049880.html",
-        "source": "Yahoo Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-12T01:40:49Z",
-        "summary": "The ALCS begins Monday with a trip to the World Series on the line.",
-        "teams": [
-          "guardians",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
         "id": "mlb_com-1-1",
-        "headline": "LIVE: Brewers score with long ball AND small ball (FOX/FOX One)",
-        "url": "https://www.mlb.com/stories/game/849809",
+        "headline": "Brewers take Game 1 in NLCS rematch against defending champs",
+        "url": "https://www.mlb.com/news/brewers-win-nlcs-game-1-2026",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-12T01:35:39Z",
+        "published_at": "2026-10-12T06:04:00Z",
         "summary": "",
         "teams": [
           "brewers"
@@ -464,48 +519,30 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-4",
-        "headline": "SnakePit Post-season GDT, #11",
-        "url": "https://sports.yahoo.com/articles/snakepit-post-season-gdt-11-000000918.html",
-        "source": "SB Nation",
+        "id": "mlb_com-1-5",
+        "headline": "Late-night work pays off for 'baseball rat' Turang in Game 1 star turn",
+        "url": "https://www.mlb.com/news/brice-turang-homers-off-tarik-skubal-in-nlcs-game-1",
+        "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-12T00:00:00Z",
-        "summary": "The Guardians completed the come from behind victory to eliminate this year\u2019s version of 2023\u2019s D-backs, and also prove that the Pope is not, in fact, infallible. So we are down to the final four. In the American League, the Rays host the Guardians, with that series getting under way tomorrow. But we begin with [\u2026]",
+        "published_at": "2026-10-12T05:51:35Z",
+        "summary": "",
         "teams": [
-          "athletics",
-          "diamondbacks",
-          "guardians",
-          "rays"
+          "athletics"
         ],
         "players": [],
         "topics": [
           "mlb"
         ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-5",
-        "headline": "NLCS Game 1 open chat",
-        "url": "https://sports.yahoo.com/articles/nlcs-game-1-open-chat-000000955.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-12T00:00:00Z",
-        "summary": "Skubal and Misiorowski face off in game one of the NLCS",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
+        "priority": 1
       },
       {
         "id": "yahoo_sports-3-6",
-        "headline": "Dodgers at Brewers NLCS Game 1 chat",
-        "url": "https://sports.yahoo.com/articles/dodgers-brewers-nlcs-game-1-235300238.html",
-        "source": "SB Nation",
+        "headline": "How Brewers squeezed Dodgers to win torturous NLCS opener: &#39;Gotta love it&#39;",
+        "url": "https://sports.yahoo.com/articles/brewers-squeezed-dodgers-win-torturous-054528839.html",
+        "source": "USA TODAY Sports",
         "source_type": "rss",
-        "published_at": "2026-10-11T23:53:00Z",
-        "summary": "For the second year in a row, the Dodgers and Brewers begin the National League Championship Series in Milwaukee. NLCS Game 1 info",
+        "published_at": "2026-10-12T05:45:28Z",
+        "summary": "Brewers&#39; victory in NLCS Game 1 proved they won&#39;t be pushed around again by Dodgers.",
         "teams": [
           "brewers",
           "dodgers"
@@ -518,14 +555,13 @@
       },
       {
         "id": "yahoo_sports-3-7",
-        "headline": "2026 NLCS Preview/Game 1 thread: Los Angeles Dodgers vs. Milwaukee Brewers",
-        "url": "https://sports.yahoo.com/articles/2026-nlcs-preview-los-angeles-183000457.html",
-        "source": "SB Nation",
+        "headline": "Brewers overcome Jacob Misiorowski&#39;s struggles, rally to steal NLCS Game 1 from the Dodgers",
+        "url": "https://sports.yahoo.com/mlb/article/brewers-overcome-jacob-misiorowskis-struggles-rally-to-steal-nlcs-game-1-from-the-dodgers-054455066.html",
+        "source": "Yahoo Sports",
         "source_type": "rss",
-        "published_at": "2026-10-11T23:52:14Z",
-        "summary": "It\u2019s a rematch of last year\u2019s NLCS when the Dodgers swept in four, only this time Milwaukee has The Miz in Cy Young form",
+        "published_at": "2026-10-12T05:44:55Z",
+        "summary": "A big hit from Brice Turang and a shutdown bullpen performance led the way for Milwaukee in Game 1.",
         "teams": [
-          "athletics",
           "brewers",
           "dodgers"
         ],
@@ -536,31 +572,12 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-8",
-        "headline": "NLCS Game Discussion for Dodgers vs Brewers Sunday Night",
-        "url": "https://sports.yahoo.com/articles/nlcs-game-discussion-dodgers-vs-235000201.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-11T23:50:00Z",
-        "summary": "The first step to seeing who represents the National League in the World Series begins Sunday night in Milwaukee. Can the Brewers finally break the stranglehold that the Dodgers have had on the NL the past 2 seasons? We\u2019ll begin the discovery process Sunday night as first pitch is scheduled for 7pm central time. Game [\u2026]",
-        "teams": [
-          "athletics",
-          "brewers",
-          "dodgers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-2",
-        "headline": "Why isn't Yelich in Brewers' starting lineup for NLCS Game 1?",
-        "url": "https://www.mlb.com/news/christian-yelich-out-of-starting-lineup-for-game-1-of-nlcs",
+        "id": "mlb_com-1-4",
+        "headline": "With minimal support, Skubal loses steam 2nd time through in NLCS loss to Brewers",
+        "url": "https://www.mlb.com/news/tarik-skubal-start-vs-brewers-in-nlcs-game-1-2026",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-11T23:20:00Z",
+        "published_at": "2026-10-12T05:38:00Z",
         "summary": "",
         "teams": [
           "brewers"
@@ -572,48 +589,33 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-3",
-        "headline": "5 years after Rays stole Caminero from Guards, the question remains: HOW?",
-        "url": "https://www.mlb.com/news/junior-caminero-facing-team-that-traded-him-to-rays-in-2026-alcs",
-        "source": "MLB.com",
+        "id": "yahoo_sports-3-8",
+        "headline": "Will Smith is in a slump, but benching him isn&#39;t an option for Dodgers",
+        "url": "https://sports.yahoo.com/articles/smith-slump-benching-him-isnt-053027969.html",
+        "source": "LA Times",
         "source_type": "rss",
-        "published_at": "2026-10-11T23:08:00Z",
-        "summary": "",
+        "published_at": "2026-10-12T05:30:27Z",
+        "summary": "Will Smith&#39;s vital contributions at catcher mean the Dodgers can&#39;t afford to bench him even though he has struggled mightily at the plate this postseason.",
         "teams": [
-          "rays"
+          "athletics",
+          "dodgers"
         ],
         "players": [],
         "topics": [
           "mlb"
         ],
-        "priority": 1
+        "priority": 2
       },
       {
-        "id": "mlb_com-1-4",
-        "headline": "Ram\u00edrez relishing another chance to carry Guardians to World Series berth",
-        "url": "https://www.mlb.com/news/jose-ramirez-has-chance-to-reach-world-series-for-second-time",
+        "id": "mlb_com-1-6",
+        "headline": "Dodgers feel good with postseason ace Yamamoto set for Game 2",
+        "url": "https://www.mlb.com/news/yoshinobu-yamamoto-to-start-nlcs-game-2-2026-vs-brewers",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-11T23:04:21Z",
+        "published_at": "2026-10-12T05:19:53Z",
         "summary": "",
         "teams": [
-          "guardians"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-8",
-        "headline": "Dodgers add lefty Wrobleski to NLCS roster, leave off speedster Kim",
-        "url": "https://www.mlb.com/news/dodgers-2026-nlcs-roster",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-11T23:04:00Z",
-        "summary": "",
-        "teams": [
+          "athletics",
           "dodgers"
         ],
         "players": [],
@@ -623,29 +625,12 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-6",
-        "headline": "Guardians tab well-traveled Griffin to open ALCS in St. Pete",
-        "url": "https://www.mlb.com/news/foster-griffin-guardians-alcs-game-1-start",
+        "id": "mlb_com-1-3",
+        "headline": "Storylines to follow as NLCS rolls on and ALCS gets underway",
+        "url": "https://www.mlb.com/news/2026-alcs-game-1-nlcs-game-2-storylines-to-follow",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-11T22:42:29Z",
-        "summary": "",
-        "teams": [
-          "guardians"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-5",
-        "headline": "After near no-no, Rasmussen has a simple plan for ALCS encore",
-        "url": "https://www.mlb.com/news/drew-rasmussen-alds-lessons-alcs-game-1-2026",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-11T21:57:30Z",
+        "published_at": "2026-10-12T03:58:42Z",
         "summary": "",
         "teams": [
           "athletics"
@@ -658,13 +643,34 @@
       },
       {
         "id": "mlb_com-1-7",
-        "headline": "Starting Pitcher Power Rankings: LCS edition",
-        "url": "https://www.mlb.com/news/starting-pitcher-power-rankings-for-2026-league-championship-series",
+        "headline": "Our expert picks for the Guardians-Rays ALCS",
+        "url": "https://www.mlb.com/news/2026-mlb-alcs-picks-guardians-rays",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-11T04:51:22Z",
+        "published_at": "2026-10-12T03:40:00Z",
         "summary": "",
-        "teams": [],
+        "teams": [
+          "guardians",
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-8",
+        "headline": "Guardians-Rays ALCS position-by-position breakdown",
+        "url": "https://www.mlb.com/news/guardians-rays-alcs-position-by-position-breakdown",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-11T23:52:47Z",
+        "summary": "",
+        "teams": [
+          "guardians",
+          "rays"
+        ],
         "players": [],
         "topics": [
           "mlb"
@@ -676,20 +682,38 @@
   "scoreboard": {
     "games": [
       {
-        "id": "849809",
+        "id": "849812",
         "away_team": "Los Angeles Dodgers",
         "home_team": "Milwaukee Brewers",
-        "away_score": 1,
-        "home_score": 2,
-        "status": "Live",
-        "status_detail": "In Progress",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
         "inning": null,
         "inning_state": "",
-        "start_time": "2026-10-12T00:00:00Z",
+        "start_time": "2026-10-12T21:00:00Z",
         "venue": "American Family Field",
         "probable_pitchers": {
-          "away": "Tarik Skubal",
-          "home": "Jacob Misiorowski"
+          "away": "Yoshinobu Yamamoto",
+          "home": "Logan Henderson"
+        },
+        "broadcasts": []
+      },
+      {
+        "id": "849820",
+        "away_team": "Cleveland Guardians",
+        "home_team": "Tampa Bay Rays",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
+        "inning": null,
+        "inning_state": "",
+        "start_time": "2026-10-13T00:00:00Z",
+        "venue": "Tropicana Field",
+        "probable_pitchers": {
+          "away": "Foster Griffin",
+          "home": "Drew Rasmussen"
         },
         "broadcasts": []
       }
@@ -714,66 +738,68 @@
       "Standings: Guardians: 85-77 (PCT .525, GB -) [Division]",
       "Standings: White Sox: 84-78 (PCT .519, GB 1.0) [Division]",
       "Standings: Twins: 77-85 (PCT .475, GB 8.0) [Division]",
-      "Probable: Los Angeles Dodgers (Tarik Skubal) @ Milwaukee Brewers (Jacob Misiorowski) \u2014 In Progress 2026-10-12T00:00:00Z American Family Field"
+      "Probable: Los Angeles Dodgers (Yoshinobu Yamamoto) @ Milwaukee Brewers (Logan Henderson) \u2014 Scheduled 2026-10-12T21:00:00Z American Family Field",
+      "Probable: Cleveland Guardians (Foster Griffin) @ Tampa Bay Rays (Drew Rasmussen) \u2014 Scheduled 2026-10-13T00:00:00Z Tropicana Field"
     ],
     "unverified_notes": [],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: Los Angeles Dodgers (Tarik Skubal) @ Milwaukee Brewers (Jacob Misiorowski) \u2014 In Progress 2026-10-12T00:00:00Z American Family Field"
+      "Probable: Los Angeles Dodgers (Yoshinobu Yamamoto) @ Milwaukee Brewers (Logan Henderson) \u2014 Scheduled 2026-10-12T21:00:00Z American Family Field",
+      "Probable: Cleveland Guardians (Foster Griffin) @ Tampa Bay Rays (Drew Rasmussen) \u2014 Scheduled 2026-10-13T00:00:00Z Tropicana Field"
     ],
     "transactions": [
-      "League tx: 2026-10-05: RHP Anthony Linares assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Kevin Roque assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Kevin McCormick assigned to College Workout.",
-      "League tx: 2026-10-05: Gavin Gargiulo assigned to College Workout.",
-      "League tx: 2026-10-05: OF Thomas Velardi assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Gavin Meyer assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Dylan He assigned to College Workout.",
       "League tx: 2026-10-05: C Andrew Prieto assigned to College Workout.",
-      "League tx: 2026-10-05: OF Keenan Jabeth assigned to College Workout.",
-      "League tx: 2026-10-05: ACL Dodgers activated RHP Samuel Savinon from the 7-day injured list.",
+      "League tx: 2026-10-05: RHP Dylan He assigned to College Workout.",
+      "League tx: 2026-10-05: RHP Conner McAfee assigned to College Workout.",
+      "League tx: 2026-10-05: OF Thomas Velardi assigned to College Workout.",
+      "League tx: 2026-10-05: RHP Jesus Moreno assigned to College Workout.",
+      "League tx: 2026-10-05: OF George Pardo assigned to College Workout.",
+      "League tx: 2026-10-05: LHP Sterling Bass assigned to College Workout.",
+      "League tx: 2026-10-05: OF Darian Collins assigned to College Workout.",
+      "League tx: 2026-10-05: SS Andy Perez assigned to College Workout.",
+      "League tx: 2026-10-05: C Griffin Pomper assigned to College Workout.",
+      "League tx: 2026-10-05: OF Yail Nater assigned to College Workout.",
+      "League tx: 2026-10-05: LHP Gabe Gener assigned to College Workout.",
+      "League tx: 2026-10-05: 2B Chase Conti assigned to College Workout.",
+      "League tx: 2026-10-05: 1B Steel Mientkiewicz assigned to College Workout.",
+      "League tx: 2026-10-05: RHP Gavin Meyer assigned to College Workout.",
+      "League tx: 2026-10-05: Texas Rangers signed free agent RHP Adrian Solorzano to a minor league contract.",
+      "League tx: 2026-10-05: RHP Jason Vazquez assigned to College Workout.",
+      "League tx: 2026-10-05: DSL Phillies activated RHP Hua Ho from the restricted list.",
+      "League tx: 2026-10-05: 3B Erick Martinez assigned to College Workout.",
+      "League tx: 2026-10-05: RHP Ronald Causby assigned to College Workout.",
+      "League tx: 2026-10-05: RHP Seth Martinez elected free agency.",
+      "League tx: 2026-10-05: C Aramis Garcia elected free agency.",
+      "League tx: 2026-10-05: Gavin Gargiulo assigned to College Workout.",
+      "League tx: 2026-10-05: RHP Kevin McCormick assigned to College Workout.",
+      "League tx: 2026-10-05: OF Calin Heath assigned to College Workout.",
+      "League tx: 2026-10-05: 1B Jack Reimann assigned to College Workout.",
+      "League tx: 2026-10-05: SS Miguel Gonzalez assigned to College Workout.",
+      "League tx: 2026-10-05: Oklahoma City Comets activated RHP Nick Robertson from the Development List.",
+      "League tx: 2026-10-05: Breylynn Courtney assigned to College Workout.",
+      "League tx: 2026-10-05: Texas Rangers signed free agent LHP Luis Gonzalez to a minor league contract.",
+      "League tx: 2026-10-05: 3B Jack Lonneman assigned to College Workout.",
+      "League tx: 2026-10-05: C JJ Baysinger assigned to College Workout.",
+      "League tx: 2026-10-05: RHP Nick DeLucia assigned to College Workout.",
+      "League tx: 2026-10-05: RHP Colton Beard assigned to College Workout.",
       "League tx: 2026-10-05: C Nick Adrian assigned to College Workout.",
+      "League tx: 2026-10-05: Atlanta Braves signed free agent RHP Logan Cummins to a minor league contract.",
+      "League tx: 2026-10-05: 2B Michael Greenberg assigned to College Workout.",
       "League tx: 2026-10-05: RHP Alec Bashardoust assigned to College Workout.",
       "League tx: 2026-10-05: RHP Axel Duque assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Conner McAfee assigned to College Workout.",
-      "League tx: 2026-10-05: LHP Gabe Gener assigned to College Workout.",
-      "League tx: 2026-10-05: OF Yail Nater assigned to College Workout.",
-      "League tx: 2026-10-05: 3B Luke Doman assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Kaden Howell assigned to College Workout.",
-      "League tx: 2026-10-05: OF Cody Denault assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Brevin Scott assigned to College Workout.",
-      "League tx: 2026-10-05: Rochester Red Wings activated RHP Holden Powell from the Development List.",
-      "League tx: 2026-10-05: RHP Luke Wildes assigned to College Workout.",
-      "League tx: 2026-10-05: OF Jose Correa assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Will Eaton assigned to College Workout.",
-      "League tx: 2026-10-05: C Josh Reiter assigned to College Workout.",
-      "League tx: 2026-10-05: OF James Suarez assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Brad Rohde assigned to College Workout.",
-      "League tx: 2026-10-05: C Noah Morales assigned to College Workout.",
-      "League tx: 2026-10-05: SS JP Espinosa assigned to College Workout.",
-      "League tx: 2026-10-05: 2B Mason Resmondo assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Max Gonzalez assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Aaron Brooks elected free agency.",
-      "League tx: 2026-10-05: C Leo Carrasco assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Austin Monahan assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Andrew Raucci assigned to College Workout.",
-      "League tx: 2026-10-05: SS Miguel Colmenares assigned to College Workout.",
-      "League tx: 2026-10-05: Texas Rangers signed free agent LHP Juan Gonzalez to a minor league contract.",
-      "League tx: 2026-10-05: OF John Lopez assigned to High School Workout.",
-      "League tx: 2026-10-05: 2B Jace Romans assigned to College Workout.",
-      "League tx: 2026-10-05: 1B Jack Muller assigned to College Workout.",
-      "League tx: 2026-10-05: Oklahoma City Comets activated OF Chris Newell from the Development List.",
-      "League tx: 2026-10-05: Rochester Red Wings activated 3B Buddy Kennedy from the 7-day injured list.",
-      "League tx: 2026-10-05: RHP Colton Beard assigned to College Workout.",
-      "League tx: 2026-10-05: C JJ Baysinger assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Jason Vazquez assigned to College Workout.",
-      "League tx: 2026-10-05: RHP Daniel Tartaglia assigned to College Workout.",
+      "League tx: 2026-10-05: OF Cole Carnell assigned to College Workout.",
+      "League tx: 2026-10-05: SS Yeriel Rivera assigned to College Workout.",
+      "League tx: 2026-10-05: 3B Luis Machado assigned to College Workout.",
+      "League tx: 2026-10-05: 1B Ryan Senecal assigned to College Workout.",
+      "League tx: 2026-10-05: UT Cory Banasiak assigned to College Workout.",
+      "League tx: 2026-10-05: SS Ray Yero assigned to College Workout.",
       "League tx: 2026-10-05: RHP JP Glassford assigned to College Workout.",
-      "League tx: 2026-10-05: 1B Jayden Harriel assigned to College Workout.",
+      "League tx: 2026-10-05: LHP Alex Pantoja assigned to High School Workout.",
       "League tx: 2026-10-05: SS Samuel Castro assigned to College Workout.",
-      "League tx: 2026-10-05: SS Ray Yero assigned to College Workout."
+      "League tx: 2026-10-05: 2B Yelserth Ayala assigned to College Workout.",
+      "League tx: 2026-10-05: 1B Jayden Harriel assigned to College Workout."
     ],
     "transactions_total": 376,
     "debug": {
@@ -781,7 +807,7 @@
         "rows=30"
       ],
       "schedule": [
-        "games=1"
+        "games=2"
       ],
       "transactions": [
         "transactions=376"
@@ -912,20 +938,21 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-11&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-12&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
-          "games=1"
+          "games=2"
         ],
-        "verified_count": 1,
+        "verified_count": 2,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Los Angeles Dodgers (Tarik Skubal) @ Milwaukee Brewers (Jacob Misiorowski) \u2014 In Progress 2026-10-12T00:00:00Z American Family Field"
+          "Probable: Los Angeles Dodgers (Yoshinobu Yamamoto) @ Milwaukee Brewers (Logan Henderson) \u2014 Scheduled 2026-10-12T21:00:00Z American Family Field",
+          "Probable: Cleveland Guardians (Foster Griffin) @ Tampa Bay Rays (Drew Rasmussen) \u2014 Scheduled 2026-10-13T00:00:00Z Tropicana Field"
         ],
         "unverified_sample": []
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-04&endDate=2026-10-11",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-05&endDate=2026-10-12",
         "status": "verified",
         "debug": [
           "transactions=376"
@@ -933,11 +960,11 @@
         "verified_count": 376,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-10-05: RHP Anthony Linares assigned to College Workout.",
-          "League tx: 2026-10-05: RHP Kevin Roque assigned to College Workout.",
-          "League tx: 2026-10-05: RHP Kevin McCormick assigned to College Workout.",
-          "League tx: 2026-10-05: Gavin Gargiulo assigned to College Workout.",
-          "League tx: 2026-10-05: OF Thomas Velardi assigned to College Workout."
+          "League tx: 2026-10-05: C Andrew Prieto assigned to College Workout.",
+          "League tx: 2026-10-05: RHP Dylan He assigned to College Workout.",
+          "League tx: 2026-10-05: RHP Conner McAfee assigned to College Workout.",
+          "League tx: 2026-10-05: OF Thomas Velardi assigned to College Workout.",
+          "League tx: 2026-10-05: RHP Jesus Moreno assigned to College Workout."
         ],
         "unverified_sample": []
       },
@@ -955,7 +982,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-11&endDate=2026-10-13&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-12&endDate=2026-10-14&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -968,7 +995,7 @@
         ]
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-04&endDate=2026-10-11",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-05&endDate=2026-10-12",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -994,7 +1021,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-11&endDate=2026-10-13&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-12&endDate=2026-10-14&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1007,7 +1034,7 @@
         ]
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-04&endDate=2026-10-11",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-05&endDate=2026-10-12",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1033,7 +1060,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-11&endDate=2026-10-13&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-12&endDate=2026-10-14&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1046,7 +1073,7 @@
         ]
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-04&endDate=2026-10-11",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-05&endDate=2026-10-12",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1161,10 +1188,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-10-12T02:14:44Z"
+    "generated_utc": "2026-10-12T10:36:39Z"
   },
   "bd_bets": {
-    "generated_at": "2026-10-12T02:14:48.241Z",
+    "generated_at": "2026-10-12T10:36:41.793Z",
     "slate_date": "2026-10-12",
     "sport": "MLB",
     "source": "bd-bets",
