@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-18T05:42:25Z",
-  "slate_date": "2026-10-17",
+  "generated_at": "2026-10-18T16:26:28Z",
+  "slate_date": "2026-10-18",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,14 +9,14 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-17&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-10&endDate=2026-10-17",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-17&endDate=2026-10-19&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-10&endDate=2026-10-17",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-17&endDate=2026-10-19&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-10&endDate=2026-10-17",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-17&endDate=2026-10-19&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-10&endDate=2026-10-17"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-18&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-11&endDate=2026-10-18",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-18&endDate=2026-10-20&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-11&endDate=2026-10-18",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-18&endDate=2026-10-20&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-11&endDate=2026-10-18",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-18&endDate=2026-10-20&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-11&endDate=2026-10-18"
   },
   "source_status": {
     "league_standings": "verified",
@@ -44,19 +44,51 @@
     "league_news": {
       "items": [
         {
+          "headline": "3 storylines to watch in tonight's pivotal ALCS Game 5",
+          "url": "https://www.mlb.com/news/2026-alcs-game-5-storylines",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-18T05:01:38Z",
+          "summary": ""
+        },
+        {
           "headline": "Rays slip past Guards in Game 4 to knot up ALCS",
           "url": "https://www.mlb.com/news/rays-win-alcs-game-4-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-18T04:52:00Z",
+          "published_at": "2026-10-18T06:55:00Z",
           "summary": ""
         },
         {
-          "headline": "Timing couldn't be better for Rays' Big Three to finally deliver",
+          "headline": "Here's where Rays, Guards stand as ALCS resets after Game 4",
+          "url": "https://www.mlb.com/news/takeaways-after-rays-tie-alcs-at-2-with-guardians",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-18T06:49:15Z",
+          "summary": ""
+        },
+        {
+          "headline": "'Three Little Ones' come up big for Rays on this night",
           "url": "https://www.mlb.com/news/junior-caminero-yandy-diaz-jonathan-aranda-lead-rays-in-2026-alcs-game-4",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-18T05:02:00Z",
+          "published_at": "2026-10-18T05:36:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Rays-Guardians ALCS Game 5 (5 ET on TBS/HBO Max)",
+          "url": "https://www.mlb.com/news/rays-vs-guardians-alcs-game-5-starting-lineups-and-pitching-matchup",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-18T06:30:12Z",
+          "summary": ""
+        },
+        {
+          "headline": "With ALCS evened, Guardians look to flush Game 4 and hand ball to Messick",
+          "url": "https://www.mlb.com/news/guardians-lose-game-4-2026-alcs-rays",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-18T06:35:00Z",
           "summary": ""
         },
         {
@@ -65,14 +97,6 @@
           "source": "MLB.com",
           "source_type": "rss",
           "published_at": "2026-10-18T05:16:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "3 storylines to watch in tonight's pivotal ALCS Game 5",
-          "url": "https://www.mlb.com/news/2026-alcs-game-5-storylines",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-18T05:01:38Z",
           "summary": ""
         },
         {
@@ -92,35 +116,11 @@
           "summary": ""
         },
         {
-          "headline": "Will extra rest help or hurt Brewers in World Series?",
-          "url": "https://www.mlb.com/news/impact-of-extra-rest-before-world-series",
+          "headline": "'Just a reliever'? Peralta's two huge outs help Rays even ALCS",
+          "url": "https://www.mlb.com/news/freddy-peralta-relief-appearance-rays-alcs-game-4-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-18T04:03:00Z",
-          "summary": "12 of the past 16 teams to clinch pennant first lost in World Series"
-        },
-        {
-          "headline": "This catchy, viral song has become the theme of the World Series-bound Brewers",
-          "url": "https://www.mlb.com/news/brewers-viral-song-theme-clubhouse-2026-world-series",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-17T14:59:10Z",
-          "summary": ""
-        },
-        {
-          "headline": "Gold Glove finalist nod rewards Simpson's 180 on 'D.' Here's how he did it",
-          "url": "https://www.mlb.com/news/chandler-simpson-discusses-being-2026-al-gold-glove-award-finalist",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-17T02:18:49Z",
-          "summary": ""
-        },
-        {
-          "headline": "Who should Brewers want to face in the World Series?",
-          "url": "https://www.mlb.com/news/brewers-to-face-rays-or-guardians-in-2026-world-series",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-17T01:13:00Z",
+          "published_at": "2026-10-18T06:30:00Z",
           "summary": ""
         }
       ],
@@ -393,12 +393,190 @@
     },
     "news_items": [
       {
-        "id": "mlb_com-1-6",
-        "headline": "Guardians just one part of huge weekend for Ohio sports",
-        "url": "https://www.mlb.com/news/guardians-browns-and-buckeyes-all-play-in-big-ohio-sports-weekend",
+        "id": "yahoo_sports-3-1",
+        "headline": "Red Sox News & Links: NLCS MVP Jake Bauers viewed as potential free agent fit for Red Sox",
+        "url": "https://sports.yahoo.com/articles/red-sox-news-links-nlcs-152649626.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-18T15:26:49Z",
+        "summary": "There are, possibly, only six more MLB games left on the calendar for 2026. Ten at most. Baseball has been a part of our daily lives going back to March. But in a few short weeks it will be gone. Winter will come. And with a looming lockout, there\u2019s no telling how long that winter [\u2026]",
+        "teams": [
+          "athletics",
+          "red sox"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-2",
+        "headline": "Yankees Birthday of the Day: Andy Carey",
+        "url": "https://sports.yahoo.com/articles/yankees-birthday-day-andy-carey-150000689.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-18T15:00:00Z",
+        "summary": "Carey manned the hot corner during some great years in Yankees\u2019 history.",
+        "teams": [
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-3",
+        "headline": "Cubs historical sleuthing: The very first MLB game in Houston",
+        "url": "https://sports.yahoo.com/articles/cubs-historical-sleuthing-very-first-150000788.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-18T15:00:00Z",
+        "summary": "Today, I have a sleuthing assignment for you.",
+        "teams": [
+          "astros",
+          "athletics",
+          "cubs"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-4",
+        "headline": "The Mets got everything they could from Brooks Raley",
+        "url": "https://sports.yahoo.com/articles/mets-got-everything-could-brooks-140000804.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-18T14:00:00Z",
+        "summary": "Raley was a decent lefty, who (some) Mets fans loved.",
+        "teams": [
+          "athletics",
+          "mets"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-5",
+        "headline": "Mariners News: Carlos Mendoza, Junior Caminero, and J.T. Realmuto",
+        "url": "https://sports.yahoo.com/articles/mariners-news-carlos-mendoza-junior-140000222.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-18T14:00:00Z",
+        "summary": "It\u2019s Sunday, and if it\u2019s Sunday, it\u2019s Meet the Links.",
+        "teams": [
+          "mariners"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-6",
+        "headline": "Padres making moves; Prospects making impressions",
+        "url": "https://sports.yahoo.com/articles/padres-making-moves-prospects-making-133500249.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-18T13:35:00Z",
+        "summary": "News to know about your San Diego Padres and MLB for October 18, 2026.",
+        "teams": [
+          "padres"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-7",
+        "headline": "I\u2019m rooting for the Brewers to win the World Series",
+        "url": "https://sports.yahoo.com/articles/m-rooting-brewers-win-world-133000857.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-18T13:30:00Z",
+        "summary": "One Yankees fan\u2019s wishes for the 2026 World Series.",
+        "teams": [
+          "brewers",
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-8",
+        "headline": "Is spending money even a \u201cshortcut\u201d for the Cardinals?",
+        "url": "https://sports.yahoo.com/articles/spending-money-even-shortcut-cardinals-130000741.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-18T13:00:00Z",
+        "summary": "After committing to the rebuild that was staring them in the face for a few seasons, the St. Louis Cardinals kicked off the transition with a solid 2026 campaign. By most accounts, the Cardinals outperformed preseason expectations, but many fans still believe that a successful season ends with at least one game in October. That [\u2026]",
+        "teams": [
+          "athletics",
+          "cardinals"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-2",
+        "headline": "Rays slip past Guards in Game 4 to knot up ALCS",
+        "url": "https://www.mlb.com/news/rays-win-alcs-game-4-2026",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-18T05:35:12Z",
+        "published_at": "2026-10-18T06:55:00Z",
+        "summary": "",
+        "teams": [
+          "athletics",
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-3",
+        "headline": "Here's where Rays, Guards stand as ALCS resets after Game 4",
+        "url": "https://www.mlb.com/news/takeaways-after-rays-tie-alcs-at-2-with-guardians",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-18T06:49:15Z",
+        "summary": "",
+        "teams": [
+          "athletics",
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-6",
+        "headline": "With ALCS evened, Guardians look to flush Game 4 and hand ball to Messick",
+        "url": "https://www.mlb.com/news/guardians-lose-game-4-2026-alcs-rays",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-18T06:35:00Z",
         "summary": "",
         "teams": [
           "guardians"
@@ -411,6 +589,41 @@
       },
       {
         "id": "mlb_com-1-5",
+        "headline": "Rays-Guardians ALCS Game 5 (5 ET on TBS/HBO Max)",
+        "url": "https://www.mlb.com/news/rays-vs-guardians-alcs-game-5-starting-lineups-and-pitching-matchup",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-18T06:30:12Z",
+        "summary": "",
+        "teams": [
+          "guardians",
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-4",
+        "headline": "'Three Little Ones' come up big for Rays on this night",
+        "url": "https://www.mlb.com/news/junior-caminero-yandy-diaz-jonathan-aranda-lead-rays-in-2026-alcs-game-4",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-18T05:36:00Z",
+        "summary": "",
+        "teams": [
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-8",
         "headline": "Halpin's latest playoff moment? Tracking Caminero's 'funky' blast with wild circus catch",
         "url": "https://www.mlb.com/news/petey-halpin-crazy-catch-guardians-alcs-game-4-loss-rays",
         "source": "MLB.com",
@@ -427,7 +640,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-3",
+        "id": "mlb_com-1-7",
         "headline": "Martinez does 'a lot of Nick things' in rewarding Rays' confidence",
         "url": "https://www.mlb.com/news/nick-martinez-allows-1-run-in-2026-alcs-game-4",
         "source": "MLB.com",
@@ -444,24 +657,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-2",
-        "headline": "Timing couldn't be better for Rays' Big Three to finally deliver",
-        "url": "https://www.mlb.com/news/junior-caminero-yandy-diaz-jonathan-aranda-lead-rays-in-2026-alcs-game-4",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-18T05:02:00Z",
-        "summary": "",
-        "teams": [
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-4",
+        "id": "mlb_com-1-1",
         "headline": "3 storylines to watch in tonight's pivotal ALCS Game 5",
         "url": "https://www.mlb.com/news/2026-alcs-game-5-storylines",
         "source": "MLB.com",
@@ -474,221 +670,26 @@
           "mlb"
         ],
         "priority": 1
-      },
-      {
-        "id": "mlb_com-1-1",
-        "headline": "Rays slip past Guards in Game 4 to knot up ALCS",
-        "url": "https://www.mlb.com/news/rays-win-alcs-game-4-2026",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-18T04:52:00Z",
-        "summary": "",
-        "teams": [
-          "athletics",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-7",
-        "headline": "Will extra rest help or hurt Brewers in World Series?",
-        "url": "https://www.mlb.com/news/impact-of-extra-rest-before-world-series",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-18T04:03:00Z",
-        "summary": "12 of the past 16 teams to clinch pennant first lost in World Series",
-        "teams": [
-          "athletics",
-          "brewers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-1",
-        "headline": "Braves News: Briggs McKenzie, ALCS, more",
-        "url": "https://sports.yahoo.com/articles/braves-news-briggs-mckenzie-alcs-040100089.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-18T04:01:00Z",
-        "summary": "Atlanta Braves news and notes from Saturday",
-        "teams": [
-          "braves"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-2",
-        "headline": "Padres sign international free agent to minor-league deal",
-        "url": "https://sports.yahoo.com/articles/padres-sign-international-free-agent-030000674.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-18T03:00:00Z",
-        "summary": "What are San Diego\u2019s plans for the signing?",
-        "teams": [
-          "padres"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-3",
-        "headline": "Arizona Fall League: week two",
-        "url": "https://sports.yahoo.com/articles/arizona-fall-league-week-two-021500545.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-18T02:15:00Z",
-        "summary": "Javelinas sit in fourth place",
-        "teams": [
-          "athletics",
-          "diamondbacks"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-4",
-        "headline": "10 things to know about the Brewers before they play for their first World Series title",
-        "url": "https://sports.yahoo.com/mlb/article/10-things-to-know-about-the-brewers-before-they-play-for-their-first-world-series-title-014501866.html",
-        "source": "Yahoo Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-18T01:45:01Z",
-        "summary": "The Brewers have won 110 games since Opening Day. They want to win four more.",
-        "teams": [
-          "brewers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-5",
-        "headline": "Former Cy Young winner questions Dodgers pitch selections in NLCS",
-        "url": "https://sports.yahoo.com/articles/former-cy-young-winner-questions-003443447.html",
-        "source": "NY Post Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-18T00:34:43Z",
-        "summary": "John Smoltz got a firsthand look at the Dodgers\u2019 collapse in the National League Championship Series. On the call with play-by-play announcer Joe Davis, the former Cy Young winner watched...",
-        "teams": [
-          "dodgers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-6",
-        "headline": "ALCS Game 4 Open Thread, 8 ET",
-        "url": "https://sports.yahoo.com/articles/alcs-game-4-open-thread-000000352.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-18T00:00:00Z",
-        "summary": "Where the Guardians, surprisingly, are up 3-1 on the Rays.",
-        "teams": [
-          "guardians",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-7",
-        "headline": "SnakePit Post-season GDT, #15a",
-        "url": "https://sports.yahoo.com/articles/snakepit-post-season-gdt-15a-000000785.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-18T00:00:00Z",
-        "summary": "Let\u2019s try this again, shall we? Here\u2019s a note from samath on what we\u2019re heading towards in next week\u2019s World Series. Whoever advances out of the AL, we\u2019re already guaranteed some all-time drought-busting. A Brewers-Rays World Series would feature two teams who have never won! That would be the first time that\u2019s happened since the [\u2026]",
-        "teams": [
-          "athletics",
-          "brewers",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-8",
-        "headline": "Dodgers fan favorite acknowledges potential final season with LA in message: \u2018If this is it for us\u2019",
-        "url": "https://sports.yahoo.com/articles/dodgers-fan-favorite-acknowledges-potential-235146962.html",
-        "source": "NY Post Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-17T23:51:46Z",
-        "summary": "Kik\u00e9 Hernandez may have played his final game with the Dodgers. The fan favorite acknowledged the uncertain future he faces as he enters free agency in an Instagram post in...",
-        "teams": [
-          "athletics",
-          "dodgers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-8",
-        "headline": "This catchy, viral song has become the theme of the World Series-bound Brewers",
-        "url": "https://www.mlb.com/news/brewers-viral-song-theme-clubhouse-2026-world-series",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-17T14:59:10Z",
-        "summary": "",
-        "teams": [
-          "athletics",
-          "brewers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
       }
     ]
   },
   "scoreboard": {
     "games": [
       {
-        "id": "849816",
+        "id": "849817",
         "away_team": "Tampa Bay Rays",
         "home_team": "Cleveland Guardians",
-        "away_score": 7,
-        "home_score": 3,
-        "status": "Final",
-        "status_detail": "Final",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
         "inning": null,
         "inning_state": "",
-        "start_time": "2026-10-18T00:08:00Z",
+        "start_time": "2026-10-18T21:08:00Z",
         "venue": "Progressive Field",
         "probable_pitchers": {
-          "away": "Nick Martinez",
-          "home": "Shawn Armstrong"
+          "away": "Drew Rasmussen",
+          "home": "Parker Messick"
         },
         "broadcasts": []
       }
@@ -713,14 +714,14 @@
       "Standings: Guardians: 85-77 (PCT .525, GB -) [Division]",
       "Standings: White Sox: 84-78 (PCT .519, GB 1.0) [Division]",
       "Standings: Twins: 77-85 (PCT .475, GB 8.0) [Division]",
-      "Probable: Tampa Bay Rays (Nick Martinez) @ Cleveland Guardians (Shawn Armstrong) \u2014 Final 2026-10-18T00:08:00Z Progressive Field"
+      "Probable: Tampa Bay Rays (Drew Rasmussen) @ Cleveland Guardians (Parker Messick) \u2014 Scheduled 2026-10-18T21:08:00Z Progressive Field"
     ],
     "unverified_notes": [],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: Tampa Bay Rays (Nick Martinez) @ Cleveland Guardians (Shawn Armstrong) \u2014 Final 2026-10-18T00:08:00Z Progressive Field"
+      "Probable: Tampa Bay Rays (Drew Rasmussen) @ Cleveland Guardians (Parker Messick) \u2014 Scheduled 2026-10-18T21:08:00Z Progressive Field"
     ],
     "transactions": [
       "League tx: 2026-10-11: Norfolk Tides activated LHP Jayvien Sandridge from the 60-day injured list.",
@@ -774,7 +775,7 @@
       "League tx: 2026-10-12: SS Luis Sardinas assigned to Navegantes del Magallanes.",
       "League tx: 2026-10-12: 2B Cooper Kinney assigned to Navegantes del Magallanes."
     ],
-    "transactions_total": 997,
+    "transactions_total": 1000,
     "debug": {
       "standings": [
         "rows=30"
@@ -783,7 +784,7 @@
         "games=1"
       ],
       "transactions": [
-        "transactions=997"
+        "transactions=1000"
       ]
     }
   },
@@ -911,7 +912,7 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-17&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-18&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
           "games=1"
@@ -919,17 +920,17 @@
         "verified_count": 1,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Tampa Bay Rays (Nick Martinez) @ Cleveland Guardians (Shawn Armstrong) \u2014 Final 2026-10-18T00:08:00Z Progressive Field"
+          "Probable: Tampa Bay Rays (Drew Rasmussen) @ Cleveland Guardians (Parker Messick) \u2014 Scheduled 2026-10-18T21:08:00Z Progressive Field"
         ],
         "unverified_sample": []
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-10&endDate=2026-10-17",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-11&endDate=2026-10-18",
         "status": "verified",
         "debug": [
-          "transactions=997"
+          "transactions=1000"
         ],
-        "verified_count": 997,
+        "verified_count": 1000,
         "unverified_count": 0,
         "verified_sample": [
           "League tx: 2026-10-11: Norfolk Tides activated LHP Jayvien Sandridge from the 60-day injured list.",
@@ -954,7 +955,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-17&endDate=2026-10-19&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-18&endDate=2026-10-20&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -967,7 +968,7 @@
         ]
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-10&endDate=2026-10-17",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-11&endDate=2026-10-18",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -993,7 +994,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-17&endDate=2026-10-19&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-18&endDate=2026-10-20&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1006,7 +1007,7 @@
         ]
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-10&endDate=2026-10-17",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-11&endDate=2026-10-18",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1032,7 +1033,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-17&endDate=2026-10-19&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-18&endDate=2026-10-20&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1045,7 +1046,7 @@
         ]
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-10&endDate=2026-10-17",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-11&endDate=2026-10-18",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1160,10 +1161,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-10-18T05:42:25Z"
+    "generated_utc": "2026-10-18T16:26:28Z"
   },
   "bd_bets": {
-    "generated_at": "2026-10-18T05:42:29.290Z",
+    "generated_at": "2026-10-18T16:26:31.869Z",
     "slate_date": "2026-10-18",
     "sport": "MLB",
     "source": "bd-bets",
