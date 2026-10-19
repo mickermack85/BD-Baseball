@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T22:58:25Z",
+  "generated_at": "2026-10-19T01:02:43Z",
   "slate_date": "2026-10-18",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
@@ -44,11 +44,11 @@
     "league_news": {
       "items": [
         {
-          "headline": "LIVE: Rays get off to hot start in Game 5 (TBS/HBO Max)",
-          "url": "https://www.mlb.com/stories/game/849817",
+          "headline": "Behind Rasmussen gem, rejuvenated Rays return home 1 win from World Series",
+          "url": "https://www.mlb.com/news/rays-win-alcs-game-5-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-18T22:04:43Z",
+          "published_at": "2026-10-19T00:22:00Z",
           "summary": ""
         },
         {
@@ -60,11 +60,11 @@
           "summary": "12 of the past 16 teams to clinch pennant first lost in World Series"
         },
         {
-          "headline": "Guardians just one part of huge weekend for Ohio sports",
-          "url": "https://www.mlb.com/news/guardians-browns-and-buckeyes-all-play-in-big-ohio-sports-weekend",
+          "headline": "Rasmussen adds to historic postseason as Rays go home with ALCS lead",
+          "url": "https://www.mlb.com/news/drew-rasmussen-dominates-as-rays-win-game-5-of-2026-alcs",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-18T05:35:12Z",
+          "published_at": "2026-10-19T00:08:36Z",
           "summary": ""
         },
         {
@@ -72,7 +72,7 @@
           "url": "https://www.mlb.com/news/parker-messick-two-innings-guardians-game-5-alcs",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-18T22:37:24Z",
+          "published_at": "2026-10-19T00:06:00Z",
           "summary": ""
         },
         {
@@ -120,7 +120,7 @@
           "url": "https://www.mlb.com/news/2026-mlb-playoff-and-world-series-schedule",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-18T20:42:00Z",
+          "published_at": "2026-10-18T23:58:00Z",
           "summary": ""
         }
       ],
@@ -393,15 +393,16 @@
     },
     "news_items": [
       {
-        "id": "mlb_com-1-4",
-        "headline": "Messick struggles with command as Game 5 becomes shortest start of career",
-        "url": "https://www.mlb.com/news/parker-messick-two-innings-guardians-game-5-alcs",
+        "id": "mlb_com-1-1",
+        "headline": "Behind Rasmussen gem, rejuvenated Rays return home 1 win from World Series",
+        "url": "https://www.mlb.com/news/rays-win-alcs-game-5-2026",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-18T22:37:24Z",
+        "published_at": "2026-10-19T00:22:00Z",
         "summary": "",
         "teams": [
-          "athletics"
+          "athletics",
+          "rays"
         ],
         "players": [],
         "topics": [
@@ -410,15 +411,33 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-1",
-        "headline": "LIVE: Rays get off to hot start in Game 5 (TBS/HBO Max)",
-        "url": "https://www.mlb.com/stories/game/849817",
+        "id": "mlb_com-1-3",
+        "headline": "Rasmussen adds to historic postseason as Rays go home with ALCS lead",
+        "url": "https://www.mlb.com/news/drew-rasmussen-dominates-as-rays-win-game-5-of-2026-alcs",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-18T22:04:43Z",
+        "published_at": "2026-10-19T00:08:36Z",
         "summary": "",
         "teams": [
+          "athletics",
           "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-4",
+        "headline": "Messick struggles with command as Game 5 becomes shortest start of career",
+        "url": "https://www.mlb.com/news/parker-messick-two-innings-guardians-game-5-alcs",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-19T00:06:00Z",
+        "summary": "",
+        "teams": [
+          "athletics"
         ],
         "players": [],
         "topics": [
@@ -604,23 +623,6 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-3",
-        "headline": "Guardians just one part of huge weekend for Ohio sports",
-        "url": "https://www.mlb.com/news/guardians-browns-and-buckeyes-all-play-in-big-ohio-sports-weekend",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-18T05:35:12Z",
-        "summary": "",
-        "teams": [
-          "guardians"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
         "id": "mlb_com-1-2",
         "headline": "Will extra rest help or hurt Brewers in World Series?",
         "url": "https://www.mlb.com/news/impact-of-extra-rest-before-world-series",
@@ -683,8 +685,8 @@
         "home_team": "Cleveland Guardians",
         "away_score": 3,
         "home_score": 1,
-        "status": "Live",
-        "status_detail": "In Progress",
+        "status": "Final",
+        "status_detail": "Final",
         "inning": null,
         "inning_state": "",
         "start_time": "2026-10-18T21:08:00Z",
@@ -716,32 +718,42 @@
       "Standings: Guardians: 85-77 (PCT .525, GB -) [Division]",
       "Standings: White Sox: 84-78 (PCT .519, GB 1.0) [Division]",
       "Standings: Twins: 77-85 (PCT .475, GB 8.0) [Division]",
-      "Probable: Tampa Bay Rays (Drew Rasmussen) @ Cleveland Guardians (Parker Messick) \u2014 In Progress 2026-10-18T21:08:00Z Progressive Field"
+      "Probable: Tampa Bay Rays (Drew Rasmussen) @ Cleveland Guardians (Parker Messick) \u2014 Final 2026-10-18T21:08:00Z Progressive Field"
     ],
     "unverified_notes": [],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: Tampa Bay Rays (Drew Rasmussen) @ Cleveland Guardians (Parker Messick) \u2014 In Progress 2026-10-18T21:08:00Z Progressive Field"
+      "Probable: Tampa Bay Rays (Drew Rasmussen) @ Cleveland Guardians (Parker Messick) \u2014 Final 2026-10-18T21:08:00Z Progressive Field"
     ],
     "transactions": [
       "League tx: 2026-10-11: Norfolk Tides activated LHP Jayvien Sandridge from the 60-day injured list.",
       "League tx: 2026-10-11: SS Hyeseong Kim roster status changed by Los Angeles Dodgers.",
       "League tx: 2026-10-11: Los Angeles Dodgers activated LHP Justin Wrobleski.",
-      "League tx: 2026-10-12: RHP Luis Pati\u00f1o assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: 2B Franklin Barreto assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Ismael Agreda assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: 2B Thairo Estrada assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: LHP Inmer Lobo assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: 3B Jose Gomez assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: SS Tucupita Marcano assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: RHP Manuel Olivares assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-12: RHP Osvaldo Berrios assigned to Navegantes del Magallanes.",
       "League tx: 2026-10-12: RHP Alberto Mota assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: SS Alcides Escobar assigned to Tiburones de La Guaira.",
       "League tx: 2026-10-12: RHP Angel Perez assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RHP Adolfo Oviedo assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: LHP Tommy Vail assigned to Glendale Desert Dogs.",
+      "League tx: 2026-10-12: Cleveland Guardians activated RHP Slade Cecconi.",
+      "League tx: 2026-10-12: SS Javier Rivas assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-12: 2B Diego Velasquez assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: DSL NYY Bombers released RHP Oscar Vasquez.",
+      "League tx: 2026-10-12: CF Carlos Mosquera assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-12: C Angel Reyes assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: Tampa Bay Rays activated RHP Brody Hopkins.",
+      "League tx: 2026-10-12: C Pablo Aliendo assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: LF Breyvic Valera assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: RHP Angel Macuare assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-12: RHP Jhon Romero assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-12: RHP Derek Law elected free agency.",
+      "League tx: 2026-10-12: CF Daniel Schneemann roster status changed by Cleveland Guardians.",
       "League tx: 2026-10-12: RHP Williander Moreno assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: 1B Oswaldo Osorio assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: RHP Jes\u00fas Reyes assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: C Bryant Betancourt assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: C Rafael March\u00e1n assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-12: C Tom\u00e1s Telis assigned to Tiburones de La Guaira.",
       "League tx: 2026-10-12: RHP Emerson Martinez assigned to Tiburones de La Guaira.",
       "League tx: 2026-10-12: 2B Roynier Hernandez assigned to Tiburones de La Guaira.",
       "League tx: 2026-10-12: RHP Luis Martinez assigned to Navegantes del Magallanes.",
@@ -749,35 +761,25 @@
       "League tx: 2026-10-12: RHP Victor Vargas assigned to Navegantes del Magallanes.",
       "League tx: 2026-10-12: 3B Juniel Querecuto assigned to Tiburones de La Guaira.",
       "League tx: 2026-10-12: CF Jorge Barrosa assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Eduardo Paredes assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: CF S\u00edmon Muzziotti assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: SS Damon Dues assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RHP Osvaldo Berrios assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: RHP Douglas Orellana assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-12: OF Asbel Gonzalez assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-12: C Enrique Jimenez assigned to Salt River Rafters.",
+      "League tx: 2026-10-12: LHP Ian Churchill assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-12: RHP Pedro Garcia assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-12: RHP Daniel Corniel assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-12: LHP Felipe V\u00e1zquez assigned to Navegantes del Magallanes.",
       "League tx: 2026-10-12: LHP Garrett Cleavinger roster status changed by Tampa Bay Rays.",
       "League tx: 2026-10-12: RHP Ricardo Pinto assigned to Tiburones de La Guaira.",
       "League tx: 2026-10-12: 3B Yangervis Solarte assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RF Alexander Palma assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Douglas Orellana assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: OF Asbel Gonzalez assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: LHP Caleb Smith assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Amilcar Chirinos assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: LF Daniel Montano assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: LHP Oddanier Mosqueda assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Derek Law elected free agency.",
-      "League tx: 2026-10-12: RHP Angel Macuare assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Henderson Alvarez assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Dillon Tate assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: LHP Ricardo S\u00e1nchez assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RF Oswaldo Arcia assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RHP Enderson Franco assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: OF Jorge Ruiz assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: CF Carlos Mosquera assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: C Angel Reyes assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RHP Jhon Romero assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: OF Alexis Hernandez assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: CF Daniel Schneemann roster status changed by Cleveland Guardians."
+      "League tx: 2026-10-12: 1B Oswaldo Osorio assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: RHP Reid Birlingmair assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: RHP Wilmer Flores assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: 3B Jose Gomez assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: LHP Yohander M\u00e9ndez assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: SS Luis Sardinas assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-12: 2B Cooper Kinney assigned to Navegantes del Magallanes."
     ],
-    "transactions_total": 1048,
+    "transactions_total": 1054,
     "debug": {
       "standings": [
         "rows=30"
@@ -786,7 +788,7 @@
         "games=1"
       ],
       "transactions": [
-        "transactions=1048"
+        "transactions=1054"
       ]
     }
   },
@@ -922,7 +924,7 @@
         "verified_count": 1,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Tampa Bay Rays (Drew Rasmussen) @ Cleveland Guardians (Parker Messick) \u2014 In Progress 2026-10-18T21:08:00Z Progressive Field"
+          "Probable: Tampa Bay Rays (Drew Rasmussen) @ Cleveland Guardians (Parker Messick) \u2014 Final 2026-10-18T21:08:00Z Progressive Field"
         ],
         "unverified_sample": []
       },
@@ -930,16 +932,16 @@
         "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-11&endDate=2026-10-18",
         "status": "verified",
         "debug": [
-          "transactions=1048"
+          "transactions=1054"
         ],
-        "verified_count": 1048,
+        "verified_count": 1054,
         "unverified_count": 0,
         "verified_sample": [
           "League tx: 2026-10-11: Norfolk Tides activated LHP Jayvien Sandridge from the 60-day injured list.",
           "League tx: 2026-10-11: SS Hyeseong Kim roster status changed by Los Angeles Dodgers.",
           "League tx: 2026-10-11: Los Angeles Dodgers activated LHP Justin Wrobleski.",
-          "League tx: 2026-10-12: RHP Luis Pati\u00f1o assigned to Tiburones de La Guaira.",
-          "League tx: 2026-10-12: 2B Franklin Barreto assigned to Tiburones de La Guaira."
+          "League tx: 2026-10-12: SS Tucupita Marcano assigned to Navegantes del Magallanes.",
+          "League tx: 2026-10-12: RHP Manuel Olivares assigned to Tiburones de La Guaira."
         ],
         "unverified_sample": []
       },
@@ -1163,11 +1165,11 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-10-18T22:58:25Z"
+    "generated_utc": "2026-10-19T01:02:43Z"
   },
   "bd_bets": {
-    "generated_at": "2026-10-18T22:58:28.721Z",
-    "slate_date": "2026-10-18",
+    "generated_at": "2026-10-19T01:02:47.808Z",
+    "slate_date": "2026-10-19",
     "sport": "MLB",
     "source": "bd-bets",
     "picks": [],
