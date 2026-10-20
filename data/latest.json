@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-20T05:52:43Z",
-  "slate_date": "2026-10-19",
+  "generated_at": "2026-10-20T17:53:46Z",
+  "slate_date": "2026-10-20",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,18 +9,18 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-19&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-12&endDate=2026-10-19",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-19&endDate=2026-10-21&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-12&endDate=2026-10-19",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-19&endDate=2026-10-21&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-12&endDate=2026-10-19",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-19&endDate=2026-10-21&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-12&endDate=2026-10-19"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-20&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-13&endDate=2026-10-20",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-20&endDate=2026-10-22&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-13&endDate=2026-10-20",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-20&endDate=2026-10-22&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-13&endDate=2026-10-20",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-20&endDate=2026-10-22&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-13&endDate=2026-10-20"
   },
   "source_status": {
     "league_standings": "verified",
-    "league_schedule": "verified",
+    "league_schedule": "unverified",
     "league_transactions": "verified",
     "athletics_standings": "verified",
     "athletics_schedule": "unverified",
@@ -44,6 +44,14 @@
     "league_news": {
       "items": [
         {
+          "headline": "Your cheat sheet for sounding like a World Series expert",
+          "url": "https://www.mlb.com/news/brewers-vs-rays-world-series-preview",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-20T14:35:00Z",
+          "summary": ""
+        },
+        {
           "headline": "Rays finish off Guards to set up World Series clash vs. Crew",
           "url": "https://www.mlb.com/news/rays-win-alcs-2026",
           "source": "MLB.com",
@@ -52,43 +60,19 @@
           "summary": ""
         },
         {
+          "headline": "Why this World Series is unlike any we've seen in some time",
+          "url": "https://www.mlb.com/news/interesting-facts-about-rays-brewers-world-series-matchup",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-20T16:00:00Z",
+          "summary": ""
+        },
+        {
           "headline": "ALCS MVP 'Fastball Freddy' pitches Rays to World Series, where his old team awaits",
           "url": "https://www.mlb.com/news/freddy-peralta-wins-2026-alcs-mvp",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-20T03:24:15Z",
-          "summary": ""
-        },
-        {
-          "headline": "On 18th anniversary of first World Series berth, Rays reach third as AL's best team",
-          "url": "https://www.mlb.com/news/rays-reach-world-series-on-18th-anniversary-of-first-al-pennant",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-20T05:18:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Take your time, Junior! Caminero savors clutch first HR of postseason",
-          "url": "https://www.mlb.com/news/junior-caminero-hits-first-postseason-hr-in-2026-alcs-game-6",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-20T03:15:42Z",
-          "summary": ""
-        },
-        {
-          "headline": "How to sound smart when discussing the World Series matchup",
-          "url": "https://www.mlb.com/news/brewers-vs-rays-world-series-preview",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-20T03:10:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Despite ALCS heartbreak, young cornerstones have Guardians believing 'we\u2019ll be back'",
-          "url": "https://www.mlb.com/news/travis-bazzana-chase-delauter-guardians-young-talent-2026-alcs-loss",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-20T05:45:05Z",
+          "published_at": "2026-10-20T06:30:00Z",
           "summary": ""
         },
         {
@@ -100,28 +84,44 @@
           "summary": ""
         },
         {
-          "headline": "Back to the beginning: Both LCS MVPs face teams they debuted with in Fall Classic",
-          "url": "https://www.mlb.com/news/freddy-peralta-jake-bauers-facing-former-teams-in-world-series",
+          "headline": "'Murph Ball,' heartbreak and the Fall Classic: Frelick and the Crew know who they are",
+          "url": "https://www.mlb.com/news/sal-frelick-ready-for-first-world-series-with-brewers",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-20T05:11:13Z",
+          "published_at": "2026-10-20T14:12:02Z",
           "summary": ""
         },
         {
-          "headline": "Look who's back! Glasnow, Arozarena among Game 6 attendees at Trop",
-          "url": "https://www.mlb.com/news/tyler-glasnow-randy-arozarena-attend-2026-alcs-game-6-at-trop",
+          "headline": "'It hurts': Guards' incredible run ends 2 wins shy of World Series",
+          "url": "https://www.mlb.com/news/guardians-lose-2026-alcs-to-rays",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-20T04:16:00Z",
+          "published_at": "2026-10-20T07:06:48Z",
           "summary": ""
         },
         {
-          "headline": "Caminero's Game 6 HR trot second only ... to one of his own",
-          "url": "https://www.mlb.com/news/the-slowest-home-run-trots-on-record",
+          "headline": "Is Volpe the Yankees' No. 1 option for 2B in 2027?",
+          "url": "https://www.mlb.com/news/anthony-volpe-s-role-with-2027-yankees",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-20T02:47:00Z",
-          "summary": "Since Statcast began tracking in 2015"
+          "published_at": "2026-10-20T14:17:23Z",
+          "summary": ""
+        },
+        {
+          "headline": "Even Uecker would get a kick out of these Brewers fans' stories",
+          "url": "https://www.mlb.com/news/brewers-fans-share-what-world-series-appearance-means-to-them",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-19T16:21:20Z",
+          "summary": ""
+        },
+        {
+          "headline": "Junior's major moment: Caminero savors 1st playoff homer AND strikes familiar pose",
+          "url": "https://www.mlb.com/news/junior-caminero-hits-first-postseason-hr-in-2026-alcs-game-6",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-20T06:09:00Z",
+          "summary": ""
         }
       ],
       "source_health": {
@@ -393,15 +393,187 @@
     },
     "news_items": [
       {
-        "id": "mlb_com-1-6",
-        "headline": "Despite ALCS heartbreak, young cornerstones have Guardians believing 'we\u2019ll be back'",
-        "url": "https://www.mlb.com/news/travis-bazzana-chase-delauter-guardians-young-talent-2026-alcs-loss",
+        "id": "yahoo_sports-3-1",
+        "headline": "Athletics, CBA and everything MLB in between",
+        "url": "https://sports.yahoo.com/articles/athletics-cba-everything-mlb-between-173000712.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-20T17:30:00Z",
+        "summary": "Cardinals on My Time is back for the winter in a little different capacity! With the offseason and winter looking questionable at best and the Cardinals sitting in an awkward spot, I decided to take the opportunity to expand my podcast a little bit. Since writing all things St. Louis Cardinals for the past few [\u2026]",
+        "teams": [
+          "athletics",
+          "cardinals"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-2",
+        "headline": "In Defense of Stephen Vogt",
+        "url": "https://sports.yahoo.com/articles/defense-stephen-vogt-170825787.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-20T17:08:25Z",
+        "summary": "We\u2019ve got a good one. Leave him alone",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-3",
+        "headline": "The Sights and Sounds of 20 Games",
+        "url": "https://sports.yahoo.com/articles/sights-sounds-20-games-170000925.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-20T17:00:00Z",
+        "summary": "Some thoughts and reflections on watching the Yankees in person.",
+        "teams": [
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-4",
+        "headline": "Small-ball Rays and their low payroll are 4 wins from their first World Series title",
+        "url": "https://sports.yahoo.com/articles/small-ball-rays-low-payroll-162701028.html",
+        "source": "NBC Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-20T16:27:01Z",
+        "summary": "The Rays eliminated the Cleveland Guardians in six games by winning three in a row to close out the ALCS.",
+        "teams": [
+          "guardians",
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-5",
+        "headline": "Freddy Peralta earns ALCS MVP award after pitching the Rays into the World Series",
+        "url": "https://sports.yahoo.com/articles/freddy-peralta-earns-alcs-mvp-162213558.html",
+        "source": "NBC Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-20T16:22:13Z",
+        "summary": "Freddy Peralta rode his fastball to the ALCS MVP award.",
+        "teams": [
+          "athletics",
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-6",
+        "headline": "Who are you rooting for in the World Series?",
+        "url": "https://sports.yahoo.com/articles/rooting-world-series-160700300.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-20T16:07:00Z",
+        "summary": "Four days after the Milwaukee Brewers finished off their sweep of the Dodgers in the National League Championship Series, the Tampa Bay Rays on Monday night won their American League Championship Series by dispatching the Cleveland Guardians in Game 6 at Tropicana Field. The Brewers last played in the Fall Classic in 1982, when they [\u2026]",
+        "teams": [
+          "athletics",
+          "brewers",
+          "dodgers",
+          "guardians",
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-3",
+        "headline": "Why this World Series is unlike any we've seen in some time",
+        "url": "https://www.mlb.com/news/interesting-facts-about-rays-brewers-world-series-matchup",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-20T05:45:05Z",
+        "published_at": "2026-10-20T16:00:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-7",
+        "headline": "Ranking the Rockies, 2026: No. 39, Blake Adams",
+        "url": "https://sports.yahoo.com/articles/ranking-rockies-2026-no-39-160000770.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-20T16:00:00Z",
+        "summary": "After uneven production in the farm system, Adams made his lone MLB appearance in August.",
+        "teams": [
+          "rockies"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-8",
+        "headline": "2026 Atlanta Braves Player Review: Aaron Bummer",
+        "url": "https://sports.yahoo.com/articles/2026-atlanta-braves-player-review-160000363.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-20T16:00:00Z",
+        "summary": "There was no bad luck this time around for Aaron Bummer \u2014 just bad results.",
+        "teams": [
+          "athletics",
+          "braves"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-1",
+        "headline": "Your cheat sheet for sounding like a World Series expert",
+        "url": "https://www.mlb.com/news/brewers-vs-rays-world-series-preview",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-20T14:35:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-8",
+        "headline": "Is Volpe the Yankees' No. 1 option for 2B in 2027?",
+        "url": "https://www.mlb.com/news/anthony-volpe-s-role-with-2027-yankees",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-20T14:17:23Z",
         "summary": "",
         "teams": [
-          "guardians"
+          "yankees"
         ],
         "players": [],
         "topics": [
@@ -410,7 +582,57 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-1",
+        "id": "mlb_com-1-6",
+        "headline": "'Murph Ball,' heartbreak and the Fall Classic: Frelick and the Crew know who they are",
+        "url": "https://www.mlb.com/news/sal-frelick-ready-for-first-world-series-with-brewers",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-20T14:12:02Z",
+        "summary": "",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-7",
+        "headline": "'It hurts': Guards' incredible run ends 2 wins shy of World Series",
+        "url": "https://www.mlb.com/news/guardians-lose-2026-alcs-to-rays",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-20T07:06:48Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-4",
+        "headline": "ALCS MVP 'Fastball Freddy' pitches Rays to World Series, where his old team awaits",
+        "url": "https://www.mlb.com/news/freddy-peralta-wins-2026-alcs-mvp",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-20T06:30:00Z",
+        "summary": "",
+        "teams": [
+          "athletics",
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-2",
         "headline": "Rays finish off Guards to set up World Series clash vs. Crew",
         "url": "https://www.mlb.com/news/rays-win-alcs-2026",
         "source": "MLB.com",
@@ -428,61 +650,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-3",
-        "headline": "On 18th anniversary of first World Series berth, Rays reach third as AL's best team",
-        "url": "https://www.mlb.com/news/rays-reach-world-series-on-18th-anniversary-of-first-al-pennant",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-20T05:18:00Z",
-        "summary": "",
-        "teams": [
-          "athletics",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-8",
-        "headline": "Back to the beginning: Both LCS MVPs face teams they debuted with in Fall Classic",
-        "url": "https://www.mlb.com/news/freddy-peralta-jake-bauers-facing-former-teams-in-world-series",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-20T05:11:13Z",
-        "summary": "",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-1",
-        "headline": "&#39;Everything changed&#39; for Freddy Peralta with Rays. His old Brewers mates will find out.",
-        "url": "https://sports.yahoo.com/articles/everything-changed-freddy-peralta-rays-045820228.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-20T04:58:20Z",
-        "summary": "The Brewers traded their ace last winter. Now he&#39;s standing in their way in the World Series.",
-        "teams": [
-          "athletics",
-          "brewers",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-7",
+        "id": "mlb_com-1-5",
         "headline": "This year's World Series champ will be a 1st-time winner ... either way",
         "url": "https://www.mlb.com/news/rays-brewers-each-vying-for-first-world-series-title",
         "source": "MLB.com",
@@ -495,213 +663,11 @@
           "mlb"
         ],
         "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-2",
-        "headline": "Cubs\u2019 Finances Could Be Unsealed in Rooftop Suit Ahead of CBA Fight",
-        "url": "https://sports.yahoo.com/articles/cubs-finances-could-unsealed-rooftop-040100627.html",
-        "source": "Sportico",
-        "source_type": "rss",
-        "published_at": "2026-10-20T04:01:00Z",
-        "summary": "As Wrigley View Rooftop appeals a federal judge\u2019s decision granting summary judgment to its neighbor, the Chicago Cubs, and entering a permanent injunction blocking the rooftop owners from selling tickets to watch games, concerts and other events at Wrigley Field, the two sides are waging another battle with implications that could extend far beyond Wrigleyville. \u2026",
-        "teams": [
-          "athletics",
-          "cubs"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-3",
-        "headline": "Freddy Peralta named ALCS MVP for the Rays",
-        "url": "https://sports.yahoo.com/articles/freddy-peralta-named-alcs-mvp-035714610.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-20T03:57:14Z",
-        "summary": "After Tampa Bay finished off the Cleveland Guardians and punched their ticket to the Fall Classic, the Rays took the stage for the trophy ceremony, and when Kevin Cash announced Freddy Peralta \u2014 who was acquired at the trade deadline from the Mets after a rough start to the year, bought into the Rays adjustments, [\u2026]",
-        "teams": [
-          "athletics",
-          "guardians",
-          "mets",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-4",
-        "headline": "Rays win American League pennant in 7-3 win over Cleveland",
-        "url": "https://sports.yahoo.com/articles/rays-win-american-league-pennant-035045284.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-20T03:50:45Z",
-        "summary": "Yandy D\u00edaz and Junior Caminero blast Tampa Bay to their third World Series as Freddy Peralta earns ALCS MVP",
-        "teams": [
-          "athletics",
-          "guardians",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-5",
-        "headline": "Brewers-Rays World Series inspires both dreams and nightmares around MLB",
-        "url": "https://sports.yahoo.com/articles/brewers-rays-world-series-inspires-034314936.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-20T03:43:14Z",
-        "summary": "Two years after the Dodgers and Yankees met in the World Series, it&#39;s two of baseball&#39;s smallest markets in 2026.",
-        "teams": [
-          "athletics",
-          "brewers",
-          "dodgers",
-          "rays",
-          "yankees"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-2",
-        "headline": "ALCS MVP 'Fastball Freddy' pitches Rays to World Series, where his old team awaits",
-        "url": "https://www.mlb.com/news/freddy-peralta-wins-2026-alcs-mvp",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-20T03:24:15Z",
-        "summary": "",
-        "teams": [
-          "athletics",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-6",
-        "headline": "Peralta, Caminero, D\u00edaz lead Rays to 7-3 win over Guardians and a trip to the World Series",
-        "url": "https://sports.yahoo.com/articles/peralta-caminero-d-az-lead-032047055.html",
-        "source": "NBC Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-20T03:20:47Z",
-        "summary": "Junior Caminero and Yandy D\u00edaz each hit a two-run homer as the Tampa Bay Rays beat the Cleveland Guardians 7-3 in Game 6 of the ALCS to advance to the World Series.",
-        "teams": [
-          "athletics",
-          "guardians",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-7",
-        "headline": "An Early Look at the 2027 Guardians",
-        "url": "https://sports.yahoo.com/articles/early-look-2027-guardians-031647763.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-20T03:16:47Z",
-        "summary": "Turning the page in sorrow",
-        "teams": [
-          "guardians"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-4",
-        "headline": "Take your time, Junior! Caminero savors clutch first HR of postseason",
-        "url": "https://www.mlb.com/news/junior-caminero-hits-first-postseason-hr-in-2026-alcs-game-6",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-20T03:15:42Z",
-        "summary": "",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-8",
-        "headline": "With That, the 2026 Cleveland Guardians Season Comes to a Close",
-        "url": "https://sports.yahoo.com/articles/2026-cleveland-guardians-season-comes-031420755.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-20T03:14:20Z",
-        "summary": "ALCS Game 6: Cleveland Guardians 3 - Tampa Bay Rays 7",
-        "teams": [
-          "athletics",
-          "guardians",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-5",
-        "headline": "How to sound smart when discussing the World Series matchup",
-        "url": "https://www.mlb.com/news/brewers-vs-rays-world-series-preview",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-20T03:10:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
       }
     ]
   },
   "scoreboard": {
-    "games": [
-      {
-        "id": "849815",
-        "away_team": "Cleveland Guardians",
-        "home_team": "Tampa Bay Rays",
-        "away_score": 3,
-        "home_score": 7,
-        "status": "Final",
-        "status_detail": "Final",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-10-20T00:08:00Z",
-        "venue": "Tropicana Field",
-        "probable_pitchers": {
-          "away": "Shawn Armstrong",
-          "home": "Freddy Peralta"
-        },
-        "broadcasts": []
-      }
-    ]
+    "games": []
   },
   "news_status": {
     "league_news": "verified",
@@ -721,78 +687,79 @@
       "Standings: Blue Jays: 79-83 (PCT .488, GB 19.0) [Division]",
       "Standings: Guardians: 85-77 (PCT .525, GB -) [Division]",
       "Standings: White Sox: 84-78 (PCT .519, GB 1.0) [Division]",
-      "Standings: Twins: 77-85 (PCT .475, GB 8.0) [Division]",
-      "Probable: Cleveland Guardians (Shawn Armstrong) @ Tampa Bay Rays (Freddy Peralta) \u2014 Final 2026-10-20T00:08:00Z Tropicana Field"
+      "Standings: Twins: 77-85 (PCT .475, GB 8.0) [Division]"
     ],
-    "unverified_notes": [],
+    "unverified_notes": [
+      "UNVERIFIED: No games scheduled in window."
+    ],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: Cleveland Guardians (Shawn Armstrong) @ Tampa Bay Rays (Freddy Peralta) \u2014 Final 2026-10-20T00:08:00Z Tropicana Field"
+      "UNVERIFIED: No probable matchup entries available."
     ],
     "transactions": [
-      "League tx: 2026-10-12: SS Tucupita Marcano assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RHP Manuel Olivares assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Osvaldo Berrios assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RHP Alberto Mota assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Angel Perez assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: Cleveland Guardians activated RHP Slade Cecconi.",
-      "League tx: 2026-10-12: SS Javier Rivas assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: 2B Diego Velasquez assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: DSL NYY Bombers released RHP Oscar Vasquez.",
-      "League tx: 2026-10-12: CF Carlos Mosquera assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: C Angel Reyes assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: Tampa Bay Rays activated RHP Brody Hopkins.",
-      "League tx: 2026-10-12: C Pablo Aliendo assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: LF Breyvic Valera assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RHP Angel Macuare assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Jhon Romero assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Derek Law elected free agency.",
-      "League tx: 2026-10-12: CF Daniel Schneemann roster status changed by Cleveland Guardians.",
-      "League tx: 2026-10-12: RHP Williander Moreno assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RHP Jes\u00fas Reyes assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: C Bryant Betancourt assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: C Rafael March\u00e1n assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: C Tom\u00e1s Telis assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Emerson Martinez assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: 2B Roynier Hernandez assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Luis Martinez assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RHP Ramon Santos assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Victor Vargas assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: 3B Juniel Querecuto assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: CF Jorge Barrosa assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Douglas Orellana assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: OF Asbel Gonzalez assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: C Enrique Jimenez assigned to Salt River Rafters.",
-      "League tx: 2026-10-12: LHP Ian Churchill assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Pedro Garcia assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Daniel Corniel assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: LHP Felipe V\u00e1zquez assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: LHP Garrett Cleavinger roster status changed by Tampa Bay Rays.",
-      "League tx: 2026-10-12: RHP Ricardo Pinto assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: 3B Yangervis Solarte assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: 1B Oswaldo Osorio assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RHP Reid Birlingmair assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RHP Wilmer Flores assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: 3B Jose Gomez assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: LHP Yohander M\u00e9ndez assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: SS Luis Sardinas assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: 2B Cooper Kinney assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: RF Alexander Palma assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-12: RHP Amilcar Chirinos assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-12: LHP Oddanier Mosqueda assigned to Tiburones de La Guaira."
+      "League tx: 2026-10-13: RHP Will Changarotty assigned to Bravos de Margarita.",
+      "League tx: 2026-10-13: SS Jose Martinez assigned to Bravos de Margarita.",
+      "League tx: 2026-10-13: RHP Chester Pimentel assigned to Tigres de Aragua.",
+      "League tx: 2026-10-13: SS Hern\u00e1n P\u00e9rez assigned to Caribes de Anzoategui.",
+      "League tx: 2026-10-13: SS Jack Lutz assigned to College Workout.",
+      "League tx: 2026-10-13: OF Taylor Casson assigned to College Workout.",
+      "League tx: 2026-10-13: LHP Eduardo Mares assigned to Mayos de Navojoa.",
+      "League tx: 2026-10-13: SS Santiago Gomez assigned to Venados de Mazatlan.",
+      "League tx: 2026-10-13: RHP Victor Morales assigned to Venados de Mazatlan.",
+      "League tx: 2026-10-13: RHP Gerardo Reyes assigned to Charros de Jalisco.",
+      "League tx: 2026-10-13: RHP Hector Perez assigned to Cardenales de Lara.",
+      "League tx: 2026-10-13: RHP Pedro Rodriguez assigned to Aguilas del Zulia.",
+      "League tx: 2026-10-13: C Jhon Gil assigned to Aguilas del Zulia.",
+      "League tx: 2026-10-13: C Spike Magill assigned to College Workout.",
+      "League tx: 2026-10-13: 1B Joey Brenczewski assigned to College Workout.",
+      "League tx: 2026-10-13: LHP Jackson Hoyt assigned to College Workout.",
+      "League tx: 2026-10-13: 3B Ramon Mendoza assigned to Mayos de Navojoa.",
+      "League tx: 2026-10-13: RF Jesus Fabela assigned to Mayos de Navojoa.",
+      "League tx: 2026-10-13: RHP Mario Garcia assigned to Jaguares de Nayarit.",
+      "League tx: 2026-10-13: LHP Jonathan Partida assigned to Jaguares de Nayarit.",
+      "League tx: 2026-10-13: LHP Christian Suarez assigned to Tigres de Aragua.",
+      "League tx: 2026-10-13: OF Christian Morales assigned to Charros de Jalisco.",
+      "League tx: 2026-10-13: RHP Joan Gonzalez assigned to Leones del Caracas.",
+      "League tx: 2026-10-13: C Yasmil Bucce assigned to Aguilas del Zulia.",
+      "League tx: 2026-10-13: LHP Easton Storey assigned to College Workout.",
+      "League tx: 2026-10-13: LHP Austin Weiss assigned to College Workout.",
+      "League tx: 2026-10-13: C Onix Parson assigned to College Workout.",
+      "League tx: 2026-10-13: LHP Jonathan Vargas assigned to Tigres de Aragua.",
+      "League tx: 2026-10-13: RHP Diego Hernandez assigned to Jaguares de Nayarit.",
+      "League tx: 2026-10-13: RHP Adrian De Horta assigned to Aguilas del Zulia.",
+      "League tx: 2026-10-13: 2B Ricardo Cova assigned to Leones del Caracas.",
+      "League tx: 2026-10-13: SS Jes\u00fas Bastidas assigned to Cardenales de Lara.",
+      "League tx: 2026-10-13: SS Ciro Norzagaray assigned to Mayos de Navojoa.",
+      "League tx: 2026-10-13: 2B Samar Leyva assigned to Mayos de Navojoa.",
+      "League tx: 2026-10-13: C Andres Sosa assigned to Naranjeros de Hermosillo.",
+      "League tx: 2026-10-13: RHP Jose Gonzalez assigned to Tigres de Aragua.",
+      "League tx: 2026-10-13: SS Leobaldo Pi\u00f1a assigned to Tigres de Aragua.",
+      "League tx: 2026-10-13: CF Alberth Martinez assigned to Tigres de Aragua.",
+      "League tx: 2026-10-13: SS Michael Wielansky assigned to Charros de Jalisco.",
+      "League tx: 2026-10-13: IF Cristopher Gastelum assigned to Charros de Jalisco.",
+      "League tx: 2026-10-13: C Andr\u00e9s Nolaya assigned to Aguilas del Zulia.",
+      "League tx: 2026-10-13: LHP Luis Valdez assigned to Mayos de Navojoa.",
+      "League tx: 2026-10-13: OF Hector Jacquez assigned to Venados de Mazatlan.",
+      "League tx: 2026-10-13: RHP Jonatan Bernal assigned to Venados de Mazatlan.",
+      "League tx: 2026-10-13: RHP Francisco Rios assigned to Jaguares de Nayarit.",
+      "League tx: 2026-10-13: RHP Luis Pacheco assigned to Tigres de Aragua.",
+      "League tx: 2026-10-13: RHP Leam Mendez assigned to Jaguares de Nayarit.",
+      "League tx: 2026-10-13: IF Jose Angel Cecena assigned to Charros de Jalisco.",
+      "League tx: 2026-10-13: RHP Jonathan Lopez assigned to Charros de Jalisco.",
+      "League tx: 2026-10-13: LHP Brayan Perez assigned to Cardenales de Lara."
     ],
-    "transactions_total": 1057,
+    "transactions_total": 986,
     "debug": {
       "standings": [
         "rows=30"
       ],
       "schedule": [
-        "games=1"
+        "games=0"
       ],
       "transactions": [
-        "transactions=1057"
+        "transactions=987"
       ]
     }
   },
@@ -920,32 +887,32 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-19&hydrate=probablePitcher,team",
-        "status": "verified",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-20&hydrate=probablePitcher,team",
+        "status": "unverified",
         "debug": [
-          "games=1"
+          "games=0"
         ],
-        "verified_count": 1,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Probable: Cleveland Guardians (Shawn Armstrong) @ Tampa Bay Rays (Freddy Peralta) \u2014 Final 2026-10-20T00:08:00Z Tropicana Field"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: No games scheduled in window."
+        ]
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-12&endDate=2026-10-19",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-13&endDate=2026-10-20",
         "status": "verified",
         "debug": [
-          "transactions=1057"
+          "transactions=987"
         ],
-        "verified_count": 1057,
+        "verified_count": 986,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-10-12: SS Tucupita Marcano assigned to Navegantes del Magallanes.",
-          "League tx: 2026-10-12: RHP Manuel Olivares assigned to Tiburones de La Guaira.",
-          "League tx: 2026-10-12: RHP Osvaldo Berrios assigned to Navegantes del Magallanes.",
-          "League tx: 2026-10-12: RHP Alberto Mota assigned to Tiburones de La Guaira.",
-          "League tx: 2026-10-12: RHP Angel Perez assigned to Navegantes del Magallanes."
+          "League tx: 2026-10-13: RHP Will Changarotty assigned to Bravos de Margarita.",
+          "League tx: 2026-10-13: SS Jose Martinez assigned to Bravos de Margarita.",
+          "League tx: 2026-10-13: RHP Chester Pimentel assigned to Tigres de Aragua.",
+          "League tx: 2026-10-13: SS Hern\u00e1n P\u00e9rez assigned to Caribes de Anzoategui.",
+          "League tx: 2026-10-13: SS Jack Lutz assigned to College Workout."
         ],
         "unverified_sample": []
       },
@@ -963,7 +930,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-19&endDate=2026-10-21&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-20&endDate=2026-10-22&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -976,7 +943,7 @@
         ]
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-12&endDate=2026-10-19",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-13&endDate=2026-10-20",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1002,7 +969,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-19&endDate=2026-10-21&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-20&endDate=2026-10-22&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1015,7 +982,7 @@
         ]
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-12&endDate=2026-10-19",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-13&endDate=2026-10-20",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1041,7 +1008,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-19&endDate=2026-10-21&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-20&endDate=2026-10-22&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1054,7 +1021,7 @@
         ]
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-12&endDate=2026-10-19",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-13&endDate=2026-10-20",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1169,10 +1136,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-10-20T05:52:43Z"
+    "generated_utc": "2026-10-20T17:53:46Z"
   },
   "bd_bets": {
-    "generated_at": "2026-10-20T05:52:47.578Z",
+    "generated_at": "2026-10-20T17:53:50.701Z",
     "slate_date": "2026-10-20",
     "sport": "MLB",
     "source": "bd-bets",
