@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-21T01:26:39Z",
-  "slate_date": "2026-10-20",
+  "generated_at": "2026-10-21T08:27:26Z",
+  "slate_date": "2026-10-21",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,14 +9,14 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-20&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-13&endDate=2026-10-20",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-20&endDate=2026-10-22&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-13&endDate=2026-10-20",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-20&endDate=2026-10-22&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-13&endDate=2026-10-20",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-20&endDate=2026-10-22&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-13&endDate=2026-10-20"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-21&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-14&endDate=2026-10-21",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-21&endDate=2026-10-23&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-14&endDate=2026-10-21",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-21&endDate=2026-10-23&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-14&endDate=2026-10-21",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-21&endDate=2026-10-23&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-14&endDate=2026-10-21"
   },
   "source_status": {
     "league_standings": "verified",
@@ -44,12 +44,20 @@
     "league_news": {
       "items": [
         {
-          "headline": "1 World Series certainty: A first-time champion",
-          "url": "https://www.mlb.com/news/rays-brewers-each-vying-for-first-world-series-title",
+          "headline": "Can the Miz get his groove -- and his whiffs -- back?",
+          "url": "https://www.mlb.com/news/can-jacob-misiorowski-find-his-whiffs-in-world-series",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-20T04:48:11Z",
+          "published_at": "2026-10-20T16:58:13Z",
           "summary": ""
+        },
+        {
+          "headline": "How the Brewers might pitch to Caminero in the World Series",
+          "url": "https://www.mlb.com/news/how-teams-are-pitching-to-junior-caminero-in-the-postseason",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-21T02:00:00Z",
+          "summary": "Cleveland overwhelmed Rays slugger with high fastballs in ALCS"
         },
         {
           "headline": "Your cheat sheet for sounding like a World Series expert",
@@ -57,14 +65,6 @@
           "source": "MLB.com",
           "source_type": "rss",
           "published_at": "2026-10-20T14:35:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Why this World Series is unlike any we've seen in some time",
-          "url": "https://www.mlb.com/news/interesting-facts-about-rays-brewers-world-series-matchup",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-20T21:00:00Z",
           "summary": ""
         },
         {
@@ -76,27 +76,35 @@
           "summary": ""
         },
         {
-          "headline": "Back to the beginning: Both LCS MVPs face teams they debuted with in Fall Classic",
-          "url": "https://www.mlb.com/news/freddy-peralta-jake-bauers-facing-former-teams-in-world-series",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-20T05:11:13Z",
-          "summary": ""
-        },
-        {
-          "headline": "Can the Miz get his groove -- and his whiffs -- back?",
-          "url": "https://www.mlb.com/news/can-jacob-misiorowski-find-his-whiffs-in-world-series",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-20T16:58:13Z",
-          "summary": ""
-        },
-        {
           "headline": "Savvy trades, sharp scouting key to construction of this year's World Series rosters",
           "url": "https://www.mlb.com/news/how-the-world-series-teams-were-built-2026",
           "source": "MLB.com",
           "source_type": "rss",
           "published_at": "2026-10-21T00:11:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Woodruff would love World Series roster spot, but understands why it might not happen",
+          "url": "https://www.mlb.com/news/brandon-woodruff-world-series-status",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-21T01:33:59Z",
+          "summary": ""
+        },
+        {
+          "headline": "1 big offseason question for each eliminated postseason team",
+          "url": "https://www.mlb.com/news/offseason-questions-for-eliminated-mlb-postseason-teams",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-21T02:00:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "What Guardians' ALCS loss revealed heading into pivotal offseason",
+          "url": "https://www.mlb.com/news/guardians-take-lessons-from-2026-alcs-elimination",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-21T01:31:50Z",
           "summary": ""
         },
         {
@@ -108,19 +116,11 @@
           "summary": ""
         },
         {
-          "headline": "The wild story of the Brewers' 1st season -- in Seattle",
-          "url": "https://www.mlb.com/news/how-the-seattle-pilots-became-the-milwaukee-brewers",
+          "headline": "1 World Series certainty: A first-time champion",
+          "url": "https://www.mlb.com/news/rays-brewers-each-vying-for-first-world-series-title",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-20T17:05:52Z",
-          "summary": ""
-        },
-        {
-          "headline": "'Murph Ball,' heartbreak and the Fall Classic: Frelick and the Crew know who they are",
-          "url": "https://www.mlb.com/news/sal-frelick-ready-for-first-world-series-with-brewers",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-20T14:12:02Z",
+          "published_at": "2026-10-20T04:48:11Z",
           "summary": ""
         }
       ],
@@ -168,7 +168,7 @@
             "url": "https://www.mlb.com/athletics/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-20T23:28:00Z",
+            "published_at": "2026-10-21T04:49:00Z",
             "summary": ""
           },
           {
@@ -255,7 +255,7 @@
             "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-21T01:20:00Z",
+            "published_at": "2026-10-21T04:49:00Z",
             "summary": ""
           },
           {
@@ -342,7 +342,7 @@
             "url": "https://www.mlb.com/rockies/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-20T23:28:00Z",
+            "published_at": "2026-10-21T04:49:00Z",
             "summary": ""
           },
           {
@@ -393,7 +393,149 @@
     },
     "news_items": [
       {
+        "id": "yahoo_sports-3-1",
+        "headline": "This World Series has no Goliaths but plenty of Davids who play a different brand of baseball",
+        "url": "https://sports.yahoo.com/articles/world-series-no-goliaths-plenty-034601303.html",
+        "source": "NY Post Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-21T03:46:01Z",
+        "summary": "Welcome to the Brewers-Rays World Series, in which, regardless of the result, an organization that scrimps on roster payroll will win its first title.",
+        "teams": [
+          "athletics",
+          "brewers",
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-2",
+        "headline": "Cubs BCB After Dark: Which free agent pitcher is the best fit?",
+        "url": "https://sports.yahoo.com/articles/cubs-bcb-dark-free-agent-034157815.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-21T03:41:57Z",
+        "summary": "The late-night/early-morning spot for Cubs fans asks you to pick between three free agent starters.",
+        "teams": [
+          "athletics",
+          "cubs"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-2",
+        "headline": "How the Brewers might pitch to Caminero in the World Series",
+        "url": "https://www.mlb.com/news/how-teams-are-pitching-to-junior-caminero-in-the-postseason",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-21T02:00:00Z",
+        "summary": "Cleveland overwhelmed Rays slugger with high fastballs in ALCS",
+        "teams": [
+          "athletics",
+          "brewers",
+          "guardians",
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
         "id": "mlb_com-1-7",
+        "headline": "1 big offseason question for each eliminated postseason team",
+        "url": "https://www.mlb.com/news/offseason-questions-for-eliminated-mlb-postseason-teams",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-21T02:00:00Z",
+        "summary": "",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-3",
+        "headline": "Purple Row After Dark: What was your first baseball jersey?",
+        "url": "https://sports.yahoo.com/articles/purple-row-dark-first-baseball-020000191.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-21T02:00:00Z",
+        "summary": "Let\u2019s talk fashion!",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-6",
+        "headline": "Woodruff would love World Series roster spot, but understands why it might not happen",
+        "url": "https://www.mlb.com/news/brandon-woodruff-world-series-status",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-21T01:33:59Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-8",
+        "headline": "What Guardians' ALCS loss revealed heading into pivotal offseason",
+        "url": "https://www.mlb.com/news/guardians-take-lessons-from-2026-alcs-elimination",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-21T01:31:50Z",
+        "summary": "",
+        "teams": [
+          "athletics",
+          "guardians"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-4",
+        "headline": "Mets eye veteran assistant John Mallee for a hitting coach job",
+        "url": "https://sports.yahoo.com/articles/mets-eye-veteran-assistant-john-004819740.html",
+        "source": "NY Post Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-21T00:48:19Z",
+        "summary": "The Mets\u2019 search for instructional help in the hitting department includes a coach with ties to president of baseball operations David Stearns.",
+        "teams": [
+          "athletics",
+          "mets"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-5",
         "headline": "Savvy trades, sharp scouting key to construction of this year's World Series rosters",
         "url": "https://www.mlb.com/news/how-the-world-series-teams-were-built-2026",
         "source": "MLB.com",
@@ -408,7 +550,7 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-1",
+        "id": "yahoo_sports-3-5",
         "headline": "Yankees top prospect Dax Kilby continues surging start in Arizona Fall League",
         "url": "https://sports.yahoo.com/articles/yankees-top-prospect-dax-kilby-000205509.html",
         "source": "SNY",
@@ -427,7 +569,24 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-2",
+        "id": "yahoo_sports-3-6",
+        "headline": "The starting pitcher market rundown, free agency edition",
+        "url": "https://sports.yahoo.com/articles/starting-pitcher-market-rundown-free-000000614.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-21T00:00:00Z",
+        "summary": "No, the Giants won\u2019t be pursuing Tarik Skubal, but who might be good non-Skubal targets?",
+        "teams": [
+          "giants"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-7",
         "headline": "San Diego\u2019s breakout backstop",
         "url": "https://sports.yahoo.com/articles/san-diego-breakout-backstop-000000683.html",
         "source": "SB Nation",
@@ -444,7 +603,7 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-3",
+        "id": "yahoo_sports-3-8",
         "headline": "Recapping the Rays-Guardians 2026 ALCS",
         "url": "https://sports.yahoo.com/articles/recapping-rays-guardians-2026-alcs-220753126.html",
         "source": "SB Nation",
@@ -453,93 +612,6 @@
         "summary": "A quick look at how the Rays got to the World Series",
         "teams": [
           "guardians",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-4",
-        "headline": "Next Mariners manager must be able to solve clubhouse leadership problem",
-        "url": "https://sports.yahoo.com/articles/next-mariners-manager-must-able-213119209.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-20T21:31:19Z",
-        "summary": "New Mariners manager must address the lack of team identity that hurt the 2026 Mariners",
-        "teams": [
-          "mariners"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-3",
-        "headline": "Why this World Series is unlike any we've seen in some time",
-        "url": "https://www.mlb.com/news/interesting-facts-about-rays-brewers-world-series-matchup",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-20T21:00:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-5",
-        "headline": "Does Tarik Skubal want the Mets, what are other options, and what else will the offseason bring? | The Mets Pod",
-        "url": "https://sports.yahoo.com/articles/does-tarik-skubal-want-mets-205717743.html",
-        "source": "SNY",
-        "source_type": "rss",
-        "published_at": "2026-10-20T20:57:17Z",
-        "summary": "Joe DeMayo and guest co-host Chelsea Janes drop the latest episode of The Mets Pod, as Joe and SNY&#39;s MLB Insider go long on Tarik Skubal and the offseason ahead.",
-        "teams": [
-          "athletics",
-          "mets"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-6",
-        "headline": "Mets looking to interview Cubs&#39; John Mallee about joining coaching staff: report",
-        "url": "https://sports.yahoo.com/articles/mets-looking-interview-cubs-john-205409394.html",
-        "source": "SNY",
-        "source_type": "rss",
-        "published_at": "2026-10-20T20:54:09Z",
-        "summary": "The Mets are reportedly interested in interviewing John Mallee about a position on manager Andy Green&#39;s coaching staff.",
-        "teams": [
-          "cubs",
-          "mets"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-7",
-        "headline": "Rays vs. Brewers World Series preview: Who has the edge in matchup of MLB&#39;s 2 best teams?",
-        "url": "https://sports.yahoo.com/mlb/article/rays-vs-brewers-world-series-preview-who-has-the-edge-in-matchup-of-mlbs-2-best-teams-203439201.html",
-        "source": "Yahoo Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-20T20:34:39Z",
-        "summary": "It&#39;s Jacob Misiorowski and the Brewers against Junior Caminero and the Rays beginning Friday in the Fall Classic.",
-        "teams": [
-          "athletics",
-          "brewers",
           "rays"
         ],
         "players": [],
@@ -566,43 +638,7 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-8",
-        "headline": "What will Yohandy Morales\u2019 role be for the Washington Nationals in 2027?",
-        "url": "https://sports.yahoo.com/articles/yohandy-morales-role-washington-nationals-201500983.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-20T20:15:00Z",
-        "summary": "Yohandy Morales did nothing but rake in 2026, but his role entering 2027 remains uncertain despite his production",
-        "teams": [
-          "athletics",
-          "nationals"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-8",
-        "headline": "Brewers chasing rare feat in quest for 1st WS title",
-        "url": "https://www.mlb.com/news/brewers-seeking-unique-history-across-north-american-sports",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-20T17:47:15Z",
-        "summary": "",
-        "teams": [
-          "athletics",
-          "brewers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-6",
+        "id": "mlb_com-1-1",
         "headline": "Can the Miz get his groove -- and his whiffs -- back?",
         "url": "https://www.mlb.com/news/can-jacob-misiorowski-find-his-whiffs-in-world-series",
         "source": "MLB.com",
@@ -617,44 +653,12 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-2",
+        "id": "mlb_com-1-3",
         "headline": "Your cheat sheet for sounding like a World Series expert",
         "url": "https://www.mlb.com/news/brewers-vs-rays-world-series-preview",
         "source": "MLB.com",
         "source_type": "rss",
         "published_at": "2026-10-20T14:35:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-5",
-        "headline": "Back to the beginning: Both LCS MVPs face teams they debuted with in Fall Classic",
-        "url": "https://www.mlb.com/news/freddy-peralta-jake-bauers-facing-former-teams-in-world-series",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-20T05:11:13Z",
-        "summary": "",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-1",
-        "headline": "1 World Series certainty: A first-time champion",
-        "url": "https://www.mlb.com/news/rays-brewers-each-vying-for-first-world-series-title",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-20T04:48:11Z",
         "summary": "",
         "teams": [],
         "players": [],
@@ -698,58 +702,58 @@
       "UNVERIFIED: No probable matchup entries available."
     ],
     "transactions": [
-      "League tx: 2026-10-13: RHP Will Changarotty assigned to Bravos de Margarita.",
-      "League tx: 2026-10-13: SS Jose Martinez assigned to Bravos de Margarita.",
-      "League tx: 2026-10-13: RHP Chester Pimentel assigned to Tigres de Aragua.",
-      "League tx: 2026-10-13: SS Hern\u00e1n P\u00e9rez assigned to Caribes de Anzoategui.",
-      "League tx: 2026-10-13: SS Jack Lutz assigned to College Workout.",
-      "League tx: 2026-10-13: OF Taylor Casson assigned to College Workout.",
-      "League tx: 2026-10-13: LHP Eduardo Mares assigned to Mayos de Navojoa.",
-      "League tx: 2026-10-13: SS Santiago Gomez assigned to Venados de Mazatlan.",
-      "League tx: 2026-10-13: RHP Victor Morales assigned to Venados de Mazatlan.",
-      "League tx: 2026-10-13: RHP Gerardo Reyes assigned to Charros de Jalisco.",
-      "League tx: 2026-10-13: RHP Hector Perez assigned to Cardenales de Lara.",
-      "League tx: 2026-10-13: RHP Pedro Rodriguez assigned to Aguilas del Zulia.",
-      "League tx: 2026-10-13: C Jhon Gil assigned to Aguilas del Zulia.",
-      "League tx: 2026-10-13: C Spike Magill assigned to College Workout.",
-      "League tx: 2026-10-13: 1B Joey Brenczewski assigned to College Workout.",
-      "League tx: 2026-10-13: LHP Jackson Hoyt assigned to College Workout.",
-      "League tx: 2026-10-13: 3B Ramon Mendoza assigned to Mayos de Navojoa.",
-      "League tx: 2026-10-13: RF Jesus Fabela assigned to Mayos de Navojoa.",
-      "League tx: 2026-10-13: RHP Mario Garcia assigned to Jaguares de Nayarit.",
-      "League tx: 2026-10-13: LHP Jonathan Partida assigned to Jaguares de Nayarit.",
-      "League tx: 2026-10-13: LHP Christian Suarez assigned to Tigres de Aragua.",
-      "League tx: 2026-10-13: OF Christian Morales assigned to Charros de Jalisco.",
-      "League tx: 2026-10-13: RHP Joan Gonzalez assigned to Leones del Caracas.",
-      "League tx: 2026-10-13: C Yasmil Bucce assigned to Aguilas del Zulia.",
-      "League tx: 2026-10-13: LHP Easton Storey assigned to College Workout.",
-      "League tx: 2026-10-13: LHP Austin Weiss assigned to College Workout.",
-      "League tx: 2026-10-13: C Onix Parson assigned to College Workout.",
-      "League tx: 2026-10-13: LHP Jonathan Vargas assigned to Tigres de Aragua.",
-      "League tx: 2026-10-13: RHP Diego Hernandez assigned to Jaguares de Nayarit.",
-      "League tx: 2026-10-13: RHP Adrian De Horta assigned to Aguilas del Zulia.",
-      "League tx: 2026-10-13: 2B Ricardo Cova assigned to Leones del Caracas.",
-      "League tx: 2026-10-13: SS Jes\u00fas Bastidas assigned to Cardenales de Lara.",
-      "League tx: 2026-10-13: SS Ciro Norzagaray assigned to Mayos de Navojoa.",
-      "League tx: 2026-10-13: 2B Samar Leyva assigned to Mayos de Navojoa.",
-      "League tx: 2026-10-13: C Andres Sosa assigned to Naranjeros de Hermosillo.",
-      "League tx: 2026-10-13: RHP Jose Gonzalez assigned to Tigres de Aragua.",
-      "League tx: 2026-10-13: SS Leobaldo Pi\u00f1a assigned to Tigres de Aragua.",
-      "League tx: 2026-10-13: CF Alberth Martinez assigned to Tigres de Aragua.",
-      "League tx: 2026-10-13: SS Michael Wielansky assigned to Charros de Jalisco.",
-      "League tx: 2026-10-13: IF Cristopher Gastelum assigned to Charros de Jalisco.",
-      "League tx: 2026-10-13: C Andr\u00e9s Nolaya assigned to Aguilas del Zulia.",
-      "League tx: 2026-10-13: LHP Luis Valdez assigned to Mayos de Navojoa.",
-      "League tx: 2026-10-13: OF Hector Jacquez assigned to Venados de Mazatlan.",
-      "League tx: 2026-10-13: RHP Jonatan Bernal assigned to Venados de Mazatlan.",
-      "League tx: 2026-10-13: RHP Francisco Rios assigned to Jaguares de Nayarit.",
-      "League tx: 2026-10-13: RHP Luis Pacheco assigned to Tigres de Aragua.",
-      "League tx: 2026-10-13: RHP Leam Mendez assigned to Jaguares de Nayarit.",
-      "League tx: 2026-10-13: IF Jose Angel Cecena assigned to Charros de Jalisco.",
-      "League tx: 2026-10-13: RHP Jonathan Lopez assigned to Charros de Jalisco.",
-      "League tx: 2026-10-13: LHP Brayan Perez assigned to Cardenales de Lara."
+      "League tx: 2026-10-14: LHP Samuel Zazueta assigned to Yaquis de Obregon.",
+      "League tx: 2026-10-14: 3B Esteban Quiroz assigned to Aguilas de Mexicali.",
+      "League tx: 2026-10-14: Caneros de los Mochis activated LHP Erubiel Armenta.",
+      "League tx: 2026-10-14: RHP Kevin Abel assigned to Algodoneros de Guasave.",
+      "League tx: 2026-10-14: C Marvin Montenegro assigned to College Workout.",
+      "League tx: 2026-10-14: SS Will Bavaro assigned to College Workout.",
+      "League tx: 2026-10-14: C Chuckie Robinson assigned to Aguilas de Mexicali.",
+      "League tx: 2026-10-14: RHP Raul Castellon assigned to Caneros de los Mochis.",
+      "League tx: 2026-10-14: 3B Jesse Castillo assigned to Algodoneros de Guasave.",
+      "League tx: 2026-10-14: Algodoneros de Guasave activated 3B Kristian Delgado.",
+      "League tx: 2026-10-14: SS Landon Church assigned to College Workout.",
+      "League tx: 2026-10-14: SS Cooper Gornet assigned to College Workout.",
+      "League tx: 2026-10-14: SS Luis Santos assigned to Aguilas de Mexicali.",
+      "League tx: 2026-10-14: C Antonio Almeida assigned to Caneros de los Mochis.",
+      "League tx: 2026-10-14: LHP Jorge Rodriguez assigned to Caneros de los Mochis.",
+      "League tx: 2026-10-14: RHP Isaac Jimenez assigned to Algodoneros de Guasave.",
+      "League tx: 2026-10-14: LHP Nick Zwack assigned to Algodoneros de Guasave.",
+      "League tx: 2026-10-14: RHP Connor Cooke assigned to Norfolk Tides.",
+      "League tx: 2026-10-14: RHP Ryder Garino assigned to College Workout.",
+      "League tx: 2026-10-14: Tomateros de Culiacan activated LHP Baltazar Arredondo from the reserve list.",
+      "League tx: 2026-10-14: C Christopher Escarrega assigned to Caneros de los Mochis.",
+      "League tx: 2026-10-14: IF Albert Lara assigned to Algodoneros de Guasave.",
+      "League tx: 2026-10-14: OF Fabricio Macias assigned to Tomateros de Culiacan.",
+      "League tx: 2026-10-14: Caneros de los Mochis activated OF Asael Sanchez from the reserve list.",
+      "League tx: 2026-10-14: RHP Mikey Ragusa assigned to College Workout.",
+      "League tx: 2026-10-14: OF Heeju Shin assigned to DSL Brewers Gold.",
+      "League tx: 2026-10-14: LHP Chet Lax assigned to College Workout.",
+      "League tx: 2026-10-14: RHP Jacob Smith assigned to College Workout.",
+      "League tx: 2026-10-14: OF Brody DeLamielleure assigned to College Workout.",
+      "League tx: 2026-10-14: C Alfredo Hurtado assigned to Yaquis de Obregon.",
+      "League tx: 2026-10-14: C Fernando Flores assigned to Yaquis de Obregon.",
+      "League tx: 2026-10-14: RHP Cristian Alvarado assigned to Yaquis de Obregon.",
+      "League tx: 2026-10-14: RHP Norge Ruiz assigned to Tomateros de Culiacan.",
+      "League tx: 2026-10-14: OF Christian Lucero assigned to Tomateros de Culiacan.",
+      "League tx: 2026-10-14: OF Kai Murphy assigned to Aguilas de Mexicali.",
+      "League tx: 2026-10-14: CF Mallex Smith assigned to Caneros de los Mochis.",
+      "League tx: 2026-10-14: OF Maddox Monsour assigned to College Workout.",
+      "League tx: 2026-10-14: LHP Jacob Marlowe assigned to College Workout.",
+      "League tx: 2026-10-14: RHP Cam Odom assigned to College Workout.",
+      "League tx: 2026-10-14: LHP Jes\u00fas Broca assigned to Yaquis de Obregon.",
+      "League tx: 2026-10-14: Tomateros de Culiacan activated C Kevin Robledo.",
+      "League tx: 2026-10-14: CF Victor Labrada assigned to Algodoneros de Guasave.",
+      "League tx: 2026-10-14: LHP Elijah Sanders assigned to College Workout.",
+      "League tx: 2026-10-14: 1B Nick Barron assigned to College Workout.",
+      "League tx: 2026-10-14: 3B Ramiro Pena assigned to Tomateros de Culiacan.",
+      "League tx: 2026-10-14: 3B Ichiro Cano assigned to Tomateros de Culiacan.",
+      "League tx: 2026-10-14: RHP Miguel Vazquez assigned to Tomateros de Culiacan.",
+      "League tx: 2026-10-14: SS Jose Robledo assigned to Caneros de los Mochis.",
+      "League tx: 2026-10-14: C Preston Bonn assigned to College Workout.",
+      "League tx: 2026-10-14: SS Gavin Byrd assigned to College Workout."
     ],
-    "transactions_total": 1057,
+    "transactions_total": 682,
     "debug": {
       "standings": [
         "rows=30"
@@ -758,7 +762,7 @@
         "games=0"
       ],
       "transactions": [
-        "transactions=1058"
+        "transactions=683"
       ]
     }
   },
@@ -886,7 +890,7 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-20&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-21&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -899,19 +903,19 @@
         ]
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-13&endDate=2026-10-20",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-14&endDate=2026-10-21",
         "status": "verified",
         "debug": [
-          "transactions=1058"
+          "transactions=683"
         ],
-        "verified_count": 1057,
+        "verified_count": 682,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-10-13: RHP Will Changarotty assigned to Bravos de Margarita.",
-          "League tx: 2026-10-13: SS Jose Martinez assigned to Bravos de Margarita.",
-          "League tx: 2026-10-13: RHP Chester Pimentel assigned to Tigres de Aragua.",
-          "League tx: 2026-10-13: SS Hern\u00e1n P\u00e9rez assigned to Caribes de Anzoategui.",
-          "League tx: 2026-10-13: SS Jack Lutz assigned to College Workout."
+          "League tx: 2026-10-14: LHP Samuel Zazueta assigned to Yaquis de Obregon.",
+          "League tx: 2026-10-14: 3B Esteban Quiroz assigned to Aguilas de Mexicali.",
+          "League tx: 2026-10-14: Caneros de los Mochis activated LHP Erubiel Armenta.",
+          "League tx: 2026-10-14: RHP Kevin Abel assigned to Algodoneros de Guasave.",
+          "League tx: 2026-10-14: C Marvin Montenegro assigned to College Workout."
         ],
         "unverified_sample": []
       },
@@ -929,7 +933,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-20&endDate=2026-10-22&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-21&endDate=2026-10-23&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -942,7 +946,7 @@
         ]
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-13&endDate=2026-10-20",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-14&endDate=2026-10-21",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -968,7 +972,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-20&endDate=2026-10-22&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-21&endDate=2026-10-23&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -981,7 +985,7 @@
         ]
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-13&endDate=2026-10-20",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-14&endDate=2026-10-21",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1007,7 +1011,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-20&endDate=2026-10-22&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-21&endDate=2026-10-23&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1020,7 +1024,7 @@
         ]
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-13&endDate=2026-10-20",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-14&endDate=2026-10-21",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1135,10 +1139,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-10-21T01:26:39Z"
+    "generated_utc": "2026-10-21T08:27:26Z"
   },
   "bd_bets": {
-    "generated_at": "2026-10-21T01:26:41.711Z",
+    "generated_at": "2026-10-21T08:27:28.683Z",
     "slate_date": "2026-10-21",
     "sport": "MLB",
     "source": "bd-bets",
