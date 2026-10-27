@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-27T06:08:57Z",
-  "slate_date": "2026-10-26",
+  "generated_at": "2026-10-27T18:38:15Z",
+  "slate_date": "2026-10-27",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,14 +9,14 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-26&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-19&endDate=2026-10-26",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-26&endDate=2026-10-28&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-19&endDate=2026-10-26",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-26&endDate=2026-10-28&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-19&endDate=2026-10-26",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-26&endDate=2026-10-28&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-19&endDate=2026-10-26"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-27&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-20&endDate=2026-10-27",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-27&endDate=2026-10-29&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-20&endDate=2026-10-27",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-27&endDate=2026-10-29&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-20&endDate=2026-10-27",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-27&endDate=2026-10-29&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-20&endDate=2026-10-27"
   },
   "source_status": {
     "league_standings": "verified",
@@ -44,70 +44,6 @@
     "league_news": {
       "items": [
         {
-          "headline": "With historic romp, unrelenting Crew just 1 win from 1st World Series title",
-          "url": "https://www.mlb.com/news/brewers-win-world-series-game-3-2026",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-27T04:48:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "EIGHT runs with two outs in 5th? Brewers' \u2018drag 'em\u2019 approach on full display",
-          "url": "https://www.mlb.com/news/brewers-win-world-series-game-3-historic-inning",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-27T05:55:24Z",
-          "summary": ""
-        },
-        {
-          "headline": "Key takeaways after Brewers slug their way to 3-0 World Series lead",
-          "url": "https://www.mlb.com/news/key-takeaways-from-world-series-game-3-2026",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-27T03:33:25Z",
-          "summary": ""
-        },
-        {
-          "headline": "After two 1-run losses, blowout at Trop puts Rays' season on brink",
-          "url": "https://www.mlb.com/news/rays-lose-game-3-of-2026-world-series",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-27T05:44:58Z",
-          "summary": ""
-        },
-        {
-          "headline": "Lindor wins 2026 Clemente Award, in spirit of his idol and countryman",
-          "url": "https://www.mlb.com/news/francisco-lindor-2026-clemente-award",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-26T23:51:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Brewers' 8-run 5th in Game 3 a 'knife in the chest' to Rays",
-          "url": "https://www.mlb.com/news/rays-allow-eight-runs-to-brewers-in-fifth-inning-of-world-series-game-3",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-27T05:54:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Simpson's speed actually costs him SB -- then enables SPECTACULAR catch",
-          "url": "https://www.mlb.com/news/chandler-simpson-makes-great-running-catch-in-2026-world-series-game-3",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-27T03:11:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Maddon takes hill for first pitch ... then calls to bullpen for Shields",
-          "url": "https://www.mlb.com/news/20261026-joe-maddon-first-pitch-rays",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-27T00:11:00Z",
-          "summary": ""
-        },
-        {
           "headline": "3 big questions for a World Series Game 4 that could seal Brewers' first title",
           "url": "https://www.mlb.com/news/2026-world-series-game-4-storylines-brewers-rays",
           "source": "MLB.com",
@@ -116,11 +52,75 @@
           "summary": ""
         },
         {
+          "headline": "4 takeaways from Crew's Game 3 dominance",
+          "url": "https://www.mlb.com/news/key-takeaways-from-world-series-game-3-2026",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-27T14:20:00Z",
+          "summary": ""
+        },
+        {
           "headline": "Brewers-Rays World Series Game 4 FAQ (8 ET, FOX/FOX One)",
           "url": "https://www.mlb.com/news/brewers-rays-world-series-game-4-starting-lineups-and-pitching-matchup",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-27T05:38:47Z",
+          "published_at": "2026-10-27T14:47:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Chourio the youngest with 4-hit game in Series since ... 80 years ago!",
+          "url": "https://www.mlb.com/news/jackson-chourio-historic-impact-on-world-series-at-age-22",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-27T06:33:34Z",
+          "summary": ""
+        },
+        {
+          "headline": "With historic romp, unrelenting Crew just 1 win from 1st World Series title",
+          "url": "https://www.mlb.com/news/brewers-win-world-series-game-3-2026",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-27T04:48:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Here's one more way 'Wild Bill' is dominating during Brewers' postseason run",
+          "url": "https://www.mlb.com/news/william-contreras-showing-mastery-of-abs-challenge-system-in-postseason",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-27T15:03:22Z",
+          "summary": ""
+        },
+        {
+          "headline": "'I want it right now': Woodruff seizes chance in 1st pitching appearance since July",
+          "url": "https://www.mlb.com/news/brandon-woodruff-gets-final-out-in-2026-world-series-game-3",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-27T06:30:07Z",
+          "summary": ""
+        },
+        {
+          "headline": "Vote tonight for the World Series MVP Award",
+          "url": "https://www.mlb.com/postseason/mvp-vote?affiliateID=ws_mvp_vote_digital_2026",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-27T16:41:34Z",
+          "summary": "Who should be the 2026 Willie Mays MLB World Series Most Valuable Player? Voting starts during the 6th inning and remains open until the end of the game."
+        },
+        {
+          "headline": "1 unprecedented inning not only way Crew rewriting Fall Classic record books",
+          "url": "https://www.mlb.com/news/stats-facts-from-brewers-win-world-series-game-3-2026",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-27T06:38:44Z",
+          "summary": ""
+        },
+        {
+          "headline": "EIGHT runs with two outs in 5th? Brewers' \u2018drag 'em\u2019 approach on full display",
+          "url": "https://www.mlb.com/news/brewers-win-world-series-game-3-historic-inning",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-27T05:55:24Z",
           "summary": ""
         }
       ],
@@ -131,6 +131,14 @@
     "teams": {
       "athletics": {
         "items": [
+          {
+            "headline": "Q&A: Smith discusses his new role as youngest head of baseball ops in MLB",
+            "url": "https://www.mlb.com/athletics/news/q-a-with-athletics-president-of-baseball-operations-taylor-smith",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-10-27T12:46:09Z",
+            "summary": ""
+          },
           {
             "headline": "A's new baseball ops president Smith 'so excited to build on' young core",
             "url": "https://www.mlb.com/athletics/news/taylor-smith-introduced-as-athletics-president-of-baseball-operations",
@@ -164,14 +172,6 @@
             "summary": ""
           },
           {
-            "headline": "A's LHP prospect Richardson shows off health and resiliency during Fall League homecoming",
-            "url": "https://www.mlb.com/athletics/news/athletics-pitching-prospect-grant-richardson-at-home-in-arizona-fall-league",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-10-15T01:30:00Z",
-            "summary": ""
-          },
-          {
             "headline": "Solve today's A's trivia puzzle",
             "url": "https://www.mlb.com/app/atbat/athletics/daily-walkoff",
             "source": "MLB.com",
@@ -180,11 +180,11 @@
             "summary": ""
           },
           {
-            "headline": "Watch A's prospects in Arizona Fall League action",
-            "url": "https://www.mlb.com/athletics/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
+            "headline": "A's LHP prospect Richardson shows off health and resiliency during Fall League homecoming",
+            "url": "https://www.mlb.com/athletics/news/athletics-pitching-prospect-grant-richardson-at-home-in-arizona-fall-league",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-26T23:50:00Z",
+            "published_at": "2026-10-15T01:30:00Z",
             "summary": ""
           },
           {
@@ -204,11 +204,11 @@
             "summary": "Who do the Athletics have in the pipeline? Get scouting reports, video, stats, projected ETAs and more for the A's Top 30 Prospects."
           },
           {
-            "headline": "The five biggest questions facing the A's this offseason",
-            "url": "https://www.mlb.com/athletics/news/five-big-questions-for-athletics-this-offseason",
+            "headline": "Watch A's prospects in Arizona Fall League action",
+            "url": "https://www.mlb.com/athletics/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-09T11:42:38Z",
+            "published_at": "2026-10-26T23:50:00Z",
             "summary": ""
           }
         ],
@@ -393,69 +393,16 @@
     },
     "news_items": [
       {
-        "id": "mlb_com-1-2",
-        "headline": "EIGHT runs with two outs in 5th? Brewers' \u2018drag 'em\u2019 approach on full display",
-        "url": "https://www.mlb.com/news/brewers-win-world-series-game-3-historic-inning",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-27T05:55:24Z",
-        "summary": "",
-        "teams": [
-          "brewers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-6",
-        "headline": "Brewers' 8-run 5th in Game 3 a 'knife in the chest' to Rays",
-        "url": "https://www.mlb.com/news/rays-allow-eight-runs-to-brewers-in-fifth-inning-of-world-series-game-3",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-27T05:54:00Z",
-        "summary": "",
-        "teams": [
-          "brewers",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-4",
-        "headline": "After two 1-run losses, blowout at Trop puts Rays' season on brink",
-        "url": "https://www.mlb.com/news/rays-lose-game-3-of-2026-world-series",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-27T05:44:58Z",
-        "summary": "",
-        "teams": [
-          "athletics",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
         "id": "yahoo_sports-3-1",
-        "headline": "Brewers dominance by the numbers: Historic postseason for Milwaukee",
-        "url": "https://sports.yahoo.com/articles/brewers-dominance-numbers-historic-postseason-052443437.html",
-        "source": "USA TODAY Sports",
+        "headline": "Book Review of K: A History of Baseball in Ten Pitches",
+        "url": "https://sports.yahoo.com/articles/book-review-k-history-baseball-180000060.html",
+        "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-10-27T05:24:43Z",
-        "summary": "Brewers have won eight in a row and are 27 outs from franchise&#39;s first World Series title.",
+        "published_at": "2026-10-27T18:00:00Z",
+        "summary": "Overview. The book is awesome for readers who have a broad interest in baseball history. The book includes information from more than 300 interviews and many books (60 books are listed in the bibliography). My interest and focus are on the Diamondbacks. Although my attention sometimes wandered to other teams and their players, my focus [\u2026]",
         "teams": [
           "athletics",
-          "brewers"
+          "diamondbacks"
         ],
         "players": [],
         "topics": [
@@ -465,15 +412,65 @@
       },
       {
         "id": "yahoo_sports-3-2",
-        "headline": "Robert Gasser, Jackson Chourio lift Brewers in rout: Winners and losers from Game 3",
-        "url": "https://sports.yahoo.com/articles/robert-gasser-jackson-chourio-lift-050837978.html",
-        "source": "USA TODAY Sports",
+        "headline": "Ranking the Rockies 2026: No. 34, Vimael Mach\u00edn",
+        "url": "https://sports.yahoo.com/articles/ranking-rockies-2026-no-34-180000154.html",
+        "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-10-27T05:08:37Z",
-        "summary": "Robert Gasser and Jackson Chourio led the Brewers to a 10--1 Game 3 win over the Rays, putting Milwaukee one win from its first World Series title.",
+        "published_at": "2026-10-27T18:00:00Z",
+        "summary": "The veteran infielder only had six at-bats for the Rockies in 2026",
+        "teams": [
+          "rockies"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-3",
+        "headline": "This World Series won\u2019t make a bit of difference in MLB\u2019s labor fight",
+        "url": "https://sports.yahoo.com/articles/world-series-won-t-bit-180000005.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-27T18:00:00Z",
+        "summary": "This matchup of \u201csmall-market\u201d teams has been compelling, but it\u2019s not going to move the needle in CBA negotiation.s",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-4",
+        "headline": "Three years ago, Corey Seager went deep",
+        "url": "https://sports.yahoo.com/articles/three-years-ago-corey-seager-175437735.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-27T17:54:37Z",
+        "summary": "Game 1 of the 2023 World Series was three years ago today",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-5",
+        "headline": "WS Game 4 Preview",
+        "url": "https://sports.yahoo.com/articles/ws-game-4-preview-173016047.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-27T17:30:16Z",
+        "summary": "The Rays season is on the brink",
         "teams": [
           "athletics",
-          "brewers",
           "rays"
         ],
         "players": [],
@@ -483,7 +480,153 @@
         "priority": 2
       },
       {
-        "id": "mlb_com-1-1",
+        "id": "yahoo_sports-3-6",
+        "headline": "The case for less optimization in baseball",
+        "url": "https://sports.yahoo.com/articles/case-less-optimization-baseball-170000613.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-27T17:00:00Z",
+        "summary": "Give us a degree of uncertainty, it\u2019s worth it.",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-8",
+        "headline": "Vote tonight for the World Series MVP Award",
+        "url": "https://www.mlb.com/postseason/mvp-vote?affiliateID=ws_mvp_vote_digital_2026",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-27T16:41:34Z",
+        "summary": "Who should be the 2026 Willie Mays MLB World Series Most Valuable Player? Voting starts during the 6th inning and remains open until the end of the game.",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-7",
+        "headline": "Evan Longoria to throw out World Series Game Four first pitch",
+        "url": "https://sports.yahoo.com/articles/evan-longoria-throw-world-series-163625508.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-27T16:36:25Z",
+        "summary": "Longo is back.",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-8",
+        "headline": "Looking back at Dodgers TV & radio broadcasts in 2026",
+        "url": "https://sports.yahoo.com/articles/looking-back-dodgers-tv-radio-161200637.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-27T16:12:00Z",
+        "summary": "LOS ANGELES \u2014 With the Dodgers season now concluded, we have some distance to look back at the television and radio broadcasts for the team in the 2026 regular season. The Dodgers had 17 games exclusively on national television or streaming, including games on NBC, Fox, ESPN, and Apple TV, and were 9-8 in those [\u2026]",
+        "teams": [
+          "athletics",
+          "dodgers"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-6",
+        "headline": "Here's one more way 'Wild Bill' is dominating during Brewers' postseason run",
+        "url": "https://www.mlb.com/news/william-contreras-showing-mastery-of-abs-challenge-system-in-postseason",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-27T15:03:22Z",
+        "summary": "",
+        "teams": [
+          "athletics",
+          "brewers"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-3",
+        "headline": "Brewers-Rays World Series Game 4 FAQ (8 ET, FOX/FOX One)",
+        "url": "https://www.mlb.com/news/brewers-rays-world-series-game-4-starting-lineups-and-pitching-matchup",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-27T14:47:00Z",
+        "summary": "",
+        "teams": [
+          "brewers",
+          "rays"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-2",
+        "headline": "4 takeaways from Crew's Game 3 dominance",
+        "url": "https://www.mlb.com/news/key-takeaways-from-world-series-game-3-2026",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-27T14:20:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-4",
+        "headline": "Chourio the youngest with 4-hit game in Series since ... 80 years ago!",
+        "url": "https://www.mlb.com/news/jackson-chourio-historic-impact-on-world-series-at-age-22",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-27T06:33:34Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-7",
+        "headline": "'I want it right now': Woodruff seizes chance in 1st pitching appearance since July",
+        "url": "https://www.mlb.com/news/brandon-woodruff-gets-final-out-in-2026-world-series-game-3",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-27T06:30:07Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-5",
         "headline": "With historic romp, unrelenting Crew just 1 win from 1st World Series title",
         "url": "https://www.mlb.com/news/brewers-win-world-series-game-3-2026",
         "source": "MLB.com",
@@ -498,174 +641,16 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-3",
-        "headline": "How disaster inning just about killed Tampa Bay Rays&#39; World Series hopes",
-        "url": "https://sports.yahoo.com/articles/disaster-inning-just-killed-tampa-043243390.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-27T04:32:43Z",
-        "summary": "Junior Caminero and the Rays were one out from escaping the fifth inning before the Brewers scored eight.",
-        "teams": [
-          "athletics",
-          "brewers",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-4",
-        "headline": "Brewers offense, Gasser efficiently pummel the Rays",
-        "url": "https://sports.yahoo.com/articles/brewers-offense-gasser-efficiently-pummel-040704390.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-27T04:07:04Z",
-        "summary": "The Brewers are officially one win away from securing their first World Series Championship in franchise history",
-        "teams": [
-          "athletics",
-          "brewers",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-3",
-        "headline": "Key takeaways after Brewers slug their way to 3-0 World Series lead",
-        "url": "https://www.mlb.com/news/key-takeaways-from-world-series-game-3-2026",
+        "id": "mlb_com-1-1",
+        "headline": "3 big questions for a World Series Game 4 that could seal Brewers' first title",
+        "url": "https://www.mlb.com/news/2026-world-series-game-4-storylines-brewers-rays",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-27T03:33:25Z",
+        "published_at": "2026-10-27T04:33:58Z",
         "summary": "",
         "teams": [
           "brewers"
         ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-5",
-        "headline": "Brandon Woodruff was set to start World Series Game 4. Then Brewers changed the plan",
-        "url": "https://sports.yahoo.com/articles/brandon-woodruff-makes-long-awaited-033001478.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-27T03:30:01Z",
-        "summary": "Brandon Woodruff returned to the mound for the first time since July 4 as the Brewers steamrolled the Rays in World Series Game 3.",
-        "teams": [
-          "athletics",
-          "brewers",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-6",
-        "headline": "Dodgers legend Miguel Rojas to play one last game for Venezuelan team in Miami",
-        "url": "https://sports.yahoo.com/articles/dodgers-legend-miguel-rojas-play-032634233.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-27T03:26:34Z",
-        "summary": "Miguel Rojas will go down in history as a Dodgers legend for his World Series heroics. But before he hangs up his cleats, he&#39;ll play one last game.",
-        "teams": [
-          "athletics",
-          "dodgers",
-          "marlins"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-7",
-        "headline": "Brewers rout the Rays 10-1 to move within a win of their first World Series title",
-        "url": "https://sports.yahoo.com/articles/brewers-rout-rays-10-1-032235621.html",
-        "source": "NBC Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-27T03:22:35Z",
-        "summary": "Chourio went 4 for 5, William Contreras was 3 for 5 and Milwaukee racked up 16 hits off \u201cFastball Freddy\u201d Peralta and five relievers to win its eighth straight postseason game and fourth in a row on the road.",
-        "teams": [
-          "athletics",
-          "brewers",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-8",
-        "headline": "Stop the fight! Brewers humiliate Rays and are about to win World Series",
-        "url": "https://sports.yahoo.com/articles/stop-fight-brewers-humiliate-rays-031143012.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-27T03:11:43Z",
-        "summary": "Brewers&#39; blowout win puts them on the verge of first World Series title in history.",
-        "teams": [
-          "brewers",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-7",
-        "headline": "Simpson's speed actually costs him SB -- then enables SPECTACULAR catch",
-        "url": "https://www.mlb.com/news/chandler-simpson-makes-great-running-catch-in-2026-world-series-game-3",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-27T03:11:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-8",
-        "headline": "Maddon takes hill for first pitch ... then calls to bullpen for Shields",
-        "url": "https://www.mlb.com/news/20261026-joe-maddon-first-pitch-rays",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-27T00:11:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-5",
-        "headline": "Lindor wins 2026 Clemente Award, in spirit of his idol and countryman",
-        "url": "https://www.mlb.com/news/francisco-lindor-2026-clemente-award",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-26T23:51:00Z",
-        "summary": "",
-        "teams": [],
         "players": [],
         "topics": [
           "mlb"
@@ -677,20 +662,20 @@
   "scoreboard": {
     "games": [
       {
-        "id": "849804",
+        "id": "849803",
         "away_team": "Milwaukee Brewers",
         "home_team": "Tampa Bay Rays",
-        "away_score": 10,
-        "home_score": 1,
-        "status": "Final",
-        "status_detail": "Final",
+        "away_score": null,
+        "home_score": null,
+        "status": "Upcoming",
+        "status_detail": "Scheduled",
         "inning": null,
         "inning_state": "",
-        "start_time": "2026-10-27T00:00:00Z",
+        "start_time": "2026-10-28T00:00:00Z",
         "venue": "Tropicana Field",
         "probable_pitchers": {
-          "away": "Robert Gasser",
-          "home": "Freddy Peralta"
+          "away": "TBD",
+          "home": "Griffin Jax"
         },
         "broadcasts": []
       }
@@ -715,26 +700,36 @@
       "Standings: Guardians: 85-77 (PCT .525, GB -) [Division]",
       "Standings: White Sox: 84-78 (PCT .519, GB 1.0) [Division]",
       "Standings: Twins: 77-85 (PCT .475, GB 8.0) [Division]",
-      "Probable: Milwaukee Brewers (Robert Gasser) @ Tampa Bay Rays (Freddy Peralta) \u2014 Final 2026-10-27T00:00:00Z Tropicana Field"
+      "Probable: Milwaukee Brewers (TBD) @ Tampa Bay Rays (Griffin Jax) \u2014 Scheduled 2026-10-28T00:00:00Z Tropicana Field"
     ],
     "unverified_notes": [],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: Milwaukee Brewers (Robert Gasser) @ Tampa Bay Rays (Freddy Peralta) \u2014 Final 2026-10-27T00:00:00Z Tropicana Field"
+      "Probable: Milwaukee Brewers (TBD) @ Tampa Bay Rays (Griffin Jax) \u2014 Scheduled 2026-10-28T00:00:00Z Tropicana Field"
     ],
     "transactions": [
-      "League tx: 2026-10-19: RHP Caleb Freeman assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-19: SS Jorge Quintana assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-19: C Ramon Landaeta assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-19: Tiburones de La Guaira activated RHP Caleb Freeman.",
-      "League tx: 2026-10-19: LHP Jackson Lancaster retired.",
-      "League tx: 2026-10-19: RHP Chris Devenski assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-19: 3B Damiano Palmegiani assigned to Cardenales de Lara.",
-      "League tx: 2026-10-19: RHP Brander Guevara assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-19: Tiburones de La Guaira activated RHP Brander Guevara.",
+      "League tx: 2026-10-20: RHP Travis Kuhn assigned to Jaguares de Nayarit.",
+      "League tx: 2026-10-20: SS Jhonny Level assigned to Aguilas del Zulia.",
+      "League tx: 2026-10-20: Yaquis de Obregon placed C Nestor Rios on the reserve list.",
+      "League tx: 2026-10-20: RHP Carlos Hern\u00e1ndez elected free agency.",
+      "League tx: 2026-10-20: Atlanta Braves signed free agent RHP Francis Cuevas to a minor league contract.",
+      "League tx: 2026-10-20: Yaquis de Obregon placed RHP Edgar Gallegos on the reserve list.",
+      "League tx: 2026-10-20: Algodoneros de Guasave placed LHP Christian Lopez on the reserve list.",
+      "League tx: 2026-10-20: LF Jurickson Profar assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-20: Algodoneros de Guasave placed RHP Kevin Abel on the reserve list.",
+      "League tx: 2026-10-20: RHP Daniel Martinez assigned to Tigres del Licey.",
+      "League tx: 2026-10-20: RHP Alex Carrillo assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-20: Naranjeros de Hermosillo activated RHP Augusto Mendieta from the reserve list.",
+      "League tx: 2026-10-20: Algodoneros de Guasave activated OF Rogelio Cobos from the reserve list.",
       "League tx: 2026-10-20: RHP Connor Brogdon elected free agency.",
+      "League tx: 2026-10-20: RHP Wandisson Charles assigned to Gigantes del Cibao.",
+      "League tx: 2026-10-20: Charros de Jalisco placed 2B Carlos Baez on the reserve list.",
+      "League tx: 2026-10-20: Charros de Jalisco activated RHP Jonathan Lopez from the reserve list.",
+      "League tx: 2026-10-20: LF Tirso Ornelas assigned to Charros de Jalisco.",
+      "League tx: 2026-10-20: Naranjeros de Hermosillo placed RHP Saul Soto on the reserve list.",
+      "League tx: 2026-10-20: RHP Wikelman Gonz\u00e1lez assigned to Leones del Caracas.",
       "League tx: 2026-10-20: RHP Evan Gates assigned to Tiburones de La Guaira.",
       "League tx: 2026-10-20: RHP Eddy Yean assigned to Estrellas Orientales.",
       "League tx: 2026-10-20: LHP Miguel Aguilar assigned to Charros de Jalisco.",
@@ -745,38 +740,28 @@
       "League tx: 2026-10-20: LHP Estalin Ortiz assigned to Tigres del Licey.",
       "League tx: 2026-10-20: SS Domingo Leyba assigned to Tigres del Licey.",
       "League tx: 2026-10-20: RHP Esmil Rogers assigned to Estrellas Orientales.",
-      "League tx: 2026-10-20: RHP Daniel Martinez assigned to Tigres del Licey.",
       "League tx: 2026-10-20: RHP Alex Carrillo assigned to Tiburones de La Guaira.",
-      "League tx: 2026-10-20: DSL White Sox activated RHP Ander Guzman from the 60-day injured list.",
-      "League tx: 2026-10-20: LHP Luis Gonz\u00e1lez assigned to Aguilas Cibaenas.",
-      "League tx: 2026-10-20: Caneros de los Mochis placed C Mario Gomez on the reserve list.",
-      "League tx: 2026-10-20: C Carlos Castro assigned to Toros del Este.",
-      "League tx: 2026-10-20: 2B Juan Brito assigned to Toros del Este.",
-      "League tx: 2026-10-20: Yaquis de Obregon placed RHP Edgar Gallegos on the reserve list.",
-      "League tx: 2026-10-20: Algodoneros de Guasave placed LHP Christian Lopez on the reserve list.",
-      "League tx: 2026-10-20: Naranjeros de Hermosillo activated RHP Enrique Castillo from the reserve list.",
-      "League tx: 2026-10-20: IF Andretty Cordero assigned to Tigres del Licey.",
-      "League tx: 2026-10-20: RHP Mauricio Estrella assigned to Leones del Escogido.",
-      "League tx: 2026-10-20: RHP Jackson Goddard assigned to Gigantes del Cibao.",
-      "League tx: 2026-10-20: CF Jose Cordoba assigned to Navegantes del Magallanes.",
-      "League tx: 2026-10-20: RHP Carlos Navas assigned to Aguilas del Zulia.",
-      "League tx: 2026-10-20: RHP Brian McKenna assigned to Leones del Escogido.",
-      "League tx: 2026-10-20: Mayos de Navojoa activated RHP Oscar Soria from the reserve list.",
-      "League tx: 2026-10-20: RHP Wandisson Charles assigned to Gigantes del Cibao.",
-      "League tx: 2026-10-20: Charros de Jalisco placed 2B Carlos Baez on the reserve list.",
-      "League tx: 2026-10-20: Charros de Jalisco activated RHP Jonathan Lopez from the reserve list.",
-      "League tx: 2026-10-20: LF Tirso Ornelas assigned to Charros de Jalisco.",
-      "League tx: 2026-10-20: Naranjeros de Hermosillo placed RHP Saul Soto on the reserve list.",
-      "League tx: 2026-10-20: Algodoneros de Guasave activated RHP Josue Gomez from the reserve list.",
+      "League tx: 2026-10-20: Estrellas Orientales activated RHP Spencer Bivens.",
+      "League tx: 2026-10-20: RHP Raffi Vizca\u00edno assigned to Estrellas Orientales.",
+      "League tx: 2026-10-20: Jaguares de Nayarit placed RHP Jose Soria on the reserve list.",
+      "League tx: 2026-10-20: 2B Orelvis Martinez assigned to Tigres del Licey.",
+      "League tx: 2026-10-20: RHP Deyni Olivero assigned to Toros del Este.",
+      "League tx: 2026-10-20: RHP Francys Peguero assigned to Toros del Este.",
+      "League tx: 2026-10-20: Tiburones de La Guaira activated RHP Alex Carrillo.",
       "League tx: 2026-10-20: RHP Bryce Conley assigned to Toros del Este.",
       "League tx: 2026-10-20: C Ramon Ramirez assigned to Bravos de Margarita.",
       "League tx: 2026-10-20: LHP Sammy Peralta assigned to Estrellas Orientales.",
       "League tx: 2026-10-20: Aguilas de Mexicali placed RHP Daniel Nunez on the reserve list.",
       "League tx: 2026-10-20: Aguilas de Mexicali placed OF Kai Murphy on the reserve list.",
       "League tx: 2026-10-20: Aguilas del Zulia activated RHP Jorgan Cavanerio.",
-      "League tx: 2026-10-20: RHP Spencer Bivens assigned to Estrellas Orientales."
+      "League tx: 2026-10-20: RHP Spencer Bivens assigned to Estrellas Orientales.",
+      "League tx: 2026-10-20: RHP Brent Honeywell assigned to Gigantes del Cibao.",
+      "League tx: 2026-10-20: Atlanta Braves signed free agent OF Euris Polanco to a minor league contract.",
+      "League tx: 2026-10-20: RHP Eduardo Figueroa assigned to Leones del Caracas.",
+      "League tx: 2026-10-20: SS Liover Peguero assigned to Tigres del Licey.",
+      "League tx: 2026-10-20: RHP Cristofer Gomez assigned to Leones del Escogido."
     ],
-    "transactions_total": 378,
+    "transactions_total": 405,
     "debug": {
       "standings": [
         "rows=30"
@@ -785,7 +770,7 @@
         "games=1"
       ],
       "transactions": [
-        "transactions=379"
+        "transactions=406"
       ]
     }
   },
@@ -913,7 +898,7 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-26&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-27&hydrate=probablePitcher,team",
         "status": "verified",
         "debug": [
           "games=1"
@@ -921,24 +906,24 @@
         "verified_count": 1,
         "unverified_count": 0,
         "verified_sample": [
-          "Probable: Milwaukee Brewers (Robert Gasser) @ Tampa Bay Rays (Freddy Peralta) \u2014 Final 2026-10-27T00:00:00Z Tropicana Field"
+          "Probable: Milwaukee Brewers (TBD) @ Tampa Bay Rays (Griffin Jax) \u2014 Scheduled 2026-10-28T00:00:00Z Tropicana Field"
         ],
         "unverified_sample": []
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-19&endDate=2026-10-26",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-20&endDate=2026-10-27",
         "status": "verified",
         "debug": [
-          "transactions=379"
+          "transactions=406"
         ],
-        "verified_count": 378,
+        "verified_count": 405,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-10-19: RHP Caleb Freeman assigned to Tiburones de La Guaira.",
-          "League tx: 2026-10-19: SS Jorge Quintana assigned to Tiburones de La Guaira.",
-          "League tx: 2026-10-19: C Ramon Landaeta assigned to Navegantes del Magallanes.",
-          "League tx: 2026-10-19: Tiburones de La Guaira activated RHP Caleb Freeman.",
-          "League tx: 2026-10-19: LHP Jackson Lancaster retired."
+          "League tx: 2026-10-20: RHP Travis Kuhn assigned to Jaguares de Nayarit.",
+          "League tx: 2026-10-20: SS Jhonny Level assigned to Aguilas del Zulia.",
+          "League tx: 2026-10-20: Yaquis de Obregon placed C Nestor Rios on the reserve list.",
+          "League tx: 2026-10-20: RHP Carlos Hern\u00e1ndez elected free agency.",
+          "League tx: 2026-10-20: Atlanta Braves signed free agent RHP Francis Cuevas to a minor league contract."
         ],
         "unverified_sample": []
       },
@@ -956,7 +941,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-26&endDate=2026-10-28&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-27&endDate=2026-10-29&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -969,7 +954,7 @@
         ]
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-19&endDate=2026-10-26",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-20&endDate=2026-10-27",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -995,7 +980,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-26&endDate=2026-10-28&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-27&endDate=2026-10-29&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1008,7 +993,7 @@
         ]
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-19&endDate=2026-10-26",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-20&endDate=2026-10-27",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1034,7 +1019,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-26&endDate=2026-10-28&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-27&endDate=2026-10-29&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1047,7 +1032,7 @@
         ]
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-19&endDate=2026-10-26",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-20&endDate=2026-10-27",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1162,10 +1147,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-10-27T06:08:57Z"
+    "generated_utc": "2026-10-27T18:38:15Z"
   },
   "bd_bets": {
-    "generated_at": "2026-10-27T06:09:00.892Z",
+    "generated_at": "2026-10-27T18:38:18.583Z",
     "slate_date": "2026-10-27",
     "sport": "MLB",
     "source": "bd-bets",
