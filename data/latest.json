@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-29T02:20:57Z",
-  "slate_date": "2026-10-28",
+  "generated_at": "2026-10-29T09:46:11Z",
+  "slate_date": "2026-10-29",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,18 +9,18 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-28&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-21&endDate=2026-10-28",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-28&endDate=2026-10-30&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-21&endDate=2026-10-28",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-28&endDate=2026-10-30&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-21&endDate=2026-10-28",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-28&endDate=2026-10-30&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-21&endDate=2026-10-28"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-29&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-22&endDate=2026-10-29",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-29&endDate=2026-10-31&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-22&endDate=2026-10-29",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-29&endDate=2026-10-31&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-22&endDate=2026-10-29",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-29&endDate=2026-10-31&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-22&endDate=2026-10-29"
   },
   "source_status": {
     "league_standings": "verified",
-    "league_schedule": "verified",
+    "league_schedule": "unverified",
     "league_transactions": "verified",
     "athletics_standings": "verified",
     "athletics_schedule": "unverified",
@@ -44,83 +44,83 @@
     "league_news": {
       "items": [
         {
-          "headline": "LIVE: With clinch in sight, Brewers add on in Game 5 (FOX/FOX One)",
-          "url": "https://www.mlb.com/stories/game/849799",
+          "headline": "Mighty Brewers prove they're an unbeatable crew, capture first World Series!",
+          "url": "https://www.mlb.com/news/brewers-win-world-series-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-29T01:16:43Z",
+          "published_at": "2026-10-29T06:07:00Z",
           "summary": ""
         },
         {
-          "headline": "VOTE NOW for the World Series MVP Award",
-          "url": "https://www.mlb.com/postseason/mvp-vote?affiliateID=ws_mvp_vote_digital_2026",
+          "headline": "Contreras honored with World Series MVP for prowess behind the plate",
+          "url": "https://www.mlb.com/news/william-contreras-wins-2026-world-series-mvp",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-27T16:41:34Z",
-          "summary": "Who should be the 2026 Willie Mays MLB World Series Most Valuable Player? Voting is underway and will remain open until the end of the game."
+          "published_at": "2026-10-29T05:18:00Z",
+          "summary": ""
         },
         {
-          "headline": "Red-hot Pratt sets World Series rookie record with hit in six straight plate appearances",
+          "headline": "Believe it, Milwaukee! Brewers are World Series champs for 1st time",
+          "url": "https://www.mlb.com/news/brewers-beat-rays-game-5-win-2026-world-series",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-29T07:07:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Miz's scoreless start sets up historic clinch",
+          "url": "https://www.mlb.com/news/jacob-misiorowski-2026-world-series-game-5-start",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-10-29T06:10:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "'How awesome is this?' Pratt sets World Series rookie record to help Crew to 1st title",
           "url": "https://www.mlb.com/news/cooper-pratt-world-series-rookie-record-six-straight-hits",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-29T01:52:00Z",
+          "published_at": "2026-10-29T06:58:00Z",
           "summary": ""
         },
         {
-          "headline": "'Get up, get up, gone!' Davis pays tribute to Ueck on Pratt HR call",
-          "url": "https://www.mlb.com/news/joe-davis-tribute-bob-uecker-2026-world-series-game-4",
+          "headline": "A closer look at just how dominant the Brewers were this October",
+          "url": "https://www.mlb.com/news/key-stats-from-brewers-2026-world-series-win",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-29T00:09:03Z",
+          "published_at": "2026-10-29T08:26:19Z",
           "summary": ""
         },
         {
-          "headline": "Rasmussen, on 3 days\u2019 rest, gets Rays into middle innings in Game 5",
-          "url": "https://www.mlb.com/news/drew-rasmussen-2026-world-series-game-5-start",
+          "headline": "After dream season, Rays' World Series wishes crash back down to earth",
+          "url": "https://www.mlb.com/news/rays-lose-2026-world-series-to-brewers",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-29T01:35:00Z",
+          "published_at": "2026-10-29T07:24:00Z",
           "summary": ""
         },
         {
-          "headline": "Ashby available for Game 5? 'Yes,' says Crew's pitching coordinator",
-          "url": "https://www.mlb.com/news/aaron-ashby-brewers-world-series-game-5",
+          "headline": "One of the best postseason performances ever? Ashby just did it",
+          "url": "https://www.mlb.com/news/aaron-ashby-delivers-historic-playoff-run-to-aid-brewers-world-series",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-28T22:29:00Z",
+          "published_at": "2026-10-29T07:17:38Z",
           "summary": ""
         },
         {
-          "headline": "New MLB Network doc marks 25th anniversary of D-backs' 2001 World Series title",
-          "url": "https://www.mlb.com/news/new-mlb-network-documentary-spotlights-d-backs-2001-world-series-win",
+          "headline": "Crew shouts out family (and Ueck) with custom bottles of celebratory bubbly",
+          "url": "https://www.mlb.com/news/brewers-celebratory-champagne-bottles-families-bob-uecker",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-29T01:27:39Z",
+          "published_at": "2026-10-29T06:29:18Z",
           "summary": ""
         },
         {
-          "headline": "Cash was right, Caminero is playing in pivotal Game 5",
-          "url": "https://www.mlb.com/news/junior-caminero-injury-status-world-series-game-5",
+          "headline": "Champs twice in one year! Brewers' Venezuelan trio pulls off rare feat with WBC, WS wins",
+          "url": "https://www.mlb.com/news/jackson-chourio-william-contreras-antonio-senzatela-2026-world-baseball-classic-world-series",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-10-28T21:55:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Game 4 joins other crazy World Series finishes",
-          "url": "https://www.mlb.com/news/craziest-finishes-in-world-series-history",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-28T04:52:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Costly errors sink Brewers, but they hope Miz can provide title-winning bounceback",
-          "url": "https://www.mlb.com/news/brewers-errors-world-series-game-4-loss-rays-jacob-misiorowski",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-10-28T06:58:57Z",
+          "published_at": "2026-10-29T06:20:30Z",
           "summary": ""
         }
       ],
@@ -160,7 +160,7 @@
             "url": "https://www.mlb.com/athletics/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-29T01:20:00Z",
+            "published_at": "2026-10-29T04:32:00Z",
             "summary": ""
           },
           {
@@ -267,11 +267,11 @@
             "summary": ""
           },
           {
-            "headline": "LIVE: Watch Tigers prospects in Arizona Fall League action",
+            "headline": "Watch Tigers prospects in Arizona Fall League action",
             "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-29T01:20:00Z",
+            "published_at": "2026-10-29T04:32:00Z",
             "summary": ""
           },
           {
@@ -354,11 +354,11 @@
             "summary": ""
           },
           {
-            "headline": "LIVE: Watch Rockies prospects in Arizona Fall League action",
+            "headline": "Watch Rockies prospects in Arizona Fall League action",
             "url": "https://www.mlb.com/rockies/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-10-29T01:20:00Z",
+            "published_at": "2026-10-29T04:32:00Z",
             "summary": ""
           },
           {
@@ -393,62 +393,30 @@
     },
     "news_items": [
       {
-        "id": "mlb_com-1-3",
-        "headline": "Red-hot Pratt sets World Series rookie record with hit in six straight plate appearances",
-        "url": "https://www.mlb.com/news/cooper-pratt-world-series-rookie-record-six-straight-hits",
-        "source": "MLB.com",
+        "id": "yahoo_sports-3-1",
+        "headline": "Yankees news: Japanese star Teruaki Sato a good fit for Yanks?",
+        "url": "https://sports.yahoo.com/articles/yankees-news-japanese-star-teruaki-090000407.html",
+        "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-10-29T01:52:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-5",
-        "headline": "Rasmussen, on 3 days\u2019 rest, gets Rays into middle innings in Game 5",
-        "url": "https://www.mlb.com/news/drew-rasmussen-2026-world-series-game-5-start",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-29T01:35:00Z",
-        "summary": "",
+        "published_at": "2026-10-29T09:00:00Z",
+        "summary": "Sato in a bidding war; the AL East proves competitive balance; what to get out of deadline acquisition",
         "teams": [
           "athletics",
-          "rays"
+          "yankees"
         ],
         "players": [],
         "topics": [
           "mlb"
         ],
-        "priority": 1
+        "priority": 2
       },
       {
-        "id": "mlb_com-1-7",
-        "headline": "New MLB Network doc marks 25th anniversary of D-backs' 2001 World Series title",
-        "url": "https://www.mlb.com/news/new-mlb-network-documentary-spotlights-d-backs-2001-world-series-win",
+        "id": "mlb_com-1-6",
+        "headline": "A closer look at just how dominant the Brewers were this October",
+        "url": "https://www.mlb.com/news/key-stats-from-brewers-2026-world-series-win",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-29T01:27:39Z",
-        "summary": "",
-        "teams": [
-          "diamondbacks"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-1",
-        "headline": "LIVE: With clinch in sight, Brewers add on in Game 5 (FOX/FOX One)",
-        "url": "https://www.mlb.com/stories/game/849799",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-29T01:16:43Z",
+        "published_at": "2026-10-29T08:26:19Z",
         "summary": "",
         "teams": [
           "brewers"
@@ -460,48 +428,15 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-1",
-        "headline": "Rays&#39; Yandy Diaz stays in World Series game after injury delay",
-        "url": "https://sports.yahoo.com/articles/rays-yandy-diaz-stays-world-011217869.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-10-29T01:12:17Z",
-        "summary": "Rays DH Yandy Diaz stayed in World Series Game 5 after being checked on for injury.",
-        "teams": [
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-4",
-        "headline": "'Get up, get up, gone!' Davis pays tribute to Ueck on Pratt HR call",
-        "url": "https://www.mlb.com/news/joe-davis-tribute-bob-uecker-2026-world-series-game-4",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-10-29T00:09:03Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
         "id": "yahoo_sports-3-2",
-        "headline": "World Series Game 5 thread: Tampa Bay Rays vs. Milwaukee Brewers",
-        "url": "https://sports.yahoo.com/articles/today-pinstripe-alley-10-28-103000360.html",
-        "source": "SB Nation",
+        "headline": "World Series 2026: For Milwaukee Brewers, finally winning a title is a celebration decades in the making",
+        "url": "https://sports.yahoo.com/mlb/article/world-series-2026-for-milwaukee-brewers-finally-winning-a-title-is-a-celebration-decades-in-the-making-082230527.html",
+        "source": "Yahoo Sports",
         "source_type": "rss",
-        "published_at": "2026-10-28T23:57:34Z",
-        "summary": "It&#39;s curtains for the Trop tonight.",
+        "published_at": "2026-10-29T08:22:30Z",
+        "summary": "The 2026 Brewers were a complete collective, built meticulously from the inside out, from the bottom up.",
         "teams": [
-          "brewers",
-          "rays"
+          "brewers"
         ],
         "players": [],
         "topics": [
@@ -511,14 +446,13 @@
       },
       {
         "id": "yahoo_sports-3-3",
-        "headline": "World Series Game Discussion: Brewers vs Rays Game 5 Wednesday",
-        "url": "https://sports.yahoo.com/articles/world-series-game-discussion-brewers-235000791.html",
-        "source": "SB Nation",
+        "headline": "Brewers win first World Series in 57-year history",
+        "url": "https://sports.yahoo.com/articles/brewers-win-first-world-series-075642497.html",
+        "source": "BBC",
         "source_type": "rss",
-        "published_at": "2026-10-28T23:50:00Z",
-        "summary": "After an extra innings thriller won by the Rays Tuesday night, it\u2019s game 5 of the World Series as the Brewers will try again to lock down a championship with Jacob Misiorowski on the mound. Rays starter will be Drew Rasmussen. First pitch set for 7pm central time and the game broadcast will be handled [\u2026]",
+        "published_at": "2026-10-29T07:56:42Z",
+        "summary": "The Milwaukee Brewers win the World Series for the first time in the franchise&#39;s 57-year history after beating the Tampa Bay Rays in game five on Wednesday.",
         "teams": [
-          "athletics",
           "brewers",
           "rays"
         ],
@@ -530,45 +464,12 @@
       },
       {
         "id": "yahoo_sports-3-4",
-        "headline": "World Series Game Five: Open Game Thread",
-        "url": "https://sports.yahoo.com/articles/world-series-game-five-open-234500188.html",
-        "source": "SB Nation",
+        "headline": "World Series 2026: For the Rays, being the best team in the American League simply wasn&#39;t enough",
+        "url": "https://sports.yahoo.com/mlb/article/world-series-2026-for-the-rays-being-the-best-team-in-the-american-league-simply-wasnt-enough-074822560.html",
+        "source": "Yahoo Sports",
         "source_type": "rss",
-        "published_at": "2026-10-28T23:45:00Z",
-        "summary": "The Rays try for back-to-back magic while the Brewers look to make history",
-        "teams": [
-          "brewers",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-5",
-        "headline": "World Series Game 5 game discussion",
-        "url": "https://sports.yahoo.com/articles/world-series-game-5-game-234500841.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-28T23:45:00Z",
-        "summary": "Will we see some champagne tonight?",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-6",
-        "headline": "World Series Game 5 \u2013 Milwaukee Brewers at Tampa Bay Rays",
-        "url": "https://sports.yahoo.com/articles/world-series-game-5-milwaukee-234203306.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-28T23:42:03Z",
-        "summary": "It took until the early hours of Wednesday morning on the east coast for the Tampa Bay Rays to finally stave off the Milwaukee Brewers, but the home squad managed to do so and keep their chances at the most improbable of comebacks alive. Despite a huge homer (at the time) by Milwaukee shortstop Cooper [\u2026]",
+        "published_at": "2026-10-29T07:48:22Z",
+        "summary": "It&#39;s unclear if anything could&#39;ve sufficiently equipped the Rays to take on the buzzsaw that was the 2026 Brewers.",
         "teams": [
           "athletics",
           "brewers",
@@ -581,52 +482,16 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-7",
-        "headline": "Open Thread World Series Game Five",
-        "url": "https://sports.yahoo.com/articles/open-thread-world-series-game-233130995.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-28T23:31:30Z",
-        "summary": "Game four was an excellent baseball game. Tons of fun. And, with the Rays winning it, we get another game. I don\u2019t care who wins the series but I\u2019m happy to get more baseball. Tonight\u2019s lineups: Drew Rasmussen is starting on three days rest. Jacob Misiorowski (must be some sort of MLB record for number [\u2026]",
-        "teams": [
-          "athletics",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-8",
-        "headline": "World Series Game 5: Brewers at Rays, 8:00 p.m. ET",
-        "url": "https://sports.yahoo.com/articles/world-series-game-5-brewers-233000132.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-10-28T23:30:00Z",
-        "summary": "The Rays extended the series last night. Can they get it back to Milwaukee? Join us to discuss.",
-        "teams": [
-          "athletics",
-          "brewers",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-6",
-        "headline": "Ashby available for Game 5? 'Yes,' says Crew's pitching coordinator",
-        "url": "https://www.mlb.com/news/aaron-ashby-brewers-world-series-game-5",
+        "id": "mlb_com-1-7",
+        "headline": "After dream season, Rays' World Series wishes crash back down to earth",
+        "url": "https://www.mlb.com/news/rays-lose-2026-world-series-to-brewers",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-28T22:29:00Z",
+        "published_at": "2026-10-29T07:24:00Z",
         "summary": "",
         "teams": [
-          "athletics"
+          "athletics",
+          "rays"
         ],
         "players": [],
         "topics": [
@@ -636,11 +501,11 @@
       },
       {
         "id": "mlb_com-1-8",
-        "headline": "Cash was right, Caminero is playing in pivotal Game 5",
-        "url": "https://www.mlb.com/news/junior-caminero-injury-status-world-series-game-5",
+        "headline": "One of the best postseason performances ever? Ashby just did it",
+        "url": "https://www.mlb.com/news/aaron-ashby-delivers-historic-playoff-run-to-aid-brewers-world-series",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-28T21:55:00Z",
+        "published_at": "2026-10-29T07:17:38Z",
         "summary": "",
         "teams": [
           "athletics"
@@ -652,43 +517,158 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-2",
-        "headline": "VOTE NOW for the World Series MVP Award",
-        "url": "https://www.mlb.com/postseason/mvp-vote?affiliateID=ws_mvp_vote_digital_2026",
+        "id": "mlb_com-1-3",
+        "headline": "Believe it, Milwaukee! Brewers are World Series champs for 1st time",
+        "url": "https://www.mlb.com/news/brewers-beat-rays-game-5-win-2026-world-series",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-10-27T16:41:34Z",
-        "summary": "Who should be the 2026 Willie Mays MLB World Series Most Valuable Player? Voting is underway and will remain open until the end of the game.",
+        "published_at": "2026-10-29T07:07:00Z",
+        "summary": "",
+        "teams": [
+          "brewers"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-5",
+        "headline": "'How awesome is this?' Pratt sets World Series rookie record to help Crew to 1st title",
+        "url": "https://www.mlb.com/news/cooper-pratt-world-series-rookie-record-six-straight-hits",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-29T06:58:00Z",
+        "summary": "",
         "teams": [],
         "players": [],
         "topics": [
           "mlb"
         ],
         "priority": 1
+      },
+      {
+        "id": "mlb_com-1-4",
+        "headline": "Miz's scoreless start sets up historic clinch",
+        "url": "https://www.mlb.com/news/jacob-misiorowski-2026-world-series-game-5-start",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-29T06:10:00Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-1",
+        "headline": "Mighty Brewers prove they're an unbeatable crew, capture first World Series!",
+        "url": "https://www.mlb.com/news/brewers-win-world-series-2026",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-29T06:07:00Z",
+        "summary": "",
+        "teams": [
+          "brewers"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-5",
+        "headline": "The Miz takes Brewers to promised land: World Series champion, Cy Young in-waiting",
+        "url": "https://sports.yahoo.com/articles/miz-takes-brewers-promised-land-055129185.html",
+        "source": "USA TODAY Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-29T05:51:29Z",
+        "summary": "Jacob Misiorowski left Game 5 with a cramp one out shy of six scoreless inning. Here&#39;s what the Brewers ace said after clinching the title.",
+        "teams": [
+          "brewers"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-6",
+        "headline": "World Series 2026: 10 wild stats from the Brewers&#39; first title",
+        "url": "https://sports.yahoo.com/mlb/article/world-series-2026-10-wild-stats-from-the-brewers-first-title-054507073.html",
+        "source": "Yahoo Sports",
+        "source_type": "rss",
+        "published_at": "2026-10-29T05:45:07Z",
+        "summary": "There has never been a team quite like the 2026 Brewers.",
+        "teams": [
+          "athletics",
+          "brewers"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-2",
+        "headline": "Contreras honored with World Series MVP for prowess behind the plate",
+        "url": "https://www.mlb.com/news/william-contreras-wins-2026-world-series-mvp",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-10-29T05:18:00Z",
+        "summary": "",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-7",
+        "headline": "The most important stories of 2026: #3 \u2014 Rafael Devers flips the script",
+        "url": "https://sports.yahoo.com/articles/most-important-stories-2026-3-045237631.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-29T04:52:37Z",
+        "summary": "There\u2019s something to be said about sticking it to your detractors, especially when in it proves you\u2019re The Man.",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-8",
+        "headline": "Yankees Important 2026-2027 Offseason Dates",
+        "url": "https://sports.yahoo.com/articles/york-yankees-important-2026-2027-174500808.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-10-29T04:36:55Z",
+        "summary": "A roundup of all dates to note for the 2026-2027 offseason.",
+        "teams": [
+          "athletics",
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
       }
     ]
   },
   "scoreboard": {
-    "games": [
-      {
-        "id": "849799",
-        "away_team": "Milwaukee Brewers",
-        "home_team": "Tampa Bay Rays",
-        "away_score": 4,
-        "home_score": 0,
-        "status": "Live",
-        "status_detail": "In Progress",
-        "inning": null,
-        "inning_state": "",
-        "start_time": "2026-10-29T00:00:00Z",
-        "venue": "Tropicana Field",
-        "probable_pitchers": {
-          "away": "Jacob Misiorowski",
-          "home": "Drew Rasmussen"
-        },
-        "broadcasts": []
-      }
-    ]
+    "games": []
   },
   "news_status": {
     "league_news": "verified",
@@ -708,78 +688,79 @@
       "Standings: Blue Jays: 79-83 (PCT .488, GB 19.0) [Division]",
       "Standings: Guardians: 85-77 (PCT .525, GB -) [Division]",
       "Standings: White Sox: 84-78 (PCT .519, GB 1.0) [Division]",
-      "Standings: Twins: 77-85 (PCT .475, GB 8.0) [Division]",
-      "Probable: Milwaukee Brewers (Jacob Misiorowski) @ Tampa Bay Rays (Drew Rasmussen) \u2014 In Progress 2026-10-29T00:00:00Z Tropicana Field"
+      "Standings: Twins: 77-85 (PCT .475, GB 8.0) [Division]"
     ],
-    "unverified_notes": [],
+    "unverified_notes": [
+      "UNVERIFIED: No games scheduled in window."
+    ],
     "stories": [
       "Use only verified league records/matchups/transactions for hard claims."
     ],
     "watch": [
-      "Probable: Milwaukee Brewers (Jacob Misiorowski) @ Tampa Bay Rays (Drew Rasmussen) \u2014 In Progress 2026-10-29T00:00:00Z Tropicana Field"
+      "UNVERIFIED: No probable matchup entries available."
     ],
     "transactions": [
-      "League tx: 2026-10-21: Estrellas Orientales activated SS Juan Santana.",
-      "League tx: 2026-10-21: Charros de Jalisco activated 2B Carlos Baez from the reserve list.",
-      "League tx: 2026-10-21: Caneros de los Mochis activated RHP Raul Castellon from the reserve list.",
-      "League tx: 2026-10-21: Tomateros de Culiacan placed RHP Axel Sauceda on the reserve list.",
-      "League tx: 2026-10-21: RHP Listher Sosa assigned to Estrellas Orientales.",
-      "League tx: 2026-10-21: SS Juan Santana assigned to Estrellas Orientales.",
-      "League tx: 2026-10-21: Mayos de Navojoa placed RHP Gerardo Lopez on the reserve list.",
-      "League tx: 2026-10-21: Mayos de Navojoa activated RHP Jorge Moyoroqui from the reserve list.",
-      "League tx: 2026-10-21: Caneros de los Mochis placed RHP Jonas Garibay on the reserve list.",
-      "League tx: 2026-10-21: Yaquis de Obregon placed RHP Cristian Alvarado on the reserve list.",
-      "League tx: 2026-10-21: RHP Junior William assigned to Estrellas Orientales.",
-      "League tx: 2026-10-21: RHP Jonathan Hern\u00e1ndez assigned to Aguilas Cibaenas.",
-      "League tx: 2026-10-21: Charros de Jalisco placed RHP Luis Moreno on the reserve list.",
-      "League tx: 2026-10-21: Jaguares de Nayarit placed RHP Adolfo Ramirez on the reserve list.",
-      "League tx: 2026-10-21: Naranjeros de Hermosillo activated RHP Saul Soto from the reserve list.",
-      "League tx: 2026-10-21: RHP Jorge Tavarez assigned to Aguilas Cibaenas.",
-      "League tx: 2026-10-21: SS Daniel Vazquez assigned to Aguilas Cibaenas.",
-      "League tx: 2026-10-21: Yaquis de Obregon activated RHP Edgar Gallegos from the reserve list.",
-      "League tx: 2026-10-21: RHP Yoelvin Silven assigned to Aguilas Cibaenas.",
-      "League tx: 2026-10-21: RF Ronny Simon assigned to Toros del Este.",
-      "League tx: 2026-10-21: Toros del Este activated RF Ronny Simon.",
-      "League tx: 2026-10-21: Charros de Jalisco activated RHP Oscar Valenzuela from the reserve list.",
-      "League tx: 2026-10-21: Tomateros de Culiacan activated RHP Pedro Reyes from the reserve list.",
-      "League tx: 2026-10-21: LHP Fernando Abad assigned to Estrellas Orientales.",
-      "League tx: 2026-10-21: Mayos de Navojoa activated LHP Luis Valdez from the reserve list.",
-      "League tx: 2026-10-21: Charros de Jalisco placed LHP Isaias Felix on the reserve list.",
-      "League tx: 2026-10-21: RHP Randy Gutierrez assigned to DSL Mets Orange.",
-      "League tx: 2026-10-21: Caneros de los Mochis activated C Mario Gomez from the reserve list.",
-      "League tx: 2026-10-21: RHP Jorge Moroyoqui assigned to Mayos de Navojoa.",
-      "League tx: 2026-10-21: Charros de Jalisco placed RHP Axel Munoz on the reserve list.",
-      "League tx: 2026-10-21: Naranjeros de Hermosillo placed RHP Joel Ibarra on the reserve list.",
-      "League tx: 2026-10-21: Jacksonville Jumbo Shrimp released C Bennett Hostetler.",
-      "League tx: 2026-10-21: RHP Kevin Valdez assigned to Aguilas Cibaenas.",
-      "League tx: 2026-10-21: DSL Angels released SS Jose Santana.",
-      "League tx: 2026-10-21: Venados de Mazatlan placed 2B Emmanuel Avila on the reserve list.",
-      "League tx: 2026-10-21: RHP Alexander Cornielle assigned to Tigres del Licey.",
-      "League tx: 2026-10-21: Venados de Mazatlan activated LHP Ruben Reyes from the reserve list.",
-      "League tx: 2026-10-21: Mayos de Navojoa placed RHP Oscar Soria on the reserve list.",
-      "League tx: 2026-10-21: RHP Mario Mendoza assigned to Mayos de Navojoa.",
-      "League tx: 2026-10-21: C Heber Villalobos assigned to Algodoneros de Guasave.",
-      "League tx: 2026-10-21: LHP Felipe De La Cruz assigned to Estrellas Orientales.",
-      "League tx: 2026-10-21: Caneros de los Mochis placed RHP Francisco Pazos on the reserve list.",
-      "League tx: 2026-10-21: OF Luis Liberato assigned to Aguilas Cibaenas.",
-      "League tx: 2026-10-21: RHP Bo Takahashi assigned to Jaguares de Nayarit.",
-      "League tx: 2026-10-21: RHP Eduarniel N\u00fa\u00f1ez assigned to Estrellas Orientales.",
-      "League tx: 2026-10-21: CF Junior Perez assigned to Estrellas Orientales.",
-      "League tx: 2026-10-21: Mayos de Navojoa placed LHP Eduardo Mares on the reserve list.",
-      "League tx: 2026-10-21: IF Aldo Flores assigned to Jaguares de Nayarit.",
-      "League tx: 2026-10-21: 2B Connor Hollis assigned to Charros de Jalisco.",
-      "League tx: 2026-10-21: Algodoneros de Guasave placed OF Rogelio Cobos on the reserve list."
+      "League tx: 2026-10-22: Naranjeros de Hermosillo placed C C\u00e9sar Salazar on the reserve list.",
+      "League tx: 2026-10-22: Mayos de Navojoa placed RHP Collin Wiles on the reserve list.",
+      "League tx: 2026-10-22: RHP Andre Granillo assigned to Navegantes del Magallanes.",
+      "League tx: 2026-10-22: RHP Daniel Ponce de Leon assigned to Yaquis de Obregon.",
+      "League tx: 2026-10-22: LHP Angel Lopez assigned to Aguilas de Mexicali.",
+      "League tx: 2026-10-22: RHP Cesar Gomez assigned to Charros de Jalisco.",
+      "League tx: 2026-10-22: DSL Twins released RHP Eliezer Lucena.",
+      "League tx: 2026-10-22: Caneros de los Mochis activated RHP Victor Garcia from the reserve list.",
+      "League tx: 2026-10-22: Cardenales de Lara released SS Diego Gonzalez.",
+      "League tx: 2026-10-22: Tomateros de Culiacan activated LHP Baltazar Arredondo from the reserve list.",
+      "League tx: 2026-10-22: Tomateros de Culiacan placed OF Christian Lucero on the reserve list.",
+      "League tx: 2026-10-22: Tomateros de Culiacan placed C Kevin Robledo on the reserve list.",
+      "League tx: 2026-10-22: Jaguares de Nayarit placed RHP Francisco Rios on the reserve list.",
+      "League tx: 2026-10-22: Charros de Jalisco activated RHP Luis Moreno from the reserve list.",
+      "League tx: 2026-10-22: Jaguares de Nayarit placed RHP Leam Mendez on the reserve list.",
+      "League tx: 2026-10-22: Jaguares de Nayarit activated RHP Adolfo Ramirez from the reserve list.",
+      "League tx: 2026-10-22: Charros de Jalisco activated LHP Isaias Felix from the reserve list.",
+      "League tx: 2026-10-22: Charros de Jalisco placed RHP Irving Vazquez on the reserve list.",
+      "League tx: 2026-10-22: C Brandon Jaime assigned to Aguilas de Mexicali.",
+      "League tx: 2026-10-22: LHP Williams Salazar assigned to Glendale Desert Dogs.",
+      "League tx: 2026-10-22: C Julian Leon assigned to Algodoneros de Guasave.",
+      "League tx: 2026-10-22: RHP Tadeo Sanchez assigned to Algodoneros de Guasave.",
+      "League tx: 2026-10-22: Tampa Bay Rays signed free agent LHP Zair Tromp to a minor league contract.",
+      "League tx: 2026-10-22: C Gabriel Gutierrez assigned to Naranjeros de Hermosillo.",
+      "League tx: 2026-10-22: RHP Easton McGee elected free agency.",
+      "League tx: 2026-10-22: Caneros de los Mochis placed RHP Raul Castellon on the reserve list.",
+      "League tx: 2026-10-22: Charros de Jalisco placed 2B Carlos Baez on the reserve list.",
+      "League tx: 2026-10-22: Charros de Jalisco placed C Jesus Cordova on the reserve list.",
+      "League tx: 2026-10-22: Venados de Mazatlan placed RHP Victor Morales on the reserve list.",
+      "League tx: 2026-10-22: C Julian Leon assigned to Algodoneros de Guasave.",
+      "League tx: 2026-10-22: Yaquis de Obregon activated RHP Cristian Alvarado from the reserve list.",
+      "League tx: 2026-10-22: Algodoneros de Guasave placed C Carlos Garzon on the reserve list.",
+      "League tx: 2026-10-22: Naranjeros de Hermosillo activated RHP Rolando Mora from the reserve list.",
+      "League tx: 2026-10-22: Tomateros de Culiacan activated RHP Axel Sauceda from the reserve list.",
+      "League tx: 2026-10-22: Algodoneros de Guasave activated C Julian Leon.",
+      "League tx: 2026-10-22: 3B Nick Senzel assigned to Mayos de Navojoa.",
+      "League tx: 2026-10-22: Yaquis de Obregon placed RHP Jeff Brigham on the reserve list.",
+      "League tx: 2026-10-22: RHP Elieser Hern\u00e1ndez assigned to Tiburones de La Guaira.",
+      "League tx: 2026-10-22: Venados de Mazatlan activated RHP Jonatan Bernal from the reserve list.",
+      "League tx: 2026-10-22: Navegantes del Magallanes activated RHP Andre Granillo.",
+      "League tx: 2026-10-22: Algodoneros de Guasave placed RHP Jorge Monroy on the reserve list.",
+      "League tx: 2026-10-22: Jaguares de Nayarit activated RHP Jose Soria from the reserve list.",
+      "League tx: 2026-10-22: Yaquis de Obregon placed RHP Jesus Luna on the reserve list.",
+      "League tx: 2026-10-22: RHP Jholbran Herder assigned to Leones del Caracas.",
+      "League tx: 2026-10-22: Aguilas de Mexicali placed LHP Alonso Becerra on the reserve list.",
+      "League tx: 2026-10-22: RHP Adrian Gerrado assigned to Algodoneros de Guasave.",
+      "League tx: 2026-10-22: RHP Edgar Navarro assigned to Cardenales de Lara.",
+      "League tx: 2026-10-22: RHP Connor Seabold elected free agency.",
+      "League tx: 2026-10-22: Algodoneros de Guasave placed RHP Kevin Ribon on the reserve list.",
+      "League tx: 2026-10-22: Chicago Cubs signed free agent RHP Eliehiker Perdomo to a minor league contract."
     ],
-    "transactions_total": 408,
+    "transactions_total": 354,
     "debug": {
       "standings": [
         "rows=30"
       ],
       "schedule": [
-        "games=1"
+        "games=0"
       ],
       "transactions": [
-        "transactions=408"
+        "transactions=354"
       ]
     }
   },
@@ -907,32 +888,32 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-28&hydrate=probablePitcher,team",
-        "status": "verified",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-29&hydrate=probablePitcher,team",
+        "status": "unverified",
         "debug": [
-          "games=1"
+          "games=0"
         ],
-        "verified_count": 1,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Probable: Milwaukee Brewers (Jacob Misiorowski) @ Tampa Bay Rays (Drew Rasmussen) \u2014 In Progress 2026-10-29T00:00:00Z Tropicana Field"
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: No games scheduled in window."
+        ]
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-21&endDate=2026-10-28",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-22&endDate=2026-10-29",
         "status": "verified",
         "debug": [
-          "transactions=408"
+          "transactions=354"
         ],
-        "verified_count": 408,
+        "verified_count": 354,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-10-21: Estrellas Orientales activated SS Juan Santana.",
-          "League tx: 2026-10-21: Charros de Jalisco activated 2B Carlos Baez from the reserve list.",
-          "League tx: 2026-10-21: Caneros de los Mochis activated RHP Raul Castellon from the reserve list.",
-          "League tx: 2026-10-21: Tomateros de Culiacan placed RHP Axel Sauceda on the reserve list.",
-          "League tx: 2026-10-21: RHP Listher Sosa assigned to Estrellas Orientales."
+          "League tx: 2026-10-22: Naranjeros de Hermosillo placed C C\u00e9sar Salazar on the reserve list.",
+          "League tx: 2026-10-22: Mayos de Navojoa placed RHP Collin Wiles on the reserve list.",
+          "League tx: 2026-10-22: RHP Andre Granillo assigned to Navegantes del Magallanes.",
+          "League tx: 2026-10-22: RHP Daniel Ponce de Leon assigned to Yaquis de Obregon.",
+          "League tx: 2026-10-22: LHP Angel Lopez assigned to Aguilas de Mexicali."
         ],
         "unverified_sample": []
       },
@@ -950,7 +931,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-28&endDate=2026-10-30&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-10-29&endDate=2026-10-31&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -963,7 +944,7 @@
         ]
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-21&endDate=2026-10-28",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-10-22&endDate=2026-10-29",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -989,7 +970,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-28&endDate=2026-10-30&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-10-29&endDate=2026-10-31&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1002,7 +983,7 @@
         ]
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-21&endDate=2026-10-28",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-10-22&endDate=2026-10-29",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1028,7 +1009,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-28&endDate=2026-10-30&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-10-29&endDate=2026-10-31&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1041,7 +1022,7 @@
         ]
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-21&endDate=2026-10-28",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-10-22&endDate=2026-10-29",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1156,10 +1137,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-10-29T02:20:57Z"
+    "generated_utc": "2026-10-29T09:46:11Z"
   },
   "bd_bets": {
-    "generated_at": "2026-10-29T02:21:01.529Z",
+    "generated_at": "2026-10-29T09:46:15.753Z",
     "slate_date": "2026-10-29",
     "sport": "MLB",
     "source": "bd-bets",
