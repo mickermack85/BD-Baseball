@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T22:38:20Z",
+  "generated_at": "2026-11-08T02:17:26Z",
   "slate_date": "2026-11-07",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
@@ -43,6 +43,14 @@
   "news": {
     "league_news": {
       "items": [
+        {
+          "headline": "Watch LIVE: Arizona Fall League Home Run Derby",
+          "url": "https://www.mlb.com/news/2026-arizona-fall-league-home-run-derby",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-11-08T02:07:00Z",
+          "summary": ""
+        },
         {
           "headline": "How will Skubal fare in his 30s? History offers some clues",
           "url": "https://www.mlb.com/news/tarik-skubal-projection-scenarios-for-free-agent-deal",
@@ -113,14 +121,6 @@
           "source": "MLB.com",
           "source_type": "rss",
           "published_at": "2026-11-06T20:50:19Z",
-          "summary": ""
-        },
-        {
-          "headline": "Breaking down the free-agent class by tiers",
-          "url": "https://www.mlb.com/news/tiers-of-mlb-s-2026-27-free-agent-players",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-11-06T05:00:00Z",
           "summary": ""
         }
       ],
@@ -338,11 +338,11 @@
             "summary": ""
           },
           {
-            "headline": "Watch Rockies prospect O'Dowd in tonight's AFL Home Run Derby",
+            "headline": "Watch LIVE: Rockies prospect O'Dowd in AFL Home Run Derby",
             "url": "https://www.mlb.com/rockies/news/2026-arizona-fall-league-home-run-derby",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-11-07T19:14:00Z",
+            "published_at": "2026-11-08T02:07:00Z",
             "summary": ""
           },
           {
@@ -393,7 +393,39 @@
     },
     "news_items": [
       {
+        "id": "mlb_com-1-1",
+        "headline": "Watch LIVE: Arizona Fall League Home Run Derby",
+        "url": "https://www.mlb.com/news/2026-arizona-fall-league-home-run-derby",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-11-08T02:07:00Z",
+        "summary": "",
+        "teams": [
+          "diamondbacks"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
         "id": "yahoo_sports-3-1",
+        "headline": "2027 South Side Sox Top Prospect No. 92: Diego Natera",
+        "url": "https://sports.yahoo.com/articles/2027-south-side-sox-top-014053713.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-08T01:40:53Z",
+        "summary": "Strong arm in 2025 + tuff bat in 2026 = a compelling catcher entering the ACL?",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-2",
         "headline": "Which Yankees deserve protection from the Rule 5 Draft?",
         "url": "https://sports.yahoo.com/articles/yankees-deserve-protection-rule-5-210000701.html",
         "source": "SB Nation",
@@ -410,7 +442,7 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-2",
+        "id": "yahoo_sports-3-3",
         "headline": "2026 Arizona Diamondbacks Play of the Year: Waldy walks off the Cubs",
         "url": "https://sports.yahoo.com/articles/2026-arizona-diamondbacks-play-waldy-210000858.html",
         "source": "SB Nation",
@@ -428,7 +460,7 @@
         "priority": 2
       },
       {
-        "id": "mlb_com-1-5",
+        "id": "mlb_com-1-6",
         "headline": "Yankees' Triple-A affiliate announces new identity",
         "url": "https://www.mlb.com/news/yankees-triple-a-affiliate-rebrands-as-highlanders",
         "source": "MLB.com",
@@ -445,7 +477,7 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-3",
+        "id": "yahoo_sports-3-4",
         "headline": "Today in White Sox History: November 7",
         "url": "https://sports.yahoo.com/articles/today-white-sox-history-november-195650366.html",
         "source": "SB Nation",
@@ -462,7 +494,42 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-4",
+        "id": "yahoo_sports-3-5",
+        "headline": "Remember him? Phillies should pursue their 2022 World Series nemesis",
+        "url": "https://sports.yahoo.com/articles/remember-him-phillies-pursue-2022-070000793.html",
+        "source": "NBC Sports Philadelphia",
+        "source_type": "rss",
+        "published_at": "2026-11-07T19:50:07Z",
+        "summary": "Four years ago, Jeremy Pe\u00f1a tormented Philadelphia. Now, his game could address several of the Phillies\u2019 biggest needs.",
+        "teams": [
+          "phillies"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-6",
+        "headline": "MLB lockout tracker: What CBA talks mean for Phillies baseball",
+        "url": "https://sports.yahoo.com/articles/mlb-lockout-tracker-cba-talks-070000118.html",
+        "source": "NBC Sports Philadelphia",
+        "source_type": "rss",
+        "published_at": "2026-11-07T19:50:07Z",
+        "summary": "From a proposed salary cap to free agency and playoff changes, follow every development before the current CBA expires Dec. 1.",
+        "teams": [
+          "athletics",
+          "phillies"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-7",
         "headline": "\ud83c\udfa5 Glasner runs length of pitch to celebrate with players mid-game \ud83d\ude02",
         "url": "https://sports.yahoo.com/articles/glasner-runs-length-pitch-celebrate-191400117.html",
         "source": "OneFootball",
@@ -479,7 +546,7 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-5",
+        "id": "yahoo_sports-3-8",
         "headline": "Braves were reportedly \u201clinked\u201d to Casey Mize at 2026 Trade Deadline",
         "url": "https://sports.yahoo.com/articles/braves-were-reportedly-linked-casey-180805665.html",
         "source": "SB Nation",
@@ -497,59 +564,7 @@
         "priority": 2
       },
       {
-        "id": "yahoo_sports-3-6",
-        "headline": "Cubs historical sleuthing: 1970s edition",
-        "url": "https://sports.yahoo.com/articles/cubs-historical-sleuthing-1970s-edition-180000300.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-07T18:00:00Z",
-        "summary": "This one sleuthed pretty easily",
-        "teams": [
-          "athletics",
-          "cubs"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-7",
-        "headline": "2026 Atlanta Braves Player Review: Osvaldo Bido",
-        "url": "https://sports.yahoo.com/articles/2026-atlanta-braves-player-review-170000946.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-07T17:00:00Z",
-        "summary": "The righty reliever spent most of 2026 bouncing between organizations, including the Braves.",
-        "teams": [
-          "braves"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-8",
-        "headline": "RHP Adam Smith to represent Mariners at AFL All-Star Game",
-        "url": "https://sports.yahoo.com/articles/rhp-adam-smith-represent-mariners-164000893.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-07T16:40:00Z",
-        "summary": "The Invisible Strike-Throwing Hand",
-        "teams": [
-          "mariners"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-4",
+        "id": "mlb_com-1-5",
         "headline": "5 questions for the World Series champion Brewers this offseason",
         "url": "https://www.mlb.com/news/brewers-2026-27-offseason-questions",
         "source": "MLB.com",
@@ -567,7 +582,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-3",
+        "id": "mlb_com-1-4",
         "headline": "PCA, Bellinger awarded Platinum Gloves; Team Gold Gloves to Cubs & Jays",
         "url": "https://www.mlb.com/news/pete-crow-armstrong-cody-bellinger-win-platinum-gloves",
         "source": "MLB.com",
@@ -584,7 +599,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-1",
+        "id": "mlb_com-1-2",
         "headline": "How will Skubal fare in his 30s? History offers some clues",
         "url": "https://www.mlb.com/news/tarik-skubal-projection-scenarios-for-free-agent-deal",
         "source": "MLB.com",
@@ -599,7 +614,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-2",
+        "id": "mlb_com-1-3",
         "headline": "Ranking all 30 MLB rosters as the offseason gets going",
         "url": "https://www.mlb.com/news/where-every-mlb-team-starts-2026-2027-offseason",
         "source": "MLB.com",
@@ -616,22 +631,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-8",
-        "headline": "Nats, outfielder Young agree to four-year contract extension (source)",
-        "url": "https://www.mlb.com/news/jacob-young-contract-extension-nationals",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-11-06T17:15:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-6",
+        "id": "mlb_com-1-7",
         "headline": "Could Holliday be an O's trade candidate this winter?",
         "url": "https://www.mlb.com/news/jackson-holliday-offseason-trade-candidate-orioles",
         "source": "MLB.com",
@@ -646,7 +646,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-7",
+        "id": "mlb_com-1-8",
         "headline": "Where can the Yankees improve the lineup?",
         "url": "https://www.mlb.com/news/ways-yankees-can-improve-their-offense",
         "source": "MLB.com",
@@ -748,7 +748,7 @@
       "League tx: 2026-11-01: Venados de Mazatlan placed RHP Edgar Rodriguez on the reserve list.",
       "League tx: 2026-11-01: LHP Guillermo Arvizu assigned to Venados de Mazatlan."
     ],
-    "transactions_total": 2079,
+    "transactions_total": 2092,
     "debug": {
       "standings": [
         "rows=30"
@@ -757,7 +757,7 @@
         "games=0"
       ],
       "transactions": [
-        "transactions=2080"
+        "transactions=2093"
       ]
     }
   },
@@ -910,9 +910,9 @@
         "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-10-31&endDate=2026-11-07",
         "status": "verified",
         "debug": [
-          "transactions=2080"
+          "transactions=2093"
         ],
-        "verified_count": 2079,
+        "verified_count": 2092,
         "unverified_count": 0,
         "verified_sample": [
           "League tx: 2026-10-31: DH Eugenio Su\u00e1rez elected free agency.",
@@ -1155,11 +1155,11 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-11-07T22:38:20Z"
+    "generated_utc": "2026-11-08T02:17:26Z"
   },
   "bd_bets": {
-    "generated_at": "2026-11-07T22:38:24.081Z",
-    "slate_date": "2026-11-07",
+    "generated_at": "2026-11-08T02:17:29.742Z",
+    "slate_date": "2026-11-08",
     "sport": "MLB",
     "source": "bd-bets",
     "picks": [],
