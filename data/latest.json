@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-10T04:33:39Z",
-  "slate_date": "2026-11-09",
+  "generated_at": "2026-11-10T13:23:22Z",
+  "slate_date": "2026-11-10",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,14 +9,14 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-09&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-11-02&endDate=2026-11-09",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-11-09&endDate=2026-11-11&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-11-02&endDate=2026-11-09",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-11-09&endDate=2026-11-11&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-11-02&endDate=2026-11-09",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-11-09&endDate=2026-11-11&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-11-02&endDate=2026-11-09"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-10&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-11-03&endDate=2026-11-10",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-11-10&endDate=2026-11-12&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-11-03&endDate=2026-11-10",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-11-10&endDate=2026-11-12&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-11-03&endDate=2026-11-10",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-11-10&endDate=2026-11-12&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-11-03&endDate=2026-11-10"
   },
   "source_status": {
     "league_standings": "verified",
@@ -24,7 +24,7 @@
     "league_transactions": "verified",
     "athletics_standings": "verified",
     "athletics_schedule": "unverified",
-    "athletics_transactions": "verified",
+    "athletics_transactions": "unverified",
     "rockies_standings": "verified",
     "rockies_schedule": "unverified",
     "rockies_transactions": "verified",
@@ -108,7 +108,7 @@
           "summary": ""
         },
         {
-          "headline": "With Bednar a free agent, here are the Yankees' closer options",
+          "headline": "With Bednar a free agent, who will be Yankees' closer in 2027?",
           "url": "https://www.mlb.com/news/who-will-be-yankees-closer-in-2027",
           "source": "MLB.com",
           "source_type": "rss",
@@ -184,7 +184,7 @@
             "url": "https://www.mlb.com/athletics/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-11-10T04:04:00Z",
+            "published_at": "2026-11-10T06:07:00Z",
             "summary": ""
           },
           {
@@ -394,15 +394,137 @@
     "news_items": [
       {
         "id": "yahoo_sports-3-1",
-        "headline": "Sal Stewart wins 2026 National League Rookie of the Year Award",
-        "url": "https://sports.yahoo.com/articles/sal-stewart-wins-2026-national-030034568.html",
+        "headline": "Atlanta Braves News: Rotation Outlook, Awards Week, More",
+        "url": "https://sports.yahoo.com/articles/atlanta-braves-news-rotation-outlook-131419644.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-11-10T03:00:34Z",
-        "summary": "Sal\u2019s victory earns the Reds an additional high pick in next summer\u2019s MLB Draft.",
+        "published_at": "2026-11-10T13:14:19Z",
+        "summary": "Awards week is here",
         "teams": [
-          "reds"
+          "braves"
         ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-2",
+        "headline": "SF Giants Video: Best defensive plays of 2026",
+        "url": "https://sports.yahoo.com/articles/sf-giants-video-best-defensive-130000902.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-10T13:00:00Z",
+        "summary": "Let\u2019s watch the best defensive plays of the 2026 season!",
+        "teams": [
+          "athletics",
+          "giants"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-3",
+        "headline": "Greatest Washington Senators: A Twinkie Town Definitive List (Round 3)",
+        "url": "https://sports.yahoo.com/articles/greatest-washington-senators-twinkie-town-130000582.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-10T13:00:00Z",
+        "summary": "The Goose is loose!",
+        "teams": [
+          "athletics",
+          "nationals"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-4",
+        "headline": "Carlos Narvaez\u2019s offensive struggles leave Orioles in need of catching upgrade",
+        "url": "https://sports.yahoo.com/articles/carlos-narvaez-offensive-struggles-leave-130000079.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-10T13:00:00Z",
+        "summary": "Carlos Narv\u00e1ez\u2019s is nice defender, but his struggles at the plate could leave the Orioles looking for a more complete option behind the plate this offseason.",
+        "teams": [
+          "athletics",
+          "orioles"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-5",
+        "headline": "Chicago Cubs news: Tarik Skubal, Clay Holmes and other pitchers",
+        "url": "https://sports.yahoo.com/articles/chicago-cubs-news-tarik-skubal-130000699.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-10T13:00:00Z",
+        "summary": "The Cubs are either out on Tarik Skubal or they aren\u2019t. Other possible free agent targets and other Cubs news.",
+        "teams": [
+          "cubs"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-6",
+        "headline": "Kansas City Royals News: Jensen gets fifth place in AL ROTY",
+        "url": "https://sports.yahoo.com/articles/kansas-city-royals-news-jensen-130000875.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-10T13:00:00Z",
+        "summary": "The Royals gave out their own team awards as well.",
+        "teams": [
+          "athletics",
+          "royals"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-7",
+        "headline": "Arizona Fall League Update: November 3-8, 2026",
+        "url": "https://sports.yahoo.com/articles/arizona-fall-league-november-3-130000896.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-10T13:00:00Z",
+        "summary": "Jonathan Clark earns a save and a turn in the spotlight as Glendale splits four games",
+        "teams": [
+          "athletics",
+          "diamondbacks"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-8",
+        "headline": "David Bednar and Opportunity Cost",
+        "url": "https://sports.yahoo.com/articles/david-bednar-opportunity-cost-123000306.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-10T12:30:00Z",
+        "summary": "The qualifying offer would make David Bednar the game\u2019s highest paid reliever\u2026and that\u2019s where it should end.",
+        "teams": [],
         "players": [],
         "topics": [
           "mlb"
@@ -494,75 +616,6 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-2",
-        "headline": "Eldridge receives two 5th place votes for NL Rookie of the Year",
-        "url": "https://sports.yahoo.com/articles/eldridge-receives-two-5th-place-014004954.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-10T01:40:04Z",
-        "summary": "The rookie slugger certainly made an impression with fans, but less so with the BBWAA voters.",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-3",
-        "headline": "Payton Tolle finishes third in AL Rookie of the Year vote behind winner Kevin McGonigle",
-        "url": "https://sports.yahoo.com/articles/payton-tolle-finishes-third-al-013058609.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-10T01:30:58Z",
-        "summary": "Payton Tolle was not named the American League Rookie of the Year for 2026 tonight. This was expected. Tolle was great, of course. He was the first Red Sox pitcher under the age of 24 since Dennis Eckersley to make at least 4 starts of at least 6 innings without allowing a single run. He [\u2026]",
-        "teams": [
-          "athletics",
-          "red sox"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-4",
-        "headline": "Sal Stewart named National League Rookie of the Year",
-        "url": "https://sports.yahoo.com/articles/sal-stewart-named-national-league-012453543.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-10T01:24:53Z",
-        "summary": "Brewers right-hander Logan Henderson picks up five total votes",
-        "teams": [
-          "brewers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-5",
-        "headline": "Tigers infielder Kevin McGonigle wins AL Rookie of the Year, Reds slugger Sal Stewart takes NL honor",
-        "url": "https://sports.yahoo.com/articles/tigers-infielder-kevin-mcgonigle-wins-012326737.html",
-        "source": "NBC Sports",
-        "source_type": "rss",
-        "published_at": "2026-11-10T01:23:26Z",
-        "summary": "McGonigle and Stewart were named Major League Baseball&#39;s top rookies in their respective leagues.",
-        "teams": [
-          "athletics",
-          "reds",
-          "tigers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
         "id": "mlb_com-1-6",
         "headline": "'27 Rookie of the Year candidates -- one from each team",
         "url": "https://www.mlb.com/news/each-team-2027-rookie-of-the-year-candidate",
@@ -576,59 +629,6 @@
           "mlb"
         ],
         "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-6",
-        "headline": "AL Rookie of the Year: Why I voted for the Guardians&#39; Parker Messick over the Tigers&#39; Kevin McGonigle",
-        "url": "https://sports.yahoo.com/mlb/article/al-rookie-of-the-year-why-i-voted-for-the-guardians-parker-messick-over-the-tigers-kevin-mcgonigle-011239176.html",
-        "source": "Yahoo Sports",
-        "source_type": "rss",
-        "published_at": "2026-11-10T01:12:39Z",
-        "summary": "For this voter, Messick&#39;s consistent excellence across an outsized workload earned him the top spot on the ballot.",
-        "teams": [
-          "guardians",
-          "tigers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-7",
-        "headline": "Kevin McGonigle, Sal Stewart win BBWAA Rookie of the Year Awards",
-        "url": "https://sports.yahoo.com/articles/kevin-mcgonigle-sal-stewart-win-010821892.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-10T01:08:21Z",
-        "summary": "Didier Fuentes received a couple of votes as well.",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-8",
-        "headline": "Reds&#39; Sal Stewart wins NL Rookie of the Year after 112 RBI season",
-        "url": "https://sports.yahoo.com/articles/reds-sal-stewart-wins-nl-010336720.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-11-10T01:03:36Z",
-        "summary": "Sal Stewart broke a Reds rookie RBI record that had stood since 1953 and played all 162 games. Here&#39;s how the NL Rookie of the Year vote went.",
-        "teams": [
-          "athletics",
-          "reds"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
       },
       {
         "id": "mlb_com-1-4",
@@ -697,58 +697,58 @@
       "UNVERIFIED: No probable matchup entries available."
     ],
     "transactions": [
-      "League tx: 2026-11-02: ACL Dodgers activated RHP Oliver Gonzalez from the full-season injured list.",
-      "League tx: 2026-11-02: Athletics activated 1B Nick Kurtz from the 60-day injured list.",
-      "League tx: 2026-11-02: Athletics activated RHP Justin Sterner from the 60-day injured list.",
-      "League tx: 2026-11-02: Athletics activated SS Jacob Wilson from the 60-day injured list.",
-      "League tx: 2026-11-02: Peoria Chiefs activated RHP Bruno L\u00f3pez from the 60-day injured list.",
-      "League tx: 2026-11-02: Rome Emperors activated RHP Elison Joseph from the 60-day injured list.",
-      "League tx: 2026-11-02: Dayton Dragons activated RHP Cole Schoenwetter from the full-season injured list.",
-      "League tx: 2026-11-02: Fort Wayne TinCaps activated RHP Tyler Morgan from the 60-day injured list.",
-      "League tx: 2026-11-02: Great Lakes Loons activated RHP Ryan Brown from the 60-day injured list.",
-      "League tx: 2026-11-02: Greensboro Grasshoppers activated RHP Junior Flores from the full-season injured list.",
-      "League tx: 2026-11-02: Hub City Spartanburgers activated CF Anthony Gutierrez from the full-season injured list.",
-      "League tx: 2026-11-02: Lake County Captains activated SS Anthony Silva from the 60-day injured list.",
-      "League tx: 2026-11-02: Rome Emperors activated RHP Trent Buchanan from the 60-day injured list.",
-      "League tx: 2026-11-02: Rome Emperors activated RHP Cory Wall from the 60-day injured list.",
-      "League tx: 2026-11-02: Wilmington Blue Rocks activated RHP Grant Manning from the full-season injured list.",
-      "League tx: 2026-11-02: Wisconsin Timber Rattlers activated RHP Jesus Flores from the 60-day injured list.",
-      "League tx: 2026-11-02: RHP Sam Brodersen elected free agency.",
-      "League tx: 2026-11-02: Augusta GreenJackets activated RHP Juan Sanchez from the 60-day injured list.",
-      "League tx: 2026-11-02: Augusta GreenJackets activated RHP Kendy Richard from the 60-day injured list.",
-      "League tx: 2026-11-02: Bradenton Marauders activated RHP Carlos Mateo from the 60-day injured list.",
-      "League tx: 2026-11-02: Bradenton Marauders activated RHP Pitterson Rosa from the full-season injured list.",
-      "League tx: 2026-11-02: Daytona Tortugas activated RHP Luke Holman.",
-      "League tx: 2026-11-02: Delmarva Shorebirds activated RHP Trey Nordmann from the full-season injured list.",
-      "League tx: 2026-11-02: Delmarva Shorebirds activated RHP Keeler Morfe from the 60-day injured list.",
-      "League tx: 2026-11-02: Fayetteville Woodpeckers activated RHP Joey Dixon.",
-      "League tx: 2026-11-02: Fort Myers Mighty Mussels activated RHP Jack Dougherty from the full-season injured list.",
-      "League tx: 2026-11-02: Fredericksburg Nationals activated RHP Jonah Conradt from the full-season injured list.",
-      "League tx: 2026-11-02: RHP Adrian Quintana elected free agency.",
-      "League tx: 2026-11-02: Inland Empire 66ers activated RHP Matt Tiberia from the 60-day injured list.",
-      "League tx: 2026-11-02: Inland Empire 66ers activated RHP Gage Boehm from the full-season injured list.",
-      "League tx: 2026-11-02: Inland Empire 66ers activated RHP Anyelo Ovando from the full-season injured list.",
-      "League tx: 2026-11-02: Jupiter Hammerheads activated RHP Darwin Rodriguez from the full-season injured list.",
-      "League tx: 2026-11-02: Jupiter Hammerheads activated C Jessada Brown from the 60-day injured list.",
-      "League tx: 2026-11-02: Jupiter Hammerheads activated RHP Grant Shepardson from the 60-day injured list.",
-      "League tx: 2026-11-02: Kannapolis Cannon Ballers activated OF Casey Saucke from the 60-day injured list.",
-      "League tx: 2026-11-02: Lake Elsinore Storm activated LHP Matt Lachappa from the full-season injured list.",
-      "League tx: 2026-11-02: Lakeland Flying Tigers activated RHP Wuilberth Mendez from the full-season injured list.",
-      "League tx: 2026-11-02: Lakeland Flying Tigers activated RHP Alistair Tanner from the full-season injured list.",
-      "League tx: 2026-11-02: Myrtle Beach Pelicans activated LHP Christian Gordon from the full-season injured list.",
-      "League tx: 2026-11-02: Ontario Tower Buzzers activated RHP Davion Hickson from the full-season injured list.",
-      "League tx: 2026-11-02: RHP Jonawel Valdez elected free agency.",
-      "League tx: 2026-11-02: Ontario Tower Buzzers activated RHP Dylan Tate from the full-season injured list.",
-      "League tx: 2026-11-02: Palm Beach Cardinals activated RHP Jake Shelagowski from the 60-day injured list.",
-      "League tx: 2026-11-02: LHP Pedro Rodriguez elected free agency.",
-      "League tx: 2026-11-02: Rancho Cucamonga Quakes activated LHP Jesus Martinez from the 60-day injured list.",
-      "League tx: 2026-11-02: RHP Robert Puason elected free agency.",
-      "League tx: 2026-11-02: RHP Robert Puason elected free agency.",
-      "League tx: 2026-11-02: San Jose Giants activated RHP Drake George.",
-      "League tx: 2026-11-02: St. Lucie Mets activated RHP Austin Brown from the 60-day injured list.",
-      "League tx: 2026-11-02: St. Lucie Mets activated RHP Cam Tilly from the 60-day injured list."
+      "League tx: 2026-11-03: DSL NYY Yankees released SS Emmanuel Orozco.",
+      "League tx: 2026-11-03: DSL NYY Bombers released OF Eliezer Adames.",
+      "League tx: 2026-11-03: DSL NYY Bombers released LHP Ronald Tejada.",
+      "League tx: 2026-11-03: DSL LAD Bautista activated RHP Bryan Lara from the 60-day injured list.",
+      "League tx: 2026-11-03: Navegantes del Magallanes released RHP Osvaldo Berrios.",
+      "League tx: 2026-11-03: 3B Oswaldo Cabrera assigned to Tigres de Aragua.",
+      "League tx: 2026-11-03: Navegantes del Magallanes released SS Damon Dues.",
+      "League tx: 2026-11-03: RHP Alimber Santa assigned to Gigantes del Cibao.",
+      "League tx: 2026-11-03: LF Ram\u00f3n Laureano assigned to Leones del Escogido.",
+      "League tx: 2026-11-03: Caneros de los Mochis activated RHP Miguel Leon from the reserve list.",
+      "League tx: 2026-11-03: SS Ronny Mauricio assigned to Tigres del Licey.",
+      "League tx: 2026-11-03: Algodoneros de Guasave activated OF Rogelio Cobos from the reserve list.",
+      "League tx: 2026-11-03: Tomateros de Culiacan activated RHP Miguel Vazquez from the reserve list.",
+      "League tx: 2026-11-03: Venados de Mazatlan placed RHP Victor Morales on the reserve list.",
+      "League tx: 2026-11-03: Venados de Mazatlan activated RHP Edgar Rodriguez from the reserve list.",
+      "League tx: 2026-11-03: Jaguares de Nayarit placed LHP Brennen Oxford on the reserve list.",
+      "League tx: 2026-11-03: RHP Yovanny Cruz assigned to Gigantes del Cibao.",
+      "League tx: 2026-11-03: DH Jos\u00e9 Tena assigned to Estrellas Orientales.",
+      "League tx: 2026-11-03: Algodoneros de Guasave placed RHP Josue Gomez on the reserve list.",
+      "League tx: 2026-11-03: Algodoneros de Guasave placed C Heber Villalobos on the reserve list.",
+      "League tx: 2026-11-03: Yaquis de Obregon placed RHP Alberto Leyva on the reserve list.",
+      "League tx: 2026-11-03: Yaquis de Obregon activated LHP Jes\u00fas Broca from the reserve list.",
+      "League tx: 2026-11-03: RHP Jesus Vargas assigned to Leones del Caracas.",
+      "League tx: 2026-11-03: Algodoneros de Guasave activated RHP Kevin Ribon from the reserve list.",
+      "League tx: 2026-11-03: Aguilas de Mexicali placed RHP Daniel Nunez on the reserve list.",
+      "League tx: 2026-11-03: Venados de Mazatlan placed LHP Guillermo Arvizu on the reserve list.",
+      "League tx: 2026-11-03: RHP Roel Ram\u00edrez assigned to Venados de Mazatlan.",
+      "League tx: 2026-11-03: DSL LAD Mega activated RHP Ivan Pacheco from the 60-day injured list.",
+      "League tx: 2026-11-03: DSL Miami released RHP Richard Jimenez.",
+      "League tx: 2026-11-03: Estrellas Orientales activated DH Jos\u00e9 Tena.",
+      "League tx: 2026-11-03: SS Luisangel Acu\u00f1a assigned to Cardenales de Lara.",
+      "League tx: 2026-11-03: Navegantes del Magallanes released 2B Cooper Kinney.",
+      "League tx: 2026-11-03: LF Yohendrick Pi\u00f1ango assigned to Cardenales de Lara.",
+      "League tx: 2026-11-03: Aguilas del Zulia activated RHP Yonny Chirinos.",
+      "League tx: 2026-11-03: Tiburones de La Guaira released RHP Caleb Freeman.",
+      "League tx: 2026-11-03: RHP Humberto Mej\u00eda assigned to Tigres del Licey.",
+      "League tx: 2026-11-03: LHP Alberto Pacheco assigned to Gigantes del Cibao.",
+      "League tx: 2026-11-03: Aguilas de Mexicali activated LHP Angel Lopez from the reserve list.",
+      "League tx: 2026-11-03: Jaguares de Nayarit placed RHP Marco Fregozo on the reserve list.",
+      "League tx: 2026-11-03: Charros de Jalisco placed 2B Connor Hollis on the reserve list.",
+      "League tx: 2026-11-03: RHP Cristofer Gomez assigned to Navegantes del Magallanes.",
+      "League tx: 2026-11-03: RHP Edgar Isea assigned to Caribes de Anzoategui.",
+      "League tx: 2026-11-03: RF Everson Pereira assigned to Cardenales de Lara.",
+      "League tx: 2026-11-03: RHP Yunior Feliz assigned to DSL Tigers 1.",
+      "League tx: 2026-11-03: Navegantes del Magallanes activated RHP Jose Olivares.",
+      "League tx: 2026-11-03: RHP Trevin Michael assigned to Leones del Escogido.",
+      "League tx: 2026-11-03: Caneros de los Mochis placed LHP Alejandro Carrillo on the reserve list.",
+      "League tx: 2026-11-03: Caneros de los Mochis placed OF Diego Soto on the reserve list.",
+      "League tx: 2026-11-03: Jaguares de Nayarit activated RHP Erick Rodriguez from the reserve list.",
+      "League tx: 2026-11-03: DSL Astros Orange activated OF Freddy Ramos from the 60-day injured list."
     ],
-    "transactions_total": 2047,
+    "transactions_total": 648,
     "debug": {
       "standings": [
         "rows=30"
@@ -757,7 +757,7 @@
         "games=0"
       ],
       "transactions": [
-        "transactions=2048"
+        "transactions=648"
       ]
     }
   },
@@ -766,14 +766,11 @@
       "headline": "Athletics source snapshot from MLB Stats API.",
       "emotion": "Measured",
       "verified_notes": [
-        "Standings: Athletics: 64-98 (PCT .395, GB 17.0) [Division]",
-        "Athletics tx: 2026-11-02: Athletics activated RHP Gunnar Hoglund from the 60-day injured list.",
-        "Athletics tx: 2026-11-02: Athletics activated RHP J.T. Ginn from the 60-day injured list.",
-        "Athletics tx: 2026-11-02: Athletics activated RHP Luis Severino from the 60-day injured list.",
-        "Athletics tx: 2026-11-02: LHP Jeffrey Springs elected free agency."
+        "Standings: Athletics: 64-98 (PCT .395, GB 17.0) [Division]"
       ],
       "unverified_notes": [
-        "UNVERIFIED: No scheduled game found for teamId=133 in window."
+        "UNVERIFIED: No scheduled game found for teamId=133 in window.",
+        "UNVERIFIED: No Athletics transactions returned in window."
       ],
       "notes": [
         "Editorial framing only; do not promote UNVERIFIED entries as facts."
@@ -785,7 +782,7 @@
       "source_status": {
         "athletics_standings": "verified",
         "athletics_schedule": "unverified",
-        "athletics_transactions": "verified"
+        "athletics_transactions": "unverified"
       },
       "debug": {
         "athletics_standings": [
@@ -795,7 +792,7 @@
           "games=0"
         ],
         "athletics_transactions": [
-          "transactions=10"
+          "transactions=0"
         ]
       }
     },
@@ -804,10 +801,7 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Rockies: 58-104 (PCT .358, GB 42.0) [Division]",
-        "Colorado Rockies tx: 2026-11-02: Colorado Rockies activated DH Kris Bryant from the 60-day injured list.",
-        "Colorado Rockies tx: 2026-11-02: Colorado Rockies activated RHP RJ Petit from the 60-day injured list.",
-        "Colorado Rockies tx: 2026-11-02: Colorado Rockies activated RHP Chase Dollander from the 60-day injured list.",
-        "Colorado Rockies tx: 2026-11-02: Colorado Rockies activated LHP Welinton Herrera from the 60-day injured list."
+        "Colorado Rockies tx: 2026-11-03: RHP RJ Petit returned to Detroit Tigers from Colorado Rockies."
       ],
       "unverified_notes": [
         "UNVERIFIED: No scheduled game found for teamId=115 in window."
@@ -832,7 +826,7 @@
           "games=0"
         ],
         "rockies_transactions": [
-          "transactions=11"
+          "transactions=1"
         ]
       }
     },
@@ -841,10 +835,8 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Tigers: 76-86 (PCT .469, GB 9.0) [Division]",
-        "Detroit Tigers tx: 2026-11-02: Detroit Tigers designated RHP Yilber D\u00edaz for assignment.",
-        "Detroit Tigers tx: 2026-11-02: Detroit Tigers released RHP Sawyer Gipson-Long.",
-        "Detroit Tigers tx: 2026-11-02: Detroit Tigers activated SS Trey Sweeney from the 60-day injured list.",
-        "Detroit Tigers tx: 2026-11-02: Detroit Tigers activated RHP Reese Olson from the 60-day injured list."
+        "Detroit Tigers tx: 2026-11-03: RHP RJ Petit returned to Detroit Tigers from Colorado Rockies.",
+        "Detroit Tigers tx: 2026-11-06: Detroit Tigers sent RHP Yilber D\u00edaz outright to Toledo Mud Hens."
       ],
       "unverified_notes": [
         "UNVERIFIED: No scheduled game found for teamId=116 in window."
@@ -869,7 +861,7 @@
           "games=0"
         ],
         "tigers_transactions": [
-          "transactions=15"
+          "transactions=2"
         ]
       }
     }
@@ -894,7 +886,7 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-09&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-10&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -907,19 +899,19 @@
         ]
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-11-02&endDate=2026-11-09",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-11-03&endDate=2026-11-10",
         "status": "verified",
         "debug": [
-          "transactions=2048"
+          "transactions=648"
         ],
-        "verified_count": 2047,
+        "verified_count": 648,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-11-02: ACL Dodgers activated RHP Oliver Gonzalez from the full-season injured list.",
-          "League tx: 2026-11-02: Athletics activated 1B Nick Kurtz from the 60-day injured list.",
-          "League tx: 2026-11-02: Athletics activated RHP Justin Sterner from the 60-day injured list.",
-          "League tx: 2026-11-02: Athletics activated SS Jacob Wilson from the 60-day injured list.",
-          "League tx: 2026-11-02: Peoria Chiefs activated RHP Bruno L\u00f3pez from the 60-day injured list."
+          "League tx: 2026-11-03: DSL NYY Yankees released SS Emmanuel Orozco.",
+          "League tx: 2026-11-03: DSL NYY Bombers released OF Eliezer Adames.",
+          "League tx: 2026-11-03: DSL NYY Bombers released LHP Ronald Tejada.",
+          "League tx: 2026-11-03: DSL LAD Bautista activated RHP Bryan Lara from the 60-day injured list.",
+          "League tx: 2026-11-03: Navegantes del Magallanes released RHP Osvaldo Berrios."
         ],
         "unverified_sample": []
       },
@@ -937,7 +929,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-11-09&endDate=2026-11-11&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-11-10&endDate=2026-11-12&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -950,21 +942,17 @@
         ]
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-11-02&endDate=2026-11-09",
-        "status": "verified",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-11-03&endDate=2026-11-10",
+        "status": "unverified",
         "debug": [
-          "transactions=10"
+          "transactions=0"
         ],
-        "verified_count": 10,
-        "unverified_count": 0,
-        "verified_sample": [
-          "Athletics tx: 2026-11-02: Athletics activated RHP Gunnar Hoglund from the 60-day injured list.",
-          "Athletics tx: 2026-11-02: Athletics activated RHP J.T. Ginn from the 60-day injured list.",
-          "Athletics tx: 2026-11-02: Athletics activated RHP Luis Severino from the 60-day injured list.",
-          "Athletics tx: 2026-11-02: LHP Jeffrey Springs elected free agency.",
-          "Athletics tx: 2026-11-02: Athletics activated 1B Nick Kurtz from the 60-day injured list."
-        ],
-        "unverified_sample": []
+        "verified_count": 0,
+        "unverified_count": 1,
+        "verified_sample": [],
+        "unverified_sample": [
+          "UNVERIFIED: No Athletics transactions returned in window."
+        ]
       },
       "rockies_standings": {
         "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
@@ -980,7 +968,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-11-09&endDate=2026-11-11&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-11-10&endDate=2026-11-12&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -993,19 +981,15 @@
         ]
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-11-02&endDate=2026-11-09",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-11-03&endDate=2026-11-10",
         "status": "verified",
         "debug": [
-          "transactions=11"
+          "transactions=1"
         ],
-        "verified_count": 11,
+        "verified_count": 1,
         "unverified_count": 0,
         "verified_sample": [
-          "Colorado Rockies tx: 2026-11-02: Colorado Rockies activated DH Kris Bryant from the 60-day injured list.",
-          "Colorado Rockies tx: 2026-11-02: Colorado Rockies activated RHP RJ Petit from the 60-day injured list.",
-          "Colorado Rockies tx: 2026-11-02: Colorado Rockies activated RHP Chase Dollander from the 60-day injured list.",
-          "Colorado Rockies tx: 2026-11-02: Colorado Rockies activated LHP Welinton Herrera from the 60-day injured list.",
-          "Colorado Rockies tx: 2026-11-02: Colorado Rockies activated RHP McCade Brown from the 60-day injured list."
+          "Colorado Rockies tx: 2026-11-03: RHP RJ Petit returned to Detroit Tigers from Colorado Rockies."
         ],
         "unverified_sample": []
       },
@@ -1023,7 +1007,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-11-09&endDate=2026-11-11&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-11-10&endDate=2026-11-12&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1036,19 +1020,16 @@
         ]
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-11-02&endDate=2026-11-09",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-11-03&endDate=2026-11-10",
         "status": "verified",
         "debug": [
-          "transactions=15"
+          "transactions=2"
         ],
-        "verified_count": 15,
+        "verified_count": 2,
         "unverified_count": 0,
         "verified_sample": [
-          "Detroit Tigers tx: 2026-11-02: Detroit Tigers designated RHP Yilber D\u00edaz for assignment.",
-          "Detroit Tigers tx: 2026-11-02: Detroit Tigers released RHP Sawyer Gipson-Long.",
-          "Detroit Tigers tx: 2026-11-02: Detroit Tigers activated SS Trey Sweeney from the 60-day injured list.",
-          "Detroit Tigers tx: 2026-11-02: Detroit Tigers activated RHP Reese Olson from the 60-day injured list.",
-          "Detroit Tigers tx: 2026-11-02: Detroit Tigers activated RHP Will Vest from the 60-day injured list."
+          "Detroit Tigers tx: 2026-11-03: RHP RJ Petit returned to Detroit Tigers from Colorado Rockies.",
+          "Detroit Tigers tx: 2026-11-06: Detroit Tigers sent RHP Yilber D\u00edaz outright to Toledo Mud Hens."
         ],
         "unverified_sample": []
       },
@@ -1155,10 +1136,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-11-10T04:33:39Z"
+    "generated_utc": "2026-11-10T13:23:22Z"
   },
   "bd_bets": {
-    "generated_at": "2026-11-10T04:33:44.139Z",
+    "generated_at": "2026-11-10T13:23:26.435Z",
     "slate_date": "2026-11-10",
     "sport": "MLB",
     "source": "bd-bets",
