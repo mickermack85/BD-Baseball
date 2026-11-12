@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-12T02:11:33Z",
-  "slate_date": "2026-11-11",
+  "generated_at": "2026-11-12T10:52:32Z",
+  "slate_date": "2026-11-12",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,14 +9,14 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-11&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-11-04&endDate=2026-11-11",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-11-11&endDate=2026-11-13&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-11-04&endDate=2026-11-11",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-11-11&endDate=2026-11-13&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-11-04&endDate=2026-11-11",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-11-11&endDate=2026-11-13&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-11-04&endDate=2026-11-11"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-12&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-11-05&endDate=2026-11-12",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-11-12&endDate=2026-11-14&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-11-05&endDate=2026-11-12",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-11-12&endDate=2026-11-14&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-11-05&endDate=2026-11-12",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-11-12&endDate=2026-11-14&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-11-05&endDate=2026-11-12"
   },
   "source_status": {
     "league_standings": "verified",
@@ -44,11 +44,19 @@
     "league_news": {
       "items": [
         {
-          "headline": "WATCH live: The 2026 MLB Awards show in Las Vegas (MLB Network/MLB.com)",
-          "url": "https://www.mlb.com/news/when-is-the-mlb-awards-show-date-time-channel",
+          "headline": "At MLB Awards in Vegas, baseball's best deliver 1 more dazzling show for 2026",
+          "url": "https://www.mlb.com/news/top-players-honored-at-2026-mlb-awards",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-11-12T01:54:00Z",
+          "published_at": "2026-11-12T05:26:45Z",
+          "summary": ""
+        },
+        {
+          "headline": "Here are the \u201926 All-MLB First and Second Teams",
+          "url": "https://www.mlb.com/news/2026-all-mlb-teams",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-11-12T04:03:41Z",
           "summary": ""
         },
         {
@@ -60,67 +68,59 @@
           "summary": ""
         },
         {
+          "headline": "Alvarez, PCA become 1st-time winners of Hank Aaron Award after career years",
+          "url": "https://www.mlb.com/news/yordan-alvarez-pete-crow-armstrong-win-2026-hank-aaron-awards",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-11-12T04:14:45Z",
+          "summary": ""
+        },
+        {
+          "headline": "Here's the case for each MVP Award finalist (MLB Network, 7 p.m. ET)",
+          "url": "https://www.mlb.com/news/the-case-for-each-2026-mlb-mvp-finalist",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-11-12T05:00:35Z",
+          "summary": ""
+        },
+        {
           "headline": "Hot Stove rumors: Seager, Skubal, OF trade candidates, Yanks, Cubs",
           "url": "https://www.mlb.com/news/mlb-rumors-and-2026-27-free-agent-news-november-11",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-11-11T19:17:00Z",
+          "published_at": "2026-11-12T04:39:00Z",
           "summary": ""
         },
         {
-          "headline": "Miz adds NL Cy Young Award to World Series title",
-          "url": "https://www.mlb.com/news/jacob-misiorowski-wins-2026-national-league-cy-young-award",
+          "headline": "Cowser's game-ending homer robbery named Premier Play of Year",
+          "url": "https://www.mlb.com/news/colton-cowser-capital-one-premier-play-of-the-year-2026",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-11-12T01:03:06Z",
+          "published_at": "2026-11-12T03:18:47Z",
           "summary": ""
         },
         {
-          "headline": "Schlittler caps 1st full season with Yankees' 7th AL Cy Young Award",
-          "url": "https://www.mlb.com/news/cam-schlittler-wins-2026-al-cy-young-award",
+          "headline": "Yordan unseats Ohtani for Outstanding DH, first new winner in 6 years",
+          "url": "https://www.mlb.com/news/yordan-alvarez-wins-2026-outstanding-designated-hitter-award",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-11-12T00:27:24Z",
+          "published_at": "2026-11-12T03:27:48Z",
           "summary": ""
         },
         {
-          "headline": "Here are the Cy Young Award vote totals",
-          "url": "https://www.mlb.com/news/2026-mlb-cy-young-award-voting-results",
+          "headline": "Baker, Miller pick up Reliever of the Year honors at MLB Awards",
+          "url": "https://www.mlb.com/news/bryan-baker-mason-miller-2026-relievers-of-the-year-mlb-awards",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-11-12T00:55:00Z",
+          "published_at": "2026-11-12T03:50:37Z",
           "summary": ""
         },
         {
-          "headline": "Both 2026 Cys won in sophomore season. Here\u2019s how rare that is",
-          "url": "https://www.mlb.com/news/jacob-misiorowski-cam-schlittler-sophomore-cy-young-winners",
+          "headline": "Witt becomes first 3-time winner of Heart & Hustle Award",
+          "url": "https://www.mlb.com/news/bobby-witt-jr-2026-heart-hustle-award-winner",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-11-12T01:35:46Z",
-          "summary": ""
-        },
-        {
-          "headline": "In Vegas, baseball execs mining for hidden gems",
-          "url": "https://www.mlb.com/news/baseball-execs-look-for-hidden-gems-gm-meetings",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-11-12T01:54:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Ranking every Cy Young Award season",
-          "url": "https://www.mlb.com/news/ranking-the-best-cy-young-award-winners-c300079624",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-11-12T01:09:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Trading Marte back on table as D-backs look to get over hump in '27",
-          "url": "https://www.mlb.com/news/mike-hazen-discusses-ketel-marte-d-backs-needs",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-11-11T23:25:35Z",
+          "published_at": "2026-11-12T03:45:00Z",
           "summary": ""
         }
       ],
@@ -131,14 +131,6 @@
     "teams": {
       "athletics": {
         "items": [
-          {
-            "headline": "WATCH live: The 2026 MLB Awards show in Las Vegas (MLB Network/MLB.com)",
-            "url": "https://www.mlb.com/athletics/news/when-is-the-mlb-awards-show-date-time-channel",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-11-12T01:54:00Z",
-            "summary": ""
-          },
           {
             "headline": "New A's front office already hitting the ground running at GM Meetings",
             "url": "https://www.mlb.com/athletics/news/taylor-smith-cam-castro-athletics-offseason-goals-2026-general-managers-meetings",
@@ -161,6 +153,14 @@
             "source": "MLB.com",
             "source_type": "rss",
             "published_at": "2026-11-10T16:00:00Z",
+            "summary": ""
+          },
+          {
+            "headline": "Watch A's prospects in Arizona Fall League playoffs",
+            "url": "https://www.mlb.com/athletics/news/watch-arizona-fall-league-playoffs-2026",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-11-12T00:40:00Z",
             "summary": ""
           },
           {
@@ -306,14 +306,6 @@
       "rockies": {
         "items": [
           {
-            "headline": "WATCH live: The 2026 MLB Awards show in Las Vegas (MLB Network/MLB.com)",
-            "url": "https://www.mlb.com/rockies/news/when-is-the-mlb-awards-show-date-time-channel",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-11-12T01:54:00Z",
-            "summary": ""
-          },
-          {
             "headline": "McCarthy's value could be key to Rockies' pursuit of pitching",
             "url": "https://www.mlb.com/rockies/news/jake-mccarthy-key-to-rockies-2026-2027-offseason",
             "source": "MLB.com",
@@ -346,6 +338,14 @@
             "summary": ""
           },
           {
+            "headline": "Fall Stars Game sparks pair of nostalgic moments for O'Dowd father and son",
+            "url": "https://www.mlb.com/rockies/news/jack-and-dan-o-dowd-special-moments-at-afl-fall-stars-game",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-11-09T05:18:00Z",
+            "summary": ""
+          },
+          {
             "headline": "Solve today's Rockies trivia puzzle",
             "url": "https://www.mlb.com/app/atbat/rockies/daily-walkoff",
             "source": "MLB.com",
@@ -354,11 +354,11 @@
             "summary": ""
           },
           {
-            "headline": "Fall Stars Game sparks pair of nostalgic moments for O'Dowd father and son",
-            "url": "https://www.mlb.com/rockies/news/jack-and-dan-o-dowd-special-moments-at-afl-fall-stars-game",
+            "headline": "These under-the-radar prospects are standing out in the Arizona Fall League",
+            "url": "https://www.mlb.com/rockies/news/sleeper-prospects-in-arizona-fall-league-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-11-09T05:18:00Z",
+            "published_at": "2026-11-10T18:47:25Z",
             "summary": ""
           },
           {
@@ -378,11 +378,11 @@
             "summary": "Who do the Rockies have in the pipeline? Get scouting reports, video, stats, projected ETAs and more for Colorado's Top 30 Prospects."
           },
           {
-            "headline": "These under-the-radar prospects are standing out in the Arizona Fall League",
-            "url": "https://www.mlb.com/rockies/news/sleeper-prospects-in-arizona-fall-league-2026",
+            "headline": "Ulloa's evolving arsenal earns him spot among Fall Stars",
+            "url": "https://www.mlb.com/rockies/news/rockies-prospect-fidel-ulloa-develops-pitches-in-arizona-fall-league",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-11-10T18:47:25Z",
+            "published_at": "2026-11-07T14:07:03Z",
             "summary": ""
           }
         ],
@@ -393,98 +393,51 @@
     },
     "news_items": [
       {
-        "id": "mlb_com-1-1",
-        "headline": "WATCH live: The 2026 MLB Awards show in Las Vegas (MLB Network/MLB.com)",
-        "url": "https://www.mlb.com/news/when-is-the-mlb-awards-show-date-time-channel",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-11-12T01:54:00Z",
-        "summary": "",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-8",
-        "headline": "In Vegas, baseball execs mining for hidden gems",
-        "url": "https://www.mlb.com/news/baseball-execs-look-for-hidden-gems-gm-meetings",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-11-12T01:54:00Z",
-        "summary": "",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-7",
-        "headline": "Both 2026 Cys won in sophomore season. Here\u2019s how rare that is",
-        "url": "https://www.mlb.com/news/jacob-misiorowski-cam-schlittler-sophomore-cy-young-winners",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-11-12T01:35:46Z",
-        "summary": "",
-        "teams": [
-          "athletics"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-2",
-        "headline": "Pair of flamethrowers are unanimous Cy Young winners for just 3rd time in history",
-        "url": "https://www.mlb.com/news/2026-mlb-cy-young-award-winners",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-11-12T01:15:00Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
         "id": "yahoo_sports-3-1",
-        "headline": "Brewers\u2019 Jacob Misiorowski, Yankees\u2019 Cam Schlittler win Cy Young Awards",
-        "url": "https://sports.yahoo.com/articles/brewers-jacob-misiorowski-yankees-cam-010921226.html",
-        "source": "NBC Sports",
+        "headline": "Cubs BCB After Dark: Who is the Most Valuable Cubs MVP of all-time?",
+        "url": "https://sports.yahoo.com/articles/cubs-bcb-dark-most-valuable-061240251.html",
+        "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-11-12T01:09:21Z",
-        "summary": "Both pitchers were unanimously voted Cy Young winners in their respective leagues.",
+        "published_at": "2026-11-12T06:12:40Z",
+        "summary": "The late-night spot for Cubs fans asks who is the Cubs MVP of MVPs",
         "teams": [
-          "brewers",
-          "yankees"
+          "athletics",
+          "cubs"
         ],
         "players": [],
         "topics": [
           "mlb"
         ],
         "priority": 2
+      },
+      {
+        "id": "mlb_com-1-1",
+        "headline": "At MLB Awards in Vegas, baseball's best deliver 1 more dazzling show for 2026",
+        "url": "https://www.mlb.com/news/top-players-honored-at-2026-mlb-awards",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-11-12T05:26:45Z",
+        "summary": "",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
       },
       {
         "id": "yahoo_sports-3-2",
-        "headline": "Jacob Misiorowski wins unanimous NL Cy Young Award; Cam Schlittler claims AL honors",
-        "url": "https://sports.yahoo.com/articles/jacob-misiorowski-wins-unanimous-nl-010533113.html",
+        "headline": "Braves News: Chris Sale third in NL Cy Young, player reviews, more",
+        "url": "https://sports.yahoo.com/articles/braves-news-chris-sale-third-050100337.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-11-12T01:05:33Z",
-        "summary": "Misiorowski posted a 1.80 ERA, 0.802 WHIP, 6.4 WAR in 30 starts",
-        "teams": [],
+        "published_at": "2026-11-12T05:01:00Z",
+        "summary": "Atlanta Braves news and notes from Wednesday",
+        "teams": [
+          "braves"
+        ],
         "players": [],
         "topics": [
           "mlb"
@@ -492,16 +445,32 @@
         "priority": 2
       },
       {
+        "id": "mlb_com-1-5",
+        "headline": "Here's the case for each MVP Award finalist (MLB Network, 7 p.m. ET)",
+        "url": "https://www.mlb.com/news/the-case-for-each-2026-mlb-mvp-finalist",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-11-12T05:00:35Z",
+        "summary": "",
+        "teams": [
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
         "id": "yahoo_sports-3-3",
-        "headline": "What makes a reliever of the year?",
-        "url": "https://sports.yahoo.com/articles/makes-reliever-010527507.html",
+        "headline": "Yankees news: Schlittler wins the Cy Young",
+        "url": "https://sports.yahoo.com/articles/yankees-news-schlittler-wins-cy-050000043.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-11-12T01:05:27Z",
-        "summary": "LOS ANGELES \u2014 The Baseball Writers Association of America added a new award this season, honoring the top relief pitcher in each league each year. The inaugural winner of the National League Reliever of the Year is Mason Miller in a landslide. The San Diego Padres closer received all 30 first-place votes. His stats tell [\u2026]",
+        "published_at": "2026-11-12T05:00:00Z",
+        "summary": "Cam Schlittler wins Cy Young; Yanks looking into Alec Bohm; shakeups on the coaching staff",
         "teams": [
-          "athletics",
-          "padres"
+          "yankees"
         ],
         "players": [],
         "topics": [
@@ -511,100 +480,33 @@
       },
       {
         "id": "yahoo_sports-3-4",
-        "headline": "Eduardo Rodriguez 7th in NL Cy Young voting",
-        "url": "https://sports.yahoo.com/articles/eduardo-rodriguez-7th-nl-cy-010447977.html",
+        "headline": "William Contreras takes home Flow Mayor Award as part of the MLB Awards show",
+        "url": "https://sports.yahoo.com/articles/william-contreras-takes-home-flow-044926757.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-11-12T01:04:47Z",
-        "summary": "Unsurprisingly, Jacob Misiorowski was the winner of the NL Cy Young award, getting all thirty first-place votes. But there was some love for Arizona further down the ballot, with Eduardo Rodriguez getting two fifth-place votes, from Tyler Kepner of the Athletic, and Dejan Kovacevic of DK Pittsburgh Sports. E-Rod is the first D-back to be [\u2026]",
+        "published_at": "2026-11-12T04:49:26Z",
+        "summary": "Contreras took the inaugural award as the most entertaining player this year",
         "teams": [
-          "athletics",
-          "diamondbacks",
-          "pirates"
+          "athletics"
         ],
         "players": [],
         "topics": [
           "mlb"
         ],
         "priority": 2
-      },
-      {
-        "id": "mlb_com-1-4",
-        "headline": "Miz adds NL Cy Young Award to World Series title",
-        "url": "https://www.mlb.com/news/jacob-misiorowski-wins-2026-national-league-cy-young-award",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-11-12T01:03:06Z",
-        "summary": "",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
       },
       {
         "id": "yahoo_sports-3-5",
-        "headline": "Braves ace Chris Sale finishes 3rd in NL Cy Young voting",
-        "url": "https://sports.yahoo.com/articles/braves-ace-chris-sale-finishes-010125665.html",
+        "headline": "Cubs news: Pete Crow-Armstrong wins the NL Hank Aaron Award",
+        "url": "https://sports.yahoo.com/articles/cubs-news-pete-crow-armstrong-044134545.html",
         "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-11-12T01:01:25Z",
-        "summary": "Atlanta Braves ace Chris Sale finished 3rd in 2026 National League Cy Young voting behind Milwaukee Brewers ace Jacob Misiorowski, who won the award unanimously, and Cristopher Sanchez, who finished ahead of Sale by exactly one vote. Full results are here: Sale experienced another fantastic season with the Braves in 2026 across 27 starts. Atlanta [\u2026]",
+        "published_at": "2026-11-12T04:41:34Z",
+        "summary": "Major League Baseball had their MLB Awards event tonight and that just means that the Awards for Cubs center fielder Pete Crow-Armstrong just keep rolling in. Tonight Crow-Armstrong was named the winner of the Hank Aaron Award for the National League. The Aaron award goes to the best offensive performers in each league. Astros designated [\u2026]",
         "teams": [
+          "astros",
           "athletics",
-          "braves",
-          "brewers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-6",
-        "headline": "A lifelong fan",
-        "url": "https://sports.yahoo.com/articles/lifelong-fan-010000046.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-12T01:00:00Z",
-        "summary": "Roster Review: David Morgan",
-        "teams": [],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-7",
-        "headline": "NL Cy Young Award: Jacob Misiorowski was the clear choice, both statistically and narratively",
-        "url": "https://sports.yahoo.com/mlb/article/nl-cy-young-award-jacob-misiorowski-was-the-clear-choice-both-statistically-and-narratively-005618948.html",
-        "source": "Yahoo Sports",
-        "source_type": "rss",
-        "published_at": "2026-11-12T00:56:18Z",
-        "summary": "The Brewers&#39; flame-throwing ace was the pitching main character of the 2026 MLB season.",
-        "teams": [
-          "athletics",
-          "brewers"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-8",
-        "headline": "Brewers&#39; Jacob Misiorowski wins NL Cy Young Award in unanimous vote",
-        "url": "https://sports.yahoo.com/articles/brewers-jacob-misiorowski-wins-nl-005510758.html",
-        "source": "USA TODAY Sports",
-        "source_type": "rss",
-        "published_at": "2026-11-12T00:55:10Z",
-        "summary": "Milwaukee Brewers ace Jacob Misiorowski is the 2026 NL Cy Young Award winner.",
-        "teams": [
-          "brewers"
+          "cubs"
         ],
         "players": [],
         "topics": [
@@ -614,11 +516,60 @@
       },
       {
         "id": "mlb_com-1-6",
-        "headline": "Here are the Cy Young Award vote totals",
-        "url": "https://www.mlb.com/news/2026-mlb-cy-young-award-voting-results",
+        "headline": "Hot Stove rumors: Seager, Skubal, OF trade candidates, Yanks, Cubs",
+        "url": "https://www.mlb.com/news/mlb-rumors-and-2026-27-free-agent-news-november-11",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-11-12T00:55:00Z",
+        "published_at": "2026-11-12T04:39:00Z",
+        "summary": "",
+        "teams": [
+          "cubs"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-6",
+        "headline": "Yankees\u2019 Cam Schlittler, Ben Rice named to All-MLB Teams",
+        "url": "https://sports.yahoo.com/articles/yankees-cam-schlittler-ben-rice-042721994.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-12T04:27:21Z",
+        "summary": "The two young Yankee stars received their first career All-MLB selections.",
+        "teams": [
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-7",
+        "headline": "MLB Awards 2026: Yordan \u00c1lvarez and Pete Crow Armstrong take home All-MLB honors, Hank Aaron Awards and more",
+        "url": "https://sports.yahoo.com/mlb/article/mlb-awards-2026-yordan-alvarez-and-pete-crow-armstrong-take-home-all-mlb-honors-hank-aaron-awards-and-more-041501292.html",
+        "source": "Yahoo Sports",
+        "source_type": "rss",
+        "published_at": "2026-11-12T04:15:01Z",
+        "summary": "Both players are widely expected to take home their first career MVP awards on Thursday.",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-4",
+        "headline": "Alvarez, PCA become 1st-time winners of Hank Aaron Award after career years",
+        "url": "https://www.mlb.com/news/yordan-alvarez-pete-crow-armstrong-win-2026-hank-aaron-awards",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-11-12T04:14:45Z",
         "summary": "",
         "teams": [],
         "players": [],
@@ -628,17 +579,62 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-5",
-        "headline": "Schlittler caps 1st full season with Yankees' 7th AL Cy Young Award",
-        "url": "https://www.mlb.com/news/cam-schlittler-wins-2026-al-cy-young-award",
-        "source": "MLB.com",
+        "id": "yahoo_sports-3-8",
+        "headline": "Turang, Chourio, and Miz named to All-MLB First Team",
+        "url": "https://sports.yahoo.com/articles/turang-chourio-miz-named-mlb-041248757.html",
+        "source": "SB Nation",
         "source_type": "rss",
-        "published_at": "2026-11-12T00:27:24Z",
-        "summary": "",
+        "published_at": "2026-11-12T04:12:48Z",
+        "summary": "William Contreras was named to the Second Team, giving the Brewers the most selections in the league",
         "teams": [
           "athletics",
-          "yankees"
+          "brewers"
         ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-2",
+        "headline": "Here are the \u201926 All-MLB First and Second Teams",
+        "url": "https://www.mlb.com/news/2026-all-mlb-teams",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-11-12T04:03:41Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-8",
+        "headline": "Yordan unseats Ohtani for Outstanding DH, first new winner in 6 years",
+        "url": "https://www.mlb.com/news/yordan-alvarez-wins-2026-outstanding-designated-hitter-award",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-11-12T03:27:48Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-7",
+        "headline": "Cowser's game-ending homer robbery named Premier Play of Year",
+        "url": "https://www.mlb.com/news/colton-cowser-capital-one-premier-play-of-the-year-2026",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-11-12T03:18:47Z",
+        "summary": "",
+        "teams": [],
         "players": [],
         "topics": [
           "mlb"
@@ -647,15 +643,13 @@
       },
       {
         "id": "mlb_com-1-3",
-        "headline": "Hot Stove rumors: Seager, Skubal, OF trade candidates, Yanks, Cubs",
-        "url": "https://www.mlb.com/news/mlb-rumors-and-2026-27-free-agent-news-november-11",
+        "headline": "Pair of flamethrowers are unanimous Cy Young winners for just 3rd time in history",
+        "url": "https://www.mlb.com/news/2026-mlb-cy-young-award-winners",
         "source": "MLB.com",
         "source_type": "rss",
-        "published_at": "2026-11-11T19:17:00Z",
+        "published_at": "2026-11-12T01:15:00Z",
         "summary": "",
-        "teams": [
-          "cubs"
-        ],
+        "teams": [],
         "players": [],
         "topics": [
           "mlb"
@@ -697,58 +691,58 @@
       "UNVERIFIED: No probable matchup entries available."
     ],
     "transactions": [
-      "League tx: 2026-11-04: LHP Sebastian Bentz assigned to Indios de Mayaguez.",
-      "League tx: 2026-11-04: 2B Edrick Felix assigned to Indios de Mayaguez.",
-      "League tx: 2026-11-04: LHP Kai Yokogawa assigned to Leones de Ponce.",
-      "League tx: 2026-11-04: LF Bryan Torres assigned to Criollos de Caguas.",
-      "League tx: 2026-11-04: RHP Daryl Thompson assigned to Cangrejeros de Santurce.",
-      "League tx: 2026-11-04: RHP Eddy Reynoso assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: RHP Chris Kachmar assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: LHP Keito Matsuura assigned to Leones de Ponce.",
-      "League tx: 2026-11-04: RHP Andrew Marrero assigned to Leones de Ponce.",
-      "League tx: 2026-11-04: RHP Pedro Payano assigned to Caribes de Anzoategui.",
-      "League tx: 2026-11-04: Yaquis de Obregon activated C Nestor Rios from the reserve list.",
-      "League tx: 2026-11-04: RF Henry Ramos assigned to Cangrejeros de Santurce.",
-      "League tx: 2026-11-04: 2B Jorel Ortega assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: C Shawn Ross assigned to Indios de Mayaguez.",
-      "League tx: 2026-11-04: IF Jose Rivera assigned to Leones de Ponce.",
-      "League tx: 2026-11-04: CF Braiden Ward assigned to Tigres del Licey.",
-      "League tx: 2026-11-04: CF Braiden Ward assigned to Tigres del Licey.",
-      "League tx: 2026-11-04: C Onix Vega assigned to Criollos de Caguas.",
-      "League tx: 2026-11-04: C Jonathan Morales assigned to Criollos de Caguas.",
-      "League tx: 2026-11-04: C Alan Espinal assigned to Criollos de Caguas.",
-      "League tx: 2026-11-04: SS Luis V\u00e1zquez assigned to Criollos de Caguas.",
-      "League tx: 2026-11-04: C Juan Centeno assigned to Cangrejeros de Santurce.",
-      "League tx: 2026-11-04: 1B Juan Cruz assigned to Cangrejeros de Santurce.",
-      "League tx: 2026-11-04: 3B Jackson Ross assigned to Cangrejeros de Santurce.",
-      "League tx: 2026-11-04: OF Derick Andiarena assigned to Cangrejeros de Santurce.",
-      "League tx: 2026-11-04: CF Johneshwy Fargas assigned to Cangrejeros de Santurce.",
-      "League tx: 2026-11-04: LF Anthony Garc\u00eda assigned to Cangrejeros de Santurce.",
-      "League tx: 2026-11-04: OF Won-Bin Cho assigned to Criollos de Caguas.",
-      "League tx: 2026-11-04: RHP Andrew Baker assigned to Cangrejeros de Santurce.",
-      "League tx: 2026-11-04: LHP H\u00e9ctor Santiago assigned to Criollos de Caguas.",
-      "League tx: 2026-11-04: RHP Blayne Enlow assigned to Criollos de Caguas.",
-      "League tx: 2026-11-04: RHP Jarret Whorff assigned to Criollos de Caguas.",
-      "League tx: 2026-11-04: RHP Michael Martinez assigned to Cangrejeros de Santurce.",
-      "League tx: 2026-11-04: RHP Juan Echevarria assigned to Criollos de Caguas.",
-      "League tx: 2026-11-04: RHP Yacksel R\u00edos assigned to Criollos de Caguas.",
-      "League tx: 2026-11-04: RHP Edwin Sanchez assigned to Criollos de Caguas.",
-      "League tx: 2026-11-04: C J.D. Gonzalez assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: C Miguel Pabon assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: C Will Bush assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: 1B Abimelec Ortiz assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: OF Trent Youngblood assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: LHP Miguel Ausua assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: LHP Ramesis Rosa assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: RHP Luis Rodriguez assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: RHP Jean Ortega assigned to Senadores de San Juan.",
-      "League tx: 2026-11-04: LHP Keishin Nagamizu assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: RHP Yusei Tobita assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: RHP Matt Givin assigned to Gigantes de Carolina.",
-      "League tx: 2026-11-04: SS Robbie Merced assigned to Indios de Mayaguez.",
-      "League tx: 2026-11-04: 1B Abraham Toro assigned to Indios de Mayaguez."
+      "League tx: 2026-11-05: Sydney Blue Sox activated OF Jaylin Rae from the reserve list.",
+      "League tx: 2026-11-05: Sydney Blue Sox activated RHP Luke Livian from the reserve list.",
+      "League tx: 2026-11-05: RHP Jean Cabrera assigned to Aguilas del Zulia.",
+      "League tx: 2026-11-05: Aguilas de Mexicali placed RHP Sergio Garcia-Repper on the reserve list.",
+      "League tx: 2026-11-05: Aguilas de Mexicali activated RHP Daniel Nunez from the reserve list.",
+      "League tx: 2026-11-05: Aguilas de Mexicali placed RHP Yamil Castillo on the reserve list.",
+      "League tx: 2026-11-05: SS Jonathan Ornelas assigned to Aguilas de Mexicali.",
+      "League tx: 2026-11-05: Caneros de los Mochis placed CF Mallex Smith on the reserve list.",
+      "League tx: 2026-11-05: Caneros de los Mochis placed C Mario Gomez on the reserve list.",
+      "League tx: 2026-11-05: DSL Arizona Red released LHP Gregory Sanchez.",
+      "League tx: 2026-11-05: DSL Arizona Black released RHP Jhossua Castro.",
+      "League tx: 2026-11-05: Caneros de los Mochis placed RHP Francisco Pazos on the reserve list.",
+      "League tx: 2026-11-05: Caneros de los Mochis activated RHP Raul Castellon from the reserve list.",
+      "League tx: 2026-11-05: Caneros de los Mochis activated RHP Konnor Ash from the reserve list.",
+      "League tx: 2026-11-05: Caneros de los Mochis activated OF Diego Soto from the reserve list.",
+      "League tx: 2026-11-05: Jaguares de Nayarit placed RHP Jose Soria on the reserve list.",
+      "League tx: 2026-11-05: C Cristian Mejia assigned to Jaguares de Nayarit.",
+      "League tx: 2026-11-05: Mayos de Navojoa activated RHP Gerardo Lopez from the reserve list.",
+      "League tx: 2026-11-05: Charros de Jalisco placed RHP Axel Munoz on the reserve list.",
+      "League tx: 2026-11-05: Charros de Jalisco activated RHP Luis Moreno from the reserve list.",
+      "League tx: 2026-11-05: Mayos de Navojoa placed LHP Eduardo Mares on the reserve list.",
+      "League tx: 2026-11-05: Algodoneros de Guasave placed LHP Christian Lopez on the reserve list.",
+      "League tx: 2026-11-05: Algodoneros de Guasave placed 2B Victor Rodriguez on the reserve list.",
+      "League tx: 2026-11-05: Algodoneros de Guasave activated RHP Josue Gomez from the reserve list.",
+      "League tx: 2026-11-05: Algodoneros de Guasave activated C Heber Villalobos from the reserve list.",
+      "League tx: 2026-11-05: Venados de Mazatlan placed RHP Ernesto Borges on the reserve list.",
+      "League tx: 2026-11-05: Venados de Mazatlan placed C Santiago Contreras on the reserve list.",
+      "League tx: 2026-11-05: Venados de Mazatlan activated LHP Ruben Reyes from the reserve list.",
+      "League tx: 2026-11-05: Yaquis de Obregon placed C Alfredo Hurtado on the reserve list.",
+      "League tx: 2026-11-05: Tomateros de Culiacan placed RHP Miguel Vazquez on the reserve list.",
+      "League tx: 2026-11-05: Tomateros de Culiacan activated LHP Baltazar Arredondo from the reserve list.",
+      "League tx: 2026-11-05: RHP Orlando Gonzalez assigned to Naranjeros de Hermosillo.",
+      "League tx: 2026-11-05: Naranjeros de Hermosillo placed RHP Rolando Mora on the reserve list.",
+      "League tx: 2026-11-05: Naranjeros de Hermosillo placed RHP Enrique Castillo on the reserve list.",
+      "League tx: 2026-11-05: Naranjeros de Hermosillo placed RHP Augusto Mendieta on the reserve list.",
+      "League tx: 2026-11-05: C Jesus Guerrero assigned to Yaquis de Obregon.",
+      "League tx: 2026-11-05: RHP Luis Ochoa assigned to Jaguares de Nayarit.",
+      "League tx: 2026-11-05: Charros de Jalisco traded LHP Alemao Hernandez to Jaguares de Nayarit for LHP Omar Sainz.",
+      "League tx: 2026-11-05: Charros de Jalisco traded LHP Alemao Hernandez to Jaguares de Nayarit for LHP Omar Sainz.",
+      "League tx: 2026-11-06: CF Rashawn Pinder assigned to Adelaide Giants.",
+      "League tx: 2026-11-06: RHP Josh Beezley assigned to Sydney Blue Sox.",
+      "League tx: 2026-11-06: RHP James Boeree assigned to Sydney Blue Sox.",
+      "League tx: 2026-11-06: RHP Dylan Clarke assigned to Sydney Blue Sox.",
+      "League tx: 2026-11-06: RHP Liam Doolan assigned to Sydney Blue Sox.",
+      "League tx: 2026-11-06: RHP Kyle Glogoski assigned to Sydney Blue Sox.",
+      "League tx: 2026-11-06: RHP Rob Hughes assigned to Sydney Blue Sox.",
+      "League tx: 2026-11-06: LHP Lachlan Rosser assigned to Sydney Blue Sox.",
+      "League tx: 2026-11-06: RHP Taylor Seay assigned to Sydney Blue Sox.",
+      "League tx: 2026-11-06: RHP Aidan Torpey assigned to Sydney Blue Sox.",
+      "League tx: 2026-11-06: 1B Blake Cavill assigned to Sydney Blue Sox."
     ],
-    "transactions_total": 614,
+    "transactions_total": 427,
     "debug": {
       "standings": [
         "rows=30"
@@ -757,7 +751,7 @@
         "games=0"
       ],
       "transactions": [
-        "transactions=614"
+        "transactions=427"
       ]
     }
   },
@@ -885,7 +879,7 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-11&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-12&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -898,19 +892,19 @@
         ]
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-11-04&endDate=2026-11-11",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-11-05&endDate=2026-11-12",
         "status": "verified",
         "debug": [
-          "transactions=614"
+          "transactions=427"
         ],
-        "verified_count": 614,
+        "verified_count": 427,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-11-04: LHP Sebastian Bentz assigned to Indios de Mayaguez.",
-          "League tx: 2026-11-04: 2B Edrick Felix assigned to Indios de Mayaguez.",
-          "League tx: 2026-11-04: LHP Kai Yokogawa assigned to Leones de Ponce.",
-          "League tx: 2026-11-04: LF Bryan Torres assigned to Criollos de Caguas.",
-          "League tx: 2026-11-04: RHP Daryl Thompson assigned to Cangrejeros de Santurce."
+          "League tx: 2026-11-05: Sydney Blue Sox activated OF Jaylin Rae from the reserve list.",
+          "League tx: 2026-11-05: Sydney Blue Sox activated RHP Luke Livian from the reserve list.",
+          "League tx: 2026-11-05: RHP Jean Cabrera assigned to Aguilas del Zulia.",
+          "League tx: 2026-11-05: Aguilas de Mexicali placed RHP Sergio Garcia-Repper on the reserve list.",
+          "League tx: 2026-11-05: Aguilas de Mexicali activated RHP Daniel Nunez from the reserve list."
         ],
         "unverified_sample": []
       },
@@ -928,7 +922,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-11-11&endDate=2026-11-13&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-11-12&endDate=2026-11-14&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -941,7 +935,7 @@
         ]
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-11-04&endDate=2026-11-11",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-11-05&endDate=2026-11-12",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -967,7 +961,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-11-11&endDate=2026-11-13&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-11-12&endDate=2026-11-14&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -980,7 +974,7 @@
         ]
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-11-04&endDate=2026-11-11",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-11-05&endDate=2026-11-12",
         "status": "unverified",
         "debug": [
           "transactions=0"
@@ -1006,7 +1000,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-11-11&endDate=2026-11-13&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-11-12&endDate=2026-11-14&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1019,7 +1013,7 @@
         ]
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-11-04&endDate=2026-11-11",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-11-05&endDate=2026-11-12",
         "status": "verified",
         "debug": [
           "transactions=1"
@@ -1134,10 +1128,10 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-11-12T02:11:33Z"
+    "generated_utc": "2026-11-12T10:52:32Z"
   },
   "bd_bets": {
-    "generated_at": "2026-11-12T02:11:37.675Z",
+    "generated_at": "2026-11-12T10:52:35.182Z",
     "slate_date": "2026-11-12",
     "sport": "MLB",
     "source": "bd-bets",
