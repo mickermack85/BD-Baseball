@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-24T00:42:29Z",
-  "slate_date": "2026-11-23",
+  "generated_at": "2026-11-24T10:48:26Z",
+  "slate_date": "2026-11-24",
   "slate_timezone": "America/Los_Angeles",
   "schema_version": "3.3",
   "sources": {
@@ -9,14 +9,14 @@
     "tigers_news": "https://www.mlb.com/tigers/feeds/news/rss.xml",
     "rockies_news": "https://www.mlb.com/rockies/feeds/news/rss.xml",
     "league_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-23&hydrate=probablePitcher,team",
-    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-11-16&endDate=2026-11-23",
-    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-11-23&endDate=2026-11-25&hydrate=probablePitcher,team",
-    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-11-16&endDate=2026-11-23",
-    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-11-23&endDate=2026-11-25&hydrate=probablePitcher,team",
-    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-11-16&endDate=2026-11-23",
-    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-11-23&endDate=2026-11-25&hydrate=probablePitcher,team",
-    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-11-16&endDate=2026-11-23"
+    "league_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-24&hydrate=probablePitcher,team",
+    "league_transactions": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-11-17&endDate=2026-11-24",
+    "athletics_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-11-24&endDate=2026-11-26&hydrate=probablePitcher,team",
+    "athletics_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-11-17&endDate=2026-11-24",
+    "rockies_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-11-24&endDate=2026-11-26&hydrate=probablePitcher,team",
+    "rockies_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-11-17&endDate=2026-11-24",
+    "tigers_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-11-24&endDate=2026-11-26&hydrate=probablePitcher,team",
+    "tigers_transactions": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-11-17&endDate=2026-11-24"
   },
   "source_status": {
     "league_standings": "verified",
@@ -44,19 +44,19 @@
     "league_news": {
       "items": [
         {
-          "headline": "1B Goldschmidt agrees to deal with busy Mets (source)",
-          "url": "https://www.mlb.com/news/paul-goldschmidt-mets-contract",
+          "headline": "Cubs reach multiyear deal with lefty Rogers as rotation revamp begins (source)",
+          "url": "https://www.mlb.com/news/trevor-rogers-cubs-contract",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-11-23T16:16:00Z",
+          "published_at": "2026-11-24T05:09:00Z",
           "summary": ""
         },
         {
-          "headline": "1 team at each position most in need of an upgrade for 2027",
-          "url": "https://www.mlb.com/news/mlb-teams-that-need-to-make-an-offseason-upgrade-2026-27",
+          "headline": "This international star is bringing a unique pitch to MLB",
+          "url": "https://www.mlb.com/news/kaima-taira-bringing-unique-fastball-to-mlb",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-11-23T02:28:44Z",
+          "published_at": "2026-11-24T03:00:15Z",
           "summary": ""
         },
         {
@@ -68,11 +68,35 @@
           "summary": ""
         },
         {
+          "headline": "5 grizzled veteran free agents with something left to prove",
+          "url": "https://www.mlb.com/news/veteran-free-agents-that-can-make-an-impact-in-2027",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-11-24T03:00:12Z",
+          "summary": ""
+        },
+        {
+          "headline": "1B Goldschmidt agrees to deal with busy Mets (source)",
+          "url": "https://www.mlb.com/news/paul-goldschmidt-mets-contract",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-11-23T16:16:00Z",
+          "summary": ""
+        },
+        {
           "headline": "Hot Stove Rumors: Skubal fallout, King, Peralta, Sato, Morejon, Webb",
           "url": "https://www.mlb.com/news/mlb-rumors-and-2026-27-free-agent-news-november-23",
           "source": "MLB.com",
           "source_type": "rss",
           "published_at": "2026-11-23T20:58:00Z",
+          "summary": ""
+        },
+        {
+          "headline": "Why the 2026 rookie class might have been the best ever",
+          "url": "https://www.mlb.com/news/analyzing-success-of-2026-mlb-rookie-class",
+          "source": "MLB.com",
+          "source_type": "rss",
+          "published_at": "2026-11-24T00:26:12Z",
           "summary": ""
         },
         {
@@ -88,23 +112,7 @@
           "url": "https://www.mlb.com/news/caleb-thielbar-deal-with-royals",
           "source": "MLB.com",
           "source_type": "rss",
-          "published_at": "2026-11-24T00:24:41Z",
-          "summary": ""
-        },
-        {
-          "headline": "Why the 2026 rookie class might have been the best ever",
-          "url": "https://www.mlb.com/news/analyzing-success-of-2026-mlb-rookie-class",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-11-24T00:26:12Z",
-          "summary": ""
-        },
-        {
-          "headline": "There\u2019s a new ace reportedly available via trade. Here\u2019s why the Cubs are a perfect match",
-          "url": "https://www.mlb.com/news/why-logan-webb-is-a-fit-for-the-cubs-via-potential-trade",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-11-23T14:57:47Z",
+          "published_at": "2026-11-24T03:02:00Z",
           "summary": ""
         },
         {
@@ -113,14 +121,6 @@
           "source": "MLB.com",
           "source_type": "rss",
           "published_at": "2026-11-23T21:05:00Z",
-          "summary": ""
-        },
-        {
-          "headline": "Skubal\u2019s decision has repercussions far beyond the Mets. Here\u2019s what to make of it",
-          "url": "https://www.mlb.com/news/takeaways-tarik-skubal-mets-contract",
-          "source": "MLB.com",
-          "source_type": "rss",
-          "published_at": "2026-11-23T00:19:41Z",
           "summary": ""
         }
       ],
@@ -227,11 +227,11 @@
             "summary": ""
           },
           {
-            "headline": "Former ROY Gil agrees to 1-year deal with Tigers (source)",
-            "url": "https://www.mlb.com/tigers/news/luis-gil-tigers-deal",
+            "headline": "Why the 2026 rookie class might have been the best ever",
+            "url": "https://www.mlb.com/tigers/news/analyzing-success-of-2026-mlb-rookie-class",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-11-22T21:22:00Z",
+            "published_at": "2026-11-24T00:26:12Z",
             "summary": ""
           },
           {
@@ -243,19 +243,19 @@
             "summary": ""
           },
           {
+            "headline": "Former ROY Gil agrees to 1-year deal with Tigers (source)",
+            "url": "https://www.mlb.com/tigers/news/luis-gil-tigers-deal",
+            "source": "MLB.com",
+            "source_type": "rss",
+            "published_at": "2026-11-22T21:22:00Z",
+            "summary": ""
+          },
+          {
             "headline": "Tigers agree to six-year extension with newly converted starter Troy Melton (source)",
             "url": "https://www.mlb.com/tigers/news/tigers-troy-melton-contract-extension",
             "source": "MLB.com",
             "source_type": "rss",
             "published_at": "2026-11-20T22:31:00Z",
-            "summary": ""
-          },
-          {
-            "headline": "Pag\u00e1n brings a veteran leadership to back end of Detroit's bullpen",
-            "url": "https://www.mlb.com/tigers/news/emilio-pagan-discusses-signing-with-tigers",
-            "source": "MLB.com",
-            "source_type": "rss",
-            "published_at": "2026-11-19T12:24:12Z",
             "summary": ""
           },
           {
@@ -267,11 +267,11 @@
             "summary": ""
           },
           {
-            "headline": "Ranking the Top 30 prospects from the '26 Fall League campaign",
-            "url": "https://www.mlb.com/tigers/news/top-30-arizona-fall-league-prospects-2026",
+            "headline": "Pag\u00e1n brings a veteran leadership to back end of Detroit's bullpen",
+            "url": "https://www.mlb.com/tigers/news/emilio-pagan-discusses-signing-with-tigers",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-11-20T00:00:00Z",
+            "published_at": "2026-11-19T12:24:12Z",
             "summary": ""
           },
           {
@@ -291,11 +291,11 @@
             "summary": "Who do the Tigers have in the pipeline? Get scouting reports, video, stats, projected ETAs and more for Detroit's Top 30 Prospects."
           },
           {
-            "headline": "Tigers add fast-rising prospect Graham to 40-man roster, DFA Vierling",
-            "url": "https://www.mlb.com/tigers/news/tigers-peyton-graham-40-man-roster-matt-vierling-designated-for-assignment",
+            "headline": "Ranking the Top 30 prospects from the '26 Fall League campaign",
+            "url": "https://www.mlb.com/tigers/news/top-30-arizona-fall-league-prospects-2026",
             "source": "MLB.com",
             "source_type": "rss",
-            "published_at": "2026-11-18T00:59:20Z",
+            "published_at": "2026-11-20T00:00:00Z",
             "summary": ""
           }
         ],
@@ -393,6 +393,196 @@
     },
     "news_items": [
       {
+        "id": "yahoo_sports-3-1",
+        "headline": "Cubs bolster thin rotation, reportedly agree with Trevor Rogers on $120M deal",
+        "url": "https://sports.yahoo.com/mlb/breaking-news/article/cubs-bolster-thin-rotation-reportedly-agree-with-trevor-rogers-on-120m-deal-051456180.html",
+        "source": "Yahoo Sports",
+        "source_type": "rss",
+        "published_at": "2026-11-24T05:14:56Z",
+        "summary": "The Cubs need to rebuild their rotation this offseason.",
+        "teams": [
+          "athletics",
+          "cubs"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-2",
+        "headline": "Houston Astros flesh out coaching staff with new hitting, pitching coaches",
+        "url": "https://sports.yahoo.com/articles/houston-astros-flesh-coaching-staff-051155290.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-24T05:11:55Z",
+        "summary": "Checking in on the moves occurring down south.",
+        "teams": [
+          "astros",
+          "athletics"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-1",
+        "headline": "Cubs reach multiyear deal with lefty Rogers as rotation revamp begins (source)",
+        "url": "https://www.mlb.com/news/trevor-rogers-cubs-contract",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-11-24T05:09:00Z",
+        "summary": "",
+        "teams": [
+          "athletics",
+          "cubs"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-3",
+        "headline": "Yankees news: The trouble with third base",
+        "url": "https://sports.yahoo.com/articles/yankees-news-trouble-third-050000042.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-24T05:00:00Z",
+        "summary": "The low hanging fruit at the hot corner; Yankees bid farewell to vet; club signs lefty reliever.",
+        "teams": [
+          "athletics",
+          "yankees"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-4",
+        "headline": "Cubs signing Trevor Rogers to five year, $120 million contract",
+        "url": "https://sports.yahoo.com/articles/cubs-signing-trevor-rogers-five-045927659.html",
+        "source": "NY Post Sports",
+        "source_type": "rss",
+        "published_at": "2026-11-24T04:59:27Z",
+        "summary": "Left-hander Trevor Rogers has agreed to a contract with the Cubs.",
+        "teams": [
+          "athletics",
+          "cubs"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-5",
+        "headline": "Trevor Rogers, Cubs agree to five-year, $120 million deal | Report",
+        "url": "https://sports.yahoo.com/articles/trevor-rogers-cubs-agree-five-045029968.html",
+        "source": "USA TODAY Sports",
+        "source_type": "rss",
+        "published_at": "2026-11-24T04:50:29Z",
+        "summary": "Left-handed pitcher Trevor Rogers agreed to terms with the Chicago Cubs on a five-year, $120 million contract.",
+        "teams": [
+          "cubs"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-6",
+        "headline": "Cubs sign Trevor Rogers to multi-year deal",
+        "url": "https://sports.yahoo.com/articles/cubs-sign-trevor-rogers-multi-040500416.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-24T04:05:00Z",
+        "summary": "The Cubs have added a solid lefty to the pitching staff.",
+        "teams": [
+          "cubs"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "mlb_com-1-2",
+        "headline": "This international star is bringing a unique pitch to MLB",
+        "url": "https://www.mlb.com/news/kaima-taira-bringing-unique-fastball-to-mlb",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-11-24T03:00:15Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "mlb_com-1-4",
+        "headline": "5 grizzled veteran free agents with something left to prove",
+        "url": "https://www.mlb.com/news/veteran-free-agents-that-can-make-an-impact-in-2027",
+        "source": "MLB.com",
+        "source_type": "rss",
+        "published_at": "2026-11-24T03:00:12Z",
+        "summary": "",
+        "teams": [],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 1
+      },
+      {
+        "id": "yahoo_sports-3-7",
+        "headline": "Purple Row After Dark: Monday, November 23, 2026, discussion thread",
+        "url": "https://sports.yahoo.com/articles/purple-row-dark-monday-november-030000544.html",
+        "source": "SB Nation",
+        "source_type": "rss",
+        "published_at": "2026-11-24T03:00:00Z",
+        "summary": "A space for discussing the day\u2019s news \u2014 Rockies-centric or otherwise.",
+        "teams": [
+          "rockies"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "yahoo_sports-3-8",
+        "headline": "Mets land Tarik Skubal: How will Phillies, NL East counter historic deal?",
+        "url": "https://sports.yahoo.com/articles/mets-land-tarik-skubal-phillies-194439864.html",
+        "source": "NBC Sports Philadelphia",
+        "source_type": "rss",
+        "published_at": "2026-11-24T02:35:00Z",
+        "summary": "New York has spent big again, but the Phillies and their division rivals have their own needs to address before a potential lockout.",
+        "teams": [
+          "athletics",
+          "mets",
+          "phillies"
+        ],
+        "players": [],
+        "topics": [
+          "mlb"
+        ],
+        "priority": 2
+      },
+      {
         "id": "mlb_com-1-7",
         "headline": "Why the 2026 rookie class might have been the best ever",
         "url": "https://www.mlb.com/news/analyzing-success-of-2026-mlb-rookie-class",
@@ -410,60 +600,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-6",
-        "headline": "Royals sign lefty Thielbar to 1-year deal",
-        "url": "https://www.mlb.com/news/caleb-thielbar-deal-with-royals",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-11-24T00:24:41Z",
-        "summary": "",
-        "teams": [
-          "royals"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-1",
-        "headline": "Royals sign lefty reliever Caleb Thielbar",
-        "url": "https://sports.yahoo.com/articles/royals-sign-lefty-reliever-caleb-235953958.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-23T23:59:53Z",
-        "summary": "The 40-year-old can miss bats. But he is\u202640.",
-        "teams": [
-          "royals"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-2",
-        "headline": "Ex-Yankee Tyler Austin looking for stateside return \u2014 and both New York clubs are interested",
-        "url": "https://sports.yahoo.com/articles/ex-yankee-tyler-austin-looking-223907055.html",
-        "source": "NY Post Sports",
-        "source_type": "rss",
-        "published_at": "2026-11-23T22:39:07Z",
-        "summary": "He&#39;s almost certain to receive a minor league contract, and the Blue Jays, Cubs and Rays are the other teams that have expressed interest, a source said.",
-        "teams": [
-          "blue jays",
-          "cubs",
-          "rays"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-5",
+        "id": "mlb_com-1-8",
         "headline": "The two pitches that make this coveted closer so elite",
         "url": "https://www.mlb.com/news/brewers-closer-trevor-megill-has-two-elite-pitches",
         "source": "MLB.com",
@@ -478,61 +615,7 @@
         "priority": 1
       },
       {
-        "id": "yahoo_sports-3-3",
-        "headline": "Checking in on Mariners in winter leagues",
-        "url": "https://sports.yahoo.com/articles/checking-mariners-winter-leagues-213108518.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-23T21:31:08Z",
-        "summary": "It\u2019s not the off-season for everyone, especially rehabbing or fringe prospects",
-        "teams": [
-          "athletics",
-          "mariners"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-4",
-        "headline": "The Dodgers had neither the roster need nor the financial appetite to acquire Tarik Skubal",
-        "url": "https://sports.yahoo.com/mlb/article/the-dodgers-had-neither-the-roster-need-nor-the-financial-appetite-to-acquire-tarik-skubal-210557723.html",
-        "source": "Yahoo Sports",
-        "source_type": "rss",
-        "published_at": "2026-11-23T21:05:57Z",
-        "summary": "The Dodgers reportedly didn&#39;t make Skubal an official offer before he signed with the Mets.",
-        "teams": [
-          "dodgers",
-          "mets"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-5",
-        "headline": "The Cincinnati Reds are Noelvi Marte",
-        "url": "https://sports.yahoo.com/articles/cincinnati-reds-noelvi-marte-210528582.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-23T21:05:28Z",
-        "summary": "Cincinnati enters year five of their once-lauded rebuild, as does former top prospect Noelvi Marte.",
-        "teams": [
-          "athletics",
-          "reds"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "mlb_com-1-4",
+        "id": "mlb_com-1-6",
         "headline": "Hot Stove Rumors: Skubal fallout, King, Peralta, Sato, Morejon, Webb",
         "url": "https://www.mlb.com/news/mlb-rumors-and-2026-27-free-agent-news-november-23",
         "source": "MLB.com",
@@ -545,59 +628,6 @@
           "mlb"
         ],
         "priority": 1
-      },
-      {
-        "id": "yahoo_sports-3-6",
-        "headline": "Breaking down the Sox-Rox trade",
-        "url": "https://sports.yahoo.com/articles/breaking-down-sox-rox-trade-204452185.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-23T20:44:52Z",
-        "summary": "A mere salary dump \u2026 or is there something more to discover in Sean Sullivan?",
-        "teams": [
-          "rockies"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-7",
-        "headline": "Yankees sign lefty Brent Suter as bullpen rebuild continues",
-        "url": "https://sports.yahoo.com/articles/yankees-sign-lefty-brent-suter-203314648.html",
-        "source": "NY Post Sports",
-        "source_type": "rss",
-        "published_at": "2026-11-23T20:33:14Z",
-        "summary": "He can serve as a setup man but also fit into long relief if needed, a role similar to the one Paul Blackburn thrived in last year.",
-        "teams": [
-          "athletics",
-          "yankees"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
-      },
-      {
-        "id": "yahoo_sports-3-8",
-        "headline": "Yankees sign lefty reliever Brent Suter",
-        "url": "https://sports.yahoo.com/articles/yankees-sign-lefty-reliever-brent-202448407.html",
-        "source": "SB Nation",
-        "source_type": "rss",
-        "published_at": "2026-11-23T20:24:48Z",
-        "summary": "The club adds southpaw depth to what was one of the game\u2019s best bullpens.",
-        "teams": [
-          "athletics",
-          "yankees"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 2
       },
       {
         "id": "mlb_com-1-3",
@@ -615,7 +645,7 @@
         "priority": 1
       },
       {
-        "id": "mlb_com-1-1",
+        "id": "mlb_com-1-5",
         "headline": "1B Goldschmidt agrees to deal with busy Mets (source)",
         "url": "https://www.mlb.com/news/paul-goldschmidt-mets-contract",
         "source": "MLB.com",
@@ -625,38 +655,6 @@
         "teams": [
           "mets"
         ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-8",
-        "headline": "There\u2019s a new ace reportedly available via trade. Here\u2019s why the Cubs are a perfect match",
-        "url": "https://www.mlb.com/news/why-logan-webb-is-a-fit-for-the-cubs-via-potential-trade",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-11-23T14:57:47Z",
-        "summary": "",
-        "teams": [
-          "cubs"
-        ],
-        "players": [],
-        "topics": [
-          "mlb"
-        ],
-        "priority": 1
-      },
-      {
-        "id": "mlb_com-1-2",
-        "headline": "1 team at each position most in need of an upgrade for 2027",
-        "url": "https://www.mlb.com/news/mlb-teams-that-need-to-make-an-offseason-upgrade-2026-27",
-        "source": "MLB.com",
-        "source_type": "rss",
-        "published_at": "2026-11-23T02:28:44Z",
-        "summary": "",
-        "teams": [],
         "players": [],
         "topics": [
           "mlb"
@@ -698,58 +696,58 @@
       "UNVERIFIED: No probable matchup entries available."
     ],
     "transactions": [
-      "League tx: 2026-11-16: Colorado Rockies signed free agent OF Enexis Antunez to a minor league contract.",
-      "League tx: 2026-11-16: C Carlos Linarez assigned to Bravos de Margarita.",
-      "League tx: 2026-11-16: RHP Ralph Garza Jr. assigned to Senadores de San Juan.",
-      "League tx: 2026-11-16: Detroit Tigers signed free agent RHP Sawyer Gipson-Long to a minor league contract.",
-      "League tx: 2026-11-16: SS Jos\u00e9 Barrero assigned to Norfolk Tides.",
-      "League tx: 2026-11-16: 2B Matt McDermott assigned to Senadores de San Juan.",
-      "League tx: 2026-11-16: DSL Cubs Blue released SS Stharling De Los Santos.",
-      "League tx: 2026-11-16: SS Randal Diaz assigned to Senadores de San Juan.",
-      "League tx: 2026-11-16: RHP Aidan Anderson assigned to Gigantes del Cibao.",
-      "League tx: 2026-11-16: 2B Robinson Can\u00f3 assigned to Estrellas Orientales.",
-      "League tx: 2026-11-16: Houston Astros signed free agent RHP Jose Gonzalez to a minor league contract.",
-      "League tx: 2026-11-16: Arizona Diamondbacks signed free agent OF Ismael Munguia to a minor league contract.",
-      "League tx: 2026-11-16: Atlanta Braves signed free agent RHP Darlin Pinales to a minor league contract.",
-      "League tx: 2026-11-16: RHP Darlin Pinales assigned to Gwinnett Stripers.",
-      "League tx: 2026-11-16: Atlanta Braves signed free agent SS Luke Williams to a minor league contract.",
-      "League tx: 2026-11-16: SS Luke Williams assigned to Gwinnett Stripers.",
-      "League tx: 2026-11-16: Boston Red Sox signed free agent RHP Michael Arias to a minor league contract.",
-      "League tx: 2026-11-16: LHP Matt Tenuta assigned to Senadores de San Juan.",
-      "League tx: 2026-11-16: South Bend Cubs released OF Geuri Lubo.",
-      "League tx: 2026-11-16: RHP Sal Romano assigned to Toros del Este.",
-      "League tx: 2026-11-16: Chicago Cubs signed free agent RHP Anderson Castillo to a minor league contract.",
-      "League tx: 2026-11-16: C Jair Camargo assigned to Gigantes del Cibao.",
-      "League tx: 2026-11-16: RHP Yaqui Rivera assigned to Las Vegas Aviators.",
-      "League tx: 2026-11-16: Washington Nationals signed free agent 2B Carlos Mendoza to a minor league contract.",
-      "League tx: 2026-11-16: Bravos de Margarita released RHP Carlos Suniaga.",
-      "League tx: 2026-11-16: Detroit Tigers signed free agent LHP Bailey Horn to a minor league contract.",
-      "League tx: 2026-11-16: Philadelphia Phillies signed free agent C Blake Hunt to a minor league contract.",
-      "League tx: 2026-11-16: Baltimore Orioles signed free agent SS Jos\u00e9 Barrero to a minor league contract.",
-      "League tx: 2026-11-16: RHP Robier Hernandez retired.",
-      "League tx: 2026-11-16: LHP Quinton Martinez assigned to Gigantes del Cibao.",
-      "League tx: 2026-11-16: 2B Carlos Mendoza assigned to Rochester Red Wings.",
-      "League tx: 2026-11-16: RHP Joel Kuhnel assigned to Syracuse Mets.",
-      "League tx: 2026-11-16: Washington Nationals signed free agent LHP Omar Cruz to a minor league contract.",
-      "League tx: 2026-11-16: New York Mets signed free agent RHP Joel Kuhnel to a minor league contract.",
-      "League tx: 2026-11-16: LHP Omar Cruz assigned to Rochester Red Wings.",
-      "League tx: 2026-11-16: RHP Michael Arias assigned to Worcester Red Sox.",
-      "League tx: 2026-11-16: San Francisco Giants signed free agent RHP Erick Mejia to a minor league contract.",
-      "League tx: 2026-11-16: RHP Erick Mejia assigned to Sacramento River Cats.",
-      "League tx: 2026-11-16: Colorado Rockies signed free agent C Enmanuel Mendoza to a minor league contract.",
-      "League tx: 2026-11-16: Chicago Cubs signed free agent RHP Celso Lopez to a minor league contract.",
-      "League tx: 2026-11-16: RHP Celso Lopez assigned to DSL Cubs Red.",
-      "League tx: 2026-11-16: 1B Carter Graham assigned to Louisville Bats from Chattanooga Lookouts.",
-      "League tx: 2026-11-16: Aguilas Cibaenas traded RHP Roddery Mu\u00f1oz to Leones del Escogido.",
       "League tx: 2026-11-17: RHP Jerming Rosario assigned to Lehigh Valley IronPigs.",
       "League tx: 2026-11-17: RHP Harol Gonz\u00e1lez assigned to Caribes de Anzoategui.",
       "League tx: 2026-11-17: Boston Red Sox signed free agent 1B Jake Bauers.",
       "League tx: 2026-11-17: Detroit Tigers signed free agent RHP Anderson Pilar to a minor league contract.",
       "League tx: 2026-11-17: RHP Anderson Pilar assigned to Toledo Mud Hens.",
       "League tx: 2026-11-17: New York Mets signed free agent LHP Justin King to a minor league contract.",
-      "League tx: 2026-11-17: LHP Bryan Magdaleno assigned to Sugar Land Space Cowboys."
+      "League tx: 2026-11-17: LHP Bryan Magdaleno assigned to Sugar Land Space Cowboys.",
+      "League tx: 2026-11-17: Philadelphia Phillies signed free agent RHP Jerming Rosario to a minor league contract.",
+      "League tx: 2026-11-17: San Diego Padres signed free agent OF Kala'i Rosario to a minor league contract.",
+      "League tx: 2026-11-17: Houston Astros signed free agent LHP Bryan Magdaleno to a minor league contract.",
+      "League tx: 2026-11-17: LHP Justin King assigned to Syracuse Mets.",
+      "League tx: 2026-11-17: Washington Nationals designated RHP Josiah Gray for assignment.",
+      "League tx: 2026-11-17: Athletics designated RHP Braden Nett for assignment.",
+      "League tx: 2026-11-17: RF Luis Lara assigned to Tiburones de La Guaira.",
+      "League tx: 2026-11-17: LHP Jos\u00e9 Castillo assigned to Navegantes del Magallanes.",
+      "League tx: 2026-11-17: C Blake Hunt assigned to Lehigh Valley IronPigs.",
+      "League tx: 2026-11-17: OF Ismael Munguia assigned to Reno Aces.",
+      "League tx: 2026-11-17: RHP Kenya Huggins assigned to Portland Sea Dogs.",
+      "League tx: 2026-11-17: RHP Sawyer Gipson-Long assigned to Toledo Mud Hens.",
+      "League tx: 2026-11-17: LHP Bailey Horn assigned to Toledo Mud Hens.",
+      "League tx: 2026-11-17: RHP Jeyderson Mora assigned to Tiburones de La Guaira.",
+      "League tx: 2026-11-17: RHP Anderson Guevara assigned to Tigres de Aragua.",
+      "League tx: 2026-11-17: SS Jack Pineda assigned to Worcester Red Sox.",
+      "League tx: 2026-11-17: RHP Conner Greene assigned to Leones del Escogido.",
+      "League tx: 2026-11-17: Kansas City Royals designated RHP Nick Mears for assignment.",
+      "League tx: 2026-11-17: Minnesota Twins signed free agent C Ryan Jeffers.",
+      "League tx: 2026-11-17: RHP Justin Courtney assigned to Toros del Este.",
+      "League tx: 2026-11-17: RF Victor Robles assigned to Aguilas Cibaenas.",
+      "League tx: 2026-11-17: LHP Williams Jerez assigned to Gigantes del Cibao.",
+      "League tx: 2026-11-17: RHP Yohan Ram\u00edrez assigned to Aguilas Cibaenas.",
+      "League tx: 2026-11-17: RHP Yohan Ram\u00edrez assigned to Toros del Este.",
+      "League tx: 2026-11-17: 3B Santiago Espinal assigned to Aguilas Cibaenas.",
+      "League tx: 2026-11-17: C Jorhan Castro assigned to Cangrejeros de Santurce.",
+      "League tx: 2026-11-17: 3B Yamvier Carrero assigned to Cangrejeros de Santurce.",
+      "League tx: 2026-11-17: RHP Emmanuel Chapman assigned to Cangrejeros de Santurce.",
+      "League tx: 2026-11-17: LHP Omar Melendez assigned to Leones de Ponce.",
+      "League tx: 2026-11-17: LHP Jorhan LaBoy assigned to Leones de Ponce.",
+      "League tx: 2026-11-17: OF Javier Vaz assigned to Gigantes de Carolina.",
+      "League tx: 2026-11-17: C Ram\u00f3n Rodr\u00edguez assigned to Gigantes de Carolina.",
+      "League tx: 2026-11-17: C Jamal George assigned to Indios de Mayaguez.",
+      "League tx: 2026-11-17: RF Roberto Campos assigned to Indios de Mayaguez.",
+      "League tx: 2026-11-17: RHP Luke Stofel assigned to Indios de Mayaguez.",
+      "League tx: 2026-11-17: New York Mets designated RHP Dylan Ross for assignment.",
+      "League tx: 2026-11-17: RF Esmerlyn Valdez assigned to Leones del Escogido.",
+      "League tx: 2026-11-17: New York Yankees signed free agent RHP David Bednar.",
+      "League tx: 2026-11-17: Detroit Tigers designated 3B Jace Jung for assignment.",
+      "League tx: 2026-11-17: Detroit Tigers designated LHP Jake Miller for assignment.",
+      "League tx: 2026-11-17: Detroit Tigers designated SS Trey Sweeney for assignment.",
+      "League tx: 2026-11-17: Detroit Tigers designated CF Matt Vierling for assignment.",
+      "League tx: 2026-11-17: Aguilas de Mexicali placed C Alejandro Flores on the reserve list."
     ],
-    "transactions_total": 590,
+    "transactions_total": 547,
     "debug": {
       "standings": [
         "rows=30"
@@ -758,7 +756,7 @@
         "games=0"
       ],
       "transactions": [
-        "transactions=590"
+        "transactions=547"
       ]
     }
   },
@@ -805,10 +803,10 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Rockies: 58-104 (PCT .358, GB 42.0) [Division]",
-        "Colorado Rockies tx: 2026-11-16: Colorado Rockies signed free agent OF Enexis Antunez to a minor league contract.",
-        "Colorado Rockies tx: 2026-11-16: Colorado Rockies signed free agent C Enmanuel Mendoza to a minor league contract.",
         "Colorado Rockies tx: 2026-11-17: Colorado Rockies selected the contract of RHP Jackson Cox from Hartford Yard Goats.",
-        "Colorado Rockies tx: 2026-11-17: Colorado Rockies selected the contract of RHP Jack Mahoney from Albuquerque Isotopes."
+        "Colorado Rockies tx: 2026-11-17: Colorado Rockies selected the contract of RHP Jack Mahoney from Albuquerque Isotopes.",
+        "Colorado Rockies tx: 2026-11-17: Colorado Rockies selected the contract of C Bryant Betancourt from Albuquerque Isotopes.",
+        "Colorado Rockies tx: 2026-11-18: Colorado Rockies signed free agent RHP TJ Shook to a minor league contract."
       ],
       "unverified_notes": [
         "UNVERIFIED: No scheduled game found for teamId=115 in window."
@@ -833,7 +831,7 @@
           "games=0"
         ],
         "rockies_transactions": [
-          "transactions=14"
+          "transactions=12"
         ]
       }
     },
@@ -842,10 +840,10 @@
       "emotion": "Measured",
       "verified_notes": [
         "Standings: Tigers: 76-86 (PCT .469, GB 9.0) [Division]",
-        "Detroit Tigers tx: 2026-11-16: Detroit Tigers signed free agent LHP Bailey Horn to a minor league contract.",
-        "Detroit Tigers tx: 2026-11-16: Detroit Tigers signed free agent RHP Sawyer Gipson-Long to a minor league contract.",
         "Detroit Tigers tx: 2026-11-17: Detroit Tigers designated CF Matt Vierling for assignment.",
-        "Detroit Tigers tx: 2026-11-17: Detroit Tigers designated SS Trey Sweeney for assignment."
+        "Detroit Tigers tx: 2026-11-17: Detroit Tigers designated SS Trey Sweeney for assignment.",
+        "Detroit Tigers tx: 2026-11-17: Detroit Tigers signed free agent RHP Emilio Pag\u00e1n.",
+        "Detroit Tigers tx: 2026-11-17: Detroit Tigers signed free agent RHP Anderson Pilar to a minor league contract."
       ],
       "unverified_notes": [
         "UNVERIFIED: No scheduled game found for teamId=116 in window."
@@ -870,7 +868,7 @@
           "games=0"
         ],
         "tigers_transactions": [
-          "transactions=16"
+          "transactions=14"
         ]
       }
     }
@@ -895,7 +893,7 @@
         "unverified_sample": []
       },
       "league_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-23&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-24&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -908,19 +906,19 @@
         ]
       },
       "league_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-11-16&endDate=2026-11-23",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?startDate=2026-11-17&endDate=2026-11-24",
         "status": "verified",
         "debug": [
-          "transactions=590"
+          "transactions=547"
         ],
-        "verified_count": 590,
+        "verified_count": 547,
         "unverified_count": 0,
         "verified_sample": [
-          "League tx: 2026-11-16: Colorado Rockies signed free agent OF Enexis Antunez to a minor league contract.",
-          "League tx: 2026-11-16: C Carlos Linarez assigned to Bravos de Margarita.",
-          "League tx: 2026-11-16: RHP Ralph Garza Jr. assigned to Senadores de San Juan.",
-          "League tx: 2026-11-16: Detroit Tigers signed free agent RHP Sawyer Gipson-Long to a minor league contract.",
-          "League tx: 2026-11-16: SS Jos\u00e9 Barrero assigned to Norfolk Tides."
+          "League tx: 2026-11-17: RHP Jerming Rosario assigned to Lehigh Valley IronPigs.",
+          "League tx: 2026-11-17: RHP Harol Gonz\u00e1lez assigned to Caribes de Anzoategui.",
+          "League tx: 2026-11-17: Boston Red Sox signed free agent 1B Jake Bauers.",
+          "League tx: 2026-11-17: Detroit Tigers signed free agent RHP Anderson Pilar to a minor league contract.",
+          "League tx: 2026-11-17: RHP Anderson Pilar assigned to Toledo Mud Hens."
         ],
         "unverified_sample": []
       },
@@ -938,7 +936,7 @@
         "unverified_sample": []
       },
       "athletics_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-11-23&endDate=2026-11-25&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=133&startDate=2026-11-24&endDate=2026-11-26&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -951,7 +949,7 @@
         ]
       },
       "athletics_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-11-16&endDate=2026-11-23",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=133&startDate=2026-11-17&endDate=2026-11-24",
         "status": "verified",
         "debug": [
           "transactions=15"
@@ -981,7 +979,7 @@
         "unverified_sample": []
       },
       "rockies_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-11-23&endDate=2026-11-25&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=115&startDate=2026-11-24&endDate=2026-11-26&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -994,19 +992,19 @@
         ]
       },
       "rockies_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-11-16&endDate=2026-11-23",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=115&startDate=2026-11-17&endDate=2026-11-24",
         "status": "verified",
         "debug": [
-          "transactions=14"
+          "transactions=12"
         ],
-        "verified_count": 14,
+        "verified_count": 12,
         "unverified_count": 0,
         "verified_sample": [
-          "Colorado Rockies tx: 2026-11-16: Colorado Rockies signed free agent OF Enexis Antunez to a minor league contract.",
-          "Colorado Rockies tx: 2026-11-16: Colorado Rockies signed free agent C Enmanuel Mendoza to a minor league contract.",
           "Colorado Rockies tx: 2026-11-17: Colorado Rockies selected the contract of RHP Jackson Cox from Hartford Yard Goats.",
           "Colorado Rockies tx: 2026-11-17: Colorado Rockies selected the contract of RHP Jack Mahoney from Albuquerque Isotopes.",
-          "Colorado Rockies tx: 2026-11-17: Colorado Rockies selected the contract of C Bryant Betancourt from Albuquerque Isotopes."
+          "Colorado Rockies tx: 2026-11-17: Colorado Rockies selected the contract of C Bryant Betancourt from Albuquerque Isotopes.",
+          "Colorado Rockies tx: 2026-11-18: Colorado Rockies signed free agent RHP TJ Shook to a minor league contract.",
+          "Colorado Rockies tx: 2026-11-19: Chicago White Sox traded RHP Luis Castillo and RHP Davis Martin to Colorado Rockies for LHP Sean Sullivan and C Douglas Veliz."
         ],
         "unverified_sample": []
       },
@@ -1024,7 +1022,7 @@
         "unverified_sample": []
       },
       "tigers_schedule": {
-        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-11-23&endDate=2026-11-25&hydrate=probablePitcher,team",
+        "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=116&startDate=2026-11-24&endDate=2026-11-26&hydrate=probablePitcher,team",
         "status": "unverified",
         "debug": [
           "games=0"
@@ -1037,19 +1035,19 @@
         ]
       },
       "tigers_transactions": {
-        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-11-16&endDate=2026-11-23",
+        "url": "https://statsapi.mlb.com/api/v1/transactions?teamId=116&startDate=2026-11-17&endDate=2026-11-24",
         "status": "verified",
         "debug": [
-          "transactions=16"
+          "transactions=14"
         ],
-        "verified_count": 16,
+        "verified_count": 14,
         "unverified_count": 0,
         "verified_sample": [
-          "Detroit Tigers tx: 2026-11-16: Detroit Tigers signed free agent LHP Bailey Horn to a minor league contract.",
-          "Detroit Tigers tx: 2026-11-16: Detroit Tigers signed free agent RHP Sawyer Gipson-Long to a minor league contract.",
           "Detroit Tigers tx: 2026-11-17: Detroit Tigers designated CF Matt Vierling for assignment.",
           "Detroit Tigers tx: 2026-11-17: Detroit Tigers designated SS Trey Sweeney for assignment.",
-          "Detroit Tigers tx: 2026-11-17: Detroit Tigers signed free agent RHP Emilio Pag\u00e1n."
+          "Detroit Tigers tx: 2026-11-17: Detroit Tigers signed free agent RHP Emilio Pag\u00e1n.",
+          "Detroit Tigers tx: 2026-11-17: Detroit Tigers signed free agent RHP Anderson Pilar to a minor league contract.",
+          "Detroit Tigers tx: 2026-11-17: Detroit Tigers designated 3B Jace Jung for assignment."
         ],
         "unverified_sample": []
       },
@@ -1156,7 +1154,7 @@
         "unverified_sample": []
       }
     },
-    "generated_utc": "2026-11-24T00:42:29Z"
+    "generated_utc": "2026-11-24T10:48:26Z"
   },
   "bd_bets": {
     "generated_at": "",
